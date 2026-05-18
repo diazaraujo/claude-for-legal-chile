@@ -72,8 +72,8 @@ TIPOS_URI = {
 }
 
 
-def sparql_query(query: str, sleep_ms: int = 200) -> dict:
-    """Ejecuta una consulta SPARQL y devuelve resultados JSON."""
+def sparql_query(query: str, sleep_ms: int = 500, max_retries: int = 5) -> dict:
+    """Ejecuta una consulta SPARQL con backoff exponencial frente a 429/502/timeout."""
     params = urllib.parse.urlencode({
         "query": query,
         "format": "application/json",
@@ -86,9 +86,25 @@ def sparql_query(query: str, sleep_ms: int = 200) -> dict:
             "Accept": "application/sparql-results+json,application/json",
         },
     )
-    time.sleep(sleep_ms / 1000.0)
-    with urllib.request.urlopen(req, timeout=60) as resp:
-        return json.loads(resp.read().decode("utf-8"))
+
+    for attempt in range(max_retries):
+        time.sleep(sleep_ms / 1000.0)
+        try:
+            with urllib.request.urlopen(req, timeout=60) as resp:
+                return json.loads(resp.read().decode("utf-8"))
+        except urllib.error.HTTPError as e:
+            if e.code in (429, 502, 503, 504):
+                backoff = (2 ** attempt) * 2.0  # 2, 4, 8, 16, 32 seg
+                print(f"    HTTP {e.code} — retry {attempt+1}/{max_retries} en {backoff}s", file=sys.stderr)
+                time.sleep(backoff)
+                continue
+            raise
+        except (TimeoutError, urllib.error.URLError) as e:
+            backoff = (2 ** attempt) * 2.0
+            print(f"    timeout — retry {attempt+1}/{max_retries} en {backoff}s ({e})", file=sys.stderr)
+            time.sleep(backoff)
+            continue
+    raise RuntimeError(f"SPARQL falló tras {max_retries} reintentos")
 
 
 def build_query(tipo_uri: str, *, year: int | None = None, limit: int = 1000) -> str:
@@ -176,6 +192,24 @@ def parse_binding(b: dict, tipo: str) -> dict | None:
     }
 
 
+def build_query_offset(tipo_uri: str, *, offset: int, limit: int) -> str:
+    """Query minimal con OFFSET para paginar el universo completo de un tipo."""
+    return f"""
+PREFIX bcnnorms: <http://datos.bcn.cl/ontologies/bcn-norms#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+
+SELECT DISTINCT ?norma ?titulo ?leychile_code
+WHERE {{
+  ?norma a bcnnorms:Norm .
+  ?norma bcnnorms:type <{tipo_uri}> .
+  ?norma dc:title ?titulo .
+  OPTIONAL {{ ?norma bcnnorms:leychileCode ?leychile_code . }}
+}}
+OFFSET {offset}
+LIMIT {limit}
+""".strip()
+
+
 def fetch_tipo(
     tipo: str,
     *,
@@ -186,30 +220,33 @@ def fetch_tipo(
 ) -> Iterator[dict]:
     """Itera todas las normas de un tipo.
 
-    Si `year_range` se entrega, particiona por año (recomendado para `ley`, `dl`,
-    `dfl`, `dto`, `res` que tienen volumen alto y el endpoint colapsa con queries
-    sobre el universo completo). Sin year_range, intenta una sola query (viable
-    para `cod`, `tra`, `aa`).
+    Estrategia:
+    - SMALL_TIPOS (cod, tra, aa): una sola query (resultado pequeño)
+    - LARGE_TIPOS (ley, dl, dfl, dto, res): OFFSET paginado con page_size moderado
+      (500-1000 normas por query). Cada query consume rate budget del endpoint.
 
-    Dedupe en Python por (tipo, numero) para evitar duplicados entre años o por
-    múltiples versiones de la misma norma.
+    Dedupe en Python por URI (las versiones múltiples /es@... ya están excluidas
+    de la URI abstracta, así que el DISTINCT del SPARQL hace el trabajo).
     """
     if tipo not in TIPOS_URI:
         raise ValueError(f"Tipo desconocido: {tipo}. Disponibles: {sorted(TIPOS_URI)}")
     tipo_uri = TIPOS_URI[tipo]
-    seen: set[str] = set()
+    seen_uris: set[str] = set()
     yielded = 0
-    max_attempts = 3
 
     def emit(b: dict):
         nonlocal yielded
+        uri = (b.get("norma") or {}).get("value", "")
+        if uri in seen_uris:
+            return None
+        seen_uris.add(uri)
         parsed = parse_binding(b, tipo)
-        if parsed and parsed["numero"] not in seen:
-            seen.add(parsed["numero"])
+        if parsed:
             yielded += 1
             return parsed
         return None
 
+    # Para tipos pequeños o si --no-partition: query única
     if year_range is None:
         query = build_query(tipo_uri, year=None, limit=page_size)
         try:
@@ -225,38 +262,42 @@ def fetch_tipo(
                     return
         return
 
-    y_from, y_to = year_range
-    for year in range(y_from, y_to + 1):
+    # Para tipos grandes: paginar por OFFSET
+    offset = 0
+    consecutive_empty = 0
+    while True:
         if max_total is not None and yielded >= max_total:
             return
-        attempt = 0
-        while attempt < max_attempts:
-            attempt += 1
-            query = build_query(tipo_uri, year=year, limit=page_size)
-            try:
-                data = sparql_query(query, sleep_ms=sleep_ms)
-                bindings = data.get("results", {}).get("bindings", [])
-                if len(bindings) == 0:
-                    break
-                if len(bindings) >= page_size:
-                    print(
-                        f"  ! Año {year} alcanzó page_size ({page_size}); "
-                        "puede faltar data — aumentar page_size",
-                        file=sys.stderr,
-                    )
-                for b in bindings:
-                    r = emit(b)
-                    if r:
-                        yield r
-                        if max_total is not None and yielded >= max_total:
-                            return
-                break
-            except Exception as e:
-                print(
-                    f"  ! Error SPARQL {tipo} año {year} intento {attempt}: {e}",
-                    file=sys.stderr,
-                )
-                time.sleep(3 * attempt)
+        try:
+            query = build_query_offset(tipo_uri, offset=offset, limit=page_size)
+            data = sparql_query(query, sleep_ms=sleep_ms)
+        except Exception as e:
+            print(f"  ! Error SPARQL {tipo} offset={offset}: {e}", file=sys.stderr)
+            return
+
+        bindings = data.get("results", {}).get("bindings", [])
+        if not bindings:
+            consecutive_empty += 1
+            if consecutive_empty >= 2:
+                return
+            offset += page_size
+            continue
+        consecutive_empty = 0
+
+        page_new = 0
+        for b in bindings:
+            r = emit(b)
+            if r:
+                page_new += 1
+                yield r
+                if max_total is not None and yielded >= max_total:
+                    return
+
+        print(f"    offset={offset} bindings={len(bindings)} nuevos={page_new} total={yielded}", file=sys.stderr)
+
+        if len(bindings) < page_size:
+            return
+        offset += page_size
 
 
 # Tipos canónicos en español para el frontmatter
@@ -342,14 +383,28 @@ def render_markdown(norma: dict) -> str:
     return "\n".join(yaml_lines)
 
 
-def safe_filename(numero: str) -> str:
-    """Convierte un número de norma en filename seguro."""
-    # Algunos DLs/decretos tienen sufijos tipo "1234-bis" o "1234/2020".
+UNIQUE_BY_NUMBER = {"ley", "lei", "cod"}  # número único en todo el ordenamiento
+
+def safe_filename(norma: dict) -> str:
+    """Convierte un número de norma en filename seguro.
+
+    Para `ley` y `cod` el número es único en todo el ordenamiento → filename = número.
+    Para `dfl`, `dl`, `dto`, `res`, `tra`, `aa`, etc. el número se reusa por año/órgano,
+    así que incluimos `<numero>-<YYYY-MM-DD>-<emisor>` para evitar colisiones.
+    """
+    numero = norma["numero"]
     safe = numero.replace("/", "-").replace(" ", "").replace(":", "-")
-    # Padding numérico para sort estable cuando es numérico puro
-    if safe.isdigit():
-        return safe.zfill(5) + ".md"
-    return safe + ".md"
+
+    if norma["tipo"] in UNIQUE_BY_NUMBER:
+        return (safe.zfill(5) if safe.isdigit() else safe) + ".md"
+
+    # Composite filename
+    fecha = norma.get("publicacion") or "sinfecha"
+    emisor = (norma.get("emisor") or "").replace("/", "-")
+    base = safe.zfill(5) if safe.isdigit() else safe
+    # Limitar largo de emisor para no romper FS
+    emisor_short = emisor[:60]
+    return f"{base}-{fecha}-{emisor_short}.md"
 
 
 def main(argv=None) -> int:
@@ -411,7 +466,7 @@ def main(argv=None) -> int:
                     print(f"  [{count}] {tipo}-{norma['numero']} :: {norma['titulo'][:80]}")
                 continue
 
-            out_path = tipo_dir / safe_filename(norma["numero"])
+            out_path = tipo_dir / safe_filename(norma)
             if out_path.exists() and not args.force:
                 skipped += 1
                 continue

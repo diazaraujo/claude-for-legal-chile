@@ -1,0 +1,45 @@
+---
+norma: Decreto Ley 177
+slug: dl-177
+tipo: dl
+numero: 177
+titulo_oficial: "DECLARA EN RECESO EL CONSEJO COORDINADOR DE ADQUISICIONES Y ENAJENACIONES DE LAS FF. AA."
+publicacion: 1973-12-13
+promulgacion: desconocida
+emisor: ministerio-de-defensa-nacional
+leychile_code: 5838
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=5838
+bcn_uri: http://datos.bcn.cl/recurso/cl/dl/ministerio-de-defensa-nacional/1973-12-13/177
+capa: 1
+estado_revision: catalogo-auto
+validador: null
+fecha_validacion: null
+---
+
+# Decreto Ley 177
+
+**Título oficial:** DECLARA EN RECESO EL CONSEJO COORDINADOR DE ADQUISICIONES Y ENAJENACIONES DE LAS FF. AA.
+
+**Tipo:** Decreto Ley
+**Número:** 177
+**Publicación en DO:** 1973-12-13
+**Promulgación:** _desconocida_
+**Emisor:** ministerio-de-defensa-nacional
+
+## Fuente oficial
+
+- [BCN/LeyChile (texto vigente y modificaciones)](https://www.bcn.cl/leychile/navegar?idNorma=5838)
+- [BCN Linked Open Data (RDF)](http://datos.bcn.cl/recurso/cl/dl/ministerio-de-defensa-nacional/1973-12-13/177)
+
+## Estado en el corpus
+
+Entrada **capa 1** generada automáticamente desde el endpoint SPARQL de BCN.
+Contiene metadata catalográfica; no incluye análisis operativo ni síntesis
+estructural. Para texto vigente, modificaciones y artículos, consultar la
+fuente oficial.
+
+## Disclaimers
+
+- Capa 1: metadata auto-generada, sin validación legal.
+- Para promover a capa 2 (resumen estructural) o capa 3 (análisis operativo),
+  abrir PR siguiendo el schema en `chile/normativa/README.md`.
