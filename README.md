@@ -82,8 +82,17 @@ patrones de despliegue.
 
 ## Cobertura actual
 
-Estado del corpus normativo chileno. Solo los archivos marcados ✅ están publicados
-como borrador estructurado; ninguno ha pasado validación legal todavía.
+El corpus se publica en tres capas (ver `decisions/ADR-0002`):
+
+| Capa | Qué tiene | Cobertura actual |
+|---|---|---|
+| **1 — Catálogo** | Metadata estructurada por norma desde BCN/SPARQL | **12.213 archivos** (códigos, leyes, DL, DFL, tratados, autos acordados) |
+| **2 — Resumen estructural** | Libros/títulos/artículos + conceptos clave | _pendiente — pipeline LLM en diseño_ |
+| **3 — Análisis operativo curado** | Lo que ves abajo, con disclaimer + validación legal | 14 archivos borrador |
+
+Detalle de capa 1 en [`chile/normativa/catalogo/README.md`](chile/normativa/catalogo/README.md).
+Estado de capa 3 a continuación. Solo los marcados ✅ están publicados como borrador
+estructurado; ninguno ha pasado validación legal todavía.
 
 ### Constitución
 
