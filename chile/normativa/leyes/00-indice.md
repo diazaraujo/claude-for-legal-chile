@@ -12,8 +12,8 @@ habilitado en Chile.
 | [`ley-20123-subcontratacion`](ley-20123-subcontratacion.md) | 20.123 | Subcontratación y suministro de trabajadores | Laboral | Vigente | borrador-no-validado |
 | [`ley-21561-reduccion-jornada`](ley-21561-reduccion-jornada.md) | 21.561 | Reducción gradual de la jornada laboral | Laboral | Vigente (escalonada hasta 2028) | borrador-no-validado |
 | [`ley-21643-acoso-laboral`](ley-21643-acoso-laboral.md) | 21.643 | Ley Karin — prevención de acoso y violencia laboral | Laboral | Vigente | borrador-no-validado |
-| `ley-21015-inclusion-laboral` | 21.015 | Inclusión laboral de personas con discapacidad | Laboral | Vigente | pendiente |
-| `ley-21220-teletrabajo` | 21.220 | Teletrabajo y trabajo a distancia | Laboral | Vigente | pendiente |
+| [`ley-21015-inclusion-laboral`](ley-21015-inclusion-laboral.md) | 21.015 | Inclusión laboral de personas con discapacidad | Laboral | Vigente | borrador-no-validado |
+| [`ley-21220-teletrabajo`](ley-21220-teletrabajo.md) | 21.220 | Teletrabajo y trabajo a distancia | Laboral | Vigente | borrador-no-validado |
 | `ley-18046-sociedades-anonimas` | 18.046 | Sociedades Anónimas | Societario | Vigente | pendiente |
 | `ley-19886-compras-publicas` | 19.886 | Bases sobre contratos administrativos | Compras públicas | Vigente | pendiente |
 | `ley-19496-consumidor` | 19.496 | Protección de los derechos de los consumidores | Consumidor | Vigente | pendiente |

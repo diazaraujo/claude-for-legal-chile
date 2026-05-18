@@ -136,15 +136,17 @@ El sistema razona sobre Chile invocando archivos en `chile/normativa/`. Estado a
 - [x] [`ley-19628-proteccion-datos.md`](normativa/leyes/ley-19628-proteccion-datos.md) (borrador)
 - [x] [`ley-21719-modificacion-lpd.md`](normativa/leyes/ley-21719-modificacion-lpd.md) (borrador)
 - [x] [`ley-21643-acoso-laboral.md`](normativa/leyes/ley-21643-acoso-laboral.md) — Ley Karin (borrador)
-- [ ] `ley-16744-accidentes-trabajo.md` — pendiente
-- [ ] `ley-20123-subcontratacion.md` — pendiente
-- [ ] `ley-21561-reduccion-jornada.md` — pendiente
-- [ ] `ley-21015-inclusion-laboral.md` — pendiente
-- [ ] `ley-21220-teletrabajo.md` — pendiente
+- [x] [`ley-16744-accidentes-trabajo.md`](normativa/leyes/ley-16744-accidentes-trabajo.md) (borrador)
+- [x] [`ley-20123-subcontratacion.md`](normativa/leyes/ley-20123-subcontratacion.md) (borrador)
+- [x] [`ley-21561-reduccion-jornada.md`](normativa/leyes/ley-21561-reduccion-jornada.md) (borrador)
+- [x] [`ley-21220-teletrabajo.md`](normativa/leyes/ley-21220-teletrabajo.md) (borrador)
+- [x] [`ley-21015-inclusion-laboral.md`](normativa/leyes/ley-21015-inclusion-laboral.md) (borrador)
 - [ ] `ley-18046-sociedades-anonimas.md` — pendiente
 - [ ] `ley-19886-compras-publicas.md` — pendiente
 - [ ] `ley-19496-consumidor.md` — pendiente
 - [ ] `ley-20720-concursal.md` — pendiente
+- [ ] `ley-19728-seguro-cesantia.md` — pendiente
+- [ ] `ley-20940-relaciones-laborales.md` — pendiente
 
 Ver índice completo en [`normativa/leyes/00-indice.md`](normativa/leyes/00-indice.md).
 

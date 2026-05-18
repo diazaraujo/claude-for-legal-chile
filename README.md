@@ -105,12 +105,12 @@ como borrador estructurado; ninguno ha pasado validación legal todavía.
 |---|---|---|
 | Ley 19.628 | Protección de datos personales | ✅ [Borrador](chile/normativa/leyes/ley-19628-proteccion-datos.md) |
 | Ley 21.719 | Modificación LPDP + creación APDP (vigencia 2026-12-01) | ✅ [Borrador](chile/normativa/leyes/ley-21719-modificacion-lpd.md) |
+| Ley 16.744 | Accidentes del trabajo y enfermedades profesionales | ✅ [Borrador](chile/normativa/leyes/ley-16744-accidentes-trabajo.md) |
+| Ley 20.123 | Subcontratación y suministro de trabajadores | ✅ [Borrador](chile/normativa/leyes/ley-20123-subcontratacion.md) |
+| Ley 21.561 | Reducción de jornada 40h | ✅ [Borrador](chile/normativa/leyes/ley-21561-reduccion-jornada.md) |
 | Ley 21.643 | Ley Karin — acoso y violencia laboral | ✅ [Borrador](chile/normativa/leyes/ley-21643-acoso-laboral.md) |
-| Ley 16.744 | Accidentes del trabajo | ⏳ Pendiente |
-| Ley 20.123 | Subcontratación | ⏳ Pendiente |
-| Ley 21.561 | Reducción jornada 40h | ⏳ Pendiente |
-| Ley 21.015 | Inclusión laboral discapacidad | ⏳ Pendiente |
-| Ley 21.220 | Teletrabajo | ⏳ Pendiente |
+| Ley 21.220 | Teletrabajo | ✅ [Borrador](chile/normativa/leyes/ley-21220-teletrabajo.md) |
+| Ley 21.015 | Inclusión laboral discapacidad | ✅ [Borrador](chile/normativa/leyes/ley-21015-inclusion-laboral.md) |
 | Ley 18.046 | Sociedades Anónimas | ⏳ Pendiente |
 | Ley 19.886 | Compras públicas | ⏳ Pendiente |
 | Ley 19.496 | Consumidor | ⏳ Pendiente |
