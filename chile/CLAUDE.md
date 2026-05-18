@@ -120,11 +120,15 @@ Cuando un monto se expresa en UF/UTM, declara la fecha de la conversión si la c
 
 El sistema razona sobre Chile invocando archivos en `chile/normativa/`. Estado actual:
 
+### Constitución (`normativa/constitucion/`)
+
+- [x] [`constitucion-politica.md`](normativa/constitucion/constitucion-politica.md) (borrador) — base del ordenamiento
+
 ### Códigos (`normativa/codigos/`)
 
 - [x] [`codigo-trabajo.md`](normativa/codigos/codigo-trabajo.md) — DFL 1/2002 (borrador)
-- [ ] `codigo-civil.md` — pendiente
-- [ ] `codigo-comercio.md` — pendiente
+- [x] [`codigo-comercio.md`](normativa/codigos/codigo-comercio.md) — Ley 1865 + reformas (borrador)
+- [ ] `codigo-civil.md` — pendiente (próximo)
 - [ ] `codigo-tributario.md` — DL 830 — pendiente
 - [ ] `codigo-procedimiento-civil.md` — pendiente
 - [ ] `codigo-procesal-penal.md` — pendiente
@@ -141,9 +145,9 @@ El sistema razona sobre Chile invocando archivos en `chile/normativa/`. Estado a
 - [x] [`ley-21561-reduccion-jornada.md`](normativa/leyes/ley-21561-reduccion-jornada.md) (borrador)
 - [x] [`ley-21220-teletrabajo.md`](normativa/leyes/ley-21220-teletrabajo.md) (borrador)
 - [x] [`ley-21015-inclusion-laboral.md`](normativa/leyes/ley-21015-inclusion-laboral.md) (borrador)
-- [ ] `ley-18046-sociedades-anonimas.md` — pendiente
+- [x] [`ley-18046-sociedades-anonimas.md`](normativa/leyes/ley-18046-sociedades-anonimas.md) (borrador)
+- [x] [`ley-19496-consumidor.md`](normativa/leyes/ley-19496-consumidor.md) (borrador)
 - [ ] `ley-19886-compras-publicas.md` — pendiente
-- [ ] `ley-19496-consumidor.md` — pendiente
 - [ ] `ley-20720-concursal.md` — pendiente
 - [ ] `ley-19728-seguro-cesantia.md` — pendiente
 - [ ] `ley-20940-relaciones-laborales.md` — pendiente

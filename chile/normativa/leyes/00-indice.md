@@ -14,9 +14,9 @@ habilitado en Chile.
 | [`ley-21643-acoso-laboral`](ley-21643-acoso-laboral.md) | 21.643 | Ley Karin — prevención de acoso y violencia laboral | Laboral | Vigente | borrador-no-validado |
 | [`ley-21015-inclusion-laboral`](ley-21015-inclusion-laboral.md) | 21.015 | Inclusión laboral de personas con discapacidad | Laboral | Vigente | borrador-no-validado |
 | [`ley-21220-teletrabajo`](ley-21220-teletrabajo.md) | 21.220 | Teletrabajo y trabajo a distancia | Laboral | Vigente | borrador-no-validado |
-| `ley-18046-sociedades-anonimas` | 18.046 | Sociedades Anónimas | Societario | Vigente | pendiente |
+| [`ley-18046-sociedades-anonimas`](ley-18046-sociedades-anonimas.md) | 18.046 | Sociedades Anónimas | Societario | Vigente | borrador-no-validado |
 | `ley-19886-compras-publicas` | 19.886 | Bases sobre contratos administrativos | Compras públicas | Vigente | pendiente |
-| `ley-19496-consumidor` | 19.496 | Protección de los derechos de los consumidores | Consumidor | Vigente | pendiente |
+| [`ley-19496-consumidor`](ley-19496-consumidor.md) | 19.496 | Protección de los derechos de los consumidores | Consumidor | Vigente | borrador-no-validado |
 | `ley-20720-concursal` | 20.720 | Reorganización y liquidación de empresas y personas | Concursal | Vigente | pendiente |
 | `ley-19880-procedimiento-administrativo` | 19.880 | Bases del procedimiento administrativo | Administrativo | Vigente | pendiente |
 | `ley-19728-seguro-cesantia` | 19.728 | Seguro de cesantía | Laboral / Previsional | Vigente | pendiente |

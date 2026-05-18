@@ -6,7 +6,7 @@ Códigos chilenos vigentes. Cada código es el cuerpo normativo más estable de 
 |---|---|---|---|---|
 | [`codigo-trabajo`](codigo-trabajo.md) | Código del Trabajo | Laboral | DFL N° 1 de 2002, Mintrab | borrador-no-validado |
 | `codigo-civil` | Código Civil | Civil | Ley de 14-12-1855 (Andrés Bello), con múltiples reformas | pendiente |
-| `codigo-comercio` | Código de Comercio | Comercial | Ley de 23-11-1865, con múltiples reformas | pendiente |
+| [`codigo-comercio`](codigo-comercio.md) | Código de Comercio | Comercial | Ley de 23-11-1865, con múltiples reformas | borrador-no-validado |
 | `codigo-tributario` | Código Tributario | Tributario | DL 830 de 1974 | pendiente |
 | `codigo-procedimiento-civil` | Código de Procedimiento Civil | Procesal civil | Ley 1.552 de 1902, con reformas | pendiente |
 | `codigo-procesal-penal` | Código Procesal Penal | Procesal penal | Ley 19.696 de 2000 | pendiente |

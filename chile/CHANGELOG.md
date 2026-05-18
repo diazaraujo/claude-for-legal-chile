@@ -11,6 +11,25 @@ Cambios al contenido de `chile/`. Para cambios del upstream ver `git log` con
 - Estado: WIP. Perfiles por rama del derecho pendientes de redacción y de
   revisión por abogado habilitado.
 
+## 0.0.4 — 2026-05-18
+
+- **Constitución Política de la República** publicada (`constitucion/constitucion-politica.md`),
+  base de todo el ordenamiento; índice de Capítulos I-XVI, Art. 19 con 26 numerales
+  tabulados, Recurso de Protección (Art. 20), inaplicabilidad por
+  inconstitucionalidad, Art. 5 inc. 2° sobre tratados de DD.HH.
+- **Estrategia de tres capas** documentada como ADR-0002 en el STD wrapper. Define
+  cómo escalar el corpus: capa 1 catálogo auto (BCN scraping), capa 2 estructural
+  semi-auto, capa 3 análisis operativo curado + validado. Frontmatter `capa: N`
+  agregado en archivos curados.
+- **Cluster civil/comercial inicial**: `codigo-comercio.md` (actos de comercio,
+  sociedades de personas, materias migradas a leyes especiales) +
+  `ley-18046-sociedades-anonimas.md` (gobierno corporativo, OPR, OPA, deberes
+  fiduciarios) + `ley-19496-consumidor.md` (LPC: cláusulas abusivas, garantía legal,
+  SERNAC Financiero, retracto).
+- **Cobertura ampliada**: ahora 1 Constitución + 2 códigos + 11 leyes = 14 archivos
+  capa 3 borrador. Cubre operativamente: laboral, privacidad, B2C, societario, marco
+  constitucional.
+
 ## 0.0.3 — 2026-05-18
 
 - **Cluster laboral completo en el corpus** (todos en `borrador-no-validado`):

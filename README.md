@@ -85,13 +85,19 @@ patrones de despliegue.
 Estado del corpus normativo chileno. Solo los archivos marcados ✅ están publicados
 como borrador estructurado; ninguno ha pasado validación legal todavía.
 
+### Constitución
+
+| Norma | Estado | Archivo |
+|---|---|---|
+| Constitución Política de la República | ✅ Borrador | [`constitucion-politica.md`](chile/normativa/constitucion/constitucion-politica.md) |
+
 ### Códigos
 
 | Código | Estado | Archivo |
 |---|---|---|
 | Código del Trabajo (DFL 1/2002) | ✅ Borrador | [`codigo-trabajo.md`](chile/normativa/codigos/codigo-trabajo.md) |
+| Código de Comercio | ✅ Borrador | [`codigo-comercio.md`](chile/normativa/codigos/codigo-comercio.md) |
 | Código Civil | ⏳ Pendiente | — |
-| Código de Comercio | ⏳ Pendiente | — |
 | Código Tributario (DL 830) | ⏳ Pendiente | — |
 | Código de Procedimiento Civil | ⏳ Pendiente | — |
 | Código Procesal Penal | ⏳ Pendiente | — |
@@ -111,9 +117,9 @@ como borrador estructurado; ninguno ha pasado validación legal todavía.
 | Ley 21.643 | Ley Karin — acoso y violencia laboral | ✅ [Borrador](chile/normativa/leyes/ley-21643-acoso-laboral.md) |
 | Ley 21.220 | Teletrabajo | ✅ [Borrador](chile/normativa/leyes/ley-21220-teletrabajo.md) |
 | Ley 21.015 | Inclusión laboral discapacidad | ✅ [Borrador](chile/normativa/leyes/ley-21015-inclusion-laboral.md) |
-| Ley 18.046 | Sociedades Anónimas | ⏳ Pendiente |
+| Ley 18.046 | Sociedades Anónimas | ✅ [Borrador](chile/normativa/leyes/ley-18046-sociedades-anonimas.md) |
+| Ley 19.496 | Protección del consumidor | ✅ [Borrador](chile/normativa/leyes/ley-19496-consumidor.md) |
 | Ley 19.886 | Compras públicas | ⏳ Pendiente |
-| Ley 19.496 | Consumidor | ⏳ Pendiente |
 | Ley 20.720 | Concursal | ⏳ Pendiente |
 
 [Ver índice completo](chile/normativa/leyes/00-indice.md) (19 leyes).
