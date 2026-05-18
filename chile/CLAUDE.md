@@ -4,9 +4,14 @@
 > Reemplaza el CLAUDE.md original orientado a derecho norteamericano.
 > Repo: https://github.com/diazaraujo/claude-for-legal-chile
 
-> **Estado del perfil:** Esqueleto inicial. Los perfiles por rama del derecho se
-> liberarán a medida que sean revisados por abogado habilitado en Chile.
-> Hasta entonces, el sistema opera con disclaimers explícitos de WIP.
+> **Arquitectura:** El eje del sistema es el **corpus normativo chileno** (códigos,
+> leyes, decretos) en `chile/normativa/`, no perfiles por rama. Los perfiles
+> (`chile/perfiles/`) son vistas que orquestan la normativa. Cuando este CLAUDE.md
+> cita "Art. X de Ley Y", el archivo de referencia vive en
+> `chile/normativa/leyes/ley-<numero>-<slug>.md`.
+
+> **Estado:** Work in progress. Los archivos de norma llevan `estado_revision` en
+> frontmatter; el sistema antepone disclaimer cuando opera sobre normas no validadas.
 
 ---
 
@@ -111,20 +116,53 @@ Cuando un monto se expresa en UF/UTM, declara la fecha de la conversión si la c
 
 ---
 
-## Áreas de práctica disponibles
+## Corpus normativo disponible
 
-> _Cada perfil será publicado tras revisión legal independiente._
+El sistema razona sobre Chile invocando archivos en `chile/normativa/`. Estado actual:
 
-- [ ] `civil-CLAUDE.md` — Derecho civil
-- [ ] `contratos-CLAUDE.md` — Revisión y redacción de contratos
-- [ ] `laboral-CLAUDE.md` — Derecho del trabajo
-- [ ] `societario-CLAUDE.md` — Derecho societario
-- [ ] `tributario-CLAUDE.md` — Derecho tributario
-- [ ] `administrativo-CLAUDE.md` — Derecho administrativo
-- [ ] `familia-CLAUDE.md` — Derecho de familia
-- [ ] `penal-CLAUDE.md` — Derecho penal
-- [ ] `concursal-CLAUDE.md` — Procedimientos concursales
-- [ ] `privacidad-CLAUDE.md` — Datos personales (Ley 19.628 + 21.719)
+### Códigos (`normativa/codigos/`)
+
+- [x] [`codigo-trabajo.md`](normativa/codigos/codigo-trabajo.md) — DFL 1/2002 (borrador)
+- [ ] `codigo-civil.md` — pendiente
+- [ ] `codigo-comercio.md` — pendiente
+- [ ] `codigo-tributario.md` — DL 830 — pendiente
+- [ ] `codigo-procedimiento-civil.md` — pendiente
+- [ ] `codigo-procesal-penal.md` — pendiente
+- [ ] `codigo-penal.md` — pendiente
+- [ ] `codigo-organico-tribunales.md` — pendiente
+
+### Leyes (`normativa/leyes/`)
+
+- [x] [`ley-19628-proteccion-datos.md`](normativa/leyes/ley-19628-proteccion-datos.md) (borrador)
+- [x] [`ley-21719-modificacion-lpd.md`](normativa/leyes/ley-21719-modificacion-lpd.md) (borrador)
+- [x] [`ley-21643-acoso-laboral.md`](normativa/leyes/ley-21643-acoso-laboral.md) — Ley Karin (borrador)
+- [ ] `ley-16744-accidentes-trabajo.md` — pendiente
+- [ ] `ley-20123-subcontratacion.md` — pendiente
+- [ ] `ley-21561-reduccion-jornada.md` — pendiente
+- [ ] `ley-21015-inclusion-laboral.md` — pendiente
+- [ ] `ley-21220-teletrabajo.md` — pendiente
+- [ ] `ley-18046-sociedades-anonimas.md` — pendiente
+- [ ] `ley-19886-compras-publicas.md` — pendiente
+- [ ] `ley-19496-consumidor.md` — pendiente
+- [ ] `ley-20720-concursal.md` — pendiente
+
+Ver índice completo en [`normativa/leyes/00-indice.md`](normativa/leyes/00-indice.md).
+
+### Perfiles (`perfiles/`)
+
+Cada perfil orquesta normativa para una rama. Pendientes de redacción y validación.
+
+- [ ] `perfiles/civil.md`
+- [ ] `perfiles/laboral.md`
+- [ ] `perfiles/societario.md`
+- [ ] `perfiles/tributario.md`
+- [ ] `perfiles/administrativo.md`
+- [ ] `perfiles/familia.md`
+- [ ] `perfiles/penal.md`
+- [ ] `perfiles/concursal.md`
+- [ ] `perfiles/contratos.md`
+- [ ] `perfiles/privacidad.md`
+- [ ] `perfiles/compras-publicas.md`
 
 ---
 
