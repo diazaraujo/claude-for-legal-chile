@@ -1,4 +1,21 @@
-# Claude for Legal
+# Claude for Legal · Adaptación Chile (fork)
+
+> Este es el fork chileno de [`anthropics/claude-for-legal`](https://github.com/anthropics/claude-for-legal).
+> La adaptación al ordenamiento jurídico chileno vive en la carpeta [`chile/`](chile/).
+>
+> Estado: **work in progress**. Los perfiles por rama del derecho se publican
+> a medida que son revisados por abogado habilitado en Chile. Ver
+> [`chile/CHANGELOG.md`](chile/CHANGELOG.md).
+>
+> Mantenido por [Unholster](https://unholster.com) ·
+> [@diazaraujo](https://github.com/diazaraujo). Licencia Apache-2.0 (heredada del upstream).
+>
+> Patrón estructural inspirado en el fork análogo argentino
+> [`cristianaboitiz-eng/claude-for-legal-argentina`](https://github.com/cristianaboitiz-eng/claude-for-legal-argentina).
+
+---
+
+## Upstream original
 
 Reference agents, skills, and data connectors for the legal workflows we see most — in-house commercial, privacy, product, corporate, employment, litigation, regulatory, AI governance, IP, and the learning side of the practice (law school clinics and students).
 
