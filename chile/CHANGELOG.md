@@ -11,6 +11,33 @@ Cambios al contenido de `chile/`. Para cambios del upstream ver `git log` con
 - Estado: WIP. Perfiles por rama del derecho pendientes de redacción y de
   revisión por abogado habilitado.
 
+## 0.0.7 — 2026-05-19
+
+- **Cluster compliance + IP + transparencia** (capa 3, 8 archivos nuevos):
+  - `leyes/ley-20285-transparencia.md` — Transparencia activa + SAI, CPLT,
+    amparo, causales reserva Art. 21, plazos 20+10 días hábiles.
+  - `leyes/ley-20393-rppj.md` — Responsabilidad penal personas jurídicas:
+    MPD, Encargado de Prevención, catálogo de delitos (ampliado 21.595),
+    penas (multa, disolución, inhabilitación contratar Estado).
+  - `leyes/ley-21595-delitos-economicos.md` — Reforma estructural penal 2023:
+    4 categorías de delitos económicos, multas hasta 60.000 UTM, comiso
+    valor equivalente, restricciones beneficios alternativos.
+  - `leyes/ley-18045-mercado-valores.md` — LMV: oferta pública, hecho
+    esencial, insider trading (Art. 165), manipulación bursátil, OPA
+    obligatoria, Ley 21.314 gob. corp., Ley 21.521 Fintec.
+  - `leyes/ley-19039-propiedad-industrial.md` — Marcas (10 años renovables),
+    patentes (20 años), modelos utilidad, diseños, INAPI, TPI, Ley 21.355.
+  - `leyes/ley-17336-propiedad-intelectual.md` — Derecho de autor + conexos,
+    plazo vida+70, derechos morales + patrimoniales, software Art. 88,
+    excepciones (cita, parodia, educación).
+  - `leyes/ley-19913-lavado-activos.md` — UAF, ROS, sujetos obligados,
+    diligencia debida PEP, GAFI, multas administrativas.
+  - `leyes/ley-14908-alimentos.md` — Pensión 40% IMR, alimentos provisorios
+    + definitivos, apremios (arraigo, suspensión licencia/pasaporte/arresto),
+    RNDPA (Ley 21.389), GAM (Ley 21.515).
+- **Cobertura capa 3 ahora**: 1 Constitución + 6 códigos + 25 leyes + 3 skills
+  + setup interview + fuentes.md.
+
 ## 0.0.6 — 2026-05-18
 
 - **Cluster procesal/familia/ambiental** (capa 3 borrador):

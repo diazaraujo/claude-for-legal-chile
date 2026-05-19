@@ -88,7 +88,7 @@ El corpus se publica en tres capas (ver `decisions/ADR-0002`):
 |---|---|---|
 | **1 — Catálogo** | Metadata estructurada por norma desde BCN/SPARQL | **12.213 archivos** (códigos, leyes, DL, DFL, tratados, autos acordados) |
 | **2 — Resumen estructural** | Libros/títulos/artículos + conceptos clave | _pendiente — pipeline LLM en diseño_ |
-| **3 — Análisis operativo curado** | Lo que ves abajo, con disclaimer + validación legal | 24 archivos borrador + 3 skills + setup interview + fuentes |
+| **3 — Análisis operativo curado** | Lo que ves abajo, con disclaimer + validación legal | 32 archivos borrador + 3 skills + setup interview + fuentes |
 
 Detalle de capa 1 en [`chile/normativa/catalogo/README.md`](chile/normativa/catalogo/README.md).
 Estado de capa 3 a continuación. Solo los marcados ✅ están publicados como borrador
@@ -140,6 +140,14 @@ estructurado; ninguno ha pasado validación legal todavía.
 | Ley 19.947 | Matrimonio Civil (con Ley 21.400 matrimonio igualitario) | ✅ [Borrador](chile/normativa/leyes/ley-19947-matrimonio-civil.md) |
 | Ley 19.968 | Tribunales de Familia | ✅ [Borrador](chile/normativa/leyes/ley-19968-tribunales-familia.md) |
 | Ley 19.300 | Bases Generales del Medio Ambiente (SEIA) | ✅ [Borrador](chile/normativa/leyes/ley-19300-medio-ambiente.md) |
+| Ley 20.285 | Transparencia y acceso a información pública | ✅ [Borrador](chile/normativa/leyes/ley-20285-transparencia.md) |
+| Ley 20.393 | Responsabilidad penal personas jurídicas (RPPJ) | ✅ [Borrador](chile/normativa/leyes/ley-20393-rppj.md) |
+| Ley 21.595 | Delitos económicos y ambientales | ✅ [Borrador](chile/normativa/leyes/ley-21595-delitos-economicos.md) |
+| Ley 18.045 | Mercado de Valores (LMV) | ✅ [Borrador](chile/normativa/leyes/ley-18045-mercado-valores.md) |
+| Ley 19.039 | Propiedad Industrial (marcas, patentes) | ✅ [Borrador](chile/normativa/leyes/ley-19039-propiedad-industrial.md) |
+| Ley 17.336 | Propiedad Intelectual (derecho de autor) | ✅ [Borrador](chile/normativa/leyes/ley-17336-propiedad-intelectual.md) |
+| Ley 19.913 | Lavado de activos + UAF | ✅ [Borrador](chile/normativa/leyes/ley-19913-lavado-activos.md) |
+| Ley 14.908 | Pensiones alimenticias + RNDPA + GAM | ✅ [Borrador](chile/normativa/leyes/ley-14908-alimentos.md) |
 
 [Ver índice completo](chile/normativa/leyes/00-indice.md) (19 leyes).
 

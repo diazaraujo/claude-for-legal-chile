@@ -24,6 +24,14 @@ habilitado en Chile.
 | [`ley-19947-matrimonio-civil`](ley-19947-matrimonio-civil.md) | 19.947 | Matrimonio Civil (con Ley 21.400 matrimonio igualitario) | Familia | Vigente | borrador-no-validado |
 | [`ley-19968-tribunales-familia`](ley-19968-tribunales-familia.md) | 19.968 | Tribunales de Familia | Familia / Procesal | Vigente | borrador-no-validado |
 | [`ley-19300-medio-ambiente`](ley-19300-medio-ambiente.md) | 19.300 | Bases Generales del Medio Ambiente (SEIA, MMA, SMA) | Ambiental | Vigente | borrador-no-validado |
+| [`ley-20285-transparencia`](ley-20285-transparencia.md) | 20.285 | Acceso a información pública (CPLT) | Transparencia / Administrativo | Vigente | borrador-no-validado |
+| [`ley-20393-rppj`](ley-20393-rppj.md) | 20.393 | Responsabilidad penal de personas jurídicas (RPPJ) | Penal corporativo / Compliance | Vigente | borrador-no-validado |
+| [`ley-21595-delitos-economicos`](ley-21595-delitos-economicos.md) | 21.595 | Delitos económicos y atentados al medio ambiente | Penal económico / Ambiental | Vigente con escalonamiento | borrador-no-validado |
+| [`ley-18045-mercado-valores`](ley-18045-mercado-valores.md) | 18.045 | Mercado de Valores (LMV) — insider trading, OPA, fintec | Financiero / Societario | Vigente | borrador-no-validado |
+| [`ley-19039-propiedad-industrial`](ley-19039-propiedad-industrial.md) | 19.039 | Propiedad Industrial (marcas, patentes, INAPI) | IP industrial | Vigente | borrador-no-validado |
+| [`ley-17336-propiedad-intelectual`](ley-17336-propiedad-intelectual.md) | 17.336 | Propiedad Intelectual (derecho de autor, DDI) | IP autor | Vigente | borrador-no-validado |
+| [`ley-19913-lavado-activos`](ley-19913-lavado-activos.md) | 19.913 | Lavado de activos + UAF | Penal / Compliance | Vigente | borrador-no-validado |
+| [`ley-14908-alimentos`](ley-14908-alimentos.md) | 14.908 | Pensiones alimenticias, RNDPA, GAM | Familia | Vigente | borrador-no-validado |
 | `ley-19728-seguro-cesantia` | 19.728 | Seguro de cesantía | Laboral / Previsional | Vigente | pendiente |
 | `ley-20940-relaciones-laborales` | 20.940 | Modernización del sistema de relaciones laborales | Laboral | Vigente | pendiente |
 | `ley-21327-modernizacion-dt` | 21.327 | Modernización de la Dirección del Trabajo | Laboral / Administrativo | Vigente | pendiente |
