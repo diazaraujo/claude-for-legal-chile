@@ -3,6 +3,17 @@
 Cambios al contenido de `chile/`. Para cambios del upstream ver `git log` con
 `upstream/main`.
 
+## 0.0.15 — 2026-05-19
+
+- **Ley 21.057 — Entrevista Videograbada** (1 archivo capa 3):
+  - `leyes/ley-21057-entrevista-videograbada.md` — Resguardo a NNA víctimas
+    de delitos sexuales: entrevista investigativa videograbada (EI) por
+    entrevistador certificado en sala especializada, declaración judicial
+    videograbada en juicio oral, una sola entrevista (evita
+    revictimización), profesionales certificados Mintrab+Mineduc+MINSAL.
+- **Cobertura capa 3 ahora**: 1 Constitución + 7 códigos + 51 leyes + 3
+  skills + setup interview + fuentes.md = 63 archivos curados.
+
 ## 0.0.14 — 2026-05-19
 
 - **Cluster DD.HH. específicos** (2 archivos capa 3):
