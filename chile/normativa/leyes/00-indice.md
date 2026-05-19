@@ -95,6 +95,8 @@ habilitado en Chile.
 | [`ley-17288-monumentos-nacionales`](ley-17288-monumentos-nacionales.md) | 17.288 | Monumentos Nacionales — CMN, MH, ZT, Santuarios, arqueología | Patrimonial / Cultural | Vigente | borrador-no-validado |
 | [`ley-21302-snn-servicio-nacional-ninez`](ley-21302-snn-servicio-nacional-ninez.md) | 21.302 | SNN — Servicio Nacional Niñez (reemplaza SENAME, acogimiento familiar preferente) | Niñez / Protección | Vigente | borrador-no-validado |
 | [`ley-21601-crimen-organizado`](ley-21601-crimen-organizado.md) | 21.601 | Lucha contra el crimen organizado (asociación, organización criminal, decomiso autónomo) | Penal / Crimen organizado | Vigente | borrador-no-validado |
+| [`ley-19518-sence-capacitacion`](ley-19518-sence-capacitacion.md) | 19.518 | Estatuto Capacitación y Empleo — SENCE, OTEC, OTIC, franquicia tributaria | Laboral / Tributario | Vigente | borrador-no-validado |
+| [`ley-19620-adopciones`](ley-19620-adopciones.md) | 19.620 | Adopciones (susceptibilidad, adopción nacional + internacional, La Haya 1993) | Familia / Niñez | Vigente | borrador-no-validado |
 | [`ley-21030-aborto-tres-causales`](ley-21030-aborto-tres-causales.md) | 21.030 | Aborto en tres causales (riesgo, inviabilidad, violación) | Constitucional / Salud | Vigente | borrador-no-validado |
 | `ley-21327-modernizacion-dt` | 21.327 | Modernización de la Dirección del Trabajo | Laboral / Administrativo | Vigente | pendiente |
 | `ley-19253-indigenas` | 19.253 | Pueblos indígenas (CONADI) | Indígena | Vigente (fuera de alcance v1) | fuera-de-alcance |
