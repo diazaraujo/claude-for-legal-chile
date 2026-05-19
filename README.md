@@ -87,7 +87,7 @@ El corpus se publica en tres capas (ver `decisions/ADR-0002`):
 | Capa | Qué tiene | Cobertura actual |
 |---|---|---|
 | **1 — Catálogo** | Metadata estructurada por norma desde BCN/SPARQL | **~12.400 archivos** (códigos, leyes, DL, DFL, tratados, autos acordados) |
-| **2 — Resumen estructural** | Libros/títulos/artículos + conceptos clave desde XML estructurado de LeyChile | **211+ archivos** ley (en crecimiento; pipeline en `scripts/bcn/promote-to-capa2.py`) |
+| **2 — Resumen estructural** | Libros/títulos/artículos + conceptos clave desde XML estructurado de LeyChile | **711 archivos** ley (≈14% del catálogo total; pipeline en `scripts/bcn/promote-to-capa2.py`) |
 | **3 — Análisis operativo curado** | Lo que ves abajo, con disclaimer + validación legal | 59 archivos borrador + 3 skills + setup interview + fuentes |
 
 Detalle de capa 1 en [`chile/normativa/catalogo/README.md`](chile/normativa/catalogo/README.md).
