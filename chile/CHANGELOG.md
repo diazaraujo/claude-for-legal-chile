@@ -3,6 +3,23 @@
 Cambios al contenido de `chile/`. Para cambios del upstream ver `git log` con
 `upstream/main`.
 
+## 0.0.14 — 2026-05-19
+
+- **Cluster DD.HH. específicos** (2 archivos capa 3):
+  - `leyes/ley-21331-salud-mental.md` — Derechos en salud mental:
+    presunción capacidad jurídica, apoyo en toma de decisiones (no
+    sustitución), hospitalización psiquiátrica voluntaria como regla,
+    involuntaria solo con autorización judicial + revisión 90 días,
+    Comisión Nacional de Protección.
+  - `leyes/ley-21120-identidad-genero.md` — Cambio nombre y sexo
+    registral: adulto soltero vía SRCEI, adulto casado / adolescente
+    vía Tribunal de Familia, sin requisito de cirugía / examen
+    psiquiátrico, reserva de cambio anterior, identidad como categoría
+    protegida (cruce Ley 20.609).
+
+- **Cobertura capa 3 ahora**: 1 Constitución + 7 códigos + 50 leyes + 3
+  skills + setup interview + fuentes.md = 62 archivos curados.
+
 ## 0.0.13 — 2026-05-19
 
 - **Cluster digital del Estado** (2 archivos capa 3):
