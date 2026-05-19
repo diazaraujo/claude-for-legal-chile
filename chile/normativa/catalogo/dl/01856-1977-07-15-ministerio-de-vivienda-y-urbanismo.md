@@ -5,41 +5,65 @@ tipo: dl
 numero: 1856
 titulo_oficial: "FIJA NORMAS SOBRE INSCRIPCIONES REFUNDIDAS DE DOMINIO EN INMUEBLES COLINDANTES, ADQUIRIDOS O QUE ADQUIERAN LOS SERVICIOS DE VIVIENDA Y URBANIZACION"
 publicacion: 1977-07-15
-promulgacion: desconocida
+promulgacion: 1977-07-06
 emisor: ministerio-de-vivienda-y-urbanismo
 leychile_code: 181612
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=181612
 bcn_uri: http://datos.bcn.cl/recurso/cl/dl/ministerio-de-vivienda-y-urbanismo/1977-07-15/1856
-capa: 1
-estado_revision: catalogo-auto
+version_xml: 1977-07-15
+derogado: no derogado
+capa: 2
+estado_revision: resumen-estructural
 validador: null
 fecha_validacion: null
 ---
 
-# Decreto Ley 1856
+# DECRETO LEY 1856
 
 **Título oficial:** FIJA NORMAS SOBRE INSCRIPCIONES REFUNDIDAS DE DOMINIO EN INMUEBLES COLINDANTES, ADQUIRIDOS O QUE ADQUIERAN LOS SERVICIOS DE VIVIENDA Y URBANIZACION
 
 **Tipo:** Decreto Ley
 **Número:** 1856
-**Publicación en DO:** 1977-07-15
-**Promulgación:** _desconocida_
-**Emisor:** ministerio-de-vivienda-y-urbanismo
+**Publicación:** 1977-07-15
+**Promulgación:** 1977-07-06
+**Versión vigente:** 1977-07-15
+**Estado:** no derogado
+**Emisor:** MINISTERIO DE VIVIENDA Y URBANISMO
+
+## Encabezado
+
+_FIJA NORMAS SOBRE INSCRIPCIONES REFUNDIDAS DE DOMINIO EN INMUEBLES COLINDANTES, ADQUIRIDOS O QUE ADQUIERAN LOS SERVICIOS DE VIVIENDA Y URBANIZACION
+
+     Núm. 1.856.- Santiago, 6 de Julio de 1977.-  Visto: lo dispuesto en los decretos leyes N.os 1 y 128, de 1973; 527, de 1974, y 991, de 1976,
+     La Junta de Gobierno de la República de Chile ha acordado dictar el siguiente
+
+     Decreto ley:_
+
+## Artículos (5 totales)
+
+- **Art. 1** — Declárase que la norma contenida en el artículo 43 del decreto supremo Nº 483, de Vivienda y Urbanismo, publicado en el Diario Oficial de 3 de Septiembre de 1966, agregada por el artículo 26 de la ley
+- **Art. 2** — La inscripción refundida de los inmuebles que constituyen una sola unidad se practicará conforme a un plano, debidamente autorizado por el Secretario General o Ministro de Fe del respectivo Servicio d
+- **Art. 3** — La inscripción refundida de los diversos inmuebles colindantes, que forman una sola unidad, contendrá solamente las menciones de los N.os 1 y 5 del artículo 78 del Reglamento del Registro Conservatori
+- **Art. 4** — Los Servicios de la Vivienda y Urbanización deberán formar y mantener un archivo de todos los planos respecto de los cuales se practiquen las inscripciones a que se refiere el presente decreto ley.
+- **Art. 5** — La primera inscripción de un título de dominio y de cualquier otro derecho real constituido sobre los inmuebles que formen parte de una población o de un loteo urbanizado por los Servicios de Vivienda
 
 ## Fuente oficial
 
-- [BCN/LeyChile (texto vigente y modificaciones)](https://www.bcn.cl/leychile/navegar?idNorma=181612)
-- [BCN Linked Open Data (RDF)](http://datos.bcn.cl/recurso/cl/dl/ministerio-de-vivienda-y-urbanismo/1977-07-15/1856)
+- [BCN/LeyChile (texto vigente)](https://www.bcn.cl/leychile/navegar?idNorma=181612)
+- [XML estructurado](https://www.leychile.cl/Consulta/obtxml?opt=7&idNorma=181612)
 
 ## Estado en el corpus
 
-Entrada **capa 1** generada automáticamente desde el endpoint SPARQL de BCN.
-Contiene metadata catalográfica; no incluye análisis operativo ni síntesis
-estructural. Para texto vigente, modificaciones y artículos, consultar la
-fuente oficial.
+Entrada **capa 2** generada automáticamente desde el XML estructurado de BCN.
+Contiene metadata + estructura jerárquica + artículos con incisos iniciales.
+El texto íntegro NO está incluido — consultar BCN/LeyChile.
+
+Para promover a **capa 3** (análisis operativo curado con conceptos clave,
+conexiones, cuándo invocar, plazos críticos), abrir PR siguiendo el schema en
+`chile/normativa/README.md`.
 
 ## Disclaimers
 
-- Capa 1: metadata auto-generada, sin validación legal.
-- Para promover a capa 2 (resumen estructural) o capa 3 (análisis operativo),
-  abrir PR siguiendo el schema en `chile/normativa/README.md`.
+- Capa 2: estructura auto-generada, sin validación legal sustantiva.
+- El texto literal de cada artículo NO está en este archivo. Verificar en BCN.
+- `version_xml` indica la fecha de la última versión que LeyChile expone.

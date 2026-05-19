@@ -3,43 +3,56 @@ norma: Decreto Ley 3654
 slug: dl-3654
 tipo: dl
 numero: 3654
-titulo_oficial: "DECRETO LEY N°. 3654, DE 1981."
+titulo_oficial: "DECRETO LEY Nº. 3654, DE 1981."
 publicacion: no-tiene
 promulgacion: desconocida
 emisor: organismo-no-definido
 leychile_code: 238581
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=238581
 bcn_uri: http://datos.bcn.cl/recurso/cl/dl/organismo-no-definido/no-tiene/3654/es@1981-01-01
-capa: 1
-estado_revision: catalogo-auto
+version_xml: 1981-01-01
+derogado: no derogado
+capa: 2
+estado_revision: resumen-estructural
 validador: null
 fecha_validacion: null
 ---
 
-# Decreto Ley 3654
+# DECRETO LEY 3654
 
-**Título oficial:** DECRETO LEY N°. 3654, DE 1981.
+**Título oficial:** DECRETO LEY Nº. 3654, DE 1981.
 
 **Tipo:** Decreto Ley
 **Número:** 3654
-**Publicación en DO:** no-tiene
-**Promulgación:** _desconocida_
-**Emisor:** organismo-no-definido
+**Publicación:** 
+**Promulgación:** 
+**Versión vigente:** 1981-01-01
+**Estado:** no derogado
+**Emisor:** 
+
+## Encabezado
+
+_DECRETO LEY Nº. 3654, DE 1981.
+
+     EL PRESENTE DECRETO LEY TIENE EL CARÁCTER DE RESERVADO Y POR CONSIGUIENTE, SU TEXTO HA SIDO PUBLICADO EN UNA EDICIÓN RESTRINGIDA DEL DIARIO OFICIAL._
 
 ## Fuente oficial
 
-- [BCN/LeyChile (texto vigente y modificaciones)](https://www.bcn.cl/leychile/navegar?idNorma=238581)
-- [BCN Linked Open Data (RDF)](http://datos.bcn.cl/recurso/cl/dl/organismo-no-definido/no-tiene/3654/es@1981-01-01)
+- [BCN/LeyChile (texto vigente)](https://www.bcn.cl/leychile/navegar?idNorma=238581)
+- [XML estructurado](https://www.leychile.cl/Consulta/obtxml?opt=7&idNorma=238581)
 
 ## Estado en el corpus
 
-Entrada **capa 1** generada automáticamente desde el endpoint SPARQL de BCN.
-Contiene metadata catalográfica; no incluye análisis operativo ni síntesis
-estructural. Para texto vigente, modificaciones y artículos, consultar la
-fuente oficial.
+Entrada **capa 2** generada automáticamente desde el XML estructurado de BCN.
+Contiene metadata + estructura jerárquica + artículos con incisos iniciales.
+El texto íntegro NO está incluido — consultar BCN/LeyChile.
+
+Para promover a **capa 3** (análisis operativo curado con conceptos clave,
+conexiones, cuándo invocar, plazos críticos), abrir PR siguiendo el schema en
+`chile/normativa/README.md`.
 
 ## Disclaimers
 
-- Capa 1: metadata auto-generada, sin validación legal.
-- Para promover a capa 2 (resumen estructural) o capa 3 (análisis operativo),
-  abrir PR siguiendo el schema en `chile/normativa/README.md`.
+- Capa 2: estructura auto-generada, sin validación legal sustantiva.
+- El texto literal de cada artículo NO está en este archivo. Verificar en BCN.
+- `version_xml` indica la fecha de la última versión que LeyChile expone.

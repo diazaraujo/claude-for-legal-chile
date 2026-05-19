@@ -5,41 +5,65 @@ tipo: dl
 numero: 1669
 titulo_oficial: "OTORGA, POR GRACIA, AL TENIENTE CORONEL DE EJERCITO (R), DON VICTOR CHAVEZ DAILHE, NUEVA CEDULA DE RETIRO CON EL GRADO DE CORONEL DE EJERCITO"
 publicacion: 1977-01-19
-promulgacion: desconocida
+promulgacion: 1977-01-03
 emisor: ministerio-del-interior
 leychile_code: 183384
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=183384
 bcn_uri: http://datos.bcn.cl/recurso/cl/dl/ministerio-del-interior/1977-01-19/1669
-capa: 1
-estado_revision: catalogo-auto
+version_xml: 1977-01-19
+derogado: no derogado
+capa: 2
+estado_revision: resumen-estructural
 validador: null
 fecha_validacion: null
 ---
 
-# Decreto Ley 1669
+# DECRETO LEY 1669
 
 **Título oficial:** OTORGA, POR GRACIA, AL TENIENTE CORONEL DE EJERCITO (R), DON VICTOR CHAVEZ DAILHE, NUEVA CEDULA DE RETIRO CON EL GRADO DE CORONEL DE EJERCITO
 
 **Tipo:** Decreto Ley
 **Número:** 1669
-**Publicación en DO:** 1977-01-19
-**Promulgación:** _desconocida_
-**Emisor:** ministerio-del-interior
+**Publicación:** 1977-01-19
+**Promulgación:** 1977-01-03
+**Versión vigente:** 1977-01-19
+**Estado:** no derogado
+**Emisor:** MINISTERIO DEL INTERIOR
+
+## Encabezado
+
+_OTORGA, POR GRACIA, AL TENIENTE CORONEL DE EJERCITO (R), DON VICTOR CHAVEZ DAILHE, NUEVA CEDULA DE RETIRO CON EL GRADO DE CORONEL DE EJERCITO
+
+     Santiago, 3 de Enero de 1977.- La H. Junta de Gobierno de la República de Chile ha acordado hoy lo que sigue:
+     Núm. 1.669.- Visto: lo dispuesto en los decretos leyes Nºs. 1 y 128, de 1973; 527, de 1974, y 991, de 1976, y
+
+     Considerando:
+
+     E_
+
+(...) — ver texto íntegro en BCN/LeyChile.
+
+## Artículos (1 totales)
+
+- **Art. único** — único.- Otórgase, por gracia, al Teniente Coronel de Ejército (R), don Víctor Chávez Dailhe, nueva cédula de retiro con el grado de Coronel de Ejército.      El gasto que importe la aplicación de este
 
 ## Fuente oficial
 
-- [BCN/LeyChile (texto vigente y modificaciones)](https://www.bcn.cl/leychile/navegar?idNorma=183384)
-- [BCN Linked Open Data (RDF)](http://datos.bcn.cl/recurso/cl/dl/ministerio-del-interior/1977-01-19/1669)
+- [BCN/LeyChile (texto vigente)](https://www.bcn.cl/leychile/navegar?idNorma=183384)
+- [XML estructurado](https://www.leychile.cl/Consulta/obtxml?opt=7&idNorma=183384)
 
 ## Estado en el corpus
 
-Entrada **capa 1** generada automáticamente desde el endpoint SPARQL de BCN.
-Contiene metadata catalográfica; no incluye análisis operativo ni síntesis
-estructural. Para texto vigente, modificaciones y artículos, consultar la
-fuente oficial.
+Entrada **capa 2** generada automáticamente desde el XML estructurado de BCN.
+Contiene metadata + estructura jerárquica + artículos con incisos iniciales.
+El texto íntegro NO está incluido — consultar BCN/LeyChile.
+
+Para promover a **capa 3** (análisis operativo curado con conceptos clave,
+conexiones, cuándo invocar, plazos críticos), abrir PR siguiendo el schema en
+`chile/normativa/README.md`.
 
 ## Disclaimers
 
-- Capa 1: metadata auto-generada, sin validación legal.
-- Para promover a capa 2 (resumen estructural) o capa 3 (análisis operativo),
-  abrir PR siguiendo el schema en `chile/normativa/README.md`.
+- Capa 2: estructura auto-generada, sin validación legal sustantiva.
+- El texto literal de cada artículo NO está en este archivo. Verificar en BCN.
+- `version_xml` indica la fecha de la última versión que LeyChile expone.

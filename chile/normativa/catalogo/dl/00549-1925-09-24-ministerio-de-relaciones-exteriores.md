@@ -3,43 +3,74 @@ norma: Decreto Ley 549
 slug: dl-549
 tipo: dl
 numero: 549
-titulo_oficial: "APRUEBA Y RATIFICA LOS ACUERDOS SUSCRITO POR LOS DELEGADOS CHILENOS EN EL CONGRESO POSTAL UNIVERSAL DE ESTOCOLMO EN 1924."
+titulo_oficial: "Aprueba y ratifica los Acuerdos suscrito por los Delegados Chilenos en el Congreso Postal Universal de Estocolmo en 1924."
 publicacion: 1925-09-24
-promulgacion: desconocida
+promulgacion: 1925-09-22
 emisor: ministerio-de-relaciones-exteriores
 leychile_code: 400808
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=400808
 bcn_uri: http://datos.bcn.cl/recurso/cl/dl/ministerio-de-relaciones-exteriores/1925-09-24/549
-capa: 1
-estado_revision: catalogo-auto
+version_xml: 1925-09-24
+derogado: no derogado
+materias_bcn: ["Congreso Postal Universal"]
+capa: 2
+estado_revision: resumen-estructural
 validador: null
 fecha_validacion: null
 ---
 
-# Decreto Ley 549
+# DECRETO LEY 549
 
-**Título oficial:** APRUEBA Y RATIFICA LOS ACUERDOS SUSCRITO POR LOS DELEGADOS CHILENOS EN EL CONGRESO POSTAL UNIVERSAL DE ESTOCOLMO EN 1924.
+**Título oficial:** Aprueba y ratifica los Acuerdos suscrito por los Delegados Chilenos en el Congreso Postal Universal de Estocolmo en 1924.
 
 **Tipo:** Decreto Ley
 **Número:** 549
-**Publicación en DO:** 1925-09-24
-**Promulgación:** _desconocida_
-**Emisor:** ministerio-de-relaciones-exteriores
+**Publicación:** 1925-09-24
+**Promulgación:** 1925-09-22
+**Versión vigente:** 1925-09-24
+**Estado:** no derogado
+**Emisor:** MINISTERIO DE RELACIONES EXTERIORES
+
+## Materias (BCN)
+
+- Congreso Postal Universal
+
+## Encabezado
+
+_Decreto-lei
+
+
+     Núm. 549.- Santiago, 22 de septiembre de 1925.- Vistos estos antecedentes y considerando:
+
+     1.o Que el Gobierno de Chile suscribió los siguientes acuerdos del Congreso Postal Universal, celebrado en Estocolmo, en 1924:
+
+     Convencion Postal Universal, seguida de un Protocolo Final y Reglamento de Ejecucion, tambien seguido de un Protocolo Final;
+
+     Convencion sobre cart_
+
+(...) — ver texto íntegro en BCN/LeyChile.
+
+## Artículos (1 totales)
+
+- **Art. 10437572** — Apruébanse y ratificanse, por parte del Gobierno de Chile, los acuerdos suscritos por los Delegados chilenos en el Congreso Postal Universal, celebrado en Estocolmo, en 1924, que arriba se enumeran.
 
 ## Fuente oficial
 
-- [BCN/LeyChile (texto vigente y modificaciones)](https://www.bcn.cl/leychile/navegar?idNorma=400808)
-- [BCN Linked Open Data (RDF)](http://datos.bcn.cl/recurso/cl/dl/ministerio-de-relaciones-exteriores/1925-09-24/549)
+- [BCN/LeyChile (texto vigente)](https://www.bcn.cl/leychile/navegar?idNorma=400808)
+- [XML estructurado](https://www.leychile.cl/Consulta/obtxml?opt=7&idNorma=400808)
 
 ## Estado en el corpus
 
-Entrada **capa 1** generada automáticamente desde el endpoint SPARQL de BCN.
-Contiene metadata catalográfica; no incluye análisis operativo ni síntesis
-estructural. Para texto vigente, modificaciones y artículos, consultar la
-fuente oficial.
+Entrada **capa 2** generada automáticamente desde el XML estructurado de BCN.
+Contiene metadata + estructura jerárquica + artículos con incisos iniciales.
+El texto íntegro NO está incluido — consultar BCN/LeyChile.
+
+Para promover a **capa 3** (análisis operativo curado con conceptos clave,
+conexiones, cuándo invocar, plazos críticos), abrir PR siguiendo el schema en
+`chile/normativa/README.md`.
 
 ## Disclaimers
 
-- Capa 1: metadata auto-generada, sin validación legal.
-- Para promover a capa 2 (resumen estructural) o capa 3 (análisis operativo),
-  abrir PR siguiendo el schema en `chile/normativa/README.md`.
+- Capa 2: estructura auto-generada, sin validación legal sustantiva.
+- El texto literal de cada artículo NO está en este archivo. Verificar en BCN.
+- `version_xml` indica la fecha de la última versión que LeyChile expone.

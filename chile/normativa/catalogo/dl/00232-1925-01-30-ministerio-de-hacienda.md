@@ -5,41 +5,56 @@ tipo: dl
 numero: 232
 titulo_oficial: "DECRETO-LEI N° 232, QUE APRUEBA EL PRESUPUESTO DE GASTOS DE LA NACION PARA 1925."
 publicacion: 1925-01-30
-promulgacion: desconocida
+promulgacion: 1925-01-30
 emisor: ministerio-de-hacienda
 leychile_code: 5888
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=5888
 bcn_uri: http://datos.bcn.cl/recurso/cl/dl/ministerio-de-hacienda/1925-01-30/232
-capa: 1
-estado_revision: catalogo-auto
+version_xml: 1925-03-17
+derogado: no derogado
+capa: 2
+estado_revision: resumen-estructural
 validador: null
 fecha_validacion: null
 ---
 
-# Decreto Ley 232
+# DECRETO LEY 232
 
 **Título oficial:** DECRETO-LEI N° 232, QUE APRUEBA EL PRESUPUESTO DE GASTOS DE LA NACION PARA 1925.
 
 **Tipo:** Decreto Ley
 **Número:** 232
-**Publicación en DO:** 1925-01-30
-**Promulgación:** _desconocida_
-**Emisor:** ministerio-de-hacienda
+**Publicación:** 1925-01-30
+**Promulgación:** 1925-01-30
+**Versión vigente:** 1925-03-17
+**Estado:** no derogado
+**Emisor:** MINISTERIO DE HACIENDA
+
+## Encabezado
+
+_Decreto-Lei N° 232, que aprueba el Presupuesto de Gastos de la Nacion para 1925._
+
+## Artículos (1 totales)
+
+- **Art. 9035242** — 1.o Fíjase en la forma que a continuacion se indica el cálculo de entradas para el Presupuesto de Gastos de la Nacion que debe rejir en el año 1925:                    ORO          Entradas ordinarias
 
 ## Fuente oficial
 
-- [BCN/LeyChile (texto vigente y modificaciones)](https://www.bcn.cl/leychile/navegar?idNorma=5888)
-- [BCN Linked Open Data (RDF)](http://datos.bcn.cl/recurso/cl/dl/ministerio-de-hacienda/1925-01-30/232)
+- [BCN/LeyChile (texto vigente)](https://www.bcn.cl/leychile/navegar?idNorma=5888)
+- [XML estructurado](https://www.leychile.cl/Consulta/obtxml?opt=7&idNorma=5888)
 
 ## Estado en el corpus
 
-Entrada **capa 1** generada automáticamente desde el endpoint SPARQL de BCN.
-Contiene metadata catalográfica; no incluye análisis operativo ni síntesis
-estructural. Para texto vigente, modificaciones y artículos, consultar la
-fuente oficial.
+Entrada **capa 2** generada automáticamente desde el XML estructurado de BCN.
+Contiene metadata + estructura jerárquica + artículos con incisos iniciales.
+El texto íntegro NO está incluido — consultar BCN/LeyChile.
+
+Para promover a **capa 3** (análisis operativo curado con conceptos clave,
+conexiones, cuándo invocar, plazos críticos), abrir PR siguiendo el schema en
+`chile/normativa/README.md`.
 
 ## Disclaimers
 
-- Capa 1: metadata auto-generada, sin validación legal.
-- Para promover a capa 2 (resumen estructural) o capa 3 (análisis operativo),
-  abrir PR siguiendo el schema en `chile/normativa/README.md`.
+- Capa 2: estructura auto-generada, sin validación legal sustantiva.
+- El texto literal de cada artículo NO está en este archivo. Verificar en BCN.
+- `version_xml` indica la fecha de la última versión que LeyChile expone.

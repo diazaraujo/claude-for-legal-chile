@@ -5,41 +5,65 @@ tipo: dl
 numero: 1686
 titulo_oficial: "FIJA REMUNERACIONES DEL PERSONAL DEL INSTITUTO DE SEGUROS DEL ESTADO"
 publicacion: 1977-03-01
-promulgacion: desconocida
+promulgacion: 1977-02-14
 emisor: ministerio-de-hacienda
 leychile_code: 182143
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=182143
 bcn_uri: http://datos.bcn.cl/recurso/cl/dl/ministerio-de-hacienda/1977-03-01/1686
-capa: 1
-estado_revision: catalogo-auto
+version_xml: 1977-03-01
+derogado: no derogado
+capa: 2
+estado_revision: resumen-estructural
 validador: null
 fecha_validacion: null
 ---
 
-# Decreto Ley 1686
+# DECRETO LEY 1686
 
 **Título oficial:** FIJA REMUNERACIONES DEL PERSONAL DEL INSTITUTO DE SEGUROS DEL ESTADO
 
 **Tipo:** Decreto Ley
 **Número:** 1686
-**Publicación en DO:** 1977-03-01
-**Promulgación:** _desconocida_
-**Emisor:** ministerio-de-hacienda
+**Publicación:** 1977-03-01
+**Promulgación:** 1977-02-14
+**Versión vigente:** 1977-03-01
+**Estado:** no derogado
+**Emisor:** MINISTERIO DE HACIENDA
+
+## Encabezado
+
+_FIJA REMUNERACIONES DEL PERSONAL DEL INSTITUTO DE SEGUROS DEL ESTADO
+
+     Núm. 1.686.- Santiago, 14 de Febrero de 1977.- Vistos: lo dispuesto en los decretos leyes Nºs. 1 y 128, de 1973; Nº 527, de 1974, y número 991, de 1976, La Junta de Gobierno de la República ha acordado dictar el siguiente
+
+     Decreto ley:_
+
+## Artículos (6 totales)
+
+- **Art. 1** — Las Plantas del Personal y el sistema de remuneraciones del Instituto de Seguros del Estado serán fijados por decreto supremo del Ministerio de Hacienda, a proposición del Vicepresidente Ejecutivo, fo
+- **Art. 2** — El Instituto de Seguros del Estado seguirá regido por la norma del artículo 3º del decreto ley Nº 249, de 1973.
+- **Art. 3** — Deróganse los artículos 1º, 3º y 5º del decreto ley Nº 554, de 1974.
+- **Art. 4** — Las disposiciones de este decreto ley tendrán vigencia a contar del 1º de enero de 1977.
+- **Art. 1** — transitorio.- No regirá la exigencia de proposición del Vicepresidente Ejecutivo establecida en el artículo 1º de este decreto ley, respecto de la primera fijación de plantas y sistema de remuneracion
+- **Art. 2** — transitorio.- Facúltase al Vicepresidente Ejecutivo del Instituto de Seguros del Estado para encasillar al personal por esta única vez en las plantas que se fijen en virtud de lo dispuesto en el artíc
 
 ## Fuente oficial
 
-- [BCN/LeyChile (texto vigente y modificaciones)](https://www.bcn.cl/leychile/navegar?idNorma=182143)
-- [BCN Linked Open Data (RDF)](http://datos.bcn.cl/recurso/cl/dl/ministerio-de-hacienda/1977-03-01/1686)
+- [BCN/LeyChile (texto vigente)](https://www.bcn.cl/leychile/navegar?idNorma=182143)
+- [XML estructurado](https://www.leychile.cl/Consulta/obtxml?opt=7&idNorma=182143)
 
 ## Estado en el corpus
 
-Entrada **capa 1** generada automáticamente desde el endpoint SPARQL de BCN.
-Contiene metadata catalográfica; no incluye análisis operativo ni síntesis
-estructural. Para texto vigente, modificaciones y artículos, consultar la
-fuente oficial.
+Entrada **capa 2** generada automáticamente desde el XML estructurado de BCN.
+Contiene metadata + estructura jerárquica + artículos con incisos iniciales.
+El texto íntegro NO está incluido — consultar BCN/LeyChile.
+
+Para promover a **capa 3** (análisis operativo curado con conceptos clave,
+conexiones, cuándo invocar, plazos críticos), abrir PR siguiendo el schema en
+`chile/normativa/README.md`.
 
 ## Disclaimers
 
-- Capa 1: metadata auto-generada, sin validación legal.
-- Para promover a capa 2 (resumen estructural) o capa 3 (análisis operativo),
-  abrir PR siguiendo el schema en `chile/normativa/README.md`.
+- Capa 2: estructura auto-generada, sin validación legal sustantiva.
+- El texto literal de cada artículo NO está en este archivo. Verificar en BCN.
+- `version_xml` indica la fecha de la última versión que LeyChile expone.
