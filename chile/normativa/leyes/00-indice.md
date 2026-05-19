@@ -111,6 +111,7 @@ habilitado en Chile.
 | [`ley-21000-cmf`](ley-21000-cmf.md) | 21.000 | CMF — Comisión Mercado Financiero (regula bancos, valores, seguros, fintech) | Regulatorio / Financiero | Vigente | borrador-no-validado |
 | [`ley-19966-auge-ges`](ley-19966-auge-ges.md) | 19.966 | AUGE / GES — 87 problemas con 4 garantías (acceso, oportunidad, calidad, financiera) | Salud / Garantías | Vigente | borrador-no-validado |
 | [`ley-10336-cgr`](ley-10336-cgr.md) | 10.336 | Contraloría General de la República (CGR) — toma de razón, dictámenes, juicio cuentas | Control / Constitucional | Vigente | borrador-no-validado |
+| [`dfl-2-2009-lge`](dfl-2-2009-lge.md) | DFL 2/2009 | Ley General de Educación (LGE) — marco sistema, reconocimiento oficial, currículum, SAC | Educación / Marco | Vigente | borrador-no-validado |
 | [`ley-21030-aborto-tres-causales`](ley-21030-aborto-tres-causales.md) | 21.030 | Aborto en tres causales (riesgo, inviabilidad, violación) | Constitucional / Salud | Vigente | borrador-no-validado |
 | `ley-21327-modernizacion-dt` | 21.327 | Modernización de la Dirección del Trabajo | Laboral / Administrativo | Vigente | pendiente |
 | `ley-19253-indigenas` | 19.253 | Pueblos indígenas (CONADI) | Indígena | Vigente (fuera de alcance v1) | fuera-de-alcance |
