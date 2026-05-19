@@ -89,6 +89,8 @@ habilitado en Chile.
 | [`ley-20087-procedimiento-laboral`](ley-20087-procedimiento-laboral.md) | 20.087 | Procedimiento laboral oral (tutela laboral, monitorio, recursos) | Procesal Laboral | Vigente | borrador-no-validado |
 | [`ley-19123-reparacion-rettig`](ley-19123-reparacion-rettig.md) | 19.123 | Reparación familiares víctimas Rettig (muerte + desaparición forzada) | DDHH / Reparación | Vigente | borrador-no-validado |
 | [`ley-19992-reparacion-valech`](ley-19992-reparacion-valech.md) | 19.992 | Reparación víctimas Valech I y II (tortura + prisión política) | DDHH / Reparación | Vigente | borrador-no-validado |
+| [`ley-19640-ministerio-publico`](ley-19640-ministerio-publico.md) | 19.640 | LOC del Ministerio Público (Fiscalía: investigación + acción penal) | Constitucional / Penal | Vigente | borrador-no-validado |
+| [`ley-20405-indh`](ley-20405-indh.md) | 20.405 | INDH — Instituto Nacional de Derechos Humanos + MNPT | DDHH / Institucional | Vigente | borrador-no-validado |
 | [`ley-21030-aborto-tres-causales`](ley-21030-aborto-tres-causales.md) | 21.030 | Aborto en tres causales (riesgo, inviabilidad, violación) | Constitucional / Salud | Vigente | borrador-no-validado |
 | `ley-21327-modernizacion-dt` | 21.327 | Modernización de la Dirección del Trabajo | Laboral / Administrativo | Vigente | pendiente |
 | `ley-19253-indigenas` | 19.253 | Pueblos indígenas (CONADI) | Indígena | Vigente (fuera de alcance v1) | fuera-de-alcance |
