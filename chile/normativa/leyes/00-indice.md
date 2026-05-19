@@ -59,6 +59,8 @@ habilitado en Chile.
 | [`ley-21057-entrevista-videograbada`](ley-21057-entrevista-videograbada.md) | 21.057 | Entrevista videograbada NNA víctimas de delitos sexuales | Penal / NNA | Vigente | borrador-no-validado |
 | [`ley-21314-gobierno-corporativo`](ley-21314-gobierno-corporativo.md) | 21.314 | Gobierno corporativo SA abiertas (transparencia, OPR, whistleblowing) | Corporate / Financiero | Vigente | borrador-no-validado |
 | [`ley-18700-loc-votaciones`](ley-18700-loc-votaciones.md) | 18.700 | LOC sobre votaciones populares y escrutinios (sistema electoral) | Electoral / Constitucional | Vigente | borrador-no-validado |
+| [`ley-17997-loc-tc`](ley-17997-loc-tc.md) | 17.997 | LOC del Tribunal Constitucional (inaplicabilidad, inconstitucionalidad) | Constitucional / Jurisdicción | Vigente | borrador-no-validado |
+| [`ley-18918-loc-congreso`](ley-18918-loc-congreso.md) | 18.918 | LOC del Congreso Nacional (procedimiento legislativo, acusación constitucional) | Constitucional / Legislativo | Vigente | borrador-no-validado |
 | `ley-21327-modernizacion-dt` | 21.327 | Modernización de la Dirección del Trabajo | Laboral / Administrativo | Vigente | pendiente |
 | `ley-19253-indigenas` | 19.253 | Pueblos indígenas (CONADI) | Indígena | Vigente (fuera de alcance v1) | fuera-de-alcance |
 
