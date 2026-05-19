@@ -5,41 +5,67 @@ tipo: dfl
 numero: 3
 titulo_oficial: "FIJA PLANTAS DEL MINISTERIO DE EDUCACION"
 publicacion: 1992-08-22
-promulgacion: desconocida
+promulgacion: 1992-06-24
 emisor: ministerio-de-educacion-publica
 leychile_code: 3598
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=3598
 bcn_uri: http://datos.bcn.cl/recurso/cl/dfl/ministerio-de-educacion-publica/1992-08-22/3
-capa: 1
-estado_revision: catalogo-auto
+version_xml: 1992-08-22
+derogado: no derogado
+materias_bcn: ["Plantas del Ministerio de Educación"]
+capa: 2
+estado_revision: resumen-estructural
 validador: null
 fecha_validacion: null
 ---
 
-# Decreto con Fuerza de Ley 3
+# DECRETO CON FUERZA DE LEY 3
 
 **Título oficial:** FIJA PLANTAS DEL MINISTERIO DE EDUCACION
 
 **Tipo:** Decreto con Fuerza de Ley
 **Número:** 3
-**Publicación en DO:** 1992-08-22
-**Promulgación:** _desconocida_
-**Emisor:** ministerio-de-educacion-publica
+**Publicación:** 1992-08-22
+**Promulgación:** 1992-06-24
+**Versión vigente:** 1992-08-22
+**Estado:** no derogado
+**Emisor:** MINISTERIO DE EDUCACIÓN PÚBLICA
+
+## Materias (BCN)
+
+- Plantas del Ministerio de Educación
+
+## Encabezado
+
+_FIJA PLANTAS DEL MINISTERIO DE EDUCACION
+    D.F.L. N° 3.- Santiago, 24 de Junio de 1992.
+    CONSIDERANDO:
+    Que en virtud de lo señalado en las glosas de la planta de Directivos fijada en el D.F.L. N° 1, de Educación, de 1990, se transformó un cargo de Jefatura C grado 15° en administrativo grado 19° (actual grado 14°), y 11 cargos de Jefatura C grado 18° en Administrativos grado 18° (actual g_
+
+(...) — ver texto íntegro en BCN/LeyChile.
+
+## Artículos (2 totales)
+
+- **Art. 1** — : FIJASE el texto refundido de las Plantas del Ministerio de Educación:   -------------------------------------------------------   PLANTA NACIONAL             GRADO       N° DE CARGOS   DEL MINISTERI
+- **Art. 2** — : Los requisitos de ingreso y provisión de las plantas respectivas, son aquellas contempladas en el D.F.L. N° 1, de 1990, de Educación, y en el inciso quinto de la letra D) del artículo 2° de la ley N
 
 ## Fuente oficial
 
-- [BCN/LeyChile (texto vigente y modificaciones)](https://www.bcn.cl/leychile/navegar?idNorma=3598)
-- [BCN Linked Open Data (RDF)](http://datos.bcn.cl/recurso/cl/dfl/ministerio-de-educacion-publica/1992-08-22/3)
+- [BCN/LeyChile (texto vigente)](https://www.bcn.cl/leychile/navegar?idNorma=3598)
+- [XML estructurado](https://www.leychile.cl/Consulta/obtxml?opt=7&idNorma=3598)
 
 ## Estado en el corpus
 
-Entrada **capa 1** generada automáticamente desde el endpoint SPARQL de BCN.
-Contiene metadata catalográfica; no incluye análisis operativo ni síntesis
-estructural. Para texto vigente, modificaciones y artículos, consultar la
-fuente oficial.
+Entrada **capa 2** generada automáticamente desde el XML estructurado de BCN.
+Contiene metadata + estructura jerárquica + artículos con incisos iniciales.
+El texto íntegro NO está incluido — consultar BCN/LeyChile.
+
+Para promover a **capa 3** (análisis operativo curado con conceptos clave,
+conexiones, cuándo invocar, plazos críticos), abrir PR siguiendo el schema en
+`chile/normativa/README.md`.
 
 ## Disclaimers
 
-- Capa 1: metadata auto-generada, sin validación legal.
-- Para promover a capa 2 (resumen estructural) o capa 3 (análisis operativo),
-  abrir PR siguiendo el schema en `chile/normativa/README.md`.
+- Capa 2: estructura auto-generada, sin validación legal sustantiva.
+- El texto literal de cada artículo NO está en este archivo. Verificar en BCN.
+- `version_xml` indica la fecha de la última versión que LeyChile expone.

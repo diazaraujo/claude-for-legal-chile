@@ -5,41 +5,57 @@ tipo: dfl
 numero: 21
 titulo_oficial: "SIN TITULO"
 publicacion: 1931-03-16
-promulgacion: desconocida
+promulgacion: 1931-02-28
 emisor: ministerio-de-educacion-publica
 leychile_code: 4024
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=4024
 bcn_uri: http://datos.bcn.cl/recurso/cl/dfl/ministerio-de-educacion-publica/1931-03-16/21
-capa: 1
-estado_revision: catalogo-auto
+version_xml: 1931-03-16
+derogado: no derogado
+capa: 2
+estado_revision: resumen-estructural
 validador: null
 fecha_validacion: null
 ---
 
-# Decreto con Fuerza de Ley 21
+# DECRETO CON FUERZA DE LEY 21
 
 **Título oficial:** SIN TITULO
 
 **Tipo:** Decreto con Fuerza de Ley
 **Número:** 21
-**Publicación en DO:** 1931-03-16
-**Promulgación:** _desconocida_
-**Emisor:** ministerio-de-educacion-publica
+**Publicación:** 1931-03-16
+**Promulgación:** 1931-02-28
+**Versión vigente:** 1931-03-16
+**Estado:** no derogado
+**Emisor:** MINISTERIO DE EDUCACIÓN PÚBLICA
+
+## Encabezado
+
+_Núm. 21.- Santiago, 28 de Febrero de 1931.- Vistas las facultades que me confiere la ley N.o 4,945, de 6 del actual,
+    Decreto:_
+
+## Artículos (1 totales)
+
+- **Art. 5861421** — 1.o El Ministerio de Educación Pública está formado por el Gabinete del Ministro y Subsecretaría, por los Departamentos del Personal y Administrativo, por las Direcciones de Educación Primaria, Secund
 
 ## Fuente oficial
 
-- [BCN/LeyChile (texto vigente y modificaciones)](https://www.bcn.cl/leychile/navegar?idNorma=4024)
-- [BCN Linked Open Data (RDF)](http://datos.bcn.cl/recurso/cl/dfl/ministerio-de-educacion-publica/1931-03-16/21)
+- [BCN/LeyChile (texto vigente)](https://www.bcn.cl/leychile/navegar?idNorma=4024)
+- [XML estructurado](https://www.leychile.cl/Consulta/obtxml?opt=7&idNorma=4024)
 
 ## Estado en el corpus
 
-Entrada **capa 1** generada automáticamente desde el endpoint SPARQL de BCN.
-Contiene metadata catalográfica; no incluye análisis operativo ni síntesis
-estructural. Para texto vigente, modificaciones y artículos, consultar la
-fuente oficial.
+Entrada **capa 2** generada automáticamente desde el XML estructurado de BCN.
+Contiene metadata + estructura jerárquica + artículos con incisos iniciales.
+El texto íntegro NO está incluido — consultar BCN/LeyChile.
+
+Para promover a **capa 3** (análisis operativo curado con conceptos clave,
+conexiones, cuándo invocar, plazos críticos), abrir PR siguiendo el schema en
+`chile/normativa/README.md`.
 
 ## Disclaimers
 
-- Capa 1: metadata auto-generada, sin validación legal.
-- Para promover a capa 2 (resumen estructural) o capa 3 (análisis operativo),
-  abrir PR siguiendo el schema en `chile/normativa/README.md`.
+- Capa 2: estructura auto-generada, sin validación legal sustantiva.
+- El texto literal de cada artículo NO está en este archivo. Verificar en BCN.
+- `version_xml` indica la fecha de la última versión que LeyChile expone.

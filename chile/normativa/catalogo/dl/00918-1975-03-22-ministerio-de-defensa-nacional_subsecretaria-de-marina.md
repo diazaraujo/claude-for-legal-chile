@@ -5,41 +5,64 @@ tipo: dl
 numero: 918
 titulo_oficial: "CONCEDE, POR GRACIA, UN ABONO DE 10 AÑOS EN LAS HOJAS DE SERVICIOS DEL PERSONAL DE LA ARMADA FALLECIDO A CONSECUENCIA DEL NAUFRAGIO DEL RAM. JANEQUEO"
 publicacion: 1975-03-22
-promulgacion: desconocida
+promulgacion: 1975-02-28
 emisor: ministerio-de-defensa-nacional_subsecretaria-de-marina
 leychile_code: 221615
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=221615
 bcn_uri: http://datos.bcn.cl/recurso/cl/dl/ministerio-de-defensa-nacional_subsecretaria-de-marina/1975-03-22/918
-capa: 1
-estado_revision: catalogo-auto
+version_xml: 1975-03-22
+derogado: no derogado
+capa: 2
+estado_revision: resumen-estructural
 validador: null
 fecha_validacion: null
 ---
 
-# Decreto Ley 918
+# DECRETO LEY 918
 
 **Título oficial:** CONCEDE, POR GRACIA, UN ABONO DE 10 AÑOS EN LAS HOJAS DE SERVICIOS DEL PERSONAL DE LA ARMADA FALLECIDO A CONSECUENCIA DEL NAUFRAGIO DEL RAM. JANEQUEO
 
 **Tipo:** Decreto Ley
 **Número:** 918
-**Publicación en DO:** 1975-03-22
-**Promulgación:** _desconocida_
-**Emisor:** ministerio-de-defensa-nacional_subsecretaria-de-marina
+**Publicación:** 1975-03-22
+**Promulgación:** 1975-02-28
+**Versión vigente:** 1975-03-22
+**Estado:** no derogado
+**Emisor:** MINISTERIO DE DEFENSA NACIONAL
+
+## Encabezado
+
+_CONCEDE, POR GRACIA, UN ABONO DE 10 AÑOS EN LAS HOJAS DE SERVICIOS DEL PERSONAL DE LA ARMADA FALLECIDO A CONSECUENCIA DEL NAUFRAGIO DEL RAM. "JANEQUEO" 
+     Núm. 918.- Santiago, 28 de Febrero de 1975.
+     Vistos: lo dispuesto en el decreto ley Nº 1, de fecha 11 de Septiembre de 1973, y
+
+     Considerando:
+
+     1.- Que el 15 de Agosto de 1965 naufragó en la bahía de San Pedro el RAM. "Janequeo",_
+
+(...) — ver texto íntegro en BCN/LeyChile.
+
+## Artículos (1 totales)
+
+- **Art. único** — único: Concédese, por gracia, un abono de 10 años en las hojas de servicios del personal de la Armada de Chile fallecido a consecuencias del naufragio del RAM. "Janequeo" ocurrido el 15 de Agosto de 1
 
 ## Fuente oficial
 
-- [BCN/LeyChile (texto vigente y modificaciones)](https://www.bcn.cl/leychile/navegar?idNorma=221615)
-- [BCN Linked Open Data (RDF)](http://datos.bcn.cl/recurso/cl/dl/ministerio-de-defensa-nacional_subsecretaria-de-marina/1975-03-22/918)
+- [BCN/LeyChile (texto vigente)](https://www.bcn.cl/leychile/navegar?idNorma=221615)
+- [XML estructurado](https://www.leychile.cl/Consulta/obtxml?opt=7&idNorma=221615)
 
 ## Estado en el corpus
 
-Entrada **capa 1** generada automáticamente desde el endpoint SPARQL de BCN.
-Contiene metadata catalográfica; no incluye análisis operativo ni síntesis
-estructural. Para texto vigente, modificaciones y artículos, consultar la
-fuente oficial.
+Entrada **capa 2** generada automáticamente desde el XML estructurado de BCN.
+Contiene metadata + estructura jerárquica + artículos con incisos iniciales.
+El texto íntegro NO está incluido — consultar BCN/LeyChile.
+
+Para promover a **capa 3** (análisis operativo curado con conceptos clave,
+conexiones, cuándo invocar, plazos críticos), abrir PR siguiendo el schema en
+`chile/normativa/README.md`.
 
 ## Disclaimers
 
-- Capa 1: metadata auto-generada, sin validación legal.
-- Para promover a capa 2 (resumen estructural) o capa 3 (análisis operativo),
-  abrir PR siguiendo el schema en `chile/normativa/README.md`.
+- Capa 2: estructura auto-generada, sin validación legal sustantiva.
+- El texto literal de cada artículo NO está en este archivo. Verificar en BCN.
+- `version_xml` indica la fecha de la última versión que LeyChile expone.

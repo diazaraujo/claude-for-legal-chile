@@ -10,36 +10,47 @@ emisor: ministerio-de-educacion-publica
 leychile_code: 6009
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=6009
 bcn_uri: http://datos.bcn.cl/recurso/cl/dl/ministerio-de-educacion-publica/1974-03-23/352
-capa: 1
-estado_revision: catalogo-auto
+version_xml: 1983-05-20
+derogado: no derogado
+capa: 2
+estado_revision: resumen-estructural
 validador: null
 fecha_validacion: null
 ---
 
-# Decreto Ley 352
+# DECRETO LEY 352
 
 **Título oficial:** ESTABLECE NORMAS ACLARATORIAS EN RELACION CON EL FUNCIONAMIENTO DE LOS ESTABLECIMIENTOS EDUCACIONALES DEPENDIENTES DEL MINISTERIO DE EDUCACION PUBLICA, Y SOBRE COMPATIBILIDAD ENTRE LOS CARGOS DOCENTES Y ADMINISTRATIVOS QUE SEÑALA
 
 **Tipo:** Decreto Ley
 **Número:** 352
-**Publicación en DO:** 1974-03-23
-**Promulgación:** _desconocida_
-**Emisor:** ministerio-de-educacion-publica
+**Publicación:** 1974-03-23
+**Promulgación:** 
+**Versión vigente:** 1983-05-20
+**Estado:** no derogado
+**Emisor:** MINISTERIO DE EDUCACIÓN PÚBLICA
+
+## Encabezado
+
+_Establece normas aclaratorias en relación con el funcionamiento de los establecimientos educacionales dependientes del Ministerio de Educación Pública, y sobre compatibilidad entre los cargos docentes y administrativos que señala_
 
 ## Fuente oficial
 
-- [BCN/LeyChile (texto vigente y modificaciones)](https://www.bcn.cl/leychile/navegar?idNorma=6009)
-- [BCN Linked Open Data (RDF)](http://datos.bcn.cl/recurso/cl/dl/ministerio-de-educacion-publica/1974-03-23/352)
+- [BCN/LeyChile (texto vigente)](https://www.bcn.cl/leychile/navegar?idNorma=6009)
+- [XML estructurado](https://www.leychile.cl/Consulta/obtxml?opt=7&idNorma=6009)
 
 ## Estado en el corpus
 
-Entrada **capa 1** generada automáticamente desde el endpoint SPARQL de BCN.
-Contiene metadata catalográfica; no incluye análisis operativo ni síntesis
-estructural. Para texto vigente, modificaciones y artículos, consultar la
-fuente oficial.
+Entrada **capa 2** generada automáticamente desde el XML estructurado de BCN.
+Contiene metadata + estructura jerárquica + artículos con incisos iniciales.
+El texto íntegro NO está incluido — consultar BCN/LeyChile.
+
+Para promover a **capa 3** (análisis operativo curado con conceptos clave,
+conexiones, cuándo invocar, plazos críticos), abrir PR siguiendo el schema en
+`chile/normativa/README.md`.
 
 ## Disclaimers
 
-- Capa 1: metadata auto-generada, sin validación legal.
-- Para promover a capa 2 (resumen estructural) o capa 3 (análisis operativo),
-  abrir PR siguiendo el schema en `chile/normativa/README.md`.
+- Capa 2: estructura auto-generada, sin validación legal sustantiva.
+- El texto literal de cada artículo NO está en este archivo. Verificar en BCN.
+- `version_xml` indica la fecha de la última versión que LeyChile expone.

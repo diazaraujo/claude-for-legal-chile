@@ -3,43 +3,71 @@ norma: Decreto con Fuerza de Ley 48
 slug: dfl-48
 tipo: dfl
 numero: 48
-titulo_oficial: "CREA CARGO EN LA PLANTA DE PERSONAL DEL SERVICIO DE SALUD TALCAHUANO"
+titulo_oficial: "CREA CARGO EN LA PLANTA DE PERSONAL DEL SERVICIO DE\nSALUD TALCAHUANO"
 publicacion: 1990-12-12
-promulgacion: desconocida
+promulgacion: 1990-09-10
 emisor: ministerio-de-salud
 leychile_code: 4286
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=4286
 bcn_uri: http://datos.bcn.cl/recurso/cl/dfl/ministerio-de-salud/1990-12-12/48
-capa: 1
-estado_revision: catalogo-auto
+version_xml: 1990-12-12
+derogado: no derogado
+materias_bcn: ["Servicio de Salud Talcahuano", "Hospital Las Higueras de Talcahuano", "Dotación Adicional"]
+capa: 2
+estado_revision: resumen-estructural
 validador: null
 fecha_validacion: null
 ---
 
-# Decreto con Fuerza de Ley 48
+# DECRETO CON FUERZA DE LEY 48
 
-**Título oficial:** CREA CARGO EN LA PLANTA DE PERSONAL DEL SERVICIO DE SALUD TALCAHUANO
+**Título oficial:** CREA CARGO EN LA PLANTA DE PERSONAL DEL SERVICIO DE
+SALUD TALCAHUANO
 
 **Tipo:** Decreto con Fuerza de Ley
 **Número:** 48
-**Publicación en DO:** 1990-12-12
-**Promulgación:** _desconocida_
-**Emisor:** ministerio-de-salud
+**Publicación:** 1990-12-12
+**Promulgación:** 1990-09-10
+**Versión vigente:** 1990-12-12
+**Estado:** no derogado
+**Emisor:** MINISTERIO DE SALUD
+
+## Materias (BCN)
+
+- Servicio de Salud Talcahuano
+- Hospital Las Higueras de Talcahuano
+- Dotación Adicional
+
+## Encabezado
+
+_CREA CARGO EN LA PLANTA DE PERSONAL DEL SERVICIO DE SALUD TALCAHUANO
+    D.F.L. Núm. 48.- Santiago, 10 de Septiembre de 1990.- Visto: Lo dispuesto en el artículo 2° transitorio de las leyes N° 18.575 y N° 18.972; en los artículos 5° y 7° letra b) de la ley N° 18.834, sobre Estatuto Administrativo; en los decretos con fuerza de ley N° 18, de 1980 y N° 23 de 1990, ambos del Ministerio de Salud; en e_
+
+(...) — ver texto íntegro en BCN/LeyChile.
+
+## Artículos (3 totales)
+
+- **Art. 1** — Créase, a contar de la fecha que se indica, en la Planta de Directivos del Servicio de Salud Talcahuano, fijada por el decreto con fuerza de ley N° 18, de 1980, del Ministerio de Salud, sustituida por
+- **Art. 2** — El cargo antes señalado constituirá dotación adicional y se extinguirá de pleno derecho cuando cese en sus funciones por cualquier causa el titular del mismo.
+- **Art. 3** — El mayor gasto que represente la aplicación de este decreto con fuerza de ley, se imputará al subtítulo 21 del Presupuesto del Servicio de Salud Talcahuano.
 
 ## Fuente oficial
 
-- [BCN/LeyChile (texto vigente y modificaciones)](https://www.bcn.cl/leychile/navegar?idNorma=4286)
-- [BCN Linked Open Data (RDF)](http://datos.bcn.cl/recurso/cl/dfl/ministerio-de-salud/1990-12-12/48)
+- [BCN/LeyChile (texto vigente)](https://www.bcn.cl/leychile/navegar?idNorma=4286)
+- [XML estructurado](https://www.leychile.cl/Consulta/obtxml?opt=7&idNorma=4286)
 
 ## Estado en el corpus
 
-Entrada **capa 1** generada automáticamente desde el endpoint SPARQL de BCN.
-Contiene metadata catalográfica; no incluye análisis operativo ni síntesis
-estructural. Para texto vigente, modificaciones y artículos, consultar la
-fuente oficial.
+Entrada **capa 2** generada automáticamente desde el XML estructurado de BCN.
+Contiene metadata + estructura jerárquica + artículos con incisos iniciales.
+El texto íntegro NO está incluido — consultar BCN/LeyChile.
+
+Para promover a **capa 3** (análisis operativo curado con conceptos clave,
+conexiones, cuándo invocar, plazos críticos), abrir PR siguiendo el schema en
+`chile/normativa/README.md`.
 
 ## Disclaimers
 
-- Capa 1: metadata auto-generada, sin validación legal.
-- Para promover a capa 2 (resumen estructural) o capa 3 (análisis operativo),
-  abrir PR siguiendo el schema en `chile/normativa/README.md`.
+- Capa 2: estructura auto-generada, sin validación legal sustantiva.
+- El texto literal de cada artículo NO está en este archivo. Verificar en BCN.
+- `version_xml` indica la fecha de la última versión que LeyChile expone.

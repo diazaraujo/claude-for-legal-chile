@@ -5,41 +5,62 @@ tipo: dl
 numero: 268
 titulo_oficial: "MODIFICA LEY NUMERO 5,078"
 publicacion: 1932-08-02
-promulgacion: desconocida
+promulgacion: 1932-07-28
 emisor: ministerio-de-salubridad-publica
 leychile_code: 5922
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=5922
 bcn_uri: http://datos.bcn.cl/recurso/cl/dl/ministerio-de-salubridad-publica/1932-08-02/268/es@1932-08-02
-capa: 1
-estado_revision: catalogo-auto
+version_xml: 1936-09-05
+derogado: derogado
+capa: 2
+estado_revision: resumen-estructural
 validador: null
 fecha_validacion: null
 ---
 
-# Decreto Ley 268
+# DECRETO LEY 268
 
 **Título oficial:** MODIFICA LEY NUMERO 5,078
 
 **Tipo:** Decreto Ley
 **Número:** 268
-**Publicación en DO:** 1932-08-02
-**Promulgación:** _desconocida_
-**Emisor:** ministerio-de-salubridad-publica
+**Publicación:** 1932-08-02
+**Promulgación:** 1932-07-28
+**Versión vigente:** 1936-09-05
+**Estado:** derogado
+**Emisor:** MINISTERIO DE SALUBRIDAD PÚBLICA
+
+## Encabezado
+
+_MODIFICA LEY NUMERO 5,078
+    Núm. 268.- Santiago, 28 de Julio de 1932.-
+    El Gobierno ha acordado y dicta el siguiente
+    Decreto-ley:_
+
+## Artículos (4 totales)
+
+- **Art. 1.o** — o Modifícase el artículo 2.o de la ley número 5,078, de 4 de Marzo de 1932, en la siguiente forma:     "La Dirección del Instituto Bacteriológico de Chile estará a cargo de un Comité Directivo compues
+- **Art. 5872297** — Art. 2.o Todas las funciones encomendadas en la ley y el reglamento vigentes al Consejo Directivo, será desempeñadas por el Comité Directivo mencionado en el artículo anterior.
+- **Art. 5872298** — Art. 3.o El sueldo del presidente del Comité Directivo y del actual subdirector se fija en treinta y seis mil pesos anuales ($ 36,000) cada uno, y el sueldo del gerente comercial se fija en la suma de
+- **Art. 5872299** — Art. 4.o Se derogan todas las disposiciones contrarias al presente decreto-ley.
 
 ## Fuente oficial
 
-- [BCN/LeyChile (texto vigente y modificaciones)](https://www.bcn.cl/leychile/navegar?idNorma=5922)
-- [BCN Linked Open Data (RDF)](http://datos.bcn.cl/recurso/cl/dl/ministerio-de-salubridad-publica/1932-08-02/268/es@1932-08-02)
+- [BCN/LeyChile (texto vigente)](https://www.bcn.cl/leychile/navegar?idNorma=5922)
+- [XML estructurado](https://www.leychile.cl/Consulta/obtxml?opt=7&idNorma=5922)
 
 ## Estado en el corpus
 
-Entrada **capa 1** generada automáticamente desde el endpoint SPARQL de BCN.
-Contiene metadata catalográfica; no incluye análisis operativo ni síntesis
-estructural. Para texto vigente, modificaciones y artículos, consultar la
-fuente oficial.
+Entrada **capa 2** generada automáticamente desde el XML estructurado de BCN.
+Contiene metadata + estructura jerárquica + artículos con incisos iniciales.
+El texto íntegro NO está incluido — consultar BCN/LeyChile.
+
+Para promover a **capa 3** (análisis operativo curado con conceptos clave,
+conexiones, cuándo invocar, plazos críticos), abrir PR siguiendo el schema en
+`chile/normativa/README.md`.
 
 ## Disclaimers
 
-- Capa 1: metadata auto-generada, sin validación legal.
-- Para promover a capa 2 (resumen estructural) o capa 3 (análisis operativo),
-  abrir PR siguiendo el schema en `chile/normativa/README.md`.
+- Capa 2: estructura auto-generada, sin validación legal sustantiva.
+- El texto literal de cada artículo NO está en este archivo. Verificar en BCN.
+- `version_xml` indica la fecha de la última versión que LeyChile expone.

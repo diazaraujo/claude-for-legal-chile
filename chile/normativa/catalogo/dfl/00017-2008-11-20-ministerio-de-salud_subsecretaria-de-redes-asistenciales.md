@@ -3,43 +3,84 @@ norma: Decreto con Fuerza de Ley 17
 slug: dfl-17
 tipo: dfl
 numero: 17
-titulo_oficial: "FIJA PLANTA DE PERSONAL DEL SERVICIO DE SALUD LIBERTADOR GENERAL BERNARDO O?HIGGINS"
+titulo_oficial: "FIJA PLANTA DE PERSONAL DEL SERVICIO DE SALUD LIBERTADOR GENERAL BERNARDO O'HIGGINS"
 publicacion: 2008-11-20
-promulgacion: desconocida
+promulgacion: 2008-07-18
 emisor: ministerio-de-salud_subsecretaria-de-redes-asistenciales
 leychile_code: 281858
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=281858
 bcn_uri: http://datos.bcn.cl/recurso/cl/dfl/ministerio-de-salud_subsecretaria-de-redes-asistenciales/2008-11-20/17
-capa: 1
-estado_revision: catalogo-auto
+version_xml: 2017-10-18
+derogado: no derogado
+materias_bcn: ["Personal del Servicio de Salud Libertador General Bernardo O\"Higgins"]
+capa: 2
+estado_revision: resumen-estructural
 validador: null
 fecha_validacion: null
 ---
 
-# Decreto con Fuerza de Ley 17
+# DECRETO CON FUERZA DE LEY 17
 
-**Título oficial:** FIJA PLANTA DE PERSONAL DEL SERVICIO DE SALUD LIBERTADOR GENERAL BERNARDO O?HIGGINS
+**Título oficial:** FIJA PLANTA DE PERSONAL DEL SERVICIO DE SALUD LIBERTADOR GENERAL BERNARDO O'HIGGINS
 
 **Tipo:** Decreto con Fuerza de Ley
 **Número:** 17
-**Publicación en DO:** 2008-11-20
-**Promulgación:** _desconocida_
-**Emisor:** ministerio-de-salud_subsecretaria-de-redes-asistenciales
+**Publicación:** 2008-11-20
+**Promulgación:** 2008-07-18
+**Versión vigente:** 2017-10-18
+**Estado:** no derogado
+**Emisor:** MINISTERIO DE SALUD
+
+## Materias (BCN)
+
+- Personal del Servicio de Salud Libertador General Bernardo O"Higgins
+
+## Encabezado
+
+_FIJA PLANTA DE PERSONAL DEL SERVICIO DE SALUD LIBERTADOR GENERAL BERNARDO O'HIGGINS
+
+     D.F.L. Núm. 17.- Santiago, 18 de julio de 2008.- Vistos: Lo dispuesto en el artículo 64 de la Constitución Política de la República; en los artículos 3º y 9º de la Ley N° 20.261; y las facultades que me confiere el artículo 2º transitorio de la ley N° 20.209, y sus modificaciones, dicto el siguiente,
+
+     De_
+
+(...) — ver texto íntegro en BCN/LeyChile.
+
+## Estructura
+
+- **Título**: Disposiciones Transitorias
+
+## Artículos (12 totales)
+
+- **Art. 1** — Fíjase la Planta de Personal del Servicio de Salud Libertador General Bernardo O'Higgins, afecto a las normas del Decreto con Fuerza de Ley Nº 29, de 2004, del Ministerio de Hacienda, que fija el text
+- **Art. 2** — Establécense los siguientes requisitos para el ingreso y promoción en las plantas y cargos que se indican a continuación:               dfl17-2-1.jpegimage/jpeg922212/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAA
+- **Art. 3** — Sin perjuicio de lo previsto en los artículos anteriores, la planta de cargos afectos a la Ley Nº 15.076 y la planta profesional de horas de la Ley Nº 19.664, ambas pertenecientes a la planta de profe
+- **Art. primero** — primero. Los cargos señalados a continuación, contemplados en el artículo 1o, serán provistos mediante el proceso de encasillamiento del personal a que hace referencia el artículo tercero transitorio
+- **Art. segundo** — segundo. Los requisitos generales y específicos señalados en el artículo 2o del presente Decreto con Fuerza de Ley, no serán exigibles para efectos del encasillamiento a que hace referencia el artícul
+- **Art. tercero** — tercero. El proceso de encasillamiento en la Planta de Directivos se efectuará en cargos de igual grado u horas al que ocupaban los funcionarios pertenecientes a esta planta a la fecha del encasillami
+- **Art. 9337984** — cuarto. Para efectos del encasillamiento del personal en la planta de profesionales, los funcionarios pertenecientes a ella se someterán a las siguientes normas especiales:  1.   Concurso Interno de E
+- **Art. 9337985** — quinto. El proceso de encasillamiento en las plantas de técnicos, administrativos y auxiliares se efectuará de conformidad a lo establecido en las letras a) y b) del inciso primero del artículo tercer
+- **Art. 9337986** — sexto. Los cargos señalados en el artículo primero transitorio y el encasillamiento a que éste dé lugar, regirán a contar del día 2º de Julio de 2008.
+- **Art. 9337987** — séptimo. El proceso de encasillamiento del personal a que se refieren los artículos precedentes, se efectuará por Resolución del Director del Servicio de Salud, dentro del plazo de 180 días contados d
+- **Art. 9337988** — octavo. Una vez efectuado el proceso de encasillamiento, los cargos señalados a continuación, contemplados en la planta fijada en el artículo 1° del presente Decreto con Fuerza de Ley, serán provistos
+- **Art. 9337989** — noveno. Fíjase para el año 2008, la dotación máxima de personal como se indica a continuación, sin perjuicio de las variaciones de dotación que autorice la Ley de Presupuestos del Sector Público para
 
 ## Fuente oficial
 
-- [BCN/LeyChile (texto vigente y modificaciones)](https://www.bcn.cl/leychile/navegar?idNorma=281858)
-- [BCN Linked Open Data (RDF)](http://datos.bcn.cl/recurso/cl/dfl/ministerio-de-salud_subsecretaria-de-redes-asistenciales/2008-11-20/17)
+- [BCN/LeyChile (texto vigente)](https://www.bcn.cl/leychile/navegar?idNorma=281858)
+- [XML estructurado](https://www.leychile.cl/Consulta/obtxml?opt=7&idNorma=281858)
 
 ## Estado en el corpus
 
-Entrada **capa 1** generada automáticamente desde el endpoint SPARQL de BCN.
-Contiene metadata catalográfica; no incluye análisis operativo ni síntesis
-estructural. Para texto vigente, modificaciones y artículos, consultar la
-fuente oficial.
+Entrada **capa 2** generada automáticamente desde el XML estructurado de BCN.
+Contiene metadata + estructura jerárquica + artículos con incisos iniciales.
+El texto íntegro NO está incluido — consultar BCN/LeyChile.
+
+Para promover a **capa 3** (análisis operativo curado con conceptos clave,
+conexiones, cuándo invocar, plazos críticos), abrir PR siguiendo el schema en
+`chile/normativa/README.md`.
 
 ## Disclaimers
 
-- Capa 1: metadata auto-generada, sin validación legal.
-- Para promover a capa 2 (resumen estructural) o capa 3 (análisis operativo),
-  abrir PR siguiendo el schema en `chile/normativa/README.md`.
+- Capa 2: estructura auto-generada, sin validación legal sustantiva.
+- El texto literal de cada artículo NO está en este archivo. Verificar en BCN.
+- `version_xml` indica la fecha de la última versión que LeyChile expone.

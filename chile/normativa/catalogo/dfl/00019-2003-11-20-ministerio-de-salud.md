@@ -3,43 +3,70 @@ norma: Decreto con Fuerza de Ley 19
 slug: dfl-19
 tipo: dfl
 numero: 19
-titulo_oficial: "CREA CARGOS EN LA PLANTA DEL SERVICIO DE SALUD METROPOLITANO CENTRAL E INCREMENTA SU DOTACION MAXIMA"
+titulo_oficial: "CREA CARGOS EN LA PLANTA DEL SERVICIO DE SALUD\nMETROPOLITANO CENTRAL E INCREMENTA SU DOTACION MAXIMA"
 publicacion: 2003-11-20
-promulgacion: desconocida
+promulgacion: 2003-10-17
 emisor: ministerio-de-salud
 leychile_code: 217536
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=217536
 bcn_uri: http://datos.bcn.cl/recurso/cl/dfl/ministerio-de-salud/2003-11-20/19
-capa: 1
-estado_revision: catalogo-auto
+version_xml: 2003-11-20
+derogado: no derogado
+materias_bcn: ["Servicio de Salud Metropolitano Central", "Creación de Cargos"]
+capa: 2
+estado_revision: resumen-estructural
 validador: null
 fecha_validacion: null
 ---
 
-# Decreto con Fuerza de Ley 19
+# DECRETO CON FUERZA DE LEY 19
 
-**Título oficial:** CREA CARGOS EN LA PLANTA DEL SERVICIO DE SALUD METROPOLITANO CENTRAL E INCREMENTA SU DOTACION MAXIMA
+**Título oficial:** CREA CARGOS EN LA PLANTA DEL SERVICIO DE SALUD
+METROPOLITANO CENTRAL E INCREMENTA SU DOTACION MAXIMA
 
 **Tipo:** Decreto con Fuerza de Ley
 **Número:** 19
-**Publicación en DO:** 2003-11-20
-**Promulgación:** _desconocida_
-**Emisor:** ministerio-de-salud
+**Publicación:** 2003-11-20
+**Promulgación:** 2003-10-17
+**Versión vigente:** 2003-11-20
+**Estado:** no derogado
+**Emisor:** MINISTERIO DE SALUD
+
+## Materias (BCN)
+
+- Servicio de Salud Metropolitano Central
+- Creación de Cargos
+
+## Encabezado
+
+_CREA CARGOS EN LA PLANTA DEL SERVICIO DE SALUD METROPOLITANO CENTRAL E INCREMENTA SU DOTACION MAXIMA 
+     D.F.L. Núm. 19.- Santiago, 17 de octubre de 2003.- Visto: Lo dispuesto en el artículo 61 de la Constitución Política de la República; las facultades que me confiere el artículo septuagésimo de la ley Nº 19.882 y lo solicitado por el Director del Servicio de Salud Metropolitano Central, para l_
+
+(...) — ver texto íntegro en BCN/LeyChile.
+
+## Artículos (3 totales)
+
+- **Art. 1** — Créanse a contar del 20 de octubre de 2003, en la Planta de Personal del Servicio de Salud Metropolitano Central, aprobada por el decreto con fuerza de ley Nº 23 de fecha 26 de junio de 1995, del Mini
+- **Art. 2** — Increméntase, en el número de cargos que en el artículo precedente se crean para el Servicio de Salud Metropolitano Central, la Glosa "02: a1) Dotación máxima de personal ley Nº 18.834 - Nº de cargos"
+- **Art. 3** — El gasto que demande la creación del cargo antes señalado se imputará al presupuesto del Servicio de Salud Metropolitano Central.
 
 ## Fuente oficial
 
-- [BCN/LeyChile (texto vigente y modificaciones)](https://www.bcn.cl/leychile/navegar?idNorma=217536)
-- [BCN Linked Open Data (RDF)](http://datos.bcn.cl/recurso/cl/dfl/ministerio-de-salud/2003-11-20/19)
+- [BCN/LeyChile (texto vigente)](https://www.bcn.cl/leychile/navegar?idNorma=217536)
+- [XML estructurado](https://www.leychile.cl/Consulta/obtxml?opt=7&idNorma=217536)
 
 ## Estado en el corpus
 
-Entrada **capa 1** generada automáticamente desde el endpoint SPARQL de BCN.
-Contiene metadata catalográfica; no incluye análisis operativo ni síntesis
-estructural. Para texto vigente, modificaciones y artículos, consultar la
-fuente oficial.
+Entrada **capa 2** generada automáticamente desde el XML estructurado de BCN.
+Contiene metadata + estructura jerárquica + artículos con incisos iniciales.
+El texto íntegro NO está incluido — consultar BCN/LeyChile.
+
+Para promover a **capa 3** (análisis operativo curado con conceptos clave,
+conexiones, cuándo invocar, plazos críticos), abrir PR siguiendo el schema en
+`chile/normativa/README.md`.
 
 ## Disclaimers
 
-- Capa 1: metadata auto-generada, sin validación legal.
-- Para promover a capa 2 (resumen estructural) o capa 3 (análisis operativo),
-  abrir PR siguiendo el schema en `chile/normativa/README.md`.
+- Capa 2: estructura auto-generada, sin validación legal sustantiva.
+- El texto literal de cada artículo NO está en este archivo. Verificar en BCN.
+- `version_xml` indica la fecha de la última versión que LeyChile expone.

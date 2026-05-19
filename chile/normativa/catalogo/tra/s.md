@@ -2,44 +2,78 @@
 norma: Tratado s
 slug: tra-s
 tipo: tra
-numero: s
+numero: S/N
 titulo_oficial: "Convenios firmados entre Chile y Bolivia, relativos a establecer reglas recíprocas en orden a franquicias aduaneras para diplomáticos residentes en uno y otro país."
-publicacion: 1889-01-18
-promulgacion: desconocida
+publicacion: 1888-07-11
+promulgacion: 1888-06-20
 emisor: ministerio-de-relaciones-esteriores
 leychile_code: 400065
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=400065
 bcn_uri: http://datos.bcn.cl/recurso/cl/tra/ministerio-de-relaciones-esteriores/1889-01-18/s/n
-capa: 1
-estado_revision: catalogo-auto
+version_xml: 1888-07-11
+derogado: no derogado
+materias_bcn: ["Franquicias Aduaneras Chile-Bolivia para Diplomáticos"]
+capa: 2
+estado_revision: resumen-estructural
 validador: null
 fecha_validacion: null
 ---
 
-# Tratado s
+# TRATADO S/N
 
 **Título oficial:** Convenios firmados entre Chile y Bolivia, relativos a establecer reglas recíprocas en orden a franquicias aduaneras para diplomáticos residentes en uno y otro país.
 
 **Tipo:** Tratado
-**Número:** s
-**Publicación en DO:** 1889-01-18
-**Promulgación:** _desconocida_
-**Emisor:** ministerio-de-relaciones-esteriores
+**Número:** S/N
+**Publicación:** 1888-07-11
+**Promulgación:** 1888-06-20
+**Versión vigente:** 1888-07-11
+**Estado:** no derogado
+**Emisor:** MINISTERIO DE RELACIONES ESTERIORES
+
+## Materias (BCN)
+
+- Franquicias Aduaneras Chile-Bolivia para Diplomáticos
+
+## Encabezado
+
+_JOSÉ MANUEL BALMACEDA,
+
+     PRESIDENTE DE LA REPÚBLICA DE CHILE
+
+
+     Por cuanto entre la República de Chile, la Alemania, los Estados Unidos de Norte América, la República Arjentina, Austria-Hungría, Béljica, Bolivia, Brasil, Bulgaria, República de Colombia, República de Costa-Rica, Dinamarca i colonias danesas, República Dominicana, Ejipto, Ecuador, España i colonias españolas, Francia i colon_
+
+(...) — ver texto íntegro en BCN/LeyChile.
+
+## Estructura
+
+- **Título**: Protocolo final En el momento de proceder a firmar las convenciones acordadas por el Congreso Postal Universal de Lisboa
+- **Título**: ACTA ADICIONAL DE LISBOA Al Reglamento de orden i datalles para la ejecución de la convención de 1.° de junio de 1878 ce
+
+## Artículos (2 totales)
+
+- **Art. primero** — PRIMERO       La Convención de 1.° de junio de 1878 se modifica como sigue:       I       El artículo 2 llevará en adelante la redacción siguiente:       Artículo 2       Las disposiciones de esta Con
+- **Art. 2
+** — La presente acta adicional entrará en vijencia el 1.° de abril de 1886 i tendrá la misma duración que la Convención celebrada en París el 1.° de junio de 1878.      Será ratificada tan pronto como sea
 
 ## Fuente oficial
 
-- [BCN/LeyChile (texto vigente y modificaciones)](https://www.bcn.cl/leychile/navegar?idNorma=400065)
-- [BCN Linked Open Data (RDF)](http://datos.bcn.cl/recurso/cl/tra/ministerio-de-relaciones-esteriores/1889-01-18/s/n)
+- [BCN/LeyChile (texto vigente)](https://www.bcn.cl/leychile/navegar?idNorma=400065)
+- [XML estructurado](https://www.leychile.cl/Consulta/obtxml?opt=7&idNorma=400065)
 
 ## Estado en el corpus
 
-Entrada **capa 1** generada automáticamente desde el endpoint SPARQL de BCN.
-Contiene metadata catalográfica; no incluye análisis operativo ni síntesis
-estructural. Para texto vigente, modificaciones y artículos, consultar la
-fuente oficial.
+Entrada **capa 2** generada automáticamente desde el XML estructurado de BCN.
+Contiene metadata + estructura jerárquica + artículos con incisos iniciales.
+El texto íntegro NO está incluido — consultar BCN/LeyChile.
+
+Para promover a **capa 3** (análisis operativo curado con conceptos clave,
+conexiones, cuándo invocar, plazos críticos), abrir PR siguiendo el schema en
+`chile/normativa/README.md`.
 
 ## Disclaimers
 
-- Capa 1: metadata auto-generada, sin validación legal.
-- Para promover a capa 2 (resumen estructural) o capa 3 (análisis operativo),
-  abrir PR siguiendo el schema en `chile/normativa/README.md`.
+- Capa 2: estructura auto-generada, sin validación legal sustantiva.
+- El texto literal de cada artículo NO está en este archivo. Verificar en BCN.
+- `version_xml` indica la fecha de la última versión que LeyChile expone.

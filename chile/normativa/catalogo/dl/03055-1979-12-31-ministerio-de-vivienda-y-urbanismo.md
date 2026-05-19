@@ -3,43 +3,66 @@ norma: Decreto Ley 3055
 slug: dl-3055
 tipo: dl
 numero: 3055
-titulo_oficial: "CONVENCION SOBRE EL INSTITUTO INTERAMERICANO DE COOPERACION PARA LA AGRICULTURA, SUSCRITA EN WASHINGTON D.C. EL 6 DE MARZO DE 1979"
+titulo_oficial: "FACULTA AL SERVICIO DE VIVIENDA Y URBANIZACION METROPOLITANO PARA TRANSFERIR GRATUITAMENTE UNA VIVIENDA A DON JUAN CARLOS DIAZ GODOY"
 publicacion: 1979-12-31
-promulgacion: desconocida
+promulgacion: 1979-12-18
 emisor: ministerio-de-vivienda-y-urbanismo
 leychile_code: 170397
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=170397
 bcn_uri: http://datos.bcn.cl/recurso/cl/dl/ministerio-de-vivienda-y-urbanismo/1979-12-31/3055
-capa: 1
-estado_revision: catalogo-auto
+version_xml: 1979-12-31
+derogado: no derogado
+capa: 2
+estado_revision: resumen-estructural
 validador: null
 fecha_validacion: null
 ---
 
-# Decreto Ley 3055
+# DECRETO LEY 3055
 
-**Título oficial:** CONVENCION SOBRE EL INSTITUTO INTERAMERICANO DE COOPERACION PARA LA AGRICULTURA, SUSCRITA EN WASHINGTON D.C. EL 6 DE MARZO DE 1979
+**Título oficial:** FACULTA AL SERVICIO DE VIVIENDA Y URBANIZACION METROPOLITANO PARA TRANSFERIR GRATUITAMENTE UNA VIVIENDA A DON JUAN CARLOS DIAZ GODOY
 
 **Tipo:** Decreto Ley
 **Número:** 3055
-**Publicación en DO:** 1979-12-31
-**Promulgación:** _desconocida_
-**Emisor:** ministerio-de-vivienda-y-urbanismo
+**Publicación:** 1979-12-31
+**Promulgación:** 1979-12-18
+**Versión vigente:** 1979-12-31
+**Estado:** no derogado
+**Emisor:** MINISTERIO DE VIVIENDA Y URBANISMO
+
+## Encabezado
+
+_FACULTA AL SERVICIO DE VIVIENDA Y URBANIZACION METROPOLITANO PARA TRANSFERIR GRATUITAMENTE UNA VIVIENDA A DON JUAN CARLOS DIAZ GODOY
+
+     Núm. 3.055.- Santiago, 18 de Diciembre de 1979.- Visto: Lo dispuesto en los decretos leyes Nºs. 1 y 128, de 1973; 527, de 1974; y 991, de 1976, y
+
+     Considerando:
+
+     a) Que el día 6 de Septiembre de 1979, el trabajador don Juan Carlos Díaz Godoy fue vícti_
+
+(...) — ver texto íntegro en BCN/LeyChile.
+
+## Artículos (1 totales)
+
+- **Art. único** — único.- Facúltase al Servicio de Vivienda y Urbanización Metropolitano para transferir gratuitamente a don Juan Carlos Díaz Godoy una vivienda de propiedad de dicho Servicio, del tipo y valor que auto
 
 ## Fuente oficial
 
-- [BCN/LeyChile (texto vigente y modificaciones)](https://www.bcn.cl/leychile/navegar?idNorma=170397)
-- [BCN Linked Open Data (RDF)](http://datos.bcn.cl/recurso/cl/dl/ministerio-de-vivienda-y-urbanismo/1979-12-31/3055)
+- [BCN/LeyChile (texto vigente)](https://www.bcn.cl/leychile/navegar?idNorma=170397)
+- [XML estructurado](https://www.leychile.cl/Consulta/obtxml?opt=7&idNorma=170397)
 
 ## Estado en el corpus
 
-Entrada **capa 1** generada automáticamente desde el endpoint SPARQL de BCN.
-Contiene metadata catalográfica; no incluye análisis operativo ni síntesis
-estructural. Para texto vigente, modificaciones y artículos, consultar la
-fuente oficial.
+Entrada **capa 2** generada automáticamente desde el XML estructurado de BCN.
+Contiene metadata + estructura jerárquica + artículos con incisos iniciales.
+El texto íntegro NO está incluido — consultar BCN/LeyChile.
+
+Para promover a **capa 3** (análisis operativo curado con conceptos clave,
+conexiones, cuándo invocar, plazos críticos), abrir PR siguiendo el schema en
+`chile/normativa/README.md`.
 
 ## Disclaimers
 
-- Capa 1: metadata auto-generada, sin validación legal.
-- Para promover a capa 2 (resumen estructural) o capa 3 (análisis operativo),
-  abrir PR siguiendo el schema en `chile/normativa/README.md`.
+- Capa 2: estructura auto-generada, sin validación legal sustantiva.
+- El texto literal de cada artículo NO está en este archivo. Verificar en BCN.
+- `version_xml` indica la fecha de la última versión que LeyChile expone.

@@ -3,43 +3,66 @@ norma: Decreto Ley 380
 slug: dl-380
 tipo: dl
 numero: 380
-titulo_oficial: "DECLARA, PARA TODOS LOS EFECTOS LEGALES, QUE EL GRAVAMEN ESTABLECIDO EN FAVOR DE LAS MUNICIPALIDADES QUE SEÑALA HA DEBIDO SER APLICADO DESDE LA FECHA QUE INDICA"
+titulo_oficial: "DECLARA, PARA TODOS LOS EFECTOS LEGALES, QUE EL GRAVAMEN\nESTABLECIDO EN FAVOR DE LAS MUNICIPALIDADES QUE SEÑALA\nHA DEBIDO SER APLICADO DESDE LA FECHA QUE INDICA"
 publicacion: 1974-03-25
-promulgacion: desconocida
+promulgacion: 1974-03-20
 emisor: ministerio-de-hacienda
 leychile_code: 215576
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=215576
 bcn_uri: http://datos.bcn.cl/recurso/cl/dl/ministerio-de-hacienda/1974-03-25/380
-capa: 1
-estado_revision: catalogo-auto
+version_xml: 1974-03-25
+derogado: no derogado
+capa: 2
+estado_revision: resumen-estructural
 validador: null
 fecha_validacion: null
 ---
 
-# Decreto Ley 380
+# DECRETO LEY 380
 
-**Título oficial:** DECLARA, PARA TODOS LOS EFECTOS LEGALES, QUE EL GRAVAMEN ESTABLECIDO EN FAVOR DE LAS MUNICIPALIDADES QUE SEÑALA HA DEBIDO SER APLICADO DESDE LA FECHA QUE INDICA
+**Título oficial:** DECLARA, PARA TODOS LOS EFECTOS LEGALES, QUE EL GRAVAMEN
+ESTABLECIDO EN FAVOR DE LAS MUNICIPALIDADES QUE SEÑALA
+HA DEBIDO SER APLICADO DESDE LA FECHA QUE INDICA
 
 **Tipo:** Decreto Ley
 **Número:** 380
-**Publicación en DO:** 1974-03-25
-**Promulgación:** _desconocida_
-**Emisor:** ministerio-de-hacienda
+**Publicación:** 1974-03-25
+**Promulgación:** 1974-03-20
+**Versión vigente:** 1974-03-25
+**Estado:** no derogado
+**Emisor:** MINISTERIO DE HACIENDA
+
+## Encabezado
+
+_DECLARA, PARA TODOS LOS EFECTOS LEGALES, QUE EL GRAVAMEN ESTABLECIDO EN FAVOR DE LAS MUNICIPALIDADES QUE SEÑALA HA DEBIDO SER APLICADO DESDE LA FECHA QUE INDICA 
+     Núm. 380.- Santiago, 20 de Marzo de 1974.
+
+     Visto lo dispuesto en el decreto ley Nº 1, del 11 de Septiembre de 1973, la Junta de Gobierno de la República de Chile ha acordado dictar el siguiente, 
+     Decreto ley:_
+
+## Artículos (3 totales)
+
+- **Art. 1** — Declárase para todos los efectos legales, que el gravamen establecido en beneficio de las Municipalidades de El Tabo, Cartagena, San Antonio y Navidad, en virtud del inciso segundo del artículo 2º de
+- **Art. 2** — Autorízase a la Municipalidad de Viña del Mar para donar a la Cruz Roja de esa ciudad, sin el trámite de insinuación, la propiedad de su dominio, ubicada en calle Cuatro Norte Nº 460, de la ciudad de
+- **Art. 3** — Valídanse los acuerdos de la Municipalidad de Viña del Mar Nºs 339, de 25 de Junio; 396, de 25 de Julio; 398 y letra b) del 399, de 30 de Septiembre, todos del año 1973, sobre pagos y anticipos al per
 
 ## Fuente oficial
 
-- [BCN/LeyChile (texto vigente y modificaciones)](https://www.bcn.cl/leychile/navegar?idNorma=215576)
-- [BCN Linked Open Data (RDF)](http://datos.bcn.cl/recurso/cl/dl/ministerio-de-hacienda/1974-03-25/380)
+- [BCN/LeyChile (texto vigente)](https://www.bcn.cl/leychile/navegar?idNorma=215576)
+- [XML estructurado](https://www.leychile.cl/Consulta/obtxml?opt=7&idNorma=215576)
 
 ## Estado en el corpus
 
-Entrada **capa 1** generada automáticamente desde el endpoint SPARQL de BCN.
-Contiene metadata catalográfica; no incluye análisis operativo ni síntesis
-estructural. Para texto vigente, modificaciones y artículos, consultar la
-fuente oficial.
+Entrada **capa 2** generada automáticamente desde el XML estructurado de BCN.
+Contiene metadata + estructura jerárquica + artículos con incisos iniciales.
+El texto íntegro NO está incluido — consultar BCN/LeyChile.
+
+Para promover a **capa 3** (análisis operativo curado con conceptos clave,
+conexiones, cuándo invocar, plazos críticos), abrir PR siguiendo el schema en
+`chile/normativa/README.md`.
 
 ## Disclaimers
 
-- Capa 1: metadata auto-generada, sin validación legal.
-- Para promover a capa 2 (resumen estructural) o capa 3 (análisis operativo),
-  abrir PR siguiendo el schema en `chile/normativa/README.md`.
+- Capa 2: estructura auto-generada, sin validación legal sustantiva.
+- El texto literal de cada artículo NO está en este archivo. Verificar en BCN.
+- `version_xml` indica la fecha de la última versión que LeyChile expone.
