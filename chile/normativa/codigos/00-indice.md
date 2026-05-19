@@ -11,7 +11,7 @@ Códigos chilenos vigentes. Cada código es el cuerpo normativo más estable de 
 | [`codigo-procedimiento-civil`](codigo-procedimiento-civil.md) | Código de Procedimiento Civil | Procesal civil | Ley 1.552 de 1902, con reformas | borrador-no-validado |
 | [`codigo-procesal-penal`](codigo-procesal-penal.md) | Código Procesal Penal | Procesal penal | Ley 19.696 de 2000 | borrador-no-validado |
 | [`codigo-penal`](codigo-penal.md) | Código Penal | Penal | Ley de 12-11-1874, con reformas | borrador-no-validado |
-| `codigo-organico-tribunales` | Código Orgánico de Tribunales | Orgánico judicial | Ley 7.421 de 1943 | pendiente |
+| [`codigo-organico-tribunales`](codigo-organico-tribunales.md) | Código Orgánico de Tribunales (COT) | Orgánico judicial | Ley 7.421 de 1943 | borrador-no-validado |
 | `codigo-justicia-militar` | Código de Justicia Militar | Militar | DL 2.226 de 1944 | pendiente |
 | `codigo-aguas` | Código de Aguas | Aguas (fuera de alcance v1) | DFL 1.122 de 1981 | fuera-de-alcance |
 | `codigo-mineria` | Código de Minería | Minero (fuera de alcance v1) | Ley 18.248 de 1983 | fuera-de-alcance |

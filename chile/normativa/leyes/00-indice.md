@@ -38,6 +38,9 @@ habilitado en Chile.
 | [`dl-3500-pensiones`](dl-3500-pensiones.md) | DL 3.500 | Sistema de pensiones (AFP, PGU) | Previsional / Laboral | Vigente | borrador-no-validado |
 | [`ley-18168-telecomunicaciones`](ley-18168-telecomunicaciones.md) | 18.168 | Ley General de Telecomunicaciones (SUBTEL, neutralidad red) | Telecomunicaciones / Regulatorio | Vigente | borrador-no-validado |
 | [`ley-19728-seguro-cesantia`](ley-19728-seguro-cesantia.md) | 19.728 | Seguro de cesantía (AFC, CIC, FCS) | Laboral / Previsional | Vigente | borrador-no-validado |
+| [`ley-21430-garantias-nna`](ley-21430-garantias-nna.md) | 21.430 | Garantías y protección integral de NNA (interés superior, OLN) | Familia / NNA | Vigente con escalonamiento | borrador-no-validado |
+| [`ley-21325-extranjeria`](ley-21325-extranjeria.md) | 21.325 | Migración y Extranjería (SERMIG, refugio, reunificación) | Migratorio | Vigente | borrador-no-validado |
+| [`ley-21663-ciberseguridad`](ley-21663-ciberseguridad.md) | 21.663 | Marco sobre Ciberseguridad e Infraestructura Crítica (ANCI, OIV) | Ciberseguridad / Regulatorio | Vigente con escalonamiento | borrador-no-validado |
 | `ley-19728-seguro-cesantia` | 19.728 | Seguro de cesantía | Laboral / Previsional | Vigente | pendiente |
 | `ley-20940-relaciones-laborales` | 20.940 | Modernización del sistema de relaciones laborales | Laboral | Vigente | pendiente |
 | `ley-21327-modernizacion-dt` | 21.327 | Modernización de la Dirección del Trabajo | Laboral / Administrativo | Vigente | pendiente |

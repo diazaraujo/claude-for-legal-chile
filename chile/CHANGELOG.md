@@ -3,6 +3,25 @@
 Cambios al contenido de `chile/`. Para cambios del upstream ver `git log` con
 `upstream/main`.
 
+## 0.0.9 — 2026-05-19
+
+- **Cluster orgánico + NNA + migratorio + ciberseguridad** (4 archivos capa 3):
+  - `codigos/codigo-organico-tribunales.md` — Ley 7.421/1943: estructura
+    judicial, competencia absoluta vs relativa, prórroga, implicancias vs
+    recusaciones, notarios + conservadores + abogados.
+  - `leyes/ley-21430-garantias-nna.md` — Convención Derechos del Niño
+    implementada, Sistema de Garantías, OLN, Servicio Mejor Niñez, derecho
+    a ser oído + autonomía progresiva, interés superior NNA.
+  - `leyes/ley-21325-extranjeria.md` — SERMIG, residencia temporal +
+    definitiva, refugio Ley 20.430, no devolución, reunificación familiar,
+    expulsión administrativa, reconducción inmediata.
+  - `leyes/ley-21663-ciberseguridad.md` — Ley Marco 2024: ANCI, OIV +
+    ICI, notificación incidentes 3hrs/72hrs, CSIRT nacional, multas
+    hasta 40.000 UTM.
+
+- **Cobertura capa 3 ahora**: 1 Constitución + 7 códigos + 35 leyes +
+  3 skills + setup interview + fuentes.md = 47 archivos curados.
+
 ## 0.0.1 — 2026-05-18
 
 - Fork inicial de `anthropics/claude-for-legal`.
