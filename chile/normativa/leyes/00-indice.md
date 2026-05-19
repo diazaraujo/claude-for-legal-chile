@@ -78,6 +78,8 @@ habilitado en Chile.
 | [`ley-20255-reforma-previsional`](ley-20255-reforma-previsional.md) | 20.255 | Reforma Previsional 2008 (Pilar Solidario, IPS, bono por hijo) | Previsional | Vigente | borrador-no-validado |
 | [`ley-21419-pgu`](ley-21419-pgu.md) | 21.419 | Pensión Garantizada Universal (sustituye Pilar Solidario) | Previsional | Vigente | borrador-no-validado |
 | [`ley-19733-libertades-opinion-informacion`](ley-19733-libertades-opinion-informacion.md) | 19.733 | Libertades de opinión + información + periodismo (secreto fuente, derecho de respuesta) | Constitucional / Medios | Vigente | borrador-no-validado |
+| [`ley-18892-pesca-acuicultura`](ley-18892-pesca-acuicultura.md) | 18.892 (DS 430/91) | LGPA — Pesca y Acuicultura (cuotas, LTP, SERNAPESCA, acuicultura salmón) | Sectorial / Recursos | Vigente con reformas | borrador-no-validado |
+| [`ley-21030-aborto-tres-causales`](ley-21030-aborto-tres-causales.md) | 21.030 | Aborto en tres causales (riesgo, inviabilidad, violación) | Constitucional / Salud | Vigente | borrador-no-validado |
 | `ley-21327-modernizacion-dt` | 21.327 | Modernización de la Dirección del Trabajo | Laboral / Administrativo | Vigente | pendiente |
 | `ley-19253-indigenas` | 19.253 | Pueblos indígenas (CONADI) | Indígena | Vigente (fuera de alcance v1) | fuera-de-alcance |
 
