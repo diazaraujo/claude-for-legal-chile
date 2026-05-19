@@ -11,6 +11,32 @@ Cambios al contenido de `chile/`. Para cambios del upstream ver `git log` con
 - Estado: WIP. Perfiles por rama del derecho pendientes de redacción y de
   revisión por abogado habilitado.
 
+## 0.0.8 — 2026-05-19
+
+- **Cluster regulatorio + penal especial + previsional + familia** (7 leyes
+  nuevas capa 3):
+  - `dl-211-libre-competencia.md` — FNE + TDLC, colusión / abuso posición
+    dominante, control de fusiones (Ley 20.945), delación compensada,
+    colusión como delito penal (Cat. 1 de Ley 21.595).
+  - `ley-20000-drogas.md` — tráfico, microtráfico (Art. 4), distinción con
+    consumo personal, agente encubierto, entrega vigilada, comiso, Ley 21.020
+    cannabis medicinal.
+  - `ley-20066-vif.md` — VIF: sujetos protegidos Art. 5, maltrato habitual
+    (Art. 14 — delito), medidas cautelares Art. 9, femicidio (Ley 21.212),
+    circuito familia/penal.
+  - `dl-3500-pensiones.md` — sistema AFP, cotización 10%, fondos A-E, PGU
+    (Ley 21.419), cotización obligatoria independientes, reforma 2024-2026
+    en debate.
+  - `ley-18168-telecomunicaciones.md` — concesiones SUBTEL, neutralidad de
+    red (Ley 20.453 — primera en el mundo), Ley 21.541 Acceso Universal a
+    Internet, sanciones SUBTEL hasta 30.000 UTM.
+  - `ley-19728-seguro-cesantia.md` — AFC, CIC + FCS, cotización 2,4%/0,6%
+    indefinido vs 3%/0% plazo fijo, giro decreciente, Ley 21.227 protección
+    empleo (COVID).
+
+- **Cobertura capa 3 ahora**: 1 Constitución + 6 códigos + 32 leyes + 3 skills
+  + setup interview + fuentes.md.
+
 ## 0.0.7 — 2026-05-19
 
 - **Cluster compliance + IP + transparencia** (capa 3, 8 archivos nuevos):

@@ -88,7 +88,7 @@ El corpus se publica en tres capas (ver `decisions/ADR-0002`):
 |---|---|---|
 | **1 — Catálogo** | Metadata estructurada por norma desde BCN/SPARQL | **12.213 archivos** (códigos, leyes, DL, DFL, tratados, autos acordados) |
 | **2 — Resumen estructural** | Libros/títulos/artículos + conceptos clave | _pendiente — pipeline LLM en diseño_ |
-| **3 — Análisis operativo curado** | Lo que ves abajo, con disclaimer + validación legal | 32 archivos borrador + 3 skills + setup interview + fuentes |
+| **3 — Análisis operativo curado** | Lo que ves abajo, con disclaimer + validación legal | 39 archivos borrador + 3 skills + setup interview + fuentes |
 
 Detalle de capa 1 en [`chile/normativa/catalogo/README.md`](chile/normativa/catalogo/README.md).
 Estado de capa 3 a continuación. Solo los marcados ✅ están publicados como borrador
@@ -111,10 +111,6 @@ estructurado; ninguno ha pasado validación legal todavía.
 | Código Penal | ✅ Borrador | [`codigo-penal.md`](chile/normativa/codigos/codigo-penal.md) |
 | Código Procesal Penal (Ley 19.696) | ✅ Borrador | [`codigo-procesal-penal.md`](chile/normativa/codigos/codigo-procesal-penal.md) |
 | Código de Procedimiento Civil | ✅ Borrador | [`codigo-procedimiento-civil.md`](chile/normativa/codigos/codigo-procedimiento-civil.md) |
-| Código Tributario (DL 830) | ⏳ Pendiente | — |
-| Código de Procedimiento Civil | ⏳ Pendiente | — |
-| Código Procesal Penal | ⏳ Pendiente | — |
-| Código Penal | ⏳ Pendiente | — |
 
 [Ver índice completo](chile/normativa/codigos/00-indice.md) (12 códigos).
 
@@ -148,6 +144,12 @@ estructurado; ninguno ha pasado validación legal todavía.
 | Ley 17.336 | Propiedad Intelectual (derecho de autor) | ✅ [Borrador](chile/normativa/leyes/ley-17336-propiedad-intelectual.md) |
 | Ley 19.913 | Lavado de activos + UAF | ✅ [Borrador](chile/normativa/leyes/ley-19913-lavado-activos.md) |
 | Ley 14.908 | Pensiones alimenticias + RNDPA + GAM | ✅ [Borrador](chile/normativa/leyes/ley-14908-alimentos.md) |
+| DL 211 | Libre competencia (FNE, TDLC, control fusiones) | ✅ [Borrador](chile/normativa/leyes/dl-211-libre-competencia.md) |
+| Ley 20.000 | Tráfico ilícito de drogas | ✅ [Borrador](chile/normativa/leyes/ley-20000-drogas.md) |
+| Ley 20.066 | Violencia Intrafamiliar (VIF) | ✅ [Borrador](chile/normativa/leyes/ley-20066-vif.md) |
+| DL 3.500 | Sistema de pensiones (AFP, PGU) | ✅ [Borrador](chile/normativa/leyes/dl-3500-pensiones.md) |
+| Ley 18.168 | General de Telecomunicaciones | ✅ [Borrador](chile/normativa/leyes/ley-18168-telecomunicaciones.md) |
+| Ley 19.728 | Seguro de cesantía (AFC) | ✅ [Borrador](chile/normativa/leyes/ley-19728-seguro-cesantia.md) |
 
 [Ver índice completo](chile/normativa/leyes/00-indice.md) (19 leyes).
 
