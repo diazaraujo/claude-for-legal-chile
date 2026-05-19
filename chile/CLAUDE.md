@@ -154,6 +154,13 @@ El sistema razona sobre Chile invocando archivos en `chile/normativa/`. Estado a
 
 Ver índice completo en [`normativa/leyes/00-indice.md`](normativa/leyes/00-indice.md).
 
+### Skills transversales (`skills/`)
+
+- [x] [`diagnostico.md`](skills/diagnostico.md) — protocolo de 6 pasos
+- [x] [`citas-verificables.md`](skills/citas-verificables.md) — formato canónico
+- [x] [`plazos.md`](skills/plazos.md) — días hábiles vs corridos, feriados
+- [x] [`compliance-corporativo.md`](skills/compliance-corporativo.md) — orquestador stack compliance
+
 ### Perfiles (`perfiles/`)
 
 Cada perfil orquesta normativa para una rama. Pendientes de redacción y validación.
