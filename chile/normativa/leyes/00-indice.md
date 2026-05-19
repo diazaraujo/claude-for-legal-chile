@@ -41,11 +41,12 @@ habilitado en Chile.
 | [`ley-21430-garantias-nna`](ley-21430-garantias-nna.md) | 21.430 | Garantías y protección integral de NNA (interés superior, OLN) | Familia / NNA | Vigente con escalonamiento | borrador-no-validado |
 | [`ley-21325-extranjeria`](ley-21325-extranjeria.md) | 21.325 | Migración y Extranjería (SERMIG, refugio, reunificación) | Migratorio | Vigente | borrador-no-validado |
 | [`ley-21663-ciberseguridad`](ley-21663-ciberseguridad.md) | 21.663 | Marco sobre Ciberseguridad e Infraestructura Crítica (ANCI, OIV) | Ciberseguridad / Regulatorio | Vigente con escalonamiento | borrador-no-validado |
-| `ley-19728-seguro-cesantia` | 19.728 | Seguro de cesantía | Laboral / Previsional | Vigente | pendiente |
-| `ley-20940-relaciones-laborales` | 20.940 | Modernización del sistema de relaciones laborales | Laboral | Vigente | pendiente |
+| [`ley-20940-relaciones-laborales`](ley-20940-relaciones-laborales.md) | 20.940 | Modernización relaciones laborales (sindicatos, huelga, servicios mínimos) | Laboral colectivo | Vigente | borrador-no-validado |
+| [`ley-18575-bases-administracion-estado`](ley-18575-bases-administracion-estado.md) | 18.575 | LOC Bases Generales de la Administración del Estado | Administrativo orgánico | Vigente | borrador-no-validado |
+| [`ley-21521-fintec`](ley-21521-fintec.md) | 21.521 | Ley Fintec (Sistema Financiero Abierto, licencias CMF) | Financiero / Fintec | Vigente con escalonamiento | borrador-no-validado |
+| [`ley-20084-rpa`](ley-20084-rpa.md) | 20.084 | Responsabilidad Penal Adolescente (RPA) | Penal especial | Vigente | borrador-no-validado |
+| [`ley-21455-cambio-climatico`](ley-21455-cambio-climatico.md) | 21.455 | Marco de Cambio Climático (carbono neutralidad 2050) | Ambiental | Vigente | borrador-no-validado |
 | `ley-21327-modernizacion-dt` | 21.327 | Modernización de la Dirección del Trabajo | Laboral / Administrativo | Vigente | pendiente |
-| `ley-19947-matrimonio-civil` | 19.947 | Matrimonio Civil | Familia | Vigente | pendiente |
-| `ley-19968-tribunales-familia` | 19.968 | Tribunales de Familia | Familia / Procesal | Vigente | pendiente |
 | `ley-19253-indigenas` | 19.253 | Pueblos indígenas (CONADI) | Indígena | Vigente (fuera de alcance v1) | fuera-de-alcance |
 
 ## Cómo agregar una ley nueva
