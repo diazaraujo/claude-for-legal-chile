@@ -2,44 +2,187 @@
 norma: Código de-comercio
 slug: cod-de-comercio
 tipo: cod
-numero: de-comercio
+numero: DE COMERCIO
 titulo_oficial: "CODIGO DE COMERCIO"
 publicacion: 1865-11-23
-promulgacion: desconocida
+promulgacion: 1865-11-23
 emisor: ministerio-de-justicia
 leychile_code: 1974
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1974
 bcn_uri: http://datos.bcn.cl/recurso/cl/cod/ministerio-de-justicia/1865-11-23/de-comercio
-capa: 1
-estado_revision: catalogo-auto
+version_xml: 2023-09-23
+derogado: no derogado
+nombres_uso_comun: ["CODIGO DE COMERCIO"]
+materias_bcn: ["CHILE. CODIGO DE COMERCIO", "ACTOS DE COMERCIO / CHILE"]
+capa: 2
+estado_revision: resumen-estructural
 validador: null
 fecha_validacion: null
 ---
 
-# Código de-comercio
+# CÓDIGO DE COMERCIO
 
 **Título oficial:** CODIGO DE COMERCIO
 
+**Nombre de uso común:** CODIGO DE COMERCIO
+
 **Tipo:** Código
-**Número:** de-comercio
-**Publicación en DO:** 1865-11-23
-**Promulgación:** _desconocida_
-**Emisor:** ministerio-de-justicia
+**Número:** DE COMERCIO
+**Publicación:** 
+**Promulgación:** 1865-11-23
+**Versión vigente:** 2023-09-23
+**Estado:** no derogado
+**Emisor:** MINISTERIO DE JUSTICIA
+
+## Materias (BCN)
+
+- CHILE. CODIGO DE COMERCIO
+- ACTOS DE COMERCIO / CHILE
+
+## Encabezado
+
+_El Presidente de la República Santiago, Noviembre 23 de
+1865 Por cuanto el Congreso Nacional ha aprobado el
+siguiente
+    CODIGO DE COMERCIO_
+
+## Estructura
+
+- **Título**: TITULO PRELIMINAR DISPOSICIONES GENERALES
+- **Libro**: Libro I DE LOS COMERCIANTES Y DE LOS AGENTES DEL COMERCIO
+  - **Título**: TITULO I DE LA CALIFICACION DE LOS COMERCIANTES Y DEL REGISTRO DEL COMERCIO
+    - **Enumeración**: § 1. De la calificación de los comerciantes
+    - **Enumeración**: 2. Del registro del comercio
+  - **Título**: TITULO II DE LAS OBLIGACIONES DE LOS COMERCIANTES
+    - **Enumeración**: § 1. De la inscripción de documentos
+    - **Enumeración**: § 2. De la contabilidad mercantil
+    - **Enumeración**: § 3. De la correspondencia
+  - **Título**: Título III DE LOS CORREDORES
+  - **Título**: TITULO IV LEY 18118 DE LOS MARTILLEROS Art. 27 Derogado. D.O. 25.05.1982
+- **Libro**: Libro II DE LOS CONTRATOS Y OBLIGACIONES MERCANTILES EN GENERAL
+  - **Título**: Título IX
+    - **Enumeración**: § 1. De la constitución, forma y efectos de los contratos y obligaciones
+    - **Enumeración**: § 2. De la prueba de los contratos y obligaciones
+  - **Título**: Título II DE LA COMPRAVENTA
+    - **Enumeración**: § 1. De la cosa vendida
+    - **Enumeración**: § 2. Del precio
+    - **Enumeración**: § 3. De los efectos del contrato de venta
+    - **Enumeración**: § 4. De las obligaciones del vendedor y comprador
+  - **Título**: Título III DE LA PERMUTACIÓN
+  - **Título**: Título IV DE LA CESION DE CREDITOS MERCANTILES
+  - **Título**: Título V DEL TRANSPORTES POR TIERRA, LAGOS, CANALES O RIOS NAVEGABLES
+    - **Enumeración**: § 1. Definiciones y reglas generales
+    - **Enumeración**: § 2. De la carta de porte o carta guía
+    - **Enumeración**: § 3. De las obligaciones y derechos del cargador
+    - **Enumeración**: §4. De las obligaciones y derechos del porteador
+    - **Enumeración**: §5. De las obligaciones y derechos del consignatario
+    - **Enumeración**: § 6. Reglas especiales relativas al transporte ajustado con empresario públicos
+  - **Título**: Título VI DEL MANDATO COMERCIAL
+    - **Enumeración**: § 1. Definiciones y clasificaciones
+    - **Enumeración**: § 2. Reglas generales relativas a la comisión
+    - **Enumeración**: § 3. Disposiciones comunes a toda clase de comisionistas
+    - **Enumeración**: § 4. De los comisionistas para comprar
+    - **Enumeración**: § 5. De los comisionistas para vender
+    - **Enumeración**: § 6. De las comisionistas de transportes por tierra, ríos o canales navegables
+    - **Enumeración**: § 7. Disposiciones comunes a los factores y Dependientes de comercio.
+    - **Enumeración**: § 8. Reglas especiales relativas a los factores
+    - **Enumeración**: § 9. Reglas especiales relativas a los dependientes de comercio
+  - **Título**: Título VII DE LA SOCIEDAD
+    - **Enumeración**: § 1. De la formación y prueba de la sociedad colectiva
+    - **Enumeración**: § 2. De la razón o firma social en la sociedad colectiva
+    - **Enumeración**: § 3. Del fondo social y de la división de las ganancias y pérdidas en la sociedad colectiva
+    - **Enumeración**: § 4. De la administración de la sociedad colectiva
+    - **Enumeración**: § 5. De las prohibiciones a que están sujetos los socios en la sociedad colectiva
+    - **Enumeración**: § 6. De la disolución y liquidación de la sociedad colectiva
+    - **Enumeración**: § 7. De la prescripción de las acciones procedentes de la sociedad colectiva
+    - **Enumeración**: § 8. De las Sociedades por Acciones
+    - **Párrafo**: § 9. De las Agencias de Sociedades Extranjeras u otras Personas Jurídicas con Fines de Lucro
+    - **Enumeración**: § 10. Disposiciones relativas a la sociedad en comandita
+    - **Enumeración**: § 11. De la comandita simple
+    - **Enumeración**: § 12. De la comandita por acciones
+    - **Enumeración**: § 13. De la asociación o cuentas en participación
+  - **Título**: TITULO VIII Del contrato de seguro
+    - **Enumeración**: Sección Primera. Normas comunes a todo tipo de seguros
+    - **Enumeración**: Sección Segunda. De los seguros de daños
+      - **Párrafo**: § 1. Normas generales
+      - **Párrafo**: § 2. Del seguro contra incendio
+      - **Párrafo**: § 3. De los seguros de robo, hurto y otras sustracciones
+      - **Párrafo**: § 4. Del seguro de responsabilidad civil
+      - **Párrafo**: § 5. Del seguro de transporte terrestre
+      - **Párrafo**: § 6. Del seguro de pérdida de beneficios
+      - **Párrafo**: § 7. Del seguro de crédito
+      - **Párrafo**: § 8. Del seguro de caución
+      - **Párrafo**: § 9. Del contrato de reaseguro
+    - **Enumeración**: Sección Tercera. De los seguros de personas
+  - **Título**: Título IX DEL CONTRATO DE CUENTA CORRIENTE
+  - **Título**: Título X DEL CONTRATO DE CAMBIO
+  - **Título**: Título XII DE LAS CARTAS ORDENES DE CREDITO
+  - **Título**: Título XIII DEL PRESTAMO
+  - **Título**: Título XIV DEL DEPÓSITO
+  - **Título**: Título XV DEL CONTRATO DE PRENDA
+  - **Título**: Título XVI DE LA FIANZA
+  - **Título**: Título XVII DE LA PRESCRIPCION
+- **Libro**: LIBRO III De la Navegación y el Comercio Marítimos
+  - **Título**: TITULO I Disposiciones Generales
+  - **Título**: Título II DE LAS NAVES Y ARTEFACTOS NAVALES. DE LA PROPIEDAD NAVAL
+    - **Enumeración**: § 1. De las naves y artefactos navales
+    - **Enumeración**: § 2. De la propiedad naval
+  - **Título**: Título III DE LOS PRIVILEGIOS Y DE LA HIPOTECA NAVAL
+
+_(... 130 niveles más, ver fuente completa)_
+
+## Artículos (1524 totales)
+
+- **Art. 1** — El Código de Comercio rige las obligaciones de los comerciantes que se refieran a operaciones mercantiles, las que contraigan personas no comerciantes para asegurar el cumplimiento de obligaciones com
+- **Art. 8725250** — Art. 2°. En los casos que no estén especialmente resueltos por este Código, se aplicarán las disposiciones del Código Civil.
+- **Art. 8726066** — Art. 3°. Son actos de comercio, ya de parte de ambos contratantes, ya de parte de uno de ellos:     1°. La compra y permuta de cosas muebles, hecha con ánimo de venderlas, permutarlas o arrendarlas en
+- **Art. 8725252** — Art. 4°. Las costumbres mercantiles suplen el silencio de la ley, cuando los hechos que las constituyen son uniformes, públicos, generalmente ejecutados en la República o en una determinada localidad,
+- **Art. 8725253** — Art. 5°. No constando a los juzgados de comercio que conocen de una cuestión entre partes la autenticidad de la costumbre que se invoque, sólo podrá ser probada por alguno de estos medios:     1°. Por
+- **Art. 8725254** — Art. 6°. Las costumbres mercantiles servirán de regla para determinar el sentido de las palabras o frases técnicas del comercio y para interpretar los actos o convenciones mercantiles.
+- **Art. 8725255** — Art. 7° Son comerciantes los que, teniendo capacidad para contratar, hacen del comercio su profesión habitual.
+- **Art. 8725259** — Art. 8° No es comerciante el que ejecuta accidentalmente un acto de comercio; pero queda sujeto a las leyes de comercio en cuanto a los efectos del acto.
+- **Art. 8725868** — Art. 9° Derogado.
+- **Art. 8725260** — Art. 10. Cuando los hijos de familia y los menores que administran su peculio profesional en virtud de la autorización que les confieren los artículos 246 y 439 del Código Civil ejecutaren algún acto
+- **Art. 8726580** — Art. 11. La mujer casada comerciante se regirá por lo dispuesto en el artículo 150 del Código Civil.
+- **Art. 8725860** — Art. 12 Derogado.
+- **Art. 8725861** — Art. 13. Derogado.
+- **Art. 8725261** — Art. 14. La mujer casada no será considerada como comerciante si no hace un comercio separado del de su marido.
+- **Art. 8725862** — Art. 15. Derogado.
+- **Art. 8726582** — Art. 16. La mujer divorciada y la separada de bienes pueden comerciar, previo al registro y publicación de la sentencia de divorcio y separación o de las capitulaciones matrimoniales, en su caso, y su
+- **Art. 8725863** — Art. 17. Derogado.
+- **Art. 8725864** — Art. 18. El menor comerciante puede comparecer en juicio por sí solo en todas las cuestiones relativas a su comercio.
+- **Art. 8725262** — Art. 19. Los contratos celebrados por personas a quienes esté prohibido por las leyes el ejercicio del comercio, no producen acción contra el contratante capaz; pero confieren a éste derecho para dema
+- **Art. 8725263** — Art. 20. En la cabecera de cada departamento se llevará un registro en que se anotarán todos los documentos que según este Código deben sujetarse a inscripción.
+- **Art. 8726584** — Art. 21. Las reglas y formalidades relativas a la organización del registro del comercio, a los deberes y funciones del secretario encargado de él y a la forma y solemnidad de las inscripciones, se de
+- **Art. 8725871** — Art. 22 En el registro del comercio se tomará razón en extracto y por orden de números y fechas de los siguientes documentos:     1°. De las capitulaciones matrimoniales, el pacto de separación de bie
+- **Art. 8725869** — Art. 23. La toma de razón de los documentos especificados en el artículo anterior deberá todo comerciante hacerla efectuar dentro del término de quince días, contados, según el caso, desde el día del
+- **Art. 8725265** — Art. 24. Las escrituras sociales y los poderes de que no se hubiere tomado razón, no producirán efecto alguno entre los socios, ni entre el mandante y mandatario; pero los actos ejecutados o contratos
+- **Art. 8725268** — Art. 25. Todo comerciante está obligado a llevar para su contabilidad y correspondencia:     1°. El libro diario;     2°. El libro mayor o de cuentas corrientes;     3°. El libro de balances;     4°.
+- **Art. 8725859** — Art. 26. Los libros deberán ser llevados en lengua castellana.
+- **Art. 8725270** — Art. 27. En el libro diario se asentarán por orden cronológico y día por día las operaciones mercantiles que ejecute el comerciante, expresando detalladamente el carácter y circunstancias de cada una
+- **Art. 8725271** — Art. 28. Llevándose libro de caja y de facturas, podrá omitirse en el diario el asiento detallado, tanto de las cantidades que entraren, como de las compras, ventas y remesas de mercaderías que el com
+- **Art. 8725272** — Art. 29. Al abrir su giro, todo comerciante hará en el libro de balances una enunciación estimativa de todos sus bienes, tanto muebles como inmuebles, y de todos sus créditos activos y pasivos.     Al
+- **Art. 8725273** — Art. 30. Los comerciantes por menor llevarán un libro encuadernado, forrado y foliado, y en él asentarán diariamente las compras y ventas que hagan tanto al fiado como al contado.     En este mismo li
+
+_(... 1494 artículos más, ver texto íntegro en BCN/LeyChile)_
 
 ## Fuente oficial
 
-- [BCN/LeyChile (texto vigente y modificaciones)](https://www.bcn.cl/leychile/navegar?idNorma=1974)
-- [BCN Linked Open Data (RDF)](http://datos.bcn.cl/recurso/cl/cod/ministerio-de-justicia/1865-11-23/de-comercio)
+- [BCN/LeyChile (texto vigente)](https://www.bcn.cl/leychile/navegar?idNorma=1974)
+- [XML estructurado](https://www.leychile.cl/Consulta/obtxml?opt=7&idNorma=1974)
 
 ## Estado en el corpus
 
-Entrada **capa 1** generada automáticamente desde el endpoint SPARQL de BCN.
-Contiene metadata catalográfica; no incluye análisis operativo ni síntesis
-estructural. Para texto vigente, modificaciones y artículos, consultar la
-fuente oficial.
+Entrada **capa 2** generada automáticamente desde el XML estructurado de BCN.
+Contiene metadata + estructura jerárquica + artículos con incisos iniciales.
+El texto íntegro NO está incluido — consultar BCN/LeyChile.
+
+Para promover a **capa 3** (análisis operativo curado con conceptos clave,
+conexiones, cuándo invocar, plazos críticos), abrir PR siguiendo el schema en
+`chile/normativa/README.md`.
 
 ## Disclaimers
 
-- Capa 1: metadata auto-generada, sin validación legal.
-- Para promover a capa 2 (resumen estructural) o capa 3 (análisis operativo),
-  abrir PR siguiendo el schema en `chile/normativa/README.md`.
+- Capa 2: estructura auto-generada, sin validación legal sustantiva.
+- El texto literal de cada artículo NO está en este archivo. Verificar en BCN.
+- `version_xml` indica la fecha de la última versión que LeyChile expone.
