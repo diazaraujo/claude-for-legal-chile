@@ -67,6 +67,8 @@ habilitado en Chile.
 | [`ley-18883-estatuto-administrativo-municipal`](ley-18883-estatuto-administrativo-municipal.md) | 18.883 | Estatuto Administrativo Municipal (funcionarios de municipalidades) | Funcionarial / Municipal | Vigente | borrador-no-validado |
 | [`ley-21094-universidades-estatales`](ley-21094-universidades-estatales.md) | 21.094 | Universidades Estatales chilenas (18 UE) | Educación / Administrativo | Vigente | borrador-no-validado |
 | [`ley-21091-educacion-superior`](ley-21091-educacion-superior.md) | 21.091 | Sistema de Educación Superior (gratuidad, SES, CNA) | Educación | Vigente | borrador-no-validado |
+| [`ley-21040-slep`](ley-21040-slep.md) | 21.040 | Sistema de Educación Pública (SLEP) — desmunicipalización gradual | Educación / Administrativo | Vigente con escalonamiento | borrador-no-validado |
+| [`ley-19070-estatuto-docente`](ley-19070-estatuto-docente.md) | 19.070 (DFL 1/1996) | Estatuto Docente + Carrera Profesional Docente (Ley 20.903) | Educación / Funcionarial | Vigente | borrador-no-validado |
 | [`ley-19418-juntas-vecinos`](ley-19418-juntas-vecinos.md) | 19.418 | Juntas de Vecinos y Organizaciones Comunitarias | Municipal / Asociativo | Vigente | borrador-no-validado |
 | [`ley-19884-financiamiento-electoral`](ley-19884-financiamiento-electoral.md) | 19.884 | Financiamiento electoral (límites, prohibiciones, SERVEL) | Electoral / Probidad | Vigente | borrador-no-validado |
 | [`ley-20500-asociaciones`](ley-20500-asociaciones.md) | 20.500 | Asociaciones y Participación Ciudadana (ASFL, COSOC) | Asociativo / Administrativo | Vigente | borrador-no-validado |
