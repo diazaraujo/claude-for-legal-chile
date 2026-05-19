@@ -46,6 +46,9 @@ habilitado en Chile.
 | [`ley-21521-fintec`](ley-21521-fintec.md) | 21.521 | Ley Fintec (Sistema Financiero Abierto, licencias CMF) | Financiero / Fintec | Vigente con escalonamiento | borrador-no-validado |
 | [`ley-20084-rpa`](ley-20084-rpa.md) | 20.084 | Responsabilidad Penal Adolescente (RPA) | Penal especial | Vigente | borrador-no-validado |
 | [`ley-21455-cambio-climatico`](ley-21455-cambio-climatico.md) | 21.455 | Marco de Cambio Climático (carbono neutralidad 2050) | Ambiental | Vigente | borrador-no-validado |
+| [`ley-20730-lobby`](ley-20730-lobby.md) | 20.730 | Regula el lobby y gestión de intereses particulares | Probidad / Transparencia | Vigente | borrador-no-validado |
+| [`ley-20880-probidad-publica`](ley-20880-probidad-publica.md) | 20.880 | Probidad pública (DIP, fideicomiso ciego) | Probidad / Administrativo | Vigente | borrador-no-validado |
+| [`dfl-458-urbanismo-construcciones`](dfl-458-urbanismo-construcciones.md) | DFL 458 | LGUC — Ley General de Urbanismo y Construcciones | Urbanismo / Inmobiliario | Vigente | borrador-no-validado |
 | `ley-21327-modernizacion-dt` | 21.327 | Modernización de la Dirección del Trabajo | Laboral / Administrativo | Vigente | pendiente |
 | `ley-19253-indigenas` | 19.253 | Pueblos indígenas (CONADI) | Indígena | Vigente (fuera de alcance v1) | fuera-de-alcance |
 

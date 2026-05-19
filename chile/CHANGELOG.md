@@ -3,6 +3,26 @@
 Cambios al contenido de `chile/`. Para cambios del upstream ver `git log` con
 `upstream/main`.
 
+## 0.0.11 — 2026-05-19
+
+- **Cluster probidad + lobby + LGUC** (3 archivos capa 3 nuevos):
+  - `leyes/ley-20730-lobby.md` — Lobby: registros públicos audiencias /
+    viajes / donativos, sujetos pasivos (Ejecutivo + Legislativo + altos
+    cargos), exclusiones, Contraloría + CPLT como fiscalizadores,
+    infolobby.cl.
+  - `leyes/ley-20880-probidad-publica.md` — Probidad: DIP (Declaración de
+    Intereses y Patrimonio) pública, fideicomiso ciego / mandato especial
+    para altas autoridades, deberes de abstención, sanciones CGR.
+  - `leyes/dfl-458-urbanismo-construcciones.md` — LGUC: planificación
+    urbana (PRC, PRI, PRM), permisos DOM (edificación, ampliación,
+    regularización, demolición), OGUC (DS 47/1992), responsabilidad civil
+    por daños (10/5/3 años según tipo), expropiación.
+
+- **Cobertura capa 3 ahora**: 1 Constitución + 7 códigos + 43 leyes +
+  3 skills + setup interview + fuentes.md = 55 archivos curados.
+
+- **Catálogo capa 1**: re-run BCN agregó 170 leyes más (total 4.921).
+
 ## 0.0.10 — 2026-05-19
 
 - **Cluster laboral colectivo + administrativo + fintec + RPA + climático**

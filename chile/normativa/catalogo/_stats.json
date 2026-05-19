@@ -1,14 +1,14 @@
 {
-  "start": "2026-05-18T17:19:15",
+  "start": "2026-05-19T09:07:03",
   "tipos": {
-    "dl": {
-      "total": 9787,
-      "written": 4167,
-      "skipped": 5620
+    "ley": {
+      "total": 6587,
+      "written": 170,
+      "skipped": 6417
     }
   },
-  "end": "2026-05-18T17:22:36",
-  "grand_total": 9787,
-  "grand_written": 4167,
-  "grand_skipped": 5620
+  "end": "2026-05-19T09:21:34",
+  "grand_total": 6587,
+  "grand_written": 170,
+  "grand_skipped": 6417
 }
