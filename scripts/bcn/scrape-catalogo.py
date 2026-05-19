@@ -210,6 +210,63 @@ LIMIT {limit}
 """.strip()
 
 
+def build_query_numero_prefix(
+    tipo_uri: str,
+    *,
+    numero_strlen: int,
+    numero_starts: str = "",
+    limit: int = 1500,
+) -> str:
+    """Query filtrada por longitud y prefijo del número (string match).
+
+    `bcnnorms:hasNumber` es xsd:string. Convertir a integer es caro y el endpoint
+    colapsa con queries sobre 17K leyes. Particionar por longitud + prefijo de
+    dígito da queries pequeñas y baratas:
+      - STRLEN=4, prefix="1": leyes 1000-1999
+      - STRLEN=5, prefix="20": leyes 20000-20999
+    """
+    starts_clause = ""
+    if numero_starts:
+        starts_clause = f' && STRSTARTS(?numero, "{numero_starts}")'
+    return f"""
+PREFIX bcnnorms: <http://datos.bcn.cl/ontologies/bcn-norms#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+
+SELECT DISTINCT ?norma ?titulo ?leychile_code ?numero
+WHERE {{
+  ?norma a bcnnorms:Norm .
+  ?norma bcnnorms:type <{tipo_uri}> .
+  ?norma bcnnorms:hasNumber ?numero .
+  ?norma dc:title ?titulo .
+  FILTER(STRLEN(?numero) = {numero_strlen}{starts_clause})
+  OPTIONAL {{ ?norma bcnnorms:leychileCode ?leychile_code . }}
+}}
+LIMIT {limit}
+""".strip()
+
+
+def numero_partition_chunks() -> list[tuple[int, str, str]]:
+    """Genera chunks (strlen, starts, label) para cubrir todo el rango 1-99999.
+
+    - 1 dígito: 1-9 (un solo chunk)
+    - 2 dígitos: 10-99 (un chunk)
+    - 3 dígitos: 100-999 (un chunk)
+    - 4 dígitos: 1000-9999 (9 chunks por dígito inicial)
+    - 5 dígitos: 10000-99999 (9 chunks)
+
+    Total: 1 + 1 + 1 + 9 + 9 = 21 chunks. Manejable.
+    """
+    chunks = []
+    chunks.append((1, "", "1d (1-9)"))
+    chunks.append((2, "", "2d (10-99)"))
+    chunks.append((3, "", "3d (100-999)"))
+    for d in "123456789":
+        chunks.append((4, d, f"4d {d}xxx ({d}000-{d}999)"))
+    for d in "123456789":
+        chunks.append((5, d, f"5d {d}xxxx ({d}0000-{d}9999)"))
+    return chunks
+
+
 def fetch_tipo(
     tipo: str,
     *,
@@ -217,6 +274,8 @@ def fetch_tipo(
     page_size: int,
     max_total: int | None,
     year_range: tuple[int, int] | None,
+    numero_range: tuple[int, int] | None = None,
+    numero_step: int = 2000,
 ) -> Iterator[dict]:
     """Itera todas las normas de un tipo.
 
@@ -245,6 +304,46 @@ def fetch_tipo(
             yielded += 1
             return parsed
         return None
+
+    # Partición por longitud+prefijo del número (más estable; hasNumber es xsd:string)
+    if numero_range is not None:
+        n_from, n_to = numero_range  # ignorado en este modo — iteramos todos los chunks
+        for strlen, starts, label in numero_partition_chunks():
+            # Filtrar chunks fuera del rango pedido si n_from/n_to acotan
+            if starts:
+                chunk_min = int(starts + "0" * (strlen - len(starts)))
+                chunk_max = int(starts + "9" * (strlen - len(starts))) + 1
+            else:
+                chunk_min = 10 ** (strlen - 1) if strlen > 1 else 1
+                chunk_max = 10 ** strlen
+            if chunk_max <= n_from or chunk_min >= n_to:
+                continue
+            try:
+                query = build_query_numero_prefix(
+                    tipo_uri,
+                    numero_strlen=strlen,
+                    numero_starts=starts,
+                    limit=page_size,
+                )
+                data = sparql_query(query, sleep_ms=sleep_ms)
+            except Exception as e:
+                print(f"  ! Error {tipo} chunk {label}: {e}", file=sys.stderr)
+                continue
+            bindings = data.get("results", {}).get("bindings", [])
+            page_new = 0
+            for b in bindings:
+                r = emit(b)
+                if r:
+                    page_new += 1
+                    yield r
+                    if max_total is not None and yielded >= max_total:
+                        return
+            print(
+                f"    chunk {label:<30} bindings={len(bindings):4} "
+                f"nuevos={page_new:4} total={yielded}",
+                file=sys.stderr,
+            )
+        return
 
     # Para tipos pequeños o si --no-partition: query única
     if year_range is None:
@@ -422,6 +521,12 @@ def main(argv=None) -> int:
                    help="Año final para partición (default 2026, año actual)")
     p.add_argument("--no-partition", action="store_true",
                    help="Forzar query sin partición por año (solo viable en tipos pequeños)")
+    p.add_argument("--numero-min", type=int, default=None,
+                   help="Filtrar por rango numérico (mín). Solo aplica a tipos con número único (ley, cod, lei).")
+    p.add_argument("--numero-max", type=int, default=None,
+                   help="Filtrar por rango numérico (máx exclusivo)")
+    p.add_argument("--numero-step", type=int, default=2000,
+                   help="Tamaño de chunk para partición numérica (default 2000)")
     args = p.parse_args(argv)
 
     tipos = [t.strip() for t in args.tipos.split(",") if t.strip()]
@@ -443,9 +548,18 @@ def main(argv=None) -> int:
     SMALL_TIPOS = {"cod", "tra", "aa", "lei"}
 
     for tipo in tipos:
-        use_partition = (not args.no_partition) and (tipo not in SMALL_TIPOS)
-        year_range = (args.year_from, args.year_to) if use_partition else None
-        print(f"\n=== Tipo: {tipo} (partición={'sí' if use_partition else 'no'}) ===")
+        # Si se entrega rango numérico, prioriza esa partición sobre año/offset
+        use_numero_range = args.numero_min is not None and args.numero_max is not None
+        if use_numero_range:
+            numero_range = (args.numero_min, args.numero_max)
+            year_range = None
+            partition_label = f"numero [{args.numero_min}, {args.numero_max})"
+        else:
+            numero_range = None
+            use_partition = (not args.no_partition) and (tipo not in SMALL_TIPOS)
+            year_range = (args.year_from, args.year_to) if use_partition else None
+            partition_label = "OFFSET por año" if use_partition else "query única"
+        print(f"\n=== Tipo: {tipo} (partición: {partition_label}) ===")
         tipo_dir = args.output / tipo
         if not args.dry_run:
             tipo_dir.mkdir(parents=True, exist_ok=True)
@@ -459,6 +573,8 @@ def main(argv=None) -> int:
             page_size=args.page_size,
             max_total=args.limit,
             year_range=year_range,
+            numero_range=numero_range,
+            numero_step=args.numero_step,
         ):
             count += 1
             if args.dry_run:
