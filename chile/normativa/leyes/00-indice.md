@@ -56,6 +56,7 @@ habilitado en Chile.
 | [`ley-19799-firma-electronica`](ley-19799-firma-electronica.md) | 19.799 | Firma electrónica y documentos electrónicos | Digital / Probatorio | Vigente | borrador-no-validado |
 | [`ley-21331-salud-mental`](ley-21331-salud-mental.md) | 21.331 | Derechos en salud mental (hospitalización psiquiátrica) | Salud / DD.HH. | Vigente | borrador-no-validado |
 | [`ley-21120-identidad-genero`](ley-21120-identidad-genero.md) | 21.120 | Identidad de género (cambio nombre y sexo registral) | Derechos / Familia | Vigente | borrador-no-validado |
+| [`ley-21057-entrevista-videograbada`](ley-21057-entrevista-videograbada.md) | 21.057 | Entrevista videograbada NNA víctimas de delitos sexuales | Penal / NNA | Vigente | borrador-no-validado |
 | `ley-21327-modernizacion-dt` | 21.327 | Modernización de la Dirección del Trabajo | Laboral / Administrativo | Vigente | pendiente |
 | `ley-19253-indigenas` | 19.253 | Pueblos indígenas (CONADI) | Indígena | Vigente (fuera de alcance v1) | fuera-de-alcance |
 
