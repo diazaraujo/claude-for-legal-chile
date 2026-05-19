@@ -3,6 +3,29 @@
 Cambios al contenido de `chile/`. Para cambios del upstream ver `git log` con
 `upstream/main`.
 
+## 0.0.10 — 2026-05-19
+
+- **Cluster laboral colectivo + administrativo + fintec + RPA + climático**
+  (5 archivos capa 3 nuevos):
+  - `leyes/ley-20940-relaciones-laborales.md` — Reforma 2016: titularidad
+    sindical, piso de negociación, servicios mínimos, prohibición de
+    reemplazo en huelga, fueros, prácticas antisindicales.
+  - `leyes/ley-18575-bases-administracion-estado.md` — LOC: principios
+    (servicio a persona, probidad, eficiencia, transparencia, control
+    jerárquico), organización, declaración intereses Ley 20.880.
+  - `leyes/ley-21521-fintec.md` — Marco Fintec 2023: 7 categorías licencias
+    CMF, Sistema Financiero Abierto, iniciación de pagos, cruce con LPDP
+    + AML + ciberseguridad.
+  - `leyes/ley-20084-rpa.md` — Responsabilidad Penal Adolescente 14-18:
+    sanciones diferenciadas, internación cerrada/semicerrada hasta 5/10
+    años, Servicio Nacional de Reinserción Social Juvenil.
+  - `leyes/ley-21455-cambio-climatico.md` — Marco 2022: carbono neutralidad
+    2050, NDC, presupuesto de carbono nacional + sectorial, planes
+    sectoriales mitigación + adaptación.
+
+- **Cobertura capa 3 ahora**: 1 Constitución + 7 códigos + 40 leyes + 3
+  skills + setup interview + fuentes.md = 52 archivos curados.
+
 ## 0.0.9 — 2026-05-19
 
 - **Cluster orgánico + NNA + migratorio + ciberseguridad** (4 archivos capa 3):

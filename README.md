@@ -86,9 +86,9 @@ El corpus se publica en tres capas (ver `decisions/ADR-0002`):
 
 | Capa | Qué tiene | Cobertura actual |
 |---|---|---|
-| **1 — Catálogo** | Metadata estructurada por norma desde BCN/SPARQL | **12.213 archivos** (códigos, leyes, DL, DFL, tratados, autos acordados) |
+| **1 — Catálogo** | Metadata estructurada por norma desde BCN/SPARQL | **~12.300 archivos** (códigos, leyes, DL, DFL, tratados, autos acordados) |
 | **2 — Resumen estructural** | Libros/títulos/artículos + conceptos clave | _pendiente — pipeline LLM en diseño_ |
-| **3 — Análisis operativo curado** | Lo que ves abajo, con disclaimer + validación legal | 43 archivos borrador + 3 skills + setup interview + fuentes |
+| **3 — Análisis operativo curado** | Lo que ves abajo, con disclaimer + validación legal | 48 archivos borrador + 3 skills + setup interview + fuentes |
 
 Detalle de capa 1 en [`chile/normativa/catalogo/README.md`](chile/normativa/catalogo/README.md).
 Estado de capa 3 a continuación. Solo los marcados ✅ están publicados como borrador
@@ -154,6 +154,11 @@ estructurado; ninguno ha pasado validación legal todavía.
 | Ley 21.430 | Garantías y protección integral NNA | ✅ [Borrador](chile/normativa/leyes/ley-21430-garantias-nna.md) |
 | Ley 21.325 | Migración y Extranjería (SERMIG) | ✅ [Borrador](chile/normativa/leyes/ley-21325-extranjeria.md) |
 | Ley 21.663 | Marco Ciberseguridad (ANCI) | ✅ [Borrador](chile/normativa/leyes/ley-21663-ciberseguridad.md) |
+| Ley 20.940 | Modernización relaciones laborales (sindicatos, huelga) | ✅ [Borrador](chile/normativa/leyes/ley-20940-relaciones-laborales.md) |
+| Ley 18.575 | LOC Bases Administración del Estado | ✅ [Borrador](chile/normativa/leyes/ley-18575-bases-administracion-estado.md) |
+| Ley 21.521 | Ley Fintec (CMF, SFA) | ✅ [Borrador](chile/normativa/leyes/ley-21521-fintec.md) |
+| Ley 20.084 | Responsabilidad Penal Adolescente (RPA) | ✅ [Borrador](chile/normativa/leyes/ley-20084-rpa.md) |
+| Ley 21.455 | Marco de Cambio Climático | ✅ [Borrador](chile/normativa/leyes/ley-21455-cambio-climatico.md) |
 
 [Ver índice completo](chile/normativa/leyes/00-indice.md) (19 leyes).
 
