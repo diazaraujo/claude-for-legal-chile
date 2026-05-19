@@ -67,6 +67,8 @@ habilitado en Chile.
 | [`ley-19884-financiamiento-electoral`](ley-19884-financiamiento-electoral.md) | 19.884 | Financiamiento electoral (límites, prohibiciones, SERVEL) | Electoral / Probidad | Vigente | borrador-no-validado |
 | [`ley-20500-asociaciones`](ley-20500-asociaciones.md) | 20.500 | Asociaciones y Participación Ciudadana (ASFL, COSOC) | Asociativo / Administrativo | Vigente | borrador-no-validado |
 | [`ley-21073-gobernadores-regionales`](ley-21073-gobernadores-regionales.md) | 21.073 | Elección de gobernadores regionales + descentralización | Constitucional / Regional | Vigente | borrador-no-validado |
+| [`ley-21420-reduccion-exenciones`](ley-21420-reduccion-exenciones.md) | 21.420 | Reducción de exenciones tributarias (IVA a servicios profesionales PJ) | Tributario | Vigente | borrador-no-validado |
+| [`ley-21713-reforma-tributaria-2024`](ley-21713-reforma-tributaria-2024.md) | 21.713 | Reforma Tributaria 2024 (NGA reforzada, plataformas digitales, BEPS) | Tributario | Vigente con escalonamiento | borrador-no-validado |
 | `ley-21327-modernizacion-dt` | 21.327 | Modernización de la Dirección del Trabajo | Laboral / Administrativo | Vigente | pendiente |
 | `ley-19253-indigenas` | 19.253 | Pueblos indígenas (CONADI) | Indígena | Vigente (fuera de alcance v1) | fuera-de-alcance |
 
