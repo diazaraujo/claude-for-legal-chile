@@ -91,6 +91,8 @@ habilitado en Chile.
 | [`ley-19992-reparacion-valech`](ley-19992-reparacion-valech.md) | 19.992 | Reparación víctimas Valech I y II (tortura + prisión política) | DDHH / Reparación | Vigente | borrador-no-validado |
 | [`ley-19640-ministerio-publico`](ley-19640-ministerio-publico.md) | 19.640 | LOC del Ministerio Público (Fiscalía: investigación + acción penal) | Constitucional / Penal | Vigente | borrador-no-validado |
 | [`ley-20405-indh`](ley-20405-indh.md) | 20.405 | INDH — Instituto Nacional de Derechos Humanos + MNPT | DDHH / Institucional | Vigente | borrador-no-validado |
+| [`ley-19718-defensoria-penal-publica`](ley-19718-defensoria-penal-publica.md) | 19.718 | Defensoría Penal Pública (DPP — sistema mixto institucional + licitado) | Procesal Penal | Vigente | borrador-no-validado |
+| [`ley-17288-monumentos-nacionales`](ley-17288-monumentos-nacionales.md) | 17.288 | Monumentos Nacionales — CMN, MH, ZT, Santuarios, arqueología | Patrimonial / Cultural | Vigente | borrador-no-validado |
 | [`ley-21030-aborto-tres-causales`](ley-21030-aborto-tres-causales.md) | 21.030 | Aborto en tres causales (riesgo, inviabilidad, violación) | Constitucional / Salud | Vigente | borrador-no-validado |
 | `ley-21327-modernizacion-dt` | 21.327 | Modernización de la Dirección del Trabajo | Laboral / Administrativo | Vigente | pendiente |
 | `ley-19253-indigenas` | 19.253 | Pueblos indígenas (CONADI) | Indígena | Vigente (fuera de alcance v1) | fuera-de-alcance |
