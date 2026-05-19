@@ -86,9 +86,9 @@ El corpus se publica en tres capas (ver `decisions/ADR-0002`):
 
 | Capa | Qué tiene | Cobertura actual |
 |---|---|---|
-| **1 — Catálogo** | Metadata estructurada por norma desde BCN/SPARQL | **~12.400 archivos** (códigos, leyes, DL, DFL, tratados, autos acordados) |
-| **2 — Resumen estructural** | Libros/títulos/artículos + conceptos clave desde XML estructurado de LeyChile | **4.901 archivos** (4.833 leyes ≈98% del catálogo + 58 tratados + 10 códigos; pipeline en `scripts/bcn/promote-to-capa2.py`) |
-| **3 — Análisis operativo curado** | Lo que ves abajo, con disclaimer + validación legal | 71 archivos borrador + 4 skills + setup interview + fuentes |
+| **1 — Catálogo** | Metadata estructurada por norma desde BCN/SPARQL | **12.465 archivos** (4.921 leyes + 4.167 DL + 3.171 DFL + 167 tratados + 27 AA + 11 códigos) |
+| **2 — Resumen estructural** | Libros/títulos/artículos + conceptos clave desde XML estructurado de LeyChile | **~11.800 archivos** (4.833 leyes + 3.827 DL + 2.942 DFL + 167 tratados + 15 AA + 10 códigos; pipeline en `scripts/bcn/promote-to-capa2.py`) |
+| **3 — Análisis operativo curado** | Lo que ves abajo, con disclaimer + validación legal | **126 archivos borrador** (115 leyes + 9 códigos + 2 constitución) + 4 skills + setup interview + fuentes |
 
 Detalle de capa 1 en [`chile/normativa/catalogo/README.md`](chile/normativa/catalogo/README.md).
 Estado de capa 3 a continuación. Solo los marcados ✅ están publicados como borrador
@@ -117,73 +117,105 @@ estructurado; ninguno ha pasado validación legal todavía.
 
 ### Leyes especiales
 
-| Ley | Materia | Estado |
-|---|---|---|
-| Ley 19.628 | Protección de datos personales | ✅ [Borrador](chile/normativa/leyes/ley-19628-proteccion-datos.md) |
-| Ley 21.719 | Modificación LPDP + creación APDP (vigencia 2026-12-01) | ✅ [Borrador](chile/normativa/leyes/ley-21719-modificacion-lpd.md) |
-| Ley 16.744 | Accidentes del trabajo y enfermedades profesionales | ✅ [Borrador](chile/normativa/leyes/ley-16744-accidentes-trabajo.md) |
-| Ley 20.123 | Subcontratación y suministro de trabajadores | ✅ [Borrador](chile/normativa/leyes/ley-20123-subcontratacion.md) |
-| Ley 21.561 | Reducción de jornada 40h | ✅ [Borrador](chile/normativa/leyes/ley-21561-reduccion-jornada.md) |
-| Ley 21.643 | Ley Karin — acoso y violencia laboral | ✅ [Borrador](chile/normativa/leyes/ley-21643-acoso-laboral.md) |
-| Ley 21.220 | Teletrabajo | ✅ [Borrador](chile/normativa/leyes/ley-21220-teletrabajo.md) |
-| Ley 21.015 | Inclusión laboral discapacidad | ✅ [Borrador](chile/normativa/leyes/ley-21015-inclusion-laboral.md) |
-| Ley 18.046 | Sociedades Anónimas | ✅ [Borrador](chile/normativa/leyes/ley-18046-sociedades-anonimas.md) |
-| Ley 19.496 | Protección del consumidor | ✅ [Borrador](chile/normativa/leyes/ley-19496-consumidor.md) |
-| Ley 19.886 | Compras públicas (ChileCompra, TCP) | ✅ [Borrador](chile/normativa/leyes/ley-19886-compras-publicas.md) |
-| DL 824 | Ley de Impuesto a la Renta (LIR) | ✅ [Borrador](chile/normativa/leyes/dl-824-renta.md) |
-| DL 825 | Ley sobre IVA y Servicios | ✅ [Borrador](chile/normativa/leyes/dl-825-iva.md) |
-| Ley 20.720 | Reorganización y liquidación concursal | ✅ [Borrador](chile/normativa/leyes/ley-20720-concursal.md) |
-| Ley 19.880 | Procedimiento administrativo (bases supletorias) | ✅ [Borrador](chile/normativa/leyes/ley-19880-procedimiento-administrativo.md) |
-| Ley 19.947 | Matrimonio Civil (con Ley 21.400 matrimonio igualitario) | ✅ [Borrador](chile/normativa/leyes/ley-19947-matrimonio-civil.md) |
-| Ley 19.968 | Tribunales de Familia | ✅ [Borrador](chile/normativa/leyes/ley-19968-tribunales-familia.md) |
-| Ley 19.300 | Bases Generales del Medio Ambiente (SEIA) | ✅ [Borrador](chile/normativa/leyes/ley-19300-medio-ambiente.md) |
-| Ley 20.285 | Transparencia y acceso a información pública | ✅ [Borrador](chile/normativa/leyes/ley-20285-transparencia.md) |
-| Ley 20.393 | Responsabilidad penal personas jurídicas (RPPJ) | ✅ [Borrador](chile/normativa/leyes/ley-20393-rppj.md) |
-| Ley 21.595 | Delitos económicos y ambientales | ✅ [Borrador](chile/normativa/leyes/ley-21595-delitos-economicos.md) |
-| Ley 18.045 | Mercado de Valores (LMV) | ✅ [Borrador](chile/normativa/leyes/ley-18045-mercado-valores.md) |
-| Ley 19.039 | Propiedad Industrial (marcas, patentes) | ✅ [Borrador](chile/normativa/leyes/ley-19039-propiedad-industrial.md) |
-| Ley 17.336 | Propiedad Intelectual (derecho de autor) | ✅ [Borrador](chile/normativa/leyes/ley-17336-propiedad-intelectual.md) |
-| Ley 19.913 | Lavado de activos + UAF | ✅ [Borrador](chile/normativa/leyes/ley-19913-lavado-activos.md) |
-| Ley 14.908 | Pensiones alimenticias + RNDPA + GAM | ✅ [Borrador](chile/normativa/leyes/ley-14908-alimentos.md) |
-| DL 211 | Libre competencia (FNE, TDLC, control fusiones) | ✅ [Borrador](chile/normativa/leyes/dl-211-libre-competencia.md) |
-| Ley 20.000 | Tráfico ilícito de drogas | ✅ [Borrador](chile/normativa/leyes/ley-20000-drogas.md) |
-| Ley 20.066 | Violencia Intrafamiliar (VIF) | ✅ [Borrador](chile/normativa/leyes/ley-20066-vif.md) |
-| DL 3.500 | Sistema de pensiones (AFP, PGU) | ✅ [Borrador](chile/normativa/leyes/dl-3500-pensiones.md) |
-| Ley 18.168 | General de Telecomunicaciones | ✅ [Borrador](chile/normativa/leyes/ley-18168-telecomunicaciones.md) |
-| Ley 19.728 | Seguro de cesantía (AFC) | ✅ [Borrador](chile/normativa/leyes/ley-19728-seguro-cesantia.md) |
-| Ley 21.430 | Garantías y protección integral NNA | ✅ [Borrador](chile/normativa/leyes/ley-21430-garantias-nna.md) |
-| Ley 21.325 | Migración y Extranjería (SERMIG) | ✅ [Borrador](chile/normativa/leyes/ley-21325-extranjeria.md) |
-| Ley 21.663 | Marco Ciberseguridad (ANCI) | ✅ [Borrador](chile/normativa/leyes/ley-21663-ciberseguridad.md) |
-| Ley 20.940 | Modernización relaciones laborales (sindicatos, huelga) | ✅ [Borrador](chile/normativa/leyes/ley-20940-relaciones-laborales.md) |
-| Ley 18.575 | LOC Bases Administración del Estado | ✅ [Borrador](chile/normativa/leyes/ley-18575-bases-administracion-estado.md) |
-| Ley 21.521 | Ley Fintec (CMF, SFA) | ✅ [Borrador](chile/normativa/leyes/ley-21521-fintec.md) |
-| Ley 20.084 | Responsabilidad Penal Adolescente (RPA) | ✅ [Borrador](chile/normativa/leyes/ley-20084-rpa.md) |
-| Ley 21.455 | Marco de Cambio Climático | ✅ [Borrador](chile/normativa/leyes/ley-21455-cambio-climatico.md) |
-| Ley 20.730 | Regula el lobby (Infolobby) | ✅ [Borrador](chile/normativa/leyes/ley-20730-lobby.md) |
-| Ley 20.880 | Probidad pública (DIP, fideicomiso ciego) | ✅ [Borrador](chile/normativa/leyes/ley-20880-probidad-publica.md) |
-| DFL 458 | LGUC (Ley General de Urbanismo y Construcciones) | ✅ [Borrador](chile/normativa/leyes/dfl-458-urbanismo-construcciones.md) |
-| Ley 20.584 | Derechos y deberes del paciente | ✅ [Borrador](chile/normativa/leyes/ley-20584-derechos-deberes-paciente.md) |
-| Ley 20.422 | Inclusión social personas con discapacidad (SENADIS) | ✅ [Borrador](chile/normativa/leyes/ley-20422-discapacidad.md) |
-| Ley 20.609 | Antidiscriminación ("Ley Zamudio") | ✅ [Borrador](chile/normativa/leyes/ley-20609-no-discriminacion.md) |
-| Ley 21.180 | Transformación digital del Estado | ✅ [Borrador](chile/normativa/leyes/ley-21180-transformacion-digital.md) |
-| Ley 19.799 | Firma electrónica y documentos electrónicos | ✅ [Borrador](chile/normativa/leyes/ley-19799-firma-electronica.md) |
-| Ley 21.331 | Derechos en salud mental | ✅ [Borrador](chile/normativa/leyes/ley-21331-salud-mental.md) |
-| Ley 21.120 | Identidad de género | ✅ [Borrador](chile/normativa/leyes/ley-21120-identidad-genero.md) |
-| Ley 21.057 | Entrevista videograbada NNA víctimas | ✅ [Borrador](chile/normativa/leyes/ley-21057-entrevista-videograbada.md) |
-| Ley 21.314 | Gobierno corporativo SA abiertas | ✅ [Borrador](chile/normativa/leyes/ley-21314-gobierno-corporativo.md) |
-| Ley 18.700 | LOC Votaciones Populares (sistema electoral) | ✅ [Borrador](chile/normativa/leyes/ley-18700-loc-votaciones.md) |
-| Ley 17.997 | LOC Tribunal Constitucional | ✅ [Borrador](chile/normativa/leyes/ley-17997-loc-tc.md) |
-| Ley 18.918 | LOC Congreso Nacional | ✅ [Borrador](chile/normativa/leyes/ley-18918-loc-congreso.md) |
-| Ley 21.094 | Universidades Estatales | ✅ [Borrador](chile/normativa/leyes/ley-21094-universidades-estatales.md) |
-| Ley 21.091 | Sobre Educación Superior (gratuidad, SES, CNA) | ✅ [Borrador](chile/normativa/leyes/ley-21091-educacion-superior.md) |
-| Ley 19.418 | Juntas de Vecinos y Organizaciones Comunitarias | ✅ [Borrador](chile/normativa/leyes/ley-19418-juntas-vecinos.md) |
+**115 perfiles** publicados como borrador, organizados por bloque temático.
+Todos en `estado_revision: borrador-no-validado` salvo indicación expresa.
 
-[Ver índice completo](chile/normativa/leyes/00-indice.md) (19 leyes).
+#### Constitucional · Orgánico · Control
 
-### Perfiles y skills
+LOC Banco Central (18.840) · LOC TC (17.997) · LOC Congreso (18.918) · LOC
+Municipalidades (18.695) · LOC FFAA — pendientes · CGR (10.336) · LOC MP (19.640) ·
+DPP (19.718) · Reforma orgánica PJUD (19.665) · LOC Votaciones (18.700) ·
+Gobernadores Regionales (21.073) · LOC Concesiones Mineras (18.097) · Bases
+AdEstado (18.575).
 
-Capa de orquestación sobre el corpus. Pendientes de redacción una vez que las leyes
-que invocan estén validadas.
+#### Tributario · Municipal
+
+Renta DL 824 · IVA DL 825 · Reducción exenciones (21.420) · Reforma Tributaria 2024
+(21.713) · Impuesto Territorial (17.235) · Rentas Municipales (DL 3.063) · Royalty
+Minero (21.591).
+
+#### Laboral · Previsional · Seguridad Social
+
+Subcontratación (20.123) · 40h (21.561) · Ley Karin (21.643) · Teletrabajo (21.220) ·
+Inclusión Laboral (21.015) · Accidentes del Trabajo (16.744) · Sindicatos (20.940) ·
+Tribunales del Trabajo (20.022) · Procedimiento Laboral (20.087) · SENCE (19.518) ·
+Cesantía AFC (19.728) · DL 3.500 Pensiones · Reforma Previsional 2008 (20.255) ·
+PGU (21.419).
+
+#### Familia · Niñez · DDHH
+
+Matrimonio Civil (19.947) · Matrimonio Igualitario (21.400) · AUC (20.830) ·
+Tribunales Familia (19.968) · Adopciones (19.620) · Alimentos (14.908) · VIF
+(20.066) · Garantías NNA (21.430) · SNN (21.302) · RRSJ (21.527) · Defensoría Niñez
+(21.067) · Entrevista videograbada (21.057) · RPA (20.084) · Identidad de género
+(21.120) · Reparación Rettig (19.123) · Reparación Valech (19.992) · INDH (20.405).
+
+#### Salud
+
+Código Sanitario (DFL 725) · Derechos del Paciente (20.584) · AUGE/GES (19.966) ·
+Aborto 3 causales (21.030) · Salud Mental (21.331) · APS Municipal (19.378).
+
+#### Educación
+
+LGE (DFL 2/2009) · Subvención Escolar (DFL 2/1998) · Estatuto Docente (19.070) ·
+SLEP (21.040) · UE (21.094) · Educación Superior (21.091).
+
+#### Recursos Naturales · Sectorial
+
+Bases Medio Ambiente / SEIA (19.300) · Cambio Climático (21.455) · Código de Aguas
+(DFL 1.122) · LGPA Pesca (18.892) · Código de Minería (18.248) · Royalty (21.591) ·
+LGUC (DFL 458) · Bienes del Estado (DL 1.939) · Monumentos Nacionales (17.288).
+
+#### Penal · Procesal Penal · Crimen Organizado
+
+RPPJ (20.393) · Delitos Económicos (21.595) · Crimen Organizado (21.601) · Drogas
+(20.000) · VIF (20.066) · Lavado de Activos (19.913) · ANI Inteligencia (19.974) ·
+RPA (20.084).
+
+#### Comercial · Financiero · Consumidor
+
+Sociedades Anónimas (18.046) · Mercado de Valores (18.045) · Gobierno Corporativo
+SA (21.314) · CMF (21.000) · Banco Central (18.840) · Concursal (20.720) · Letras y
+Pagarés (18.092) · OCD (18.010) · Consumidor (19.496) · Fintec (21.521) · Fraude
+Tarjetas (21.234) · Competencia Desleal (20.169) · Libre Competencia (DL 211) ·
+Propiedad Industrial (19.039) · Propiedad Intelectual (17.336).
+
+#### Inmobiliario · Urbanismo
+
+LGUC (DFL 458) · Copropiedad inmobiliaria (19.537) · Compraventa inmuebles —
+información falsa (21.484) · Código Aguas (DFL 1.122).
+
+#### Administrativo · Transparencia · Compliance
+
+Procedimiento Administrativo (19.880) · Bases AdEstado (18.575) · EA general
+(18.834) · EAM (18.883) · Transparencia (20.285) · Probidad (20.880) · Lobby
+(20.730) · Asociaciones (20.500) · JJVV (19.418) · Compras Públicas (19.886).
+
+#### Privacidad · Digital · Ciberseguridad
+
+LPDP (19.628) · Modificación LPDP (21.719) · Firma electrónica (19.799) ·
+Transformación digital (21.180) · Ciberseguridad (21.663) · ANI (19.974) · CNTV
+(18.838) · Libertades opinión (19.733).
+
+#### Sectorial · Otros
+
+Aeronáutico (18.916) · Telecomunicaciones (18.168) · Migración (21.325) · No
+discriminación (20.609) · Discapacidad (20.422) · Transparencia (20.285).
+
+[**Ver índice completo de las 115 leyes**](chile/normativa/leyes/00-indice.md).
+
+### Skills transversales
+
+| Skill | Función |
+|---|---|
+| [`diagnostico`](chile/skills/diagnostico.md) | Diagnóstico inicial: clasifica consulta, identifica normas aplicables, sugiere análisis |
+| [`citas-verificables`](chile/skills/citas-verificables.md) | Genera citas con `Art.` + `cuerpo normativo` + URL BCN, evitando alucinación de jurisprudencia |
+| [`plazos`](chile/skills/plazos.md) | Cálculo de plazos legales con día hábil / corrido, feriados, suspensiones |
+| [`compliance-corporativo`](chile/skills/compliance-corporativo.md) | Modelo de prevención del delito (Ley 20.393 + 21.595) + lobby + probidad |
+
+### Perfiles por rama
+
+_Pendientes de redacción una vez que los skills se hayan validado en producción._
 
 ---
 
@@ -219,12 +251,14 @@ Ver más ejemplos en [`chile/ejemplos/`](chile/ejemplos/).
 ## Hoja de ruta
 
 - ✅ **Fase 0** — Fork + arquitectura normativa-spine + 4 normas iniciales publicadas
-- 🚧 **Fase 1** — Validación legal de las normas publicadas (issue #1) y cobertura de
-  10 leyes prioritarias + 3 códigos
-- ⏳ **Fase 2** — Perfiles por rama (civil, laboral, societario) + 3 skills
-  transversales (diagnóstico, citas verificables, plazos)
-- ⏳ **Fase 3** — Release v1.0 público + anuncio + cobertura comparable al fork
-  argentino
+- ✅ **Fase 1** — Capa 1 catálogo completo (12.465 archivos) + capa 2 estructural
+  (~11.800 archivos) + 9 códigos + ~50 leyes prioritarias publicadas en borrador
+- ✅ **Fase 2** — 4 skills transversales (diagnóstico, citas verificables, plazos,
+  compliance corporativo) + cobertura ampliada a 115 leyes especiales
+- 🚧 **Fase 3** — Validación legal de los 126 perfiles capa 3 (issue #1) +
+  perfiles por rama (civil, laboral, societario, tributario)
+- ⏳ **Fase 4** — Release v1.0 público + anuncio + benchmark contra forks análogos
+  + integración con productos Unholster
 
 Ver [issues abiertas](https://github.com/diazaraujo/claude-for-legal-chile/issues)
 para el detalle.
