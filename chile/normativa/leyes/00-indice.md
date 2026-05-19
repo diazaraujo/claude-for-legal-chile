@@ -101,6 +101,9 @@ habilitado en Chile.
 | [`ley-21067-defensoria-ninez`](ley-21067-defensoria-ninez.md) | 21.067 | Defensoría de la Niñez (autonomía, querellas, amicus curiae, visitas) | DDHH / Niñez | Vigente | borrador-no-validado |
 | [`ley-18916-codigo-aeronautico`](ley-18916-codigo-aeronautico.md) | 18.916 | Código Aeronáutico (DGAC, aeronaves, drones RPAS, Montreal 1999) | Aeronáutico / Sectorial | Vigente | borrador-no-validado |
 | [`ley-21527-servicio-reinsercion-juvenil`](ley-21527-servicio-reinsercion-juvenil.md) | 21.527 | Servicio Nacional Reinserción Social Juvenil (reemplaza SENAME en RPA) | Penal / Adolescente | Vigente | borrador-no-validado |
+| [`ley-19974-ani-inteligencia`](ley-19974-ani-inteligencia.md) | 19.974 | Sistema Inteligencia Estado + ANI (servicios, medidas intrusivas, control bicameral) | Seguridad / Inteligencia | Vigente con reforma 2024 | borrador-no-validado |
+| [`dl-3063-rentas-municipales`](dl-3063-rentas-municipales.md) | DL 3.063 (DFL 1/2006) | Rentas Municipales — patente, permiso circulación, derechos, FCM | Tributario / Municipal | Vigente | borrador-no-validado |
+| [`ley-17235-impuesto-territorial`](ley-17235-impuesto-territorial.md) | 17.235 | Impuesto Territorial (contribuciones, avalúo fiscal, sobretasa altos avalúos) | Tributario / Patrimonial | Vigente | borrador-no-validado |
 | [`ley-21030-aborto-tres-causales`](ley-21030-aborto-tres-causales.md) | 21.030 | Aborto en tres causales (riesgo, inviabilidad, violación) | Constitucional / Salud | Vigente | borrador-no-validado |
 | `ley-21327-modernizacion-dt` | 21.327 | Modernización de la Dirección del Trabajo | Laboral / Administrativo | Vigente | pendiente |
 | `ley-19253-indigenas` | 19.253 | Pueblos indígenas (CONADI) | Indígena | Vigente (fuera de alcance v1) | fuera-de-alcance |
