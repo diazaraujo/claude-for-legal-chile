@@ -107,6 +107,7 @@ habilitado en Chile.
 | [`ley-19665-reforma-organica-pjud`](ley-19665-reforma-organica-pjud.md) | 19.665 | Reforma orgánica PJUD para RPP (Juzgados Garantía + TOP + Salas Penales) | Procesal Penal | Vigente | borrador-no-validado |
 | [`dfl-2-1998-subvencion-escolar`](dfl-2-1998-subvencion-escolar.md) | DFL 2/1998 | Subvención escolar (general + SEP + asignaciones, SAE, JECD) | Educación / Financiamiento | Vigente | borrador-no-validado |
 | [`ley-19378-aps-municipal-salud`](ley-19378-aps-municipal-salud.md) | 19.378 | Estatuto APS Municipal Salud (CESFAM, per cápita, dotación) | Salud / Funcionarial | Vigente | borrador-no-validado |
+| [`ley-18840-loc-banco-central`](ley-18840-loc-banco-central.md) | 18.840 | LOC Banco Central (autonomía constitucional, TPM, meta inflación, sistema pagos) | Monetario / Constitucional | Vigente | borrador-no-validado |
 | [`ley-21030-aborto-tres-causales`](ley-21030-aborto-tres-causales.md) | 21.030 | Aborto en tres causales (riesgo, inviabilidad, violación) | Constitucional / Salud | Vigente | borrador-no-validado |
 | `ley-21327-modernizacion-dt` | 21.327 | Modernización de la Dirección del Trabajo | Laboral / Administrativo | Vigente | pendiente |
 | `ley-19253-indigenas` | 19.253 | Pueblos indígenas (CONADI) | Indígena | Vigente (fuera de alcance v1) | fuera-de-alcance |
