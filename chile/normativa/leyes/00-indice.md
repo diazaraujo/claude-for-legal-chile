@@ -49,6 +49,7 @@ habilitado en Chile.
 | [`ley-20730-lobby`](ley-20730-lobby.md) | 20.730 | Regula el lobby y gestión de intereses particulares | Probidad / Transparencia | Vigente | borrador-no-validado |
 | [`ley-20880-probidad-publica`](ley-20880-probidad-publica.md) | 20.880 | Probidad pública (DIP, fideicomiso ciego) | Probidad / Administrativo | Vigente | borrador-no-validado |
 | [`dfl-458-urbanismo-construcciones`](dfl-458-urbanismo-construcciones.md) | DFL 458 | LGUC — Ley General de Urbanismo y Construcciones | Urbanismo / Inmobiliario | Vigente | borrador-no-validado |
+| [`dfl-1122-codigo-aguas`](dfl-1122-codigo-aguas.md) | DFL 1.122 | Código de Aguas (con reforma Ley 21.435/2022) | Aguas / Recursos naturales | Vigente con reforma 2022 | borrador-no-validado |
 | [`ley-20584-derechos-deberes-paciente`](ley-20584-derechos-deberes-paciente.md) | 20.584 | Derechos y deberes del paciente (consentimiento informado, ficha clínica) | Salud / Bioética | Vigente | borrador-no-validado |
 | [`ley-20422-discapacidad`](ley-20422-discapacidad.md) | 20.422 | Inclusión social de personas con discapacidad (SENADIS, accesibilidad universal) | Discapacidad | Vigente | borrador-no-validado |
 | [`ley-20609-no-discriminacion`](ley-20609-no-discriminacion.md) | 20.609 | Antidiscriminación ("Ley Zamudio") + agravante penal | Derechos / Penal | Vigente | borrador-no-validado |
@@ -74,6 +75,7 @@ habilitado en Chile.
 | [`ley-21713-reforma-tributaria-2024`](ley-21713-reforma-tributaria-2024.md) | 21.713 | Reforma Tributaria 2024 (NGA reforzada, plataformas digitales, BEPS) | Tributario | Vigente con escalonamiento | borrador-no-validado |
 | [`ley-20255-reforma-previsional`](ley-20255-reforma-previsional.md) | 20.255 | Reforma Previsional 2008 (Pilar Solidario, IPS, bono por hijo) | Previsional | Vigente | borrador-no-validado |
 | [`ley-21419-pgu`](ley-21419-pgu.md) | 21.419 | Pensión Garantizada Universal (sustituye Pilar Solidario) | Previsional | Vigente | borrador-no-validado |
+| [`ley-19733-libertades-opinion-informacion`](ley-19733-libertades-opinion-informacion.md) | 19.733 | Libertades de opinión + información + periodismo (secreto fuente, derecho de respuesta) | Constitucional / Medios | Vigente | borrador-no-validado |
 | `ley-21327-modernizacion-dt` | 21.327 | Modernización de la Dirección del Trabajo | Laboral / Administrativo | Vigente | pendiente |
 | `ley-19253-indigenas` | 19.253 | Pueblos indígenas (CONADI) | Indígena | Vigente (fuera de alcance v1) | fuera-de-alcance |
 
