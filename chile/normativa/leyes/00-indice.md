@@ -49,6 +49,9 @@ habilitado en Chile.
 | [`ley-20730-lobby`](ley-20730-lobby.md) | 20.730 | Regula el lobby y gestión de intereses particulares | Probidad / Transparencia | Vigente | borrador-no-validado |
 | [`ley-20880-probidad-publica`](ley-20880-probidad-publica.md) | 20.880 | Probidad pública (DIP, fideicomiso ciego) | Probidad / Administrativo | Vigente | borrador-no-validado |
 | [`dfl-458-urbanismo-construcciones`](dfl-458-urbanismo-construcciones.md) | DFL 458 | LGUC — Ley General de Urbanismo y Construcciones | Urbanismo / Inmobiliario | Vigente | borrador-no-validado |
+| [`ley-20584-derechos-deberes-paciente`](ley-20584-derechos-deberes-paciente.md) | 20.584 | Derechos y deberes del paciente (consentimiento informado, ficha clínica) | Salud / Bioética | Vigente | borrador-no-validado |
+| [`ley-20422-discapacidad`](ley-20422-discapacidad.md) | 20.422 | Inclusión social de personas con discapacidad (SENADIS, accesibilidad universal) | Discapacidad | Vigente | borrador-no-validado |
+| [`ley-20609-no-discriminacion`](ley-20609-no-discriminacion.md) | 20.609 | Antidiscriminación ("Ley Zamudio") + agravante penal | Derechos / Penal | Vigente | borrador-no-validado |
 | `ley-21327-modernizacion-dt` | 21.327 | Modernización de la Dirección del Trabajo | Laboral / Administrativo | Vigente | pendiente |
 | `ley-19253-indigenas` | 19.253 | Pueblos indígenas (CONADI) | Indígena | Vigente (fuera de alcance v1) | fuera-de-alcance |
 

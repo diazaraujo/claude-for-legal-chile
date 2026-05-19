@@ -3,6 +3,26 @@
 Cambios al contenido de `chile/`. Para cambios del upstream ver `git log` con
 `upstream/main`.
 
+## 0.0.12 — 2026-05-19
+
+- **Cluster salud + discapacidad + antidiscriminación** (3 archivos
+  capa 3 nuevos):
+  - `leyes/ley-20584-derechos-deberes-paciente.md` — Ley del Paciente:
+    consentimiento informado obligatorio, ficha clínica (propiedad
+    prestador, 15 años conservación), voluntad anticipada / LET /
+    cuidados paliativos, salud mental Ley 21.331, comité ético
+    investigación.
+  - `leyes/ley-20422-discapacidad.md` — CDPD ONU implementada, RND +
+    COMPIN, accesibilidad universal, ajustes razonables, autismo
+    Ley 21.545, inclusión laboral (cruce Ley 21.015) + educacional (PIE).
+  - `leyes/ley-20609-no-discriminacion.md` — Ley Zamudio: acción de no
+    discriminación arbitraria, 14+ categorías protegidas (sexo,
+    orientación, identidad, raza, religión, edad, etc.), juzgado civil
+    + 90 días, multa 5-50 UTM, agravante penal Art. 12 N° 21 CP.
+
+- **Cobertura capa 3 ahora**: 1 Constitución + 7 códigos + 46 leyes + 3
+  skills + setup interview + fuentes.md = 58 archivos curados.
+
 ## 0.0.11 — 2026-05-19
 
 - **Cluster probidad + lobby + LGUC** (3 archivos capa 3 nuevos):
