@@ -19,8 +19,11 @@ habilitado en Chile.
 | [`ley-19496-consumidor`](ley-19496-consumidor.md) | 19.496 | Protección de los derechos de los consumidores | Consumidor | Vigente | borrador-no-validado |
 | [`dl-824-renta`](dl-824-renta.md) | DL 824 | Ley sobre Impuesto a la Renta | Tributario | Vigente | borrador-no-validado |
 | [`dl-825-iva`](dl-825-iva.md) | DL 825 | Ley sobre Impuesto a las Ventas y Servicios (IVA) | Tributario | Vigente | borrador-no-validado |
-| `ley-20720-concursal` | 20.720 | Reorganización y liquidación de empresas y personas | Concursal | Vigente | pendiente |
-| `ley-19880-procedimiento-administrativo` | 19.880 | Bases del procedimiento administrativo | Administrativo | Vigente | pendiente |
+| [`ley-20720-concursal`](ley-20720-concursal.md) | 20.720 | Reorganización y liquidación de empresas y personas | Concursal | Vigente | borrador-no-validado |
+| [`ley-19880-procedimiento-administrativo`](ley-19880-procedimiento-administrativo.md) | 19.880 | Bases del procedimiento administrativo | Administrativo | Vigente | borrador-no-validado |
+| [`ley-19947-matrimonio-civil`](ley-19947-matrimonio-civil.md) | 19.947 | Matrimonio Civil (con Ley 21.400 matrimonio igualitario) | Familia | Vigente | borrador-no-validado |
+| [`ley-19968-tribunales-familia`](ley-19968-tribunales-familia.md) | 19.968 | Tribunales de Familia | Familia / Procesal | Vigente | borrador-no-validado |
+| [`ley-19300-medio-ambiente`](ley-19300-medio-ambiente.md) | 19.300 | Bases Generales del Medio Ambiente (SEIA, MMA, SMA) | Ambiental | Vigente | borrador-no-validado |
 | `ley-19728-seguro-cesantia` | 19.728 | Seguro de cesantía | Laboral / Previsional | Vigente | pendiente |
 | `ley-20940-relaciones-laborales` | 20.940 | Modernización del sistema de relaciones laborales | Laboral | Vigente | pendiente |
 | `ley-21327-modernizacion-dt` | 21.327 | Modernización de la Dirección del Trabajo | Laboral / Administrativo | Vigente | pendiente |

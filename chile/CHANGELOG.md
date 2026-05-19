@@ -11,6 +11,20 @@ Cambios al contenido de `chile/`. Para cambios del upstream ver `git log` con
 - Estado: WIP. Perfiles por rama del derecho pendientes de redacción y de
   revisión por abogado habilitado.
 
+## 0.0.6 — 2026-05-18
+
+- **Cluster procesal/familia/ambiental** (capa 3 borrador):
+  - `leyes/ley-19968-tribunales-familia.md` — Tribunales de Familia,
+    procedimiento ordinario, mediación obligatoria, medidas de protección NNA.
+  - `leyes/ley-19947-matrimonio-civil.md` — Matrimonio civil con Ley 21.400
+    matrimonio igualitario, divorcio mutuo acuerdo (1 año) vs unilateral (3),
+    compensación económica, regímenes patrimoniales.
+  - `leyes/ley-19300-medio-ambiente.md` — SEIA (DIA vs EIA), institucionalidad
+    MMA/SMA/SEA/Tribunales Ambientales, sanciones SMA, delitos ambientales
+    Ley 21.595, acción de reparación por daño.
+- **Cobertura capa 3 ahora**: 1 Constitución + 6 códigos + 17 leyes + 3 skills
+  + setup interview + fuentes.md.
+
 ## 0.0.5 — 2026-05-18
 
 - **Skills transversales publicados** en `chile/skills/`:

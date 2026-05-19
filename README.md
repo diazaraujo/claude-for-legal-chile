@@ -88,7 +88,7 @@ El corpus se publica en tres capas (ver `decisions/ADR-0002`):
 |---|---|---|
 | **1 — Catálogo** | Metadata estructurada por norma desde BCN/SPARQL | **12.213 archivos** (códigos, leyes, DL, DFL, tratados, autos acordados) |
 | **2 — Resumen estructural** | Libros/títulos/artículos + conceptos clave | _pendiente — pipeline LLM en diseño_ |
-| **3 — Análisis operativo curado** | Lo que ves abajo, con disclaimer + validación legal | 18 archivos borrador + 3 skills + setup interview |
+| **3 — Análisis operativo curado** | Lo que ves abajo, con disclaimer + validación legal | 24 archivos borrador + 3 skills + setup interview + fuentes |
 
 Detalle de capa 1 en [`chile/normativa/catalogo/README.md`](chile/normativa/catalogo/README.md).
 Estado de capa 3 a continuación. Solo los marcados ✅ están publicados como borrador
@@ -108,6 +108,9 @@ estructurado; ninguno ha pasado validación legal todavía.
 | Código de Comercio | ✅ Borrador | [`codigo-comercio.md`](chile/normativa/codigos/codigo-comercio.md) |
 | Código Civil (Andrés Bello, 1855) | ✅ Borrador | [`codigo-civil.md`](chile/normativa/codigos/codigo-civil.md) |
 | Código Tributario (DL 830) | ✅ Borrador | [`codigo-tributario.md`](chile/normativa/codigos/codigo-tributario.md) |
+| Código Penal | ✅ Borrador | [`codigo-penal.md`](chile/normativa/codigos/codigo-penal.md) |
+| Código Procesal Penal (Ley 19.696) | ✅ Borrador | [`codigo-procesal-penal.md`](chile/normativa/codigos/codigo-procesal-penal.md) |
+| Código de Procedimiento Civil | ✅ Borrador | [`codigo-procedimiento-civil.md`](chile/normativa/codigos/codigo-procedimiento-civil.md) |
 | Código Tributario (DL 830) | ⏳ Pendiente | — |
 | Código de Procedimiento Civil | ⏳ Pendiente | — |
 | Código Procesal Penal | ⏳ Pendiente | — |
@@ -132,7 +135,11 @@ estructurado; ninguno ha pasado validación legal todavía.
 | Ley 19.886 | Compras públicas (ChileCompra, TCP) | ✅ [Borrador](chile/normativa/leyes/ley-19886-compras-publicas.md) |
 | DL 824 | Ley de Impuesto a la Renta (LIR) | ✅ [Borrador](chile/normativa/leyes/dl-824-renta.md) |
 | DL 825 | Ley sobre IVA y Servicios | ✅ [Borrador](chile/normativa/leyes/dl-825-iva.md) |
-| Ley 20.720 | Concursal | ⏳ Pendiente |
+| Ley 20.720 | Reorganización y liquidación concursal | ✅ [Borrador](chile/normativa/leyes/ley-20720-concursal.md) |
+| Ley 19.880 | Procedimiento administrativo (bases supletorias) | ✅ [Borrador](chile/normativa/leyes/ley-19880-procedimiento-administrativo.md) |
+| Ley 19.947 | Matrimonio Civil (con Ley 21.400 matrimonio igualitario) | ✅ [Borrador](chile/normativa/leyes/ley-19947-matrimonio-civil.md) |
+| Ley 19.968 | Tribunales de Familia | ✅ [Borrador](chile/normativa/leyes/ley-19968-tribunales-familia.md) |
+| Ley 19.300 | Bases Generales del Medio Ambiente (SEIA) | ✅ [Borrador](chile/normativa/leyes/ley-19300-medio-ambiente.md) |
 
 [Ver índice completo](chile/normativa/leyes/00-indice.md) (19 leyes).
 

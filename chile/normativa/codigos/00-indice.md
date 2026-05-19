@@ -8,9 +8,9 @@ Códigos chilenos vigentes. Cada código es el cuerpo normativo más estable de 
 | [`codigo-civil`](codigo-civil.md) | Código Civil | Civil | Ley de 14-12-1855 (Andrés Bello), con múltiples reformas | borrador-no-validado |
 | [`codigo-comercio`](codigo-comercio.md) | Código de Comercio | Comercial | Ley de 23-11-1865, con múltiples reformas | borrador-no-validado |
 | [`codigo-tributario`](codigo-tributario.md) | Código Tributario | Tributario | DL 830 de 1974 | borrador-no-validado |
-| `codigo-procedimiento-civil` | Código de Procedimiento Civil | Procesal civil | Ley 1.552 de 1902, con reformas | pendiente |
-| `codigo-procesal-penal` | Código Procesal Penal | Procesal penal | Ley 19.696 de 2000 | pendiente |
-| `codigo-penal` | Código Penal | Penal | Ley de 12-11-1874, con reformas | pendiente |
+| [`codigo-procedimiento-civil`](codigo-procedimiento-civil.md) | Código de Procedimiento Civil | Procesal civil | Ley 1.552 de 1902, con reformas | borrador-no-validado |
+| [`codigo-procesal-penal`](codigo-procesal-penal.md) | Código Procesal Penal | Procesal penal | Ley 19.696 de 2000 | borrador-no-validado |
+| [`codigo-penal`](codigo-penal.md) | Código Penal | Penal | Ley de 12-11-1874, con reformas | borrador-no-validado |
 | `codigo-organico-tribunales` | Código Orgánico de Tribunales | Orgánico judicial | Ley 7.421 de 1943 | pendiente |
 | `codigo-justicia-militar` | Código de Justicia Militar | Militar | DL 2.226 de 1944 | pendiente |
 | `codigo-aguas` | Código de Aguas | Aguas (fuera de alcance v1) | DFL 1.122 de 1981 | fuera-de-alcance |
