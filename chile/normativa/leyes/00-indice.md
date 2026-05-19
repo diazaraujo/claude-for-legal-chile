@@ -114,6 +114,8 @@ habilitado en Chile.
 | [`dfl-2-2009-lge`](dfl-2-2009-lge.md) | DFL 2/2009 | Ley General de Educación (LGE) — marco sistema, reconocimiento oficial, currículum, SAC | Educación / Marco | Vigente | borrador-no-validado |
 | [`ley-18092-letras-pagares`](ley-18092-letras-pagares.md) | 18.092 | Letras de cambio + pagarés (endoso, aval, protesto, acción cambiaria, ejecutivo) | Comercial / Procesal | Vigente | borrador-no-validado |
 | [`ley-20830-acuerdo-union-civil`](ley-20830-acuerdo-union-civil.md) | 20.830 | Acuerdo de Unión Civil (AUC) — convivencia adultos, comunidad bienes opcional, sucesión | Familia | Vigente | borrador-no-validado |
+| [`ley-18010-operaciones-credito-dinero`](ley-18010-operaciones-credito-dinero.md) | 18.010 | Operaciones de Crédito de Dinero — UF, intereses, TMC, mora, anatocismo | Bancario / Civil | Vigente | borrador-no-validado |
+| [`ley-21400-matrimonio-igualitario`](ley-21400-matrimonio-igualitario.md) | 21.400 | Matrimonio Igualitario (mismo sexo) — modifica CC, 19.947, 19.620, 20.830, 21.120 | Familia / DDHH | Vigente desde 2022 | borrador-no-validado |
 | [`ley-21030-aborto-tres-causales`](ley-21030-aborto-tres-causales.md) | 21.030 | Aborto en tres causales (riesgo, inviabilidad, violación) | Constitucional / Salud | Vigente | borrador-no-validado |
 | `ley-21327-modernizacion-dt` | 21.327 | Modernización de la Dirección del Trabajo | Laboral / Administrativo | Vigente | pendiente |
 | `ley-19253-indigenas` | 19.253 | Pueblos indígenas (CONADI) | Indígena | Vigente (fuera de alcance v1) | fuera-de-alcance |
