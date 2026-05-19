@@ -32,6 +32,12 @@ habilitado en Chile.
 | [`ley-17336-propiedad-intelectual`](ley-17336-propiedad-intelectual.md) | 17.336 | Propiedad Intelectual (derecho de autor, DDI) | IP autor | Vigente | borrador-no-validado |
 | [`ley-19913-lavado-activos`](ley-19913-lavado-activos.md) | 19.913 | Lavado de activos + UAF | Penal / Compliance | Vigente | borrador-no-validado |
 | [`ley-14908-alimentos`](ley-14908-alimentos.md) | 14.908 | Pensiones alimenticias, RNDPA, GAM | Familia | Vigente | borrador-no-validado |
+| [`dl-211-libre-competencia`](dl-211-libre-competencia.md) | DL 211 | Libre competencia (FNE, TDLC, fusiones, delación compensada) | Competencia | Vigente | borrador-no-validado |
+| [`ley-20000-drogas`](ley-20000-drogas.md) | 20.000 | Tráfico ilícito de estupefacientes y sustancias sicotrópicas | Penal | Vigente | borrador-no-validado |
+| [`ley-20066-vif`](ley-20066-vif.md) | 20.066 | Violencia Intrafamiliar (VIF) | Familia / Penal | Vigente | borrador-no-validado |
+| [`dl-3500-pensiones`](dl-3500-pensiones.md) | DL 3.500 | Sistema de pensiones (AFP, PGU) | Previsional / Laboral | Vigente | borrador-no-validado |
+| [`ley-18168-telecomunicaciones`](ley-18168-telecomunicaciones.md) | 18.168 | Ley General de Telecomunicaciones (SUBTEL, neutralidad red) | Telecomunicaciones / Regulatorio | Vigente | borrador-no-validado |
+| [`ley-19728-seguro-cesantia`](ley-19728-seguro-cesantia.md) | 19.728 | Seguro de cesantía (AFC, CIC, FCS) | Laboral / Previsional | Vigente | borrador-no-validado |
 | `ley-19728-seguro-cesantia` | 19.728 | Seguro de cesantía | Laboral / Previsional | Vigente | pendiente |
 | `ley-20940-relaciones-laborales` | 20.940 | Modernización del sistema de relaciones laborales | Laboral | Vigente | pendiente |
 | `ley-21327-modernizacion-dt` | 21.327 | Modernización de la Dirección del Trabajo | Laboral / Administrativo | Vigente | pendiente |
