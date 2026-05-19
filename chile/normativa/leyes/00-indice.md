@@ -62,6 +62,8 @@ habilitado en Chile.
 | [`ley-17997-loc-tc`](ley-17997-loc-tc.md) | 17.997 | LOC del Tribunal Constitucional (inaplicabilidad, inconstitucionalidad) | Constitucional / Jurisdicción | Vigente | borrador-no-validado |
 | [`ley-18918-loc-congreso`](ley-18918-loc-congreso.md) | 18.918 | LOC del Congreso Nacional (procedimiento legislativo, acusación constitucional) | Constitucional / Legislativo | Vigente | borrador-no-validado |
 | [`ley-18695-loc-municipalidades`](ley-18695-loc-municipalidades.md) | 18.695 | LOC de Municipalidades (alcalde, concejo, patentes, plebiscito) | Constitucional / Municipal | Vigente | borrador-no-validado |
+| [`ley-18834-estatuto-administrativo`](ley-18834-estatuto-administrativo.md) | 18.834 (DFL 29/2004) | Estatuto Administrativo general (administración central + servicios públicos) | Funcionarial / Administrativo | Vigente | borrador-no-validado |
+| [`ley-18883-estatuto-administrativo-municipal`](ley-18883-estatuto-administrativo-municipal.md) | 18.883 | Estatuto Administrativo Municipal (funcionarios de municipalidades) | Funcionarial / Municipal | Vigente | borrador-no-validado |
 | [`ley-21094-universidades-estatales`](ley-21094-universidades-estatales.md) | 21.094 | Universidades Estatales chilenas (18 UE) | Educación / Administrativo | Vigente | borrador-no-validado |
 | [`ley-21091-educacion-superior`](ley-21091-educacion-superior.md) | 21.091 | Sistema de Educación Superior (gratuidad, SES, CNA) | Educación | Vigente | borrador-no-validado |
 | [`ley-19418-juntas-vecinos`](ley-19418-juntas-vecinos.md) | 19.418 | Juntas de Vecinos y Organizaciones Comunitarias | Municipal / Asociativo | Vigente | borrador-no-validado |
