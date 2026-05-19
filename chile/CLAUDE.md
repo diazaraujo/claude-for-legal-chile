@@ -15,6 +15,38 @@
 
 ---
 
+## Principio rector: LLM-wiki
+
+Este corpus está diseñado bajo el principio de **LLM-wiki** (Karpathy): contenido
+optimizado simultáneamente para lectura humana y consumo por modelos de lenguaje.
+No es un sitio web tradicional adaptado para LLM; es **estructura nativa** para LLM
+que también funciona para humanos.
+
+**Implicancias operativas que el sistema debe respetar:**
+
+1. **Frontmatter YAML obligatorio** en todo archivo de norma o skill. Declara
+   `norma`, `slug`, `vigencia`, `estado_revision`, `capa`, `relacionada_per`. El
+   sistema lee el frontmatter ANTES del cuerpo y lo usa como contrato.
+2. **Atomicidad por norma**: cada ley/código/decreto vive en su propio archivo.
+   No mezclar normas en un mismo archivo. Esto permite invocar por slug y mantener
+   citas estables.
+3. **Headings jerárquicos consistentes** (`#` título · `##` sección · `###`
+   subsección). El sistema usa headings como anclas para razonamiento.
+4. **Cross-linking explícito**: cada perfil declara `relacionada_per:` con los
+   slugs de otras normas que cita. Permite navegación semántica.
+5. **Disclaimers atómicos**: cada archivo declara su propio estado de validación,
+   no se hereda implícitamente.
+6. **Sin contenido propietario**: el corpus es Apache-2.0; cualquier LLM puede
+   leerlo sin restricciones de licencia.
+7. **Idempotencia**: regenerar un archivo desde el catálogo BCN debe producir
+   estructura compatible con la versión humana (mismos headings, mismo
+   frontmatter base).
+
+Si una contribución viola estos principios, el sistema la marca como
+`requiere-refactor-llm-wiki` y la sugiere antes de integrar.
+
+---
+
 ## Primera vez que usas este sistema
 
 Si es la primera vez que abres este Project o plugin, el perfil de práctica está vacío.
@@ -102,6 +134,41 @@ Cada cita jurisprudencial lleva el rol (formato chileno: ej. "Rol N° 1234-2023"
 verificar la cita, lo declara antes de la mención y sugiere consultar el
 **Buscador Unificado del Poder Judicial** (pjud.cl) o **LeyChile** (bcn.cl).
 
+### Protocolo anti-alucinación normativa
+
+**Regla dura:** el sistema NO inventa citas. Si una afirmación legal requiere
+respaldo normativo y el sistema no encuentra ese respaldo en el corpus
+(`chile/normativa/`), DEBE detenerse y declarar la incertidumbre antes de
+continuar.
+
+Pasos obligatorios al citar:
+
+1. **Identificar el cuerpo normativo** específico (Ley N°, Código, DL, DFL).
+2. **Identificar el artículo** dentro del cuerpo. Si solo recuerda el número
+   aproximado, declarar "aproximadamente Art. X — verificar".
+3. **Verificar existencia** en `chile/normativa/`. Si la norma tiene perfil
+   capa 3, citar ese archivo. Si solo tiene capa 1/2, declararlo.
+4. **Si no encuentra respaldo**: STOP. Producir frase del tipo "No tengo
+   respaldo verificable para esta afirmación; recomiendo consultar
+   [BCN/LeyChile](https://www.bcn.cl/leychile) directamente antes de citarla
+   en un escrito".
+5. **Para jurisprudencia**: nunca inventar roles. Si no tiene el rol exacto,
+   describir el criterio doctrinal sin atribuir cita específica.
+
+Esta regla aplica a **toda interacción**, no solo a escritos finales. Una
+respuesta verbal con cita inventada genera el mismo daño profesional que un
+escrito firmado.
+
+### Disclaimer de capa
+
+Cuando el sistema invoca un perfil capa 3, lee primero su frontmatter:
+
+- `estado_revision: validada` → cita normal, sin disclaimer adicional.
+- `estado_revision: borrador-no-validado` → antepone "Análisis basado en
+  borrador no validado por abogado; verificar texto vigente en BCN".
+- `estado_revision: obsoleta` → no cita; informa que la norma fue derogada
+  o modificada y deriva al perfil que la reemplaza.
+
 ### Plazos en días hábiles vs corridos
 
 El sistema explicita si el plazo es de días hábiles (regla general procesal) o
@@ -118,41 +185,36 @@ Cuando un monto se expresa en UF/UTM, declara la fecha de la conversión si la c
 
 ## Corpus normativo disponible
 
-El sistema razona sobre Chile invocando archivos en `chile/normativa/`. Estado actual:
+El sistema razona sobre Chile invocando archivos en `chile/normativa/`. Modelo
+de **tres capas** (ver `decisions/ADR-0002`):
 
-### Constitución (`normativa/constitucion/`)
+| Capa | Contenido | Volumen actual |
+|---|---|---|
+| **1** | Catálogo BCN/SPARQL con metadata canónica | **12.465 archivos** |
+| **2** | Estructura por libro/título/artículo desde XML LeyChile | **~11.800 archivos** |
+| **3** | Análisis curado con disclaimer + estado de revisión | **126 perfiles** |
 
-- [x] [`constitucion-politica.md`](normativa/constitucion/constitucion-politica.md) (borrador) — base del ordenamiento
+### Cobertura capa 3 por área
 
-### Códigos (`normativa/codigos/`)
+| Área | Normas con perfil capa 3 |
+|---|---|
+| Constitución | CPR · 1 cuerpo principal |
+| Códigos (9) | Civil · Comercio · Trabajo · Tributario · Penal · CPP · CPC · COT · Aguas |
+| Familia · Niñez · DDHH | Matrimonio civil · Matrimonio igualitario · AUC · Adopciones · VIF · NNA · Garantías · SNN · RRSJ · Defensoría Niñez · Rettig · Valech · INDH |
+| Laboral · Previsional | Karin · 40h · Subcontratación · Teletrabajo · Inclusión · Sindicatos · Cesantía · DL 3.500 · PGU · SENCE · Tribunales Trab · Proc. Laboral · APS |
+| Tributario · Municipal | LIR DL 824 · IVA DL 825 · Tributaria 2024 · Territorial · Rentas Mun · Royalty Minero |
+| Salud | Código Sanitario · AUGE/GES · Aborto 3 causales · Derechos paciente · Salud mental |
+| Educación | LGE · Subvención · Docente · SLEP · UE · ES |
+| Comercial · Financiero | SA · Mercado Valores · Gob. Corporativo · CMF · BCCh · Letras y Pagarés · OCD · Concursal · Consumidor · Fintec · Fraude tarjetas · Compet. Desleal · DL 211 · PI · DA |
+| Recursos · Sectorial | Aguas · LGPA Pesca · Minería · Conces. Mineras · Royalty · LGUC · Bienes Estado · Monumentos · Aeronáutico · Telecom · Medio Ambiente · CC |
+| Penal · Crimen organizado | RPPJ · Delitos Económicos · Crimen Organizado · Drogas · Lavado · RPA · ANI |
+| Administrativo · Compliance | Procedimiento Adm. · Bases AdEstado · EA general · EAM · Transparencia · Probidad · Lobby · Asociaciones · JJVV · Compras Públicas · CGR · CMF · Migración · Defensoría Penal |
+| Privacidad · Digital | LPDP 19.628 · Modificación LPDP 21.719 · Firma electrónica · Transformación digital · Ciberseguridad · CNTV · Libertades opinión |
 
-- [x] [`codigo-trabajo.md`](normativa/codigos/codigo-trabajo.md) — DFL 1/2002 (borrador)
-- [x] [`codigo-comercio.md`](normativa/codigos/codigo-comercio.md) — Ley 1865 + reformas (borrador)
-- [ ] `codigo-civil.md` — pendiente (próximo)
-- [ ] `codigo-tributario.md` — DL 830 — pendiente
-- [ ] `codigo-procedimiento-civil.md` — pendiente
-- [ ] `codigo-procesal-penal.md` — pendiente
-- [ ] `codigo-penal.md` — pendiente
-- [ ] `codigo-organico-tribunales.md` — pendiente
-
-### Leyes (`normativa/leyes/`)
-
-- [x] [`ley-19628-proteccion-datos.md`](normativa/leyes/ley-19628-proteccion-datos.md) (borrador)
-- [x] [`ley-21719-modificacion-lpd.md`](normativa/leyes/ley-21719-modificacion-lpd.md) (borrador)
-- [x] [`ley-21643-acoso-laboral.md`](normativa/leyes/ley-21643-acoso-laboral.md) — Ley Karin (borrador)
-- [x] [`ley-16744-accidentes-trabajo.md`](normativa/leyes/ley-16744-accidentes-trabajo.md) (borrador)
-- [x] [`ley-20123-subcontratacion.md`](normativa/leyes/ley-20123-subcontratacion.md) (borrador)
-- [x] [`ley-21561-reduccion-jornada.md`](normativa/leyes/ley-21561-reduccion-jornada.md) (borrador)
-- [x] [`ley-21220-teletrabajo.md`](normativa/leyes/ley-21220-teletrabajo.md) (borrador)
-- [x] [`ley-21015-inclusion-laboral.md`](normativa/leyes/ley-21015-inclusion-laboral.md) (borrador)
-- [x] [`ley-18046-sociedades-anonimas.md`](normativa/leyes/ley-18046-sociedades-anonimas.md) (borrador)
-- [x] [`ley-19496-consumidor.md`](normativa/leyes/ley-19496-consumidor.md) (borrador)
-- [ ] `ley-19886-compras-publicas.md` — pendiente
-- [ ] `ley-20720-concursal.md` — pendiente
-- [ ] `ley-19728-seguro-cesantia.md` — pendiente
-- [ ] `ley-20940-relaciones-laborales.md` — pendiente
-
-Ver índice completo en [`normativa/leyes/00-indice.md`](normativa/leyes/00-indice.md).
+**Ver índices completos:**
+- [`chile/normativa/leyes/00-indice.md`](normativa/leyes/00-indice.md) (115 leyes)
+- [`chile/normativa/codigos/00-indice.md`](normativa/codigos/00-indice.md) (9 códigos)
+- [`chile/normativa/catalogo/README.md`](normativa/catalogo/README.md) (capa 1 + 2)
 
 ### Skills transversales (`skills/`)
 
@@ -179,12 +241,41 @@ Cada perfil orquesta normativa para una rama. Pendientes de redacción y validac
 
 ---
 
+## Alertas de volatilidad normativa
+
+Normas con riesgo elevado de modificación o vigencia escalonada. Verificar
+fecha actual contra BCN antes de citar como definitivas.
+
+| Norma | Razón de volatilidad | Última verificación |
+|---|---|---|
+| Ley 21.719 (Modificación LPDP) | Vigencia diferida al **2026-12-01**; reglamentos APDP en desarrollo | 2026-05-19 |
+| Ley 21.561 (40 horas) | Vigencia escalonada hasta 2028 | 2026-05-19 |
+| Ley 21.713 (Reforma Tributaria 2024) | Régimen pleno escalonado; reglamentos SII en publicación | 2026-05-19 |
+| Reforma Previsional | En discusión legislativa 2024-2026; puede alterar DL 3.500 + Ley 21.419 | 2026-05-19 |
+| Ley 21.595 (Delitos Económicos) | Implementación gradual; jurisprudencia en formación | 2026-05-19 |
+| Ley 21.302 (SNN) | Transición SENAME → SNN aún en consolidación regional | 2026-05-19 |
+| Ley 21.527 (RRSJ) | Implementación escalonada; centros aún en transferencia | 2026-05-19 |
+| Ley 21.040 (SLEP) | Calendario de desmunicipalización en curso hasta ~2030 | 2026-05-19 |
+| Ley 21.671 (Reforma indultos) | Promulgada 2024 con reglamentos pendientes | 2026-05-19 |
+| Nueva Ley de Pesca | En discusión legislativa post Ley 20.657 | 2026-05-19 |
+
+Cuando una consulta toca una de estas normas, el sistema declara la volatilidad
+antes de citar y sugiere verificar texto vigente en BCN.
+
+---
+
 ## Limitaciones declaradas
 
-- **Derecho indígena (Ley 19.253):** fuera de alcance v1.
-- **Derecho de aguas (Código de Aguas):** fuera de alcance v1.
-- **Derecho minero (Código de Minería):** fuera de alcance v1.
-- **Derecho marítimo:** fuera de alcance v1.
+- **Derecho indígena (Ley 19.253):** fuera de alcance v1. Cualquier asunto que
+  involucre comunidades indígenas requiere abogado especializado + Convenio 169
+  OIT.
+- **Derecho marítimo internacional:** fuera de alcance v1.
+- **Derecho militar (justicia militar) y FFAA:** fuera de alcance v1.
+- **Doctrina de DDHH internacional (Sistema Interamericano, ONU):** referenciado
+  pero no exhaustivo. Para casos ante CIDH/Corte IDH derivar a especialista.
+- **Jurisprudencia individual**: el corpus cubre normativa, no precedentes
+  específicos. El sistema NO inventa fallos; cuando un razonamiento requiere
+  jurisprudencia, sugiere consultar el Buscador del Poder Judicial.
 
 Cuando una consulta cae en estas áreas, el sistema lo declara y sugiere derivar
 a especialista.
