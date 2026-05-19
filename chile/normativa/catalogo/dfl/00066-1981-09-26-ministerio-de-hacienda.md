@@ -5,41 +5,64 @@ tipo: dfl
 numero: 66
 titulo_oficial: "FIJA PLANTA DE PERSONAL PARA LA MUNICIPALIDAD DE LA;LIGUA"
 publicacion: 1981-09-26
-promulgacion: desconocida
+promulgacion: 1981-08-10
 emisor: ministerio-de-hacienda
 leychile_code: 4404
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=4404
 bcn_uri: http://datos.bcn.cl/recurso/cl/dfl/ministerio-de-hacienda/1981-09-26/66
-capa: 1
-estado_revision: catalogo-auto
+version_xml: 1981-09-26
+derogado: no derogado
+capa: 2
+estado_revision: resumen-estructural
 validador: null
 fecha_validacion: null
 ---
 
-# Decreto con Fuerza de Ley 66
+# DECRETO CON FUERZA DE LEY 66
 
 **Título oficial:** FIJA PLANTA DE PERSONAL PARA LA MUNICIPALIDAD DE LA;LIGUA
 
 **Tipo:** Decreto con Fuerza de Ley
 **Número:** 66
-**Publicación en DO:** 1981-09-26
-**Promulgación:** _desconocida_
-**Emisor:** ministerio-de-hacienda
+**Publicación:** 1981-09-26
+**Promulgación:** 1981-08-10
+**Versión vigente:** 1981-09-26
+**Estado:** no derogado
+**Emisor:** MINISTERIO DE HACIENDA
+
+## Encabezado
+
+_FIJA PLANTA DE PERSONAL PARA LA MUNICIPALIDAD DE LA LIGUA
+
+     D.F.L. Nº 66.- Santiago, 10 de agosto de 1981.- Vistos: lo dispuesto en el Nº 3, del artículo 32º, de la Constitución Política del Estado y la facultad que me confiere el artículo 27º del Decreto Ley Nº 3.551, de 1981, y
+     Teniendo presente: La proposición del Alcalde de la Municipalidad de La Ligua, vengo en dictar el siguiente:
+
+_
+
+(...) — ver texto íntegro en BCN/LeyChile.
+
+## Artículos (2 totales)
+
+- **Art. 1** — Fíjase a contar del 1º de Enero de 1981, la siguiente planta de personal para la Municipalidad de La Ligua:   Escalafón     Cargo            Grado   Nº Cargos  Alcalde       Alcalde            5º
+- **Art. 2** — La dotación máxima de personal de la Municipalidad de La Ligua, será de 22 cargos y 22 horas semanales Ley Nº 15.076.
 
 ## Fuente oficial
 
-- [BCN/LeyChile (texto vigente y modificaciones)](https://www.bcn.cl/leychile/navegar?idNorma=4404)
-- [BCN Linked Open Data (RDF)](http://datos.bcn.cl/recurso/cl/dfl/ministerio-de-hacienda/1981-09-26/66)
+- [BCN/LeyChile (texto vigente)](https://www.bcn.cl/leychile/navegar?idNorma=4404)
+- [XML estructurado](https://www.leychile.cl/Consulta/obtxml?opt=7&idNorma=4404)
 
 ## Estado en el corpus
 
-Entrada **capa 1** generada automáticamente desde el endpoint SPARQL de BCN.
-Contiene metadata catalográfica; no incluye análisis operativo ni síntesis
-estructural. Para texto vigente, modificaciones y artículos, consultar la
-fuente oficial.
+Entrada **capa 2** generada automáticamente desde el XML estructurado de BCN.
+Contiene metadata + estructura jerárquica + artículos con incisos iniciales.
+El texto íntegro NO está incluido — consultar BCN/LeyChile.
+
+Para promover a **capa 3** (análisis operativo curado con conceptos clave,
+conexiones, cuándo invocar, plazos críticos), abrir PR siguiendo el schema en
+`chile/normativa/README.md`.
 
 ## Disclaimers
 
-- Capa 1: metadata auto-generada, sin validación legal.
-- Para promover a capa 2 (resumen estructural) o capa 3 (análisis operativo),
-  abrir PR siguiendo el schema en `chile/normativa/README.md`.
+- Capa 2: estructura auto-generada, sin validación legal sustantiva.
+- El texto literal de cada artículo NO está en este archivo. Verificar en BCN.
+- `version_xml` indica la fecha de la última versión que LeyChile expone.

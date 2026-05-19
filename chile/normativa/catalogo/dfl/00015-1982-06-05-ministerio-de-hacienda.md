@@ -3,43 +3,65 @@ norma: Decreto con Fuerza de Ley 15
 slug: dfl-15
 tipo: dfl
 numero: 15
-titulo_oficial: "SUSTITUYE ESCALAFONES QUE INDICA EN LA PLANTA DE LA DIRECCION GENERAL DE DEPORTES Y RECREACION"
+titulo_oficial: "SUSTITUYE ESCALAFONES QUE INDICA EN LA PLANTA DE LA\nDIRECCION GENERAL DE DEPORTES Y RECREACION"
 publicacion: 1982-06-05
-promulgacion: desconocida
+promulgacion: 1982-04-05
 emisor: ministerio-de-hacienda
 leychile_code: 3942
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=3942
 bcn_uri: http://datos.bcn.cl/recurso/cl/dfl/ministerio-de-hacienda/1982-06-05/15
-capa: 1
-estado_revision: catalogo-auto
+version_xml: 1982-06-05
+derogado: no derogado
+capa: 2
+estado_revision: resumen-estructural
 validador: null
 fecha_validacion: null
 ---
 
-# Decreto con Fuerza de Ley 15
+# DECRETO CON FUERZA DE LEY 15
 
-**Título oficial:** SUSTITUYE ESCALAFONES QUE INDICA EN LA PLANTA DE LA DIRECCION GENERAL DE DEPORTES Y RECREACION
+**Título oficial:** SUSTITUYE ESCALAFONES QUE INDICA EN LA PLANTA DE LA
+DIRECCION GENERAL DE DEPORTES Y RECREACION
 
 **Tipo:** Decreto con Fuerza de Ley
 **Número:** 15
-**Publicación en DO:** 1982-06-05
-**Promulgación:** _desconocida_
-**Emisor:** ministerio-de-hacienda
+**Publicación:** 1982-06-05
+**Promulgación:** 1982-04-05
+**Versión vigente:** 1982-06-05
+**Estado:** no derogado
+**Emisor:** MINISTERIO DE HACIENDA
+
+## Encabezado
+
+_SUSTITUYE ESCALAFONES QUE INDICA EN LA PLANTA DE LA DIRECCION GENERAL DE DEPORTES Y RECREACION
+    D.F.L. N° 15.- Santiago, 5 de Abril de 1982.- Vistos: Lo establecido en el N° 3 del artículo 32° de la Constitución Política del Estado, la facultad que me otorga el inciso segundo del artículo 34° del decreto ley N° 3.551, de 1981, modificado por los decretos leyes N° 3.628 y 3.650, ambos de 1981, y_
+
+(...) — ver texto íntegro en BCN/LeyChile.
+
+## Artículos (4 totales)
+
+- **Art. 1** — Sustitúyense, a contar del 1° de Julio de 1982, los escalafones de Jefaturas A, C, Contadores Dibujantes Técnicos, Encuestadores y Codificadores de Datos, Oficiales Administrativos y Auxiliares de la
+- **Art. 2** — Los cargos que a continuación se señalan se fusionan en los escalafones que se indican:     Un cargo de Jefatura C grado 16° E.U.S. se fusiona en el Escalafón de Jefaturas A grado 10° E.U.S.     Dos c
+- **Art. 3** — El encasillamiento del personal se hará en forma discrecional por el Ministro de Defensa Nacional, sin sujeción al escalafón vigente del Servicio ni a los requisitos exigidos por el DFL. de Hacienda N
+- **Art. 4** — Cárguese el mayor gasto que signifique la aplicación de este decreto con fuerza de ley al Subtítulo 08-22-01-21 y el Subtítulo 08-22-02-21.
 
 ## Fuente oficial
 
-- [BCN/LeyChile (texto vigente y modificaciones)](https://www.bcn.cl/leychile/navegar?idNorma=3942)
-- [BCN Linked Open Data (RDF)](http://datos.bcn.cl/recurso/cl/dfl/ministerio-de-hacienda/1982-06-05/15)
+- [BCN/LeyChile (texto vigente)](https://www.bcn.cl/leychile/navegar?idNorma=3942)
+- [XML estructurado](https://www.leychile.cl/Consulta/obtxml?opt=7&idNorma=3942)
 
 ## Estado en el corpus
 
-Entrada **capa 1** generada automáticamente desde el endpoint SPARQL de BCN.
-Contiene metadata catalográfica; no incluye análisis operativo ni síntesis
-estructural. Para texto vigente, modificaciones y artículos, consultar la
-fuente oficial.
+Entrada **capa 2** generada automáticamente desde el XML estructurado de BCN.
+Contiene metadata + estructura jerárquica + artículos con incisos iniciales.
+El texto íntegro NO está incluido — consultar BCN/LeyChile.
+
+Para promover a **capa 3** (análisis operativo curado con conceptos clave,
+conexiones, cuándo invocar, plazos críticos), abrir PR siguiendo el schema en
+`chile/normativa/README.md`.
 
 ## Disclaimers
 
-- Capa 1: metadata auto-generada, sin validación legal.
-- Para promover a capa 2 (resumen estructural) o capa 3 (análisis operativo),
-  abrir PR siguiendo el schema en `chile/normativa/README.md`.
+- Capa 2: estructura auto-generada, sin validación legal sustantiva.
+- El texto literal de cada artículo NO está en este archivo. Verificar en BCN.
+- `version_xml` indica la fecha de la última versión que LeyChile expone.

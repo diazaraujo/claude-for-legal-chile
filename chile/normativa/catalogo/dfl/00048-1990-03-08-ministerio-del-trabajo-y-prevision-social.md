@@ -3,43 +3,69 @@ norma: Decreto con Fuerza de Ley 48
 slug: dfl-48
 tipo: dfl
 numero: 48
-titulo_oficial: "TRASPASA PERSONAL DEL INSTITUTO DE NORMALIZACION PREVISIONAL A LA MUNICIPALIDAD DE TOLTEN"
+titulo_oficial: "TRASPASA PERSONAL DEL INSTITUTO DE NORMALIZACION\nPREVISIONAL A LA MUNICIPALIDAD DE TOLTEN"
 publicacion: 1990-03-08
-promulgacion: desconocida
+promulgacion: 1989-04-18
 emisor: ministerio-del-trabajo-y-prevision-social
 leychile_code: 4285
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=4285
 bcn_uri: http://datos.bcn.cl/recurso/cl/dfl/ministerio-del-trabajo-y-prevision-social/1990-03-08/48
-capa: 1
-estado_revision: catalogo-auto
+version_xml: 1990-03-08
+derogado: no derogado
+materias_bcn: ["Traslado de Personal", "Instituto de Normalización Previsional", "Municipalidad de Toltén"]
+capa: 2
+estado_revision: resumen-estructural
 validador: null
 fecha_validacion: null
 ---
 
-# Decreto con Fuerza de Ley 48
+# DECRETO CON FUERZA DE LEY 48
 
-**Título oficial:** TRASPASA PERSONAL DEL INSTITUTO DE NORMALIZACION PREVISIONAL A LA MUNICIPALIDAD DE TOLTEN
+**Título oficial:** TRASPASA PERSONAL DEL INSTITUTO DE NORMALIZACION
+PREVISIONAL A LA MUNICIPALIDAD DE TOLTEN
 
 **Tipo:** Decreto con Fuerza de Ley
 **Número:** 48
-**Publicación en DO:** 1990-03-08
-**Promulgación:** _desconocida_
-**Emisor:** ministerio-del-trabajo-y-prevision-social
+**Publicación:** 1990-03-08
+**Promulgación:** 1989-04-18
+**Versión vigente:** 1990-03-08
+**Estado:** no derogado
+**Emisor:** MINISTERIO DEL TRABAJO Y PREVISIÓN SOCIAL
+
+## Materias (BCN)
+
+- Traslado de Personal
+- Instituto de Normalización Previsional
+- Municipalidad de Toltén
+
+## Encabezado
+
+_TRASPASA PERSONAL DEL INSTITUTO DE NORMALIZACION PREVISIONAL A LA MUNICIPALIDAD DE TOLTEN
+    Santiago, 18 de abril de 1989.- Hoy se decretó lo siguiente:
+    D.F.L. N° 48.- Vistos: Lo dispuesto en el Art. 6.o transitorio en relación con los siguientes cuarto, quinto, sexto y séptimo del art. 5° de la Ley N° 18.689, Art. 99° de la Ley N° 18.768 y Ley N° 18.764.
+    Decreto:_
+
+## Artículos (1 totales)
+
+- **Art. 5862697** — 1.- Auméntase en 1 cargo la planta de personal de la Municipalidad de Toltén en el escalafón y grado que se indica:   Escalafón                           Grado    N° Cargos   Administrativos .........
 
 ## Fuente oficial
 
-- [BCN/LeyChile (texto vigente y modificaciones)](https://www.bcn.cl/leychile/navegar?idNorma=4285)
-- [BCN Linked Open Data (RDF)](http://datos.bcn.cl/recurso/cl/dfl/ministerio-del-trabajo-y-prevision-social/1990-03-08/48)
+- [BCN/LeyChile (texto vigente)](https://www.bcn.cl/leychile/navegar?idNorma=4285)
+- [XML estructurado](https://www.leychile.cl/Consulta/obtxml?opt=7&idNorma=4285)
 
 ## Estado en el corpus
 
-Entrada **capa 1** generada automáticamente desde el endpoint SPARQL de BCN.
-Contiene metadata catalográfica; no incluye análisis operativo ni síntesis
-estructural. Para texto vigente, modificaciones y artículos, consultar la
-fuente oficial.
+Entrada **capa 2** generada automáticamente desde el XML estructurado de BCN.
+Contiene metadata + estructura jerárquica + artículos con incisos iniciales.
+El texto íntegro NO está incluido — consultar BCN/LeyChile.
+
+Para promover a **capa 3** (análisis operativo curado con conceptos clave,
+conexiones, cuándo invocar, plazos críticos), abrir PR siguiendo el schema en
+`chile/normativa/README.md`.
 
 ## Disclaimers
 
-- Capa 1: metadata auto-generada, sin validación legal.
-- Para promover a capa 2 (resumen estructural) o capa 3 (análisis operativo),
-  abrir PR siguiendo el schema en `chile/normativa/README.md`.
+- Capa 2: estructura auto-generada, sin validación legal sustantiva.
+- El texto literal de cada artículo NO está en este archivo. Verificar en BCN.
+- `version_xml` indica la fecha de la última versión que LeyChile expone.

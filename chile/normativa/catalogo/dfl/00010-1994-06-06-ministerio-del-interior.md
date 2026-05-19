@@ -5,41 +5,69 @@ tipo: dfl
 numero: 10
 titulo_oficial: "ADECUA, MODIFICA Y ESTABLECE PLANTA DE PERSONAL DE LA MUNICIPALIDAD DE HUECHURABA"
 publicacion: 1994-06-06
-promulgacion: desconocida
+promulgacion: 1994-03-10
 emisor: ministerio-del-interior
 leychile_code: 3851
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=3851
 bcn_uri: http://datos.bcn.cl/recurso/cl/dfl/ministerio-del-interior/1994-06-06/10
-capa: 1
-estado_revision: catalogo-auto
+version_xml: 1994-06-06
+derogado: no derogado
+materias_bcn: ["Personal de la Municipalidad de Huechuraba"]
+capa: 2
+estado_revision: resumen-estructural
 validador: null
 fecha_validacion: null
 ---
 
-# Decreto con Fuerza de Ley 10
+# DECRETO CON FUERZA DE LEY 10
 
 **Título oficial:** ADECUA, MODIFICA Y ESTABLECE PLANTA DE PERSONAL DE LA MUNICIPALIDAD DE HUECHURABA
 
 **Tipo:** Decreto con Fuerza de Ley
 **Número:** 10
-**Publicación en DO:** 1994-06-06
-**Promulgación:** _desconocida_
-**Emisor:** ministerio-del-interior
+**Publicación:** 1994-06-06
+**Promulgación:** 1994-03-10
+**Versión vigente:** 1994-06-06
+**Estado:** no derogado
+**Emisor:** MINISTERIO DEL INTERIOR
+
+## Materias (BCN)
+
+- Personal de la Municipalidad de Huechuraba
+
+## Encabezado
+
+_ADECUA, MODIFICA Y ESTABLECE PLANTA DE PERSONAL DE LA MUNICIPALIDAD DE HUECHURABA
+
+    Santiago, 10 de Marzo de 1994.- Hoy se decretó lo que sigue:
+    D.F.L. Núm. 10-19.280.- Visto: Las facultades otorgadas por el artículo 2° de la Ley N° 19.280, dicto el siguiente:
+
+    Decreto con fuerza de ley:_
+
+## Artículos (4 totales)
+
+- **Art. 1** — Adécuanse la planta y escalafones del personal de la Municipalidad de Huechuraba a lo dispuesto en el artículo 7° de la Ley N° 18.883, en la forma que se señala:        dfl 10art1-1.jpegimage/jpeg4240
+- **Art. 2** — De conformidad a lo establecido en el artículo 2° de la Ley N° 19.280, modifícase la planta de personal de la Municipalidad de Huechuraba en el siguiente sentido:       dfl 10art2-1.jpegimage/jpeg6174
+- **Art. 3** — Establécese la planta de personal de la Municipalidad de Huechuraba;        .dfl10art3-1.jpegimage/jpeg49290/9j/4AAQSkZJRgABAQEAZABkAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEP ERETFhwXExQaFRE
+- **Art. 4** — Fíjanse los siguientes requisitos específicos para el desempeño de los cargos que se mencionan:   Planta         Cargos     Grado            Requisitos  _______________________________________________
 
 ## Fuente oficial
 
-- [BCN/LeyChile (texto vigente y modificaciones)](https://www.bcn.cl/leychile/navegar?idNorma=3851)
-- [BCN Linked Open Data (RDF)](http://datos.bcn.cl/recurso/cl/dfl/ministerio-del-interior/1994-06-06/10)
+- [BCN/LeyChile (texto vigente)](https://www.bcn.cl/leychile/navegar?idNorma=3851)
+- [XML estructurado](https://www.leychile.cl/Consulta/obtxml?opt=7&idNorma=3851)
 
 ## Estado en el corpus
 
-Entrada **capa 1** generada automáticamente desde el endpoint SPARQL de BCN.
-Contiene metadata catalográfica; no incluye análisis operativo ni síntesis
-estructural. Para texto vigente, modificaciones y artículos, consultar la
-fuente oficial.
+Entrada **capa 2** generada automáticamente desde el XML estructurado de BCN.
+Contiene metadata + estructura jerárquica + artículos con incisos iniciales.
+El texto íntegro NO está incluido — consultar BCN/LeyChile.
+
+Para promover a **capa 3** (análisis operativo curado con conceptos clave,
+conexiones, cuándo invocar, plazos críticos), abrir PR siguiendo el schema en
+`chile/normativa/README.md`.
 
 ## Disclaimers
 
-- Capa 1: metadata auto-generada, sin validación legal.
-- Para promover a capa 2 (resumen estructural) o capa 3 (análisis operativo),
-  abrir PR siguiendo el schema en `chile/normativa/README.md`.
+- Capa 2: estructura auto-generada, sin validación legal sustantiva.
+- El texto literal de cada artículo NO está en este archivo. Verificar en BCN.
+- `version_xml` indica la fecha de la última versión que LeyChile expone.
