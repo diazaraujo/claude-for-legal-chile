@@ -88,7 +88,7 @@ El corpus se publica en tres capas (ver `decisions/ADR-0002`):
 |---|---|---|
 | **1 — Catálogo** | Metadata estructurada por norma desde BCN/SPARQL | **~12.400 archivos** (códigos, leyes, DL, DFL, tratados, autos acordados) |
 | **2 — Resumen estructural** | Libros/títulos/artículos + conceptos clave | _pendiente — pipeline LLM en diseño_ |
-| **3 — Análisis operativo curado** | Lo que ves abajo, con disclaimer + validación legal | 54 archivos borrador + 3 skills + setup interview + fuentes |
+| **3 — Análisis operativo curado** | Lo que ves abajo, con disclaimer + validación legal | 56 archivos borrador + 3 skills + setup interview + fuentes |
 
 Detalle de capa 1 en [`chile/normativa/catalogo/README.md`](chile/normativa/catalogo/README.md).
 Estado de capa 3 a continuación. Solo los marcados ✅ están publicados como borrador
@@ -165,6 +165,8 @@ estructurado; ninguno ha pasado validación legal todavía.
 | Ley 20.584 | Derechos y deberes del paciente | ✅ [Borrador](chile/normativa/leyes/ley-20584-derechos-deberes-paciente.md) |
 | Ley 20.422 | Inclusión social personas con discapacidad (SENADIS) | ✅ [Borrador](chile/normativa/leyes/ley-20422-discapacidad.md) |
 | Ley 20.609 | Antidiscriminación ("Ley Zamudio") | ✅ [Borrador](chile/normativa/leyes/ley-20609-no-discriminacion.md) |
+| Ley 21.180 | Transformación digital del Estado | ✅ [Borrador](chile/normativa/leyes/ley-21180-transformacion-digital.md) |
+| Ley 19.799 | Firma electrónica y documentos electrónicos | ✅ [Borrador](chile/normativa/leyes/ley-19799-firma-electronica.md) |
 
 [Ver índice completo](chile/normativa/leyes/00-indice.md) (19 leyes).
 

@@ -3,6 +3,21 @@
 Cambios al contenido de `chile/`. Para cambios del upstream ver `git log` con
 `upstream/main`.
 
+## 0.0.13 — 2026-05-19
+
+- **Cluster digital del Estado** (2 archivos capa 3):
+  - `leyes/ley-21180-transformacion-digital.md` — Transformación digital
+    del Estado: expediente electrónico, notificación electrónica como
+    regla, interoperabilidad obligatoria (no pedir info que otro órgano
+    ya tiene), ClaveÚnica, PISEE, vigencia escalonada 2020-2024.
+  - `leyes/ley-19799-firma-electronica.md` — Firma electrónica simple +
+    avanzada (FEA), documento electrónico con equivalencia plena al de
+    papel, Entidades Certificadoras acreditadas por Mineco, régimen
+    probatorio (FEA = instrumento privado autenticado).
+
+- **Cobertura capa 3 ahora**: 1 Constitución + 7 códigos + 48 leyes + 3
+  skills + setup interview + fuentes.md = 60 archivos curados.
+
 ## 0.0.12 — 2026-05-19
 
 - **Cluster salud + discapacidad + antidiscriminación** (3 archivos

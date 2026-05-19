@@ -52,6 +52,8 @@ habilitado en Chile.
 | [`ley-20584-derechos-deberes-paciente`](ley-20584-derechos-deberes-paciente.md) | 20.584 | Derechos y deberes del paciente (consentimiento informado, ficha clínica) | Salud / Bioética | Vigente | borrador-no-validado |
 | [`ley-20422-discapacidad`](ley-20422-discapacidad.md) | 20.422 | Inclusión social de personas con discapacidad (SENADIS, accesibilidad universal) | Discapacidad | Vigente | borrador-no-validado |
 | [`ley-20609-no-discriminacion`](ley-20609-no-discriminacion.md) | 20.609 | Antidiscriminación ("Ley Zamudio") + agravante penal | Derechos / Penal | Vigente | borrador-no-validado |
+| [`ley-21180-transformacion-digital`](ley-21180-transformacion-digital.md) | 21.180 | Transformación digital del Estado (expediente electrónico, ClaveÚnica) | Administrativo / Digital | Vigente con escalonamiento | borrador-no-validado |
+| [`ley-19799-firma-electronica`](ley-19799-firma-electronica.md) | 19.799 | Firma electrónica y documentos electrónicos | Digital / Probatorio | Vigente | borrador-no-validado |
 | `ley-21327-modernizacion-dt` | 21.327 | Modernización de la Dirección del Trabajo | Laboral / Administrativo | Vigente | pendiente |
 | `ley-19253-indigenas` | 19.253 | Pueblos indígenas (CONADI) | Indígena | Vigente (fuera de alcance v1) | fuera-de-alcance |
 
