@@ -105,6 +105,7 @@ habilitado en Chile.
 | [`dl-3063-rentas-municipales`](dl-3063-rentas-municipales.md) | DL 3.063 (DFL 1/2006) | Rentas Municipales — patente, permiso circulación, derechos, FCM | Tributario / Municipal | Vigente | borrador-no-validado |
 | [`ley-17235-impuesto-territorial`](ley-17235-impuesto-territorial.md) | 17.235 | Impuesto Territorial (contribuciones, avalúo fiscal, sobretasa altos avalúos) | Tributario / Patrimonial | Vigente | borrador-no-validado |
 | [`ley-19665-reforma-organica-pjud`](ley-19665-reforma-organica-pjud.md) | 19.665 | Reforma orgánica PJUD para RPP (Juzgados Garantía + TOP + Salas Penales) | Procesal Penal | Vigente | borrador-no-validado |
+| [`dfl-2-1998-subvencion-escolar`](dfl-2-1998-subvencion-escolar.md) | DFL 2/1998 | Subvención escolar (general + SEP + asignaciones, SAE, JECD) | Educación / Financiamiento | Vigente | borrador-no-validado |
 | [`ley-21030-aborto-tres-causales`](ley-21030-aborto-tres-causales.md) | 21.030 | Aborto en tres causales (riesgo, inviabilidad, violación) | Constitucional / Salud | Vigente | borrador-no-validado |
 | `ley-21327-modernizacion-dt` | 21.327 | Modernización de la Dirección del Trabajo | Laboral / Administrativo | Vigente | pendiente |
 | `ley-19253-indigenas` | 19.253 | Pueblos indígenas (CONADI) | Indígena | Vigente (fuera de alcance v1) | fuera-de-alcance |
