@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <style>
+    .title { font-size: 22px; font-weight: 600; fill: #0a0a0a; }
+    .subtitle { font-size: 13px; fill: #525252; }
+    .col-header { font-size: 16px; font-weight: 600; fill: #0a0a0a; }
+    .col-meta { font-size: 11px; fill: #737373; }
+    .row-label { font-size: 12px; font-weight: 500; fill: #404040; }
+    .value-strong { font-size: 13px; font-weight: 600; fill: #0a0a0a; }
+    .value-light { font-size: 13px; fill: #525252; }
+    .accent { fill: #d4a574; }
+    .stroke { fill: none; stroke: #0a0a0a; stroke-width: 1.5; }
+    .stroke-light { fill: none; stroke: #d4d4d4; stroke-width: 1; }
+    .footer { font-size: 11px; fill: #737373; }
+    .check { font-size: 14px; font-weight: 600; }
+    .check-yes { fill: #16a34a; }
+    .check-no { fill: #dc2626; }
+    .check-partial { fill: #d4a574; }
+  </style>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" class="title">Comparación: Claude Legal Chile vs. Argentina</text>
+  <text x="450" y="62" text-anchor="middle" class="subtitle">Dos arquitecturas distintas para el mismo problema</text>
+
+  <!-- Column headers -->
+  <rect x="60" y="90" width="380" height="60" rx="4" fill="#fafafa" stroke="#0a0a0a" stroke-width="1.5"/>
+  <text x="250" y="115" text-anchor="middle" class="col-header">Chile (Unholster)</text>
+  <text x="250" y="138" text-anchor="middle" class="col-meta">normativa-spine · corpus como eje · v0.1.0 · 2026-05-19</text>
+
+  <rect x="460" y="90" width="380" height="60" rx="4" fill="#fafafa" stroke="#0a0a0a" stroke-width="1.5"/>
+  <text x="650" y="115" text-anchor="middle" class="col-header">Argentina (cristianaboitiz-eng)</text>
+  <text x="650" y="138" text-anchor="middle" class="col-meta">perfiles-by-rama · workflow del abogado · 2026-05-16</text>
+
+  <!-- Comparison rows -->
+  <!-- Row 1: Architecture -->
+  <text x="60" y="190" class="row-label">Arquitectura</text>
+  <text x="250" y="190" text-anchor="middle" class="value-strong">Corpus normativo es el eje</text>
+  <text x="650" y="190" text-anchor="middle" class="value-strong">Perfiles por rama del derecho</text>
+  <line x1="60" y1="205" x2="840" y2="205" class="stroke-light"/>
+
+  <!-- Row 2: Capa 1 -->
+  <text x="60" y="230" class="row-label">Catálogo normativo</text>
+  <text x="250" y="230" text-anchor="middle" class="value-strong">12.465 archivos · BCN/SPARQL</text>
+  <text x="650" y="230" text-anchor="middle" class="value-light">— · confía en conocimiento Claude</text>
+  <line x1="60" y1="245" x2="840" y2="245" class="stroke-light"/>
+
+  <!-- Row 3: Capa 2 -->
+  <text x="60" y="270" class="row-label">Estructura por artículo</text>
+  <text x="250" y="270" text-anchor="middle" class="value-strong">~11.800 archivos · XML LeyChile</text>
+  <text x="650" y="270" text-anchor="middle" class="value-light">— · sin parseo</text>
+  <line x1="60" y1="285" x2="840" y2="285" class="stroke-light"/>
+
+  <!-- Row 4: Capa 3 / Perfiles -->
+  <text x="60" y="310" class="row-label">Perfiles curados</text>
+  <text x="250" y="310" text-anchor="middle" class="value-strong">126 normas individuales</text>
+  <text x="650" y="310" text-anchor="middle" class="value-strong">9 perfiles por rama del derecho</text>
+  <line x1="60" y1="325" x2="840" y2="325" class="stroke-light"/>
+
+  <!-- Row 5: Skills -->
+  <text x="60" y="350" class="row-label">Skills transversales</text>
+  <text x="250" y="350" text-anchor="middle" class="value-strong">4 · diag · citas · plazos · compliance</text>
+  <text x="650" y="350" text-anchor="middle" class="value-strong">2 · diagnóstico · plazos</text>
+  <line x1="60" y1="365" x2="840" y2="365" class="stroke-light"/>
+
+  <!-- Row 6: Red flags por rama -->
+  <text x="60" y="390" class="row-label">Red flags por rama</text>
+  <text x="250" y="390" text-anchor="middle" class="check check-no">no aún</text>
+  <text x="650" y="390" text-anchor="middle" class="check check-yes">sí · red-flags-contratos.md</text>
+  <line x1="60" y1="405" x2="840" y2="405" class="stroke-light"/>
+
+  <!-- Row 7: Ejemplos por rama -->
+  <text x="60" y="430" class="row-label">Ejemplos por rama</text>
+  <text x="250" y="430" text-anchor="middle" class="check check-partial">1 ejemplo · laboral</text>
+  <text x="650" y="430" text-anchor="middle" class="check check-yes">3 archivos · civil · laboral · societario</text>
+  <line x1="60" y1="445" x2="840" y2="445" class="stroke-light"/>
+
+  <!-- Row 8: Glosario de marcadores -->
+  <text x="60" y="470" class="row-label">Glosario de marcadores</text>
+  <text x="250" y="470" text-anchor="middle" class="check check-no">no aún</text>
+  <text x="650" y="470" text-anchor="middle" class="check check-yes">sí · marcadores-GLOSARIO.md</text>
+  <line x1="60" y1="485" x2="840" y2="485" class="stroke-light"/>
+
+  <!-- Row 9: Protocolo alucinación -->
+  <text x="60" y="510" class="row-label">Protocolo anti-alucinación</text>
+  <text x="250" y="510" text-anchor="middle" class="check check-partial">implícito en skill citas</text>
+  <text x="650" y="510" text-anchor="middle" class="check check-yes">explícito en CLAUDE.md</text>
+  <line x1="60" y1="525" x2="840" y2="525" class="stroke-light"/>
+
+  <!-- Row 10: MCP connectors -->
+  <text x="60" y="550" class="row-label">Conectores MCP / fuentes</text>
+  <text x="250" y="550" text-anchor="middle" class="check check-no">roadmap Fase 4</text>
+  <text x="650" y="550" text-anchor="middle" class="check check-partial">en desarrollo · 10 declarados</text>
+
+  <!-- Footer -->
+  <text x="450" y="595" text-anchor="middle" class="footer">Análisis Unholster · 2026-05-19 · Sin claim de superioridad: arquitecturas complementarias para problemas distintos</text>
+</svg>

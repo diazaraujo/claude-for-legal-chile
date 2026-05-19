@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <style>
+    .title { font-size: 22px; font-weight: 600; fill: #0a0a0a; }
+    .subtitle { font-size: 13px; fill: #525252; }
+    .layer-label { font-size: 14px; font-weight: 600; fill: #0a0a0a; }
+    .layer-num { font-size: 11px; font-weight: 500; fill: #737373; letter-spacing: 0.5px; }
+    .volume { font-size: 28px; font-weight: 700; fill: #0a0a0a; }
+    .volume-unit { font-size: 12px; fill: #737373; }
+    .desc { font-size: 12px; fill: #404040; }
+    .footer { font-size: 11px; fill: #737373; }
+    .stroke { fill: none; stroke: #0a0a0a; stroke-width: 1.5; }
+    .accent { fill: #d4a574; }
+    .light-fill { fill: #fafafa; }
+  </style>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" class="title">Modelo de tres capas — Claude Legal Chile</text>
+  <text x="450" y="62" text-anchor="middle" class="subtitle">Corpus normativo estructurado como eje del sistema</text>
+
+  <!-- Layer 1 - Catálogo (widest) -->
+  <rect x="60" y="100" width="780" height="110" rx="4" class="light-fill stroke"/>
+  <text x="80" y="125" class="layer-num">CAPA 1</text>
+  <text x="80" y="148" class="layer-label">Catálogo</text>
+  <text x="80" y="170" class="desc">Metadata canónica desde BCN/SPARQL · slug · URL · tipo · año · ministerio</text>
+  <text x="80" y="190" class="desc">Toda la normativa chilena con identidad propia, sin contenido sustantivo</text>
+  <text x="780" y="148" text-anchor="end" class="volume">12.465</text>
+  <text x="780" y="170" text-anchor="end" class="volume-unit">archivos · 100% del catálogo BCN</text>
+
+  <!-- Layer 2 - Estructura (medium) -->
+  <rect x="120" y="230" width="660" height="110" rx="4" class="light-fill stroke"/>
+  <text x="140" y="255" class="layer-num">CAPA 2</text>
+  <text x="140" y="278" class="layer-label">Estructura</text>
+  <text x="140" y="300" class="desc">Libros · títulos · partes · artículos parseados desde XML oficial LeyChile</text>
+  <text x="140" y="320" class="desc">Permite citar por artículo con respaldo verificable, sin alucinación</text>
+  <text x="720" y="278" text-anchor="end" class="volume">~11.800</text>
+  <text x="720" y="300" text-anchor="end" class="volume-unit">archivos · ≈95% del catálogo</text>
+
+  <!-- Layer 3 - Análisis (narrowest) -->
+  <rect x="200" y="360" width="500" height="110" rx="4" class="light-fill stroke"/>
+  <rect x="200" y="360" width="500" height="110" rx="4" fill="none" stroke="#d4a574" stroke-width="2"/>
+  <text x="220" y="385" class="layer-num">CAPA 3</text>
+  <text x="220" y="408" class="layer-label">Análisis curado</text>
+  <text x="220" y="430" class="desc">Perfiles operativos con disclaimer · estado de revisión · conexiones</text>
+  <text x="220" y="450" class="desc">El abogado lee esto; las capas 1 y 2 son referencia verificable</text>
+  <text x="680" y="408" text-anchor="end" class="volume">126</text>
+  <text x="680" y="430" text-anchor="end" class="volume-unit">perfiles · 115 leyes + 9 códigos + 2 CPR</text>
+
+  <!-- Footer -->
+  <text x="450" y="510" text-anchor="middle" class="footer">Open source · Apache 2.0 · github.com/diazaraujo/claude-for-legal-chile · Mantenido por Unholster</text>
+</svg>
