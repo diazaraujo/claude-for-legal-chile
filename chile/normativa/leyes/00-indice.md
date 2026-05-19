@@ -61,6 +61,8 @@ habilitado en Chile.
 | [`ley-18700-loc-votaciones`](ley-18700-loc-votaciones.md) | 18.700 | LOC sobre votaciones populares y escrutinios (sistema electoral) | Electoral / Constitucional | Vigente | borrador-no-validado |
 | [`ley-17997-loc-tc`](ley-17997-loc-tc.md) | 17.997 | LOC del Tribunal Constitucional (inaplicabilidad, inconstitucionalidad) | Constitucional / Jurisdicción | Vigente | borrador-no-validado |
 | [`ley-18918-loc-congreso`](ley-18918-loc-congreso.md) | 18.918 | LOC del Congreso Nacional (procedimiento legislativo, acusación constitucional) | Constitucional / Legislativo | Vigente | borrador-no-validado |
+| [`ley-21094-universidades-estatales`](ley-21094-universidades-estatales.md) | 21.094 | Universidades Estatales chilenas (18 UE) | Educación / Administrativo | Vigente | borrador-no-validado |
+| [`ley-21091-educacion-superior`](ley-21091-educacion-superior.md) | 21.091 | Sistema de Educación Superior (gratuidad, SES, CNA) | Educación | Vigente | borrador-no-validado |
 | `ley-21327-modernizacion-dt` | 21.327 | Modernización de la Dirección del Trabajo | Laboral / Administrativo | Vigente | pendiente |
 | `ley-19253-indigenas` | 19.253 | Pueblos indígenas (CONADI) | Indígena | Vigente (fuera de alcance v1) | fuera-de-alcance |
 

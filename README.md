@@ -88,7 +88,7 @@ El corpus se publica en tres capas (ver `decisions/ADR-0002`):
 |---|---|---|
 | **1 — Catálogo** | Metadata estructurada por norma desde BCN/SPARQL | **~12.400 archivos** (códigos, leyes, DL, DFL, tratados, autos acordados) |
 | **2 — Resumen estructural** | Libros/títulos/artículos + conceptos clave desde XML estructurado de LeyChile | **2.364 archivos** (2.296 leyes ≈47% del catálogo + 58 tratados + 10 códigos; pipeline en `scripts/bcn/promote-to-capa2.py`) |
-| **3 — Análisis operativo curado** | Lo que ves abajo, con disclaimer + validación legal | 68 archivos borrador + 4 skills + setup interview + fuentes |
+| **3 — Análisis operativo curado** | Lo que ves abajo, con disclaimer + validación legal | 70 archivos borrador + 4 skills + setup interview + fuentes |
 
 Detalle de capa 1 en [`chile/normativa/catalogo/README.md`](chile/normativa/catalogo/README.md).
 Estado de capa 3 a continuación. Solo los marcados ✅ están publicados como borrador
@@ -172,6 +172,10 @@ estructurado; ninguno ha pasado validación legal todavía.
 | Ley 21.057 | Entrevista videograbada NNA víctimas | ✅ [Borrador](chile/normativa/leyes/ley-21057-entrevista-videograbada.md) |
 | Ley 21.314 | Gobierno corporativo SA abiertas | ✅ [Borrador](chile/normativa/leyes/ley-21314-gobierno-corporativo.md) |
 | Ley 18.700 | LOC Votaciones Populares (sistema electoral) | ✅ [Borrador](chile/normativa/leyes/ley-18700-loc-votaciones.md) |
+| Ley 17.997 | LOC Tribunal Constitucional | ✅ [Borrador](chile/normativa/leyes/ley-17997-loc-tc.md) |
+| Ley 18.918 | LOC Congreso Nacional | ✅ [Borrador](chile/normativa/leyes/ley-18918-loc-congreso.md) |
+| Ley 21.094 | Universidades Estatales | ✅ [Borrador](chile/normativa/leyes/ley-21094-universidades-estatales.md) |
+| Ley 21.091 | Sobre Educación Superior (gratuidad, SES, CNA) | ✅ [Borrador](chile/normativa/leyes/ley-21091-educacion-superior.md) |
 
 [Ver índice completo](chile/normativa/leyes/00-indice.md) (19 leyes).
 
