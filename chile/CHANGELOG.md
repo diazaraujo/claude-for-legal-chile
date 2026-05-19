@@ -11,6 +11,37 @@ Cambios al contenido de `chile/`. Para cambios del upstream ver `git log` con
 - Estado: WIP. Perfiles por rama del derecho pendientes de redacción y de
   revisión por abogado habilitado.
 
+## 0.0.5 — 2026-05-18
+
+- **Skills transversales publicados** en `chile/skills/`:
+  - `diagnostico.md` — protocolo de 6 pasos (jurisdicción, rama, normas,
+    vigencia, complejidad, declaración) que el sistema corre antes de toda
+    respuesta.
+  - `citas-verificables.md` — formato canónico por tipo (constitucional,
+    código, ley, jurisprudencia CS/CA/TC/TDLC/JL, doctrina administrativa
+    DT/SII/CGR/CMF/SUSESO) + niveles de verificación (✅/🟨/🟧/🟥).
+  - `plazos.md` — distinción días corridos vs hábiles, sábado no hábil (CPC
+    Art. 66), feriado judicial, plazos críticos por rama.
+- **`chile/fuentes.md`** — mapa de fuentes autoritativas (BCN, DO, PJUD, TC,
+  TDLC, DT, SII, Contraloría, CMF, SUSESO, SERVEL, Registro Civil) con URLs y
+  reglas de citación.
+- **`chile/setup-interview.md`** y `chile/setup-output-TEMPLATE.md` — entrevista
+  cold-start de 15 preguntas en 6 bloques que genera CLAUDE.md personalizado
+  para la firma/práctica del usuario.
+- **Cluster civil/tributario foundational** (capa 3, borrador):
+  - `codigos/codigo-civil.md` — Andrés Bello 1855, 60+ artículos clave
+    indexados, reformas 2014-2023.
+  - `codigos/codigo-tributario.md` — DL 830, 30+ artículos clave, reforma
+    21.713 anotada.
+  - `leyes/dl-824-renta.md` — LIR completa: regímenes 14A/14D ProPyme, II Cat.,
+    Global Compl., Adicional, retenciones, prescripción.
+  - `leyes/dl-825-iva.md` — IVA 19%, débito/crédito fiscal, DTE, servicios
+    digitales (Ley 21.210/21.713), exenciones, exportaciones.
+  - `leyes/ley-19886-compras-publicas.md` — Bases, modalidades, ChileCompra,
+    TCP, plazos.
+- **Cobertura capa 3 actual**: 1 Constitución + 4 códigos + 13 leyes = 18
+  archivos capa 3 borrador.
+
 ## 0.0.4 — 2026-05-18
 
 - **Constitución Política de la República** publicada (`constitucion/constitucion-politica.md`),

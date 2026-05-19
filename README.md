@@ -88,7 +88,7 @@ El corpus se publica en tres capas (ver `decisions/ADR-0002`):
 |---|---|---|
 | **1 — Catálogo** | Metadata estructurada por norma desde BCN/SPARQL | **12.213 archivos** (códigos, leyes, DL, DFL, tratados, autos acordados) |
 | **2 — Resumen estructural** | Libros/títulos/artículos + conceptos clave | _pendiente — pipeline LLM en diseño_ |
-| **3 — Análisis operativo curado** | Lo que ves abajo, con disclaimer + validación legal | 14 archivos borrador |
+| **3 — Análisis operativo curado** | Lo que ves abajo, con disclaimer + validación legal | 18 archivos borrador + 3 skills + setup interview |
 
 Detalle de capa 1 en [`chile/normativa/catalogo/README.md`](chile/normativa/catalogo/README.md).
 Estado de capa 3 a continuación. Solo los marcados ✅ están publicados como borrador
@@ -106,7 +106,8 @@ estructurado; ninguno ha pasado validación legal todavía.
 |---|---|---|
 | Código del Trabajo (DFL 1/2002) | ✅ Borrador | [`codigo-trabajo.md`](chile/normativa/codigos/codigo-trabajo.md) |
 | Código de Comercio | ✅ Borrador | [`codigo-comercio.md`](chile/normativa/codigos/codigo-comercio.md) |
-| Código Civil | ⏳ Pendiente | — |
+| Código Civil (Andrés Bello, 1855) | ✅ Borrador | [`codigo-civil.md`](chile/normativa/codigos/codigo-civil.md) |
+| Código Tributario (DL 830) | ✅ Borrador | [`codigo-tributario.md`](chile/normativa/codigos/codigo-tributario.md) |
 | Código Tributario (DL 830) | ⏳ Pendiente | — |
 | Código de Procedimiento Civil | ⏳ Pendiente | — |
 | Código Procesal Penal | ⏳ Pendiente | — |
@@ -128,7 +129,9 @@ estructurado; ninguno ha pasado validación legal todavía.
 | Ley 21.015 | Inclusión laboral discapacidad | ✅ [Borrador](chile/normativa/leyes/ley-21015-inclusion-laboral.md) |
 | Ley 18.046 | Sociedades Anónimas | ✅ [Borrador](chile/normativa/leyes/ley-18046-sociedades-anonimas.md) |
 | Ley 19.496 | Protección del consumidor | ✅ [Borrador](chile/normativa/leyes/ley-19496-consumidor.md) |
-| Ley 19.886 | Compras públicas | ⏳ Pendiente |
+| Ley 19.886 | Compras públicas (ChileCompra, TCP) | ✅ [Borrador](chile/normativa/leyes/ley-19886-compras-publicas.md) |
+| DL 824 | Ley de Impuesto a la Renta (LIR) | ✅ [Borrador](chile/normativa/leyes/dl-824-renta.md) |
+| DL 825 | Ley sobre IVA y Servicios | ✅ [Borrador](chile/normativa/leyes/dl-825-iva.md) |
 | Ley 20.720 | Concursal | ⏳ Pendiente |
 
 [Ver índice completo](chile/normativa/leyes/00-indice.md) (19 leyes).
