@@ -116,6 +116,8 @@ habilitado en Chile.
 | [`ley-20830-acuerdo-union-civil`](ley-20830-acuerdo-union-civil.md) | 20.830 | Acuerdo de Unión Civil (AUC) — convivencia adultos, comunidad bienes opcional, sucesión | Familia | Vigente | borrador-no-validado |
 | [`ley-18010-operaciones-credito-dinero`](ley-18010-operaciones-credito-dinero.md) | 18.010 | Operaciones de Crédito de Dinero — UF, intereses, TMC, mora, anatocismo | Bancario / Civil | Vigente | borrador-no-validado |
 | [`ley-21400-matrimonio-igualitario`](ley-21400-matrimonio-igualitario.md) | 21.400 | Matrimonio Igualitario (mismo sexo) — modifica CC, 19.947, 19.620, 20.830, 21.120 | Familia / DDHH | Vigente desde 2022 | borrador-no-validado |
+| [`ley-21484-compraventa-inmuebles`](ley-21484-compraventa-inmuebles.md) | 21.484 | Responsabilidad solidaria vendedor + intervinientes por información falsa | Inmobiliario / Consumidor | Vigente | borrador-no-validado |
+| [`ley-19537-copropiedad-inmobiliaria`](ley-19537-copropiedad-inmobiliaria.md) | 19.537 | Copropiedad inmobiliaria (condominios) — modernización Ley 21.442 | Inmobiliario / Civil | Vigente | borrador-no-validado |
 | [`ley-21030-aborto-tres-causales`](ley-21030-aborto-tres-causales.md) | 21.030 | Aborto en tres causales (riesgo, inviabilidad, violación) | Constitucional / Salud | Vigente | borrador-no-validado |
 | `ley-21327-modernizacion-dt` | 21.327 | Modernización de la Dirección del Trabajo | Laboral / Administrativo | Vigente | pendiente |
 | `ley-19253-indigenas` | 19.253 | Pueblos indígenas (CONADI) | Indígena | Vigente (fuera de alcance v1) | fuera-de-alcance |
