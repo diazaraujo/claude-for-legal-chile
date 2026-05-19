@@ -87,8 +87,8 @@ El corpus se publica en tres capas (ver `decisions/ADR-0002`):
 | Capa | Qué tiene | Cobertura actual |
 |---|---|---|
 | **1 — Catálogo** | Metadata estructurada por norma desde BCN/SPARQL | **~12.400 archivos** (códigos, leyes, DL, DFL, tratados, autos acordados) |
-| **2 — Resumen estructural** | Libros/títulos/artículos + conceptos clave desde XML estructurado de LeyChile | **711 archivos** ley (≈14% del catálogo total; pipeline en `scripts/bcn/promote-to-capa2.py`) |
-| **3 — Análisis operativo curado** | Lo que ves abajo, con disclaimer + validación legal | 59 archivos borrador + 3 skills + setup interview + fuentes |
+| **2 — Resumen estructural** | Libros/títulos/artículos + conceptos clave desde XML estructurado de LeyChile | **864 archivos** (796 leyes + 58 tratados + 10 códigos; pipeline en `scripts/bcn/promote-to-capa2.py`) |
+| **3 — Análisis operativo curado** | Lo que ves abajo, con disclaimer + validación legal | 65 archivos borrador + 3 skills + setup interview + fuentes |
 
 Detalle de capa 1 en [`chile/normativa/catalogo/README.md`](chile/normativa/catalogo/README.md).
 Estado de capa 3 a continuación. Solo los marcados ✅ están publicados como borrador
@@ -170,6 +170,8 @@ estructurado; ninguno ha pasado validación legal todavía.
 | Ley 21.331 | Derechos en salud mental | ✅ [Borrador](chile/normativa/leyes/ley-21331-salud-mental.md) |
 | Ley 21.120 | Identidad de género | ✅ [Borrador](chile/normativa/leyes/ley-21120-identidad-genero.md) |
 | Ley 21.057 | Entrevista videograbada NNA víctimas | ✅ [Borrador](chile/normativa/leyes/ley-21057-entrevista-videograbada.md) |
+| Ley 21.314 | Gobierno corporativo SA abiertas | ✅ [Borrador](chile/normativa/leyes/ley-21314-gobierno-corporativo.md) |
+| Ley 18.700 | LOC Votaciones Populares (sistema electoral) | ✅ [Borrador](chile/normativa/leyes/ley-18700-loc-votaciones.md) |
 
 [Ver índice completo](chile/normativa/leyes/00-indice.md) (19 leyes).
 
