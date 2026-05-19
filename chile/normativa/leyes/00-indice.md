@@ -83,6 +83,8 @@ habilitado en Chile.
 | [`ley-18097-concesiones-mineras`](ley-18097-concesiones-mineras.md) | 18.097 | LOC sobre Concesiones Mineras (marco constitucional minero) | Constitucional / Minería | Vigente | borrador-no-validado |
 | [`ley-21591-royalty-minero`](ley-21591-royalty-minero.md) | 21.591 | Royalty Minero 2023 (ad valorem + margen + distribución regional) | Tributario / Minería | Vigente desde 2024 | borrador-no-validado |
 | [`dfl-725-codigo-sanitario`](dfl-725-codigo-sanitario.md) | DFL 725 | Código Sanitario (SEREMI, ISP, alimentos, medicamentos, IVE) | Salud / Administrativo | Vigente | borrador-no-validado |
+| [`ley-21234-fraude-tarjetas`](ley-21234-fraude-tarjetas.md) | 21.234 | Limita responsabilidad usuarios por fraude tarjetas (carga prueba invertida) | Bancario / Consumidor | Vigente | borrador-no-validado |
+| [`ley-20169-competencia-desleal`](ley-20169-competencia-desleal.md) | 20.169 | Competencia desleal (engaño, denigración, comparación, imitación) | Competencia / Comercial | Vigente | borrador-no-validado |
 | [`ley-21030-aborto-tres-causales`](ley-21030-aborto-tres-causales.md) | 21.030 | Aborto en tres causales (riesgo, inviabilidad, violación) | Constitucional / Salud | Vigente | borrador-no-validado |
 | `ley-21327-modernizacion-dt` | 21.327 | Modernización de la Dirección del Trabajo | Laboral / Administrativo | Vigente | pendiente |
 | `ley-19253-indigenas` | 19.253 | Pueblos indígenas (CONADI) | Indígena | Vigente (fuera de alcance v1) | fuera-de-alcance |
