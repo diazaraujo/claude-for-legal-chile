@@ -108,3 +108,11 @@ estado: pendiente-de-validador | validador-revisó | descartada
 | `ley-20584-derechos-deberes-paciente` | [#17](https://github.com/diazaraujo/claude-for-legal-chile/issues/17) | pendiente-de-validador |
 | `ley-21331-salud-mental` | [#17](https://github.com/diazaraujo/claude-for-legal-chile/issues/17) | pendiente-de-validador |
 | `ley-19378-aps-municipal-salud` | [#17](https://github.com/diazaraujo/claude-for-legal-chile/issues/17) | pendiente-de-validador |
+| `ley-20720-concursal` | [#19](https://github.com/diazaraujo/claude-for-legal-chile/issues/19) | pendiente-de-validador |
+| `ley-19123-reparacion-rettig` | [#18](https://github.com/diazaraujo/claude-for-legal-chile/issues/18) | pendiente-de-validador |
+| `ley-19992-reparacion-valech` | [#18](https://github.com/diazaraujo/claude-for-legal-chile/issues/18) | pendiente-de-validador |
+| `ley-20405-indh` | [#18](https://github.com/diazaraujo/claude-for-legal-chile/issues/18) | pendiente-de-validador |
+| `ley-21067-defensoria-ninez` | [#18](https://github.com/diazaraujo/claude-for-legal-chile/issues/18) | pendiente-de-validador |
+| `dfl-458-urbanismo-construcciones` | [#20](https://github.com/diazaraujo/claude-for-legal-chile/issues/20) | pendiente-de-validador |
+| `ley-19537-copropiedad-inmobiliaria` | [#20](https://github.com/diazaraujo/claude-for-legal-chile/issues/20) | pendiente-de-validador |
+| `ley-21484-compraventa-inmuebles` | [#20](https://github.com/diazaraujo/claude-for-legal-chile/issues/20) | pendiente-de-validador |
