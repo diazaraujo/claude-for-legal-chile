@@ -223,21 +223,24 @@ de **tres capas** (ver `decisions/ADR-0002`):
 - [x] [`plazos.md`](skills/plazos.md) — días hábiles vs corridos, feriados
 - [x] [`compliance-corporativo.md`](skills/compliance-corporativo.md) — orquestador stack compliance
 
-### Perfiles (`perfiles/`)
+### Perfiles por rama (`perfiles/`)
 
-Cada perfil orquesta normativa para una rama. Pendientes de redacción y validación.
+Cada perfil es un **orquestador** que invoca normativa capa 3 cuando una
+consulta cae en su ámbito. Estado: 9 perfiles publicados como borrador.
 
-- [ ] `perfiles/civil.md`
-- [ ] `perfiles/laboral.md`
-- [ ] `perfiles/societario.md`
-- [ ] `perfiles/tributario.md`
-- [ ] `perfiles/administrativo.md`
-- [ ] `perfiles/familia.md`
-- [ ] `perfiles/penal.md`
-- [ ] `perfiles/concursal.md`
-- [ ] `perfiles/contratos.md`
-- [ ] `perfiles/privacidad.md`
-- [ ] `perfiles/compras-publicas.md`
+| Perfil | Ámbito | Red flags | Plazos |
+|---|---|---|---|
+| [`laboral`](perfiles/laboral.md) | CT + 13 leyes especiales laborales + previsional + procesal | 30+ | Sí |
+| [`societario`](perfiles/societario.md) | SA + LMV + GC + RPPJ + MPD + lavado + concursal + competencia + PI | 25+ | Sí |
+| [`civil`](perfiles/civil.md) | CC + familia patrimonial + contratos + responsabilidad + sucesión + inmuebles | 25+ | Sí (prescripción) |
+| [`tributario`](perfiles/tributario.md) | CT + LIR + IVA + Reformas 21.420/21.713 + royalty + territorial + municipal | 25+ | Sí |
+| [`penal`](perfiles/penal.md) | CP + CPP + MP + DPP + delitos económicos + crimen organizado + RPA + DDHH | 25+ | Sí |
+| [`familia`](perfiles/familia.md) | Matrimonio (incl. igualitario) + AUC + TF + alimentos + VIF + NNA + adopciones + identidad de género | 25+ | Sí |
+| [`administrativo`](perfiles/administrativo.md) | Ley 19.880 + LOC AdEstado/Municipal/GORE + Estatutos + CGR + Compras + Transparencia + Probidad + Lobby | 25+ | Sí |
+| [`privacidad`](perfiles/privacidad.md) | LPDP 19.628 + 21.719 + ciberseguridad 21.663 + firma electrónica + transformación digital | 25+ | Sí |
+| [`concursal`](perfiles/concursal.md) | Ley 20.720 + SIR + reorganización + liquidación + PDP + cruces multidisciplinarios | 25+ | Sí |
+
+Ver índice: [`perfiles/README.md`](perfiles/README.md).
 
 ---
 
