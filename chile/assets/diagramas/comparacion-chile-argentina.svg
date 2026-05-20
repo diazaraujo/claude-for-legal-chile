@@ -24,11 +24,11 @@
   <!-- Column headers -->
   <rect x="60" y="90" width="380" height="60" rx="4" fill="#fafafa" stroke="#0a0a0a" stroke-width="1.5"/>
   <text x="250" y="115" text-anchor="middle" class="col-header">Chile (Unholster)</text>
-  <text x="250" y="138" text-anchor="middle" class="col-meta">normativa-spine · corpus como eje · v0.1.0 · 2026-05-19</text>
+  <text x="250" y="138" text-anchor="middle" class="col-meta">normativa-spine · v0.3.0 · 2026-05-19 · 0 stars · 0 forks</text>
 
   <rect x="460" y="90" width="380" height="60" rx="4" fill="#fafafa" stroke="#0a0a0a" stroke-width="1.5"/>
   <text x="650" y="115" text-anchor="middle" class="col-header">Argentina (cristianaboitiz-eng)</text>
-  <text x="650" y="138" text-anchor="middle" class="col-meta">perfiles-by-rama · workflow del abogado · 2026-05-16</text>
+  <text x="650" y="138" text-anchor="middle" class="col-meta">perfiles-by-rama · 2026-05-16 · 45 stars · 57 forks</text>
 
   <!-- Comparison rows -->
   <!-- Row 1: Architecture -->
