@@ -29,6 +29,7 @@ CAPA3_DIRS = [
     Path("chile/normativa/leyes"),
     Path("chile/normativa/codigos"),
     Path("chile/normativa/constitucion"),
+    Path("chile/normativa/decretos"),
 ]
 
 REQUIRED_FIELDS = ["slug", "titulo_oficial", "fuente_oficial", "vigencia",
