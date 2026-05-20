@@ -90,3 +90,8 @@ estado: pendiente-de-validador | validador-revisó | descartada
 | `ley-10336-cgr` | [#15](https://github.com/diazaraujo/claude-for-legal-chile/issues/15) | pendiente-de-validador |
 | `codigo-civil` | [#14](https://github.com/diazaraujo/claude-for-legal-chile/issues/14) | pendiente-de-validador |
 | `codigo-tributario` | [#14](https://github.com/diazaraujo/claude-for-legal-chile/issues/14) | pendiente-de-validador |
+| `codigo-penal` | [#14](https://github.com/diazaraujo/claude-for-legal-chile/issues/14) | pendiente-de-validador |
+| `codigo-procesal-penal` | [#14](https://github.com/diazaraujo/claude-for-legal-chile/issues/14) | pendiente-de-validador |
+| `codigo-comercio` | [#14](https://github.com/diazaraujo/claude-for-legal-chile/issues/14) | pendiente-de-validador |
+| `codigo-procedimiento-civil` | [#14](https://github.com/diazaraujo/claude-for-legal-chile/issues/14) | pendiente-de-validador |
+| `codigo-organico-tribunales` | [#14](https://github.com/diazaraujo/claude-for-legal-chile/issues/14) | pendiente-de-validador |
