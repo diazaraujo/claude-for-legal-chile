@@ -125,3 +125,9 @@ estado: pendiente-de-validador | validador-revisó | descartada
 | `ley-21455-cambio-climatico` | [#16](https://github.com/diazaraujo/claude-for-legal-chile/issues/16) | pendiente-de-validador |
 | `dl-1939-bienes-estado` | [#16](https://github.com/diazaraujo/claude-for-legal-chile/issues/16) | pendiente-de-validador |
 | `ley-17288-monumentos-nacionales` | [#16](https://github.com/diazaraujo/claude-for-legal-chile/issues/16) | pendiente-de-validador |
+| `ley-19947-matrimonio-civil` | [#13](https://github.com/diazaraujo/claude-for-legal-chile/issues/13) | pendiente-de-validador |
+| `ley-19968-tribunales-familia` | [#13](https://github.com/diazaraujo/claude-for-legal-chile/issues/13) | pendiente-de-validador |
+| `ley-20830-acuerdo-union-civil` | [#13](https://github.com/diazaraujo/claude-for-legal-chile/issues/13) | pendiente-de-validador |
+| `ley-20066-vif` | [#13](https://github.com/diazaraujo/claude-for-legal-chile/issues/13) | pendiente-de-validador |
+| `ley-21430-garantias-nna` | [#13](https://github.com/diazaraujo/claude-for-legal-chile/issues/13) | pendiente-de-validador |
+| `ley-21302-snn-servicio-nacional-ninez` | [#13](https://github.com/diazaraujo/claude-for-legal-chile/issues/13) | pendiente-de-validador |
