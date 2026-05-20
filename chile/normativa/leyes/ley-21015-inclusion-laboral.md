@@ -6,6 +6,7 @@ publicacion: 2017-06-15
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1103997
 ultima_modificacion: 2017-06-15
 vigencia: vigente
+capa: 3
 materia:
   - inclusión laboral
   - personas con discapacidad

@@ -7,6 +7,7 @@ fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=207436
 cuerpo_normativo: DFL N° 1 del Ministerio del Trabajo y Previsión Social, 2002
 ultima_modificacion: actualización continua (ver historia de modificaciones en BCN)
 vigencia: vigente
+capa: 3
 materia:
   - relación laboral
   - contrato de trabajo

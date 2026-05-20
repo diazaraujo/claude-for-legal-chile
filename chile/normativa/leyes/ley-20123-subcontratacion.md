@@ -6,6 +6,7 @@ publicacion: 2006-10-16
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=254080
 ultima_modificacion: 2006-10-16
 vigencia: vigente
+capa: 3
 materia:
   - subcontratación
   - empresas de servicios transitorios (EST)

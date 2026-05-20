@@ -6,6 +6,7 @@ publicacion: 2020-03-26
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1143741
 ultima_modificacion: 2020-03-26
 vigencia: vigente
+capa: 3
 materia:
   - teletrabajo
   - trabajo a distancia

@@ -6,6 +6,7 @@ publicacion: 2023-04-26
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1191702
 ultima_modificacion: 2023-04-26
 vigencia: vigente, con reducción escalonada hasta 2028
+capa: 3
 materia:
   - jornada laboral
   - reducción 40 horas

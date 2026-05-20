@@ -6,6 +6,7 @@ publicacion: 2024-01-15
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1199895
 ultima_modificacion: 2024-01-15
 vigencia: vigente
+capa: 3
 materia:
   - acoso laboral
   - acoso sexual

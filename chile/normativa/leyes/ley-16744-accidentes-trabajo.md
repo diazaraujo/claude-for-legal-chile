@@ -6,6 +6,7 @@ publicacion: 1968-02-01
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=28650
 ultima_modificacion: actualización continua (ver historia en BCN)
 vigencia: vigente
+capa: 3
 materia:
   - accidentes del trabajo
   - enfermedades profesionales

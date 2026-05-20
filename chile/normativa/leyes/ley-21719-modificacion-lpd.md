@@ -6,6 +6,7 @@ publicacion: 2024-12-13
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1208595
 ultima_modificacion: 2024-12-13
 vigencia: vigencia diferida — entra en plena vigencia el 2026-12-01
+capa: 3
 materia:
   - protección de datos personales
   - autoridad fiscalizadora (APDP)
