@@ -131,3 +131,10 @@ estado: pendiente-de-validador | validador-revisó | descartada
 | `ley-20066-vif` | [#13](https://github.com/diazaraujo/claude-for-legal-chile/issues/13) | pendiente-de-validador |
 | `ley-21430-garantias-nna` | [#13](https://github.com/diazaraujo/claude-for-legal-chile/issues/13) | pendiente-de-validador |
 | `ley-21302-snn-servicio-nacional-ninez` | [#13](https://github.com/diazaraujo/claude-for-legal-chile/issues/13) | pendiente-de-validador |
+| `ley-18834-estatuto-administrativo` | [#15](https://github.com/diazaraujo/claude-for-legal-chile/issues/15) | pendiente-de-validador |
+| `ley-18883-estatuto-administrativo-municipal` | [#15](https://github.com/diazaraujo/claude-for-legal-chile/issues/15) | pendiente-de-validador |
+| `ley-18575-bases-administracion-estado` | [#15](https://github.com/diazaraujo/claude-for-legal-chile/issues/15) | pendiente-de-validador |
+| `ley-19886-compras-publicas` | [#15](https://github.com/diazaraujo/claude-for-legal-chile/issues/15) | pendiente-de-validador |
+| `ley-20285-transparencia` | [#15](https://github.com/diazaraujo/claude-for-legal-chile/issues/15) | pendiente-de-validador |
+| `ley-20880-probidad-publica` | [#15](https://github.com/diazaraujo/claude-for-legal-chile/issues/15) | pendiente-de-validador |
+| `ley-20730-lobby` | [#15](https://github.com/diazaraujo/claude-for-legal-chile/issues/15) | pendiente-de-validador |
