@@ -12,7 +12,7 @@ materia:
   - delito de maltrato habitual
   - circuito tribunales familia / Ministerio Público
 capa: 3
-relacionada_con:
+relacionada_per:
   - codigo-penal
   - ley-19968-tribunales-familia
   - ley-21643-acoso-laboral

@@ -10,7 +10,7 @@ materia:
   - protección de datos personales
   - derechos del titular
   - registro de bancos de datos
-relacionada_con:
+relacionada_per:
   - ley-21719-modificacion-lpd
   - codigo-civil
   - codigo-penal

@@ -13,7 +13,7 @@ materia:
   - garantía de alimentos mensuales (GAM)
   - apremios
 capa: 3
-relacionada_con:
+relacionada_per:
   - codigo-civil
   - ley-19968-tribunales-familia
   - ley-19947-matrimonio-civil

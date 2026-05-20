@@ -13,7 +13,7 @@ materia:
   - silencio administrativo
   - notificaciones administrativas
 capa: 3
-relacionada_con:
+relacionada_per:
   - constitucion-politica
   - ley-19886-compras-publicas
 estado_revision: borrador-no-validado

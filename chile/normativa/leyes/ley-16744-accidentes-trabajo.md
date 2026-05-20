@@ -11,7 +11,7 @@ materia:
   - enfermedades profesionales
   - mutuales de seguridad
   - prevención de riesgos
-relacionada_con:
+relacionada_per:
   - codigo-trabajo
   - ley-21643-acoso-laboral
   - ds-40-prevencion-riesgos

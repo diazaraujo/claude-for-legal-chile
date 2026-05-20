@@ -12,7 +12,7 @@ materia:
   - Cuenta Individual de Cesantía (CIC)
   - Fondo de Cesantía Solidario (FCS)
 capa: 3
-relacionada_con:
+relacionada_per:
   - codigo-trabajo
   - dl-3500-pensiones
 estado_revision: borrador-no-validado

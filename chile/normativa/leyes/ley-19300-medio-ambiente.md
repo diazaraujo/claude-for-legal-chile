@@ -13,7 +13,7 @@ materia:
   - sanciones ambientales
   - participación ciudadana
 capa: 3
-relacionada_con:
+relacionada_per:
   - constitucion-politica
   - ley-19880-procedimiento-administrativo
 estado_revision: borrador-no-validado

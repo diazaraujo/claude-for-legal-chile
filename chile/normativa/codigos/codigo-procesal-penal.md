@@ -14,7 +14,7 @@ materia:
   - juicio oral
   - recursos penales
 capa: 3
-relacionada_con:
+relacionada_per:
   - codigo-penal
   - constitucion-politica
 estado_revision: borrador-no-validado

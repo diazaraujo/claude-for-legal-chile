@@ -14,7 +14,7 @@ materia:
   - implicancias y recusaciones
   - notarios y conservadores
 capa: 3
-relacionada_con:
+relacionada_per:
   - constitucion-politica
   - codigo-procedimiento-civil
   - codigo-procesal-penal

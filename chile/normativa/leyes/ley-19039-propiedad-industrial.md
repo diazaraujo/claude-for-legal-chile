@@ -14,7 +14,7 @@ materia:
   - indicaciones geográficas y denominaciones de origen
   - INAPI
 capa: 3
-relacionada_con:
+relacionada_per:
   - ley-17336-propiedad-intelectual
   - codigo-civil
 estado_revision: borrador-no-validado

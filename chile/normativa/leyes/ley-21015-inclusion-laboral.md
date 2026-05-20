@@ -10,7 +10,7 @@ materia:
   - inclusión laboral
   - personas con discapacidad
   - cuota obligatoria
-relacionada_con:
+relacionada_per:
   - codigo-trabajo
   - ley-20422-discapacidad
 estado_revision: borrador-no-validado

@@ -12,7 +12,7 @@ materia:
   - oficinas locales de niñez
   - interés superior del NNA
 capa: 3
-relacionada_con:
+relacionada_per:
   - constitucion-politica
   - ley-19968-tribunales-familia
   - ley-20066-vif

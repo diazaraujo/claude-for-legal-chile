@@ -14,7 +14,7 @@ materia:
   - sucesiones
   - prescripción
 capa: 3
-relacionada_con:
+relacionada_per:
   - constitucion-politica
   - codigo-comercio
   - codigo-procedimiento-civil

@@ -13,7 +13,7 @@ materia:
   - operaciones con partes relacionadas (OPR)
   - OPA
 capa: 3
-relacionada_con:
+relacionada_per:
   - codigo-comercio
   - codigo-civil
   - ley-18045-mercado-valores

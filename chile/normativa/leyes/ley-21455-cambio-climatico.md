@@ -13,7 +13,7 @@ materia:
   - planes sectoriales
   - presupuesto de carbono
 capa: 3
-relacionada_con:
+relacionada_per:
   - ley-19300-medio-ambiente
   - ley-21595-delitos-economicos
   - constitucion-politica

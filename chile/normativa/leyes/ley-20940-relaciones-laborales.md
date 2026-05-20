@@ -13,7 +13,7 @@ materia:
   - servicios mínimos
   - derecho colectivo del trabajo
 capa: 3
-relacionada_con:
+relacionada_per:
   - codigo-trabajo
   - constitucion-politica
   - ley-21561-reduccion-jornada

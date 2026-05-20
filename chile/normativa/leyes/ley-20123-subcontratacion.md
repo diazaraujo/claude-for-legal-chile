@@ -10,7 +10,7 @@ materia:
   - subcontratación
   - empresas de servicios transitorios (EST)
   - responsabilidad solidaria y subsidiaria
-relacionada_con:
+relacionada_per:
   - codigo-trabajo
   - ley-16744-accidentes-trabajo
   - ds-76-subcontratacion-reglamento

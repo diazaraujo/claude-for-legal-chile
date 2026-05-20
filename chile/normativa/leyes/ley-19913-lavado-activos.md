@@ -12,7 +12,7 @@ materia:
   - sujetos obligados a reportar (UAF)
   - Unidad de Análisis Financiero
 capa: 3
-relacionada_con:
+relacionada_per:
   - codigo-penal
   - ley-20393-rppj
   - ley-21595-delitos-economicos

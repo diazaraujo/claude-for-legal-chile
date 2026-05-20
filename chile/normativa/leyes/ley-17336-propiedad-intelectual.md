@@ -13,7 +13,7 @@ materia:
   - registro DDI
   - infracciones civiles y penales
 capa: 3
-relacionada_con:
+relacionada_per:
   - ley-19039-propiedad-industrial
   - codigo-civil
 estado_revision: borrador-no-validado

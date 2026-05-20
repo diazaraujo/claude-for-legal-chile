@@ -14,7 +14,7 @@ materia:
   - pensión de vejez
   - PGU (Pensión Garantizada Universal)
 capa: 3
-relacionada_con:
+relacionada_per:
   - codigo-trabajo
   - ley-16744-accidentes-trabajo
   - ley-19728-seguro-cesantia

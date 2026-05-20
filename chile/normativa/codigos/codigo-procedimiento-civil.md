@@ -13,7 +13,7 @@ materia:
   - recursos procesales
   - prueba
 capa: 3
-relacionada_con:
+relacionada_per:
   - codigo-civil
   - codigo-comercio
   - codigo-organico-tribunales

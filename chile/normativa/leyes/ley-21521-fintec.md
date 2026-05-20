@@ -13,7 +13,7 @@ materia:
   - asesoría automatizada
   - intermediación de instrumentos financieros
 capa: 3
-relacionada_con:
+relacionada_per:
   - ley-18045-mercado-valores
   - ley-19913-lavado-activos
   - ley-19628-proteccion-datos

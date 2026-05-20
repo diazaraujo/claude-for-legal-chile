@@ -13,7 +13,7 @@ materia:
   - cláusulas abusivas
   - servicios financieros
 capa: 3
-relacionada_con:
+relacionada_per:
   - codigo-civil
   - codigo-comercio
   - ley-19628-proteccion-datos

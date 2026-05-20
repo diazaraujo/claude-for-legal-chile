@@ -13,7 +13,7 @@ materia:
   - circunstancias modificatorias
   - extinción de la responsabilidad penal
 capa: 3
-relacionada_con:
+relacionada_per:
   - codigo-procesal-penal
   - constitucion-politica
 estado_revision: borrador-no-validado

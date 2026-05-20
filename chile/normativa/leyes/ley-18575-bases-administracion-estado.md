@@ -12,7 +12,7 @@ materia:
   - probidad administrativa
   - función pública
 capa: 3
-relacionada_con:
+relacionada_per:
   - constitucion-politica
   - ley-19880-procedimiento-administrativo
   - ley-20285-transparencia

@@ -12,7 +12,7 @@ materia:
   - modelo de prevención
   - delitos catálogo
 capa: 3
-relacionada_con:
+relacionada_per:
   - codigo-penal
   - codigo-procesal-penal
   - ley-21595-delitos-economicos

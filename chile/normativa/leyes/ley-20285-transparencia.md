@@ -12,7 +12,7 @@ materia:
   - Consejo para la Transparencia (CPLT)
   - amparo de acceso a información
 capa: 3
-relacionada_con:
+relacionada_per:
   - constitucion-politica
   - ley-19628-proteccion-datos
   - ley-19880-procedimiento-administrativo

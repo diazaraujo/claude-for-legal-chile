@@ -13,7 +13,7 @@ materia:
   - reducción de daños (consumo personal)
   - delitos conexos
 capa: 3
-relacionada_con:
+relacionada_per:
   - codigo-penal
   - codigo-procesal-penal
   - ley-19913-lavado-activos

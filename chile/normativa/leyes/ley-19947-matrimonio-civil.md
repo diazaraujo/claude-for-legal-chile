@@ -13,7 +13,7 @@ materia:
   - nulidad de matrimonio
   - regímenes patrimoniales
 capa: 3
-relacionada_con:
+relacionada_per:
   - codigo-civil
   - ley-19968-tribunales-familia
 estado_revision: borrador-no-validado

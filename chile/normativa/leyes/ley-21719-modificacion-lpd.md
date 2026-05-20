@@ -10,7 +10,7 @@ materia:
   - protección de datos personales
   - autoridad fiscalizadora (APDP)
   - régimen sancionatorio
-relacionada_con:
+relacionada_per:
   - ley-19628-proteccion-datos
   - codigo-penal
 estado_revision: borrador-no-validado

@@ -15,7 +15,7 @@ materia:
   - manipulación bursátil
   - OPA
 capa: 3
-relacionada_con:
+relacionada_per:
   - ley-18046-sociedades-anonimas
   - codigo-comercio
   - ley-21595-delitos-economicos

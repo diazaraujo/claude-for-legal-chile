@@ -9,7 +9,7 @@ vigencia: vigente, con reducción escalonada hasta 2028
 materia:
   - jornada laboral
   - reducción 40 horas
-relacionada_con:
+relacionada_per:
   - codigo-trabajo
 estado_revision: borrador-no-validado
 validador: null

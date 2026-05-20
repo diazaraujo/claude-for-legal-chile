@@ -13,7 +13,7 @@ materia:
   - notificación de incidentes
   - ANCI (Agencia Nacional de Ciberseguridad)
 capa: 3
-relacionada_con:
+relacionada_per:
   - ley-19628-proteccion-datos
   - ley-21719-modificacion-lpd
   - ley-18168-telecomunicaciones

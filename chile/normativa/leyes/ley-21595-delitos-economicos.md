@@ -12,7 +12,7 @@ materia:
   - régimen sancionatorio penal reforzado
   - responsabilidad penal personas jurídicas
 capa: 3
-relacionada_con:
+relacionada_per:
   - codigo-penal
   - codigo-procesal-penal
   - ley-20393-rppj

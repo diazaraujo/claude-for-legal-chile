@@ -14,7 +14,7 @@ materia:
   - abuso de posición dominante
   - delación compensada
 capa: 3
-relacionada_con:
+relacionada_per:
   - codigo-penal
   - ley-21595-delitos-economicos
   - ley-20393-rppj

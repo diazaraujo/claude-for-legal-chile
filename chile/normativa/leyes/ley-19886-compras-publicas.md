@@ -14,7 +14,7 @@ materia:
   - ChileCompra
   - Tribunal de Contratación Pública
 capa: 3
-relacionada_con:
+relacionada_per:
   - ley-19880-procedimiento-administrativo
   - ley-19496-consumidor
   - ds-250-reglamento-19886

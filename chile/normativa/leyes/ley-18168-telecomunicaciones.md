@@ -13,7 +13,7 @@ materia:
   - SUBTEL
   - neutralidad de red
 capa: 3
-relacionada_con:
+relacionada_per:
   - constitucion-politica
   - ley-19496-consumidor
   - ley-19628-proteccion-datos

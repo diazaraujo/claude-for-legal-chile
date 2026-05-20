@@ -13,7 +13,7 @@ materia:
   - facturación electrónica
   - servicios digitales
 capa: 3
-relacionada_con:
+relacionada_per:
   - codigo-tributario
   - dl-824-renta
   - ley-19983-factura-electronica

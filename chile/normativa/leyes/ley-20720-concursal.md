@@ -13,7 +13,7 @@ materia:
   - veedor / liquidador
   - Superintendencia de Insolvencia y Reemprendimiento (SIR)
 capa: 3
-relacionada_con:
+relacionada_per:
   - codigo-comercio
   - codigo-civil
   - ley-18046-sociedades-anonimas

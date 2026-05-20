@@ -15,7 +15,7 @@ materia:
   - terminación
   - procedimiento laboral
   - negociación colectiva
-relacionada_con:
+relacionada_per:
   - ley-16744-accidentes-trabajo
   - ley-20123-subcontratacion
   - ley-21561-reduccion-jornada

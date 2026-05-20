@@ -12,7 +12,7 @@ materia:
   - control constitucional
   - garantías
 capa: 3
-relacionada_con:
+relacionada_per:
   - codigo-civil
   - codigo-procesal-penal
   - ley-19628-proteccion-datos

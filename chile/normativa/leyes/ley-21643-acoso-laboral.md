@@ -11,7 +11,7 @@ materia:
   - acoso sexual
   - violencia en el trabajo
   - protocolo obligatorio
-relacionada_con:
+relacionada_per:
   - codigo-trabajo
   - ley-16744-accidentes-trabajo
 estado_revision: borrador-no-validado

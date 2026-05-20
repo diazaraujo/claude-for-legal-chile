@@ -15,7 +15,7 @@ materia:
   - quiebras (derogado por Ley 20.720, ver concursal)
   - comercio marítimo
 capa: 3
-relacionada_con:
+relacionada_per:
   - codigo-civil
   - ley-18046-sociedades-anonimas
   - ley-20720-concursal

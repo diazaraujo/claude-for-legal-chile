@@ -14,7 +14,7 @@ materia:
   - procedimientos tributarios
   - sanciones
 capa: 3
-relacionada_con:
+relacionada_per:
   - dl-824-renta
   - dl-825-iva
   - constitucion-politica

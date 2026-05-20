@@ -12,7 +12,7 @@ materia:
   - reinserción
   - fines socioeducativos
 capa: 3
-relacionada_con:
+relacionada_per:
   - codigo-penal
   - codigo-procesal-penal
   - ley-21430-garantias-nna

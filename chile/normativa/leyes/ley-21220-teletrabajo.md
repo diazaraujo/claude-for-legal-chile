@@ -10,7 +10,7 @@ materia:
   - teletrabajo
   - trabajo a distancia
   - derecho a desconexión
-relacionada_con:
+relacionada_per:
   - codigo-trabajo
   - ley-16744-accidentes-trabajo
 estado_revision: borrador-no-validado

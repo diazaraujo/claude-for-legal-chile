@@ -14,7 +14,7 @@ materia:
   - global complementario
   - retenciones e impuesto adicional
 capa: 3
-relacionada_con:
+relacionada_per:
   - codigo-tributario
   - dl-825-iva
 estado_revision: borrador-no-validado

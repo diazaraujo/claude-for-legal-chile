@@ -14,7 +14,7 @@ materia:
   - reunificación familiar
   - SERMIG
 capa: 3
-relacionada_con:
+relacionada_per:
   - constitucion-politica
   - codigo-trabajo
   - codigo-civil

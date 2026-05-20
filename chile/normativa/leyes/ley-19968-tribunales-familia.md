@@ -12,7 +12,7 @@ materia:
   - mediación familiar
   - protección de NNA
 capa: 3
-relacionada_con:
+relacionada_per:
   - codigo-civil
   - ley-19947-matrimonio-civil
 estado_revision: borrador-no-validado
