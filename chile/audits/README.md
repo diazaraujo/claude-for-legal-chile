@@ -87,3 +87,6 @@ estado: pendiente-de-validador | validador-revisó | descartada
 | `ley-21400-matrimonio-igualitario` | [#13](https://github.com/diazaraujo/claude-for-legal-chile/issues/13) | pendiente-de-validador |
 | `ley-14908-alimentos` | [#13](https://github.com/diazaraujo/claude-for-legal-chile/issues/13) | pendiente-de-validador |
 | `ley-19880-procedimiento-administrativo` | [#15](https://github.com/diazaraujo/claude-for-legal-chile/issues/15) | pendiente-de-validador |
+| `ley-10336-cgr` | [#15](https://github.com/diazaraujo/claude-for-legal-chile/issues/15) | pendiente-de-validador |
+| `codigo-civil` | [#14](https://github.com/diazaraujo/claude-for-legal-chile/issues/14) | pendiente-de-validador |
+| `codigo-tributario` | [#14](https://github.com/diazaraujo/claude-for-legal-chile/issues/14) | pendiente-de-validador |
