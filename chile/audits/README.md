@@ -78,4 +78,8 @@ estado: pendiente-de-validador | validador-revisó | descartada
 |---|---|---|
 | `ley-21643-acoso-laboral` | [#8](https://github.com/diazaraujo/claude-for-legal-chile/issues/8) | pendiente-de-validador |
 | `ley-21719-modificacion-lpd` | [#9](https://github.com/diazaraujo/claude-for-legal-chile/issues/9) | pendiente-de-validador |
-| `ley-20393-rppj` + `ley-21595-delitos-economicos` | [#11](https://github.com/diazaraujo/claude-for-legal-chile/issues/11) | pendiente-de-validador |
+| `ley-21713-reforma-tributaria-2024` | [#10](https://github.com/diazaraujo/claude-for-legal-chile/issues/10) | pendiente-de-validador |
+| `ley-20393-rppj` | [#11](https://github.com/diazaraujo/claude-for-legal-chile/issues/11) | pendiente-de-validador |
+| `ley-21595-delitos-economicos` | [#11](https://github.com/diazaraujo/claude-for-legal-chile/issues/11) | pendiente-de-validador |
+| `codigo-trabajo` | [#12](https://github.com/diazaraujo/claude-for-legal-chile/issues/12) | pendiente-de-validador |
+| `ley-21561-reduccion-jornada` | [#12](https://github.com/diazaraujo/claude-for-legal-chile/issues/12) | pendiente-de-validador |
