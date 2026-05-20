@@ -116,3 +116,12 @@ estado: pendiente-de-validador | validador-revisó | descartada
 | `dfl-458-urbanismo-construcciones` | [#20](https://github.com/diazaraujo/claude-for-legal-chile/issues/20) | pendiente-de-validador |
 | `ley-19537-copropiedad-inmobiliaria` | [#20](https://github.com/diazaraujo/claude-for-legal-chile/issues/20) | pendiente-de-validador |
 | `ley-21484-compraventa-inmuebles` | [#20](https://github.com/diazaraujo/claude-for-legal-chile/issues/20) | pendiente-de-validador |
+| `dfl-1122-codigo-aguas` | [#16](https://github.com/diazaraujo/claude-for-legal-chile/issues/16) | pendiente-de-validador |
+| `ley-18248-codigo-mineria` | [#16](https://github.com/diazaraujo/claude-for-legal-chile/issues/16) | pendiente-de-validador |
+| `ley-18097-concesiones-mineras` | [#16](https://github.com/diazaraujo/claude-for-legal-chile/issues/16) | pendiente-de-validador |
+| `ley-21591-royalty-minero` | [#16](https://github.com/diazaraujo/claude-for-legal-chile/issues/16) | pendiente-de-validador |
+| `ley-18892-pesca-acuicultura` | [#16](https://github.com/diazaraujo/claude-for-legal-chile/issues/16) | pendiente-de-validador |
+| `ley-19300-medio-ambiente` | [#16](https://github.com/diazaraujo/claude-for-legal-chile/issues/16) | pendiente-de-validador |
+| `ley-21455-cambio-climatico` | [#16](https://github.com/diazaraujo/claude-for-legal-chile/issues/16) | pendiente-de-validador |
+| `dl-1939-bienes-estado` | [#16](https://github.com/diazaraujo/claude-for-legal-chile/issues/16) | pendiente-de-validador |
+| `ley-17288-monumentos-nacionales` | [#16](https://github.com/diazaraujo/claude-for-legal-chile/issues/16) | pendiente-de-validador |
