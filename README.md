@@ -212,10 +212,34 @@ discriminación (20.609) · Discapacidad (20.422) · Transparencia (20.285).
 | [`citas-verificables`](chile/skills/citas-verificables.md) | Genera citas con `Art.` + `cuerpo normativo` + URL BCN, evitando alucinación de jurisprudencia |
 | [`plazos`](chile/skills/plazos.md) | Cálculo de plazos legales con día hábil / corrido, feriados, suspensiones |
 | [`compliance-corporativo`](chile/skills/compliance-corporativo.md) | Modelo de prevención del delito (Ley 20.393 + 21.595) + lobby + probidad |
+| [`diagnostico-casos-prueba`](chile/skills/diagnostico-casos-prueba.md) | 20 casos de prueba para validar que el sistema activa perfil + normas correctas |
 
 ### Perfiles por rama
 
-_Pendientes de redacción una vez que los skills se hayan validado en producción._
+**9 perfiles** publicados como borrador, cubriendo las ramas más demandadas:
+
+| Perfil | Ámbito | Activación |
+|---|---|---|
+| [`laboral`](chile/perfiles/laboral.md) | CT + 13 leyes especiales + previsional + procesal | Contratos, despidos, jornada, Karin, sindicatos, accidentes |
+| [`societario`](chile/perfiles/societario.md) | SA + LMV + GC + RPPJ + MPD + lavado + concursal | Constitución, gobierno corporativo, OPAs, MPD, fusiones |
+| [`civil`](chile/perfiles/civil.md) | CC + familia patrimonial + contratos + responsabilidad | Contratos, obligaciones, compraventa, herencia, AUC |
+| [`tributario`](chile/perfiles/tributario.md) | CT + LIR + IVA + Reformas + royalty + municipal | LIR, IVA, contribuciones, patente, reorganización, NGA, TTA |
+| [`penal`](chile/perfiles/penal.md) | CP + CPP + MP + DPP + delitos económicos + crimen organizado | RPP, RPPJ, delitos económicos, drogas, RPA, VIF, DDHH |
+| [`familia`](chile/perfiles/familia.md) | Matrimonio + AUC + TF + alimentos + VIF + adopciones | Divorcio, alimentos, cuidado personal, VIF, adopciones |
+| [`administrativo`](chile/perfiles/administrativo.md) | Ley 19.880 + LOC + Estatutos + CGR + Compras + Transparencia | Sumarios funcionarios, CGR, compras públicas, lobby, transparencia |
+| [`privacidad`](chile/perfiles/privacidad.md) | LPDP 19.628 + Reforma 21.719 + ciberseguridad 21.663 | Datos personales, brechas, ARCO, datos sensibles, ciberseguridad |
+| [`concursal`](chile/perfiles/concursal.md) | Ley 20.720 + SIR + reorganización + liquidación | Insolvencia, reorganización, liquidación, PDP |
+
+Cada perfil declara: cuándo se activa, normas que invoca (~10-20 c/u), ~25
+red flags accionables, tabla de plazos críticos, skills orquestados,
+conexiones con otros perfiles. Ver [`chile/perfiles/README.md`](chile/perfiles/README.md).
+
+### Ejemplos resueltos
+
+**13 ejemplos** que demuestran el sistema operando sobre las 9 ramas con
+casos realistas. Cada ejemplo sigue patrón canónico de 10 secciones
+(escenario, análisis, plazos, cálculo de exposición, red flags, etc.).
+Ver [`chile/ejemplos/README.md`](chile/ejemplos/README.md).
 
 ---
 
@@ -255,10 +279,13 @@ Ver más ejemplos en [`chile/ejemplos/`](chile/ejemplos/).
   (~11.800 archivos) + 9 códigos + ~50 leyes prioritarias publicadas en borrador
 - ✅ **Fase 2** — 4 skills transversales (diagnóstico, citas verificables, plazos,
   compliance corporativo) + cobertura ampliada a 115 leyes especiales
-- 🚧 **Fase 3** — Validación legal de los 126 perfiles capa 3 (issue #1) +
-  perfiles por rama (civil, laboral, societario, tributario)
-- ⏳ **Fase 4** — Release v1.0 público + anuncio + benchmark contra forks análogos
-  + integración con productos Unholster
+- ✅ **Fase 3** — 9 perfiles por rama (laboral, societario, civil, tributario,
+  penal, familia, administrativo, privacidad, concursal) + 13 ejemplos resueltos +
+  20 casos de prueba + principio LLM-wiki + protocolo anti-alucinación +
+  glosario de marcadores
+- 🚧 **Fase 4** — Validación legal por abogados habilitados +
+  [MCP connectors](chile/scripts/mcp/README.md) (BCN como MVP) + release v1.0
+- ⏳ **Fase 5** — Integración con productos Unholster + monetización selectiva
 
 Ver [issues abiertas](https://github.com/diazaraujo/claude-for-legal-chile/issues)
 para el detalle.
