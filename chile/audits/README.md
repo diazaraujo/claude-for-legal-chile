@@ -95,3 +95,10 @@ estado: pendiente-de-validador | validador-revisó | descartada
 | `codigo-comercio` | [#14](https://github.com/diazaraujo/claude-for-legal-chile/issues/14) | pendiente-de-validador |
 | `codigo-procedimiento-civil` | [#14](https://github.com/diazaraujo/claude-for-legal-chile/issues/14) | pendiente-de-validador |
 | `codigo-organico-tribunales` | [#14](https://github.com/diazaraujo/claude-for-legal-chile/issues/14) | pendiente-de-validador |
+| `ley-21000-cmf` | [#21](https://github.com/diazaraujo/claude-for-legal-chile/issues/21) | pendiente-de-validador |
+| `ley-18840-loc-banco-central` | [#21](https://github.com/diazaraujo/claude-for-legal-chile/issues/21) | pendiente-de-validador |
+| `ley-18010-operaciones-credito-dinero` | [#21](https://github.com/diazaraujo/claude-for-legal-chile/issues/21) | pendiente-de-validador |
+| `ley-18092-letras-pagares` | [#21](https://github.com/diazaraujo/claude-for-legal-chile/issues/21) | pendiente-de-validador |
+| `ley-21234-fraude-tarjetas` | [#21](https://github.com/diazaraujo/claude-for-legal-chile/issues/21) | pendiente-de-validador |
+| `ley-21521-fintec` | [#21](https://github.com/diazaraujo/claude-for-legal-chile/issues/21) | pendiente-de-validador |
+| `ley-18045-mercado-valores` | [#21](https://github.com/diazaraujo/claude-for-legal-chile/issues/21) | pendiente-de-validador |
