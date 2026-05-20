@@ -14,6 +14,9 @@
 | [`societario-02-conflicto-interes-director`](societario-02-conflicto-interes-director.md) | Societario | Avanzado | OPR + conflicto de interés indirecto vía trust familiar en SA abierta |
 | [`tributario-01-iva-servicios-profesionales-pj`](tributario-01-iva-servicios-profesionales-pj.md) | Tributario | Intermedio | IVA a servicios profesionales prestados por SpA desde 2023 (Ley 21.420) |
 | [`tributario-02-reclamo-liquidacion-tta`](tributario-02-reclamo-liquidacion-tta.md) | Tributario | Avanzado | Reclamo ante TTA contra liquidación SII por gastos rechazados + ingresos no declarados |
+| [`privacidad-01-brecha-datos`](privacidad-01-brecha-datos.md) | Privacidad | Intermedio | Brecha de seguridad con 250.000 registros — protocolo pre y post Ley 21.719 |
+| [`familia-01-divorcio-bienes-mismo-sexo`](familia-01-divorcio-bienes-mismo-sexo.md) | Familia | Intermedio | Divorcio matrimonio igualitario + liquidación bienes (régimen post-21.400) |
+| [`penal-01-defensa-formalizacion-delito-economico`](penal-01-defensa-formalizacion-delito-economico.md) | Penal | Avanzado | Defensa gerente formalizado por delito tributario doloso + admón desleal (Ley 21.595) |
 
 ## Estructura canónica
 
