@@ -83,3 +83,7 @@ estado: pendiente-de-validador | validador-revisó | descartada
 | `ley-21595-delitos-economicos` | [#11](https://github.com/diazaraujo/claude-for-legal-chile/issues/11) | pendiente-de-validador |
 | `codigo-trabajo` | [#12](https://github.com/diazaraujo/claude-for-legal-chile/issues/12) | pendiente-de-validador |
 | `ley-21561-reduccion-jornada` | [#12](https://github.com/diazaraujo/claude-for-legal-chile/issues/12) | pendiente-de-validador |
+| `ley-19628-proteccion-datos` | [#9](https://github.com/diazaraujo/claude-for-legal-chile/issues/9) | pendiente-de-validador |
+| `ley-21400-matrimonio-igualitario` | [#13](https://github.com/diazaraujo/claude-for-legal-chile/issues/13) | pendiente-de-validador |
+| `ley-14908-alimentos` | [#13](https://github.com/diazaraujo/claude-for-legal-chile/issues/13) | pendiente-de-validador |
+| `ley-19880-procedimiento-administrativo` | [#15](https://github.com/diazaraujo/claude-for-legal-chile/issues/15) | pendiente-de-validador |
