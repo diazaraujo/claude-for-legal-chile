@@ -40,13 +40,37 @@ python3 chile/scripts/audit/check-frontmatter.py
 
 **Sin dependencias externas**: stdlib pura Python 3.11+.
 
+### `check-links.py`
+
+Audita **links Markdown internos** en todo el corpus + perfiles +
+skills + ejemplos + audits + capa 1 catálogo.
+
+Para cada `[texto](ruta.md)`:
+
+1. Resuelve la ruta relativa contra el archivo origen.
+2. Verifica que el archivo destino exista en el repo.
+3. Reporta links rotos como ERROR.
+
+Ignora:
+- URLs externas (`http`, `https`, `mailto`, etc.).
+- Anchors solos (`#section`).
+
+**Uso**:
+
+```bash
+cd <repo-root>
+python3 chile/scripts/audit/check-links.py
+```
+
+Cobertura típica: ~12.700 archivos Markdown (capa 1 incluida).
+
+**Sin dependencias externas**: stdlib pura.
+
 ## Pendientes Fase 4-5
 
 - `check-bcn-urls.py` — verifica URLs BCN contra fuente oficial
   cuando BCN responda. Comparara `titulo_oficial` del frontmatter
   con título oficial extraído de BCN.
-- `check-links.py` — verifica que los links Markdown internos
-  (`[name](path.md)`) apunten a archivos existentes.
 - `check-vigencias.py` — alerta sobre normas con vigencia escalonada
   cuya fecha límite se aproxima.
 

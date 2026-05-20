@@ -1,0 +1,45 @@
+name: Audit corpus
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'chile/normativa/**'
+      - 'chile/scripts/audit/**'
+      - '.github/workflows/audit.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'chile/normativa/**'
+      - 'chile/scripts/audit/**'
+
+jobs:
+  frontmatter:
+    name: Frontmatter consistency
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run check-frontmatter.py
+        run: |
+          python3 chile/scripts/audit/check-frontmatter.py
+
+  links:
+    name: Internal Markdown links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run check-links.py
+        run: |
+          python3 chile/scripts/audit/check-links.py

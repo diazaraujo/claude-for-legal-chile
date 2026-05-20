@@ -85,7 +85,7 @@ defensa.
 - Confirmar el régimen exacto para Categoría 1 (prohibición absoluta vs
   excepciones).
 - Documentar para Categorías 2-4.
-- Vincular con [`ley-19640-ministerio-publico`](ley-19640-ministerio-publico.md)
+- Vincular con [`ley-19640-ministerio-publico`](../normativa/leyes/ley-19640-ministerio-publico.md)
   (Unidad Especializada Delitos Económicos).
 
 ## Hallazgos técnicos
