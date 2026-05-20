@@ -172,23 +172,50 @@ class BCNClient:
         return xml_content
 
     def parse_metadata(self, xml_content: str) -> NormaMetadata:
-        """Extrae metadata del XML."""
+        """Extrae metadata del XML siguiendo el esquema oficial BCN.
+
+        El esquema BCN tiene:
+        - Root <Norma> con atributos: normaId, fechaVersion, derogado, esTratado.
+        - <Identificador fechaPromulgacion fechaPublicacion>
+          - <TiposNumeros>/<TipoNumero>/<Tipo> + <Numero>
+          - <Organismos>/<Organismo>
+        - <Metadatos>
+          - <TituloNorma>
+        """
         root = ET.fromstring(xml_content)
 
-        def find_text(path: str) -> Optional[str]:
-            el = root.find(path, NS)
-            if el is None or el.text is None:
-                return None
-            return el.text.strip()
+        # ID + estado de vigencia desde atributos del root
+        id_norma = root.get("normaId", "")
+        derogado = root.get("derogado", "")  # "no derogado" o "derogado"
+        vigencia = "vigente" if "no derogado" in derogado else "derogada"
 
-        # Identificadores varían según versión del XML BCN
-        id_norma = find_text("lc:Identificador/lc:IdNorma") or ""
-        tipo = find_text("lc:Identificador/lc:TipoNorma")
-        numero = find_text("lc:Identificador/lc:Numero")
-        titulo = find_text("lc:Identificador/lc:Titulo")
-        fecha = find_text("lc:Identificador/lc:FechaPublicacion")
-        organismo = find_text("lc:Identificador/lc:Organismo")
-        vigencia = find_text("lc:Identificador/lc:Vigencia") or "vigente"
+        # Identificador + fecha publicación + tipo/numero/organismo
+        ident = root.find("lc:Identificador", NS)
+        fecha_publicacion = (
+            ident.get("fechaPublicacion") if ident is not None else None
+        )
+
+        tipo = None
+        numero = None
+        organismo = None
+        if ident is not None:
+            tipo_el = ident.find("lc:TiposNumeros/lc:TipoNumero/lc:Tipo", NS)
+            num_el = ident.find("lc:TiposNumeros/lc:TipoNumero/lc:Numero", NS)
+            if tipo_el is not None and tipo_el.text:
+                tipo = tipo_el.text.strip()
+            if num_el is not None and num_el.text:
+                numero = num_el.text.strip()
+            org_el = ident.find("lc:Organismos/lc:Organismo", NS)
+            if org_el is not None and org_el.text:
+                organismo = org_el.text.strip()
+
+        # TituloNorma en Metadatos
+        titulo = None
+        meta = root.find("lc:Metadatos", NS)
+        if meta is not None:
+            t = meta.find("lc:TituloNorma", NS)
+            if t is not None and t.text:
+                titulo = t.text.strip()
 
         url = f"{BCN_NAVEGAR}?idNorma={id_norma}"
 
@@ -197,7 +224,7 @@ class BCNClient:
             tipo=tipo,
             numero=numero,
             titulo=titulo,
-            fecha_publicacion=fecha,
+            fecha_publicacion=fecha_publicacion,
             organismo=organismo,
             vigencia=vigencia,
             url_consulta=url,

@@ -43,30 +43,50 @@ def test_cached_xml_returns_none_when_missing(tmp_path: Path) -> None:
     assert client._cached_xml("noexiste") is None
 
 
-def test_parse_metadata_minimal_xml(tmp_path: Path) -> None:
+def test_parse_metadata_real_schema(tmp_path: Path) -> None:
+    """Parser sigue esquema oficial BCN."""
     client = make_client(tmp_path)
     xml = """<?xml version="1.0" encoding="UTF-8"?>
-<Norma xmlns="http://www.leychile.cl/esquemas">
-  <Identificador>
-    <IdNorma>1075210</IdNorma>
-    <TipoNorma>LEY</TipoNorma>
-    <Numero>21400</Numero>
-    <Titulo>Matrimonio Igualitario</Titulo>
-    <FechaPublicacion>2021-12-10</FechaPublicacion>
-    <Organismo>Ministerio de Justicia</Organismo>
-    <Vigencia>vigente</Vigencia>
+<Norma xmlns="http://www.leychile.cl/esquemas" normaId="141599" fechaVersion="2022-11-10" derogado="no derogado" esTratado="no tratado">
+  <Identificador fechaPromulgacion="1999-08-18" fechaPublicacion="1999-08-28">
+    <TiposNumeros>
+      <TipoNumero>
+        <Tipo>Ley</Tipo>
+        <Numero>19628</Numero>
+      </TipoNumero>
+    </TiposNumeros>
+    <Organismos>
+      <Organismo>MINISTERIO SECRETARIA GENERAL DE LA PRESIDENCIA</Organismo>
+    </Organismos>
   </Identificador>
+  <Metadatos>
+    <TituloNorma>SOBRE PROTECCION DE LA VIDA PRIVADA</TituloNorma>
+  </Metadatos>
 </Norma>
 """
     meta = client.parse_metadata(xml)
     assert isinstance(meta, NormaMetadata)
-    assert meta.id_norma == "1075210"
-    assert meta.tipo == "LEY"
-    assert meta.numero == "21400"
-    assert meta.titulo == "Matrimonio Igualitario"
-    assert meta.fecha_publicacion == "2021-12-10"
+    assert meta.id_norma == "141599"
+    assert meta.tipo == "Ley"
+    assert meta.numero == "19628"
+    assert meta.titulo == "SOBRE PROTECCION DE LA VIDA PRIVADA"
+    assert meta.fecha_publicacion == "1999-08-28"
     assert meta.vigencia == "vigente"
-    assert "1075210" in meta.url_consulta
+    assert "141599" in meta.url_consulta
+    assert "PRESIDENCIA" in (meta.organismo or "")
+
+
+def test_parse_metadata_derogada(tmp_path: Path) -> None:
+    """Cuando atributo derogado != 'no derogado', vigencia es derogada."""
+    client = make_client(tmp_path)
+    xml = """<?xml version="1.0" encoding="UTF-8"?>
+<Norma xmlns="http://www.leychile.cl/esquemas" normaId="1" derogado="derogado">
+  <Identificador fechaPublicacion="1980-01-01"/>
+  <Metadatos><TituloNorma>Norma de prueba</TituloNorma></Metadatos>
+</Norma>
+"""
+    meta = client.parse_metadata(xml)
+    assert meta.vigencia == "derogada"
 
 
 def test_parse_estructura_returns_partes(tmp_path: Path) -> None:
@@ -126,12 +146,9 @@ def test_parse_estructura_handles_nesting(tmp_path: Path) -> None:
 def test_check_vigencia_uses_metadata(tmp_path: Path) -> None:
     client = make_client(tmp_path)
     xml = """<?xml version="1.0" encoding="UTF-8"?>
-<Norma xmlns="http://www.leychile.cl/esquemas">
-  <Identificador>
-    <IdNorma>9999</IdNorma>
-    <Titulo>Ejemplo</Titulo>
-    <Vigencia>vigente</Vigencia>
-  </Identificador>
+<Norma xmlns="http://www.leychile.cl/esquemas" normaId="9999" derogado="no derogado">
+  <Identificador fechaPublicacion="2020-01-01"/>
+  <Metadatos><TituloNorma>Ejemplo</TituloNorma></Metadatos>
 </Norma>
 """
     client._cache_xml("9999", xml)
@@ -139,3 +156,4 @@ def test_check_vigencia_uses_metadata(tmp_path: Path) -> None:
     assert result["id_norma"] == "9999"
     assert result["vigente"] is True
     assert result["vigencia_declarada"] == "vigente"
+    assert result["titulo"] == "Ejemplo"
