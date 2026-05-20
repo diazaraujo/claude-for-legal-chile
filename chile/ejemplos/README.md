@@ -17,6 +17,9 @@
 | [`privacidad-01-brecha-datos`](privacidad-01-brecha-datos.md) | Privacidad | Intermedio | Brecha de seguridad con 250.000 registros — protocolo pre y post Ley 21.719 |
 | [`familia-01-divorcio-bienes-mismo-sexo`](familia-01-divorcio-bienes-mismo-sexo.md) | Familia | Intermedio | Divorcio matrimonio igualitario + liquidación bienes (régimen post-21.400) |
 | [`penal-01-defensa-formalizacion-delito-economico`](penal-01-defensa-formalizacion-delito-economico.md) | Penal | Avanzado | Defensa gerente formalizado por delito tributario doloso + admón desleal (Ley 21.595) |
+| [`civil-01-vicios-ocultos-inmueble`](civil-01-vicios-ocultos-inmueble.md) | Civil | Intermedio | Vicios ocultos en compraventa con financiamiento: triple vía CC redhibitoria + Ley 21.484 + LPC |
+| [`administrativo-01-cese-contrata-confianza-legitima`](administrativo-01-cese-contrata-confianza-legitima.md) | Administrativo | Intermedio | Cese funcionaria contrata tras 7 años (doctrina confianza legítima + dictamen CGR) |
+| [`concursal-01-reorganizacion-vs-liquidacion`](concursal-01-reorganizacion-vs-liquidacion.md) | Concursal | Avanzado | Empresa insolvente $1.200M pasivos: análisis comparativo reorganización vs liquidación |
 
 ## Estructura canónica
 
