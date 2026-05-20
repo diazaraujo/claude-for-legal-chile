@@ -20,6 +20,27 @@ estado: pendiente-de-validador
 
 ## Hallazgos críticos
 
+### H0 — URLs apuntando a normas DISTINTAS (errores reales)
+
+Verificación contra BCN (vía `chile/scripts/audit/check-bcn-urls.py`,
+ejecutada el 2026-05-20) detectó 2 perfiles cuya URL apunta a normas
+COMPLETAMENTE DIFERENTES a la declarada:
+
+| Perfil | URL declarada | Norma real en BCN | Status |
+|---|---|---|---|
+| `ley-21400-matrimonio-igualitario` | `idNorma=1170048` | "RECONOCE HUMEDAL URBANO DE LINARES" (Decreto 1183 Exenta) | ERROR REAL |
+| `ley-21643-acoso-laboral` | (URL del frontmatter) | "MODIFICA DECRETO SUPREMO Nº 53 DE 2011" (Decreto 124) | ERROR REAL |
+
+**Acción sugerida**:
+- Buscar IDs correctos en BCN (`bcn.cl/leychile`) por búsqueda de
+  título.
+- Corregir URLs en frontmatter.
+- Re-correr `check-bcn-urls.py` para confirmar.
+
+**Nota crítica**: el catálogo capa 1 del corpus NO incluye Ley 21.400
+ni Ley 21.643 (gaps del scrape original). Una pasada de re-scrape
+selectivo sería útil para tener los IDs correctos.
+
 ### H1 — id=172986 compartido entre 2 archivos
 
 | Archivo | Norma declarada |
