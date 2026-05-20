@@ -1,6 +1,8 @@
 # MCP connectors para Claude Legal Chile
 
-> **Estado**: roadmap Fase 4. Sin implementación productiva aún.
+> **Estado MVP**: `mcp-bcn-leychile` implementado en `src/mcp_bcn_leychile/`.
+> 3 tools funcionales (bcn_get_norma, bcn_check_vigencia, bcn_get_xml).
+> Cache SQLite local + rate limiting. 7 tests offline en verde.
 
 Conectores [Model Context Protocol](https://modelcontextprotocol.io)
 que permitirán a Claude (y otros agentes compatibles) consultar fuentes
@@ -60,75 +62,76 @@ Ver [ADR-0003 interno](../../decisions/) para racionale completo.
 | `mcp-tribunales-ambientales` | TA | tribunalambiental.cl |
 | `mcp-fne-resoluciones` | FNE | fne.gob.cl |
 
-## MVP: `mcp-bcn-leychile`
+## MVP implementado: `mcp-bcn-leychile`
 
 Primer connector. Razones: fuente pública sin auth, reutiliza scripts
 existentes (`scripts/bcn/`), alto valor inmediato.
 
-### Diseño tentativo
+### Instalación
 
-#### Tools
-
-```python
-def bcn_get_norma(id_norma: str) -> dict:
-    """Recupera norma por ID BCN.
-    
-    Args:
-        id_norma: ID numérico BCN (ej. "1075210" = Ley 21.400).
-    
-    Returns:
-        dict con: titulo, tipo, numero, fecha_publicacion,
-        ultima_modificacion, vigencia, texto_consolidado, url_canonica.
-    """
-
-def bcn_search(query: str, tipo: str | None = None,
-               desde: str | None = None, hasta: str | None = None) -> list[dict]:
-    """Busca normas por keyword.
-    
-    Args:
-        query: palabra clave (ej. "acoso laboral").
-        tipo: filtro por tipo (ley, dl, dfl, cod, tra, aa).
-        desde, hasta: rango de fechas (YYYY-MM-DD).
-    
-    Returns:
-        lista de matches con metadata básica.
-    """
-
-def bcn_get_xml_structure(id_norma: str) -> dict:
-    """Recupera estructura jerárquica desde XML LeyChile.
-    
-    Returns:
-        dict con árbol libro/título/parte/artículo con texto + número.
-    """
-
-def bcn_check_vigencia(id_norma: str) -> dict:
-    """Verifica si la norma está vigente al día de hoy.
-    
-    Returns:
-        dict con: vigente (bool), fecha_consulta, ultima_modificacion,
-        derogada_por (slug si aplica), reemplazada_por (slug si aplica).
-    """
+```bash
+cd chile/scripts/mcp
+pip install -e .
 ```
 
-#### Resources
+Requiere Python 3.11+ y el paquete `mcp` (Anthropic SDK).
 
-- `bcn-leychile://catalog` — índice navegable por tipo.
-- `bcn-leychile://norma/{id}` — recuperación directa.
-- `bcn-leychile://search?q={q}&tipo={tipo}` — búsqueda parametrizada.
+### Tools expuestos
 
-#### Caching
+#### `bcn_get_norma(id_norma, force_refresh=False)`
 
-- **SQLite local** con TTL por tipo de dato:
-  - Catálogo (metadata): TTL 30 días.
-  - Estructura XML: TTL 7 días.
-  - Vigencia: TTL 1 día (más sensible al tiempo).
-- **Invalidación manual** vía tool `bcn_refresh(id_norma)`.
+Recupera metadata + estructura jerárquica de una norma desde BCN.
 
-#### Rate limiting
+Devuelve JSON con: `id_norma`, `tipo`, `numero`, `titulo_oficial`,
+`fecha_publicacion`, `organismo`, `vigencia`, `url_consulta`, `estructura`
+(lista de partes con tipo_parte, numero, titulo, texto, hijos).
 
-- Máximo **1 req/segundo** a BCN.
-- Backoff exponencial en 429.
+#### `bcn_check_vigencia(id_norma)`
+
+Verifica si la norma está vigente al día de hoy según BCN. Devuelve
+`vigente` (bool), `vigencia_declarada`, `fecha_consulta`, `fuente`.
+
+#### `bcn_get_xml(id_norma, force_refresh=False)`
+
+XML estructural completo (útil para parseo avanzado por el cliente).
+
+### Caching
+
+- **SQLite local** en `~/.cache/mcp-bcn-leychile/cache.db`.
+- TTL XML: 7 días (la normativa cambia lento).
+- Invalidación via `force_refresh=True`.
+
+### Rate limiting
+
+- 1 req/segundo a BCN (configurable).
 - User-Agent: `claude-legal-chile-mcp/0.1 (unholster.com)`.
+
+### Tests
+
+```bash
+cd chile/scripts/mcp
+python3 -m pytest tests/    # con pytest
+```
+
+Tests offline (fixtures XML embebidas). 7 tests verdes al 2026-05-20.
+
+### Uso con Claude Code
+
+Agregar al `~/.config/claude-code/mcp.json` (o equivalente):
+
+```json
+{
+  "mcpServers": {
+    "bcn-leychile": {
+      "command": "mcp-bcn-leychile",
+      "args": []
+    }
+  }
+}
+```
+
+Claude invocará los tools automáticamente cuando una consulta requiera
+verificación contra BCN.
 
 ## Composición con el corpus estático
 
