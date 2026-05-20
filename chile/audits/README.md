@@ -102,3 +102,9 @@ estado: pendiente-de-validador | validador-revisó | descartada
 | `ley-21234-fraude-tarjetas` | [#21](https://github.com/diazaraujo/claude-for-legal-chile/issues/21) | pendiente-de-validador |
 | `ley-21521-fintec` | [#21](https://github.com/diazaraujo/claude-for-legal-chile/issues/21) | pendiente-de-validador |
 | `ley-18045-mercado-valores` | [#21](https://github.com/diazaraujo/claude-for-legal-chile/issues/21) | pendiente-de-validador |
+| `dfl-725-codigo-sanitario` | [#17](https://github.com/diazaraujo/claude-for-legal-chile/issues/17) | pendiente-de-validador |
+| `ley-19966-auge-ges` | [#17](https://github.com/diazaraujo/claude-for-legal-chile/issues/17) | pendiente-de-validador |
+| `ley-21030-aborto-tres-causales` | [#17](https://github.com/diazaraujo/claude-for-legal-chile/issues/17) | pendiente-de-validador |
+| `ley-20584-derechos-deberes-paciente` | [#17](https://github.com/diazaraujo/claude-for-legal-chile/issues/17) | pendiente-de-validador |
+| `ley-21331-salud-mental` | [#17](https://github.com/diazaraujo/claude-for-legal-chile/issues/17) | pendiente-de-validador |
+| `ley-19378-aps-municipal-salud` | [#17](https://github.com/diazaraujo/claude-for-legal-chile/issues/17) | pendiente-de-validador |
