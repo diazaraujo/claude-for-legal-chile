@@ -3,6 +3,58 @@
 Cambios al contenido de `chile/`. Para cambios del upstream ver `git log` con
 `upstream/main`.
 
+## 0.7.1 — 2026-05-21 — Resolver batch + dedupe canonical + bug Virtuoso
+
+### Resolver bcn_uri masivo (batch SPARQL VALUES)
+
+- `resolver-bcn-uri-batch.py`: una query con `VALUES ?c { ... }` resuelve
+  hasta 50 leychile_codes a la vez. **63/66 perfiles capa 3 huérfanos
+  resueltos en 4 segundos** (vs ~80s/perfil del approach 1-por-1).
+- Filtros: `!REGEX("/es@")` excluye versiones, `!REGEX("/proyecto-de-ley/")`
+  excluye URIs de proyectos (cuando misma leychile_code apunta a proyecto
+  + ley promulgada).
+
+### Bug Virtuoso descubierto
+
+`SELECT ?n LIMIT 1` con duplicados internos puede devolver 0 results.
+Solución: `SELECT DISTINCT ?n`. Documentado en
+[reference-bcn-sparql-endpoint](memoria persistente).
+
+### Otros findings técnicos
+
+- `leychileCode` es `xsd:integer` (no string) — query con literal
+  `"123"` NO matchea; usar `FILTER (str(?c) = "...")` o VALUES.
+- Muchas URIs del grafo no tienen `rdfs:label` propio (referencias
+  no entidades). `?n rdfs:label ?label .` REQUIRED filtra los huérfanos.
+- BCN inconsistencia separadores: `_` y `-` para mismo organismo.
+  Canonicalizar para dedup.
+
+### Dedupe canónico (-696 archivos)
+
+`dedupe-catalogo.py` mejorado con canonical_uri():
+- quita `/es@YYYY-MM-DD`
+- normaliza `_` → `-`
+
+Detecta 687 grupos vs 113 del dedupe anterior. Catalog ahora 20.839
+archivos.
+
+### Cleanup pendientes verificación BCN
+
+8 perfiles que tenían `fuente_oficial_status: pendiente-verificacion-bcn`
+ahora con bcn_uri canónico via resolver. Disclaimer removido.
+
+### URI fix: idNorma 172986 era DFL refundido
+
+- Código Civil: idNorma 172986 → **1973** + `texto_refundido_dfl: 172986`
+- Ley 14908: idNorma 172986 → **27977** + `texto_refundido_dfl: 172986`
+
+### Scrape selectivo URIs grafo (corriendo)
+
+`scrape-sparql-uris-grafo.py`: scrapea SOLO las URIs del grafo BCN no
+presentes en catálogo (~80k pendientes vs 322k scrape masivo). Batch
+SPARQL VALUES, ~1.5 URI/s steady. Subida densidad grafo 3.0% → 4.4%
+con 15% completo.
+
 ## 0.7.0 — 2026-05-21 — Grafo BCN completo + backlog capa 3 priorizado
 
 ### Grafo BCN (pilar 2 cerrado)
