@@ -36,6 +36,23 @@ grafo_relaciones:
     - ley/ministerio-secretaria-general-de-gobierno/2015-04-21/20830
   reglamentada_por:
     - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2005-09-22/142
+  acuerda_con:
+    - cir/ministerio-de-hacienda-unidad-de-analisis-financiero-direccion/2016-02-27/54
+    - dl/ministerio-del-interior/1980-08-11/3464
+    - dto/ministerio-del-interior-y-seguridad-publica-subsecretaria-del-interior/2014-10-27/1436
+    - dto/ministerio-del-interior/1975-08-26/890
+    - dto/ministerio-secretaria-general-de-la-presidencia/2005-09-22/100
+    - ley/ministerio-de-hacienda/2003-12-18/19913
+    - ley/ministerio-de-justicia-y-derechos-humanos/2020-04-17/21228
+    - ley/ministerio-de-justicia/1986-01-07/18488
+    - ley/ministerio-de-justicia/1987-01-24/18596
+    - ley/ministerio-de-justicia/1990-05-14/18978
+    - ley/ministerio-de-justicia/1991-02-14/19047
+    - ley/ministerio-de-justicia/1991-04-01/19055
+    - ley/ministerio-de-justicia/1992-11-04/19172
+    - ley/ministerio-de-justicia/2012-06-01/20588
+    - ley/ministerio-del-interior/1958-08-06/12927
+    - ley/ministerio-del-interior/1986-12-19/18585
 
 ---
 

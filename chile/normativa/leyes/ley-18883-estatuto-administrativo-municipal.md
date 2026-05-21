@@ -49,6 +49,27 @@ grafo_relaciones:
     - dfl/ministerio-del-interior/1994-09-30/287
   reglamentada_por:
     - dto/ministerio-del-interior-y-seguridad-publica/2017-02-07/1675
+  acuerda_con:
+    - aa/corte-suprema/2016-01-16/s/n
+    - dfl/ministerio-de-hacienda/1960-04-06/338
+    - dfl/ministerio-de-hacienda/2005-03-16/29
+    - dfl/ministerio-de-salud/2001-11-20/1
+    - dfl/ministerio-del-interior/1994-05-10/2
+    - dfl/ministerio-del-interior/1994-05-11/3
+    - dfl/ministerio-del-interior/1994-05-11/5
+    - dfl/ministerio-del-interior/1994-05-12/12
+    - dfl/ministerio-del-interior/1994-05-12/7
+    - dfl/ministerio-del-interior/1994-05-13/13
+    - dfl/ministerio-del-interior/1994-05-13/15
+    - dfl/ministerio-del-interior/1994-05-23/4
+    - dfl/ministerio-del-interior/1994-05-23/6
+    - dfl/ministerio-del-interior/1994-05-23/9
+    - dfl/ministerio-del-interior/1994-05-24/1
+    - dfl/ministerio-del-interior/1994-06-06/10
+    - dfl/ministerio-del-interior/1994-06-16/14
+    - dfl/ministerio-del-interior/1994-07-20/24
+    - dfl/ministerio-del-interior/1994-07-20/50
+    - dfl/ministerio-del-interior/1994-07-20/86
 
 ---
 

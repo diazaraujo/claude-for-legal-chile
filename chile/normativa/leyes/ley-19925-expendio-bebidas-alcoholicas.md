@@ -40,6 +40,27 @@ grafo_relaciones:
     - ley/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2005-07-01/20033
   reglamentada_por:
     - dto/ministerio-de-salud/2005-08-24/172
+  acuerda_con:
+    - dfl/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-transportes-ministerio-de-justicia-subsecretaria-de-justicia/2009-10-29/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2000-01-11/2
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2002-05-03/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
+    - dto/ministerio-de-justicia/1978-05-23/307
+    - dto/ministerio-de-justicia/2004-02-13/774-exento
+    - dto/ministerio-del-interior-y-seguridad-publica/2016-10-21/1323
+    - dto/ministerio-del-interior-y-seguridad-publica/2017-09-14/964
+    - dto/ministerio-del-interior-y-seguridad-publica/2018-08-18/1072
+    - dto/ministerio-del-interior-y-seguridad-publica-subsecretaria-del-interior/2015-07-24/794
+    - dto/ministerio-del-interior-y-seguridad-publica-subsecretaria-del-interior/2018-10-05/1086
+    - dto/ministerio-del-interior-y-seguridad-publica-subsecretaria-del-interior/2018-12-13/1434
+    - dto/ministerio-del-interior-y-seguridad-publica-subsecretaria-del-interior/2019-07-18/253
+    - dto/ministerio-del-interior-y-seguridad-publica-subsecretaria-del-interior/2019-09-05/233
+    - dto/ministerio-del-interior-y-seguridad-publica-subsecretaria-del-interior/2019-12-13/413
+    - dto/ministerio-del-interior/1992-08-27/662
+    - dto/ministerio-del-interior-subsecretaria-del-interior/2004-05-11/409
+    - dto/municipalidad-de-aysen/2019-01-10/1
+    - dto/municipalidad-de-curacautin/2019-01-30/s/n
+    - dto/municipalidad-de-las-condes/2005-01-14/76
 
 ---
 

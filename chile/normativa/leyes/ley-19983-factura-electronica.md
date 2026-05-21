@@ -31,6 +31,11 @@ grafo_relaciones:
   reglamentada_por:
     - dto/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-economia-y-empresas-de-menor-tamano/2019-05-02/52
     - dto/ministerio-de-hacienda/2005-04-13/93
+  acuerda_con:
+    - cir/ministerio-de-hacienda-comision-para-el-mercado-financiero/2020-08-28/bancos-2267
+    - ley/ministerio-de-economia-fomento-y-turismo/2019-12-12/21193
+    - ley/ministerio-de-justicia/1982-01-14/18092
+    - ley/ministerio-de-justicia/1984-02-07/18287
 
 ---
 

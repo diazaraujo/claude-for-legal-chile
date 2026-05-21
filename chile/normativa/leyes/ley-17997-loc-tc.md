@@ -31,6 +31,23 @@ grafo_relaciones:
     - dfl/ministerio-secretaria-general-de-la-presidencia/2010-08-10/5
   rectificada_por:
     - rec/ministerio-de-hacienda/1981-08-13/654
+  acuerda_con:
+    - aa/tribunal-constitucional/1982-01-15/s/n
+    - aa/tribunal-constitucional/1982-05-10/s/n
+    - aa/tribunal-constitucional/2009-12-03/s/n
+    - acd/tribunal-constitucional/1997-03-04/s/n
+    - acd/tribunal-constitucional/2010-01-11/s/n
+    - cod/ministerio-de-justicia/1943-07-09/orgánico-de-tribunales
+    - dl/ministerio-del-interior/1980-08-11/3464
+    - dto/ministerio-secretaria-general-de-la-presidencia/2005-09-22/100
+    - dto/ministerio-secretaria-general-de-la-presidencia/2013-03-18/15
+    - dto/ministerio-secretaria-general-de-la-presidencia/2013-03-18/16
+    - ley/ministerio-de-hacienda/1982-06-19/18134
+    - ley/ministerio-de-justicia/1902-08-30/1552
+    - ley/ministerio-de-justicia/1906-02-19/1853
+    - ley/ministerio-de-justicia/1943-07-09/7421
+    - ley/ministerio-secretaria-general-de-la-presidencia/2006-01-05/20088
+    - res/tribunal-constitucional/2010-04-17/s/n
 
 ---
 

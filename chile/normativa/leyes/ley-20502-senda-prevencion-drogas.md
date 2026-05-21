@@ -35,6 +35,24 @@ grafo_relaciones:
     - ley/ministerio-del-interior-y-seguridad-publica-subsecretaria-del-interior/2014-12-31/20801
   reglamentada_por:
     - dto/ministerio-del-interior-y-seguridad-publica/2018-03-17/867
+  acuerda_con:
+    - dfl/ministerio-de-hacienda/2005-03-16/29
+    - dfl/ministerio-del-interior-y-seguridad-publica-subsecretaria-del-interior/2011-05-31/1
+    - dfl/ministerio-del-interior-y-seguridad-publica-subsecretaria-del-interior/2011-08-30/3
+    - dfl/ministerio-del-interior-y-seguridad-publica-subsecretaria-del-interior/2011-08-31/2
+    - dl/ministerio-de-hacienda/1974-01-05/249
+    - dl/ministerio-del-trabajo-y-prevision-social/1980-11-13/3500
+    - dto/ministerio-de-hacienda/2011-11-25/1423
+    - dto/ministerio-del-interior-y-seguridad-publica-subsecretaria-de-prevencion-del-delito/2014-11-12/1814
+    - dto/ministerio-del-interior-y-seguridad-publica-subsecretaria-del-interior/2018-12-04/1364
+    - dto/ministerio-del-interior-y-seguridad-publica-subsecretaria-del-interior/2020-04-01/103
+    - dto/ministerio-del-interior-y-seguridad-publica-subsecretaria-del-interior/2020-07-31/261-exento
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2012-06-04/33-exento
+    - dto/ministerio-secretaria-general-de-la-presidencia/2005-09-22/100
+    - ley/ministerio-de-hacienda/1965-07-10/16271
+    - ley/ministerio-de-hacienda/2003-06-23/19882
+    - ley/ministerio-del-interior/1989-09-23/18834
+    - res/ministerio-del-interior-y-seguridad-publica-intendencia-regional-xiii-region-metropolitana/2017-06-06/792-exenta
 
 ---
 

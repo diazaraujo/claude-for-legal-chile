@@ -49,6 +49,27 @@ grafo_relaciones:
     - ley/ministerio-de-hacienda/2019-05-24/21158
   reglamentada_por:
     - dto/ministerio-de-justicia/2010-10-23/722
+  acuerda_con:
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2007-06-23/34
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2007-07-14/38
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2008-09-10/48
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2007-06-14/bancos-3391
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2007-06-21/bancos-3392
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2007-08-08/bancos-3401
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2007-08-31/bancos-3403
+    - cir/servicio-de-impuestos-internos-direccion-nacional/2007-11-16/58
+    - cod/ministerio-de-justicia/1855-12-14/1855
+    - cod/ministerio-de-justicia/1874-11-12/PENAL
+    - cod/ministerio-de-justicia/1874-11-12/penal
+    - cod/ministerio-de-justicia/1943-07-09/orgánico-de-tribunales
+    - dfl/ministerio-de-hacienda/1960-04-04/252
+    - dfl/ministerio-de-hacienda/1997-12-19/3
+    - dfl/ministerio-de-justicia/1996-12-26/2
+    - dfl/ministerio-de-justicia/2000-05-30/1
+    - dfl/ministerio-de-obras-publicas/1989-06-21/382
+    - dfl/ministerio-de-obras-publicas/1991-09-04/164
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2000-01-11/2
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2002-05-03/1
 
 ---
 

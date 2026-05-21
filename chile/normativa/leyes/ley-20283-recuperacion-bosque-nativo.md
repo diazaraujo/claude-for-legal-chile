@@ -33,6 +33,18 @@ grafo_relaciones:
     - dto/ministerio-de-agricultura-subsecretaria-de-agricultura/2009-10-05/93
     - dto/ministerio-de-agricultura-subsecretaria-de-agricultura/2009-10-05/95
     - dto/ministerio-de-agricultura-subsecretaria-de-agricultura/2009-10-05/96
+  acuerda_con:
+    - dto/ministerio-de-agricultura/2008-11-25/88
+    - dto/ministerio-de-agricultura/2011-08-31/41
+    - dto/ministerio-de-agricultura/2013-10-19/46
+    - dto/ministerio-de-agricultura/2014-08-30/104
+    - dto/ministerio-de-agricultura/2015-08-31/26
+    - dto/ministerio-de-agricultura/2016-08-31/203
+    - dto/ministerio-de-agricultura/2017-08-31/24
+    - dto/ministerio-de-agricultura/2019-08-31/18
+    - res/ministerio-de-agricultura/2015-03-18/68-exenta
+    - res/ministerio-de-agricultura/2020-03-17/93-exenta
+    - res/ministerio-de-agricultura-subsecretaria-de-agricultura/2009-11-11/381-exenta
 
 ---
 

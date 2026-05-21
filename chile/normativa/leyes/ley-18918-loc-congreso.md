@@ -39,6 +39,20 @@ grafo_relaciones:
   rectifica:
     - dl/ministerio-del-interior/1980-08-11/3464
     - dto/ministerio-secretaria-general-de-la-presidencia/2005-09-22/100
+  acuerda_con:
+    - acd/senado/1994-08-31/s/n
+    - acd/senado/1994-12-21/s/n
+    - dl/ministerio-de-hacienda/1974-02-18/316
+    - dl/ministerio-del-interior/1980-08-11/3464
+    - dto/ministerio-secretaria-general-de-la-presidencia/2005-09-22/100
+    - ley/ministerio-de-hacienda/2003-10-03/19908
+    - ley/ministerio-de-hacienda/2006-09-30/20128
+    - ley/ministerio-de-hacienda/2013-12-31/20716
+    - ley/ministerio-de-hacienda/2015-12-05/20882
+    - ley/ministerio-de-hacienda/2019-12-19/21192
+    - ley/ministerio-del-interior/1987-12-24/18678
+    - ley/ministerio-del-interior/1993-04-30/19212
+    - ley/ministerio-secretaria-general-de-la-presidencia/2006-01-05/20088
 
 ---
 

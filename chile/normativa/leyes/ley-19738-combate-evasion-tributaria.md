@@ -37,6 +37,21 @@ grafo_relaciones:
     - ley/ministerio-de-hacienda/1999-11-13/19646
   modificada_por:
     - ley/ministerio-de-hacienda/2003-11-04/19912
+  acuerda_con:
+    - cci/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2002-03-26/bancos-8
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2001-12-22/94
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2002-03-21/24
+    - dfl/ministerio-de-hacienda/1994-10-26/1
+    - dfl/ministerio-de-hacienda/1998-07-21/2
+    - dfl/ministerio-de-hacienda/2005-06-04/30
+    - dl/ministerio-de-hacienda/1974-12-31/824
+    - dl/ministerio-de-hacienda/1974-12-31/825
+    - dl/ministerio-de-hacienda/1974-12-31/830
+    - dto/ministerio-de-hacienda/1994-07-08/1368
+    - ley/ministerio-de-hacienda/1984-07-17/18320
+    - ley/ministerio-de-hacienda/1999-11-13/19646
+    - ley/ministerio-de-hacienda/2001-07-28/19747
+    - ley/ministerio-del-interior/1990-03-10/18972
 
 ---
 

@@ -27,6 +27,19 @@ grafo_relaciones:
   reglamentada_por:
     - dto/ministerio-de-educacion/2005-08-27/32
     - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2005-03-14/17
+  acuerda_con:
+    - dto/ministerio-de-hacienda/2005-04-30/230
+    - dto/ministerio-de-justicia/2011-12-02/618
+    - ley/ministerio-de-hacienda/2005-09-10/20056
+    - ley/ministerio-de-hacienda/2005-11-30/20079
+    - ley/ministerio-de-hacienda/2006-12-13/20143
+    - ley/ministerio-de-hacienda/2010-12-17/20486
+    - ley/ministerio-de-hacienda/2011-12-16/20559
+    - ley/ministerio-de-hacienda/2014-12-01/20799
+    - ley/ministerio-del-interior-y-seguridad-publica/2015-10-29/20874
+    - ley/ministerio-del-interior-subsecretaria-del-interior/2011-02-05/20496
+    - ley/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2012-12-11/20642
+    - res/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social-instituto-de-prevision-social/2015-12-30/678-exenta
 
 ---
 

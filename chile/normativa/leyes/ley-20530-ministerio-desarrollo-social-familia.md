@@ -36,6 +36,27 @@ grafo_relaciones:
     - dto/ministerio-de-desarrollo-social/2015-11-20/22
     - dto/ministerio-de-desarrollo-social-subsecretaria-de-evaluacion-social/2013-07-11/15
     - res/ministerio-de-desarrollo-social-subsecretaria-de-la-ninez/2018-09-20/4-exenta
+  acuerda_con:
+    - dfl/ministerio-de-hacienda/2005-03-16/29
+    - dfl/ministerio-de-planificacion/2012-03-28/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
+    - dfl/ministerio-secretaria-general-de-la-presidencia/2001-11-17/1
+    - dl/ministerio-de-hacienda/1974-01-05/249
+    - dl/ministerio-de-hacienda/1974-12-31/830
+    - dl/ministerio-de-hacienda/1975-11-28/1263
+    - dto/ministerio-de-desarrollo-social-y-familia-subsecretaria-de-evaluacion-social/2019-10-21/8
+    - dto/ministerio-de-desarrollo-social-y-familia-subsecretaria-de-evaluacion-social/2020-10-28/5
+    - dto/ministerio-de-desarrollo-social-y-familia-subsecretaria-de-evaluacion-social/2020-12-04/8
+    - dto/ministerio-de-desarrollo-social/2017-02-24/3
+    - dto/ministerio-de-desarrollo-social-subsecretaria-de-evaluacion-social/2018-11-09/15
+    - dto/ministerio-de-desarrollo-social-subsecretaria-de-servicios-sociales/2012-10-09/19
+    - dto/ministerio-de-obras-publicas/1996-12-18/900
+    - ley/ministerio-de-desarrollo-social-subsecretaria-de-servicios-sociales/2013-05-31/20670
+    - ley/ministerio-de-hacienda/1981-12-30/18091
+    - ley/ministerio-de-planificacion-y-cooperacion/2004-06-05/19949
+    - ley/ministerio-de-planificacion/2009-09-12/20379
+    - ley/ministerio-de-planificacion/2010-02-10/20422
+    - ley/ministerio-del-interior-subsecretaria-del-interior/1986-12-05/18575
 
 ---
 

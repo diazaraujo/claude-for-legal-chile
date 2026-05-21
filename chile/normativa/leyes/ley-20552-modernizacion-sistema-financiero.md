@@ -29,6 +29,12 @@ grafo_relaciones:
     - ley/ministerio-de-hacienda/1981-10-22/18046
     - ley/ministerio-del-trabajo-y-previsin-social-subsecretara-del-trabajo/2001-05-14/19728
     - ley/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2001-05-14/19728
+  acuerda_con:
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2012-03-21/bancos-3530
+    - cir/ministerio-de-hacienda-superintendencia-de-valores-y-seguros-superintendencia-de-bancos-e-instituciones-financieras/2012-03-21/ncg-330
+    - dl/ministerio-de-hacienda/1980-12-23/3538
+    - dto/ministerio-de-hacienda/2012-12-10/1161
+    - ley/ministerio-de-hacienda/1981-10-22/18045
 
 ---
 

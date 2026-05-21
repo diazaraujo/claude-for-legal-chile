@@ -36,6 +36,27 @@ grafo_relaciones:
     - res/consejo-para-la-transparencia/2020-10-23/230-exenta
     - res/ministerio-del-trabajo-y-prevision-social-direccion-del-trabajo/2015-10-03/1616-exenta
     - res/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo-direccion-del-trabajo/2019-09-11/2032-exenta
+  acuerda_con:
+    - dfl/ministerio-de-justicia/2000-05-30/1
+    - dfl/ministerio-secretaria-general-de-la-presidencia/2017-09-06/3
+    - dto/ministerio-de-agricultura/2011-08-16/416-exento
+    - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-transportes/2011-08-16/1520-exento
+    - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-transportes/2015-02-26/1053-exento
+    - dto/ministerio-del-interior-y-seguridad-publica-subsecretaria-de-desarrollo-regional-y-administrativo/2013-11-05/1317
+    - dto/ministerio-del-interior/2011-08-16/3630-exento
+    - dto/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/1997-03-20/58
+    - dto/ministerio-secretaria-general-de-gobierno/2009-05-26/474-exento
+    - dto/ministerio-secretaria-general-de-gobierno/2012-09-13/30
+    - dto/ministerio-secretaria-general-de-gobierno/2014-07-11/65
+    - dto/ministerio-secretaria-general-de-gobierno/2015-02-27/93
+    - dto/ministerio-secretaria-general-de-gobierno/2016-04-08/1
+    - dto/municipalidad-de-catemu/2013-05-10/2575-exento
+    - dto/municipalidad-de-cerrillos/2011-10-07/1843-exento
+    - dto/municipalidad-de-concepcion/2012-03-17/1
+    - dto/municipalidad-de-isla-de-pascua/2011-10-04/988
+    - dto/municipalidad-de-isla-de-pascua/2011-10-24/989
+    - dto/municipalidad-de-maipu/2011-10-20/5468
+    - dto/municipalidad-de-nogales/2016-07-26/1202
 
 ---
 

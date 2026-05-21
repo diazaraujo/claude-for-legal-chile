@@ -41,6 +41,16 @@ grafo_relaciones:
     - ley/ministerio-de-justicia/2011-08-13/20526
   reglamentada_por:
     - dto/ministerio-de-justicia/2007-04-25/1378
+  acuerda_con:
+    - cer/camara-de-diputados/2005-12-16/s/n
+    - dto/ministerio-de-justicia-y-derechos-humanos/2016-02-04/369-exento
+    - dto/ministerio-de-justicia/2007-06-07/407
+    - dto/ministerio-de-justicia/2007-06-08/419
+    - dto/ministerio-de-justicia/2007-12-14/4069-exento
+    - dto/ministerio-de-justicia/2012-04-18/809
+    - ley/ministerio-de-defensa-nacional/2020-08-17/21250
+    - ley/ministerio-de-justicia-y-derechos-humanos/2019-07-18/21160
+    - ord/ministerio-del-interior-y-seguridad-publica-subsecretaria-del-interior-division-de-carabineros-carabineros-de-chile-direccion-general/2020-07-27/2785
 
 ---
 

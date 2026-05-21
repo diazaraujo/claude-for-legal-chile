@@ -37,6 +37,27 @@ grafo_relaciones:
     - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2002-01-23/49
     - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2002-04-27/250
     - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2009-11-12/91
+  acuerda_con:
+    - cod/ministerio-de-justicia/1855-12-14/1855
+    - cod/ministerio-de-justicia/1874-11-12/PENAL
+    - cod/ministerio-de-justicia/1874-11-12/penal
+    - dfl/ministerio-de-justicia/1996-12-26/2
+    - dfl/ministerio-de-justicia/2000-05-30/1
+    - dfl/ministerio-de-salud-subsecretaria-de-salud-publica/2006-04-24/1
+    - dfl/ministerio-del-trabajo-y-prevision-social/1980-11-29/101
+    - dfl/ministerio-del-trabajo-y-prevision-social/1982-03-25/150
+    - dfl/ministerio-del-trabajo-y-prevision-social/1994-01-24/1
+    - dfl/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2003-01-16/1
+    - dl/ministerio-de-hacienda/1974-12-31/824
+    - dl/ministerio-del-trabajo-y-prevision-social/1980-11-13/3500
+    - dto/ministerio-de-hacienda/2006-02-03/1407
+    - dto/ministerio-de-hacienda/2011-04-19/111
+    - dto/ministerio-de-hacienda/2012-02-13/98
+    - dto/ministerio-de-hacienda/2013-03-08/118
+    - dto/ministerio-de-hacienda/2014-03-13/79
+    - dto/ministerio-de-hacienda/2015-02-28/52
+    - dto/ministerio-de-hacienda/2016-03-24/39
+    - dto/ministerio-de-hacienda/2017-04-04/99
 
 ---
 

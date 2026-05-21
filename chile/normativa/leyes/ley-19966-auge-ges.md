@@ -35,6 +35,27 @@ grafo_relaciones:
     - dto/ministerio-de-salud/2005-09-02/136
     - res/ministerio-de-salud/2005-06-23/344-exenta
     - res/ministerio-de-salud-subsecretaria-de-salud-publica/2006-02-10/58-exenta
+  acuerda_con:
+    - cir/ministerio-de-salud-subsecretaria-de-salud-publica-superintendencia-de-salud-intendencia-de-fondos-y-seguros-previsionales-de-salud/2006-05-11/s/n
+    - cod/ministerio-de-justicia/1874-11-12/PENAL
+    - cod/ministerio-de-justicia/1874-11-12/penal
+    - dfl/ministerio-de-hacienda/1993-08-07/1
+    - dfl/ministerio-de-salud-publica/1968-01-31/725
+    - dfl/ministerio-de-salud-subsecretaria-de-salud-publica/2006-04-24/1
+    - dl/ministerio-de-justicia/1979-09-15/2859
+    - dl/ministerio-de-salud-publica/1977-05-17/1772
+    - dl/ministerio-de-salud-publica/1979-08-03/2763
+    - dl/ministerio-del-interior/1977-04-07/1757
+    - dto/ministerio-de-salud/2005-01-28/170
+    - dto/ministerio-de-salud/2005-04-18/40
+    - dto/ministerio-de-salud/2005-07-08/69
+    - dto/ministerio-de-salud/2016-03-03/3
+    - dto/ministerio-de-salud-subsecretaria-de-salud-publica/2006-01-30/228
+    - dto/ministerio-de-salud-subsecretaria-de-salud-publica/2006-08-07/68
+    - dto/ministerio-de-salud-subsecretaria-de-salud-publica/2008-02-27/79
+    - dto/ministerio-de-salud-subsecretaria-de-salud-publica/2009-07-13/34
+    - dto/ministerio-de-salud-subsecretaria-de-salud-publica/2011-11-19/114
+    - dto/ministerio-de-salud-subsecretaria-de-salud-publica/2013-02-22/4
 
 ---
 

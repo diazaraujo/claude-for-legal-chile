@@ -63,6 +63,27 @@ grafo_relaciones:
     - dto/ministerio-del-trabajo/1981-04-30/50
   rectificada_por:
     - dfl/ministerio-del-trabajo-y-prevision-social/1990-03-08/85
+  acuerda_con:
+    - acd/banco-central-de-chile/1992-01-22/189
+    - acd/banco-central-de-chile/1992-08-21/241
+    - acd/banco-central-de-chile/1995-05-18/424
+    - acd/banco-central-de-chile/1997-04-14/596
+    - acd/banco-central-de-chile-secretaria-general/1981-04-25/1383
+    - acd/banco-central-de-chile-secretaria-general/1981-05-30/1387
+    - acd/banco-central-de-chile-secretaria-general/1992-05-30/218
+    - acd/comision-clasificadora-de-riego-secretaria-administrativa/2015-11-02/s/n
+    - acd/comision-clasificadora-de-riesgo/1994-07-05/6
+    - acd/comision-clasificadora-de-riesgo/1994-09-27/7
+    - acd/comision-clasificadora-de-riesgo/1997-05-02/s/n
+    - acd/comision-clasificadora-de-riesgo/1997-10-01/s/n
+    - acd/comision-clasificadora-de-riesgo/2015-06-27/s/n
+    - acd/comision-clasificadora-de-riesgo/2015-08-12/s/n
+    - acd/comision-clasificadora-de-riesgo/2017-09-30/s/n
+    - acd/comision-clasificadora-de-riesgo-secretaria-administrativa/1991-05-13/1
+    - acd/comision-clasificadora-de-riesgo-secretaria-administrativa/1997-01-31/s/n
+    - acd/comision-clasificadora-de-riesgo-secretaria-administrativa/1997-05-30/s/n
+    - acd/comision-clasificadora-de-riesgo-secretaria-administrativa/1997-07-31/s/n
+    - acd/comision-clasificadora-de-riesgo-secretaria-administrativa/1997-08-28/s/n
 
 ---
 

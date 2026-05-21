@@ -45,6 +45,27 @@ grafo_relaciones:
   reglamentada_por:
     - dto/ministerio-de-hacienda/1987-07-02/368
     - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2007-09-14/53
+  acuerda_con:
+    - dfl/ministerio-de-hacienda/1960-04-06/338
+    - dfl/ministerio-del-trabajo-y-prevision-social/1982-03-25/150
+    - dl/ministerio-del-trabajo-y-prevision-social/1974-02-07/307
+    - dl/ministerio-del-trabajo-y-prevision-social/1978-06-15/2200
+    - ley/ministerio-de-desarrollo-social-y-familia/2020-05-16/21230
+    - ley/ministerio-de-desarrollo-social-subsecretaria-de-evaluacion-social/2012-06-16/20605
+    - ley/ministerio-de-desarrollo-social-subsecretaria-de-evaluacion-social/2013-04-01/20665
+    - ley/ministerio-de-hacienda/1982-12-01/18188
+    - ley/ministerio-de-hacienda/1983-12-01/18264
+    - ley/ministerio-de-hacienda/1984-12-05/18366
+    - ley/ministerio-de-hacienda/1984-12-28/18382
+    - ley/ministerio-de-hacienda/1985-11-30/18473
+    - ley/ministerio-de-hacienda/1985-12-28/18482
+    - ley/ministerio-de-hacienda/1986-12-02/18580
+    - ley/ministerio-de-hacienda/1987-01-03/18591
+    - ley/ministerio-de-hacienda/1987-02-19/18600
+    - ley/ministerio-de-hacienda/1987-04-23/18611
+    - ley/ministerio-de-hacienda/1987-09-17/18656
+    - ley/ministerio-de-hacienda/1988-09-09/18739
+    - ley/ministerio-de-hacienda/1989-01-14/18774
 
 ---
 

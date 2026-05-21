@@ -40,6 +40,13 @@ grafo_relaciones:
     - res/ministerio-de-vivienda-y-urbanismo/1998-06-17/230
   rectificada_por:
     - rec/ministerio-de-vivienda-y-urbanismo/1998-03-07/s/n
+  acuerda_con:
+    - dto/municipalidad-de-la-cisterna/2017-12-06/5633
+    - ley/ministerio-de-hacienda/2012-12-31/20650
+    - ley/ministerio-de-vivienda-y-urbanismo/2011-07-15/20520
+    - ley/ministerio-de-vivienda-y-urbanismo/2016-02-04/20898
+    - res/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2014-01-04/108-exenta
+    - res/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2017-12-16/120-exenta
 
 ---
 

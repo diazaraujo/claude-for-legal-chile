@@ -37,6 +37,10 @@ grafo_relaciones:
     - ley/ministerio-de-planificacion/2007-08-03/20203
   reglamentada_por:
     - dto/ministerio-de-justicia/2000-03-18/944
+  acuerda_con:
+    - dto/ministerio-de-hacienda/2011-11-12/1433
+    - ley/ministerio-de-justicia/1999-12-20/19658
+    - ley/ministerio-de-justicia/2004-08-30/19968
 
 ---
 

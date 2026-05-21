@@ -47,6 +47,14 @@ grafo_relaciones:
   refunde:
     - dl/ministerio-de-hacienda/1932-07-26/258
     - ley/ministerio-de-hacienda/1950-09-21/9687
+  acuerda_con:
+    - cod/ministerio-de-justicia/1874-11-12/PENAL
+    - dfl/ministerio-del-interior/1942-10-21/23
+    - dto/ministerio-de-hacienda/1951-07-23/4520
+    - ley/ministerio-de-agricultura/1948-12-17/9280
+    - ley/ministerio-de-hacienda/1929-01-09/4520
+    - ley/ministerio-de-justicia/1902-08-30/1552
+    - ley/ministerio-del-interior/1949-01-28/9304
 
 ---
 

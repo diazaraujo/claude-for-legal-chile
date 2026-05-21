@@ -24,6 +24,9 @@ grafo_relaciones:
     - ley/ministerio-del-interior/1993-04-30/19212
   reglamentada_por:
     - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2005-09-22/142
+  acuerda_con:
+    - dto/ministerio-de-defensa-nacional-subsecretaria-para-las-fuerzas-armadas/2020-01-09/18
+    - dto/ministerio-del-interior-y-seguridad-publica-subsecretaria-del-interior/2015-07-17/533
 
 ---
 

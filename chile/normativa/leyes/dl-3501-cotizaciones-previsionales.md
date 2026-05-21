@@ -53,6 +53,27 @@ grafo_relaciones:
     - ley/ministerio-del-trabajo-y-prevision-social/1983-10-15/18251
     - ley/ministerio-del-trabajo-y-prevision-social/1986-09-17/18546
     - ley/ministerio-del-trabajo-y-prevision-social/1994-11-14/19350
+  acuerda_con:
+    - dfl/ministerio-de-hacienda/1953-08-03/243
+    - dfl/ministerio-de-hacienda/1957-03-13/2252
+    - dfl/ministerio-de-hacienda/1960-04-06/338
+    - dfl/ministerio-de-obras-publicas/1998-02-25/850
+    - dfl/ministerio-del-trabajo-y-prevision-social/1968-11-07/236
+    - dfl/ministerio-del-trabajo-y-prevision-social/1970-12-02/2
+    - dfl/ministerio-del-trabajo-y-prevision-social/1982-03-25/150
+    - dl/ministerio-de-hacienda/1978-12-29/2437
+    - dl/ministerio-del-trabajo-y-prevision-social/1974-02-07/307
+    - dl/ministerio-del-trabajo-y-prevision-social/1975-01-28/869
+    - dl/ministerio-del-trabajo-y-prevision-social/1978-06-15/2200
+    - dl/ministerio-del-trabajo-y-prevision-social/1980-11-13/3500
+    - dl/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/1974-08-10/603
+    - dto/ministerio-de-obras-publicas/1985-05-20/294
+    - dto/ministerio-del-trabajo-y-prevision-social/1968-09-13/163
+    - ley/ministerio-de-economia/1935-10-08/5730
+    - ley/ministerio-de-hacienda/1946-09-26/8569
+    - ley/ministerio-de-mineria/1971-09-13/17483
+    - ley/ministerio-de-obras-publicas-y-transportes/1973-08-25/17968
+    - ley/ministerio-de-obras-publicas-y-vias-de-comunicacion/1944-11-03/7998
 
 ---
 

@@ -34,6 +34,10 @@ grafo_relaciones:
     - ley/ministerio-de-economia-fomento-y-reconstruccion/1991-09-06/19079
     - ley/ministerio-de-economia-fomento-y-reconstruccion/1991-09-06/19080
     - ley/ministerio-de-hacienda/1989-12-30/18899
+  acuerda_con:
+    - dl/ministerio-de-hacienda/1974-12-31/830
+    - ley/ministerio-de-agricultura/1984-12-27/18362
+    - ley/ministerio-de-justicia/1984-02-07/18287
 
 ---
 

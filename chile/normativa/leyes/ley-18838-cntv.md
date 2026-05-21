@@ -35,6 +35,27 @@ grafo_relaciones:
     - ley/ministerio-secretaria-general-de-gobierno/2003-01-04/19846
     - ley/ministerio-secretaria-general-de-gobierno/2004-11-30/19982
     - ley/ministerio-secretaria-general-de-gobierno/2016-01-21/20889
+  acuerda_con:
+    - acd/consejo-nacional-de-television/2014-08-25/s/n
+    - acd/consejo-nacional-de-television/2014-09-03/s/n
+    - acd/consejo-nacional-de-television/2015-05-12/s/n
+    - dfl/ministerio-de-hacienda/1960-04-06/338
+    - dl/ministerio-de-hacienda/1974-01-05/249
+    - dl/ministerio-del-interior/1980-08-11/3464
+    - dto/ministerio-secretaria-general-de-gobierno/2013-04-16/45
+    - dto/ministerio-secretaria-general-de-gobierno/2019-04-23/1
+    - dto/ministerio-secretaria-general-de-la-presidencia/2005-09-22/100
+    - ley/ministerio-de-hacienda/1981-10-22/18045
+    - ley/ministerio-de-hacienda/2008-12-05/20305
+    - ley/ministerio-de-justicia/1967-09-04/16643
+    - ley/ministerio-del-interior/1970-10-24/17377
+    - ley/ministerio-secretaria-general-de-gobierno/1992-04-08/19131
+    - ley/ministerio-secretaria-general-de-gobierno/1992-04-08/19132
+    - ley/ministerio-secretaria-general-de-gobierno/2017-04-07/21005
+    - res/consejo-nacional-de-television/1993-08-20/54
+    - res/consejo-nacional-de-television/1993-08-20/55
+    - res/consejo-nacional-de-television/2015-05-29/271-exenta
+    - res/consejo-nacional-de-television/2017-09-01/473-exenta
 
 ---
 

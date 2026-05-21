@@ -43,6 +43,27 @@ grafo_relaciones:
     - ley/ministerio-secretaria-general-de-la-presidencia/2016-04-14/20900
   refundida_por:
     - dfl/ministerio-secretaria-general-de-la-presidencia/2017-09-06/3
+  acuerda_con:
+    - dfl/ministerio-secretaria-general-de-la-presidencia/2017-09-06/1
+    - ley/ministerio-de-hacienda/2007-12-01/20232
+    - ley/ministerio-del-interior-subsecretaria-del-interior/2004-08-26/19964
+    - ley/ministerio-secretaria-general-de-gobierno/2011-02-16/20500
+    - ley/ministerio-secretaria-general-de-la-presidencia/2012-12-06/20640
+    - res/servicio-electoral/2003-10-06/760-exenta
+    - res/servicio-electoral/2003-12-01/1754
+    - res/servicio-electoral/2003-12-17/1972
+    - res/servicio-electoral/2004-04-02/662
+    - res/servicio-electoral/2004-06-15/918
+    - res/servicio-electoral/2004-09-15/1508
+    - res/servicio-electoral/2012-05-02/1039
+    - res/servicio-electoral/2013-05-15/10157
+    - res/servicio-electoral/2013-07-31/10623
+    - res/servicio-electoral/2013-09-02/10697
+    - res/servicio-electoral/2014-04-01/2077
+    - res/servicio-electoral/2014-06-16/2308
+    - res/servicio-electoral/2014-10-01/2400
+    - res/servicio-electoral/2014-11-15/2418
+    - res/servicio-electoral/2014-12-01/2422
 
 ---
 

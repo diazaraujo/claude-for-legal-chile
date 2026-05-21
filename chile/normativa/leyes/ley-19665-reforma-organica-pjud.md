@@ -48,6 +48,11 @@ grafo_relaciones:
     - ley/ministerio-de-justicia-subsecretaria-de-justicia/2009-12-22/20408
   reglamentada_por:
     - dto/ministerio-de-justicia/2012-02-21/22
+  acuerda_con:
+    - aa/corte-de-apelaciones-de-santiago/2004-12-23/s/n
+    - ley/ministerio-de-justicia/2002-07-15/19814
+    - ley/ministerio-de-justicia/2015-11-06/20876
+    - ley/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2005-05-30/20022
 
 ---
 

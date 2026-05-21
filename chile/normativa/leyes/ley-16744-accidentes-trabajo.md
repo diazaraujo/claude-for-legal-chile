@@ -52,6 +52,27 @@ grafo_relaciones:
     - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2008-09-30/67
     - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2015-04-01/3
     - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2020-05-08/4
+  acuerda_con:
+    - dfl/ministerio-de-bienestar-social/1931-05-28/178
+    - dfl/ministerio-de-bienestar-social/1931-05-29/226
+    - dfl/ministerio-de-educacion/1997-01-22/1
+    - dfl/ministerio-de-hacienda/1959-07-31/2
+    - dfl/ministerio-de-hacienda/2005-03-16/29
+    - dfl/ministerio-de-salud-publica/1980-09-02/33
+    - dfl/ministerio-de-salud/2001-11-20/1
+    - dfl/ministerio-de-salud-subsecretaria-de-salud-publica/2006-04-24/1
+    - dfl/ministerio-del-trabajo-y-prevision-social/1978-07-24/42
+    - dfl/ministerio-del-trabajo-y-prevision-social/1978-07-24/44
+    - dfl/ministerio-del-trabajo-y-prevision-social/1979-09-29/91
+    - dfl/ministerio-del-trabajo-y-prevision-social/1982-03-25/150
+    - dfl/ministerio-del-trabajo-y-prevision-social/1984-07-13/19
+    - dfl/ministerio-del-trabajo-y-prevision-social/1986-04-08/2
+    - dfl/ministerio-del-trabajo-y-prevision-social/1987-08-05/54
+    - dfl/ministerio-del-trabajo-y-prevision-social/1989-09-27/1
+    - dfl/ministerio-del-trabajo-y-prevision-social/1989-10-23/101
+    - dfl/ministerio-del-trabajo-y-prevision-social/1993-02-12/11
+    - dfl/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/1979-05-17/50
+    - dfl/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/1987-12-01/90
 
 ---
 

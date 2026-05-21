@@ -31,6 +31,27 @@ grafo_relaciones:
     - ley/ministerio-de-salud/1995-04-13/19378
     - ley/ministerio-de-salud/1997-01-03/19490
     - ley/ministerio-de-salud-subsecretaria-de-salud-publica/2008-12-31/20319
+  acuerda_con:
+    - dfl/ministerio-de-hacienda/2005-03-16/29
+    - dfl/ministerio-de-salud-publica/1968-01-31/725
+    - dfl/ministerio-de-salud/2005-02-12/2
+    - dfl/ministerio-de-salud/2005-02-28/3
+    - dfl/ministerio-de-salud/2005-05-26/30
+    - dfl/ministerio-de-salud/2005-08-05/4
+    - dfl/ministerio-de-salud-subsecretaria-de-salud-publica/2006-04-24/1
+    - dl/ministerio-de-hacienda/1974-01-05/249
+    - dl/ministerio-de-hacienda/1981-01-02/3551
+    - dl/ministerio-de-salud-publica/1979-08-03/2763
+    - dto/ministerio-de-salud/2004-08-30/83
+    - dto/ministerio-de-salud/2005-01-28/170
+    - dto/ministerio-de-salud-subsecretaria-de-salud-publica/2006-01-30/228
+    - ley/ministerio-de-hacienda/1981-12-30/18091
+    - ley/ministerio-de-hacienda/2003-06-23/19882
+    - ley/ministerio-de-salud/1985-11-23/18469
+    - ley/ministerio-de-salud/1990-03-09/18933
+    - ley/ministerio-de-salud/1995-04-13/19378
+    - ley/ministerio-de-salud/1997-01-03/19490
+    - ley/ministerio-de-salud/2001-12-14/19779
 
 ---
 

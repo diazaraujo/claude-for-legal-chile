@@ -43,6 +43,27 @@ grafo_relaciones:
     - dto/ministerio-de-educacion/1991-04-02/484
     - dto/ministerio-de-educacion/2017-02-04/223
     - dto/ministerio-de-las-culturas-las-artes-y-el-patrimonio-subsecretaria-del-patrimonio-cultural/2020-10-28/23
+  acuerda_con:
+    - dfl/ministerio-de-bienestar-social/1930-10-10/1340-BIS
+    - dfl/ministerio-de-bienestar-social/1930-10-10/1340-bis
+    - dto/ministerio-de-educacion-publica/1972-05-26/603
+    - dto/ministerio-de-educacion-publica/1984-03-12/1636
+    - dto/ministerio-de-educacion/2015-11-09/467
+    - dto/ministerio-de-educacion/2016-10-21/250
+    - dto/ministerio-de-educacion/2017-04-07/371
+    - dto/ministerio-de-educacion/2017-11-08/1335-exento
+    - dto/ministerio-de-educacion/2017-12-14/366
+    - dto/ministerio-de-educacion/2017-12-14/367
+    - dto/ministerio-de-educacion/2018-01-18/5-exento
+    - dto/ministerio-de-las-culturas-las-artes-y-el-patrimonio-subsecretaria-del-patrimonio-cultural/2018-09-20/12-exento
+    - dto/ministerio-de-las-culturas-las-artes-y-el-patrimonio-subsecretaria-del-patrimonio-cultural/2019-04-22/11-exento
+    - dto/ministerio-de-las-culturas-las-artes-y-el-patrimonio-subsecretaria-del-patrimonio-cultural/2019-09-25/19-exento
+    - dto/ministerio-de-las-culturas-las-artes-y-el-patrimonio-subsecretaria-del-patrimonio-cultural/2020-06-03/12-exento
+    - dto/ministerio-de-las-culturas-las-artes-y-el-patrimonio-subsecretaria-del-patrimonio-cultural/2020-10-05/17
+    - dto/ministerio-del-medio-ambiente/2017-11-14/30
+    - dto/ministerio-del-medio-ambiente/2017-11-14/33
+    - dto/ministerio-del-medio-ambiente/2018-01-19/47
+    - dto/ministerio-del-medio-ambiente/2018-02-19/46
 
 ---
 

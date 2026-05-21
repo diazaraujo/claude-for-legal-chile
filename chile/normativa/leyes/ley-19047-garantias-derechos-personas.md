@@ -43,6 +43,23 @@ grafo_relaciones:
   modificada_por:
     - ley/ministerio-de-justicia/1992-01-04/19114
     - ley/ministerio-de-justicia/1992-08-31/19158
+  acuerda_con:
+    - aa/corte-suprema/1983-08-11/S-N
+    - aa/corte-suprema/1983-08-11/s/n
+    - cod/ministerio-de-justicia/1943-07-09/orgánico-de-tribunales
+    - dl/ministerio-de-hacienda/1973-12-18/202
+    - dl/ministerio-del-interior/1980-08-11/3464
+    - dto/ministerio-de-defensa-nacional/1978-04-13/400
+    - dto/ministerio-de-justicia/1944-12-19/2226
+    - dto/ministerio-del-interior/1975-08-26/890
+    - dto/ministerio-secretaria-general-de-la-presidencia/2005-09-22/100
+    - ley/ministerio-de-defensa-nacional/1972-10-21/17798
+    - ley/ministerio-de-justicia/1906-02-19/1853
+    - ley/ministerio-de-justicia/1943-07-09/7421
+    - ley/ministerio-de-justicia/1983-05-14/18216
+    - ley/ministerio-de-justicia/1991-12-11/19102
+    - ley/ministerio-del-interior/1958-08-06/12927
+    - ley/ministerio-del-interior/1984-05-17/18314
 
 ---
 

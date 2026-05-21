@@ -30,6 +30,16 @@ grafo_relaciones:
     - dto/municipalidad-de-maipu/2003-10-02/4409
   refundida_por:
     - dto/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/1997-03-20/58
+  acuerda_con:
+    - aa/tribunal-calificador-de-elecciones/1997-04-16/s/n
+    - dfl/ministerio-de-hacienda/2005-03-16/29
+    - dl/ministerio-de-hacienda/1974-12-31/825
+    - dto/ministerio-de-educacion/1998-02-11/732
+    - ley/ministerio-de-vivienda-y-urbanismo/2016-02-04/20898
+    - ley/ministerio-del-interior-y-seguridad-publica/2015-06-27/20851
+    - ley/ministerio-del-interior/1987-01-09/18593
+    - ley/ministerio-del-interior/1989-09-23/18834
+    - ley/ministerio-del-interior/1996-11-30/19483
 
 ---
 

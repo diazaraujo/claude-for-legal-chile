@@ -43,6 +43,27 @@ grafo_relaciones:
     - ley/ministerio-del-interior-subsecretaria-del-interior/2002-09-04/19823
   refundida_por:
     - dfl/ministerio-secretaria-general-de-la-presidencia/2017-09-06/2
+  acuerda_con:
+    - aa/servicio-electoral/1993-12-09/s/n
+    - aa/tribunal-calificador-de-elecciones/1993-07-16/s/n
+    - aa/tribunal-calificador-de-elecciones/2001-12-06/s/n
+    - aa/tribunal-calificador-de-elecciones/2005-08-05/s/n
+    - aa/tribunal-calificador-de-elecciones/2005-11-18/s/n
+    - aa/tribunal-calificador-de-elecciones/2008-04-17/s/n
+    - aa/tribunal-calificador-de-elecciones/2016-06-06/s/n
+    - acd/tribunal-calificador-de-elecciones/2005-12-27/s/n
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1989-12-12/carta-circular-bancos-110
+    - cir/ministerio-del-interior-y-seguridad-publica/2016-06-14/45
+    - cir/ministerio-del-interior-y-seguridad-publica/2017-06-23/43
+    - cir/ministerio-del-interior-y-seguridad-publica-subsecretaria-del-interior/2013-06-18/28
+    - cir/ministerio-del-interior-y-seguridad-publica-subsecretaria-del-interior/2013-11-09/39
+    - cir/ministerio-del-interior-subsecretaria-del-interior/1989-11-23/36
+    - cir/ministerio-del-interior-subsecretaria-del-interior/1993-11-18/70
+    - cir/ministerio-del-interior-subsecretaria-del-interior/1997-11-07/51
+    - cir/ministerio-del-interior-subsecretaria-del-interior/2005-01-15/3
+    - cir/ministerio-del-interior-subsecretaria-del-interior/2005-11-16/40
+    - cod/ministerio-de-justicia/1943-07-09/orgánico-de-tribunales
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2000-01-11/2
 
 ---
 

@@ -39,6 +39,27 @@ grafo_relaciones:
     - ley/ministerio-secretaria-general-de-gobierno/2015-04-21/20830
   reglamentada_por:
     - dto/ministerio-de-justicia/2004-10-30/673
+  acuerda_con:
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2006-02-20/bancos-3350
+    - cod/ministerio-de-justicia/1855-12-14/1855
+    - cod/ministerio-de-justicia/1874-11-12/PENAL
+    - cod/ministerio-de-justicia/1874-11-12/penal
+    - cod/ministerio-de-justicia/1943-07-09/orgánico-de-tribunales
+    - dfl/ministerio-de-justicia-y-derechos-humanos/2017-01-31/3
+    - dfl/ministerio-de-justicia/1996-12-26/2
+    - dfl/ministerio-de-justicia/2000-05-30/1
+    - dl/ministerio-de-justicia/1980-05-22/3346
+    - dto/ministerio-de-justicia/2004-10-30/673
+    - dto/ministerio-de-justicia/2005-08-23/957
+    - ley/ministerio-de-hacienda/2011-03-30/20506
+    - ley/ministerio-de-justicia-culto-e-instruccion-publica/1884-01-16/s/n
+    - ley/ministerio-de-justicia-y-derechos-humanos/2018-12-10/21120
+    - ley/ministerio-de-justicia/1902-08-30/1552
+    - ley/ministerio-de-justicia/1943-07-09/7421
+    - ley/ministerio-de-justicia/2004-08-30/19968
+    - ley/ministerio-de-justicia-culto-e-instruccion-publica/1884-01-16/S-N
+    - res/ministerio-de-justicia/2004-10-30/4061-exenta
+    - res/ministerio-de-justicia/2004-12-29/4955-exenta
 
 ---
 

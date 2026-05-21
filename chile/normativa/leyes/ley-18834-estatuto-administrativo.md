@@ -54,6 +54,27 @@ grafo_relaciones:
     - dfl/ministerio-de-hacienda/2005-03-16/29
   rectificada_por:
     - dfl/ministerio-del-trabajo-y-prevision-social/1990-04-30/3
+  acuerda_con:
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1990-03-14/bancos-2530
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1990-03-14/cooperativas-97
+    - dfl/ministerio-de-agricultura/1990-05-04/1
+    - dfl/ministerio-de-agricultura/1990-05-05/3
+    - dfl/ministerio-de-agricultura/1991-02-11/2
+    - dfl/ministerio-de-bienes-nacionales/1990-04-20/71
+    - dfl/ministerio-de-defensa-nacional/1990-04-28/3
+    - dfl/ministerio-de-defensa-nacional/1990-06-23/4
+    - dfl/ministerio-de-defensa-nacional/1990-11-10/2
+    - dfl/ministerio-de-economia-fomento-y-reconstruccion/1990-03-21/4
+    - dfl/ministerio-de-economia-fomento-y-reconstruccion/1990-05-04/5
+    - dfl/ministerio-de-economia-fomento-y-reconstruccion/1990-05-07/3
+    - dfl/ministerio-de-economia-fomento-y-reconstruccion/1990-05-07/7
+    - dfl/ministerio-de-economia-fomento-y-reconstruccion/1990-05-24/6
+    - dfl/ministerio-de-economia-fomento-y-reconstruccion/1990-05-30/11
+    - dfl/ministerio-de-economia-fomento-y-reconstruccion/1993-12-16/523
+    - dfl/ministerio-de-economia/1990-06-05/9
+    - dfl/ministerio-de-educacion-publica/1990-04-25/1
+    - dfl/ministerio-de-educacion-publica/1990-05-10/5
+    - dfl/ministerio-de-educacion-publica/1990-05-25/6
 
 ---
 

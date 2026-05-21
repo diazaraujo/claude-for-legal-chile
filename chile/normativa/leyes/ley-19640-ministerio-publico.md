@@ -41,6 +41,27 @@ grafo_relaciones:
     - ley/ministerio-del-interior-subsecretaria-del-interior/2010-10-08/20467
     - ley/ministerio-secretaria-general-de-la-presidencia/2006-01-05/20088
     - ley/ministerio-secretaria-general-de-la-presidencia/2016-01-05/20880
+  acuerda_con:
+    - aa/corte-suprema/2007-08-21/s/n
+    - dfl/ministerio-de-hacienda/2005-03-16/29
+    - dfl/ministerio-de-hacienda/2005-06-04/30
+    - dfl/ministerio-del-trabajo-y-prevision-social/1994-01-24/1
+    - dfl/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2003-01-16/1
+    - dl/ministerio-del-interior/1980-08-11/3464
+    - dto/ministerio-de-hacienda/2015-11-14/1564
+    - dto/ministerio-de-justicia/2007-11-22/765
+    - dto/ministerio-secretaria-general-de-la-presidencia/2005-09-22/100
+    - ley/ministerio-de-hacienda/2008-12-04/20313
+    - ley/ministerio-de-hacienda/2010-12-17/20486
+    - ley/ministerio-de-hacienda/2011-12-16/20559
+    - ley/ministerio-de-hacienda/2014-12-01/20799
+    - ley/ministerio-de-hacienda/2015-12-02/20883
+    - ley/ministerio-de-hacienda/2016-11-22/20971
+    - ley/ministerio-de-justicia/2001-03-10/19718
+    - ley/ministerio-de-justicia/2007-10-13/20224
+    - ley/ministerio-de-justicia/2008-01-16/20240
+    - ley/ministerio-del-interior/1989-09-23/18834
+    - ley/ministerio-del-interior-subsecretaria-del-interior/2005-05-13/20014
 
 ---
 

@@ -46,6 +46,27 @@ grafo_relaciones:
     - dto/ministerio-de-mineria/1987-02-27/1
     - dto/ministerio-de-mineria/1989-02-25/141
     - dto/ministerio-de-mineria/1991-01-24/209
+  acuerda_con:
+    - cod/ministerio-de-justicia/1855-12-14/1855
+    - cod/ministerio-de-justicia/1865-11-23/1865
+    - cod/ministerio-de-justicia/1865-11-23/DE-COMERCIO
+    - cod/ministerio-de-justicia/1865-11-23/de-comercio
+    - dfl/ministerio-de-hacienda/1960-04-06/338
+    - dfl/ministerio-de-justicia/1981-10-29/1122
+    - dfl/ministerio-de-justicia/1996-12-26/2
+    - dfl/ministerio-de-justicia/2000-05-30/1
+    - dfl/ministerio-de-mineria/1987-03-30/2
+    - dfl/ministerio-de-mineria/1987-04-24/1
+    - dl/ministerio-de-fomento/1932-08-27/488
+    - dto/ministerio-de-defensa-nacional-subsecretaria-de-aviacion/2001-10-11/349
+    - dto/ministerio-de-justicia/2014-08-05/1533-exento
+    - dto/ministerio-de-justicia-subsecretaria-de-justicia/1988-05-04/368
+    - dto/ministerio-de-mineria/1985-12-07/39
+    - dto/ministerio-de-mineria/1997-08-29/150
+    - dto/ministerio-de-mineria/2013-06-22/3
+    - dto/ministerio-de-mineria/2014-04-28/10
+    - dto/ministerio-de-mineria/2014-09-17/254-exento
+    - dto/ministerio-de-mineria/2015-04-18/7
 
 ---
 

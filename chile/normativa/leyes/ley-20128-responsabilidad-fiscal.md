@@ -34,6 +34,27 @@ grafo_relaciones:
     - dto/ministerio-de-hacienda/2007-05-30/1606
     - dto/ministerio-de-hacienda/2010-08-20/1636
     - dto/ministerio-de-hacienda/2015-03-06/1492
+  acuerda_con:
+    - dfl/ministerio-de-hacienda/2004-05-18/2
+    - dl/ministerio-de-hacienda/1975-06-07/1056
+    - dl/ministerio-de-hacienda/1975-11-28/1263
+    - dl/ministerio-de-hacienda/1979-02-09/2448
+    - dl/ministerio-de-hacienda/1981-03-14/3653
+    - dl/ministerio-del-trabajo-y-prevision-social/1975-01-28/869
+    - dl/ministerio-del-trabajo-y-prevision-social/1980-11-13/3500
+    - dto/ministerio-de-hacienda/2006-12-23/1272
+    - dto/ministerio-de-hacienda/2007-01-10/1259
+    - dto/ministerio-de-hacienda/2007-02-14/1382
+    - dto/ministerio-de-hacienda/2007-05-24/495
+    - dto/ministerio-de-hacienda/2007-08-11/621
+    - dto/ministerio-de-hacienda/2009-06-27/685
+    - dto/ministerio-de-hacienda/2010-06-26/630
+    - dto/ministerio-de-hacienda/2010-06-26/637
+    - dto/ministerio-de-hacienda/2010-09-15/811
+    - dto/ministerio-de-hacienda/2011-05-13/450
+    - dto/ministerio-de-hacienda/2011-12-10/1181
+    - dto/ministerio-de-hacienda/2012-06-09/548
+    - dto/ministerio-de-hacienda/2013-01-22/978
 
 ---
 

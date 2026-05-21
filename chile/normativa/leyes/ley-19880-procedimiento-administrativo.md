@@ -27,6 +27,27 @@ grafo_relaciones:
   reglamentada_por:
     - dto/ministerio-del-interior-y-seguridad-publica-subsecretaria-de-desarrollo-regional-y-administrativo/2020-09-17/656
     - dto/ministerio-secretaria-general-de-la-presidencia/2018-05-26/20
+  acuerda_con:
+    - acd/consejo-para-la-transparencia/2011-06-09/s/n
+    - acd/consejo-para-la-transparencia/2011-12-17/s/n
+    - cir/ministerio-de-salud-subsecretaria-de-salud-publica-superintendencia-de-salud-intendencia-de-fondos-y-seguros-previsionales-de-salud/2012-12-14/179
+    - dfl/ministerio-secretaria-general-de-la-presidencia/2004-08-07/3
+    - dto/ministerio-de-educacion/2005-04-08/176
+    - dto/ministerio-de-hacienda/2005-07-04/547
+    - dto/ministerio-de-hacienda/2011-11-12/1433
+    - dto/ministerio-de-justicia/2005-08-23/957
+    - dto/ministerio-de-planificacion/2011-03-26/29
+    - dto/ministerio-del-interior-y-seguridad-publica/2016-04-19/22
+    - dto/ministerio-del-medio-ambiente/2013-02-11/30
+    - dto/ministerio-del-medio-ambiente/2013-02-11/31
+    - dto/ministerio-secretaria-general-de-la-presidencia/2004-12-23/77
+    - dto/municipalidad-de-curico/2018-04-16/979-exento
+    - dto/municipalidad-de-villa-alemana/2013-09-02/1735
+    - ley/ministerio-de-defensa-nacional/2020-08-17/21250
+    - ley/ministerio-de-desarrollo-social-y-familia/2020-04-03/21218
+    - ley/ministerio-de-educacion/2016-02-15/20905
+    - ley/ministerio-de-educacion/2016-12-15/20976
+    - ley/ministerio-de-educacion/2017-02-10/20996
 
 ---
 

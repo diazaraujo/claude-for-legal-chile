@@ -31,6 +31,20 @@ grafo_relaciones:
     - ley/ministerio-de-justicia/2008-09-15/20286
     - ley/ministerio-de-justicia/2010-03-18/20427
     - ley/ministerio-de-justicia/2010-12-18/20480
+  acuerda_con:
+    - cod/ministerio-de-justicia/1874-11-12/PENAL
+    - cod/ministerio-de-justicia/1874-11-12/penal
+    - dfl/ministerio-de-justicia/1996-12-26/2
+    - dto/ministerio-de-defensa-nacional/1978-04-13/400
+    - ley/ministerio-de-defensa-nacional/1972-10-21/17798
+    - ley/ministerio-de-educacion/2015-05-05/20832
+    - ley/ministerio-de-justicia/1902-08-30/1552
+    - ley/ministerio-de-justicia/1943-10-21/7613
+    - ley/ministerio-de-justicia/1983-05-14/18216
+    - ley/ministerio-de-justicia/1988-05-10/18703
+    - ley/ministerio-de-justicia/1994-08-27/19325
+    - ley/ministerio-de-justicia/2004-08-30/19968
+    - ley/ministerio-secretaria-general-de-la-presidencia/2018-01-29/21067
 
 ---
 

@@ -35,6 +35,27 @@ grafo_relaciones:
     - ley/ministerio-de-hacienda/2017-10-20/21039
     - ley/ministerio-de-hacienda/2020-02-24/21210
     - ley/ministerio-del-interior-y-seguridad-publica/2017-09-05/21033
+  acuerda_con:
+    - aa/corporacion-administrativa-del-poder-judicial/2018-03-09/s/n
+    - aa/corte-de-apelaciones-de-san-miguel/2012-11-16/s/n
+    - aa/corte-de-apelaciones-de-santiago/2015-03-13/s/n
+    - aa/corte-suprema/2014-09-05/s/n
+    - dfl/ministerio-de-hacienda/1953-08-05/213
+    - dfl/ministerio-de-hacienda/1998-07-21/2
+    - dfl/ministerio-de-hacienda/2005-06-04/30
+    - dto/ministerio-de-hacienda/2012-03-24/1812
+    - dto/ministerio-de-hacienda/2012-03-24/1813
+    - dto/ministerio-de-hacienda/2012-09-29/867
+    - dto/ministerio-de-hacienda/2013-04-18/1789
+    - dto/ministerio-de-hacienda/2013-04-18/1790
+    - dto/ministerio-de-hacienda/2013-04-18/1793
+    - dto/ministerio-de-hacienda/2013-04-18/1794
+    - dto/ministerio-de-hacienda/2013-04-18/1796
+    - dto/ministerio-de-hacienda/2013-04-19/1795
+    - dto/ministerio-de-hacienda/2015-01-10/779
+    - dto/ministerio-de-hacienda/2015-01-10/780
+    - dto/ministerio-de-hacienda/2015-01-10/781
+    - dto/ministerio-de-hacienda/2015-01-15/787
 
 ---
 

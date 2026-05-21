@@ -47,6 +47,27 @@ grafo_relaciones:
   reglamentada_por:
     - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2005-09-22/142
     - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2010-06-25/12
+  acuerda_con:
+    - aa/corte-de-apelaciones-de-antofagasta/2005-05-06/s/n
+    - aa/corte-de-apelaciones-de-santiago/2005-11-09/s/n
+    - dto/ministerio-de-justicia-y-derechos-humanos/2016-11-09/2161-exento
+    - dto/ministerio-de-justicia-y-derechos-humanos/2017-05-08/871-exento
+    - dto/ministerio-de-justicia-y-derechos-humanos/2018-03-13/502-exento
+    - dto/ministerio-de-justicia-y-derechos-humanos-subsecretaria-de-justicia/2020-01-24/167-exento
+    - dto/ministerio-de-justicia-y-derechos-humanos-subsecretaria-de-justicia/2020-05-18/835-exento
+    - dto/ministerio-de-justicia/2009-02-18/775-exento
+    - dto/ministerio-de-justicia/2011-08-25/3667-exento
+    - dto/ministerio-de-justicia/2012-01-03/6639-exento
+    - dto/ministerio-de-justicia/2012-11-21/5362-exento
+    - dto/ministerio-de-justicia/2012-12-05/285
+    - dto/ministerio-de-justicia/2015-01-22/277-exento
+    - dto/ministerio-de-justicia/2015-10-16/3329-exento
+    - ley/ministerio-de-defensa-nacional-subsecretaria-para-las-fuerzas-armadas/2010-12-30/20477
+    - ley/ministerio-de-educacion/2017-04-04/21006
+    - ley/ministerio-de-hacienda/2003-12-18/19913
+    - ley/ministerio-de-justicia-y-derechos-humanos/2019-07-18/21160
+    - ley/ministerio-de-justicia-y-derechos-humanos/2020-04-02/21226
+    - ley/ministerio-de-justicia-y-derechos-humanos/2020-06-20/21240
 
 ---
 

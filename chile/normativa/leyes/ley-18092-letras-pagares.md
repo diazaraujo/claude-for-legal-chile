@@ -31,6 +31,14 @@ grafo_relaciones:
     - ley/ministerio-de-justicia/1929-02-04/4558
   modificada_por:
     - ley/ministerio-de-hacienda/1986-09-20/18552
+  acuerda_con:
+    - cod/ministerio-de-justicia/1855-12-14/1855
+    - cod/ministerio-de-justicia/1865-11-23/1865
+    - cod/ministerio-de-justicia/1865-11-23/DE-COMERCIO
+    - cod/ministerio-de-justicia/1874-11-12/PENAL
+    - dfl/ministerio-de-justicia/1996-12-26/2
+    - dfl/ministerio-de-justicia/2000-05-30/1
+    - ley/ministerio-de-justicia/1902-08-30/1552
 
 ---
 

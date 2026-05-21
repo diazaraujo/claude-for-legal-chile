@@ -21,6 +21,13 @@ fecha_validacion: null
 grafo_relaciones:
   modificada_por:
     - ley/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-economia-y-empresas-de-menor-tamano/2014-01-09/20720
+  acuerda_con:
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2003-05-19/27
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2007-07-14/38
+    - cod/ministerio-de-justicia/1874-11-12/PENAL
+    - cod/ministerio-de-justicia/1874-11-12/penal
+    - ley/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-economia-y-empresas-de-menor-tamano/2013-02-08/20659
+    - ley/ministerio-de-justicia/1997-04-11/19499
 
 ---
 

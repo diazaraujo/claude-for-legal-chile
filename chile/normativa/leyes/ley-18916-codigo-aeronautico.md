@@ -48,6 +48,27 @@ grafo_relaciones:
     - dto/ministerio-de-defensa-nacional-subsecretaria-para-las-fuerzas-armadas/2018-10-26/369
     - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-transportes/2000-07-07/113
     - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-transportes/2015-07-09/232
+  acuerda_con:
+    - cod/ministerio-de-justicia/1865-11-23/de-comercio
+    - cod/ministerio-de-justicia/1943-07-09/orgánico-de-tribunales
+    - dto/ministerio-de-defensa-nacional-subsecretaria-de-aviacion/1997-06-05/339
+    - dto/ministerio-de-defensa-nacional-subsecretaria-de-aviacion/1997-06-05/340
+    - dto/ministerio-de-justicia-y-derechos-humanos/2016-12-31/2804-exento
+    - dto/ministerio-de-justicia/1944-12-19/2226
+    - dto/ministerio-de-justicia/2002-01-26/1067
+    - dto/ministerio-de-justicia/2011-02-04/541-exento
+    - dto/ministerio-de-justicia/2015-11-23/3653-exento
+    - dto/ministerio-de-justicia-subsecretaria-de-justicia/1990-11-17/1333
+    - dto/ministerio-de-relaciones-exteriores-subsecretaria-de-relaciones-exteriores/2020-07-31/88
+    - ley/ministerio-de-justicia/1902-08-30/1552
+    - ley/ministerio-de-justicia/1943-07-09/7421
+    - ley/ministerio-del-interior-y-seguridad-publica/2018-03-23/21070
+    - ley/ministerio-del-interior/2005-02-16/20000
+    - res/ministerio-de-defensa-nacional-subsecretaria-para-las-fuerzas-armadas-direccion-general-de-aeronautica-civil/2014-07-30/309
+    - res/ministerio-de-defensa-nacional-subsecretaria-para-las-fuerzas-armadas-direccion-general-de-aeronautica-civil/2014-07-30/324
+    - res/ministerio-de-defensa-nacional-subsecretaria-para-las-fuerzas-armadas-direccion-general-de-aeronautica-civil/2014-10-22/300-exenta
+    - res/ministerio-de-defensa-nacional-subsecretaria-para-las-fuerzas-armadas-direccion-general-de-aeronautica-civil/2014-10-22/566-exenta
+    - res/ministerio-de-defensa-nacional-subsecretaria-para-las-fuerzas-armadas-direccion-general-de-aeronautica-civil/2014-10-22/567-exenta
 
 ---
 

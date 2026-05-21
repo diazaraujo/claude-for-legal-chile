@@ -50,6 +50,27 @@ grafo_relaciones:
     - dto/ministerio-de-hacienda/1975-03-01/225
     - dto/ministerio-de-hacienda/1977-02-02/55
     - dto/ministerio-de-hacienda/1996-01-11/1197
+  acuerda_con:
+    - cir/ministerio-de-hacienda/1994-01-29/9
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos/1988-02-16/16
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/1986-01-31/11
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/1987-10-03/36
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/1987-11-03/41
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/1987-12-19/52
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/1988-01-18/5
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/1988-01-19/6
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/1988-01-19/7
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/1991-04-09/17
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/1996-01-04/52
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2002-12-05/66
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2004-04-24/22
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2011-11-24/50
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2014-12-05/61
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2018-01-26/5
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2020-05-27/37
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2020-08-21/55
+    - cod/ministerio-de-justicia/1855-12-14/1855
+    - dfl/ministerio-de-economia-fomento-y-reconstruccion/1993-12-16/523
 
 ---
 

@@ -28,6 +28,12 @@ grafo_relaciones:
     - ley/ministerio-de-salud/1996-04-10/19451
   reglamentada_por:
     - dto/ministerio-de-salud-subsecretaria-de-salud-publica/2018-10-23/67
+  acuerda_con:
+    - aa/corte-de-apelaciones-de-rancagua/2018-08-03/1
+    - acd/corte-de-apelaciones-de-antofagasta/2019-02-08/22
+    - dto/ministerio-de-salud/2018-02-08/44
+    - res/ministerio-de-salud/2018-02-08/129-exenta
+    - res/ministerio-de-salud/2018-03-16/401-exenta
 
 ---
 

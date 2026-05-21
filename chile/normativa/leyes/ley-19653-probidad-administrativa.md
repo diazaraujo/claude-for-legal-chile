@@ -42,6 +42,19 @@ grafo_relaciones:
   reglamentada_por:
     - dto/ministerio-secretaria-general-de-la-presidencia/2000-06-28/99
     - dto/ministerio-secretaria-general-de-la-presidencia/2001-05-07/26
+  acuerda_con:
+    - dfl/ministerio-de-hacienda/2005-03-16/29
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2000-01-11/2
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2002-05-03/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2005-11-08/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
+    - dfl/ministerio-secretaria-general-de-la-presidencia/2001-11-17/1
+    - dto/ministerio-del-interior/1992-08-27/662
+    - ley/ministerio-del-interior/1988-03-31/18695
+    - ley/ministerio-del-interior/1989-09-23/18834
+    - ley/ministerio-del-interior/1989-12-29/18883
+    - ley/ministerio-del-interior/1992-11-11/19175
+    - ley/ministerio-del-interior-subsecretaria-del-interior/1986-12-05/18575
 
 ---
 

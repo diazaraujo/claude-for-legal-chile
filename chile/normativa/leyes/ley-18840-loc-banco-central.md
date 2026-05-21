@@ -62,6 +62,27 @@ grafo_relaciones:
     - ley/ministerio-secretaria-general-de-la-presidencia/2008-08-20/20285
     - ley/ministerio-secretaria-general-de-la-presidencia/2016-01-05/20880
     - tci/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1989-12-13/bancos-16
+  acuerda_con:
+    - acd/banco-central-de-chile/1993-11-15/319
+    - acd/banco-central-de-chile/1997-12-01/609
+    - acd/banco-central-de-chile/1998-12-02/681
+    - acd/banco-central-de-chile/2000-06-12/843
+    - acd/banco-central-de-chile/2001-12-15/922
+    - acd/banco-central-de-chile/2004-08-31/1097
+    - acd/banco-central-de-chile/2009-09-24/1490
+    - acd/banco-central-de-chile/2010-03-31/1522
+    - acd/banco-central-de-chile/2010-07-28/1550
+    - acd/banco-central-de-chile/2010-11-17/1574
+    - acd/banco-central-de-chile/2011-05-11/1607
+    - acd/banco-central-de-chile-secretaria-general/1989-06-24/1942
+    - acd/banco-central-de-chile-secretaria-general/1990-08-24/50
+    - acd/banco-central-de-chile-secretaria-general/1992-02-13/195
+    - cci/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2017-10-02/bancos-3-
+    - cci/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2017-10-02/cooperativas-1
+    - cci/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2017-10-02/emisoras-y-operadores-de-tarjeta-de-credito-2
+    - cci/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2017-10-02/filiales-1
+    - cci/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2017-10-02/sociedades-de-apoyo-al-giro-1
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1988-12-13/bancos-2409
 
 ---
 

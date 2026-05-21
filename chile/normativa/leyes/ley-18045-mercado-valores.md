@@ -48,6 +48,27 @@ grafo_relaciones:
     - ley/ministerio-de-hacienda/2009-06-06/20345
     - ley/ministerio-de-hacienda/2010-08-13/20448
     - ley/ministerio-de-hacienda/2011-12-17/20552
+  acuerda_con:
+    - cci/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1988-08-16/bancos-40
+    - cci/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1989-12-20/bancos-114
+    - cci/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1990-08-17/bancos-72
+    - cci/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1991-04-23/bancos-48
+    - cci/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1991-04-23/filiales-1
+    - cci/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2015-12-01/bancos-2-
+    - cir/ministerio-de-hacienda-ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2010-09-23/auditores-externos-12
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1988-04-12/bancos-2346
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1988-06-07/bancos-2364
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1988-06-09/bancos-2367
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1988-07-20/bancos-2378
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1988-07-20/bancos-2379
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1988-12-13/bancos-2409
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1988-12-19/bancos-2410
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1988-12-23/evaluadoras-4
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1989-05-16/evaluadoras-5
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1989-08-14/bancos-2473
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1989-08-16/filiales-7
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1989-09-29/bancos-2484
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1989-11-06/bancos-2495
 
 ---
 

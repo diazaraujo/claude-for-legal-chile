@@ -47,6 +47,27 @@ grafo_relaciones:
     - dto/ministerio-de-educacion/2005-06-11/192
   refundida_por:
     - dfl/ministerio-de-educacion/1997-01-22/1
+  acuerda_con:
+    - dfl/ministerio-de-educacion-publica/1990-02-21/2
+    - dfl/ministerio-de-hacienda/1960-04-06/338
+    - dfl/ministerio-de-hacienda/2005-03-16/29
+    - dfl/ministerio-del-interior/1980-10-27/1
+    - dl/ministerio-de-educacion-publica/1978-09-22/2327
+    - dl/ministerio-de-educacion-publica/1980-02-06/3166
+    - dto/ministerio-de-educacion-publica/1992-04-21/107
+    - dto/ministerio-de-educacion/1997-04-30/198
+    - ley/ministerio-de-educacion-publica/1990-03-08/18956
+    - ley/ministerio-de-educacion-publica/1993-12-13/19278
+    - ley/ministerio-de-educacion/1997-05-31/19504
+    - ley/ministerio-de-educacion/1997-08-12/19509
+    - ley/ministerio-de-educacion/1997-11-17/19532
+    - ley/ministerio-de-educacion/1999-01-09/19598
+    - ley/ministerio-de-educacion/2002-06-07/19808
+    - ley/ministerio-de-educacion/2004-02-12/19933
+    - ley/ministerio-de-educacion/2004-08-14/19961
+    - ley/ministerio-de-hacienda/1986-10-30/18566
+    - ley/ministerio-de-hacienda/1987-12-07/18675
+    - ley/ministerio-de-hacienda/1991-12-07/19104
 
 ---
 

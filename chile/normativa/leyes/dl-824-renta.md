@@ -52,6 +52,27 @@ grafo_relaciones:
     - dto/ministerio-de-hacienda/1991-01-05/1139
     - dto/ministerio-de-hacienda/2006-06-05/1465
     - dto/ministerio-de-hacienda/2008-11-29/1354
+  acuerda_con:
+    - avi/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2011-06-29/s/n
+    - cci/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1988-09-27/bancos-50
+    - cci/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2002-03-26/bancos-8
+    - cir/ministerio-de-hacienda/1993-02-04/10
+    - cir/ministerio-de-hacienda/1993-11-18/52
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos/1988-02-12/11
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos/1990-07-17/36
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos/1990-11-24/58
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/1986-02-04/20
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/1988-01-18/8
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/1988-01-29/14
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/1993-11-09/50
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/1998-11-23/70
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/1998-11-23/71
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2001-02-16/11
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2005-10-20/55
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2006-09-08/50
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2007-02-09/8
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2007-04-03/20
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2009-06-16/37
 
 ---
 

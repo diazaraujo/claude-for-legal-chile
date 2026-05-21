@@ -29,6 +29,27 @@ grafo_relaciones:
     - ley/ministerio-secretaria-general-de-la-presidencia/2002-06-13/19812
   reglamentada_por:
     - dto/ministerio-de-justicia/2000-11-11/779
+  acuerda_con:
+    - acd/consejo-para-la-transparencia/2011-09-14/s/n
+    - cir/ministerio-de-hacienda-comision-para-el-mercado-financiero/2020-08-25/bancos-2266
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2012-03-21/bancos-3530
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2012-04-23/bancos-3535
+    - cir/ministerio-de-hacienda-superintendencia-de-valores-y-seguros-superintendencia-de-bancos-e-instituciones-financieras/2012-03-21/ncg-330
+    - dto/ministerio-de-salud-subsecretaria-de-redes-asistenciales/2012-12-15/41
+    - dto/ministerio-de-salud-subsecretaria-de-salud-publica/2011-11-19/114
+    - dto/ministerio-del-medio-ambiente/2013-02-11/31
+    - dto/ministerio-secretaria-general-de-la-presidencia/2005-09-22/100
+    - ley/ministerio-de-desarrollo-social-subsecretaria-de-servicios-sociales/2013-05-31/20670
+    - ley/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-economia-y-empresas-de-menor-tamano/2012-02-17/20575
+    - ley/ministerio-de-educacion/2016-12-15/20976
+    - ley/ministerio-de-justicia-y-derechos-humanos/2016-07-05/20931
+    - ley/ministerio-de-justicia-y-derechos-humanos/2018-12-10/21120
+    - ley/ministerio-de-justicia-y-derechos-humanos/2019-08-22/21171
+    - ley/ministerio-de-justicia/2004-10-06/19970
+    - ley/ministerio-de-justicia/2005-07-25/20032
+    - ley/ministerio-de-salud/2001-12-14/19779
+    - ley/ministerio-de-salud/2020-09-02/21258
+    - ley/ministerio-de-salud-subsecretaria-de-salud-publica/2006-09-22/20120
 
 ---
 

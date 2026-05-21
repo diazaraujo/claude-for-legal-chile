@@ -37,6 +37,27 @@ grafo_relaciones:
   reglamentada_por:
     - dto/ministerio-de-educacion/2008-05-30/235
     - dto/ministerio-de-educacion/2016-01-21/515
+  acuerda_con:
+    - ley/ministerio-de-educacion/2010-07-26/20452
+    - ley/ministerio-de-educacion/2016-02-15/20905
+    - ley/ministerio-de-educacion/2017-04-04/21006
+    - ley/ministerio-de-educacion/2018-08-25/21107
+    - res/ministerio-de-educacion-subsecretaria-de-educacion/2017-06-30/3177-exenta
+    - res/ministerio-de-educacion-subsecretaria-de-educacion/2017-08-09/4450-exenta
+    - res/ministerio-de-educacion-subsecretaria-de-educacion/2017-10-11/5461-exenta
+    - res/ministerio-de-educacion-subsecretaria-de-educacion/2018-01-20/7064-exenta
+    - res/ministerio-de-educacion-subsecretaria-de-educacion/2018-01-25/86-exenta
+    - res/ministerio-de-educacion-subsecretaria-de-educacion/2018-03-13/1226-exenta
+    - res/ministerio-de-educacion-subsecretaria-de-educacion/2018-12-19/6438-exenta
+    - res/ministerio-de-educacion-subsecretaria-de-educacion/2019-02-14/6677-exenta
+    - res/ministerio-de-educacion-subsecretaria-de-educacion/2019-03-27/6677-exenta
+    - res/ministerio-de-educacion-subsecretaria-de-educacion/2019-06-19/2988-exenta
+    - res/ministerio-de-educacion-subsecretaria-de-educacion/2020-01-03/6626-exenta
+    - res/ministerio-de-educacion-subsecretaria-de-educacion/2020-01-07/6625-exenta
+    - res/ministerio-de-educacion-subsecretaria-de-educacion/2020-06-05/2505-exenta
+    - res/ministerio-de-educacion-subsecretaria-de-educacion/2020-06-05/2506-exenta
+    - res/ministerio-de-educacion-subsecretaria-de-educacion/2020-06-05/2521-exenta
+    - res/ministerio-de-educacion-subsecretaria-de-educacion/2020-06-05/2522-exenta
 
 ---
 

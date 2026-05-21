@@ -40,6 +40,27 @@ grafo_relaciones:
   reglamentada_por:
     - dto/ministerio-de-justicia/1984-01-18/1120
     - dto/ministerio-de-justicia/2013-01-18/515
+  acuerda_con:
+    - dfl/ministerio-de-justicia/1995-10-18/1
+    - dl/ministerio-de-justicia/1932-08-18/409
+    - dto/ministerio-de-justicia/1960-01-27/64
+    - dto/ministerio-de-justicia/1978-05-23/307
+    - dto/ministerio-de-justicia/1982-11-11/779
+    - dto/ministerio-de-justicia/2003-11-29/685
+    - dto/ministerio-de-justicia/2011-05-05/144
+    - dto/ministerio-de-justicia/2013-01-18/515
+    - dto/ministerio-de-justicia/2013-12-27/552
+    - ley/ministerio-de-justicia-y-derechos-humanos/2020-06-20/21240
+    - ley/ministerio-de-justicia/1906-02-19/1853
+    - ley/ministerio-de-justicia/1963-08-08/15231
+    - ley/ministerio-de-justicia/1983-10-01/18249
+    - ley/ministerio-de-justicia/1986-01-07/18488
+    - ley/ministerio-de-justicia/1987-01-24/18596
+    - ley/ministerio-de-justicia/1990-05-14/18978
+    - ley/ministerio-de-justicia/1991-02-14/19047
+    - ley/ministerio-de-justicia/1992-11-04/19172
+    - ley/ministerio-de-justicia/1995-01-30/19366
+    - ley/ministerio-de-justicia/2005-10-07/20066
 
 ---
 

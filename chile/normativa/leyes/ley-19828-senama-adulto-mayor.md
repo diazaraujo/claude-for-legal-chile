@@ -34,6 +34,12 @@ grafo_relaciones:
     - dto/ministerio-secretaria-general-de-la-presidencia/2004-05-22/95
     - dto/ministerio-secretaria-general-de-la-presidencia/2004-08-28/89
     - dto/ministerio-secretaria-general-de-la-presidencia/2010-12-31/104
+  acuerda_con:
+    - dfl/ministerio-secretaria-general-de-la-presidencia/2004-07-08/2
+    - dto/ministerio-de-justicia/2004-12-07/3787-exento
+    - dto/ministerio-secretaria-general-de-la-presidencia/2005-02-12/125
+    - ley/ministerio-de-energia/2020-08-08/21249
+    - ley/ministerio-del-interior/1990-03-10/18972
 
 ---
 

@@ -29,6 +29,12 @@ grafo_relaciones:
   modificada_por:
     - ley/ministerio-de-economia-fomento-y-reconstruccion-subsecretaria-de-economia-fomento-y-reconstruccion/2005-03-11/19996
     - ley/ministerio-de-economia-fomento-y-reconstruccion-subsecretaria-de-economia-fomento-y-reconstruccion/2007-01-26/20160
+  acuerda_con:
+    - dfl/ministerio-de-economia-fomento-y-reconstruccion-subsecretaria-de-economia-fomento-y-reconstruccion/2005-03-07/1
+    - dl/ministerio-de-economia-fomento-y-reconstruccion/1973-12-22/211
+    - dl/ministerio-de-hacienda/1975-11-28/1263
+    - dto/ministerio-de-economia/1980-10-27/511
+    - ley/ministerio-de-justicia/1902-08-30/1552
 
 ---
 

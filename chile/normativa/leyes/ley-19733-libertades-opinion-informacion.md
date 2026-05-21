@@ -37,6 +37,17 @@ grafo_relaciones:
     - ley/ministerio-secretaria-general-de-gobierno/2010-09-08/20461
   reglamentada_por:
     - dto/ministerio-secretaria-general-de-gobierno/2002-02-06/45
+  acuerda_con:
+    - cod/ministerio-de-justicia/1874-11-12/PENAL
+    - cod/ministerio-de-justicia/1874-11-12/penal
+    - dfl/ministerio-de-economia-fomento-y-reconstruccion-subsecretaria-de-economia-fomento-y-reconstruccion/2005-03-07/1
+    - dl/ministerio-de-economia-fomento-y-reconstruccion/1973-12-22/211
+    - dto/ministerio-de-economia/1980-10-27/511
+    - dto/ministerio-secretaria-general-de-gobierno/2002-02-06/45
+    - ins/fiscalia-nacional-economica-fiscalia-nacional-economica-comision-resolutiva-de-la-defensa-de-la-competencia/2003-07-21/46
+    - ley/ministerio-de-economia-fomento-y-reconstruccion-subsecretaria-de-economia-fomento-y-reconstruccion/2003-11-14/19911
+    - ley/ministerio-de-justicia/2002-05-31/19806
+    - ley/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2013-10-14/20695
 
 ---
 

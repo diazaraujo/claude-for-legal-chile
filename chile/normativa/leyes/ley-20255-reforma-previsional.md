@@ -59,6 +59,27 @@ grafo_relaciones:
     - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2009-06-08/29
     - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2012-02-04/27
     - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2018-09-12/82
+  acuerda_con:
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2008-09-20/51
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2008-09-30/55
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2008-09-12/bancos-3448
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2008-12-29/bancos-3456
+    - cir/ministerio-de-hacienda-superintendencia-de-pensiones-superintendencia-de-bancos-e-instituciones-financieras-superintendencia-de-valores-y-seguros/2008-09-08/1533
+    - cir/ministerio-de-hacienda-superintendencia-de-pensiones-superintendencia-de-bancos-e-instituciones-financieras-superintendencia-de-valores-y-seguros/2008-09-08/1534
+    - cir/ministerio-de-hacienda-superintendencia-de-pensiones-superintendencia-de-bancos-e-instituciones-financieras-superintendencia-de-valores-y-seguros/2010-12-30/1749
+    - cir/ministerio-de-hacienda-superintendencia-de-pensiones-superintendencia-de-bancos-e-instituciones-financieras-superintendencia-de-valores-y-seguros-servicio-de-impuestos-internos/2008-09-29/1551
+    - cir/ministerio-de-hacienda-superintendencia-de-pensiones-superintendencia-de-bancos-e-instituciones-financieras-superintendencia-de-valores-y-seguros-tesoreria-general-de-la-republica/2009-03-19/1596
+    - dfl/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2008-07-04/1
+    - dfl/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2008-07-04/2
+    - dfl/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2008-07-04/3
+    - dl/ministerio-del-trabajo-y-prevision-social/1980-11-18/3502
+    - dto/ministerio-de-hacienda/2014-05-31/718
+    - dto/ministerio-de-hacienda/2016-02-11/1563
+    - dto/ministerio-del-trabajo-y-prevision-social/2016-10-21/24
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2009-05-20/21
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2019-02-02/89
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2019-05-29/14
+    - ley/ministerio-de-desarrollo-social-y-familia/2020-04-03/21218
 
 ---
 

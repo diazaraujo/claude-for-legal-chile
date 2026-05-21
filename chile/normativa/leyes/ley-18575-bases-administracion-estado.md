@@ -43,6 +43,27 @@ grafo_relaciones:
     - dto/ministerio-secretaria-general-de-la-presidencia/2001-05-07/26
   refundida_por:
     - dfl/ministerio-secretaria-general-de-la-presidencia/2001-11-17/1
+  acuerda_con:
+    - dfl/ministerio-de-educacion/2006-02-21/1
+    - dfl/ministerio-de-educacion/2010-07-02/2
+    - dfl/ministerio-de-hacienda/1993-08-07/1
+    - dfl/ministerio-de-hacienda/2005-03-16/29
+    - dfl/ministerio-de-planificacion-y-cooperacion/1992-03-25/1
+    - dfl/ministerio-de-salud-subsecretaria-de-salud-publica/2006-04-24/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2000-01-10/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2000-01-11/2
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2002-05-03/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2005-11-08/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
+    - dl/ministerio-del-interior/1980-08-11/3464
+    - dto/ministerio-de-economia-fomento-y-reconstruccion/1992-01-21/430
+    - dto/ministerio-de-hacienda/1997-04-24/308
+    - dto/ministerio-de-hacienda-subsecretaria-de-hacienda/1998-03-03/50-exento
+    - dto/ministerio-de-justicia/2015-10-24/740
+    - dto/ministerio-de-salud/1998-08-29/187
+    - dto/ministerio-del-interior-y-seguridad-publica/2016-04-19/22
+    - dto/ministerio-del-interior/1992-08-27/662
+    - dto/ministerio-del-interior/1993-03-20/291
 
 ---
 

@@ -43,6 +43,20 @@ grafo_relaciones:
     - dto/ministerio-de-educacion-publica/1971-06-17/1122
     - dto/ministerio-de-educacion/2011-05-24/425
     - dto/ministerio-de-educacion/2013-10-28/277
+  acuerda_con:
+    - acd/entidad-de-gestion-colectiva-de-derechos-de-productores-audiovisuales-de-chile/2006-02-07/s/n
+    - dfl/ministerio-de-hacienda/1980-10-15/7
+    - ley/ministerio-de-educacion-publica/1993-07-10/19227
+    - ley/ministerio-de-educacion/2004-01-31/19928
+    - ley/ministerio-de-educacion/2008-02-05/20243
+    - ley/ministerio-de-educacion/2016-10-29/20959
+    - ley/ministerio-de-hacienda/2003-11-04/19912
+    - ley/ministerio-de-justicia/1902-08-30/1552
+    - ley/ministerio-del-trabajo-y-prevision-social/1964-02-04/15478
+    - res/ministerio-de-ciencia-tecnologia-conocimiento-e-innovacion/2020-06-11/94-exenta
+    - res/ministerio-de-educacion-subsecretaria-de-educacion/2015-06-25/4723-exenta
+    - res/ministerio-de-educacion-subsecretaria-de-educacion/2017-07-25/3703-exenta
+    - res/presidencia-de-la-republica/2014-11-22/3812-exenta
 
 ---
 

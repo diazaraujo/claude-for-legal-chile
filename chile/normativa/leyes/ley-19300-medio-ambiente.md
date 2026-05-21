@@ -57,6 +57,27 @@ grafo_relaciones:
     - dto/ministerio-secretaria-general-de-la-presidencia/2002-12-07/95
     - dto/ministerio-secretaria-general-de-la-presidencia/2005-05-11/75
     - dto/ministerio-secretaria-general-de-la-presidencia-comision-nacional-del-medio-ambiente/1999-12-18/166
+  acuerda_con:
+    - acd/tercer-tribunal-ambiental/2013-12-28/s/n
+    - cod/ministerio-de-justicia/1855-12-14/1855
+    - cod/ministerio-de-justicia/1943-07-09/orgánico-de-tribunales
+    - dfl/ministerio-de-hacienda/2005-03-16/29
+    - dfl/ministerio-de-justicia/1981-10-29/1122
+    - dfl/ministerio-de-justicia/1996-12-26/2
+    - dfl/ministerio-de-justicia/2000-05-30/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2000-01-11/2
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2002-05-03/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
+    - dl/ministerio-de-hacienda/1974-01-05/249
+    - dl/ministerio-del-interior/1980-08-11/3464
+    - dto/ministerio-de-vivienda-y-urbanismo/2003-07-01/236
+    - dto/ministerio-del-interior/1992-08-27/662
+    - dto/ministerio-del-medio-ambiente/2011-05-09/12
+    - dto/ministerio-del-medio-ambiente/2012-03-19/36
+    - dto/ministerio-del-medio-ambiente/2013-02-11/30
+    - dto/ministerio-del-medio-ambiente/2013-03-22/37
+    - dto/ministerio-del-medio-ambiente/2013-03-25/36
+    - dto/ministerio-del-medio-ambiente/2013-05-03/43
 
 ---
 

@@ -39,6 +39,27 @@ grafo_relaciones:
     - ley/ministerio-del-interior-y-seguridad-publica-subsecretaria-del-interior/2011-04-08/20507
   reglamentada_por:
     - dto/ministerio-de-hacienda/2006-01-12/529
+  acuerda_con:
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2006-03-06/bancos-3351
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2006-04-28/emisores-y-operadores-de-tarjetas-de-credito-17
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2006-07-06/cooperativas-123
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2006-07-20/filiales-57
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2006-07-20/filiales-58
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2006-11-20/emisores-y-operadores-de-tarjetas-de-credito-19
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2007-11-08/emisores-y-operadores-de-tarjetas-de-credito-27
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2008-04-21/bancos-3435
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2008-05-14/emisores-y-operadores-de-tarjetas-de-credito-29
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2008-09-03/emisores-y-operadores-de-tarjetas-de-credito-30
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2010-05-13/emisores-y-operadores-de-tarjetas-de-credito-35
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2012-04-18/bancos-3534
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2013-07-22/emisores-y-operadores-de-tarjetas-de-credito-40
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2014-02-17/emisores-y-operadores-de-tarjetas-de-credito-41
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2014-05-29/bancos-3569
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2014-06-10/cooperativas-156
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2015-04-21/bancos-3581
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2015-09-04/bancos-3587
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2017-11-28/emisoras-de-tarjetas-de-pago-1
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2017-11-28/operadoras-de-tarjetas-de-pago-1
 
 ---
 

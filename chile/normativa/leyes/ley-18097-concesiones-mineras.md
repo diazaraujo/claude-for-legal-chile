@@ -22,6 +22,12 @@ fecha_validacion: null
 grafo_relaciones:
   modificada_por:
     - ley/ministerio-de-mineria/1983-09-24/18246
+  acuerda_con:
+    - dl/ministerio-de-fomento/1932-08-27/488
+    - dl/ministerio-del-interior/1980-08-11/3464
+    - dto/ministerio-de-mineria/2018-03-01/64
+    - dto/ministerio-secretaria-general-de-la-presidencia/2005-09-22/100
+    - ley/ministerio-de-mineria/1983-10-14/18248
 
 ---
 

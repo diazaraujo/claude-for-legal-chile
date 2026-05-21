@@ -71,6 +71,27 @@ grafo_relaciones:
   rectificada_por:
     - dfl/ministerio-de-hacienda/2004-07-30/25
     - dfl/ministerio-de-salud/2003-11-20/5
+  acuerda_con:
+    - dfl/ministerio-de-agricultura/2004-02-07/47
+    - dfl/ministerio-de-agricultura/2004-02-07/48
+    - dfl/ministerio-de-agricultura/2004-02-07/49
+    - dfl/ministerio-de-economia-fomento-y-reconstruccion-subsecretaria-de-economia-fomento-y-reconstruccion/2003-12-11/1
+    - dfl/ministerio-de-economia-fomento-y-reconstruccion-subsecretaria-de-economia-fomento-y-reconstruccion/2003-12-11/2
+    - dfl/ministerio-de-economia-fomento-y-reconstruccion-subsecretaria-de-economia-fomento-y-reconstruccion/2003-12-11/3
+    - dfl/ministerio-de-economia-fomento-y-reconstruccion-subsecretaria-de-economia-fomento-y-reconstruccion/2003-12-11/4
+    - dfl/ministerio-de-educacion/2003-11-05/4
+    - dfl/ministerio-de-educacion/2003-11-05/5
+    - dfl/ministerio-de-educacion/2003-11-05/6
+    - dfl/ministerio-de-educacion/2003-11-05/7
+    - dfl/ministerio-de-hacienda/2003-10-30/26
+    - dfl/ministerio-de-hacienda/2003-11-24/33
+    - dfl/ministerio-de-hacienda/2003-12-04/35
+    - dfl/ministerio-de-hacienda/2003-12-31/32
+    - dfl/ministerio-de-hacienda/2003-12-31/34
+    - dfl/ministerio-de-hacienda/2004-01-24/40
+    - dfl/ministerio-de-hacienda/2004-01-24/41
+    - dfl/ministerio-de-hacienda/2004-01-24/46
+    - dfl/ministerio-de-hacienda/2004-01-28/36
 
 ---
 

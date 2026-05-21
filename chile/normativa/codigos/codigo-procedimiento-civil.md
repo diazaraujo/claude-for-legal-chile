@@ -45,6 +45,27 @@ grafo_relaciones:
   rectificada_por:
     - dfl/ministerio-de-salud-subsecretaria-de-salud-publica/2006-04-24/1
     - ley/ministerio-de-salud/1990-03-09/18933
+  acuerda_con:
+    - aa/corte-de-apelaciones-de-santiago/1994-08-19/s/n
+    - aa/corte-suprema/1920-09-30/s/n
+    - aa/corte-suprema/1994-09-16/s/n
+    - aa/corte-suprema/1997-01-31/s/n
+    - aa/corte-suprema/2004-05-20/s/n
+    - aa/corte-suprema/2007-08-21/s/n
+    - aa/corte-suprema/2019-05-10/55
+    - aa/tribunal-de-defensa-de-la-libre-competencia/2008-12-02/11
+    - acd/corte-suprema/1999-04-21/s/n
+    - acd/corte-suprema/2004-04-22/s/n
+    - acd/corte-suprema/2008-01-11/s/n
+    - acd/corte-suprema/2009-10-02/s/n
+    - acd/corte-suprema/2014-01-10/s/n
+    - acd/corte-suprema/2014-03-21/s/n
+    - avi/corte-suprema/2011-05-27/s/n
+    - cci/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1988-06-16/bancos-33
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1988-06-27/bancos-2372
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1988-08-02/bancos-2384
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1988-12-13/bancos-2409
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1992-03-19/bancos-2676
 
 ---
 

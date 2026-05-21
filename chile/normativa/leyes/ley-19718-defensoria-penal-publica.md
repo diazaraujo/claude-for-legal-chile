@@ -36,6 +36,25 @@ grafo_relaciones:
     - dto/ministerio-de-justicia/2002-08-19/495
     - dto/ministerio-de-justicia/2003-11-10/538
     - dto/ministerio-de-justicia/2015-12-03/460
+  acuerda_con:
+    - cod/ministerio-de-justicia/1874-11-12/PENAL
+    - cod/ministerio-de-justicia/1874-11-12/penal
+    - dfl/ministerio-de-hacienda/2005-03-16/29
+    - dl/ministerio-de-hacienda/1981-01-02/3551
+    - dto/ministerio-de-justicia/2011-10-29/616
+    - dto/ministerio-de-justicia/2015-03-25/14
+    - ley/ministerio-de-hacienda/1998-02-04/19553
+    - ley/ministerio-de-justicia/1902-08-30/1552
+    - ley/ministerio-de-justicia/1999-10-15/19640
+    - ley/ministerio-del-interior/1989-09-23/18834
+    - res/defensoria-penal-publica-ministerio-de-justicia/2015-01-07/131
+    - res/ministerio-de-justicia-y-derechos-humanos-defensoria-penal-publica/2017-04-24/3
+    - res/ministerio-de-justicia-y-derechos-humanos-defensoria-penal-publica/2018-11-21/26
+    - res/ministerio-de-justicia-y-derechos-humanos-defensoria-penal-publica/2020-06-23/3
+    - res/ministerio-de-justicia/2003-04-17/396-exenta
+    - res/ministerio-de-justicia-defensoria-penal-publica/2005-01-08/2683-exenta
+    - res/ministerio-de-justicia-defensoria-penal-publica/2006-07-18/1307-exenta
+    - res/ministerio-de-justicia-defensoria-penal-publica/2013-11-25/158
 
 ---
 

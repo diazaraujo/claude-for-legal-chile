@@ -42,6 +42,11 @@ grafo_relaciones:
     - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2000-01-11/2
   rectifica:
     - dl/ministerio-de-hacienda/1974-12-31/830
+  acuerda_con:
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2006-09-11/bancos-3368
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2006-09-26/bancos-3369
+    - ley/ministerio-del-interior/2005-02-16/20000
+    - ley/ministerio-secretaria-general-de-gobierno/2001-06-04/19733
 
 ---
 

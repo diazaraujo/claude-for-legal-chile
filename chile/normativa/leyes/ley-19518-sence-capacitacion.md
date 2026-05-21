@@ -41,6 +41,27 @@ grafo_relaciones:
     - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/1998-04-27/98
     - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/1999-03-30/122
     - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2002-09-03/186
+  acuerda_con:
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2005-03-17/16
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2000-05-25/63
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2011-07-30/47
+    - ley/ministerio-de-economia-fomento-y-reconstruccion-subsecretaria-de-economia-fomento-y-reconstruccion/2003-11-14/19911
+    - ley/ministerio-de-hacienda/2007-02-21/20170
+    - ley/ministerio-de-hacienda/2009-01-29/20326
+    - ley/ministerio-de-hacienda/2009-05-30/20351
+    - ley/ministerio-del-interior/1990-03-10/18972
+    - ley/ministerio-del-interior-subsecretaria-del-interior/2006-09-04/20121
+    - ley/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2006-10-27/20124
+    - ley/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2008-06-25/20267
+    - res/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2003-03-13/15-exenta
+    - res/ministerio-del-trabajo-y-prevision-social-servicio-nacional-de-capacitacion-y-empleo/2001-01-06/12048-exenta
+    - res/ministerio-del-trabajo-y-prevision-social-servicio-nacional-de-capacitacion-y-empleo/2001-01-06/12113-exenta
+    - res/ministerio-del-trabajo-y-prevision-social-servicio-nacional-de-capacitacion-y-empleo/2016-01-06/5375-exenta
+    - res/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social-servicio-nacional-de-capacitacion-y-empleo-direccion-nacional/1998-01-20/11409-exenta
+    - res/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo-servicio-nacional-de-capacitacion-y-empleo/2018-05-30/2266-exenta
+    - res/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo-servicio-nacional-de-capacitacion-y-empleo/2018-05-30/2271-exenta
+    - res/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo-servicio-nacional-de-capacitacion-y-empleo/2019-11-23/3912-exenta
+    - res/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo-servicio-nacional-de-capacitacion-y-empleo/2020-01-28/4559-exenta
 
 ---
 

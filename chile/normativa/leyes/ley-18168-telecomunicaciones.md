@@ -67,6 +67,27 @@ grafo_relaciones:
     - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2011-03-18/368
     - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2012-05-12/60
     - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2012-07-12/99
+  acuerda_con:
+    - dfl/ministerio-de-transportes-y-telecomunicaciones/1987-02-21/1
+    - dto/ministerio-de-transportes-y-telecomunicaciones/1984-07-09/30
+    - dto/ministerio-de-transportes-y-telecomunicaciones/1984-08-07/81
+    - dto/ministerio-de-transportes-y-telecomunicaciones/1984-08-13/82
+    - dto/ministerio-de-transportes-y-telecomunicaciones/2015-08-14/177
+    - dto/ministerio-de-transportes-y-telecomunicaciones/2015-11-30/70
+    - dto/ministerio-de-transportes-y-telecomunicaciones/2016-03-15/148
+    - dto/ministerio-de-transportes-y-telecomunicaciones/2016-03-15/149
+    - dto/ministerio-de-transportes-y-telecomunicaciones/2016-05-18/4
+    - dto/ministerio-de-transportes-y-telecomunicaciones/2018-02-03/119
+    - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/1983-05-06/15
+    - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2005-09-22/142
+    - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2008-03-20/103
+    - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2012-07-12/99
+    - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2013-07-17/55
+    - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2013-09-24/178
+    - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2013-09-24/51
+    - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2015-02-23/77
+    - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2015-05-16/101
+    - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2015-12-16/74
 
 ---
 

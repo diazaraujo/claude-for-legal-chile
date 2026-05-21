@@ -34,6 +34,27 @@ grafo_relaciones:
     - ley/ministerio-de-hacienda/1997-11-04/19528
     - ley/ministerio-de-hacienda/2004-06-26/19951
     - ley/ministerio-de-hacienda/2013-12-13/20715
+  acuerda_con:
+    - cci/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1989-12-28/bancos-116
+    - cci/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1992-06-03/bancos-61
+    - cci/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2007-06-29/bancos-4
+    - cci/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2015-07-31/manual-sistema-informacion-7
+    - cer/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1996-11-07/11
+    - cer/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2002-01-09/1
+    - cer/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2010-12-15/12
+    - cer/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2017-12-15/12
+    - cer/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2018-01-15/1
+    - cer/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2018-02-15/2
+    - cer/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2018-03-15/3
+    - cer/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2018-11-15/11
+    - cer/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2019-02-15/2
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1989-10-26/bancos-2492
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1981-08-20/bancos-comerciales-1749
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1982-01-19/bancos-1769
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1986-08-29/bancos-2025
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1988-05-05/bancos-2357
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1988-11-02/bancos-2404
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1988-11-03/emisores-y-operadores-de-tarjetas-de-crédito-1
 
 ---
 

@@ -56,6 +56,27 @@ grafo_relaciones:
     - dto/ministerio-de-justicia/2005-08-23/957
     - dto/ministerio-de-justicia/2008-12-13/639
     - dto/ministerio-de-justicia/2009-05-25/763
+  acuerda_con:
+    - aa/corte-de-apelaciones-de-san-miguel/2005-09-09/s/n
+    - aa/corte-de-apelaciones-de-santiago/2005-10-07/s/n
+    - cod/ministerio-de-justicia/1855-12-14/1855
+    - cod/ministerio-de-justicia/1874-11-12/PENAL
+    - cod/ministerio-de-justicia/1874-11-12/penal
+    - cod/ministerio-de-justicia/1943-07-09/orgánico-de-tribunales
+    - dfl/ministerio-de-justicia-y-derechos-humanos/2017-01-31/3
+    - dfl/ministerio-de-justicia/1990-03-24/1
+    - dfl/ministerio-de-justicia/1996-12-26/2
+    - dfl/ministerio-de-justicia/2000-05-30/1
+    - dl/ministerio-de-justicia/1979-12-29/3058
+    - dl/ministerio-de-justicia/1980-05-22/3346
+    - dto/ministerio-de-justicia-y-derechos-humanos/2017-01-07/2876-exento
+    - dto/ministerio-de-justicia-y-derechos-humanos/2017-12-21/2641-exento
+    - dto/ministerio-de-justicia/2005-08-23/957
+    - dto/ministerio-de-justicia/2005-09-29/2968-exento
+    - dto/ministerio-de-justicia/2005-10-24/993
+    - dto/ministerio-de-justicia/2008-03-06/844-exento
+    - dto/ministerio-de-justicia/2009-04-27/1556-exento
+    - dto/ministerio-de-justicia/2009-06-19/2308-exento
 
 ---
 

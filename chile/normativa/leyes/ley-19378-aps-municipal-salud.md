@@ -35,6 +35,27 @@ grafo_relaciones:
     - dto/ministerio-de-salud/1995-12-23/2296
     - res/ministerio-de-salud/2001-07-13/82
     - res/ministerio-de-salud/2005-07-09/68
+  acuerda_con:
+    - dfl/ministerio-de-educacion/2006-02-21/1
+    - dfl/ministerio-de-educacion/2010-07-02/2
+    - dfl/ministerio-de-hacienda/2005-03-16/29
+    - dfl/ministerio-de-salud-publica/1968-01-31/725
+    - dfl/ministerio-de-salud/2001-11-20/1
+    - dfl/ministerio-de-salud-subsecretaria-de-salud-publica/2006-04-24/1
+    - dfl/ministerio-del-interior/1980-10-27/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2000-01-11/2
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2002-05-03/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
+    - dfl/ministerio-del-trabajo-y-prevision-social/1978-07-24/44
+    - dto/ministerio-de-salud/1995-12-20/2488
+    - dto/ministerio-de-salud/1997-02-12/1225
+    - dto/ministerio-de-salud/1997-10-27/246
+    - dto/ministerio-de-salud/1998-01-28/825
+    - dto/ministerio-de-salud/1998-02-13/869
+    - dto/ministerio-de-salud/2000-02-08/873
+    - dto/ministerio-de-salud/2004-01-22/261
+    - dto/ministerio-de-salud/2005-01-24/181
+    - dto/ministerio-de-salud/2005-04-21/140
 
 ---
 

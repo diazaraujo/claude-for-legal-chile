@@ -49,6 +49,27 @@ grafo_relaciones:
     - ley/ministerio-de-hacienda/1927-09-10/4174
   refundida_por:
     - dfl/ministerio-de-hacienda/1998-12-16/1
+  acuerda_con:
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/1997-02-03/7
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/1998-12-10/74
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2010-04-20/29
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2015-01-20/4
+    - cod/ministerio-de-justicia/1855-12-14/1855
+    - dfl/ministerio-de-hacienda/1953-08-05/336
+    - dfl/ministerio-de-hacienda/1960-04-05/190
+    - dfl/ministerio-de-hacienda/1998-12-16/1
+    - dfl/ministerio-de-justicia/1996-12-26/2
+    - dfl/ministerio-de-justicia/2000-05-30/1
+    - dfl/ministerio-de-mineria/1960-03-21/152
+    - dfl/ministerio-de-obras-publicas/1998-02-25/850
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2000-01-11/2
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2002-05-03/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
+    - dl/ministerio-de-agricultura/1978-12-12/2405
+    - dl/ministerio-de-economia/1975-02-21/889
+    - dl/ministerio-de-hacienda/1932-08-10/328
+    - dl/ministerio-de-hacienda/1974-01-30/296
+    - dl/ministerio-de-hacienda/1974-10-30/722
 
 ---
 

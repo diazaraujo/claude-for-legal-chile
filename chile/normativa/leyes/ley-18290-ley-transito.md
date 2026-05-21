@@ -66,6 +66,27 @@ grafo_relaciones:
     - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-transportes/1986-01-02/170
   refundida_por:
     - dfl/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-transportes-ministerio-de-justicia-subsecretaria-de-justicia/2009-10-29/1
+  acuerda_con:
+    - avi/ministerio-de-hacienda-superintendencia-de-valores-y-seguros/2006-04-10/s/n
+    - dfl/ministerio-de-justicia/1930-08-28/2128
+    - dl/ministerio-del-interior/1976-01-14/1289
+    - dl/ministerio-del-interior/1979-12-29/3063
+    - dto/ministerio-de-justicia/1978-05-23/307
+    - dto/ministerio-de-justicia/1992-01-29/21-exento
+    - dto/ministerio-de-justicia/1997-04-14/168
+    - dto/ministerio-de-justicia/2002-05-29/265-exento
+    - dto/ministerio-de-justicia/2003-04-28/408-exento
+    - dto/ministerio-de-justicia/2003-10-15/676
+    - dto/ministerio-de-justicia/2005-02-04/1124
+    - dto/ministerio-de-justicia/2005-04-29/1544-exento
+    - dto/ministerio-de-justicia/2006-05-30/1561-exento
+    - dto/ministerio-de-justicia/2006-10-17/638
+    - dto/ministerio-de-justicia/2007-05-23/1153-exento
+    - dto/ministerio-de-justicia/2008-05-30/1916-exento
+    - dto/ministerio-de-justicia/2009-02-02/451-exento
+    - dto/ministerio-de-justicia/2015-06-16/2229-exento
+    - dto/ministerio-de-justicia-subsecretaria-de-justicia/1985-01-09/1110
+    - dto/ministerio-de-justicia-subsecretaria-de-justicia/1991-09-05/856
 
 ---
 

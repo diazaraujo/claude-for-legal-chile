@@ -50,6 +50,27 @@ grafo_relaciones:
     - dto/ministerio-del-interior-subsecretaria-del-interior/2007-06-23/1215
     - dto/ministerio-del-interior-subsecretaria-del-interior/2008-02-19/867
     - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2010-06-25/12
+  acuerda_con:
+    - cod/ministerio-de-justicia/1874-11-12/PENAL
+    - cod/ministerio-de-justicia/1874-11-12/penal
+    - cod/ministerio-de-justicia/1943-07-09/orgánico-de-tribunales
+    - dfl/ministerio-de-justicia/1995-10-18/1
+    - dfl/ministerio-de-justicia/2000-05-30/1
+    - dto/ministerio-de-defensa-nacional/1978-04-13/400
+    - dto/ministerio-de-justicia/1944-12-19/2226
+    - dto/ministerio-de-justicia/1996-01-26/565
+    - dto/ministerio-de-salud-subsecretaria-de-salud-publica/2020-11-19/62
+    - dto/ministerio-del-interior-y-seguridad-publica-subsecretaria-del-interior/2012-02-03/820
+    - dto/ministerio-del-interior-subsecretaria-del-interior/2007-04-17/1358
+    - ley/ministerio-de-defensa-nacional/1972-10-21/17798
+    - ley/ministerio-de-educacion/2015-05-05/20832
+    - ley/ministerio-de-hacienda/2003-12-18/19913
+    - ley/ministerio-de-justicia-y-derechos-humanos/2020-04-17/21228
+    - ley/ministerio-de-justicia/1902-08-30/1552
+    - ley/ministerio-de-justicia/1943-07-09/7421
+    - ley/ministerio-de-justicia/1967-03-08/16618
+    - ley/ministerio-de-justicia/1983-05-14/18216
+    - ley/ministerio-de-justicia/1990-02-08/18916
 
 ---
 

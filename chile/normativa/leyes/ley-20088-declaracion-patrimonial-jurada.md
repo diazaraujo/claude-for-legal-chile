@@ -42,6 +42,27 @@ grafo_relaciones:
     - ley/ministerio-del-interior/1990-02-05/18918
   reglamentada_por:
     - dto/ministerio-secretaria-general-de-la-presidencia/2006-03-22/45
+  acuerda_con:
+    - cod/ministerio-de-justicia/1874-11-12/PENAL
+    - cod/ministerio-de-justicia/1874-11-12/penal
+    - cod/ministerio-de-justicia/1943-07-09/orgánico-de-tribunales
+    - dfl/ministerio-de-economia-fomento-y-reconstruccion-subsecretaria-de-economia-fomento-y-reconstruccion/2005-03-07/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2000-01-11/2
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2002-05-03/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
+    - dfl/ministerio-secretaria-general-de-la-presidencia/2001-11-17/1
+    - dfl/ministerio-secretaria-general-de-la-presidencia/2010-08-10/5
+    - dl/ministerio-de-economia-fomento-y-reconstruccion/1973-12-22/211
+    - dto/ministerio-de-economia/1980-10-27/511
+    - dto/ministerio-del-interior/1992-08-27/662
+    - ley/ministerio-de-hacienda/1989-10-10/18840
+    - ley/ministerio-de-hacienda/2003-07-30/19886
+    - ley/ministerio-de-justicia/1943-07-09/7421
+    - ley/ministerio-de-justicia/1981-05-19/17997
+    - ley/ministerio-de-justicia/1999-10-15/19640
+    - ley/ministerio-del-interior/1985-11-15/18460
+    - ley/ministerio-del-interior/1987-01-09/18593
+    - ley/ministerio-del-interior/1988-03-31/18695
 
 ---
 

@@ -28,6 +28,8 @@ grafo_relaciones:
     - ley/ministerio-de-justicia-y-derechos-humanos/2020-09-21/21266
   reglamentada_por:
     - dto/ministerio-de-justicia-y-derechos-humanos-subsecretaria-de-justicia/2019-04-02/471
+  acuerda_con:
+    - res/ministerio-de-justicia-y-derechos-humanos-servicio-medico-legal/2020-11-07/2938-exenta
 
 ---
 

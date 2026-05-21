@@ -40,6 +40,20 @@ grafo_relaciones:
   modificada_por:
     - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2001-05-08/bancos-3123
     - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2008-08-21/bancos-3444
+  acuerda_con:
+    - cci/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2001-01-11/bancos-3
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2001-02-16/11
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2000-12-26/bancos-3099
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2001-02-09/bancos-3109
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2001-06-12/bancos-3130
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2003-05-06/bancos-3223
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2004-09-22/bancos-3286
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2004-12-20/bancos-3298
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2007-07-13/bancos-3399
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2008-01-10/bancos-3417
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2008-02-27/bancos-3427
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2013-11-12/bancos-3559
+    - dl/ministerio-de-hacienda/1980-12-23/3538
 
 ---
 

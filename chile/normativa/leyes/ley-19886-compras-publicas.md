@@ -50,6 +50,27 @@ grafo_relaciones:
     - aa/corte-suprema/2011-03-22/s/n
     - aa/corte-suprema/2018-10-05/165
     - dto/ministerio-de-hacienda/2004-09-24/250
+  acuerda_con:
+    - dfl/ministerio-de-hacienda/1960-04-06/338
+    - dfl/ministerio-de-hacienda/2005-03-16/29
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2000-01-11/2
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2002-05-03/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
+    - dfl/ministerio-secretaria-general-de-la-presidencia/2001-11-17/1
+    - dl/ministerio-de-hacienda/1975-11-28/1263
+    - dl/ministerio-de-hacienda/1979-10-17/2879
+    - dl/ministerio-de-hacienda/1980-12-06/3529
+    - dl/ministerio-de-hacienda/1981-01-02/3551
+    - dto/ministerio-de-economia-fomento-y-turismo/2018-02-22/12
+    - dto/ministerio-de-educacion/2015-10-29/88
+    - dto/ministerio-de-hacienda/1978-08-29/404
+    - dto/ministerio-de-hacienda/1991-03-19/98
+    - dto/ministerio-de-hacienda/2004-02-05/1179
+    - dto/ministerio-de-hacienda/2004-08-30/644
+    - dto/ministerio-de-hacienda/2004-09-24/250
+    - dto/ministerio-de-hacienda/2004-09-24/638
+    - dto/ministerio-de-hacienda/2007-02-27/1477
+    - dto/ministerio-de-hacienda/2013-09-10/990
 
 ---
 

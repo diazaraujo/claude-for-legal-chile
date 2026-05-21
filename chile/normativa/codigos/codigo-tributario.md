@@ -53,6 +53,27 @@ grafo_relaciones:
     - dfl/ministerio-de-hacienda/1960-04-05/190
   rectificada_por:
     - ley/ministerio-de-justicia/2002-05-31/19806
+  acuerda_con:
+    - cci/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1998-04-21/bancos-10
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/1999-06-14/29
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2005-12-13/64
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2006-08-05/42
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2010-08-16/49
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2011-04-07/19
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2012-11-09/49
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2014-04-10/21
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2015-05-13/29
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2015-05-20/33
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2015-05-20/34
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2015-06-02/36
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2015-06-11/39
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2015-06-11/40
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2015-06-11/41
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2015-06-17/47
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2015-06-25/50
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2015-06-25/51
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2015-06-27/53
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2015-07-03/54
 
 ---
 

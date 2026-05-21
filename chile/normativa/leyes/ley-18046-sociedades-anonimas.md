@@ -47,6 +47,27 @@ grafo_relaciones:
     - dto/ministerio-de-hacienda/1982-11-13/587
     - dto/ministerio-de-hacienda/2012-07-06/702
     - dto/ministerio-secretaria-general-de-la-presidencia/2000-06-28/99
+  acuerda_con:
+    - cci/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2001-06-25/bancos-19
+    - cci/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2007-06-29/bancos-4
+    - cci/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2017-03-30/bancos-2-
+    - cci/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2017-07-18/emisoras-y-operadores-de-tarjeta-de-credito-1
+    - cir/ministerio-de-hacienda-ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2010-09-23/auditores-externos-12
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/1998-01-10/2
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1981-12-14/bancos-1764
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1983-11-21/bancos-1966
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1985-10-08/cooperativas-87
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1988-04-12/bancos-2346
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1988-07-20/bancos-2378
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1988-07-20/bancos-2379
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1988-07-27/bancos-2381
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1988-12-13/bancos-2409
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1988-12-19/bancos-2410
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1989-01-17/auditores-externos-1
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1989-02-20/bancos-2427
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1989-11-06/bancos-2495
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1989-12-21/bancos-2505
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1989-12-22/bancos-2507
 
 ---
 

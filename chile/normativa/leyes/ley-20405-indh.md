@@ -32,6 +32,25 @@ grafo_relaciones:
     - dto/ministerio-de-justicia/2011-12-02/618
     - res/instituto-nacional-de-derechos-humanos/2011-09-24/225-exenta
     - res/instituto-nacional-de-derechos-humanos/2011-12-29/314-exenta
+  acuerda_con:
+    - dto/ministerio-de-justicia/2011-12-02/618
+    - dto/ministerio-del-interior-subsecretaria-del-interior/2010-02-13/43
+    - dto/ministerio-secretaria-general-de-la-presidencia/2013-07-22/33
+    - dto/ministerio-secretaria-general-de-la-presidencia/2019-11-15/5
+    - ley/ministerio-de-justicia-y-derechos-humanos/2019-04-25/21154
+    - ley/ministerio-del-interior-y-seguridad-publica/2015-10-29/20874
+    - ley/ministerio-del-interior-subsecretaria-del-interior/2011-02-05/20496
+    - ley/ministerio-secretaria-general-de-la-presidencia/2018-01-29/21067
+    - res/instituto-nacional-de-derechos-humanos/2012-02-21/352-exenta
+    - res/instituto-nacional-de-derechos-humanos/2012-08-28/338-exenta
+    - res/instituto-nacional-de-derechos-humanos/2013-04-30/53-exenta
+    - res/instituto-nacional-de-derechos-humanos/2013-07-27/233-exenta
+    - res/instituto-nacional-de-derechos-humanos/2013-08-14/251-exenta
+    - res/instituto-nacional-de-derechos-humanos/2013-09-27/222-exenta
+    - res/instituto-nacional-de-derechos-humanos/2014-07-07/228-exenta
+    - res/instituto-nacional-de-derechos-humanos/2016-06-11/507-exenta
+    - res/instituto-nacional-de-derechos-humanos/2019-08-14/209-exenta
+    - res/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social-instituto-de-prevision-social/2015-12-30/678-exenta
 
 ---
 

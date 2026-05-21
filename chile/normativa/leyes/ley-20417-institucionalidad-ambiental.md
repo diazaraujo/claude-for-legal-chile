@@ -40,6 +40,27 @@ grafo_relaciones:
     - dto/ministerio-del-medio-ambiente/2013-05-02/1
     - dto/ministerio-del-medio-ambiente/2014-03-18/38
     - dto/ministerio-del-medio-ambiente/2014-03-18/39
+  acuerda_con:
+    - acd/segundo-tribunal-ambiental/2013-01-02/s/n
+    - acd/tercer-tribunal-ambiental/2013-12-28/s/n
+    - dfl/ministerio-secretaria-general-de-la-presidencia/2010-07-14/4
+    - dfl/ministerio-secretaria-general-de-la-presidencia/2010-09-11/3
+    - dfl/ministerio-secretaria-general-de-la-presidencia/2010-12-29/6
+    - dto/ministerio-del-medio-ambiente/2011-05-09/12
+    - dto/ministerio-del-medio-ambiente/2011-06-23/13
+    - dto/ministerio-del-medio-ambiente/2011-10-20/25
+    - dto/ministerio-del-medio-ambiente/2012-10-13/9
+    - dto/ministerio-del-medio-ambiente/2013-03-22/37
+    - dto/ministerio-del-medio-ambiente/2013-05-03/43
+    - dto/ministerio-del-medio-ambiente/2013-05-27/26
+    - dto/ministerio-del-medio-ambiente/2013-07-22/38
+    - dto/ministerio-del-medio-ambiente/2013-12-12/28
+    - dto/ministerio-del-medio-ambiente/2014-07-04/53
+    - ley/ministerio-del-medio-ambiente/2012-06-28/20600
+    - res/ministerio-del-medio-ambiente/2014-02-05/36-exenta
+    - res/ministerio-del-medio-ambiente--superintendencia-del-medio-ambiente/2016-11-18/1053-exenta
+    - res/ministerio-del-medio-ambiente-servicio-de-evaluacion-ambiental-viii-region-del-biobio/2018-12-07/318-exenta
+    - res/ministerio-del-medio-ambiente-subsecretaria-del-medio-ambiente-superintendencia-del-medio-ambiente/2016-07-22/643-exenta
 
 ---
 

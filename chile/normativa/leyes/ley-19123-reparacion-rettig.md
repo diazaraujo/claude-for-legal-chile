@@ -31,6 +31,27 @@ grafo_relaciones:
   reglamentada_por:
     - dto/ministerio-del-trabajo-y-prevision-social/1993-06-18/44
     - res/ministerio-de-salud-corporacion-nacional-de-reparacion-y-reconciliacion/1992-07-15/1
+  acuerda_con:
+    - cod/ministerio-de-justicia/1855-12-14/1855
+    - dfl/ministerio-de-hacienda/2005-03-16/29
+    - dfl/ministerio-de-justicia/1996-12-26/2
+    - dfl/ministerio-de-justicia/2000-05-30/1
+    - dfl/ministerio-de-salud-subsecretaria-de-salud-publica/2006-04-24/1
+    - dl/ministerio-de-hacienda/1974-01-05/249
+    - dl/ministerio-de-hacienda/1979-02-09/2448
+    - dl/ministerio-de-salud-publica/1979-08-03/2763
+    - dto/ministerio-del-interior/1997-06-09/1005
+    - dto/ministerio-del-interior-subsecretaria-del-interior/1990-05-09/355
+    - dto/ministerio-del-interior-subsecretaria-del-interior/2003-10-16/832
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2005-02-04/8
+    - ley/ministerio-de-hacienda/1965-07-10/16271
+    - ley/ministerio-de-hacienda/1993-11-27/19267
+    - ley/ministerio-de-hacienda/1994-12-02/19355
+    - ley/ministerio-de-hacienda/1995-08-28/19406
+    - ley/ministerio-de-hacienda/1995-11-30/19429
+    - ley/ministerio-de-hacienda/1996-11-29/19485
+    - ley/ministerio-de-hacienda/1998-05-30/19564
+    - ley/ministerio-de-hacienda/1999-12-02/19649
 
 ---
 

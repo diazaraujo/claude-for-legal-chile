@@ -54,6 +54,27 @@ grafo_relaciones:
     - dto/ministerio-del-interior/1992-08-27/662
   rectificada_por:
     - ley/ministerio-del-interior-subsecretaria-del-interior/1999-03-25/19602
+  acuerda_con:
+    - dfl/ministerio-del-interior/1991-07-02/29
+    - dfl/ministerio-del-interior/1991-07-02/33
+    - dfl/ministerio-del-interior/1991-07-02/34
+    - dfl/ministerio-del-interior/1996-07-20/1
+    - dfl/ministerio-del-interior/1996-10-02/2
+    - dfl/ministerio-del-interior/1996-10-02/3
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/1995-12-13/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/1996-12-06/5
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/1996-12-06/6
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/1996-12-06/7
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2005-11-08/1
+    - dfl/ministerio-secretaria-general-de-la-presidencia/2017-09-06/2
+    - dl/ministerio-del-interior/1980-08-11/3464
+    - dto/ministerio-del-interior-y-seguridad-publica-subsecretaria-de-desarrollo-regional-y-administrativo/2015-06-17/626
+    - dto/ministerio-del-interior/1993-03-20/291
+    - dto/ministerio-del-interior/1996-11-20/2385
+    - dto/ministerio-secretaria-general-de-la-presidencia/2005-09-22/100
+    - dto/municipalidad-de-chiguayante/2013-06-20/2113
+    - dto/municipalidad-de-chile-chico/2015-08-10/691
+    - dto/municipalidad-de-colbun/2014-02-05/3673-exento
 
 ---
 

@@ -29,6 +29,22 @@ grafo_relaciones:
     - ley/ministerio-de-hacienda/2006-04-08/20097
   reglamentada_por:
     - dto/ministerio-de-hacienda/2006-06-05/1465
+  acuerda_con:
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2005-10-20/55
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2005-11-17/60
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2006-06-27/34
+    - dfl/ministerio-de-economia-fomento-y-reconstruccion/1993-12-16/523
+    - dl/ministerio-de-economia-fomento-y-reconstruccion-subsecretaria-de-economia-fomento-y-econstruccion/1974-07-13/600
+    - dl/ministerio-de-hacienda/1974-12-31/824
+    - res/comision-chilena-del-cobre/2007-01-13/7-exenta
+    - res/comision-chilena-del-cobre/2009-01-19/9-exenta
+    - res/comision-chilena-del-cobre/2011-01-19/5-exenta
+    - res/comision-chilena-del-cobre/2013-01-18/5-exenta
+    - res/comision-chilena-del-cobre/2014-01-17/1-exenta
+    - res/comision-chilena-del-cobre/2016-01-18/3-exenta
+    - res/ministerio-de-mineria-comision-chilena-del-cobre/2017-01-20/3-exenta
+    - res/ministerio-de-mineria-comision-chilena-del-cobre/2018-01-22/6-exenta
+    - res/ministerio-de-mineria-comision-chilena-del-cobre/2019-01-16/3-exenta
 
 ---
 

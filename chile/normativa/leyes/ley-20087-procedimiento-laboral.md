@@ -29,6 +29,8 @@ grafo_relaciones:
     - ley/ministerio-de-justicia/2008-02-15/20252
     - ley/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2007-02-14/20164
     - ley/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2008-03-29/20260
+  acuerda_con:
+    - dfl/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2003-01-16/1
 
 ---
 

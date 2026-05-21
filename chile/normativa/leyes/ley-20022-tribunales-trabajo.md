@@ -35,6 +35,18 @@ grafo_relaciones:
     - ley/ministerio-del-interior-subsecretaria-del-interior/2007-04-05/20174
     - ley/ministerio-del-interior-subsecretaria-del-interior/2007-04-11/20175
     - ley/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2007-02-14/20164
+  acuerda_con:
+    - aa/corte-suprema/2006-06-30/s/n
+    - cod/ministerio-de-justicia/1943-07-09/orgánico-de-tribunales
+    - dfl/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2003-01-16/1
+    - dl/ministerio-del-interior/1980-08-11/3464
+    - dl/ministerio-del-trabajo-y-prevision-social/1980-11-13/3500
+    - dto/ministerio-secretaria-general-de-la-presidencia/2005-09-22/100
+    - ley/ministerio-de-justicia/1943-07-09/7421
+    - ley/ministerio-de-justicia/1994-05-25/19306
+    - ley/ministerio-de-justicia/2000-03-09/19665
+    - ley/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/1970-08-19/17322
+    - ley/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2005-05-31/20023
 
 ---
 
