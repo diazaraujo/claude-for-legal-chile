@@ -32,7 +32,10 @@ grafo_relaciones:
     - ley/ministerio-del-interior/1990-02-20/18925
     - ley/ministerio-del-interior/1990-02-22/18937
     - ley/ministerio-del-interior/1991-01-24/19027
-    - ley/ministerio-del-interior_subsecretaria-del-interior/2010-10-08/20467
+    - ley/ministerio-del-interior-subsecretaria-del-interior/2010-10-08/20467
+    - ley/ministerio-secretaria-general-de-gobierno/2015-04-21/20830
+  reglamentada_por:
+    - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2005-09-22/142
 
 ---
 

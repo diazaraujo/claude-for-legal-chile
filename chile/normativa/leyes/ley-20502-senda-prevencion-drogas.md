@@ -17,6 +17,7 @@ relacionada_per:
 estado_revision: borrador-generado-no-validado
 validador: null
 fecha_validacion: null
+    - ley/ministerio-del-interior/2005-02-16/20000
 grafo_relaciones:
   modifica:
     - dfl/ministerio-de-hacienda/1959-11-19/22
@@ -24,9 +25,17 @@ grafo_relaciones:
     - dl/ministerio-de-defensa-nacional/1975-01-11/844
     - dl/ministerio-de-defensa-nacional/1979-01-24/2460
     - dl/ministerio-del-interior/1981-01-08/3607
+    - dto/ministerio-de-defensa-nacional/1975-07-12/103
     - ley/ministerio-de-defensa-nacional/1990-03-07/18961
     - ley/ministerio-del-interior/1994-04-13/19303
     - ley/ministerio-del-interior/2005-02-16/20000
+  modificada_por:
+    - ley/ministerio-del-interior-y-seguridad-publica/2015-06-10/20844
+    - ley/ministerio-del-interior-y-seguridad-publica/2016-11-04/20965
+    - ley/ministerio-del-interior-y-seguridad-publica-subsecretaria-del-interior/2014-12-31/20801
+  reglamentada_por:
+    - dto/ministerio-del-interior-y-seguridad-publica/2018-03-17/867
+
 ---
 
 # LEY 20502 — CREA EL MINISTERIO DEL INTERIOR Y EL SERVICIO NACIONAL PARA LA PREVENCIÓN Y REHABILITACIÓN DEL CONSUMO DE DROGAS Y ALCOHOL, Y MODIFICA DIVERSOS CUERPOS LEGALES

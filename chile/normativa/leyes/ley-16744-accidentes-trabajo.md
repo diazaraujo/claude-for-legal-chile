@@ -22,33 +22,36 @@ validador: null
 fecha_validacion: null
 grafo_relaciones:
   modifica:
-    - dto/ministerio-de-salubridad_prevision-y-asistencia-social/1944-06-02/606
-    - ley/ministerio-de-salubridad_prevision-y-asistencia-social/1937-03-05/6037
+    - dto/ministerio-de-salubridad-prevision-y-asistencia-social/1944-06-02/606
+    - ley/ministerio-de-salubridad-prevision-y-asistencia-social/1937-03-05/6037
     - ley/ministerio-del-trabajo-y-prevision-social/1963-12-11/15386
     - ley/ministerio-del-trabajo-y-prevision-social/1964-02-03/15477
     - ley/ministerio-del-trabajo-y-prevision-social/1965-06-11/16259
     - ley/ministerio-del-trabajo-y-prevision-social/1966-01-28/16395
   modificada_por:
     - dfl/ministerio-del-trabajo-y-prevision-social/1979-01-11/90
-    - dfl/ministerio-del-trabajo-y-prevision-social_subsecretaria-de-prevision-social/1996-01-05/192
+    - dfl/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/1996-01-05/192
     - dl/ministerio-del-trabajo-y-prevision-social/1976-09-09/1548
+    - dl/ministerio-del-trabajo-y-prevision-social/1980-11-18/3501
     - dl/ministerio-del-trabajo-y-prevision-social/1981-01-07/3536
-    - ley/ministerio-de-educacion/2005-11-25/20067
-    - ley/ministerio-de-hacienda/1968-05-24/16840
-    - ley/ministerio-de-hacienda/1973-06-06/17940
-    - ley/ministerio-de-hacienda/1988-12-29/18768
-    - ley/ministerio-del-trabajo-y-prevision-social/1969-08-01/17163
-    - ley/ministerio-del-trabajo-y-prevision-social/1970-10-06/17365
-    - ley/ministerio-del-trabajo-y-prevision-social/1971-03-23/17417
-    - ley/ministerio-del-trabajo-y-prevision-social/1981-07-01/18011
-    - ley/ministerio-del-trabajo-y-prevision-social/1983-12-28/18269
-    - ley/ministerio-del-trabajo-y-prevision-social/1988-10-28/18754
-    - ley/ministerio-del-trabajo-y-prevision-social/1989-07-14/18811
-    - ley/ministerio-del-trabajo-y-prevision-social/1995-06-21/19394
-    - ley/ministerio-del-trabajo-y-prevision-social/1996-05-08/19454
-    - ley/ministerio-del-trabajo-y-prevision-social/1997-10-14/19518
-    - ley/ministerio-del-trabajo-y-prevision-social_subsecretaria-de-prevision-social/2006-04-28/20101
-    - ley/ministerio-del-trabajo-y-prevision-social_subsecretaria-de-prevision-social/2008-09-03/20288
+  reglamentada_por:
+    - dto/ministerio-de-salud-publica/1972-01-14/821
+    - dto/ministerio-del-trabajo-y-prevision-social/1968-06-07/101
+    - dto/ministerio-del-trabajo-y-prevision-social/1968-06-07/109
+    - dto/ministerio-del-trabajo-y-prevision-social/1968-10-09/208
+    - dto/ministerio-del-trabajo-y-prevision-social/1969-02-26/285
+    - dto/ministerio-del-trabajo-y-prevision-social/1969-03-11/54
+    - dto/ministerio-del-trabajo-y-prevision-social/1969-08-25/102
+    - dto/ministerio-del-trabajo-y-prevision-social/1970-09-08/173
+    - dto/ministerio-del-trabajo-y-prevision-social/1973-02-21/305
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/1969-03-07/40
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/1970-05-16/92
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/1973-05-12/313
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2000-03-07/67
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2007-01-18/76
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2008-09-30/67
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2015-04-01/3
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2020-05-08/4
 
 ---
 

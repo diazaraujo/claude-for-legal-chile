@@ -22,10 +22,19 @@ validador: null
 fecha_validacion: null
 grafo_relaciones:
   modifica:
-    - dfl/ministerio-de-salud_subsecretaria-de-salud-publica/2006-04-24/1
+    - dfl/ministerio-de-salud-subsecretaria-de-salud-publica/2006-04-24/1
     - dl/ministerio-de-salud-publica/1979-08-03/2763
     - ley/ministerio-de-salud/1985-11-23/18469
     - ley/ministerio-de-salud/1990-03-09/18933
+  modificada_por:
+    - ley/ministerio-de-salud-subsecretaria-de-salud-publica/2012-04-24/20584
+  reglamentada_por:
+    - dto/ministerio-de-salud/2005-06-23/47
+    - dto/ministerio-de-salud/2005-07-08/69
+    - dto/ministerio-de-salud/2005-08-19/121
+    - dto/ministerio-de-salud/2005-09-02/136
+    - res/ministerio-de-salud/2005-06-23/344-exenta
+    - res/ministerio-de-salud-subsecretaria-de-salud-publica/2006-02-10/58-exenta
 
 ---
 

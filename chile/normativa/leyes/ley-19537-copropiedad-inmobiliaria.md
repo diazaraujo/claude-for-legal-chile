@@ -26,11 +26,20 @@ grafo_relaciones:
     - dto/ministerio-de-vivienda-y-urbanismo/1976-04-13/458
     - ley/ministerio-de-justicia/1937-08-16/6071
   modificada_por:
-    - ley/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion/2002-11-22/19838
-    - ley/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion/2002-11-22/19839
+    - ley/ministerio-de-economia-fomento-y-reconstruccion-subsecretaria-de-economia-fomento-y-reconstruccion/2002-11-22/19838
+    - ley/ministerio-de-economia-fomento-y-reconstruccion-subsecretaria-de-economia-fomento-y-reconstruccion/2002-11-22/19839
+    - ley/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2015-01-28/20808
     - ley/ministerio-de-vivienda-y-urbanismo/2007-02-14/20168
     - ley/ministerio-de-vivienda-y-urbanismo/2008-10-23/20296
     - ley/ministerio-de-vivienda-y-urbanismo/2012-03-07/20579
+    - ley/ministerio-de-vivienda-y-urbanismo/2013-11-05/20703
+    - ley/ministerio-de-vivienda-y-urbanismo/2014-04-01/20741
+    - ley/ministerio-de-vivienda-y-urbanismo/2015-05-30/20841
+  reglamentada_por:
+    - dto/ministerio-de-vivienda-y-urbanismo/1998-06-17/46
+    - res/ministerio-de-vivienda-y-urbanismo/1998-06-17/230
+  rectificada_por:
+    - rec/ministerio-de-vivienda-y-urbanismo/1998-03-07/s/n
 
 ---
 

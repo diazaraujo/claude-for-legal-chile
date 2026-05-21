@@ -25,26 +25,34 @@ grafo_relaciones:
   modifica:
     - dfl/ministerio-de-hacienda/1960-04-05/190
   modificada_por:
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2015-06-25/50
     - dfl/ministerio-de-hacienda/1968-08-01/2
     - dl/ministerio-de-hacienda/1973-10-24/95
     - dl/ministerio-de-hacienda/1973-12-31/232
     - dl/ministerio-de-hacienda/1974-03-16/359
     - dl/ministerio-de-hacienda/1974-11-05/728
     - dl/ministerio-de-hacienda/1974-12-05/787
+    - dl/ministerio-de-hacienda/1976-12-03/1604
     - dto/ministerio-de-hacienda/1963-04-26/3
     - dto/ministerio-de-hacienda/1964-09-24/2979
     - dto/ministerio-de-hacienda/1964-12-23/5007
     - dto/ministerio-del-interior/1977-06-25/104
     - ley/ministerio-de-bienes-nacionales/2003-10-10/19903
-    - ley/ministerio-de-economia_fomento-y-turismo_subsecretaria-de-economia-y-empresas-de-menor-tamano/2011-01-27/20494
+    - ley/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-economia-y-empresas-de-menor-tamano/2011-01-27/20494
+    - ley/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-economia-y-empresas-de-menor-tamano/2014-01-09/20720
     - ley/ministerio-de-hacienda/1964-01-02/15455
     - ley/ministerio-de-hacienda/1965-01-02/16068
     - ley/ministerio-de-hacienda/1965-04-21/16250
     - ley/ministerio-de-hacienda/1965-07-28/16282
     - ley/ministerio-de-hacienda/1968-03-23/16773
-    - ley/ministerio-de-hacienda/1968-12-31/17073
-    - ley/ministerio-de-hacienda/1995-08-04/19398
-    - ley/ministerio-de-hacienda/1997-07-30/19506
+  reglamentada_por:
+    - res/ministerio-de-hacienda/2001-11-10/1321-exenta
+    - res/ministerio-de-hacienda/2003-07-24/481-exenta
+    - res/ministerio-de-hacienda/2006-07-28/698-exenta
+  refunde:
+    - dfl/ministerio-de-hacienda/1960-04-05/190
+  rectificada_por:
+    - ley/ministerio-de-justicia/2002-05-31/19806
 
 ---
 

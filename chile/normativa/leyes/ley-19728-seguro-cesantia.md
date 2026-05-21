@@ -20,12 +20,23 @@ validador: null
 fecha_validacion: null
 grafo_relaciones:
   modificada_por:
-    - ley/ministerio-de-desarrollo-social_subsecretaria-de-evaluacion-social/2012-05-17/20595
+    - ley/ministerio-de-desarrollo-social-subsecretaria-de-evaluacion-social/2012-05-17/20595
+    - ley/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-economia-y-empresas-de-menor-tamano/2014-01-09/20720
     - ley/ministerio-de-hacienda/2009-05-30/20351
     - ley/ministerio-de-hacienda/2011-12-17/20552
+    - ley/ministerio-de-hacienda/2016-10-26/20956
     - ley/ministerio-de-planificacion/2011-10-13/20530
-    - ley/ministerio-del-trabajo-y-prevision-social_subsecretaria-de-prevision-social/2008-09-03/20288
-    - ley/ministerio-del-trabajo-y-prevision-social_subsecretaria-del-trabajo/2009-01-30/20328
+    - ley/ministerio-del-trabajo-y-prevision-social/2015-04-25/20829
+    - ley/ministerio-del-trabajo-y-prevision-social/2020-09-04/21263
+    - ley/ministerio-del-trabajo-y-prevision-social/2020-09-21/21269
+    - ley/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2008-09-03/20288
+    - ley/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2009-01-30/20328
+  reglamentada_por:
+    - dto/ministerio-del-trabajo-y-prevision-social/2015-11-23/46
+    - dto/ministerio-del-trabajo-y-prevision-social/2016-06-14/20
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2002-01-23/49
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2002-04-27/250
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2009-11-12/91
 
 ---
 

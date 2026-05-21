@@ -23,8 +23,14 @@ validador: null
 fecha_validacion: null
 grafo_relaciones:
   modificada_por:
-    - ley/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion/2009-01-29/20323
+    - ley/ministerio-de-economia-fomento-y-turismo/2019-01-16/21131
+    - ley/ministerio-de-economia-fomento-y-turismo/2020-04-03/21217
+    - ley/ministerio-de-economia-fomento-y-reconstruccion-subsecretaria-de-economia-fomento-y-reconstruccion/2009-01-29/20323
     - ley/ministerio-de-hacienda/2007-10-03/20219
+    - ley/ministerio-de-hacienda/2016-10-26/20956
+  reglamentada_por:
+    - dto/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-economia-y-empresas-de-menor-tamano/2019-05-02/52
+    - dto/ministerio-de-hacienda/2005-04-13/93
 
 ---
 

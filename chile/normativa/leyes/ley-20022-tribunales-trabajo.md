@@ -21,16 +21,20 @@ validador: null
 fecha_validacion: null
 grafo_relaciones:
   modifica:
-    - dfl/ministerio-del-trabajo-y-prevision-social_subsecretaria-del-trabajo/2003-01-16/1
+    - cod/ministerio-de-justicia/1943-07-09/orgánico-de-tribunales
+    - dfl/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2003-01-16/1
     - ley/ministerio-de-justicia/1943-07-09/7421
   modificada_por:
+    - ley/ministerio-de-justicia-y-derechos-humanos/2017-07-07/21017
     - ley/ministerio-de-justicia/2008-02-15/20252
     - ley/ministerio-de-justicia/2008-09-15/20286
     - ley/ministerio-de-justicia/2010-04-29/20438
     - ley/ministerio-de-justicia/2011-02-08/20497
-    - ley/ministerio-del-interior_subsecretaria-del-interior/2007-04-05/20174
-    - ley/ministerio-del-interior_subsecretaria-del-interior/2007-04-11/20175
-    - ley/ministerio-del-trabajo-y-prevision-social_subsecretaria-del-trabajo/2007-02-14/20164
+    - ley/ministerio-de-justicia/2015-11-06/20876
+    - ley/ministerio-del-interior-y-seguridad-publica/2017-09-05/21033
+    - ley/ministerio-del-interior-subsecretaria-del-interior/2007-04-05/20174
+    - ley/ministerio-del-interior-subsecretaria-del-interior/2007-04-11/20175
+    - ley/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2007-02-14/20164
 
 ---
 

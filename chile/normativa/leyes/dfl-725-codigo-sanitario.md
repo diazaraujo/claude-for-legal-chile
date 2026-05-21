@@ -30,10 +30,12 @@ grafo_relaciones:
     - dl/ministerio-de-salud-publica/1975-07-10/1085
     - dto/ministerio-de-vivienda-y-urbanismo/1976-04-13/458
     - ley/ministerio-de-agricultura/2008-12-27/20308
-    - ley/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-econstruccion/1989-05-24/18796
+    - ley/ministerio-de-economia-fomento-y-reconstruccion-subsecretaria-de-economia-fomento-y-econstruccion/1989-05-24/18796
+    - ley/ministerio-de-hacienda/1968-05-24/16840
     - ley/ministerio-de-justicia/1969-06-11/17155
     - ley/ministerio-de-justicia/1989-09-15/18826
     - ley/ministerio-de-justicia/2002-05-31/19806
+    - ley/ministerio-de-la-mujer-y-la-equidad-de-genero/2019-05-02/21155
     - ley/ministerio-de-mineria/1983-10-14/18248
     - ley/ministerio-de-salud-publica/1982-11-15/18173
     - ley/ministerio-de-salud/1984-05-04/18303
@@ -43,8 +45,50 @@ grafo_relaciones:
     - ley/ministerio-de-salud/1997-12-16/19536
     - ley/ministerio-de-salud/2004-02-24/19937
     - ley/ministerio-de-salud/2005-07-13/20029
-    - ley/ministerio-de-salud_subsecretaria-de-salud-publica/2009-10-03/20380
-    - ley/ministerio-de-salud_subsecretaria-de-salud-publica/2010-12-17/20470
+  reglamentada_por:
+    - dl/ministerio-de-salud-publica/1978-03-31/2147
+    - dto/ministerio-de-mineria/1992-01-16/185
+    - dto/ministerio-de-salud-publica/1968-12-12/1031
+    - dto/ministerio-de-salud-publica/1968-12-20/951
+    - dto/ministerio-de-salud-publica/1969-05-31/288
+    - dto/ministerio-de-salud-publica/1969-08-08/459
+    - dto/ministerio-de-salud-publica/1969-12-19/735
+    - dto/ministerio-de-salud-publica/1970-01-24/4
+    - dto/ministerio-de-salud-publica/1970-06-26/384
+    - dto/ministerio-de-salud-publica/1970-07-18/460
+    - dto/ministerio-de-salud-publica/1970-12-16/773
+    - dto/ministerio-de-salud-publica/1971-10-05/471
+    - dto/ministerio-de-salud-publica/1975-06-11/244
+    - dto/ministerio-de-salud-publica/1976-02-23/428
+    - dto/ministerio-de-salud-publica/1979-02-03/261
+    - dto/ministerio-de-salud-publica/1979-02-06/298
+    - dto/ministerio-de-salud-publica/1980-09-10/88
+    - dto/ministerio-de-salud-publica/1982-11-08/162
+    - dto/ministerio-de-salud-publica/1984-05-12/48
+    - dto/ministerio-de-salud-publica/1986-02-24/263
+  rectificada_por:
+    - dto/ministerio-de-salud-publica/1978-10-24/194
+  acuerda_con:
+    - acd/corte-de-apelaciones-de-antofagasta/2019-02-08/22
+    - dfl/ministerio-de-obras-publicas/1998-02-25/850
+    - dfl/ministerio-de-salud/1990-02-21/1
+    - dfl/ministerio-del-interior/1979-04-06/4
+    - dto/ministerio-de-justicia-y-derechos-humanos/2016-12-09/2358-exento
+    - dto/ministerio-de-justicia-y-derechos-humanos/2018-02-08/145-exento
+    - dto/ministerio-de-justicia-y-derechos-humanos-subsecretaria-de-justicia/2019-08-07/1589-exento
+    - dto/ministerio-de-justicia/1976-03-01/232
+    - dto/ministerio-de-justicia/1978-07-01/808
+    - dto/ministerio-de-justicia/1996-12-18/1191
+    - dto/ministerio-de-justicia/2004-07-31/418
+    - dto/ministerio-de-justicia/2010-04-23/2564-exento
+    - dto/ministerio-de-justicia/2011-01-21/245-exento
+    - dto/ministerio-de-justicia/2012-02-02/553-exento
+    - dto/ministerio-de-justicia/2014-07-03/1369-exento
+    - dto/ministerio-de-justicia/2015-10-16/3330-exento
+    - dto/ministerio-de-justicia-subsecretaria-de-justicia/1985-01-12/980
+    - dto/ministerio-de-justicia-subsecretaria-de-justicia/1988-02-09/1299
+    - dto/ministerio-de-justicia-subsecretaria-de-justicia/1990-04-28/553
+    - dto/ministerio-de-justicia-subsecretaria-de-justicia/1992-08-26/967
 
 ---
 

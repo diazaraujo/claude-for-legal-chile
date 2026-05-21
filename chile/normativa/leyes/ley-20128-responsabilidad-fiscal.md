@@ -17,16 +17,24 @@ relacionada_per:
 estado_revision: borrador-generado-no-validado
 validador: null
 fecha_validacion: null
+    - ley/ministerio-del-trabajo-y-prevision-social_subsecretaria-de-prevision-social/2008-03-17/20255
 grafo_relaciones:
   modifica:
     - dfl/ministerio-de-obras-publicas/1991-09-04/164
-    - dl/ministerio-de-defensa-nacional_subsecretaria-de-guerra/1976-11-23/1570
+    - dl/ministerio-de-defensa-nacional-subsecretaria-de-guerra/1976-11-23/1570
     - dl/ministerio-de-hacienda/1975-11-28/1263
     - dl/ministerio-de-tierras-y-colonizacion/1977-11-10/1939
     - dl/ministerio-del-trabajo-y-prevision-social/1974-10-02/670
     - dto/ministerio-de-obras-publicas/1996-12-18/900
   modificada_por:
-    - ley/ministerio-del-trabajo-y-prevision-social_subsecretaria-de-prevision-social/2008-03-17/20255
+    - ley/ministerio-de-hacienda/2017-12-07/21050
+    - ley/ministerio-de-hacienda/2020-04-02/21225
+    - ley/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2008-03-17/20255
+  reglamentada_por:
+    - dto/ministerio-de-hacienda/2007-05-30/1606
+    - dto/ministerio-de-hacienda/2010-08-20/1636
+    - dto/ministerio-de-hacienda/2015-03-06/1492
+
 ---
 
 # LEY 20128 — SOBRE RESPONSABILIDAD FISCAL

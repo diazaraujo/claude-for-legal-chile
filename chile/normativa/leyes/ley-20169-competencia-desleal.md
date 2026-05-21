@@ -21,7 +21,9 @@ validador: null
 fecha_validacion: null
 grafo_relaciones:
   modificada_por:
-    - ley/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion/2010-02-03/20416
+    - ley/ministerio-de-economia-fomento-y-reconstruccion-subsecretaria-de-economia-fomento-y-reconstruccion/2010-02-03/20416
+    - ley/ministerio-de-economia-fomento-y-turismo/2019-01-16/21131
+    - ley/ministerio-de-economia-fomento-y-turismo/2019-07-04/21166
 
 ---
 

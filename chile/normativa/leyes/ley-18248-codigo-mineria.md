@@ -30,17 +30,22 @@ grafo_relaciones:
     - dl/ministerio-de-mineria/1975-07-09/1090
     - dl/ministerio-de-mineria/1977-04-20/1759
     - dl/ministerio-de-mineria/1979-12-27/3060
-    - dto/ministerio-de-economia-y-comercio_subsecretaria-de-economia-y-comercio_departamento-de-minas-y-petroleo/1952-07-12/917
-    - ley/ministerio-de-economia-y-comercio_subsecretaria-de-economia-y-comercio_departamento-de-minas-y-petroleo/1952-02-28/10263
-    - ley/ministerio-de-economia_fomento-y-reconstruccion/1965-10-23/16319
+    - dto/ministerio-de-economia-y-comercio-subsecretaria-de-economia-y-comercio-departamento-de-minas-y-petroleo/1952-07-12/917
+    - ley/ministerio-de-economia-fomento-y-reconstruccion/1965-10-23/16319
+    - ley/ministerio-de-economia-y-comercio-subsecretaria-de-economia-y-comercio-departamento-de-minas-y-petroleo/1952-02-28/10263
     - ley/ministerio-de-mineria/1957-10-16/12576
   modificada_por:
+    - ley/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-economia-y-empresas-de-menor-tamano/2014-01-09/20720
     - ley/ministerio-de-hacienda/1987-12-31/18681
     - ley/ministerio-de-mineria/1990-02-22/18941
     - ley/ministerio-de-mineria/1994-03-03/19294
     - ley/ministerio-de-mineria/1998-07-25/19573
     - ley/ministerio-de-mineria/2000-09-22/19694
     - ley/ministerio-de-mineria/2001-03-30/19719
+  reglamentada_por:
+    - dto/ministerio-de-mineria/1987-02-27/1
+    - dto/ministerio-de-mineria/1989-02-25/141
+    - dto/ministerio-de-mineria/1991-01-24/209
 
 ---
 

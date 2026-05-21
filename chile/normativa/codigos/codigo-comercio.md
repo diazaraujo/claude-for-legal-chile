@@ -32,8 +32,9 @@ grafo_relaciones:
     - dl/ministerio-de-hacienda/1976-07-29/1533
     - dl/ministerio-de-hacienda/1977-10-15/1953
     - dl/ministerio-de-justicia/1925-12-22/777
-    - ley/ministerio-de-economia_fomento-y-reconstruccion/1982-05-22/18118
-    - ley/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion/2010-02-03/20416
+    - ley/ministerio-de-economia-fomento-y-reconstruccion/1982-05-22/18118
+    - ley/ministerio-de-economia-fomento-y-reconstruccion-subsecretaria-de-economia-fomento-y-reconstruccion/2010-02-03/20416
+    - ley/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-economia-y-empresas-de-menor-tamano/2014-01-09/20720
     - ley/ministerio-de-hacienda/1936-08-19/5884
     - ley/ministerio-de-hacienda/1950-10-03/9686
     - ley/ministerio-de-hacienda/1965-09-28/16324
@@ -44,7 +45,27 @@ grafo_relaciones:
     - ley/ministerio-de-hacienda/1997-11-04/19528
     - ley/ministerio-de-hacienda/1998-04-16/19559
     - ley/ministerio-de-hacienda/2007-06-05/20190
-    - ley/ministerio-de-hacienda_subsecretaria-de-hacienda/2009-10-20/20382
+  acuerda_con:
+    - cci/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1978-05-22/bancos-comerciales-25.7
+    - cci/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1992-02-18/bancos-24
+    - cci/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2002-02-05/bancos-3
+    - cci/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2014-08-19/bancos-3
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1981-08-20/bancos-comerciales-1749
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1988-03-31/bancos-2342
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1988-04-04/almacenes-generales-de-deposito-1
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1988-12-13/bancos-2409
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1989-12-12/carta-circular-bancos-110
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1990-03-02/bancos-2526
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1991-02-18/almacenes-generales-de-deposito-2
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1999-10-27/bancos-3029
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2000-12-18/bancos-3096
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2001-03-01/bancos-3112
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2006-11-16/bancos-3372
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2007-07-03/bancos-3396
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2008-08-21/bancos-3444
+    - dfl/ministerio-de-economia-fomento-y-reconstruccion-subsecretaria-de-economia-fomento-y-reconstruccion/2004-02-17/5
+    - dfl/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-economia-y-empresas-de-menor-tamano/2014-03-14/2
+    - dfl/ministerio-de-hacienda/1931-05-22/251
 
 ---
 

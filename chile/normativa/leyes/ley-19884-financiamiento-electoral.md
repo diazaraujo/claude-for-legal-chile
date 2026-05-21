@@ -21,18 +21,28 @@ validador: null
 fecha_validacion: null
 grafo_relaciones:
   modifica:
-    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2000-01-11/2
-    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2002-05-03/1
-    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2000-01-11/2
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2002-05-03/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
+    - dfl/ministerio-secretaria-general-de-la-presidencia/2017-09-06/2
+    - dfl/ministerio-secretaria-general-de-la-presidencia/2017-09-06/4
     - dto/ministerio-del-interior/1992-08-27/662
     - ley/ministerio-del-interior/1987-03-23/18603
     - ley/ministerio-del-interior/1988-03-31/18695
     - ley/ministerio-del-interior/1988-05-06/18700
   modificada_por:
-    - ley/ministerio-del-interior_subsecretaria-del-interior/2004-08-26/19963
-    - ley/ministerio-del-interior_subsecretaria-del-interior/2004-08-26/19964
-    - ley/ministerio-del-interior_subsecretaria-del-interior/2005-09-06/20053
+    - dfl/ministerio-secretaria-general-de-la-presidencia/2017-09-06/1
+    - ley/ministerio-del-interior-y-seguridad-publica/2015-05-05/20840
+    - ley/ministerio-del-interior-y-seguridad-publica/2016-07-27/20937
+    - ley/ministerio-del-interior-y-seguridad-publica-subsecretaria-del-interior/2013-06-19/20678
+    - ley/ministerio-del-interior-subsecretaria-del-interior/2004-08-26/19963
+    - ley/ministerio-del-interior-subsecretaria-del-interior/2004-08-26/19964
+    - ley/ministerio-del-interior-subsecretaria-del-interior/2005-09-06/20053
     - ley/ministerio-secretaria-general-de-la-presidencia/2012-01-31/20568
+    - ley/ministerio-secretaria-general-de-la-presidencia/2012-12-06/20640
+    - ley/ministerio-secretaria-general-de-la-presidencia/2016-04-14/20900
+  refundida_por:
+    - dfl/ministerio-secretaria-general-de-la-presidencia/2017-09-06/3
 
 ---
 

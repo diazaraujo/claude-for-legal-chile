@@ -31,10 +31,18 @@ grafo_relaciones:
     - ley/ministerio-del-interior/1990-01-06/18891
     - ley/ministerio-del-interior/1990-03-10/18972
     - ley/ministerio-del-interior/1992-08-03/19154
+    - ley/ministerio-del-interior/2005-02-16/20000
     - ley/ministerio-secretaria-general-de-la-presidencia/1999-12-14/19653
     - ley/ministerio-secretaria-general-de-la-presidencia/2006-01-05/20088
     - ley/ministerio-secretaria-general-de-la-presidencia/2007-07-24/20205
     - ley/ministerio-secretaria-general-de-la-presidencia/2008-08-20/20285
+    - ley/ministerio-secretaria-general-de-la-presidencia/2016-01-05/20880
+  reglamentada_por:
+    - dto/ministerio-del-interior-subsecretaria-del-interior/2007-06-23/1215
+    - dto/ministerio-secretaria-general-de-la-presidencia/2000-06-28/99
+    - dto/ministerio-secretaria-general-de-la-presidencia/2001-05-07/26
+  refundida_por:
+    - dfl/ministerio-secretaria-general-de-la-presidencia/2001-11-17/1
 
 ---
 

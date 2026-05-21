@@ -17,11 +17,14 @@ relacionada_per:
 estado_revision: borrador-generado-no-validado
 validador: null
 fecha_validacion: null
+    - ley/ministerio-de-justicia/1992-08-31/19158
 grafo_relaciones:
   modifica:
     - cod/ministerio-de-justicia/1865-11-23/1865
     - cod/ministerio-de-justicia/1865-11-23/de-comercio
     - cod/ministerio-de-justicia/1874-11-12/penal
+    - cod/ministerio-de-justicia/1943-07-09/orgánico-de-tribunales
+    - dfl/ministerio-de-hacienda/1931-05-22/251
     - dfl/ministerio-de-hacienda/1980-10-15/7
     - dfl/ministerio-de-justicia/1927-03-03/426
     - dfl/ministerio-de-justicia/1930-08-28/2128
@@ -37,16 +40,10 @@ grafo_relaciones:
     - dl/ministerio-del-interior/1974-08-10/604
     - dl/ministerio-del-interior/1975-07-19/1094
     - dl/ministerio-del-interior/1977-03-12/1697
-    - dl/ministerio-del-interior/1978-10-20/2347
-    - dl/ministerio-del-interior/1981-02-21/3627
-    - dl/ministerio-del-interior/1981-03-17/3655
-    - dto/ministerio-de-defensa-nacional/1978-04-13/400
-    - dto/ministerio-de-defensa-nacional_subsecretaria-de-guerra/1972-02-11/803
-    - dto/ministerio-de-justicia/1926-11-26/2442
-    - dto/ministerio-de-justicia/1941-10-09/3274
   modificada_por:
     - ley/ministerio-de-justicia/1992-01-04/19114
     - ley/ministerio-de-justicia/1992-08-31/19158
+
 ---
 
 # LEY 19047 — MODIFICA DIVERSOS TEXTOS LEGALES QUE INDICA, A FIN DE GARANTIZAR EN MEJOR FORMA LOS DERECHOS DE LAS PERSONAS

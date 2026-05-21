@@ -17,8 +17,10 @@ relacionada_per:
 estado_revision: borrador-generado-no-validado
 validador: null
 fecha_validacion: null
+    - ley/ministerio-de-justicia/1982-05-18/18120
 grafo_relaciones:
   modifica:
+    - cod/ministerio-de-justicia/1943-07-09/orgánico-de-tribunales
     - dfl/ministerio-de-hacienda/1953-08-05/213
     - dfl/ministerio-de-hacienda/1980-10-15/7
     - dfl/ministerio-de-hacienda/1998-07-21/2
@@ -27,6 +29,13 @@ grafo_relaciones:
     - dto/ministerio-de-hacienda/1979-06-20/329
     - ley/ministerio-de-justicia/1943-07-09/7421
     - ley/ministerio-de-justicia/1982-05-18/18120
+  modificada_por:
+    - ley/ministerio-de-hacienda/2014-05-28/20752
+    - ley/ministerio-de-hacienda/2014-09-29/20780
+    - ley/ministerio-de-hacienda/2017-10-20/21039
+    - ley/ministerio-de-hacienda/2020-02-24/21210
+    - ley/ministerio-del-interior-y-seguridad-publica/2017-09-05/21033
+
 ---
 
 # LEY 20322 — FORTALECE Y PERFECCIONA LA JURISDICCIÓN TRIBUTARIA Y ADUANERA

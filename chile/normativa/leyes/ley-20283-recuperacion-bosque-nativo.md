@@ -17,6 +17,7 @@ relacionada_per:
 estado_revision: borrador-generado-no-validado
 validador: null
 fecha_validacion: null
+    - ley/ministerio-secretaria-general-de-la-presidencia/1994-03-09/19300
 grafo_relaciones:
   modifica:
     - dfl/ministerio-de-agricultura/1968-01-29/15
@@ -24,6 +25,15 @@ grafo_relaciones:
     - dto/ministerio-de-tierras-y-colonizacion/1931-07-31/4363
     - ley/ministerio-de-agricultura/1984-12-29/18378
     - ley/ministerio-secretaria-general-de-la-presidencia/1994-03-09/19300
+  modificada_por:
+    - res/ministerio-de-agricultura/2015-03-18/68-exenta
+  reglamentada_por:
+    - dto/ministerio-de-agricultura/2009-02-11/80
+    - dto/ministerio-de-agricultura/2011-02-11/82
+    - dto/ministerio-de-agricultura-subsecretaria-de-agricultura/2009-10-05/93
+    - dto/ministerio-de-agricultura-subsecretaria-de-agricultura/2009-10-05/95
+    - dto/ministerio-de-agricultura-subsecretaria-de-agricultura/2009-10-05/96
+
 ---
 
 # LEY 20283 — LEY SOBRE RECUPERACIÓN DEL BOSQUE NATIVO Y FOMENTO FORESTAL

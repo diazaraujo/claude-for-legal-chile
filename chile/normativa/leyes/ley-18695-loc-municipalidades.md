@@ -23,15 +23,16 @@ validador: null
 fecha_validacion: null
 grafo_relaciones:
   modifica:
-    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2002-05-03/1
-    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2002-05-03/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
     - dl/ministerio-del-interior/1976-01-14/1289
   modificada_por:
+    - dfl/ministerio-secretaria-general-de-la-presidencia/2017-09-06/3
     - ley/ministerio-de-hacienda/1995-05-30/19388
     - ley/ministerio-de-hacienda/1997-07-30/19506
     - ley/ministerio-de-hacienda/2003-07-30/19886
     - ley/ministerio-de-justicia/2002-05-31/19806
-    - ley/ministerio-de-transportes-y-telecomunicaciones_subsecretaria-de-transportes/2002-08-07/19816
+    - ley/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-transportes/2002-08-07/19816
     - ley/ministerio-de-vivienda-y-urbanismo/2004-02-13/19939
     - ley/ministerio-del-interior/1988-04-23/18702
     - ley/ministerio-del-interior/1989-12-29/18883
@@ -39,14 +40,20 @@ grafo_relaciones:
     - ley/ministerio-del-interior/1992-03-19/19130
     - ley/ministerio-del-interior/1993-12-16/19280
     - ley/ministerio-del-interior/1995-11-27/19425
-    - ley/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2005-07-01/20033
-    - ley/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2007-12-24/20237
-    - ley/ministerio-del-interior_subsecretaria-del-interior/1990-03-10/18963
-    - ley/ministerio-del-interior_subsecretaria-del-interior/1996-04-16/19452
-    - ley/ministerio-del-interior_subsecretaria-del-interior/2000-08-19/19689
-    - ley/ministerio-del-interior_subsecretaria-del-interior/2000-09-30/19698
-    - ley/ministerio-del-interior_subsecretaria-del-interior/2000-12-28/19704
-    - ley/ministerio-del-interior_subsecretaria-del-interior/2001-07-06/19737
+    - ley/ministerio-del-interior/2005-02-16/20000
+    - ley/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2005-07-01/20033
+    - ley/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2007-12-24/20237
+    - ley/ministerio-del-interior-subsecretaria-del-interior/1990-03-10/18963
+    - ley/ministerio-del-interior-subsecretaria-del-interior/1996-04-16/19452
+    - ley/ministerio-del-interior-subsecretaria-del-interior/2000-08-19/19689
+    - ley/ministerio-del-interior-subsecretaria-del-interior/2000-09-30/19698
+  refundida_por:
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2000-01-11/2
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2002-05-03/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
+    - dto/ministerio-del-interior/1992-08-27/662
+  rectificada_por:
+    - ley/ministerio-del-interior-subsecretaria-del-interior/1999-03-25/19602
 
 ---
 

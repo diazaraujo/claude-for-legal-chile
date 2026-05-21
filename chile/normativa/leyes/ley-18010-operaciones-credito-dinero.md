@@ -33,6 +33,7 @@ grafo_relaciones:
     - ley/ministerio-de-hacienda/1989-10-10/18840
     - ley/ministerio-de-hacienda/1997-11-04/19528
     - ley/ministerio-de-hacienda/2004-06-26/19951
+    - ley/ministerio-de-hacienda/2013-12-13/20715
 
 ---
 

@@ -41,9 +41,19 @@ grafo_relaciones:
     - ley/ministerio-del-interior/1990-10-06/19001
     - ley/ministerio-del-interior/1992-08-03/19154
     - ley/ministerio-del-interior/1992-09-01/19165
-    - ley/ministerio-del-trabajo-y-prevision-social_subsecretaria-del-trabajo/2003-12-20/19920
-    - ley/ministerio-del-trabajo-y-prevision-social_subsecretaria-del-trabajo/2005-03-18/20005
-    - ley/ministerio-del-trabajo-y-prevision-social_subsecretaria-del-trabajo/2006-12-16/20137
+    - ley/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2003-12-20/19920
+    - ley/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2005-03-18/20005
+    - ley/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2006-12-16/20137
+  reglamentada_por:
+    - dto/ministerio-de-hacienda/2004-03-08/1258
+    - dto/ministerio-de-hacienda/2004-08-14/69
+    - dto/ministerio-de-hacienda/2004-08-23/382
+    - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-transportes/1998-10-10/220
+    - dto/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/1998-09-10/1825
+  refundida_por:
+    - dfl/ministerio-de-hacienda/2005-03-16/29
+  rectificada_por:
+    - dfl/ministerio-del-trabajo-y-prevision-social/1990-04-30/3
 
 ---
 

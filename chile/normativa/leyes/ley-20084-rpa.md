@@ -22,6 +22,7 @@ fecha_validacion: null
 grafo_relaciones:
   modifica:
     - cod/ministerio-de-justicia/1874-11-12/penal
+    - cod/ministerio-de-justicia/1943-07-09/orgánico-de-tribunales
     - dfl/ministerio-de-justicia/2000-05-30/1
     - dl/ministerio-de-justicia/1925-10-28/645
     - dl/ministerio-de-justicia/1979-09-15/2859
@@ -38,6 +39,8 @@ grafo_relaciones:
     - ley/ministerio-de-justicia/2007-06-02/20191
     - ley/ministerio-de-justicia/2007-06-16/20191
     - ley/ministerio-de-justicia/2011-08-13/20526
+  reglamentada_por:
+    - dto/ministerio-de-justicia/2007-04-25/1378
 
 ---
 

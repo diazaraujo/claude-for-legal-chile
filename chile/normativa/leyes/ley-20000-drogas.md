@@ -22,11 +22,12 @@ validador: null
 fecha_validacion: null
 grafo_relaciones:
   modifica:
+    - cod/ministerio-de-justicia/1943-07-09/orgánico-de-tribunales
     - dfl/ministerio-de-justicia/1995-10-18/1
-    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2000-01-11/2
-    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2002-05-03/1
-    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2005-11-08/1
-    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2000-01-11/2
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2002-05-03/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2005-11-08/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
     - dfl/ministerio-secretaria-general-de-la-presidencia/2001-11-17/1
     - dfl/ministerio-secretaria-general-de-la-presidencia/2010-08-10/5
     - dto/ministerio-de-justicia/1944-12-19/2226
@@ -36,7 +37,19 @@ grafo_relaciones:
     - ley/ministerio-de-justicia/1981-05-19/17997
   modificada_por:
     - ley/ministerio-de-justicia/2005-11-14/20074
+    - ley/ministerio-de-justicia/2012-06-08/20587
+    - ley/ministerio-de-justicia/2012-06-27/20603
     - ley/ministerio-del-interior/2011-02-21/20502
+    - ley/ministerio-secretaria-general-de-gobierno/2015-04-21/20830
+  reglamentada_por:
+    - dto/ministerio-de-defensa-nacional/2016-01-19/169
+    - dto/ministerio-de-justicia/2011-07-27/944
+    - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2005-09-22/142
+    - dto/ministerio-del-interior-y-seguridad-publica-subsecretaria-del-interior/2012-02-03/820
+    - dto/ministerio-del-interior-subsecretaria-del-interior/2006-10-28/539
+    - dto/ministerio-del-interior-subsecretaria-del-interior/2007-06-23/1215
+    - dto/ministerio-del-interior-subsecretaria-del-interior/2008-02-19/867
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2010-06-25/12
 
 ---
 

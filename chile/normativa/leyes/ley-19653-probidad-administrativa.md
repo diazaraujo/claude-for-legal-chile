@@ -17,13 +17,15 @@ relacionada_per:
 estado_revision: borrador-generado-no-validado
 validador: null
 fecha_validacion: null
+    - ley/ministerio-del-interior_subsecretaria-del-interior/1986-12-05/18575
 grafo_relaciones:
   modifica:
+    - cod/ministerio-de-justicia/1943-07-09/orgánico-de-tribunales
     - dfl/ministerio-de-hacienda/2005-03-16/29
-    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2000-01-11/2
-    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2002-05-03/1
-    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2005-11-08/1
-    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2000-01-11/2
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2002-05-03/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2005-11-08/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
     - dfl/ministerio-secretaria-general-de-la-presidencia/2001-11-17/1
     - dto/ministerio-de-justicia/1978-05-23/307
     - dto/ministerio-del-interior/1992-08-27/662
@@ -36,7 +38,11 @@ grafo_relaciones:
     - ley/ministerio-del-interior/1989-12-29/18883
     - ley/ministerio-del-interior/1990-02-05/18918
     - ley/ministerio-del-interior/1992-11-11/19175
-    - ley/ministerio-del-interior_subsecretaria-del-interior/1986-12-05/18575
+    - ley/ministerio-del-interior-subsecretaria-del-interior/1986-12-05/18575
+  reglamentada_por:
+    - dto/ministerio-secretaria-general-de-la-presidencia/2000-06-28/99
+    - dto/ministerio-secretaria-general-de-la-presidencia/2001-05-07/26
+
 ---
 
 # LEY 19653 — SOBRE PROBIDAD ADMINISTRATIVA APLICABLE DE LOS ORGANOS DE LA ADMINISTRACION DEL ESTADO

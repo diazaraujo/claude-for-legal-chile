@@ -22,6 +22,8 @@ fecha_validacion: null
 grafo_relaciones:
   modifica:
     - ley/ministerio-del-interior/1993-04-30/19212
+  reglamentada_por:
+    - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2005-09-22/142
 
 ---
 

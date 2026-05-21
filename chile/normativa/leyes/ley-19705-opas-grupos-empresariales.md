@@ -17,6 +17,7 @@ relacionada_per:
 estado_revision: borrador-generado-no-validado
 validador: null
 fecha_validacion: null
+    - ley/ministerio-de-vivienda-y-urbanismo/1993-12-27/19281
 grafo_relaciones:
   modifica:
     - dfl/ministerio-de-hacienda/1931-05-22/251
@@ -26,6 +27,7 @@ grafo_relaciones:
     - dl/ministerio-de-hacienda/1975-07-11/1092
     - dl/ministerio-de-hacienda/1976-01-16/1328
     - dl/ministerio-de-hacienda/1980-12-23/3538
+    - dl/ministerio-del-trabajo-y-previsin-social/1980-11-13/3500
     - dl/ministerio-del-trabajo-y-prevision-social/1980-11-13/3500
     - dto/ministerio-de-hacienda/1979-12-19/1019
     - ley/ministerio-de-hacienda/1981-10-22/18045
@@ -35,6 +37,10 @@ grafo_relaciones:
     - ley/ministerio-de-hacienda/1989-10-10/18840
     - ley/ministerio-de-hacienda/1989-12-21/18876
     - ley/ministerio-de-vivienda-y-urbanismo/1993-12-27/19281
+  modificada_por:
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2001-05-08/bancos-3123
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2008-08-21/bancos-3444
+
 ---
 
 # LEY 19705 — REGULA LAS OFERTAS PUBLICAS DE ADQUISICION DE ACCIONES (OPAS) Y ESTABLECE REGIMEN DE GOBIERNOS CORPORATIVOS

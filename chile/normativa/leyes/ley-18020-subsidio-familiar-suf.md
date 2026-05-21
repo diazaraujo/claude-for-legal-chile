@@ -17,6 +17,7 @@ relacionada_per:
 estado_revision: borrador-generado-no-validado
 validador: null
 fecha_validacion: null
+    - ley/ministerio-del-trabajo-y-prevision-social/1991-07-31/19073
 grafo_relaciones:
   modifica:
     - dfl/ministerio-de-hacienda/1960-04-06/338
@@ -41,11 +42,10 @@ grafo_relaciones:
     - ley/ministerio-de-hacienda/2006-12-13/20143
     - ley/ministerio-de-hacienda/2007-12-06/20233
     - ley/ministerio-de-hacienda/2009-06-27/20359
-    - ley/ministerio-de-hacienda/2010-07-03/20449
-    - ley/ministerio-de-planificacion/2007-08-03/20203
-    - ley/ministerio-del-trabajo-y-prevision-social/1982-07-05/18136
-    - ley/ministerio-del-trabajo-y-prevision-social/1990-07-11/18987
-    - ley/ministerio-del-trabajo-y-prevision-social/1991-07-31/19073
+  reglamentada_por:
+    - dto/ministerio-de-hacienda/1987-07-02/368
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2007-09-14/53
+
 ---
 
 # LEY 18020 — ESTABLECE SUBSIDIO FAMILIAR PARA PERSONAS DE ESCASOS RECURSOS Y MODIFICA NORMAS QUE INDICA.

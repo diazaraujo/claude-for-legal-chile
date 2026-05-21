@@ -23,19 +23,26 @@ validador: null
 fecha_validacion: null
 grafo_relaciones:
   modifica:
-    - dl/ministerio-de-defensa-nacional_subsecretaria-de-guerra/1925-10-30/651
+    - dl/ministerio-de-defensa-nacional-subsecretaria-de-guerra/1925-10-30/651
+    - dl/ministerio-de-instruccion-publica/1925-10-30/651
     - ley/ministerio-de-educacion-publica/1952-10-31/10990
     - ley/ministerio-de-hacienda/1967-01-31/16617
   modificada_por:
     - dfl/ministerio-de-hacienda/1979-05-05/1
-    - ley/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion/2010-02-12/20423
+    - ley/ministerio-de-economia-fomento-y-reconstruccion-subsecretaria-de-economia-fomento-y-reconstruccion/2010-02-12/20423
     - ley/ministerio-de-educacion-publica/1971-12-14/17577
     - ley/ministerio-de-educacion-publica/1988-10-06/18745
     - ley/ministerio-de-educacion/2003-08-23/19891
     - ley/ministerio-de-educacion/2005-06-14/20021
+    - ley/ministerio-de-educacion/2017-11-03/21045
+    - ley/ministerio-de-las-culturas-las-artes-y-el-patrimonio/2020-02-20/21215
     - ley/ministerio-de-obras-publicas-y-transportes/1970-09-09/17341
     - ley/ministerio-del-interior/1991-11-14/19094
     - ley/ministerio-secretaria-general-de-la-presidencia/2010-01-26/20417
+  reglamentada_por:
+    - dto/ministerio-de-educacion/1991-04-02/484
+    - dto/ministerio-de-educacion/2017-02-04/223
+    - dto/ministerio-de-las-culturas-las-artes-y-el-patrimonio-subsecretaria-del-patrimonio-cultural/2020-10-28/23
 
 ---
 

@@ -21,9 +21,12 @@ validador: null
 fecha_validacion: null
 grafo_relaciones:
   modifica:
-    - ley/ministerio-del-interior_subsecretaria-del-interior/2004-11-09/19980
+    - ley/ministerio-del-interior-subsecretaria-del-interior/2004-11-09/19980
   modificada_por:
-    - ley/ministerio-secretaria-general-de-la-presidencia_subsecretaria-general-de-la-presidencia/2009-12-10/20405
+    - ley/ministerio-secretaria-general-de-la-presidencia-subsecretaria-general-de-la-presidencia/2009-12-10/20405
+  reglamentada_por:
+    - dto/ministerio-de-educacion/2005-08-27/32
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2005-03-14/17
 
 ---
 

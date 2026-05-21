@@ -29,6 +29,14 @@ grafo_relaciones:
     - ley/ministerio-de-educacion/2011-08-27/20529
     - ley/ministerio-de-educacion/2011-10-26/20550
     - ley/ministerio-de-educacion/2012-02-02/20567
+    - ley/ministerio-de-educacion/2012-10-26/20637
+    - ley/ministerio-de-educacion/2015-06-08/20845
+    - ley/ministerio-de-educacion/2017-11-24/21040
+    - ley/ministerio-de-educacion/2018-08-25/21107
+    - res/ministerio-de-educacion/2013-03-18/2024-exenta
+  reglamentada_por:
+    - dto/ministerio-de-educacion/2008-05-30/235
+    - dto/ministerio-de-educacion/2016-01-21/515
 
 ---
 

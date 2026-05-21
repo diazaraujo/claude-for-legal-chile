@@ -23,9 +23,9 @@ validador: null
 fecha_validacion: null
 grafo_relaciones:
   modifica:
-    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2000-01-11/2
-    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2002-05-03/1
-    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2000-01-11/2
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2002-05-03/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
     - dl/ministerio-de-hacienda/1979-10-17/2879
     - dl/ministerio-de-hacienda/1980-12-06/3529
     - dto/ministerio-de-hacienda/1978-08-29/404
@@ -37,8 +37,19 @@ grafo_relaciones:
     - ley/ministerio-del-interior/1988-03-31/18695
   modificada_por:
     - dfl/ministerio-de-hacienda/2010-03-01/11
+    - ley/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-economia-y-empresas-de-menor-tamano/2014-01-09/20720
     - ley/ministerio-de-hacienda/2008-01-19/20238
+    - ley/ministerio-de-hacienda/2015-12-02/20883
+    - ley/ministerio-de-hacienda/2018-01-02/21056
+    - ley/ministerio-del-trabajo-y-prevision-social/2016-09-08/20940
+    - ley/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2014-10-30/20787
+    - ley/ministerio-secretaria-general-de-gobierno/2017-04-07/21005
     - ley/ministerio-secretaria-general-de-la-presidencia/2006-01-05/20088
+  reglamentada_por:
+    - aa/corte-suprema/2003-12-30/81
+    - aa/corte-suprema/2011-03-22/s/n
+    - aa/corte-suprema/2018-10-05/165
+    - dto/ministerio-de-hacienda/2004-09-24/250
 
 ---
 

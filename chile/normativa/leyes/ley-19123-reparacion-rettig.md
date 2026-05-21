@@ -26,8 +26,11 @@ grafo_relaciones:
     - ley/ministerio-del-interior/1993-12-10/19274
     - ley/ministerio-del-interior/1994-12-29/19358
     - ley/ministerio-del-interior/1996-01-23/19441
-    - ley/ministerio-del-interior_subsecretaria-del-interior/2004-11-09/19980
-    - ley/ministerio-secretaria-general-de-la-presidencia_subsecretaria-general-de-la-presidencia/2009-12-10/20405
+    - ley/ministerio-del-interior-subsecretaria-del-interior/2004-11-09/19980
+    - ley/ministerio-secretaria-general-de-la-presidencia-subsecretaria-general-de-la-presidencia/2009-12-10/20405
+  reglamentada_por:
+    - dto/ministerio-del-trabajo-y-prevision-social/1993-06-18/44
+    - res/ministerio-de-salud-corporacion-nacional-de-reparacion-y-reconciliacion/1992-07-15/1
 
 ---
 

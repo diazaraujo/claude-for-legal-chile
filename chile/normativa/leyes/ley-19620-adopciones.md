@@ -35,6 +35,8 @@ grafo_relaciones:
     - ley/ministerio-de-justicia/2004-05-17/19947
     - ley/ministerio-de-justicia/2004-08-30/19968
     - ley/ministerio-de-planificacion/2007-08-03/20203
+  reglamentada_por:
+    - dto/ministerio-de-justicia/2000-03-18/944
 
 ---
 

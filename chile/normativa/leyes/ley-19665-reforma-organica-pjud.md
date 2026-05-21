@@ -23,6 +23,7 @@ validador: null
 fecha_validacion: null
 grafo_relaciones:
   modifica:
+    - cod/ministerio-de-justicia/1943-07-09/orgánico-de-tribunales
     - dl/ministerio-de-justicia/1979-12-29/3058
     - dto/ministerio-de-justicia/1978-05-23/307
     - ley/ministerio-de-justicia/1943-07-09/7421
@@ -30,6 +31,7 @@ grafo_relaciones:
     - ley/ministerio-de-justicia/1969-04-14/17105
     - ley/ministerio-de-justicia/1982-05-18/18120
   modificada_por:
+    - ley/ministerio-de-justicia-y-derechos-humanos/2016-07-05/20931
     - ley/ministerio-de-justicia/2001-01-05/19708
     - ley/ministerio-de-justicia/2001-03-10/19718
     - ley/ministerio-de-justicia/2001-10-13/19762
@@ -41,7 +43,11 @@ grafo_relaciones:
     - ley/ministerio-de-justicia/2005-12-07/20084
     - ley/ministerio-de-justicia/2007-06-16/20199
     - ley/ministerio-de-justicia/2011-09-23/20534
-    - ley/ministerio-de-justicia_subsecretaria-de-justicia/2009-12-22/20408
+    - ley/ministerio-de-justicia/2012-09-28/20628
+    - ley/ministerio-de-justicia/2015-11-06/20876
+    - ley/ministerio-de-justicia-subsecretaria-de-justicia/2009-12-22/20408
+  reglamentada_por:
+    - dto/ministerio-de-justicia/2012-02-21/22
 
 ---
 

@@ -22,10 +22,13 @@ grafo_relaciones:
   modifica:
     - dfl/ministerio-de-salud-publica/1968-01-31/725
   modificada_por:
-    - ley/ministerio-de-economia_fomento-y-turismo_subsecretaria-de-economia-y-empresas-de-menor-tamano/2010-10-25/20463
-    - ley/ministerio-de-economia_fomento-y-turismo_subsecretaria-de-economia-y-empresas-de-menor-tamano/2011-07-23/20521
-    - ley/ministerio-de-economia_fomento-y-turismo_subsecretaria-de-economia-y-empresas-de-menor-tamano/2012-02-17/20575
+    - ley/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-economia-y-empresas-de-menor-tamano/2010-10-25/20463
+    - ley/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-economia-y-empresas-de-menor-tamano/2011-07-23/20521
+    - ley/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-economia-y-empresas-de-menor-tamano/2012-02-17/20575
+    - ley/ministerio-de-educacion/2020-02-28/21214
     - ley/ministerio-secretaria-general-de-la-presidencia/2002-06-13/19812
+  reglamentada_por:
+    - dto/ministerio-de-justicia/2000-11-11/779
 
 ---
 

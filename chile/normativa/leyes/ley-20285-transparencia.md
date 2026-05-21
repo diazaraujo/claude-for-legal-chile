@@ -21,9 +21,9 @@ validador: null
 fecha_validacion: null
 grafo_relaciones:
   modifica:
-    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2000-01-11/2
-    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2002-05-03/1
-    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2000-01-11/2
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2002-05-03/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
     - dfl/ministerio-secretaria-general-de-la-presidencia/2001-11-17/1
     - dl/ministerio-de-instruccion-publica/1925-08-24/488
     - dto/ministerio-de-hacienda/1964-07-10/2421
@@ -31,7 +31,7 @@ grafo_relaciones:
     - ley/ministerio-de-hacienda/1952-05-29/10336
     - ley/ministerio-de-hacienda/1989-10-10/18840
     - ley/ministerio-del-interior/1988-03-31/18695
-    - ley/ministerio-del-interior_subsecretaria-del-interior/1986-12-05/18575
+    - ley/ministerio-del-interior-subsecretaria-del-interior/1986-12-05/18575
     - ley/ministerio-secretaria-general-de-la-presidencia/2003-05-29/19880
 
 ---

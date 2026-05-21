@@ -22,15 +22,23 @@ fecha_validacion: null
 grafo_relaciones:
   modifica:
     - cod/ministerio-de-justicia/1874-11-12/penal
+    - cod/ministerio-de-justicia/1943-07-09/orgánico-de-tribunales
+    - dfl/ministerio-de-justicia-y-derechos-humanos/2017-01-31/3
     - dfl/ministerio-de-justicia/2000-05-30/1
     - dl/ministerio-de-justicia/1980-05-22/3346
+    - ley/ministerio-de-justicia-culto-e-instruccion-publica/1884-01-16/s/n
     - ley/ministerio-de-justicia/1902-08-30/1552
     - ley/ministerio-de-justicia/1930-02-10/4808
     - ley/ministerio-de-justicia/1943-07-09/7421
     - ley/ministerio-de-justicia/1967-03-08/16618
     - ley/ministerio-de-justicia/1999-08-05/19620
   modificada_por:
+    - ley/ministerio-de-justicia-y-derechos-humanos/2018-12-10/21120
     - ley/ministerio-de-justicia/2008-09-15/20286
+    - ley/ministerio-de-justicia/2013-06-21/20680
+    - ley/ministerio-secretaria-general-de-gobierno/2015-04-21/20830
+  reglamentada_por:
+    - dto/ministerio-de-justicia/2004-10-30/673
 
 ---
 

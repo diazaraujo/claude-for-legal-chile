@@ -42,6 +42,13 @@ grafo_relaciones:
     - ley/ministerio-de-hacienda/1971-11-22/17564
     - ley/ministerio-de-hacienda/1987-01-03/18591
     - ley/ministerio-de-hacienda/1987-06-26/18627
+  reglamentada_por:
+    - dto/ministerio-de-educacion/2006-03-10/13
+    - dto/ministerio-de-hacienda/1943-12-27/4000
+  refunde:
+    - ley/ministerio-de-hacienda/1927-09-10/4174
+  refundida_por:
+    - dfl/ministerio-de-hacienda/1998-12-16/1
 
 ---
 

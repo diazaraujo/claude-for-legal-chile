@@ -17,15 +17,19 @@ relacionada_per:
 estado_revision: borrador-generado-no-validado
 validador: null
 fecha_validacion: null
+    - ley/ministerio-de-hacienda/2006-04-08/20097
 grafo_relaciones:
   modifica:
-    - dfl/ministerio-de-economia_fomento-y-reconstruccion/1993-12-16/523
+    - dfl/ministerio-de-economia-fomento-y-reconstruccion/1993-12-16/523
     - dfl/ministerio-de-mineria/1987-04-28/1
-    - dl/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-econstruccion/1974-07-13/600
+    - dl/ministerio-de-economia-fomento-y-reconstruccion-subsecretaria-de-economia-fomento-y-econstruccion/1974-07-13/600
     - dl/ministerio-de-hacienda/1974-12-31/824
     - dl/ministerio-de-mineria/1976-02-28/1349
   modificada_por:
     - ley/ministerio-de-hacienda/2006-04-08/20097
+  reglamentada_por:
+    - dto/ministerio-de-hacienda/2006-06-05/1465
+
 ---
 
 # LEY 20026 — ESTABLECE UN IMPUESTO ESPECIFICO A LA ACTIVIDAD MINERA

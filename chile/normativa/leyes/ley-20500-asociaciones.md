@@ -23,12 +23,19 @@ fecha_validacion: null
 grafo_relaciones:
   modifica:
     - dfl/ministerio-de-justicia/2000-05-30/1
-    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
     - dfl/ministerio-secretaria-general-de-gobierno/1992-02-12/1
     - dfl/ministerio-secretaria-general-de-la-presidencia/2001-11-17/1
-    - dto/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/1997-03-20/58
+    - dto/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/1997-03-20/58
     - ley/ministerio-del-interior/1987-01-09/18593
     - ley/ministerio-secretaria-general-de-gobierno/1991-02-04/19032
+  reglamentada_por:
+    - dto/ministerio-de-justicia/2013-07-18/84
+    - dto/ministerio-secretaria-general-de-gobierno/2013-02-22/1
+    - res/consejo-para-la-transparencia/2016-05-23/287-exenta
+    - res/consejo-para-la-transparencia/2020-10-23/230-exenta
+    - res/ministerio-del-trabajo-y-prevision-social-direccion-del-trabajo/2015-10-03/1616-exenta
+    - res/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo-direccion-del-trabajo/2019-09-11/2032-exenta
 
 ---
 

@@ -21,9 +21,9 @@ validador: null
 fecha_validacion: null
 grafo_relaciones:
   modifica:
-    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2000-01-11/2
-    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2002-05-03/1
-    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2000-01-11/2
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2002-05-03/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
     - dto/ministerio-del-interior/1992-08-27/662
     - ley/ministerio-del-interior/1988-03-31/18695
   modificada_por:
@@ -47,6 +47,8 @@ grafo_relaciones:
     - dfl/ministerio-del-interior/1994-09-30/273
     - dfl/ministerio-del-interior/1994-09-30/275
     - dfl/ministerio-del-interior/1994-09-30/287
+  reglamentada_por:
+    - dto/ministerio-del-interior-y-seguridad-publica/2017-02-07/1675
 
 ---
 

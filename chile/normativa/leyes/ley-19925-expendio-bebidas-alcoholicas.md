@@ -17,12 +17,13 @@ relacionada_per:
 estado_revision: borrador-generado-no-validado
 validador: null
 fecha_validacion: null
+    - ley/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2005-07-01/20033
 grafo_relaciones:
   modifica:
-    - dfl/ministerio-de-transportes-y-telecomunicaciones_subsecretaria-de-transportes_ministerio-de-justicia_subsecretaria-de-justicia/2009-10-29/1
-    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2000-01-11/2
-    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2002-05-03/1
-    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
+    - dfl/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-transportes-ministerio-de-justicia-subsecretaria-de-justicia/2009-10-29/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2000-01-11/2
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2002-05-03/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
     - dfl/ministerio-del-trabajo-y-prevision-social/1986-04-25/16
     - dto/ministerio-de-justicia/1978-05-23/307
     - dto/ministerio-del-interior/1992-08-27/662
@@ -33,7 +34,13 @@ grafo_relaciones:
     - ley/ministerio-de-justicia/1984-02-07/18290
     - ley/ministerio-del-interior/1988-03-31/18695
   modificada_por:
-    - ley/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2005-07-01/20033
+    - ley/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-economia-y-empresas-de-menor-tamano/2014-01-24/20714
+    - ley/ministerio-de-educacion/2012-06-07/20591
+    - ley/ministerio-del-interior-y-seguridad-publica-subsecretaria-del-interior/2012-09-14/20620
+    - ley/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2005-07-01/20033
+  reglamentada_por:
+    - dto/ministerio-de-salud/2005-08-24/172
+
 ---
 
 # LEY 19925 — LEY SOBRE EXPENDIO Y CONSUMO DE BEBIDAS ALCOHOLICAS

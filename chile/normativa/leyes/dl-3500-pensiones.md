@@ -25,7 +25,9 @@ grafo_relaciones:
   modificada_por:
     - dl/ministerio-de-hacienda/1981-03-11/3650
     - dl/ministerio-del-trabajo-y-prevision-social/1981-02-21/3626
+    - ley/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-economia-y-empresas-de-menor-tamano/2014-01-09/20720
     - ley/ministerio-de-hacienda/1982-12-29/18196
+    - ley/ministerio-de-hacienda/1985-12-28/18482
     - ley/ministerio-de-hacienda/1987-12-31/18681
     - ley/ministerio-de-hacienda/1989-10-10/18840
     - ley/ministerio-de-hacienda/1993-09-15/19247
@@ -41,8 +43,26 @@ grafo_relaciones:
     - ley/ministerio-de-hacienda/2009-06-06/20345
     - ley/ministerio-de-hacienda/2010-07-31/20455
     - ley/ministerio-de-hacienda/2010-08-13/20448
-    - ley/ministerio-de-hacienda/2011-08-31/20531
-    - ley/ministerio-de-hacienda/2011-12-17/20552
+  reglamentada_por:
+    - acd/comision-clasificadora-de-riesgo/1992-10-16/5
+    - acd/comision-clasificadora-de-riesgo/1995-06-26/9
+    - acd/superintendencia-de-administradoras-de-fondos-de-pensiones-comision-tecnica-de-invalidez/2003-01-02/s/n
+    - dto/ministerio-del-trabajo-y-prevision-social/1985-05-20/31
+    - dto/ministerio-del-trabajo-y-prevision-social/1985-06-24/35
+    - dto/ministerio-del-trabajo-y-prevision-social/1987-09-26/60
+    - dto/ministerio-del-trabajo-y-prevision-social/1988-01-08/100
+    - dto/ministerio-del-trabajo-y-prevision-social/1995-05-11/141
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/1987-04-29/4
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/1991-03-28/57
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/1991-08-12/13
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/1992-05-26/52
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2003-10-31/8
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2011-11-26/127-exento
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2012-02-04/26
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2019-05-10/20
+    - dto/ministerio-del-trabajo/1981-04-30/50
+  rectificada_por:
+    - dfl/ministerio-del-trabajo-y-prevision-social/1990-03-08/85
 
 ---
 

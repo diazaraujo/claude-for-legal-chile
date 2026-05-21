@@ -25,11 +25,20 @@ grafo_relaciones:
     - ley/ministerio-de-hacienda/1989-10-10/18840
     - ley/ministerio-de-justicia/1995-01-30/19366
   modificada_por:
-    - ley/ministerio-de-economia_fomento-y-turismo_subsecretaria-de-economia-y-empresas-de-menor-tamano/2011-11-02/20549
+    - ley/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-economia-y-empresas-de-menor-tamano/2011-11-02/20549
     - ley/ministerio-de-hacienda/2006-08-31/20119
-    - ley/ministerio-de-hacienda_subsecretaria-de-hacienda/2009-12-02/20393
+    - ley/ministerio-de-hacienda/2014-01-07/20712
+    - ley/ministerio-de-hacienda/2015-02-18/20818
+    - ley/ministerio-de-hacienda/2016-10-29/20950
+    - ley/ministerio-de-hacienda/2020-02-04/21211
+    - ley/ministerio-de-hacienda/2020-05-29/21234
+    - ley/ministerio-de-hacienda-subsecretaria-de-hacienda/2009-12-02/20393
+    - ley/ministerio-de-justicia-y-derechos-humanos/2018-11-20/21121
     - ley/ministerio-de-justicia/2009-08-25/20371
-    - ley/ministerio-del-interior-y-seguridad-publica_subsecretaria-del-interior/2011-04-08/20507
+    - ley/ministerio-del-interior-y-seguridad-publica/2019-07-13/21163
+    - ley/ministerio-del-interior-y-seguridad-publica-subsecretaria-del-interior/2011-04-08/20507
+  reglamentada_por:
+    - dto/ministerio-de-hacienda/2006-01-12/529
 
 ---
 

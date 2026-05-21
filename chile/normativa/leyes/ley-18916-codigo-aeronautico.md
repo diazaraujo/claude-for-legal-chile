@@ -24,12 +24,30 @@ fecha_validacion: null
 grafo_relaciones:
   modifica:
     - dfl/ministerio-del-interior/1931-05-30/221
-    - dl/ministerio-de-transportes-y-telecomunicaciones_subsecretaria-de-transportes/1975-12-23/1286
+    - dl/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-transportes/1975-12-23/1286
   modificada_por:
     - dfl/ministerio-de-justicia/1995-10-18/1
-    - ley/ministerio-de-defensa-nacional_subsecretaria-para-las-fuerzas-armadas/2010-12-30/20477
+    - ley/ministerio-de-defensa-nacional-subsecretaria-para-las-fuerzas-armadas/2010-12-30/20477
+    - ley/ministerio-de-economia-fomento-y-turismo/2015-04-30/20831
     - ley/ministerio-de-justicia/1991-02-14/19047
     - ley/ministerio-de-justicia/1995-01-30/19366
+    - ley/ministerio-del-interior/2005-02-16/20000
+  reglamentada_por:
+    - dto/ministerio-de-defensa-nacional/1993-08-04/258
+    - dto/ministerio-de-defensa-nacional/1993-10-19/531
+    - dto/ministerio-de-defensa-nacional/2018-03-29/363
+    - dto/ministerio-de-defensa-nacional-subsecretaria-de-aviacion/2003-08-22/68
+    - dto/ministerio-de-defensa-nacional-subsecretaria-de-aviacion/2003-09-03/53
+    - dto/ministerio-de-defensa-nacional-subsecretaria-de-aviacion/2003-09-03/74
+    - dto/ministerio-de-defensa-nacional-subsecretaria-de-aviacion/2004-03-05/216
+    - dto/ministerio-de-defensa-nacional-subsecretaria-de-aviacion/2004-04-21/11
+    - dto/ministerio-de-defensa-nacional-subsecretaria-de-aviacion/2004-11-25/148
+    - dto/ministerio-de-defensa-nacional-subsecretaria-de-aviacion/2005-03-15/173
+    - dto/ministerio-de-defensa-nacional-subsecretaria-de-aviacion/2007-01-19/71
+    - dto/ministerio-de-defensa-nacional-subsecretaria-de-aviacion/2009-07-30/53
+    - dto/ministerio-de-defensa-nacional-subsecretaria-para-las-fuerzas-armadas/2018-10-26/369
+    - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-transportes/2000-07-07/113
+    - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-transportes/2015-07-09/232
 
 ---
 

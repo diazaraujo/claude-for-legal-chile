@@ -17,11 +17,24 @@ relacionada_per:
 estado_revision: borrador-generado-no-validado
 validador: null
 fecha_validacion: null
+    - rec/ministerio-de-planificacion/2011-08-11/170
 grafo_relaciones:
   modificada_por:
+    - ley/ministerio-de-desarrollo-social/2019-03-01/21144
     - ley/ministerio-de-hacienda/2003-12-04/19917
     - ley/ministerio-de-planificacion/2011-08-10/20523
     - rec/ministerio-de-planificacion/2011-08-11/170
+  reglamentada_por:
+    - dto/ministerio-de-planificacion/2011-06-23/49
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2010-12-03/101-exento
+    - dto/ministerio-secretaria-general-de-la-presidencia/2003-10-25/94
+    - dto/ministerio-secretaria-general-de-la-presidencia/2003-11-24/115
+    - dto/ministerio-secretaria-general-de-la-presidencia/2003-11-26/92
+    - dto/ministerio-secretaria-general-de-la-presidencia/2003-11-26/93
+    - dto/ministerio-secretaria-general-de-la-presidencia/2004-05-22/95
+    - dto/ministerio-secretaria-general-de-la-presidencia/2004-08-28/89
+    - dto/ministerio-secretaria-general-de-la-presidencia/2010-12-31/104
+
 ---
 
 # LEY 19828 — CREA EL SERVICIO NACIONAL DEL ADULTO MAYOR

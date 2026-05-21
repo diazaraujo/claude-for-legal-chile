@@ -17,10 +17,11 @@ relacionada_per:
 estado_revision: borrador-generado-no-validado
 validador: null
 fecha_validacion: null
+    - dfl/ministerio-secretaria-general-de-la-presidencia/2010-08-10/5
 grafo_relaciones:
   modifica:
     - cod/ministerio-de-justicia/1874-11-12/penal
-    - dfl/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion/2005-03-07/1
+    - dfl/ministerio-de-economia-fomento-y-reconstruccion-subsecretaria-de-economia-fomento-y-reconstruccion/2005-03-07/1
     - dfl/ministerio-de-educacion/1997-01-22/1
     - dfl/ministerio-de-hacienda/1931-05-22/251
     - dfl/ministerio-de-hacienda/1953-08-05/213
@@ -38,12 +39,10 @@ grafo_relaciones:
     - dfl/ministerio-de-justicia/1995-10-18/1
     - dfl/ministerio-de-justicia/2000-05-30/1
     - dfl/ministerio-de-salud-publica/1968-01-31/725
-    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2000-01-11/2
-    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2002-05-03/1
-    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2005-11-08/1
-    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
-    - dfl/ministerio-del-trabajo-y-prevision-social/1986-04-25/16
-    - dfl/ministerio-secretaria-general-de-la-presidencia/2010-08-10/5
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2000-01-11/2
+  rectifica:
+    - dl/ministerio-de-hacienda/1974-12-31/830
+
 ---
 
 # LEY 19806 — NORMAS ADECUATORIAS DEL SISTEMA LEGAL CHILENO A LA REFORMA PROCESAL PENAL

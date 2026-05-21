@@ -17,6 +17,7 @@ relacionada_per:
 estado_revision: borrador-generado-no-validado
 validador: null
 fecha_validacion: null
+    - ley/ministerio-de-hacienda/2003-11-04/19912
 grafo_relaciones:
   modifica:
     - dfl/ministerio-de-hacienda/1953-08-05/213
@@ -24,7 +25,7 @@ grafo_relaciones:
     - dfl/ministerio-de-hacienda/1998-07-21/2
     - dfl/ministerio-de-hacienda/1998-12-16/1
     - dfl/ministerio-de-hacienda/2005-06-04/30
-    - dfl/ministerio-de-hacienda_subsecretaria-de-hacienda/1989-08-21/2
+    - dfl/ministerio-de-hacienda-subsecretaria-de-hacienda/1989-08-21/2
     - dl/ministerio-de-hacienda/1974-12-31/824
     - dl/ministerio-de-hacienda/1974-12-31/825
     - dl/ministerio-de-hacienda/1974-12-31/830
@@ -36,6 +37,7 @@ grafo_relaciones:
     - ley/ministerio-de-hacienda/1999-11-13/19646
   modificada_por:
     - ley/ministerio-de-hacienda/2003-11-04/19912
+
 ---
 
 # LEY 19738 — NORMAS PARA COMBATIR LA EVASION TRIBUTARIA

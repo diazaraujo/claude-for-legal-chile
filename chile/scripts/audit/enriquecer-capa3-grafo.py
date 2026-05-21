@@ -73,24 +73,66 @@ def find_uri_by_leychile(con: sqlite3.Connection, code: str) -> str | None:
     return row[0] if row else None
 
 
+VERSION_SUFFIX_RE = re.compile(r"/es@\d{4}-\d{2}-\d{2}$")
+
+
+def canonical_uri(uri: str) -> str:
+    """Quita sufijo de versión /es@YYYY-MM-DD y normaliza separadores."""
+    uri = VERSION_SUFFIX_RE.sub("", uri)
+    # BCN inconsistencia: ministerio-X_subsec vs ministerio-X-subsec.
+    # Para dedup por "misma norma", normalizamos a `-`.
+    return uri.replace("_", "-")
+
+
 def get_relaciones(
     con: sqlite3.Connection, uri: str, max_edges: int
-) -> tuple[list[str], list[str]]:
-    """Devuelve (outgoing modifiesTo, incoming modifiesTo)."""
+) -> dict[str, list[tuple[str, str]]]:
+    """Devuelve dict por relación canonicalizada y deduplicada.
+
+    Importante: en bcn-norms, el sujeto SIEMPRE está en src. Para
+    `A isModifiedBy B`, src=A (modificada) y dst=B (modificadora).
+    Por lo tanto, todas las queries usan src_uri = URI.
+
+    Para capturar también las relaciones donde URI aparece como dst
+    (otra norma referencia a URI por su propio src), agregamos un
+    segundo paso con queries WHERE dst_uri = URI usando los
+    predicados inversos.
+    """
     cur = con.cursor()
-    out_rows = cur.execute(
-        "SELECT DISTINCT dst_uri FROM relaciones "
-        "WHERE rel='modifiesTo' AND src_uri = ? AND dst_uri NOT LIKE '%/es@%' "
-        "LIMIT ?",
-        (uri, max_edges),
-    ).fetchall()
-    in_rows = cur.execute(
-        "SELECT DISTINCT src_uri FROM relaciones "
-        "WHERE rel='modifiesTo' AND dst_uri = ? AND src_uri NOT LIKE '%/es@%' "
-        "LIMIT ?",
-        (uri, max_edges),
-    ).fetchall()
-    return [r[0] for r in out_rows], [r[0] for r in in_rows]
+    # Mapeo (predicado, label, donde está el URI: src/dst)
+    rels = [
+        ("modifiesTo",      "modifica",          "src"),
+        ("isModifiedBy",    "modificada_por",    "src"),
+        ("regulates",       "reglamenta",        "src"),
+        ("isRegulatedBy",   "reglamentada_por",  "src"),
+        ("recasts",         "refunde",           "src"),
+        ("isRecastedBy",    "refundida_por",     "src"),
+        ("rectifies",       "rectifica",         "src"),
+        ("isRectifiedBy",   "rectificada_por",   "src"),
+        ("agreeWith",       "acuerda_con",       "src"),
+    ]
+    result: dict[str, list[tuple[str, str]]] = {}
+
+    for rel_iri, label, where in rels:
+        rows = cur.execute(
+            f"SELECT DISTINCT dst_uri FROM relaciones "
+            f"WHERE rel = ? AND src_uri = ?",
+            (rel_iri, uri),
+        ).fetchall()
+        canon_set: set[str] = set()
+        canon_list: list[str] = []
+        for (other,) in rows:
+            c = canonical_uri(other)
+            if c == uri:
+                continue
+            if c not in canon_set:
+                canon_set.add(c)
+                canon_list.append(c)
+            if len(canon_list) >= max_edges:
+                break
+        if canon_list:
+            result[label] = [(rel_iri, u) for u in canon_list]
+    return result
 
 
 def shorten_uri(uri: str) -> str:
@@ -98,18 +140,23 @@ def shorten_uri(uri: str) -> str:
     return uri.replace("http://datos.bcn.cl/recurso/cl/", "")
 
 
-def build_grafo_block(out_uris: list[str], in_uris: list[str]) -> str:
-    if not out_uris and not in_uris:
+def build_grafo_block(rels: dict[str, list[tuple[str, str]]]) -> str:
+    if not rels:
         return ""
     block = "grafo_relaciones:\n"
-    if out_uris:
-        block += "  modifica:\n"
-        for u in out_uris:
-            block += f"    - {shorten_uri(u)}\n"
-    if in_uris:
-        block += "  modificada_por:\n"
-        for u in in_uris:
-            block += f"    - {shorten_uri(u)}\n"
+    # Orden estable para diff legible
+    label_order = [
+        "modifica", "modificada_por",
+        "reglamenta", "reglamentada_por",
+        "refunde", "refundida_por",
+        "rectifica", "rectificada_por",
+        "acuerda_con",
+    ]
+    for label in label_order:
+        if label in rels and rels[label]:
+            block += f"  {label}:\n"
+            for _rel_iri, uri in rels[label]:
+                block += f"    - {shorten_uri(uri)}\n"
     return block
 
 
@@ -179,21 +226,23 @@ def main() -> int:
             sin_uri += 1
             continue
 
-        out_uris, in_uris = get_relaciones(con, uri, args.max_edges)
-        if not out_uris and not in_uris:
+        rels = get_relaciones(con, uri, args.max_edges)
+        if not rels:
             sin_edges += 1
             continue
 
-        block = build_grafo_block(out_uris, in_uris)
+        block = build_grafo_block(rels)
         new_content = replace_grafo_block(content, block)
 
         if new_content != content:
             if args.apply:
                 f.write_text(new_content, encoding="utf-8")
             enriquecidos += 1
-            total_edges += len(out_uris) + len(in_uris)
+            counts = {k: len(v) for k, v in rels.items()}
+            n_edges = sum(counts.values())
+            total_edges += n_edges
             print(
-                f"  {f.stem}: out={len(out_uris)} in={len(in_uris)}",
+                f"  {f.stem}: {sum(counts.values())} edges ({counts})",
                 flush=True,
             )
 

@@ -24,8 +24,12 @@ grafo_relaciones:
   modificada_por:
     - ley/ministerio-de-justicia/2002-05-31/19806
     - ley/ministerio-del-interior/1996-11-30/19483
-    - ley/ministerio-del-interior_subsecretaria-del-interior/2000-09-25/19692
-    - ley/ministerio-del-interior_subsecretaria-del-interior/2006-11-17/20131
+    - ley/ministerio-del-interior-subsecretaria-del-interior/2000-09-25/19692
+    - ley/ministerio-del-interior-subsecretaria-del-interior/2006-11-17/20131
+  reglamentada_por:
+    - dto/municipalidad-de-maipu/2003-10-02/4409
+  refundida_por:
+    - dto/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/1997-03-20/58
 
 ---
 

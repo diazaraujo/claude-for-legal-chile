@@ -24,10 +24,13 @@ validador: null
 fecha_validacion: null
 grafo_relaciones:
   modifica:
-    - dl/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion/1974-01-24/280
+    - dfl/ministerio-de-hacienda/1931-05-22/251
+    - dl/ministerio-de-economia-fomento-y-reconstruccion-subsecretaria-de-economia-fomento-y-reconstruccion/1974-01-24/280
     - ley/ministerio-de-hacienda/1965-12-18/16394
   modificada_por:
+    - ley/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-economia-y-empresas-de-menor-tamano/2014-01-09/20720
     - ley/ministerio-de-hacienda/1984-10-19/18350
+    - ley/ministerio-de-hacienda/1985-12-28/18482
     - ley/ministerio-de-hacienda/1987-10-20/18660
     - ley/ministerio-de-hacienda/1989-07-29/18815
     - ley/ministerio-de-hacienda/1989-12-21/18876
@@ -45,8 +48,6 @@ grafo_relaciones:
     - ley/ministerio-de-hacienda/2009-06-06/20345
     - ley/ministerio-de-hacienda/2010-08-13/20448
     - ley/ministerio-de-hacienda/2011-12-17/20552
-    - ley/ministerio-de-hacienda_subsecretaria-de-hacienda/2009-10-20/20382
-    - ley/ministerio-de-justicia/1993-06-01/19221
 
 ---
 

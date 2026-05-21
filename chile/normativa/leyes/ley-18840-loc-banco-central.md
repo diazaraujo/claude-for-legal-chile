@@ -23,13 +23,14 @@ validador: null
 fecha_validacion: null
 grafo_relaciones:
   modifica:
-    - dfl/ministerio-de-economia_fomento-y-reconstruccion/1993-12-16/523
+    - dfl/ministerio-de-economia-fomento-y-reconstruccion/1993-12-16/523
     - dfl/ministerio-de-hacienda/1960-04-04/252
     - dfl/ministerio-de-hacienda/1960-04-06/326
     - dfl/ministerio-de-hacienda/1997-12-19/3
     - dfl/ministerio-de-mineria/1987-04-28/1
-    - dl/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-econstruccion/1974-07-13/600
+    - dl/ministerio-de-economia-fomento-y-reconstruccion-subsecretaria-de-economia-fomento-y-econstruccion/1974-07-13/600
     - dl/ministerio-de-hacienda/1974-12-31/824
+    - dl/ministerio-de-hacienda/1975-06-28/1078
     - dl/ministerio-de-hacienda/1975-07-25/1097
     - dl/ministerio-de-hacienda/1976-05-06/1444
     - dl/ministerio-de-hacienda/1978-01-18/2079
@@ -39,22 +40,28 @@ grafo_relaciones:
     - dl/ministerio-de-mineria/1976-02-28/1349
     - dl/ministerio-del-trabajo-y-prevision-social/1974-10-02/670
     - dl/ministerio-del-trabajo-y-prevision-social/1980-11-13/3500
-    - dto/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion/1977-11-29/471
+    - dto/ministerio-de-economia-fomento-y-reconstruccion-subsecretaria-de-economia-fomento-y-reconstruccion/1977-11-29/471
     - ley/ministerio-de-hacienda/1965-01-15/16101
     - ley/ministerio-de-hacienda/1981-06-27/18010
-    - ley/ministerio-de-hacienda/1987-09-29/18657
   modificada_por:
+    - cci/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1989-12-28/bancos-116
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1998-01-22/bancos-2916
     - ley/ministerio-de-hacienda/1990-01-06/18901
     - ley/ministerio-de-hacienda/1990-03-10/18970
     - ley/ministerio-de-hacienda/1991-02-11/19041
     - ley/ministerio-de-hacienda/2000-12-20/19705
     - ley/ministerio-de-hacienda/2001-08-09/19746
     - ley/ministerio-de-hacienda/2003-12-18/19913
+    - ley/ministerio-de-hacienda/2014-11-06/20789
+    - ley/ministerio-de-hacienda/2016-10-26/20956
+    - ley/ministerio-de-hacienda/2020-09-08/21265
     - ley/ministerio-de-justicia/2002-05-31/19806
     - ley/ministerio-del-interior/2005-02-16/20000
     - ley/ministerio-secretaria-general-de-la-presidencia/1999-12-14/19653
     - ley/ministerio-secretaria-general-de-la-presidencia/2006-01-05/20088
     - ley/ministerio-secretaria-general-de-la-presidencia/2008-08-20/20285
+    - ley/ministerio-secretaria-general-de-la-presidencia/2016-01-05/20880
+    - tci/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1989-12-13/bancos-16
 
 ---
 

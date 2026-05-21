@@ -38,6 +38,15 @@ grafo_relaciones:
     - ley/ministerio-de-hacienda/1992-12-12/19185
     - ley/ministerio-de-justicia/2002-05-31/19806
     - ley/ministerio-del-trabajo-y-prevision-social/1993-01-18/19200
+  reglamentada_por:
+    - dto/ministerio-de-educacion-publica/1991-07-13/224
+    - dto/ministerio-de-educacion-publica/1991-08-17/264
+    - dto/ministerio-de-educacion-publica/1991-11-06/324
+    - dto/ministerio-de-educacion-publica/1991-12-14/427
+    - dto/ministerio-de-educacion-publica/1992-09-03/453
+    - dto/ministerio-de-educacion/2005-06-11/192
+  refundida_por:
+    - dfl/ministerio-de-educacion/1997-01-22/1
 
 ---
 

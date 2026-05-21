@@ -24,7 +24,13 @@ grafo_relaciones:
     - ley/ministerio-del-interior/1990-02-17/18930
     - ley/ministerio-del-interior/2005-02-16/20000
     - ley/ministerio-secretaria-general-de-la-presidencia/2006-01-05/20088
-    - ley/ministerio-secretaria-general-de-la-presidencia_subsecretaria-general-de-la-presidencia/2009-10-28/20381
+    - ley/ministerio-secretaria-general-de-la-presidencia-subsecretaria-general-de-la-presidencia/2009-10-28/20381
+  reglamentada_por:
+    - aa/tribunal-constitucional/1989-04-26/s/n
+  refundida_por:
+    - dfl/ministerio-secretaria-general-de-la-presidencia/2010-08-10/5
+  rectificada_por:
+    - rec/ministerio-de-hacienda/1981-08-13/654
 
 ---
 

@@ -21,7 +21,12 @@ validador: null
 fecha_validacion: null
 grafo_relaciones:
   modificada_por:
+    - ley/ministerio-de-hacienda/2017-02-23/21000
     - ley/ministerio-secretaria-general-de-la-presidencia/2008-08-20/20285
+    - ley/ministerio-secretaria-general-de-la-presidencia/2019-11-11/21180
+  reglamentada_por:
+    - dto/ministerio-del-interior-y-seguridad-publica-subsecretaria-de-desarrollo-regional-y-administrativo/2020-09-17/656
+    - dto/ministerio-secretaria-general-de-la-presidencia/2018-05-26/20
 
 ---
 

@@ -18,6 +18,10 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modificada_por:
+    - ley/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-economia-y-empresas-de-menor-tamano/2014-01-09/20720
+
 ---
 
 # Ley 19.857 — EIRL (Empresa Individual de Responsabilidad Limitada)

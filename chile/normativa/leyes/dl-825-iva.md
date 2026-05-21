@@ -44,6 +44,12 @@ grafo_relaciones:
     - dl/ministerio-de-hacienda/1978-08-31/2324
     - dl/ministerio-de-hacienda/1978-12-22/2415
     - dl/ministerio-de-hacienda/1979-04-04/2563
+  reglamentada_por:
+    - dto/ministerio-de-educacion/1993-03-26/97-exento
+    - dto/ministerio-de-educacion/2015-08-14/210
+    - dto/ministerio-de-hacienda/1975-03-01/225
+    - dto/ministerio-de-hacienda/1977-02-02/55
+    - dto/ministerio-de-hacienda/1996-01-11/1197
 
 ---
 

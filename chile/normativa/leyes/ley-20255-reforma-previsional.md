@@ -35,11 +35,30 @@ grafo_relaciones:
     - ley/ministerio-de-hacienda/1987-12-31/18681
     - ley/ministerio-de-hacienda/2006-09-30/20128
     - ley/ministerio-de-planificacion-y-cooperacion/2004-06-05/19949
-    - ley/ministerio-del-trabajo-y-prevision-social_subsecretaria-de-prevision-social/1995-08-21/19404
+    - ley/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/1995-08-21/19404
   modificada_por:
+    - cir/ministerio-de-hacienda-superintendencia-de-pensiones-superintendencia-de-bancos-e-instituciones-financieras-superintendencia-de-valores-y-seguros-tesoreria-general-de-la-republica/2009-03-19/1596
     - ley/ministerio-de-hacienda/2011-08-31/20531
-    - ley/ministerio-del-trabajo-y-prevision-social_subsecretaria-de-prevision-social/2009-07-29/20366
-    - ley/ministerio-del-trabajo-y-prevision-social_subsecretaria-de-prevision-social/2010-09-04/20459
+    - ley/ministerio-del-trabajo-y-prevision-social/2015-10-15/20864
+    - ley/ministerio-del-trabajo-y-prevision-social/2016-01-26/20894
+    - ley/ministerio-del-trabajo-y-prevision-social/2016-12-03/20970
+    - ley/ministerio-del-trabajo-y-prevision-social/2017-04-28/21010
+    - ley/ministerio-del-trabajo-y-prevision-social/2019-02-02/21133
+    - ley/ministerio-del-trabajo-y-prevision-social/2019-12-11/21190
+    - ley/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2009-07-29/20366
+    - ley/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2010-09-04/20459
+    - ley/ministerio-secretaria-general-de-gobierno/2015-04-21/20830
+  reglamentada_por:
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2008-06-06/23
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2008-06-17/28
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2008-07-31/29
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2008-09-09/48
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2008-09-15/51
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2008-09-17/54
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2008-12-16/78
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2009-06-08/29
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2012-02-04/27
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2018-09-12/82
 
 ---
 

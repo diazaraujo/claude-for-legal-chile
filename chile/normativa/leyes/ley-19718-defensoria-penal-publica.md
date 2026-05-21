@@ -21,14 +21,21 @@ validador: null
 fecha_validacion: null
 grafo_relaciones:
   modifica:
+    - cod/ministerio-de-justicia/1943-07-09/orgánico-de-tribunales
     - ley/ministerio-de-justicia/1943-07-09/7421
     - ley/ministerio-de-justicia/2000-03-09/19665
   modificada_por:
     - dfl/ministerio-de-hacienda/2007-10-02/34
     - dfl/ministerio-de-hacienda/2007-10-02/4
+    - dfl/ministerio-de-hacienda/2018-07-09/9
     - ley/ministerio-de-justicia/2001-10-13/19762
     - ley/ministerio-de-justicia/2005-11-14/20074
     - ley/ministerio-de-justicia/2005-12-07/20084
+    - ley/ministerio-de-justicia/2015-01-09/20802
+  reglamentada_por:
+    - dto/ministerio-de-justicia/2002-08-19/495
+    - dto/ministerio-de-justicia/2003-11-10/538
+    - dto/ministerio-de-justicia/2015-12-03/460
 
 ---
 

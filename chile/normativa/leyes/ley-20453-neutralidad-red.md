@@ -21,6 +21,8 @@ fecha_validacion: null
 grafo_relaciones:
   modifica:
     - ley/ministerio-de-transportes-y-telecomunicaciones/1982-10-02/18168
+  reglamentada_por:
+    - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2011-03-18/368
 
 ---
 

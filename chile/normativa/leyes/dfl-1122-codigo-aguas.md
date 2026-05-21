@@ -31,12 +31,45 @@ grafo_relaciones:
     - ley/ministerio-de-agricultura/1984-12-27/18377
     - ley/ministerio-de-agricultura/1985-04-20/18405
     - ley/ministerio-de-hacienda/1987-12-31/18681
+    - ley/ministerio-de-justicia/2014-09-04/20774
     - ley/ministerio-de-obras-publicas/1984-12-29/18373
     - ley/ministerio-de-obras-publicas/1992-06-25/19145
     - ley/ministerio-de-obras-publicas/2005-06-16/20017
     - ley/ministerio-de-obras-publicas/2006-05-15/20099
     - ley/ministerio-de-obras-publicas/2008-12-13/20304
+    - ley/ministerio-de-obras-publicas/2013-11-12/20697
+    - ley/ministerio-de-obras-publicas/2018-01-27/21064
     - ley/ministerio-secretaria-general-de-la-presidencia/2010-01-26/20417
+  reglamentada_por:
+    - dto/ministerio-de-obras-publicas/1998-07-25/1220
+    - dto/ministerio-de-obras-publicas/2010-12-06/189
+    - dto/ministerio-de-obras-publicas/2014-03-07/203
+    - dto/ministerio-de-obras-publicas/2015-12-19/50
+    - dto/ministerio-de-obras-publicas/2020-10-15/53
+    - dto/ministerio-del-medio-ambiente/2013-07-30/14
+  rectifica:
+    - rec/ministerio-de-justicia/1981-11-26/s/n
+  acuerda_con:
+    - aa/corte-suprema/1986-08-07/s/n
+    - cod/ministerio-de-justicia/1855-12-14/1855
+    - cod/ministerio-de-justicia/1943-07-09/orgánico-de-tribunales
+    - dfl/ministerio-de-bienestar-social/1931-05-28/237
+    - dfl/ministerio-de-economia-fomento-y-reconstruccion-subsecretaria-de-economia-fomento-y-econstruccion/2007-02-05/4
+    - dfl/ministerio-de-economia/1983-08-24/7
+    - dfl/ministerio-de-hacienda/1959-08-31/4
+    - dfl/ministerio-de-justicia/1981-12-21/1123
+    - dfl/ministerio-de-justicia/1996-12-26/2
+    - dfl/ministerio-de-justicia/2000-05-30/1
+    - dfl/ministerio-de-mineria/1982-09-13/1
+    - dfl/ministerio-de-obras-publicas/1989-06-21/382
+    - dfl/ministerio-de-obras-publicas/1998-02-25/850
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
+    - dl/ministerio-de-agricultura/1979-04-23/2603
+    - dl/ministerio-de-fomento/1932-08-27/488
+    - dl/ministerio-del-interior/1974-07-12/573
+    - dto/ministerio-de-economia-fomento-y-reconstruccion/1992-01-21/430
+    - dto/ministerio-de-justicia-y-derechos-humanos/2018-05-29/680-exento
+    - dto/ministerio-de-justicia/1993-07-30/677
 
 ---
 

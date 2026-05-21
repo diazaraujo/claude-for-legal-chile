@@ -33,6 +33,7 @@ grafo_relaciones:
     - dl/ministerio-de-hacienda/1975-11-28/1263
     - dl/ministerio-de-hacienda/1975-11-29/1273
     - dl/ministerio-de-hacienda/1981-01-02/3551
+    - dto/ministerio-de-hacienda/1952-10-24/7013
     - dto/ministerio-de-hacienda/1956-11-28/6973
     - dto/ministerio-de-obras-publicas/1985-05-20/294
     - ley/ministerio-de-defensa-nacional/1990-03-10/18974
@@ -43,7 +44,9 @@ grafo_relaciones:
     - ley/ministerio-de-hacienda/1962-01-24/14832
     - ley/ministerio-de-hacienda/1965-01-02/16068
     - ley/ministerio-de-hacienda/1966-02-16/16433
-    - ley/ministerio-de-hacienda/1972-02-21/17617
+  refunde:
+    - dl/ministerio-de-hacienda/1932-07-26/258
+    - ley/ministerio-de-hacienda/1950-09-21/9687
 
 ---
 

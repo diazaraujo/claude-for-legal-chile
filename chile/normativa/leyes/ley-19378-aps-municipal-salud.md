@@ -22,12 +22,19 @@ validador: null
 fecha_validacion: null
 grafo_relaciones:
   modificada_por:
+    - ley/ministerio-de-hacienda/2015-12-02/20883
     - ley/ministerio-de-salud/1995-08-31/19405
     - ley/ministerio-de-salud/1999-05-14/19607
     - ley/ministerio-de-salud/2002-06-25/19813
     - ley/ministerio-de-salud/2004-02-24/19937
-    - ley/ministerio-de-salud_subsecretaria-de-salud-publica/2007-01-05/20157
-    - ley/ministerio-de-salud_subsecretaria-de-salud-publica/2008-02-09/20250
+    - ley/ministerio-de-salud-subsecretaria-de-salud-publica/2007-01-05/20157
+    - ley/ministerio-de-salud-subsecretaria-de-salud-publica/2008-02-09/20250
+    - ley/ministerio-del-trabajo-y-prevision-social/2016-01-22/20891
+  reglamentada_por:
+    - dto/ministerio-de-salud/1995-11-29/1889
+    - dto/ministerio-de-salud/1995-12-23/2296
+    - res/ministerio-de-salud/2001-07-13/82
+    - res/ministerio-de-salud/2005-07-09/68
 
 ---
 

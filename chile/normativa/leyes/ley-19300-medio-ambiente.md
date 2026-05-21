@@ -28,9 +28,35 @@ grafo_relaciones:
     - dfl/ministerio-de-hacienda/2007-10-02/25
     - dfl/ministerio-secretaria-general-de-la-presidencia/2007-12-21/3
     - ley/ministerio-de-agricultura/2008-07-30/20283
+    - ley/ministerio-de-mineria-subsecretaria-de-mineria/2009-12-03/20402
     - ley/ministerio-del-medio-ambiente/2010-11-13/20473
+    - ley/ministerio-del-medio-ambiente/2016-06-01/20920
+    - ley/ministerio-del-medio-ambiente/2019-07-15/21162
+    - ley/ministerio-del-medio-ambiente/2020-01-23/21202
+    - ley/ministerio-secretaria-general-de-la-presidencia/1995-02-08/19372
     - ley/ministerio-secretaria-general-de-la-presidencia/2007-03-27/20173
     - ley/ministerio-secretaria-general-de-la-presidencia/2010-01-26/20417
+  reglamentada_por:
+    - dto/ministerio-de-salud-subsecretaria-de-salud-publica/2008-11-19/61
+    - dto/ministerio-del-medio-ambiente/2011-10-20/25
+    - dto/ministerio-del-medio-ambiente/2011-12-01/3
+    - dto/ministerio-del-medio-ambiente/2012-04-27/29
+    - dto/ministerio-del-medio-ambiente/2012-05-23/3
+    - dto/ministerio-del-medio-ambiente/2012-11-28/8
+    - dto/ministerio-del-medio-ambiente/2013-02-11/31
+    - dto/ministerio-del-medio-ambiente/2013-07-22/39
+    - dto/ministerio-del-medio-ambiente/2013-08-12/40
+    - dto/ministerio-del-medio-ambiente/2014-09-22/1
+    - dto/ministerio-del-medio-ambiente/2015-03-12/62
+    - dto/ministerio-del-medio-ambiente/2015-04-17/78
+    - dto/ministerio-del-medio-ambiente/2015-11-04/32
+    - dto/ministerio-secretaria-general-de-la-presidencia/1995-10-26/86
+    - dto/ministerio-secretaria-general-de-la-presidencia/1995-10-26/93
+    - dto/ministerio-secretaria-general-de-la-presidencia/1995-10-26/94
+    - dto/ministerio-secretaria-general-de-la-presidencia/1997-04-03/30
+    - dto/ministerio-secretaria-general-de-la-presidencia/2002-12-07/95
+    - dto/ministerio-secretaria-general-de-la-presidencia/2005-05-11/75
+    - dto/ministerio-secretaria-general-de-la-presidencia-comision-nacional-del-medio-ambiente/1999-12-18/166
 
 ---
 

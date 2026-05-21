@@ -21,6 +21,12 @@ validador: null
 fecha_validacion: null
 grafo_relaciones:
   modificada_por:
+    - dfl/ministerio-secretaria-general-de-la-presidencia/2017-09-06/1
+    - dfl/ministerio-secretaria-general-de-la-presidencia/2017-09-06/3
+    - ley/ministerio-del-interior-y-seguridad-publica/2015-05-05/20840
+    - ley/ministerio-del-interior-y-seguridad-publica/2016-10-18/20960
+    - ley/ministerio-del-interior-y-seguridad-publica/2017-09-05/21033
+    - ley/ministerio-del-interior-y-seguridad-publica-subsecretaria-del-interior/2013-06-27/20682
     - ley/ministerio-del-interior/1988-08-13/18733
     - ley/ministerio-del-interior/1989-05-26/18799
     - ley/ministerio-del-interior/1989-06-15/18807
@@ -30,17 +36,13 @@ grafo_relaciones:
     - ley/ministerio-del-interior/1990-08-16/18991
     - ley/ministerio-del-interior/1993-08-20/19237
     - ley/ministerio-del-interior/1994-11-23/19351
-    - ley/ministerio-del-interior_subsecretaria-del-interior/1990-03-10/18963
-    - ley/ministerio-del-interior_subsecretaria-del-interior/1996-01-17/19438
-    - ley/ministerio-del-interior_subsecretaria-del-interior/1999-11-30/19654
-    - ley/ministerio-del-interior_subsecretaria-del-interior/2001-07-19/19745
-    - ley/ministerio-del-interior_subsecretaria-del-interior/2002-09-04/19823
-    - ley/ministerio-del-interior_subsecretaria-del-interior/2003-08-05/19884
-    - ley/ministerio-del-interior_subsecretaria-del-interior/2005-05-02/20010
-    - ley/ministerio-del-interior_subsecretaria-del-interior/2007-04-05/20174
-    - ley/ministerio-del-interior_subsecretaria-del-interior/2007-06-08/20183
-    - ley/ministerio-del-interior_subsecretaria-del-interior/2009-09-17/20384
-    - ley/ministerio-secretaria-general-de-la-presidencia/2011-10-17/20542
+    - ley/ministerio-del-interior-subsecretaria-del-interior/1990-03-10/18963
+    - ley/ministerio-del-interior-subsecretaria-del-interior/1996-01-17/19438
+    - ley/ministerio-del-interior-subsecretaria-del-interior/1999-11-30/19654
+    - ley/ministerio-del-interior-subsecretaria-del-interior/2001-07-19/19745
+    - ley/ministerio-del-interior-subsecretaria-del-interior/2002-09-04/19823
+  refundida_por:
+    - dfl/ministerio-secretaria-general-de-la-presidencia/2017-09-06/2
 
 ---
 

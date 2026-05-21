@@ -17,17 +17,26 @@ relacionada_per:
 estado_revision: borrador-generado-no-validado
 validador: null
 fecha_validacion: null
+    - ley/ministerio-de-desarrollo-social_subsecretaria-de-evaluacion-social/2012-05-17/20595
 grafo_relaciones:
   modifica:
     - dfl/ministerio-del-interior/1985-12-20/1
     - dto/ministerio-de-obras-publicas/1996-12-18/900
     - ley/ministerio-de-hacienda/1985-12-28/18482
-    - ley/ministerio-de-hacienda_subsecretaria-de-hacienda/2009-11-30/20403
+    - ley/ministerio-de-hacienda-subsecretaria-de-hacienda/2009-11-30/20403
     - ley/ministerio-de-planificacion-y-cooperacion/2004-06-05/19949
     - ley/ministerio-del-interior/1990-07-19/18989
-    - ley/ministerio-del-trabajo-y-prevision-social_subsecretaria-del-trabajo/2001-05-14/19728
+    - ley/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2001-05-14/19728
   modificada_por:
-    - ley/ministerio-de-desarrollo-social_subsecretaria-de-evaluacion-social/2012-05-17/20595
+    - ley/ministerio-de-desarrollo-social/2018-04-18/21090
+    - ley/ministerio-de-desarrollo-social/2019-04-16/21150
+    - ley/ministerio-de-desarrollo-social-subsecretaria-de-evaluacion-social/2012-05-17/20595
+    - ley/ministerio-de-educacion/2018-08-13/21105
+  reglamentada_por:
+    - dto/ministerio-de-desarrollo-social/2015-11-20/22
+    - dto/ministerio-de-desarrollo-social-subsecretaria-de-evaluacion-social/2013-07-11/15
+    - res/ministerio-de-desarrollo-social-subsecretaria-de-la-ninez/2018-09-20/4-exenta
+
 ---
 
 # LEY 20530 — CREA EL MINISTERIO DE DESARROLLO SOCIAL Y FAMILIA Y MODIFICA CUERPOS LEGALES QUE INDICA

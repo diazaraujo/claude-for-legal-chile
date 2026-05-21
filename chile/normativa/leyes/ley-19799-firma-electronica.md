@@ -21,7 +21,7 @@ validador: null
 fecha_validacion: null
 grafo_relaciones:
   modificada_por:
-    - ley/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion/2007-11-12/20217
+    - ley/ministerio-de-economia-fomento-y-reconstruccion-subsecretaria-de-economia-fomento-y-reconstruccion/2007-11-12/20217
 
 ---
 

@@ -17,15 +17,19 @@ relacionada_per:
 estado_revision: borrador-generado-no-validado
 validador: null
 fecha_validacion: null
+    - ley/ministerio-del-trabajo-y-prevision-social_subsecretaria-del-trabajo/2001-05-14/19728
 grafo_relaciones:
   modifica:
     - dfl/ministerio-de-hacienda/1931-05-22/251
     - dl/ministerio-de-hacienda/1974-12-31/824
     - dl/ministerio-de-hacienda/1980-12-23/3538
+    - dl/ministerio-del-trabajo-y-previsin-social/1980-11-13/3500
     - dl/ministerio-del-trabajo-y-prevision-social/1980-11-13/3500
     - ley/ministerio-de-hacienda/1981-10-22/18045
     - ley/ministerio-de-hacienda/1981-10-22/18046
-    - ley/ministerio-del-trabajo-y-prevision-social_subsecretaria-del-trabajo/2001-05-14/19728
+    - ley/ministerio-del-trabajo-y-previsin-social-subsecretara-del-trabajo/2001-05-14/19728
+    - ley/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2001-05-14/19728
+
 ---
 
 # LEY 20552 — MODERNIZA Y FOMENTA LA COMPETENCIA DEL SISTEMA FINANCIERO

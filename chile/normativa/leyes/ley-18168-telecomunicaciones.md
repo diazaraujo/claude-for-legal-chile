@@ -27,22 +27,46 @@ grafo_relaciones:
     - ley/ministerio-del-interior/1962-12-27/15113
   modificada_por:
     - dfl/ministerio-de-transportes-y-telecomunicaciones/1987-02-21/1
+    - ley/ministerio-de-hacienda/1985-12-28/18482
     - ley/ministerio-de-hacienda/1987-01-03/18591
     - ley/ministerio-de-hacienda/1987-12-31/18681
+    - ley/ministerio-de-justicia/1993-06-01/19221
     - ley/ministerio-de-transportes-y-telecomunicaciones/1991-11-07/19091
     - ley/ministerio-de-transportes-y-telecomunicaciones/1994-01-20/19277
     - ley/ministerio-de-transportes-y-telecomunicaciones/1994-03-10/19302
-    - ley/ministerio-de-transportes-y-telecomunicaciones_subsecretaria-de-telecomunicaciones/2001-05-11/19724
-    - ley/ministerio-de-transportes-y-telecomunicaciones_subsecretaria-de-telecomunicaciones/2007-07-12/20196
-    - ley/ministerio-de-transportes-y-telecomunicaciones_subsecretaria-de-telecomunicaciones/2008-09-13/20292
-    - ley/ministerio-de-transportes-y-telecomunicaciones_subsecretaria-de-telecomunicaciones/2009-02-06/20335
-    - ley/ministerio-de-transportes-y-telecomunicaciones_subsecretaria-de-telecomunicaciones/2010-05-04/20433
-    - ley/ministerio-de-transportes-y-telecomunicaciones_subsecretaria-de-telecomunicaciones/2010-08-26/20453
-    - ley/ministerio-de-transportes-y-telecomunicaciones_subsecretaria-de-telecomunicaciones/2010-12-10/20471
-    - ley/ministerio-de-transportes-y-telecomunicaciones_subsecretaria-de-telecomunicaciones/2010-12-10/20478
-    - ley/ministerio-de-transportes-y-telecomunicaciones_subsecretaria-de-telecomunicaciones/2011-07-06/20522
-    - ley/ministerio-de-transportes-y-telecomunicaciones_subsecretaria-de-telecomunicaciones/2011-11-11/20546
-    - ley/ministerio-del-interior/1989-09-30/18838
+    - ley/ministerio-de-transportes-y-telecomunicaciones/2017-09-16/21035
+    - ley/ministerio-de-transportes-y-telecomunicaciones/2017-11-25/21046
+    - ley/ministerio-de-transportes-y-telecomunicaciones/2018-11-06/21119
+    - ley/ministerio-de-transportes-y-telecomunicaciones/2019-08-20/21172
+    - ley/ministerio-de-transportes-y-telecomunicaciones/2020-07-15/21245
+    - ley/ministerio-de-transportes-y-telecomunicaciones/2020-11-26/21285
+    - ley/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2001-05-11/19724
+    - ley/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2007-07-12/20196
+    - ley/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2008-09-13/20292
+    - ley/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2009-02-06/20335
+    - ley/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2010-05-04/20433
+    - ley/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2010-08-26/20453
+  reglamentada_por:
+    - dto/ministerio-de-defensa-nacional/1988-01-06/734
+    - dto/ministerio-de-transportes-y-telecomunicaciones/1984-09-14/45
+    - dto/ministerio-de-transportes-y-telecomunicaciones/1985-01-24/83
+    - dto/ministerio-de-transportes-y-telecomunicaciones/1985-03-04/119
+    - dto/ministerio-de-transportes-y-telecomunicaciones/1994-08-01/189
+    - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/1985-07-25/72
+    - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/1995-02-01/457
+    - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/1997-08-09/425
+    - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/1998-02-19/126
+    - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/1998-07-17/556
+    - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/1998-09-28/381
+    - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2000-08-05/746
+    - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2000-08-05/747
+    - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2001-02-28/533
+    - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2001-07-14/281
+    - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2003-02-25/4
+    - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2008-06-14/484
+    - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2011-03-18/368
+    - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2012-05-12/60
+    - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2012-07-12/99
 
 ---
 

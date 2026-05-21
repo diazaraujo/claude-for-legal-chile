@@ -17,16 +17,18 @@ relacionada_per:
 estado_revision: borrador-generado-no-validado
 validador: null
 fecha_validacion: null
+    - ley/ministerio-del-interior_subsecretaria-del-interior/1986-12-05/18575
 grafo_relaciones:
   modifica:
     - cod/ministerio-de-justicia/1874-11-12/penal
-    - dfl/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion/2005-03-07/1
-    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2000-01-11/2
-    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2002-05-03/1
-    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
+    - cod/ministerio-de-justicia/1943-07-09/orgánico-de-tribunales
+    - dfl/ministerio-de-economia-fomento-y-reconstruccion-subsecretaria-de-economia-fomento-y-reconstruccion/2005-03-07/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2000-01-11/2
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2002-05-03/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
     - dfl/ministerio-secretaria-general-de-la-presidencia/2001-11-17/1
     - dfl/ministerio-secretaria-general-de-la-presidencia/2010-08-10/5
-    - dl/ministerio-de-economia_fomento-y-reconstruccion/1973-12-22/211
+    - dl/ministerio-de-economia-fomento-y-reconstruccion/1973-12-22/211
     - dto/ministerio-de-economia/1980-10-27/511
     - dto/ministerio-del-interior/1992-08-27/662
     - ley/ministerio-de-hacienda/1989-10-10/18840
@@ -38,7 +40,9 @@ grafo_relaciones:
     - ley/ministerio-del-interior/1987-01-09/18593
     - ley/ministerio-del-interior/1988-03-31/18695
     - ley/ministerio-del-interior/1990-02-05/18918
-    - ley/ministerio-del-interior_subsecretaria-del-interior/1986-12-05/18575
+  reglamentada_por:
+    - dto/ministerio-secretaria-general-de-la-presidencia/2006-03-22/45
+
 ---
 
 # LEY 20088 — ESTABLECE COMO OBLIGATORIA LA DECLARACION JURADA PATRIMONIAL DE BIENES A LAS AUTORIDADES QUE EJERCEN UNA FUNCION PUBLICA

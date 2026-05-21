@@ -27,8 +27,8 @@ grafo_relaciones:
     - ley/ministerio-de-hacienda/1966-01-29/16419
   modificada_por:
     - cir/ministerio-de-hacienda/1993-12-07/56
-    - cir/ministerio-de-hacienda_servicio-de-impuestos-internos_direccion-nacional/1995-10-03/37
-    - cir/ministerio-de-hacienda_servicio-de-impuestos-internos_direccion-nacional/2001-02-16/11
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/1995-10-03/37
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2001-02-16/11
     - dl/ministerio-de-hacienda/1975-03-01/910
     - dl/ministerio-de-hacienda/1975-05-15/1017
     - dl/ministerio-de-hacienda/1975-06-28/1076
@@ -46,6 +46,12 @@ grafo_relaciones:
     - dl/ministerio-de-hacienda/1977-07-26/1859
     - dl/ministerio-de-hacienda/1977-08-09/1874
     - dl/ministerio-de-hacienda/1978-08-31/2324
+  reglamentada_por:
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/1992-08-28/40
+    - dto/ministerio-de-educacion/2013-03-13/502
+    - dto/ministerio-de-hacienda/1991-01-05/1139
+    - dto/ministerio-de-hacienda/2006-06-05/1465
+    - dto/ministerio-de-hacienda/2008-11-29/1354
 
 ---
 

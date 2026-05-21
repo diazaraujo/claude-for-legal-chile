@@ -35,17 +35,18 @@ grafo_relaciones:
     - ley/ministerio-de-hacienda/1942-10-23/7302
     - ley/ministerio-de-hacienda/1970-07-01/17308
   modificada_por:
+    - ley/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-economia-y-empresas-de-menor-tamano/2014-01-09/20720
     - ley/ministerio-de-hacienda/1986-01-23/18496
     - ley/ministerio-de-hacienda/1987-10-20/18660
     - ley/ministerio-de-hacienda/2000-12-20/19705
     - ley/ministerio-de-hacienda/2001-11-07/19769
     - ley/ministerio-de-hacienda/2007-06-05/20190
     - ley/ministerio-de-hacienda/2011-12-17/20552
-    - ley/ministerio-de-hacienda_subsecretaria-de-hacienda/2009-10-20/20382
-    - ley/ministerio-de-justicia/1993-06-01/19221
-    - ley/ministerio-de-justicia/1997-04-11/19499
-    - ley/ministerio-de-justicia/2002-05-31/19806
-    - ley/ministerio-secretaria-general-de-la-presidencia/1999-12-14/19653
+    - ley/ministerio-de-hacienda/2016-10-29/20954
+  reglamentada_por:
+    - dto/ministerio-de-hacienda/1982-11-13/587
+    - dto/ministerio-de-hacienda/2012-07-06/702
+    - dto/ministerio-secretaria-general-de-la-presidencia/2000-06-28/99
 
 ---
 

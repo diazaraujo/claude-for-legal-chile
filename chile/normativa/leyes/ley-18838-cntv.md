@@ -25,12 +25,16 @@ grafo_relaciones:
     - dfl/ministerio-secretaria-general-de-la-presidencia/2001-11-17/1
     - ley/ministerio-de-transportes-y-telecomunicaciones/1982-10-02/18168
     - ley/ministerio-del-interior/1970-10-24/17377
-    - ley/ministerio-del-interior_subsecretaria-del-interior/1986-12-05/18575
+    - ley/ministerio-del-interior-subsecretaria-del-interior/1986-12-05/18575
   modificada_por:
+    - ley/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-economia-y-empresas-de-menor-tamano/2014-01-09/20720
+    - ley/ministerio-de-educacion/2017-11-03/21045
     - ley/ministerio-de-hacienda/1989-12-30/18899
+    - ley/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2014-05-29/20750
     - ley/ministerio-secretaria-general-de-gobierno/1992-04-08/19131
     - ley/ministerio-secretaria-general-de-gobierno/2003-01-04/19846
     - ley/ministerio-secretaria-general-de-gobierno/2004-11-30/19982
+    - ley/ministerio-secretaria-general-de-gobierno/2016-01-21/20889
 
 ---
 

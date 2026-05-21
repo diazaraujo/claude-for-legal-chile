@@ -22,14 +22,24 @@ grafo_relaciones:
   modifica:
     - dfl/ministerio-de-hacienda/1960-04-05/294
     - dfl/ministerio-de-justicia/1981-10-29/1122
-    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
     - dl/ministerio-de-tierras-y-colonizacion/1977-11-10/1939
-    - dto/ministerio-de-economia_fomento-y-reconstruccion/1992-01-21/430
+    - dto/ministerio-de-economia-fomento-y-reconstruccion/1992-01-21/430
     - dto/ministerio-secretaria-general-de-la-presidencia/2002-12-07/95
     - ley/ministerio-de-economia/1990-01-27/18902
     - ley/ministerio-de-educacion-publica/1970-02-04/17288
     - ley/ministerio-secretaria-general-de-la-presidencia/1994-03-09/19300
     - ley/ministerio-secretaria-general-de-la-presidencia/2007-03-27/20173
+  modificada_por:
+    - ley/ministerio-del-medio-ambiente/2012-06-28/20600
+  reglamentada_por:
+    - dto/ministerio-del-medio-ambiente/2012-04-09/30
+    - dto/ministerio-del-medio-ambiente/2012-10-13/9
+    - dto/ministerio-del-medio-ambiente/2013-02-11/30
+    - dto/ministerio-del-medio-ambiente/2013-02-11/31
+    - dto/ministerio-del-medio-ambiente/2013-05-02/1
+    - dto/ministerio-del-medio-ambiente/2014-03-18/38
+    - dto/ministerio-del-medio-ambiente/2014-03-18/39
 
 ---
 

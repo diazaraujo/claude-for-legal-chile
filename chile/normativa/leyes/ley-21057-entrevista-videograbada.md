@@ -19,6 +19,16 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - ley/ministerio-de-justicia/2000-10-12/19696
+  modificada_por:
+    - ley/ministerio-de-justicia-y-derechos-humanos/2018-09-20/21110
+    - ley/ministerio-de-justicia-y-derechos-humanos/2019-10-22/21182
+    - ley/ministerio-de-justicia-y-derechos-humanos/2020-09-21/21266
+  reglamentada_por:
+    - dto/ministerio-de-justicia-y-derechos-humanos-subsecretaria-de-justicia/2019-04-02/471
+
 ---
 
 # Ley 21.057 — Entrevista Videograbada para NNA Víctimas

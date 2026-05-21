@@ -21,6 +21,14 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - cod/ministerio-de-justicia/1874-11-12/penal
+    - dfl/ministerio-de-salud-publica/1968-01-31/725
+    - ley/ministerio-de-salud/1996-04-10/19451
+  reglamentada_por:
+    - dto/ministerio-de-salud-subsecretaria-de-salud-publica/2018-10-23/67
+
 ---
 
 # Ley 21.030 — Aborto en Tres Causales

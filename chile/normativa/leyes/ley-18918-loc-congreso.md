@@ -31,6 +31,14 @@ grafo_relaciones:
     - ley/ministerio-secretaria-general-de-la-presidencia/2006-01-05/20088
     - ley/ministerio-secretaria-general-de-la-presidencia/2010-07-03/20447
     - ley/ministerio-secretaria-general-de-la-presidencia/2010-10-12/20464
+    - ley/ministerio-secretaria-general-de-la-presidencia/2016-01-05/20880
+    - ley/ministerio-secretaria-general-de-la-presidencia/2016-12-17/20979
+  reglamentada_por:
+    - acd/camara-de-diputados/2002-03-10/s/n
+    - acd/senado/1998-07-08/s/n
+  rectifica:
+    - dl/ministerio-del-interior/1980-08-11/3464
+    - dto/ministerio-secretaria-general-de-la-presidencia/2005-09-22/100
 
 ---
 

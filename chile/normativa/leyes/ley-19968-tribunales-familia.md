@@ -20,6 +20,8 @@ validador: null
 fecha_validacion: null
 grafo_relaciones:
   modifica:
+    - cod/ministerio-de-justicia/1943-07-09/orgánico-de-tribunales
+    - dfl/ministerio-de-justicia-y-derechos-humanos/2017-01-31/3
     - dfl/ministerio-de-justicia/1990-03-24/1
     - dfl/ministerio-de-justicia/1996-12-26/2
     - dfl/ministerio-de-justicia/2000-05-30/1
@@ -32,6 +34,8 @@ grafo_relaciones:
     - ley/ministerio-de-justicia/1994-08-27/19325
     - ley/ministerio-de-justicia/1999-08-05/19620
   modificada_por:
+    - ley/ministerio-de-justicia-y-derechos-humanos/2017-07-07/21017
+    - ley/ministerio-de-justicia-y-derechos-humanos/2020-08-14/21254
     - ley/ministerio-de-justicia/2005-07-05/20030
     - ley/ministerio-de-justicia/2005-10-07/20066
     - ley/ministerio-de-justicia/2005-12-07/20084
@@ -42,8 +46,16 @@ grafo_relaciones:
     - ley/ministerio-de-justicia/2008-09-15/20286
     - ley/ministerio-de-justicia/2010-03-18/20427
     - ley/ministerio-de-justicia/2010-12-18/20480
-    - ley/ministerio-del-interior_subsecretaria-del-interior/2007-04-05/20174
-    - ley/ministerio-del-interior_subsecretaria-del-interior/2007-04-11/20175
+    - ley/ministerio-de-justicia/2015-11-06/20876
+    - ley/ministerio-del-interior-y-seguridad-publica/2015-02-06/20813
+    - ley/ministerio-del-interior-y-seguridad-publica/2017-09-05/21033
+    - ley/ministerio-del-interior-subsecretaria-del-interior/2007-04-05/20174
+    - ley/ministerio-del-interior-subsecretaria-del-interior/2007-04-11/20175
+  reglamentada_por:
+    - aa/corte-suprema/2005-10-08/s/n
+    - dto/ministerio-de-justicia/2005-08-23/957
+    - dto/ministerio-de-justicia/2008-12-13/639
+    - dto/ministerio-de-justicia/2009-05-25/763
 
 ---
 

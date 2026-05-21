@@ -26,6 +26,8 @@ grafo_relaciones:
     - ley/ministerio-de-justicia/1994-08-27/19325
     - ley/ministerio-de-justicia/2004-08-30/19968
   modificada_por:
+    - ley/ministerio-de-desarrollo-social/2015-03-20/20820
+    - ley/ministerio-de-justicia-y-derechos-humanos/2017-06-06/21013
     - ley/ministerio-de-justicia/2008-09-15/20286
     - ley/ministerio-de-justicia/2010-03-18/20427
     - ley/ministerio-de-justicia/2010-12-18/20480

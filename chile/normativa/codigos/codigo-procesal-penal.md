@@ -24,6 +24,10 @@ grafo_relaciones:
   modifica:
     - ley/ministerio-de-justicia/1906-02-19/1853
   modificada_por:
+    - ley/ministerio-de-justicia-y-derechos-humanos/2016-07-05/20931
+    - ley/ministerio-de-justicia-y-derechos-humanos/2017-03-29/21004
+    - ley/ministerio-de-justicia-y-derechos-humanos/2018-01-20/21057
+    - ley/ministerio-de-justicia-y-derechos-humanos/2020-03-04/21212
     - ley/ministerio-de-justicia/2001-10-13/19762
     - ley/ministerio-de-justicia/2002-01-30/19789
     - ley/ministerio-de-justicia/2002-05-31/19806
@@ -37,10 +41,12 @@ grafo_relaciones:
     - ley/ministerio-de-justicia/2006-01-11/20090
     - ley/ministerio-de-justicia/2008-03-14/20253
     - ley/ministerio-de-justicia/2011-08-13/20526
-    - ley/ministerio-de-salud_subsecretaria-de-salud/2012-05-11/20585
-    - ley/ministerio-del-interior-y-seguridad-publica_subsecretaria-del-interior/2011-04-08/20507
-    - ley/ministerio-del-interior-y-seguridad-publica_subsecretaria-del-interior/2012-06-02/20592
-    - ley/ministerio-del-interior_subsecretaria-del-interior/2007-11-15/20227
+    - ley/ministerio-de-justicia/2012-06-27/20603
+    - ley/ministerio-de-obras-publicas/2018-01-27/21064
+    - ley/ministerio-de-salud/2019-12-13/21188
+  reglamentada_por:
+    - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2005-09-22/142
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2010-06-25/12
 
 ---
 

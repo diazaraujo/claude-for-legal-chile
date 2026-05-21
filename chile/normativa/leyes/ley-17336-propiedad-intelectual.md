@@ -32,10 +32,17 @@ grafo_relaciones:
     - ley/ministerio-de-educacion-publica/1992-09-17/19166
     - ley/ministerio-de-educacion/2004-01-31/19928
     - ley/ministerio-de-educacion/2010-05-04/20435
+    - ley/ministerio-de-educacion/2016-10-29/20959
+    - ley/ministerio-de-educacion/2017-11-03/21045
     - ley/ministerio-de-hacienda/2003-11-04/19912
     - ley/ministerio-de-hacienda/2003-11-19/19914
     - ley/ministerio-de-justicia/1985-10-17/18443
     - ley/ministerio-de-justicia/1990-03-05/18957
+    - ley/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2014-05-29/20750
+  reglamentada_por:
+    - dto/ministerio-de-educacion-publica/1971-06-17/1122
+    - dto/ministerio-de-educacion/2011-05-24/425
+    - dto/ministerio-de-educacion/2013-10-28/277
 
 ---
 

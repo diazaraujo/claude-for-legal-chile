@@ -22,15 +22,24 @@ validador: null
 fecha_validacion: null
 grafo_relaciones:
   modifica:
-    - dl/ministerio-de-defensa-nacional_subsecretaria-de-guerra/1977-11-12/1969
+    - dl/ministerio-de-defensa-nacional-subsecretaria-de-guerra/1977-11-12/1969
     - ley/ministerio-de-justicia/1944-08-29/7821
     - ley/ministerio-de-justicia/1972-05-04/17642
   modificada_por:
+    - ley/ministerio-de-justicia-y-derechos-humanos/2016-07-05/20931
+    - ley/ministerio-de-justicia-y-derechos-humanos/2016-11-22/20968
+    - ley/ministerio-de-justicia-y-derechos-humanos/2020-03-04/21212
     - ley/ministerio-de-justicia/1991-02-14/19047
     - ley/ministerio-de-justicia/1999-07-12/19617
     - ley/ministerio-de-justicia/2002-04-18/19802
     - ley/ministerio-de-justicia/2002-05-31/19806
     - ley/ministerio-de-justicia/2005-10-07/20066
+    - ley/ministerio-de-justicia/2012-06-27/20603
+    - ley/ministerio-de-justicia/2014-09-17/20779
+    - ley/ministerio-del-interior-y-seguridad-publica/2015-02-06/20813
+  reglamentada_por:
+    - dto/ministerio-de-justicia/1984-01-18/1120
+    - dto/ministerio-de-justicia/2013-01-18/515
 
 ---
 

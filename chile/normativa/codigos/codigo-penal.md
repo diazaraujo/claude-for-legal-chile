@@ -22,25 +22,52 @@ fecha_validacion: null
 grafo_relaciones:
   modificada_por:
     - dfl/ministerio-de-justicia/1992-09-03/3
-    - ley/ministerio-de-defensa-nacional_subsecretaria-de-investigaciones/2002-05-24/19804
-    - ley/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-econstruccion/1999-12-27/19659
-    - ley/ministerio-de-hacienda_subsecretaria-de-hacienda/2009-12-02/20393
-    - ley/ministerio-de-justicia/1969-06-11/17155
-    - ley/ministerio-de-justicia/1970-01-06/17266
-    - ley/ministerio-de-justicia/1972-09-27/17727
-    - ley/ministerio-de-justicia/1988-04-29/18699
-    - ley/ministerio-de-justicia/1991-02-14/19047
-    - ley/ministerio-de-justicia/1991-08-28/19077
-    - ley/ministerio-de-justicia/1992-09-02/19164
-    - ley/ministerio-de-justicia/1994-09-23/19335
-    - ley/ministerio-de-justicia/1995-09-07/19409
-    - ley/ministerio-de-justicia/1995-09-20/19413
-    - ley/ministerio-de-justicia/1996-03-08/19449
-    - ley/ministerio-de-justicia/1996-03-18/19450
-    - ley/ministerio-de-justicia/1997-05-15/19501
-    - ley/ministerio-de-justicia/1998-07-01/19567
-    - ley/ministerio-de-justicia/1999-07-12/19617
-    - ley/ministerio-de-justicia/1999-12-11/19645
+    - dl/ministerio-de-guerra/1925-11-25/672
+    - dl/ministerio-de-hacienda/1980-07-02/3443
+    - dl/ministerio-de-instruccion-publica/1925-03-17/345
+    - dl/ministerio-de-justicia/1932-06-16/26
+    - dl/ministerio-de-justicia/1977-12-14/2059
+    - dl/ministerio-de-justicia-subsecretaria-de-justicia/1979-12-11/2967
+    - dl/ministerio-del-interior/1974-04-08/400
+    - dl/ministerio-del-interior/1979-04-28/2621
+    - dto/ministerio-de-instruccion-publica/1927-08-06/3876
+    - ley/ministerio-de-agricultura/2012-07-04/20596
+    - ley/ministerio-de-agricultura/2013-02-02/20653
+    - ley/ministerio-de-bienes-nacionales/2018-12-10/21123
+    - ley/ministerio-de-defensa-nacional/1972-10-21/17798
+    - ley/ministerio-de-defensa-nacional-subsecretaria-de-investigaciones/2002-05-24/19804
+    - ley/ministerio-de-economia-fomento-y-reconstruccion-subsecretaria-de-economia-fomento-y-econstruccion/1999-12-27/19659
+    - ley/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-economia-y-empresas-de-menor-tamano/2014-01-09/20720
+    - ley/ministerio-de-hacienda/1962-12-18/15078
+    - ley/ministerio-de-hacienda/2013-05-09/20667
+    - ley/ministerio-de-hacienda-subsecretaria-de-hacienda/2009-12-02/20393
+  reglamentada_por:
+    - dto/ministerio-de-justicia/1951-02-10/623
+    - dto/ministerio-de-justicia/1959-08-12/3590
+    - dto/ministerio-de-justicia/1965-06-02/1439
+    - dto/ministerio-de-justicia/1998-08-21/518
+    - dto/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-telecomunicaciones/2005-09-22/142
+  acuerda_con:
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1997-01-16/bancos-2882
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2008-04-21/bancos-3435
+    - dfl/ministerio-de-hacienda/1960-04-06/353
+    - dfl/ministerio-de-hacienda/2001-09-11/1
+    - dfl/ministerio-de-justicia/1995-10-18/1
+    - dfl/ministerio-secretaria-general-de-la-presidencia/2017-09-06/5
+    - dl/ministerio-de-economia-fomento-y-reconstruccion-subsecretaria-de-economia-fomento-y-reconstruccion/1974-01-24/280
+    - dl/ministerio-de-hacienda/1974-11-13/749
+    - dl/ministerio-de-justicia/1977-02-25/1687
+    - dl/ministerio-de-tierras-y-colonizacion/1977-11-10/1939
+    - dl/ministerio-del-interior/1979-04-28/2621
+    - dto/aprueba-texto-oficial-del-codigo-penal/2017-09-21/1857-exento
+    - dto/ministerio-de-economia-fomento-y-reconstruccion-subsecretaria-de-economia-fomento-y-reconstruccion/1977-11-29/471
+    - dto/ministerio-de-hacienda/1964-07-10/2421
+    - dto/ministerio-de-justicia-y-derechos-humanos/2016-10-13/1985-exento
+    - dto/ministerio-de-justicia-y-derechos-humanos/2016-12-31/2803-exento
+    - dto/ministerio-de-justicia-y-derechos-humanos/2017-10-17/2019-exento
+    - dto/ministerio-de-justicia-y-derechos-humanos/2018-03-13/501-exento
+    - dto/ministerio-de-justicia-y-derechos-humanos-subsecretaria-de-justicia/2019-01-24/131-exento
+    - dto/ministerio-de-justicia-y-derechos-humanos-subsecretaria-de-justicia/2019-09-26/1896-exento
 
 ---
 

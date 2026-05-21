@@ -22,10 +22,16 @@ fecha_validacion: null
 grafo_relaciones:
   modifica:
     - ley/ministerio-del-interior/1992-02-08/19123
-    - ley/ministerio-del-interior_subsecretaria-del-interior/2004-11-09/19980
-    - ley/ministerio-del-interior_subsecretaria-del-interior/2004-12-24/19992
+    - ley/ministerio-del-interior-subsecretaria-del-interior/2004-11-09/19980
+    - ley/ministerio-del-interior-subsecretaria-del-interior/2004-12-24/19992
   modificada_por:
-    - ley/ministerio-del-interior_subsecretaria-del-interior/2011-02-05/20496
+    - ley/ministerio-de-justicia-y-derechos-humanos/2019-04-25/21154
+    - ley/ministerio-del-interior-subsecretaria-del-interior/2011-02-05/20496
+    - ley/ministerio-secretaria-general-de-la-presidencia/2016-01-05/20880
+  reglamentada_por:
+    - dto/ministerio-de-justicia/2011-12-02/618
+    - res/instituto-nacional-de-derechos-humanos/2011-09-24/225-exenta
+    - res/instituto-nacional-de-derechos-humanos/2011-12-29/314-exenta
 
 ---
 
