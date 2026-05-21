@@ -3,8 +3,7 @@ norma: Ley 21.000
 slug: ley-21000-cmf
 titulo_oficial: Crea la Comisión para el Mercado Financiero
 publicacion: 2017-02-23
-fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1099978
-fuente_oficial_status: pendiente-verificacion-bcn
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1100517
 ultima_modificacion: actualización por Ley 21.521 (Fintec) y otras
 vigencia: vigente
 materia:
@@ -22,11 +21,6 @@ estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
 ---
-
-> ⚠️ **URL BCN pendiente de verificación.** El catálogo capa 1 no contiene
-> el ID de esta norma; el campo `fuente_oficial` puede apuntar a una norma
-> distinta. Verificar contra BCN antes de citar.
-
 # Ley 21.000 — Comisión para el Mercado Financiero (CMF)
 
 > **Borrador no validado.** Pendiente de revisión por abogado financiero

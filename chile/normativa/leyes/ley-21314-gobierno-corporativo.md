@@ -3,8 +3,7 @@ norma: Ley 21.314
 slug: ley-21314-gobierno-corporativo
 titulo_oficial: Establece nuevas exigencias de transparencia y refuerza las responsabilidades de los agentes de los mercados
 publicacion: 2021-04-13
-fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1159048
-fuente_oficial_status: pendiente-verificacion-bcn
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1158144
 ultima_modificacion: 2021-04-13
 vigencia: vigente
 materia:
@@ -22,11 +21,6 @@ estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
 ---
-
-> ⚠️ **URL BCN pendiente de verificación.** El catálogo capa 1 no contiene
-> el ID de esta norma; el campo `fuente_oficial` puede apuntar a una norma
-> distinta. Verificar contra BCN antes de citar.
-
 # Ley 21.314 — Gobierno Corporativo
 
 > **Borrador no validado.** Pendiente de revisión por abogado especializado.

@@ -3,8 +3,7 @@ norma: Ley 21.484
 slug: ley-21484-compraventa-inmuebles
 titulo_oficial: Establece la responsabilidad del vendedor por las acciones de los demás intervinientes en las compraventas con financiamiento bancario, ante hechos falsos
 publicacion: 2022-07-20
-fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1178904
-fuente_oficial_status: pendiente-verificacion-bcn
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1181003
 ultima_modificacion: 2022-07-20
 vigencia: vigente
 materia:
@@ -21,11 +20,6 @@ estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
 ---
-
-> ⚠️ **URL BCN pendiente de verificación.** El catálogo capa 1 no contiene
-> el ID de esta norma; el campo `fuente_oficial` puede apuntar a una norma
-> distinta. Verificar contra BCN antes de citar.
-
 # Ley 21.484 — Responsabilidad por Información Falsa en Compraventa de Inmuebles
 
 > **Borrador no validado.** Pendiente de revisión por abogado

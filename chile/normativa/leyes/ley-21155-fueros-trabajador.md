@@ -3,8 +3,7 @@ norma: Ley 21.155
 slug: ley-21155-fueros-trabajador
 titulo_oficial: Establece medidas de protección a la lactancia materna y su ejercicio
 publicacion: 2019-05-02
-fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1131892
-fuente_oficial_status: pendiente-verificacion-bcn
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1131064
 ultima_modificacion: 2019-05-02
 vigencia: vigente
 materia:
@@ -20,11 +19,6 @@ estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
 ---
-
-> ⚠️ **URL BCN pendiente de verificación.** El catálogo capa 1 no contiene
-> el ID de esta norma; el campo `fuente_oficial` puede apuntar a una norma
-> distinta. Verificar contra BCN antes de citar.
-
 # Ley 21.155 — Fueros del Trabajador (Lactancia)
 
 > **Borrador no validado.** Pendiente de revisión por abogado laboral.

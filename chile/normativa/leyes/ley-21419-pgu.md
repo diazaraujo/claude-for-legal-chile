@@ -3,8 +3,7 @@ norma: Ley 21.419
 slug: ley-21419-pgu
 titulo_oficial: Crea la Pensión Garantizada Universal y modifica los cuerpos legales que indica
 publicacion: 2022-02-04
-fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1171507
-fuente_oficial_status: pendiente-verificacion-bcn
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1171923
 ultima_modificacion: 2022-02-04 (con ajustes posteriores de monto vía leyes anuales)
 vigencia: vigente
 materia:
@@ -20,11 +19,6 @@ estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
 ---
-
-> ⚠️ **URL BCN pendiente de verificación.** El catálogo capa 1 no contiene
-> el ID de esta norma; el campo `fuente_oficial` puede apuntar a una norma
-> distinta. Verificar contra BCN antes de citar.
-
 # Ley 21.419 — Pensión Garantizada Universal (PGU)
 
 > **Borrador no validado.** Pendiente de revisión por abogado previsional.

@@ -3,8 +3,7 @@ norma: Ley 21.073
 slug: ley-21073-gobernadores-regionales
 titulo_oficial: Regula la elección de gobernadores regionales y realiza adecuaciones a diversos cuerpos legales
 publicacion: 2018-02-22
-fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1115357
-fuente_oficial_status: pendiente-verificacion-bcn
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1115503
 ultima_modificacion: 2018-02-22 (con Ley 21.074 sobre fortalecimiento regionalización)
 vigencia: vigente
 materia:
@@ -20,11 +19,6 @@ estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
 ---
-
-> ⚠️ **URL BCN pendiente de verificación.** El catálogo capa 1 no contiene
-> el ID de esta norma; el campo `fuente_oficial` puede apuntar a una norma
-> distinta. Verificar contra BCN antes de citar.
-
 # Ley 21.073 — Gobernadores Regionales
 
 > **Borrador no validado.** Pendiente de revisión por abogado.

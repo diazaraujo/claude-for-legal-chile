@@ -3,8 +3,7 @@ norma: Ley 21.634
 slug: ley-21634-reforma-compras-publicas
 titulo_oficial: Moderniza el sistema de compras públicas
 publicacion: 2023-12-11
-fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1200149
-fuente_oficial_status: pendiente-verificacion-bcn
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1198903
 ultima_modificacion: 2023-12-11
 vigencia: vigente con escalonamiento
 materia:
@@ -21,11 +20,6 @@ estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
 ---
-
-> ⚠️ **URL BCN pendiente de verificación.** El catálogo capa 1 no contiene
-> el ID de esta norma; el campo `fuente_oficial` puede apuntar a una norma
-> distinta. Verificar contra BCN antes de citar.
-
 # Ley 21.634 — Reforma Compras Públicas 2023
 
 > **Borrador no validado.** Pendiente de revisión por abogado

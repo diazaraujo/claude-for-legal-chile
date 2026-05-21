@@ -3,8 +3,7 @@ norma: Ley 21.398
 slug: ley-21398-pague-lo-justo
 titulo_oficial: Establece medidas para incentivar la protección de los derechos de los consumidores ("Pague lo Justo")
 publicacion: 2021-12-24
-fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1170128
-fuente_oficial_status: pendiente-verificacion-bcn
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1170464
 ultima_modificacion: 2021-12-24
 vigencia: vigente
 materia:
@@ -21,11 +20,6 @@ estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
 ---
-
-> ⚠️ **URL BCN pendiente de verificación.** El catálogo capa 1 no contiene
-> el ID de esta norma; el campo `fuente_oficial` puede apuntar a una norma
-> distinta. Verificar contra BCN antes de citar.
-
 # Ley 21.398 — "Pague lo Justo"
 
 > **Borrador no validado.** Pendiente de revisión por abogado

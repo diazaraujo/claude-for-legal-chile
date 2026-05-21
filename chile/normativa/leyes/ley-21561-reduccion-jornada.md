@@ -3,8 +3,7 @@ norma: Ley 21.561
 slug: ley-21561-reduccion-jornada
 titulo_oficial: Modifica el Código del Trabajo, con el objeto de reducir la jornada laboral
 publicacion: 2023-04-26
-fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1191702
-fuente_oficial_status: pendiente-verificacion-bcn
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1191554
 ultima_modificacion: 2023-04-26
 vigencia: vigente, con reducción escalonada hasta 2028
 capa: 3
@@ -17,11 +16,6 @@ estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
 ---
-
-> ⚠️ **URL BCN pendiente de verificación.** El catálogo capa 1 no contiene
-> el ID de esta norma; el campo `fuente_oficial` puede apuntar a una norma
-> distinta. Verificar contra BCN antes de citar.
-
 # Ley 21.561 — Reducción de la jornada laboral a 40 horas
 
 > **Borrador no validado.** Pendiente de revisión por abogado habilitado.

@@ -3,8 +3,7 @@ norma: Ley 21.400
 slug: ley-21400-matrimonio-igualitario
 titulo_oficial: Modifica diversos cuerpos legales para regular, en igualdad de condiciones, el matrimonio entre personas del mismo sexo
 publicacion: 2021-12-10
-fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1170048
-fuente_oficial_status: pendiente-verificacion-bcn
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1169572
 ultima_modificacion: 2021-12-10
 vigencia: vigente desde marzo 2022
 materia:
@@ -22,11 +21,6 @@ estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
 ---
-
-> ⚠️ **URL BCN pendiente de verificación.** El catálogo capa 1 no contiene
-> el ID de esta norma; el campo `fuente_oficial` puede apuntar a una norma
-> distinta. Verificar contra BCN antes de citar.
-
 # Ley 21.400 — Matrimonio Igualitario
 
 > **Borrador no validado.** Pendiente de revisión por abogado de

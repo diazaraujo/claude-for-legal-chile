@@ -3,8 +3,7 @@ norma: Ley 21.719
 slug: ley-21719-modificacion-lpd
 titulo_oficial: Ley que regula la protección y el tratamiento de datos personales y crea la Agencia de Protección de Datos Personales
 publicacion: 2024-12-13
-fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1208595
-fuente_oficial_status: pendiente-verificacion-bcn
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1209272
 ultima_modificacion: 2024-12-13
 vigencia: vigencia diferida — entra en plena vigencia el 2026-12-01
 capa: 3
@@ -19,11 +18,6 @@ estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
 ---
-
-> ⚠️ **URL BCN pendiente de verificación.** El catálogo capa 1 no contiene
-> el ID de esta norma; el campo `fuente_oficial` puede apuntar a una norma
-> distinta. Verificar contra BCN antes de citar.
-
 # Ley 21.719 — Modificación a la LPDP y creación de la APDP
 
 > **Borrador no validado.** Pendiente de revisión por abogado habilitado en Chile.

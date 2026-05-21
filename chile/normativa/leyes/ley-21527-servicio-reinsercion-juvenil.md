@@ -3,8 +3,7 @@ norma: Ley 21.527
 slug: ley-21527-servicio-reinsercion-juvenil
 titulo_oficial: Crea el Servicio Nacional de Reinserción Social Juvenil e introduce modificaciones a la ley N° 20.084
 publicacion: 2023-01-23
-fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1188909
-fuente_oficial_status: pendiente-verificacion-bcn
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1187684
 ultima_modificacion: 2023-01-23
 vigencia: vigente con implementación escalonada
 materia:
@@ -21,11 +20,6 @@ estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
 ---
-
-> ⚠️ **URL BCN pendiente de verificación.** El catálogo capa 1 no contiene
-> el ID de esta norma; el campo `fuente_oficial` puede apuntar a una norma
-> distinta. Verificar contra BCN antes de citar.
-
 # Ley 21.527 — Servicio Nacional de Reinserción Social Juvenil
 
 > **Borrador no validado.** Pendiente de revisión por abogado de DDHH

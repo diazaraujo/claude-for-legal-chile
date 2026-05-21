@@ -3,8 +3,7 @@ norma: Ley 21.643
 slug: ley-21643-acoso-laboral
 titulo_oficial: Ley que modifica el Código del Trabajo y otros cuerpos legales para prevenir, investigar y sancionar el acoso laboral, sexual y la violencia en el trabajo ("Ley Karin")
 publicacion: 2024-01-15
-fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1199895
-fuente_oficial_status: pendiente-verificacion-bcn
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1200096
 ultima_modificacion: 2024-01-15
 vigencia: vigente
 capa: 3
@@ -20,11 +19,6 @@ estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
 ---
-
-> ⚠️ **URL BCN pendiente de verificación.** El catálogo capa 1 no contiene
-> el ID de esta norma; el campo `fuente_oficial` puede apuntar a una norma
-> distinta. Verificar contra BCN antes de citar.
-
 # Ley 21.643 — "Ley Karin"
 
 > **Borrador no validado.** Pendiente de revisión por abogado habilitado.
