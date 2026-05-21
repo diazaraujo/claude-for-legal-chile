@@ -76,7 +76,7 @@ def lookup_sqlite(con: sqlite3.Connection, code: str) -> str | None:
 
 
 def lookup_sparql(code: str, timeout: int = 30) -> str | None:
-    """Busca URI canónica (sin alias /es@) por leychileCode."""
+    """Busca URI canónica (sin alias /es@) por leychileCode con backoff 429."""
     query = f'''
 PREFIX bcnnorms: <http://datos.bcn.cl/ontologies/bcn-norms#>
 SELECT ?n WHERE {{
@@ -88,13 +88,24 @@ SELECT ?n WHERE {{
         {"query": query, "format": "application/sparql-results+json"}
     )
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-    try:
-        with urllib.request.urlopen(req, timeout=timeout) as r:
-            data = json.loads(r.read())
-            rows = data.get("results", {}).get("bindings", [])
-            return rows[0]["n"]["value"] if rows else None
-    except (urllib.error.HTTPError, TimeoutError, OSError):
-        return None
+    backoff = 5
+    for attempt in range(5):
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                data = json.loads(r.read())
+                rows = data.get("results", {}).get("bindings", [])
+                return rows[0]["n"]["value"] if rows else None
+        except urllib.error.HTTPError as e:
+            if e.code in (429, 500, 502, 503, 504):
+                time.sleep(backoff)
+                backoff *= 2
+                continue
+            return None
+        except (TimeoutError, OSError):
+            time.sleep(backoff)
+            backoff *= 2
+            continue
+    return None
 
 
 def insert_bcn_uri(fm_dict_str: str, uri: str) -> str:
