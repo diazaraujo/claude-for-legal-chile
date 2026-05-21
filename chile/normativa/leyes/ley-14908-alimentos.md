@@ -3,8 +3,9 @@ norma: Ley 14.908
 slug: ley-14908-alimentos
 titulo_oficial: Sobre Abandono de Familia y Pago de Pensiones Alimenticias
 publicacion: 1962-10-05
-fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=172986
-fuente_oficial_status: pendiente-verificacion-bcn
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=27977
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-justicia/1962-10-05/14908
+texto_refundido_dfl: https://www.bcn.cl/leychile/navegar?idNorma=172986
 ultima_modificacion: Ley 21.389 / 2021 (Registro Nacional de Deudores), Ley 21.484 / 2022, Ley 21.515 / 2023 (GAM)
 vigencia: vigente
 materia:
@@ -22,10 +23,6 @@ estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
 ---
-
-> ⚠️ **URL BCN pendiente de verificación.** El catálogo capa 1 no contiene
-> el ID de esta norma; el campo `fuente_oficial` puede apuntar a una norma
-> distinta. Verificar contra BCN antes de citar.
 
 # Ley 14.908 — Pensiones Alimenticias
 

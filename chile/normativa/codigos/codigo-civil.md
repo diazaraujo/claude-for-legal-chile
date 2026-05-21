@@ -3,7 +3,9 @@ norma: Código Civil
 slug: codigo-civil
 titulo_oficial: Código Civil
 publicacion: 1855-12-14
-fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=172986
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1973
+bcn_uri: http://datos.bcn.cl/recurso/cl/cod/ministerio-de-justicia/1855-12-14/1855
+texto_refundido_dfl: https://www.bcn.cl/leychile/navegar?idNorma=172986
 cuerpo_normativo: Ley de 14-12-1855 (redactor Andrés Bello), promulgado por Manuel Montt
 ultima_modificacion: actualización continua (ver historia BCN — múltiples reformas)
 vigencia: vigente
