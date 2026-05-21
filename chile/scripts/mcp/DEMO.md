@@ -84,14 +84,29 @@ $ mcp-bcn-cli hubs --rel modifiesTo --top 5
 del orden financiero chileno. Ayuda a entender la estructura del
 ordenamiento sin leer norma por norma.
 
-## 5. Relaciones de una norma
+## 5. Relaciones de una norma — caso real Ley 19628 (Protección Datos)
 
 ```bash
-$ mcp-bcn-cli relaciones \
-    "http://datos.bcn.cl/recurso/cl/dfl/ministerio-de-hacienda/1982-08-07/28" \
-    --direction outgoing
+$ mcp-bcn-cli lookup --tipo ley --numero 19628
 ```
-Devuelve los 528 edges modifiesTo (qué normas modifica esta DFL).
+→ devuelve `bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-secretaria-general-de-la-presidencia/1999-08-28/19628`
+
+```bash
+$ mcp-bcn-cli relaciones <bcn_uri> --direction outgoing
+```
+→ Ley 19628 **modifica** DFL 725/1968 (Código Sanitario) — la LPD retocó
+el código sanitario en su promulgación (1999).
+
+```bash
+$ mcp-bcn-cli relaciones <bcn_uri> --direction incoming
+```
+→ Ley 19628 **es modificada por 8 normas**:
+- Ley 19812/2002 (SEGPRES)
+- Varias leyes del Ministerio de Economía y Empresas Menor — incluye
+  Ley 21719/2024 (Reforma LPD).
+
+Esto reemplaza lecturas manuales de "¿qué leyes modifican el régimen de
+protección de datos?" con un query <50ms.
 
 ## Valor para Claude
 
