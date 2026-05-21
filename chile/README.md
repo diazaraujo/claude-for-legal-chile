@@ -5,8 +5,13 @@ en una decisión arquitectónica: **el eje del sistema es el corpus normativo ch
 (códigos, leyes, decretos), no los perfiles por rama del derecho. Esto es coherente con
 la tradición civil law que se cita por artículo, no por caso.
 
-> **Estado:** Work in progress. Los archivos llevan `estado_revision` en su
-> frontmatter; solo los marcados `validada` están revisados por abogado habilitado.
+> **Estado v0.6.0:** 20.712 normas en catálogo BCN (capa 1) + 158 perfiles
+> curados capa 3 + grafo de relaciones en construcción. MCP local-first
+> con 7 tools en producción.
+>
+> Sólo perfiles con `estado_revision: validada` están revisados por
+> abogado habilitado. Capa 1 es catálogo BCN crudo — útil para discovery
+> pero no para citar como fuente de derecho.
 
 ---
 
