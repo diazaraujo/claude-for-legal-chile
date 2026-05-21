@@ -66,7 +66,7 @@ PREFIX bcnnorms: <http://datos.bcn.cl/ontologies/bcn-norms#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 SELECT ?n ?label ?code ?numero ?pub ?prom ?org WHERE {{
   VALUES ?n {{ {values} }}
-  OPTIONAL {{ ?n rdfs:label ?label }}
+  ?n rdfs:label ?label .
   OPTIONAL {{ ?n bcnnorms:leychileCode ?code }}
   OPTIONAL {{ ?n bcnnorms:hasNumber ?numero }}
   OPTIONAL {{ ?n bcnnorms:publishDate ?pub }}
