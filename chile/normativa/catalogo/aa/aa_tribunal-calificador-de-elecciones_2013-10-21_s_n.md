@@ -1,0 +1,19 @@
+---
+slug: aa_tribunal-calificador-de-elecciones_2013-10-21_s_n
+tipo: aa
+numero: s/n
+titulo_oficial: "\"AUTO ACORDADO SOBRE TRAMITACIÓN DE LOS RECURSOS DE APELACIÓN EN CONTRA DE LAS SENTENCIAS DE LOS TRIBUNALES ELECTORALES REGIONALES QUE SE PRONUNCIEN SOBRE LAS RECLAMACIONES DE NULIDAD Y DE LAS SOLICITUDES DE RECTIFICACIÓN DE ESCRUTINIOS Y DE LAS SENTENCIAS DE CALIFICACIÓN CON MOTIVO DE LAS ELECCIONES DE CONSEJEROS REGIONALES\" "
+publicacion: 2013-10-21
+promulgacion: 2013-10-15
+emisor: tribunal-calificador-de-elecciones
+leychile_code: 1055365
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1055365
+bcn_type: http://datos.bcn.cl/recurso/cl/norma/tipo#aa
+bcn_uri: http://datos.bcn.cl/recurso/cl/aa/tribunal-calificador-de-elecciones/2013-10-21/s/n
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# AA s/n
+
+**Título oficial:** "AUTO ACORDADO SOBRE TRAMITACIÓN DE LOS RECURSOS DE APELACIÓN EN CONTRA DE LAS SENTENCIAS DE LOS TRIBUNALES ELECTORALES REGIONALES QUE SE PRONUNCIEN SOBRE LAS RECLAMACIONES DE NULIDAD Y DE LAS SOLICITUDES DE RECTIFICACIÓN DE ESCRUTINIOS Y DE LAS SENTENCIAS DE CALIFICACIÓN CON MOTIVO DE LAS ELECCIONES DE CONSEJEROS REGIONALES" 

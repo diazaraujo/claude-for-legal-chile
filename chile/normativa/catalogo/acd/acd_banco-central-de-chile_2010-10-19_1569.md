@@ -1,0 +1,18 @@
+---
+slug: acd_banco-central-de-chile_2010-10-19_1569
+tipo: acd
+numero: 1569
+titulo_oficial: "ACUERDO ADOPTADO POR EL CONSEJO EN SU SESIÓN ORDINARIA Nº 1569"
+publicacion: 2010-10-19
+emisor: banco-central-de-chile
+leychile_code: 1018301
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1018301
+bcn_type: http://datos.bcn.cl/recurso/cl/norma/tipo#acd
+bcn_uri: http://datos.bcn.cl/recurso/cl/acd/banco-central-de-chile/2010-10-19/1569
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# ACD 1569
+
+**Título oficial:** ACUERDO ADOPTADO POR EL CONSEJO EN SU SESIÓN ORDINARIA Nº 1569

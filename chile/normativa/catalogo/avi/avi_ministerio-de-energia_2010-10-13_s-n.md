@@ -1,0 +1,18 @@
+---
+slug: avi_ministerio-de-energia_2010-10-13_s-n
+tipo: avi
+numero: s-n
+titulo_oficial: "COMPLEMÉNTASE EL DECRETO Nº15, DE 2010, DEL MINISTERIO DE ENERGÍA, PUBLICADO EN LA EDICIÓN Nº 39.592 DEL DIARIO OFICIAL DEL DÍA 20 DE FEBRERO DE 2010, EL CUAL FUE CURSADO CON ALCANCE POR LA CONTRALORÍA GENERAL DE LA REPÚBLICA POR OFICIO Nº 11.605, DE 02.03.2010, EL QUE POR OMISIÓN NO SE PUBLICÓ EN SU OPORTUNIDAD, POR LO QUE A CONTINUACIÓN SE TRANSCRIBE"
+publicacion: 2010-10-13
+emisor: ministerio-de-energia
+leychile_code: 1017777
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1017777
+bcn_type: http://datos.bcn.cl/recurso/cl/norma/tipo#avi
+bcn_uri: http://datos.bcn.cl/recurso/cl/avi/ministerio-de-energia/2010-10-13/s-n
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# AVI s-n
+
+**Título oficial:** COMPLEMÉNTASE EL DECRETO Nº15, DE 2010, DEL MINISTERIO DE ENERGÍA, PUBLICADO EN LA EDICIÓN Nº 39.592 DEL DIARIO OFICIAL DEL DÍA 20 DE FEBRERO DE 2010, EL CUAL FUE CURSADO CON ALCANCE POR LA CONTRALORÍA GENERAL DE LA REPÚBLICA POR OFICIO Nº 11.605, DE 02.03.2010, EL QUE POR OMISIÓN NO SE PUBLICÓ EN SU OPORTUNIDAD, POR LO QUE A CONTINUACIÓN SE TRANSCRIBE

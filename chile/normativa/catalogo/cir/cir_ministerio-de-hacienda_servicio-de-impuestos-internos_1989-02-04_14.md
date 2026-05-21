@@ -1,0 +1,18 @@
+---
+slug: cir_ministerio-de-hacienda_servicio-de-impuestos-internos_1989-02-04_14
+tipo: cir
+numero: 14
+titulo_oficial: "EXENCION A LA PRESTACION DE SERVICIOS CALIFICADOS COMO EXPORTACION POR EL SERVICIO NACIONAL DE ADUANAS Y A LOS INGRESOS EN MONEDA EXTRANJERA PERCIBIDOS POR EMPRESAS HOTELERAS CON MOTIVO DE SERVICIOS PRESTADOS A TURISTAS EXTRANJEROS. RECUPERACION DEL IVA POR ESTOS CONTRIBUYENTES DE ACUERDO A LAS NORMAS DEL ARTICULO 36° DEL DECRETO LEY NO. 825"
+publicacion: 1989-02-04
+emisor: ministerio-de-hacienda_servicio-de-impuestos-internos
+leychile_code: 120540
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=120540
+bcn_type: http://datos.bcn.cl/recurso/cl/norma/tipo#cir
+bcn_uri: http://datos.bcn.cl/recurso/cl/cir/ministerio-de-hacienda_servicio-de-impuestos-internos/1989-02-04/14
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# CIR 14
+
+**Título oficial:** EXENCION A LA PRESTACION DE SERVICIOS CALIFICADOS COMO EXPORTACION POR EL SERVICIO NACIONAL DE ADUANAS Y A LOS INGRESOS EN MONEDA EXTRANJERA PERCIBIDOS POR EMPRESAS HOTELERAS CON MOTIVO DE SERVICIOS PRESTADOS A TURISTAS EXTRANJEROS. RECUPERACION DEL IVA POR ESTOS CONTRIBUYENTES DE ACUERDO A LAS NORMAS DEL ARTICULO 36° DEL DECRETO LEY NO. 825

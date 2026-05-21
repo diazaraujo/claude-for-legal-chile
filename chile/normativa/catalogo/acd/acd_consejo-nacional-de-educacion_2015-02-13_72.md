@@ -1,0 +1,19 @@
+---
+slug: acd_consejo-nacional-de-educacion_2015-02-13_72
+tipo: acd
+numero: 72
+titulo_oficial: "EXTRACTO DEL ACUERDO Nº 72/2014, QUE DISPONE SOLICITAR AL MINISTERIO DE EDUCACIÓN LA REVOCACIÓN DEL RECONOCIMIENTO OFICIAL DEL CENTRO DE FORMACIÓN TÉCNICA MAGNOS Y DE LAS CARRERAS AUTORIZADAS A SER IMPARTIDAS EN DICHA INSTITUCIÓN, Y DEL ACUERDO Nº 8/2015 QUE ACOGIÓ EL RECURSO DE REPOSICIÓN INTERPUESTO POR EL CENTRO"
+publicacion: 2015-02-13
+promulgacion: 2014-11-12
+emisor: consejo-nacional-de-educacion
+leychile_code: 1074742
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1074742
+bcn_type: http://datos.bcn.cl/recurso/cl/norma/tipo#acd
+bcn_uri: http://datos.bcn.cl/recurso/cl/acd/consejo-nacional-de-educacion/2015-02-13/72
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# ACD 72
+
+**Título oficial:** EXTRACTO DEL ACUERDO Nº 72/2014, QUE DISPONE SOLICITAR AL MINISTERIO DE EDUCACIÓN LA REVOCACIÓN DEL RECONOCIMIENTO OFICIAL DEL CENTRO DE FORMACIÓN TÉCNICA MAGNOS Y DE LAS CARRERAS AUTORIZADAS A SER IMPARTIDAS EN DICHA INSTITUCIÓN, Y DEL ACUERDO Nº 8/2015 QUE ACOGIÓ EL RECURSO DE REPOSICIÓN INTERPUESTO POR EL CENTRO

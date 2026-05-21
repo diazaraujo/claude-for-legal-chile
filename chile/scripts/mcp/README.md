@@ -1,8 +1,13 @@
 # MCP connectors para Claude Legal Chile
 
-> **Estado MVP**: `mcp-bcn-leychile` implementado en `src/mcp_bcn_leychile/`.
-> 3 tools funcionales (bcn_get_norma, bcn_check_vigencia, bcn_get_xml).
-> Cache SQLite local + rate limiting. 7 tests offline en verde.
+> **Estado v0.6**: `mcp-bcn-leychile` con **7 tools**:
+> - Remoto (BCN/LeyChile XML): `bcn_get_norma`, `bcn_check_vigencia`,
+>   `bcn_get_xml`
+> - Local (catálogo SQLite indexado): `lookup_norma`, `search_normas`,
+>   `get_relaciones`, `catalog_stats`
+>
+> Cache SQLite local + rate limiting + indexador desde el grafo BCN
+> via SPARQL. 18 tests offline en verde.
 
 Conectores [Model Context Protocol](https://modelcontextprotocol.io)
 que permitirán a Claude (y otros agentes compatibles) consultar fuentes

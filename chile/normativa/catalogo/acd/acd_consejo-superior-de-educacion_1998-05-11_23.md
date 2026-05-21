@@ -1,0 +1,18 @@
+---
+slug: acd_consejo-superior-de-educacion_1998-05-11_23
+tipo: acd
+numero: 23
+titulo_oficial: "EXTRACTO DE LOS ACUERDOS NºS. 23/98 QUE DISPONE SUSPENDER EL INGRESO DE NUEVOS ALUMNOS A TODAS LAS CARRERAS Y REITERAR ACCIONES QUE DEBEN SER CUMPLIDAS POR LA INSTITUCION, Y 24/98 QUE DISPONE NO CERTIFICAR LA AUTONOMIA Y AMPLIAR EL PERIODO DE ACREDITACION DEL INSTITUTO PROFESIONAL ESANE DEL NORTE"
+publicacion: 1998-05-11
+emisor: consejo-superior-de-educacion
+leychile_code: 98798
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=98798
+bcn_type: http://datos.bcn.cl/recurso/cl/norma/tipo#acd
+bcn_uri: http://datos.bcn.cl/recurso/cl/acd/consejo-superior-de-educacion/1998-05-11/23
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# ACD 23
+
+**Título oficial:** EXTRACTO DE LOS ACUERDOS NºS. 23/98 QUE DISPONE SUSPENDER EL INGRESO DE NUEVOS ALUMNOS A TODAS LAS CARRERAS Y REITERAR ACCIONES QUE DEBEN SER CUMPLIDAS POR LA INSTITUCION, Y 24/98 QUE DISPONE NO CERTIFICAR LA AUTONOMIA Y AMPLIAR EL PERIODO DE ACREDITACION DEL INSTITUTO PROFESIONAL ESANE DEL NORTE

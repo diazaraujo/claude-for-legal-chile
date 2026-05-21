@@ -1,0 +1,19 @@
+---
+slug: cci_ministerio-de-hacienda_superintendencia-de-bancos-e-instituciones-financieras_1990-03-09_cooperativas-1
+tipo: cci
+numero: cooperativas 1
+titulo_oficial: "Estado de situación al 28 de febrero de 1990"
+publicacion: 1990-03-09
+promulgacion: 1990-03-09
+emisor: ministerio-de-hacienda_superintendencia-de-bancos-e-instituciones-financieras
+leychile_code: 1058584
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1058584
+bcn_type: http://datos.bcn.cl/recurso/cl/norma/tipo#cci
+bcn_uri: http://datos.bcn.cl/recurso/cl/cci/ministerio-de-hacienda_superintendencia-de-bancos-e-instituciones-financieras/1990-03-09/cooperativas-1
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# CCI cooperativas 1
+
+**Título oficial:** Estado de situación al 28 de febrero de 1990

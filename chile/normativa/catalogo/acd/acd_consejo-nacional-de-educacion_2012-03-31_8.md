@@ -1,0 +1,19 @@
+---
+slug: acd_consejo-nacional-de-educacion_2012-03-31_8
+tipo: acd
+numero: 8
+titulo_oficial: "EXTRACTO DE LOS ACUERDOS Nº 135/2011, QUE RESUELVE NO CERTIFICAR LA AUTONOMÍA Y DISPONE AMPLIAR EL PERÍODO DE LICENCIAMIENTO DEL CENTRO DE FORMACIÓN TEODORO WICKEL KLÜWEN Y Nº 08/2012, QUE RESUELVE EL RECURSO DE REPOSICIÓN INTERPUESTO POR EL CENTRO DE FORMACIÓN TÉCNICA TEODORO WICKEL KLÜWEN EN CONTRA DEL ACUERDO Nº 135/2011"
+publicacion: 2012-03-31
+promulgacion: 2012-01-26
+emisor: consejo-nacional-de-educacion
+leychile_code: 1038452
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1038452
+bcn_type: http://datos.bcn.cl/recurso/cl/norma/tipo#acd
+bcn_uri: http://datos.bcn.cl/recurso/cl/acd/consejo-nacional-de-educacion/2012-03-31/8
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# ACD 8
+
+**Título oficial:** EXTRACTO DE LOS ACUERDOS Nº 135/2011, QUE RESUELVE NO CERTIFICAR LA AUTONOMÍA Y DISPONE AMPLIAR EL PERÍODO DE LICENCIAMIENTO DEL CENTRO DE FORMACIÓN TEODORO WICKEL KLÜWEN Y Nº 08/2012, QUE RESUELVE EL RECURSO DE REPOSICIÓN INTERPUESTO POR EL CENTRO DE FORMACIÓN TÉCNICA TEODORO WICKEL KLÜWEN EN CONTRA DEL ACUERDO Nº 135/2011

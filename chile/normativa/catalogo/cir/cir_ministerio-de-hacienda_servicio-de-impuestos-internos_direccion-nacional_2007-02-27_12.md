@@ -1,0 +1,18 @@
+---
+slug: cir_ministerio-de-hacienda_servicio-de-impuestos-internos_direccion-nacional_2007-02-27_12
+tipo: cir
+numero: 12
+titulo_oficial: "EXTRACTO DE CIRCULAR DEL SERVICIO DE IMPUESTOS INTERNOS Nº 12, DEL 22 DE FEBRERO DE 2007, QUE IMPARTE INSTRUCCIONES RELATIVAS A LA RECONSIDERACION ADMINISTRATIVA Y RECLAMACION SUBSIDIARIA, DURANTE EL PROCESO DE REAVALUO DE LOS BIENES RAICES DE LA SEGUNDA SERIE NO AGRICOLA CORRESPONDIENTES A SITIOS NO EDIFICADOS, PROPIEDADES ABANDONADAS Y POZOS LASTREROS UBICADOS EN LAS AREAS URBANAS"
+publicacion: 2007-02-27
+emisor: ministerio-de-hacienda_servicio-de-impuestos-internos_direccion-nacional
+leychile_code: 258667
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=258667
+bcn_type: http://datos.bcn.cl/recurso/cl/norma/tipo#cir
+bcn_uri: http://datos.bcn.cl/recurso/cl/cir/ministerio-de-hacienda_servicio-de-impuestos-internos_direccion-nacional/2007-02-27/12
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# CIR 12
+
+**Título oficial:** EXTRACTO DE CIRCULAR DEL SERVICIO DE IMPUESTOS INTERNOS Nº 12, DEL 22 DE FEBRERO DE 2007, QUE IMPARTE INSTRUCCIONES RELATIVAS A LA RECONSIDERACION ADMINISTRATIVA Y RECLAMACION SUBSIDIARIA, DURANTE EL PROCESO DE REAVALUO DE LOS BIENES RAICES DE LA SEGUNDA SERIE NO AGRICOLA CORRESPONDIENTES A SITIOS NO EDIFICADOS, PROPIEDADES ABANDONADAS Y POZOS LASTREROS UBICADOS EN LAS AREAS URBANAS

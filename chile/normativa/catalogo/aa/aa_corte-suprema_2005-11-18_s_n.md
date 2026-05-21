@@ -1,0 +1,27 @@
+---
+slug: aa_corte-suprema_2005-11-18_s_n
+tipo: aa
+numero: s/n
+titulo_oficial: "NORMAS PARA PREVENIR EL CONSUMO INDEBIDO DE SUSTANCIAS O
+DROGAS ESTUPEFACIENTES O PSICOTROPICAS POR PARTE DE LOS
+FUNCIONARIOS JUDICIALES Y PROCEDIMIENTO DE CONTROL DE
+CONSUMO APLICABLE A LOS MIEMBROS DEL PODER JUDICIAL Y DE
+LA CORPORACION ADMINISTRATIVA DEL PODER JUDICIAL "
+publicacion: 2005-11-18
+promulgacion: 2005-10-28
+emisor: corte-suprema
+leychile_code: 244172
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=244172
+bcn_type: http://datos.bcn.cl/recurso/cl/norma/tipo#aa
+bcn_uri: http://datos.bcn.cl/recurso/cl/aa/corte-suprema/2005-11-18/s/n
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# AA s/n
+
+**Título oficial:** NORMAS PARA PREVENIR EL CONSUMO INDEBIDO DE SUSTANCIAS O
+DROGAS ESTUPEFACIENTES O PSICOTROPICAS POR PARTE DE LOS
+FUNCIONARIOS JUDICIALES Y PROCEDIMIENTO DE CONTROL DE
+CONSUMO APLICABLE A LOS MIEMBROS DEL PODER JUDICIAL Y DE
+LA CORPORACION ADMINISTRATIVA DEL PODER JUDICIAL 

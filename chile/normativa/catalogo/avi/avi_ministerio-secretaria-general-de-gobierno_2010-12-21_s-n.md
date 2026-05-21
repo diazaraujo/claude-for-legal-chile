@@ -1,0 +1,18 @@
+---
+slug: avi_ministerio-secretaria-general-de-gobierno_2010-12-21_s-n
+tipo: avi
+numero: s-n
+titulo_oficial: "COMPLEMÉNTASE EL DECRETO Nº 126 DEL MINISTERIO SECRETARÍA GENERAL DE GOBIERNO, PUBLICADO EN EL DIARIO OFICIAL DE 16 DE NOVIEMBRE DE 2010, EL CUAL FUE CURSADO CON ALCANCE DE CONTRALORÍA GENERAL DE LA REPÚBLICA POR OFICIO Nº 66.172, DE 5 DE NOVIEMBRE DE 2010, EL QUE POR OMISIÓN NO SE PUBLICÓ EN SU OPORTUNIDAD, POR LO QUE A CONTINUACIÓN SE TRANSCRIBE"
+publicacion: 2010-12-21
+emisor: ministerio-secretaria-general-de-gobierno
+leychile_code: 1021418
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1021418
+bcn_type: http://datos.bcn.cl/recurso/cl/norma/tipo#avi
+bcn_uri: http://datos.bcn.cl/recurso/cl/avi/ministerio-secretaria-general-de-gobierno/2010-12-21/s-n
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# AVI s-n
+
+**Título oficial:** COMPLEMÉNTASE EL DECRETO Nº 126 DEL MINISTERIO SECRETARÍA GENERAL DE GOBIERNO, PUBLICADO EN EL DIARIO OFICIAL DE 16 DE NOVIEMBRE DE 2010, EL CUAL FUE CURSADO CON ALCANCE DE CONTRALORÍA GENERAL DE LA REPÚBLICA POR OFICIO Nº 66.172, DE 5 DE NOVIEMBRE DE 2010, EL QUE POR OMISIÓN NO SE PUBLICÓ EN SU OPORTUNIDAD, POR LO QUE A CONTINUACIÓN SE TRANSCRIBE

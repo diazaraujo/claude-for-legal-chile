@@ -1,0 +1,18 @@
+---
+slug: aa_tribunal-calificador-de-elecciones_2006-07-04_s-n
+tipo: aa
+numero: s-n
+titulo_oficial: "AUTO ACORDADO DEL TRIBUNAL CALIFICADOR DE ELECCIONES SOBRE PROCEDIMIENTO, FALLO Y APLICACION DE SANCIONES POR INCUM-PLIMIENTO A LA OBLIGACION DE EFECTUAR O ACTUALIZAR LAS DECLARACIONES DE PA-TRIMONIO POR PARTE DE LOS MIEMBROS TITULARES Y SUPLENTES DE LOS TRIBUNALES ELECTORALES REGIONALES"
+publicacion: 2006-07-04
+emisor: tribunal-calificador-de-elecciones
+leychile_code: 250977
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=250977
+bcn_type: http://datos.bcn.cl/recurso/cl/norma/tipo#aa
+bcn_uri: http://datos.bcn.cl/recurso/cl/aa/tribunal-calificador-de-elecciones/2006-07-04/s-n
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# AA s-n
+
+**Título oficial:** AUTO ACORDADO DEL TRIBUNAL CALIFICADOR DE ELECCIONES SOBRE PROCEDIMIENTO, FALLO Y APLICACION DE SANCIONES POR INCUM-PLIMIENTO A LA OBLIGACION DE EFECTUAR O ACTUALIZAR LAS DECLARACIONES DE PA-TRIMONIO POR PARTE DE LOS MIEMBROS TITULARES Y SUPLENTES DE LOS TRIBUNALES ELECTORALES REGIONALES

@@ -1,0 +1,18 @@
+---
+slug: acd_banco-central-de-chile_secretaria-general_1992-04-04_207
+tipo: acd
+numero: 207
+titulo_oficial: "ACUERDO ADOPTADO POR EL CONSEJO DEL BANCO CENTRAL DE CHILE EN SU SESION N° 207 CERTIFICO QUE EL CONSEJO DEL BANCO CENTRAL DE CHILE EN SU SESION N° 207, CELEBRADA EL 2 DE ABRIL DE 1992, ADOPTO EL SIGUIENTE ACUERDO: 207-05-920402- EXCEPCION A LA NORMATIVA SOBRE ACCESO AL CREDITO INTERNO PARA INVERSIONES AMPARADAS EN EL ARTICULO 11 BIS DE DECRETO LEY N° 600, DE 1974."
+publicacion: 1992-04-04
+emisor: banco-central-de-chile_secretaria-general
+leychile_code: 100
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=100
+bcn_type: http://datos.bcn.cl/recurso/cl/norma/tipo#acd
+bcn_uri: http://datos.bcn.cl/recurso/cl/acd/banco-central-de-chile_secretaria-general/1992-04-04/207
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# ACD 207
+
+**Título oficial:** ACUERDO ADOPTADO POR EL CONSEJO DEL BANCO CENTRAL DE CHILE EN SU SESION N° 207 CERTIFICO QUE EL CONSEJO DEL BANCO CENTRAL DE CHILE EN SU SESION N° 207, CELEBRADA EL 2 DE ABRIL DE 1992, ADOPTO EL SIGUIENTE ACUERDO: 207-05-920402- EXCEPCION A LA NORMATIVA SOBRE ACCESO AL CREDITO INTERNO PARA INVERSIONES AMPARADAS EN EL ARTICULO 11 BIS DE DECRETO LEY N° 600, DE 1974.

@@ -5,3 +5,7 @@
 /.claude/
 __pycache__/
 *.pyc
+
+# Generated SQLite index (regenerable via build-sqlite-catalog.py)
+chile/normativa/index/*.sqlite3
+chile/normativa/index/*.sqlite3-journal

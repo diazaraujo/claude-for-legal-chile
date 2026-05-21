@@ -1,0 +1,19 @@
+---
+slug: avi_ministerio-de-justicia_2001-11-21_s_n
+tipo: avi
+numero: s/n
+titulo_oficial: "ENTIDADES RELIGIOSAS DE DERECHO PUBLICO"
+publicacion: 2001-11-21
+promulgacion: 2001-11-13
+emisor: ministerio-de-justicia
+leychile_code: 191889
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=191889
+bcn_type: http://datos.bcn.cl/recurso/cl/norma/tipo#avi
+bcn_uri: http://datos.bcn.cl/recurso/cl/avi/ministerio-de-justicia/2001-11-21/s/n
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# AVI s/n
+
+**Título oficial:** ENTIDADES RELIGIOSAS DE DERECHO PUBLICO

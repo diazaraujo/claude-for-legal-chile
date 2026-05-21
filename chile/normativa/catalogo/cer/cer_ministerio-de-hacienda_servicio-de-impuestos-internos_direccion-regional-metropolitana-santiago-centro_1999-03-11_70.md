@@ -1,0 +1,18 @@
+---
+slug: cer_ministerio-de-hacienda_servicio-de-impuestos-internos_direccion-regional-metropolitana-santiago-centro_1999-03-11_70
+tipo: cer
+numero: 70
+titulo_oficial: "CERTIFICA CALIDAD DE AGENTE RETENEDOR DEL IVA A GANADERA SAN ALFONSO S.A."
+publicacion: 1999-03-11
+emisor: ministerio-de-hacienda_servicio-de-impuestos-internos_direccion-regional-metropolitana-santiago-centro
+leychile_code: 133405
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=133405
+bcn_type: http://datos.bcn.cl/recurso/cl/norma/tipo#cer
+bcn_uri: http://datos.bcn.cl/recurso/cl/cer/ministerio-de-hacienda_servicio-de-impuestos-internos_direccion-regional-metropolitana-santiago-centro/1999-03-11/70
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# CER 70
+
+**Título oficial:** CERTIFICA CALIDAD DE AGENTE RETENEDOR DEL IVA A GANADERA SAN ALFONSO S.A.

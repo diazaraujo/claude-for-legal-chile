@@ -1,0 +1,18 @@
+---
+slug: avi_banco-central-de-chile_2005-05-09_s-n
+tipo: avi
+numero: s-n
+titulo_oficial: "FIJA VALOR DE LA UNIDAD DE FOMENTO, DEL INDICE VALOR PROMEDIO Y CANASTA REFERENCIAL DE MONEDAS, PARA LOS DIAS COMPRENDIDOS ENTRE EL 10 DE MAYO DE 2005 Y 9 DE JUNIO DE 2005"
+publicacion: 2005-05-09
+emisor: banco-central-de-chile
+leychile_code: 237740
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=237740
+bcn_type: http://datos.bcn.cl/recurso/cl/norma/tipo#avi
+bcn_uri: http://datos.bcn.cl/recurso/cl/avi/banco-central-de-chile/2005-05-09/s-n
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# AVI s-n
+
+**Título oficial:** FIJA VALOR DE LA UNIDAD DE FOMENTO, DEL INDICE VALOR PROMEDIO Y CANASTA REFERENCIAL DE MONEDAS, PARA LOS DIAS COMPRENDIDOS ENTRE EL 10 DE MAYO DE 2005 Y 9 DE JUNIO DE 2005

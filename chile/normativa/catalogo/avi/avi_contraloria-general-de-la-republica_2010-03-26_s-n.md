@@ -1,0 +1,18 @@
+---
+slug: avi_contraloria-general-de-la-republica_2010-03-26_s-n
+tipo: avi
+numero: s-n
+titulo_oficial: "DE CONFORMIDAD A LO DISPUESTO EN OFICIO S.S.M. ORD. Nº 12.210/795 DE 2010, COMPLEMÉNTESE LA PUBLICACIÓN DEL EXTRACTO DE LA RESOLUCIÓN (M) 2.271 DE 23 DE NOVIEMBRE DE 2009, DEL MINISTERIO DE DEFENSA NACIONAL, SUBSECRETARÍA DE MARINA, CONTENIDA EN EJEMPLAR DEL DIARIO OFICIAL DE FECHA 19 DE FEBRERO DE 2010, Nº 39.591, PÁGINAS 16-17, EN EL SENTIDO DE AGREGAR AL FINAL DE LA MISMA, LO SIGUIENTE:"
+publicacion: 2010-03-26
+emisor: contraloria-general-de-la-republica
+leychile_code: 1012033
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1012033
+bcn_type: http://datos.bcn.cl/recurso/cl/norma/tipo#avi
+bcn_uri: http://datos.bcn.cl/recurso/cl/avi/contraloria-general-de-la-republica/2010-03-26/s-n
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# AVI s-n
+
+**Título oficial:** DE CONFORMIDAD A LO DISPUESTO EN OFICIO S.S.M. ORD. Nº 12.210/795 DE 2010, COMPLEMÉNTESE LA PUBLICACIÓN DEL EXTRACTO DE LA RESOLUCIÓN (M) 2.271 DE 23 DE NOVIEMBRE DE 2009, DEL MINISTERIO DE DEFENSA NACIONAL, SUBSECRETARÍA DE MARINA, CONTENIDA EN EJEMPLAR DEL DIARIO OFICIAL DE FECHA 19 DE FEBRERO DE 2010, Nº 39.591, PÁGINAS 16-17, EN EL SENTIDO DE AGREGAR AL FINAL DE LA MISMA, LO SIGUIENTE:
