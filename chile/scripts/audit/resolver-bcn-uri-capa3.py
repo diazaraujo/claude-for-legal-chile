@@ -79,8 +79,9 @@ def lookup_sparql(code: str, timeout: int = 30) -> str | None:
     """Busca URI canónica (sin alias /es@) por leychileCode con backoff 429."""
     query = f'''
 PREFIX bcnnorms: <http://datos.bcn.cl/ontologies/bcn-norms#>
-SELECT ?n WHERE {{
-  ?n bcnnorms:leychileCode "{code}" .
+SELECT DISTINCT ?n WHERE {{
+  ?n bcnnorms:leychileCode ?c .
+  FILTER (str(?c) = "{code}")
   FILTER (!REGEX(str(?n), "/es@"))
 }} LIMIT 1
 '''
