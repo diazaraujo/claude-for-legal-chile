@@ -29,6 +29,13 @@ CATALOG_ROOT = REPO_ROOT / "chile/normativa/catalogo"
 
 BCN_URI_RE = re.compile(r"^bcn_uri: (.+)$", re.MULTILINE)
 CAPA_RE = re.compile(r"^capa: (\d+)$", re.MULTILINE)
+VERSION_RE = re.compile(r"/es@\d{4}-\d{2}-\d{2}$")
+
+
+def canonical_uri(uri: str) -> str:
+    """Canonicaliza URI para comparación: sin alias /es@ + normaliza _/-."""
+    uri = VERSION_RE.sub("", uri)
+    return uri.replace("_", "-")
 
 
 def file_score(f: Path) -> tuple[int, int]:
@@ -55,7 +62,7 @@ def main() -> int:
             continue
         m = BCN_URI_RE.search(text)
         if m:
-            by_uri[m.group(1)].append(f)
+            by_uri[canonical_uri(m.group(1))].append(f)
 
     dups = {uri: files for uri, files in by_uri.items() if len(files) > 1}
     losers: list[tuple[Path, Path]] = []
