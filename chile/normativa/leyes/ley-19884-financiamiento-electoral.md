@@ -4,6 +4,7 @@ slug: ley-19884-financiamiento-electoral
 titulo_oficial: Sobre transparencia, límite y control del gasto electoral
 publicacion: 2003-08-05
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=213283
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-del-interior_subsecretaria-del-interior/2003-08-05/19884
 ultima_modificacion: Ley 20.900 / 2016 (reforma estructural — Ley para el Fortalecimiento y Transparencia de la Democracia)
 vigencia: vigente
 materia:

@@ -4,6 +4,7 @@ slug: ley-19039-propiedad-industrial
 titulo_oficial: Ley de Propiedad Industrial
 publicacion: 1991-01-25
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=30406
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-economia_fomento-y-reconstruccion/1991-01-25/19039
 ultima_modificacion: Ley 21.355 / 2021 — modernización integral
 vigencia: vigente
 materia:

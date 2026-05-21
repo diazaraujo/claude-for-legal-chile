@@ -4,6 +4,7 @@ slug: ley-19966-auge-ges
 titulo_oficial: Establece un Régimen de Garantías en Salud (AUGE/GES)
 publicacion: 2004-09-03
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=229834
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-salud/2004-09-03/19966
 ultima_modificacion: Ley 21.541 (2023) + DS anuales
 vigencia: vigente
 materia:

@@ -4,6 +4,7 @@ slug: ley-19880-procedimiento-administrativo
 titulo_oficial: Establece bases de los procedimientos administrativos que rigen los actos de los órganos de la Administración del Estado
 publicacion: 2003-05-29
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=210676
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-secretaria-general-de-la-presidencia/2003-05-29/19880
 ultima_modificacion: actualización continua (varias modificaciones puntuales)
 vigencia: vigente
 materia:

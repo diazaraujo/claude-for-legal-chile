@@ -4,6 +4,7 @@ slug: ley-18838-cntv
 titulo_oficial: Crea el Consejo Nacional de Televisión
 publicacion: 1989-09-30
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=30214
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-del-interior/1989-09-30/18838
 ultima_modificacion: actualización por Ley 20.750 (TVD) y otras
 vigencia: vigente
 materia:

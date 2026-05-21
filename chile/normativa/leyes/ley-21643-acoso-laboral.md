@@ -4,6 +4,7 @@ slug: ley-21643-acoso-laboral
 titulo_oficial: Ley que modifica el Código del Trabajo y otros cuerpos legales para prevenir, investigar y sancionar el acoso laboral, sexual y la violencia en el trabajo ("Ley Karin")
 publicacion: 2024-01-15
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1200096
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-del-trabajo-y-prevision-social/2024-01-15/21643
 ultima_modificacion: 2024-01-15
 vigencia: vigente
 capa: 3

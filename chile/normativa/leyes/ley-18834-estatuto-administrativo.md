@@ -4,6 +4,7 @@ slug: ley-18834-estatuto-administrativo
 titulo_oficial: Estatuto Administrativo (texto refundido DFL 29/2004)
 publicacion: 1989-09-23 (texto refundido DFL 29/2004)
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=30210
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-del-interior/1989-09-23/18834
 ultima_modificacion: actualización continua
 vigencia: vigente
 materia:

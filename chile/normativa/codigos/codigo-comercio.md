@@ -4,6 +4,7 @@ slug: codigo-comercio
 titulo_oficial: Código de Comercio
 publicacion: 1865-11-23
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1974
+bcn_uri: http://datos.bcn.cl/recurso/cl/cod/ministerio-de-justicia/1865-11-23/de-comercio
 cuerpo_normativo: Ley de 23-11-1865, con múltiples reformas
 ultima_modificacion: actualización continua (ver historia BCN)
 vigencia: vigente

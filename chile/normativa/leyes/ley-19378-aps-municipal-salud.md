@@ -4,6 +4,7 @@ slug: ley-19378-aps-municipal-salud
 titulo_oficial: Estatuto de Atención Primaria de Salud Municipal
 publicacion: 1995-04-13
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=30745
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-salud/1995-04-13/19378
 ultima_modificacion: actualización continua
 vigencia: vigente
 materia:

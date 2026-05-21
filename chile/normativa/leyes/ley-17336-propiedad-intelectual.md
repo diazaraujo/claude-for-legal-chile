@@ -4,6 +4,7 @@ slug: ley-17336-propiedad-intelectual
 titulo_oficial: Ley de Propiedad Intelectual
 publicacion: 1970-10-02
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=28933
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-educacion-publica/1970-10-02/17336
 ultima_modificacion: actualización continua (Ley 20.435 sobre límites y excepciones; Ley 21.045 / 2017 — DIBAM)
 vigencia: vigente
 materia:

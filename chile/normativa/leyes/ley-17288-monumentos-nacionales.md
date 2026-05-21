@@ -4,6 +4,7 @@ slug: ley-17288-monumentos-nacionales
 titulo_oficial: Legisla sobre Monumentos Nacionales
 publicacion: 1970-02-04
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=28892
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-educacion-publica/1970-02-04/17288
 ultima_modificacion: actualización continua
 vigencia: vigente
 materia:

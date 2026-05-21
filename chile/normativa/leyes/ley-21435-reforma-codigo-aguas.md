@@ -4,6 +4,7 @@ slug: ley-21435-reforma-codigo-aguas
 titulo_oficial: Reforma el Código de Aguas
 publicacion: 2022-04-06
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1174443
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-obras-publicas/2022-04-06/21435
 ultima_modificacion: 2022-04-06
 vigencia: vigente
 materia:

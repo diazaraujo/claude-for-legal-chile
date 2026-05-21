@@ -4,6 +4,7 @@ slug: ley-19886-compras-publicas
 titulo_oficial: Ley de Bases sobre Contratos Administrativos de Suministro y Prestación de Servicios
 publicacion: 2003-07-30
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=213004
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-hacienda/2003-07-30/19886
 ultima_modificacion: actualización continua (reforma estructural Ley 21.634 de 2023 — "Ley de Compras Públicas")
 vigencia: vigente
 materia:

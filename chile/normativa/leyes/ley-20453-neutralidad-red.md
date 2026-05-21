@@ -4,6 +4,7 @@ slug: ley-20453-neutralidad-red
 titulo_oficial: Consagra el principio de neutralidad en la red para los consumidores y usuarios de Internet
 publicacion: 2010-08-26
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1016570
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-transportes-y-telecomunicaciones_subsecretaria-de-telecomunicaciones/2010-08-26/20453
 ultima_modificacion: 2010-08-26
 vigencia: vigente
 materia:

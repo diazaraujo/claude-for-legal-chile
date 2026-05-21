@@ -4,6 +4,7 @@ slug: ley-19628-proteccion-datos
 titulo_oficial: Ley sobre Protección de la Vida Privada
 publicacion: 1999-08-28
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=141599
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-secretaria-general-de-la-presidencia/1999-08-28/19628
 ultima_modificacion: 2024-12-13 (Ley 21.719)
 vigencia: vigente (modificada por Ley 21.719, con régimen unificado en vigencia diferida al 2026-12-01)
 capa: 3

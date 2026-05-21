@@ -4,6 +4,7 @@ slug: ley-19913-lavado-activos
 titulo_oficial: Crea la Unidad de Análisis Financiero y modifica diversas disposiciones en materia de lavado y blanqueo de activos
 publicacion: 2003-12-18
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=219119
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-hacienda/2003-12-18/19913
 ultima_modificacion: actualización continua (Ley 21.595/2023; Ley 20.818)
 vigencia: vigente
 materia:

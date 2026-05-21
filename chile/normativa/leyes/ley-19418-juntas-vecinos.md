@@ -4,6 +4,7 @@ slug: ley-19418-juntas-vecinos
 titulo_oficial: Sobre Juntas de Vecinos y Demás Organizaciones Comunitarias
 publicacion: 1995-10-09
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=30785
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-del-interior/1995-10-09/19418
 ultima_modificacion: actualización continua (Ley 21.099 / 2018 — modernización)
 vigencia: vigente
 materia:

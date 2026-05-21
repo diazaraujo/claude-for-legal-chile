@@ -4,6 +4,7 @@ slug: ley-21030-aborto-tres-causales
 titulo_oficial: Regula la despenalización de la interrupción voluntaria del embarazo en tres causales
 publicacion: 2017-09-23
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1108237
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-salud/2017-09-23/21030
 ultima_modificacion: 2017-09-23 con reglamentos posteriores
 vigencia: vigente
 materia:

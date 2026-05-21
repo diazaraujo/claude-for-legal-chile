@@ -4,6 +4,7 @@ slug: ley-21455-cambio-climatico
 titulo_oficial: Ley Marco de Cambio Climático
 publicacion: 2022-06-13
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1177286
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-del-medio-ambiente/2022-06-13/21455
 ultima_modificacion: 2022-06-13
 vigencia: vigente
 materia:

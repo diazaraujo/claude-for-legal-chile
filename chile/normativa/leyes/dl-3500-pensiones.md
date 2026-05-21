@@ -4,6 +4,7 @@ slug: dl-3500-pensiones
 titulo_oficial: Establece nuevo sistema de pensiones
 publicacion: 1980-11-13
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=7147
+bcn_uri: http://datos.bcn.cl/recurso/cl/dl/ministerio-del-trabajo-y-prevision-social/1980-11-13/3500
 cuerpo_normativo: Decreto Ley N° 3.500 de 1980
 ultima_modificacion: actualización continua (Ley 20.255 / 2008 — reforma previsional; reforma estructural en debate 2024-2026)
 vigencia: vigente

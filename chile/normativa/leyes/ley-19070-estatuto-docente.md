@@ -4,6 +4,7 @@ slug: ley-19070-estatuto-docente
 titulo_oficial: Estatuto de los Profesionales de la Educación (texto refundido DFL 1/1996)
 publicacion: 1991-07-01 (texto refundido DFL 1/1996)
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=30437
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-educacion-publica/1991-07-01/19070
 ultima_modificacion: actualización por Ley 20.903 (Carrera Docente) y otras
 vigencia: vigente
 materia:

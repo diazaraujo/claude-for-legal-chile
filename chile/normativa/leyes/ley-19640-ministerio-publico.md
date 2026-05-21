@@ -4,6 +4,7 @@ slug: ley-19640-ministerio-publico
 titulo_oficial: LOC del Ministerio Público
 publicacion: 1999-10-15
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=145437
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-justicia/1999-10-15/19640
 ultima_modificacion: actualización continua
 vigencia: vigente
 materia:

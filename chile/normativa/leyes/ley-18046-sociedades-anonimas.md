@@ -4,6 +4,7 @@ slug: ley-18046-sociedades-anonimas
 titulo_oficial: Ley sobre Sociedades Anónimas
 publicacion: 1981-10-22
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=29473
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-hacienda/1981-10-22/18046
 ultima_modificacion: actualización continua (reformas notables Ley 19.705, Ley 20.382 sobre gobiernos corporativos)
 vigencia: vigente
 materia:

@@ -4,6 +4,7 @@ slug: ley-18840-loc-banco-central
 titulo_oficial: LOC del Banco Central de Chile
 publicacion: 1989-10-10
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=30216
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-hacienda/1989-10-10/18840
 ultima_modificacion: actualización por leyes posteriores
 vigencia: vigente
 materia:

@@ -4,6 +4,7 @@ slug: codigo-tributario
 titulo_oficial: Código Tributario
 publicacion: 1974-12-31
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=6374
+bcn_uri: http://datos.bcn.cl/recurso/cl/dl/ministerio-de-hacienda/1974-12-31/830
 cuerpo_normativo: DL 830 de 1974
 ultima_modificacion: actualización continua (ver historia BCN; reforma estructural Ley 21.713 de 2024)
 vigencia: vigente

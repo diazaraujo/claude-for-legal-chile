@@ -4,6 +4,7 @@ slug: codigo-penal
 titulo_oficial: Código Penal
 publicacion: 1874-11-12
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1984
+bcn_uri: http://datos.bcn.cl/recurso/cl/cod/ministerio-de-justicia/1874-11-12/penal
 cuerpo_normativo: Ley de 12-11-1874, con múltiples reformas
 ultima_modificacion: actualización continua (reforma estructural Ley 21.595/2023 — delitos económicos)
 vigencia: vigente

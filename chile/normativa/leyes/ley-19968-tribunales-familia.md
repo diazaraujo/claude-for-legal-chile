@@ -4,6 +4,7 @@ slug: ley-19968-tribunales-familia
 titulo_oficial: Crea los Tribunales de Familia
 publicacion: 2004-08-30
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=229557
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-justicia/2004-08-30/19968
 ultima_modificacion: actualización continua
 vigencia: vigente (entrada operativa 2005-10-01)
 materia:

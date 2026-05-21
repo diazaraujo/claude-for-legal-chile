@@ -4,6 +4,7 @@ slug: ley-21057-entrevista-videograbada
 titulo_oficial: Regula entrevistas grabadas en video y otras medidas de resguardo a menores de edad víctimas de delitos sexuales
 publicacion: 2018-01-20
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1113932
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-justicia-y-derechos-humanos/2018-01-20/21057
 ultima_modificacion: actualización continua
 vigencia: vigente con escalonamiento (régimen pleno desde 2019-2021)
 materia:

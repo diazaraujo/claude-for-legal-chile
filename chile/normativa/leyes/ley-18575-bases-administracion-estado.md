@@ -4,6 +4,7 @@ slug: ley-18575-bases-administracion-estado
 titulo_oficial: Ley Orgánica Constitucional de Bases Generales de la Administración del Estado
 publicacion: 1986-12-05
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=29967
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-del-interior_subsecretaria-del-interior/1986-12-05/18575
 ultima_modificacion: actualización continua (Ley 20.880 probidad; Ley 21.180 transformación digital)
 vigencia: vigente
 materia:

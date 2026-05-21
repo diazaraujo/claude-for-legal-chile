@@ -4,6 +4,7 @@ slug: ley-19123-reparacion-rettig
 titulo_oficial: Crea Corporación Nacional de Reparación y Reconciliación y establece pensión de reparación
 publicacion: 1992-02-08
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=30490
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-del-interior/1992-02-08/19123
 ultima_modificacion: ampliada por leyes posteriores
 vigencia: vigente
 materia:

@@ -4,6 +4,7 @@ slug: ley-18045-mercado-valores
 titulo_oficial: Ley de Mercado de Valores
 publicacion: 1981-10-22
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=29472
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-hacienda/1981-10-22/18045
 ultima_modificacion: actualización continua (reformas: Ley 21.314/2021, Ley 21.521/2023 Fintec)
 vigencia: vigente
 materia:

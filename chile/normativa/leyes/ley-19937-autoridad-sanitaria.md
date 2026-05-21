@@ -4,6 +4,7 @@ slug: ley-19937-autoridad-sanitaria
 titulo_oficial: Modifica el DL N° 2.763, de 1979, con la finalidad de establecer una nueva concepción de la autoridad sanitaria
 publicacion: 2004-02-24
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=221629
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-salud/2004-02-24/19937
 ultima_modificacion: actualización continua
 vigencia: vigente
 materia:

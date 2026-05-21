@@ -4,6 +4,7 @@ slug: ley-20405-indh
 titulo_oficial: Crea el Instituto Nacional de Derechos Humanos
 publicacion: 2009-12-10
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1008867
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-secretaria-general-de-la-presidencia_subsecretaria-general-de-la-presidencia/2009-12-10/20405
 ultima_modificacion: actualización menor
 vigencia: vigente
 materia:

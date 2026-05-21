@@ -4,6 +4,7 @@ slug: dl-825-iva
 titulo_oficial: Ley sobre Impuesto a las Ventas y Servicios
 publicacion: 1974-12-31
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=6369
+bcn_uri: http://datos.bcn.cl/recurso/cl/dl/ministerio-de-hacienda/1974-12-31/825
 cuerpo_normativo: Decreto Ley N° 825 de 1974
 ultima_modificacion: actualización continua (Ley 21.420/2022, Ley 21.713/2024 — plataformas digitales)
 vigencia: vigente

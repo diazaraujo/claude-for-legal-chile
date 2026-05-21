@@ -4,6 +4,7 @@ slug: codigo-procesal-penal
 titulo_oficial: Establece un nuevo Código Procesal Penal
 publicacion: 2000-10-12
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=176595
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-justicia/2000-10-12/19696
 cuerpo_normativo: Ley 19.696 de 2000
 ultima_modificacion: actualización continua
 vigencia: vigente (entrada en vigencia escalonada por regiones, completa desde 2005)

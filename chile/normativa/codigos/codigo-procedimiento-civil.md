@@ -4,6 +4,7 @@ slug: codigo-procedimiento-civil
 titulo_oficial: Código de Procedimiento Civil
 publicacion: 1902-08-30
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=22740
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-justicia/1902-08-30/1552
 cuerpo_normativo: Ley 1.552 de 1902, con múltiples reformas
 ultima_modificacion: actualización continua (modernizaciones: tramitación electrónica, juicios escritos digitalizados)
 vigencia: vigente

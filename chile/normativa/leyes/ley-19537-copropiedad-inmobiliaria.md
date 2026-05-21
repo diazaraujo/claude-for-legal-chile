@@ -4,6 +4,7 @@ slug: ley-19537-copropiedad-inmobiliaria
 titulo_oficial: Sobre Copropiedad Inmobiliaria
 publicacion: 1997-12-16
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=81505
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-vivienda-y-urbanismo/1997-12-16/19537
 ultima_modificacion: Ley 21.442 (2022 — modernización condominios)
 vigencia: vigente
 materia:

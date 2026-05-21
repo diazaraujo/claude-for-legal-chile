@@ -4,6 +4,7 @@ slug: ley-18918-loc-congreso
 titulo_oficial: Ley Orgánica Constitucional del Congreso Nacional
 publicacion: 1990-02-05
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=30289
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-del-interior/1990-02-05/18918
 ultima_modificacion: actualización continua
 vigencia: vigente
 materia:

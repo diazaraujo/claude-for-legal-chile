@@ -4,6 +4,7 @@ slug: ley-18097-concesiones-mineras
 titulo_oficial: LOC sobre Concesiones Mineras
 publicacion: 1982-01-21
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=29522
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-mineria/1982-01-21/18097
 ultima_modificacion: 1982-01-21
 vigencia: vigente
 materia:

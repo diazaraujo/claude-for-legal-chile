@@ -4,6 +4,7 @@ slug: ley-17997-loc-tc
 titulo_oficial: Ley Orgánica Constitucional del Tribunal Constitucional
 publicacion: 1981-05-19
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=29427
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-justicia/1981-05-19/17997
 ultima_modificacion: actualización continua (texto refundido y modificaciones por reformas constitucionales 2005 y posteriores)
 vigencia: vigente
 materia:

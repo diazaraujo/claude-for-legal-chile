@@ -4,6 +4,7 @@ slug: ley-10336-cgr
 titulo_oficial: Sobre Organización y Atribuciones de la Contraloría General de la República
 publicacion: 1952-07-10 (texto refundido DS 6.071/1980)
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=26356
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-hacienda/1952-05-29/10336
 ultima_modificacion: actualización continua
 vigencia: vigente
 materia:

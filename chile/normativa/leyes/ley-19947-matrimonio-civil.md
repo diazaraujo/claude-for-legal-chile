@@ -4,6 +4,7 @@ slug: ley-19947-matrimonio-civil
 titulo_oficial: Establece nueva Ley de Matrimonio Civil
 publicacion: 2004-05-17
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=225128
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-justicia/2004-05-17/19947
 ultima_modificacion: actualización continua (Ley 21.400/2021 — matrimonio igualitario)
 vigencia: vigente
 materia:

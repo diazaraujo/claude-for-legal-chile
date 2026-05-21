@@ -4,6 +4,7 @@ slug: ley-18010-operaciones-credito-dinero
 titulo_oficial: Establece normas para las operaciones de crédito de dinero y otras obligaciones de dinero
 publicacion: 1981-06-27
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=29438
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-hacienda/1981-06-27/18010
 ultima_modificacion: actualización por Ley 20.715 + 21.398 + otras
 vigencia: vigente
 materia:

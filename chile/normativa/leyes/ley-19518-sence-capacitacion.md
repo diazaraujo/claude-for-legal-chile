@@ -4,6 +4,7 @@ slug: ley-19518-sence-capacitacion
 titulo_oficial: Fija nuevo Estatuto de Capacitación y Empleo
 publicacion: 1997-10-14
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=76201
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-del-trabajo-y-prevision-social/1997-10-14/19518
 ultima_modificacion: actualización por Ley 21.215 + otras
 vigencia: vigente
 materia:

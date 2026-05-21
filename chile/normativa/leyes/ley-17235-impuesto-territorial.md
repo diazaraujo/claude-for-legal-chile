@@ -4,6 +4,7 @@ slug: ley-17235-impuesto-territorial
 titulo_oficial: Sobre Impuesto Territorial
 publicacion: 1969-04-19
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=28849
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-hacienda/1969-12-24/17235
 ultima_modificacion: actualización por Ley 21.210 + otras
 vigencia: vigente
 materia:

@@ -4,6 +4,7 @@ slug: ley-20022-tribunales-trabajo
 titulo_oficial: Crea juzgados laborales y juzgados de cobranza laboral y previsional
 publicacion: 2005-05-30
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=238321
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-del-trabajo-y-prevision-social_subsecretaria-del-trabajo/2005-05-30/20022
 ultima_modificacion: 2008-2012 ajustes vigencia + competencia
 vigencia: vigente
 materia:

@@ -4,6 +4,7 @@ slug: ley-20417-institucionalidad-ambiental
 titulo_oficial: Crea el Ministerio del Medio Ambiente, el Servicio de Evaluación Ambiental y la Superintendencia del Medio Ambiente
 publicacion: 2010-01-26
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1010459
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-secretaria-general-de-la-presidencia/2010-01-26/20417
 ultima_modificacion: actualización continua
 vigencia: vigente
 materia:

@@ -4,6 +4,7 @@ slug: ley-18892-pesca-acuicultura
 titulo_oficial: Ley General de Pesca y Acuicultura
 publicacion: 1989-12-23 (texto refundido DS 430/1991)
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=30265
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-economia_fomento-y-reconstruccion/1989-12-23/18892
 ultima_modificacion: Ley 20.657 (2013, "Ley Longueira") + reformas posteriores
 vigencia: vigente con reformas mayores
 materia:

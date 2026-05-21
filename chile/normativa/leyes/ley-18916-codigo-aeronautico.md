@@ -4,6 +4,7 @@ slug: ley-18916-codigo-aeronautico
 titulo_oficial: Aprueba Código Aeronáutico
 publicacion: 1990-02-08
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=30287
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-justicia/1990-02-08/18916
 ultima_modificacion: actualización por Ley 21.080 + otras
 vigencia: vigente
 materia:

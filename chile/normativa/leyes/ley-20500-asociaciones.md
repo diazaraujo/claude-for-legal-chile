@@ -4,6 +4,7 @@ slug: ley-20500-asociaciones
 titulo_oficial: Sobre Asociaciones y Participación Ciudadana en la Gestión Pública
 publicacion: 2011-02-16
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1023143
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-secretaria-general-de-gobierno/2011-02-16/20500
 ultima_modificacion: actualización continua
 vigencia: vigente
 materia:

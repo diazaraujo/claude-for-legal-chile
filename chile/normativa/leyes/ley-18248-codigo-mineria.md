@@ -4,6 +4,7 @@ slug: ley-18248-codigo-mineria
 titulo_oficial: Código de Minería
 publicacion: 1983-10-14
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=29668
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-mineria/1983-10-14/18248
 ultima_modificacion: actualización continua (royalty, reforma 2023 Ley 21.591)
 vigencia: vigente
 materia:

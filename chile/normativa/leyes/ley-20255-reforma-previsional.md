@@ -4,6 +4,7 @@ slug: ley-20255-reforma-previsional
 titulo_oficial: Establece reforma previsional
 publicacion: 2008-03-17
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=269892
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-del-trabajo-y-prevision-social_subsecretaria-de-prevision-social/2008-03-17/20255
 ultima_modificacion: actualización continua (PGU Ley 21.419)
 vigencia: vigente
 materia:

@@ -4,6 +4,7 @@ slug: ley-18700-loc-votaciones
 titulo_oficial: Ley Orgánica Constitucional sobre Votaciones Populares y Escrutinios
 publicacion: 1988-05-06
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=30082
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-del-interior/1988-05-06/18700
 ultima_modificacion: actualización continua (Ley 20.337 inscripción automática + voto voluntario; Ley 21.013 reforma electoral)
 vigencia: vigente
 materia:

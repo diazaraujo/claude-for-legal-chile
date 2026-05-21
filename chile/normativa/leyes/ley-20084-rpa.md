@@ -4,6 +4,7 @@ slug: ley-20084-rpa
 titulo_oficial: Establece un sistema de responsabilidad de los adolescentes por infracciones a la ley penal
 publicacion: 2005-12-07
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=244803
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-justicia/2005-12-07/20084
 ultima_modificacion: actualización continua (Ley 21.527 / 2023 — modernización del SENAME hacia Servicio Nacional de Reinserción Social Juvenil)
 vigencia: vigente (entrada en vigencia 2007-06-08)
 materia:

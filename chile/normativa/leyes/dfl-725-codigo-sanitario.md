@@ -4,6 +4,7 @@ slug: dfl-725-codigo-sanitario
 titulo_oficial: Código Sanitario
 publicacion: 1968-01-31
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=5595
+bcn_uri: http://datos.bcn.cl/recurso/cl/dfl/ministerio-de-salud-publica/1968-01-31/725
 ultima_modificacion: actualización continua (Ley 21.030 aborto, Ley 21.331 salud mental, etc.)
 vigencia: vigente
 materia:

@@ -4,6 +4,7 @@ slug: ley-18216-penas-sustitutivas
 titulo_oficial: Establece penas que indica como sustitutivas a las penas privativas o restrictivas de libertad
 publicacion: 1983-05-14
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=29636
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-justicia/1983-05-14/18216
 ultima_modificacion: Ley 20.603 (2012) reforma estructural + actualización continua
 vigencia: vigente
 materia:

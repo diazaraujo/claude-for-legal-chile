@@ -4,6 +4,7 @@ slug: ley-19733-libertades-opinion-informacion
 titulo_oficial: Sobre Libertades de Opinión e Información y Ejercicio del Periodismo
 publicacion: 2001-06-04
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=186049
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-secretaria-general-de-gobierno/2001-06-04/19733
 ultima_modificacion: actualización continua
 vigencia: vigente
 materia:

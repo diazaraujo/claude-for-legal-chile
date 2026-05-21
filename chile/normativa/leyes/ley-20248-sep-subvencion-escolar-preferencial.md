@@ -4,6 +4,7 @@ slug: ley-20248-sep-subvencion-escolar-preferencial
 titulo_oficial: Establece Ley de Subvención Escolar Preferencial
 publicacion: 2008-02-01
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=269001
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-educacion/2008-02-01/20248
 ultima_modificacion: actualización continua (modif. Ley 20.550 + Ley 20.845)
 vigencia: vigente
 materia:

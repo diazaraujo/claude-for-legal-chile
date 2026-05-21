@@ -4,6 +4,7 @@ slug: ley-19728-seguro-cesantia
 titulo_oficial: Establece un seguro de desempleo
 publicacion: 2001-05-14
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=184979
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-del-trabajo-y-prevision-social_subsecretaria-del-trabajo/2001-05-14/19728
 ultima_modificacion: actualización continua (Ley 21.227 — protección al empleo durante pandemia; Ley 21.561)
 vigencia: vigente
 materia:

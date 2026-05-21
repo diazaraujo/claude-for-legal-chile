@@ -4,6 +4,7 @@ slug: ley-20000-drogas
 titulo_oficial: Sanciona el tráfico ilícito de estupefacientes y sustancias sicotrópicas
 publicacion: 2005-02-16
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=235507
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-del-interior/2005-02-16/20000
 ultima_modificacion: actualización continua
 vigencia: vigente
 materia:

@@ -4,6 +4,7 @@ slug: ley-20066-vif
 titulo_oficial: Establece Ley de Violencia Intrafamiliar
 publicacion: 2005-10-07
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=242648
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-justicia/2005-10-07/20066
 ultima_modificacion: Ley 21.013 / 2017 (maltrato a personas vulnerables); reformas conexas
 vigencia: vigente
 materia:

@@ -4,6 +4,7 @@ slug: dfl-1122-codigo-aguas
 titulo_oficial: Código de Aguas
 publicacion: 1981-10-29
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=5605
+bcn_uri: http://datos.bcn.cl/recurso/cl/dfl/ministerio-de-justicia/1981-10-29/1122
 ultima_modificacion: 2022-04-06 (Ley 21.435 — reforma estructural)
 vigencia: vigente con reforma 2022
 materia:

@@ -4,6 +4,7 @@ slug: ley-19620-adopciones
 titulo_oficial: Dicta normas sobre adopción de menores
 publicacion: 1999-08-05
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=140084
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-justicia/1999-08-05/19620
 ultima_modificacion: actualización por Ley 21.302 + otras
 vigencia: vigente
 materia:

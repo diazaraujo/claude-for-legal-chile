@@ -4,6 +4,7 @@ slug: ley-19799-firma-electronica
 titulo_oficial: Sobre documentos electrónicos, firma electrónica y servicios de certificación de dicha firma
 publicacion: 2002-04-12
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=196640
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion/2002-04-12/19799
 ultima_modificacion: actualización continua
 vigencia: vigente
 materia:

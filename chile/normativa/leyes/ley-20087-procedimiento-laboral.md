@@ -4,6 +4,7 @@ slug: ley-20087-procedimiento-laboral
 titulo_oficial: Sustituye el procedimiento laboral
 publicacion: 2006-01-03
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=245804
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-del-trabajo-y-prevision-social_subsecretaria-del-trabajo/2006-01-03/20087
 ultima_modificacion: 2008-2012 ajustes vigencia + Ley 20.260 + Ley 20.287
 vigencia: vigente
 materia:

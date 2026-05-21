@@ -4,6 +4,7 @@ slug: ley-19718-defensoria-penal-publica
 titulo_oficial: Crea la Defensoría Penal Pública
 publicacion: 2001-03-10
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=182755
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-justicia/2001-03-10/19718
 ultima_modificacion: actualización continua
 vigencia: vigente
 materia:

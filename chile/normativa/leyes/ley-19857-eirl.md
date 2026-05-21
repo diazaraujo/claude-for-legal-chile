@@ -4,6 +4,7 @@ slug: ley-19857-eirl
 titulo_oficial: Autoriza el establecimiento de empresas individuales de responsabilidad limitada
 publicacion: 2003-02-11
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=207588
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion/2003-02-11/19857
 ultima_modificacion: actualización menor
 vigencia: vigente
 materia:

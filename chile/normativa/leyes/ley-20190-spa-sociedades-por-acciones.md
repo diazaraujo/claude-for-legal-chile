@@ -4,6 +4,7 @@ slug: ley-20190-spa-sociedades-por-acciones
 titulo_oficial: Introduce adecuaciones tributarias e institucionales para el fomento de la industria de capital de riesgo y continúa el proceso de modernización del mercado de capitales
 publicacion: 2007-06-05
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=261427
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-hacienda/2007-06-05/20190
 ultima_modificacion: actualización continua
 vigencia: vigente
 materia:

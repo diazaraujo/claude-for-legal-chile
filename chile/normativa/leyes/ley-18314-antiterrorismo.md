@@ -4,6 +4,7 @@ slug: ley-18314-antiterrorismo
 titulo_oficial: Determina conductas terroristas y fija su penalidad
 publicacion: 1984-05-17
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=29731
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-del-interior/1984-05-17/18314
 ultima_modificacion: actualización continua (modif. Ley 20.467 y otras)
 vigencia: vigente
 materia:

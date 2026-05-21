@@ -4,6 +4,7 @@ slug: ley-19496-consumidor
 titulo_oficial: Normas sobre protección de los derechos de los consumidores
 publicacion: 1997-03-07
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=61438
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-economia_fomento-y-reconstruccion/1997-03-07/19496
 ultima_modificacion: actualización continua (ver historia BCN — modificaciones notables Ley 19.955, 20.555, 21.398 "Pro Consumidor")
 vigencia: vigente
 materia:

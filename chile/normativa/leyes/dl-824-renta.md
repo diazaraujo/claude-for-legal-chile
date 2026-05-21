@@ -4,6 +4,7 @@ slug: dl-824-renta
 titulo_oficial: Ley sobre Impuesto a la Renta
 publicacion: 1974-12-31
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=6368
+bcn_uri: http://datos.bcn.cl/recurso/cl/dl/ministerio-de-hacienda/1974-12-31/824
 cuerpo_normativo: Decreto Ley N° 824 de 1974
 ultima_modificacion: actualización continua (reformas estructurales: Ley 20.780/2014, Ley 21.210/2020, Ley 21.713/2024)
 vigencia: vigente

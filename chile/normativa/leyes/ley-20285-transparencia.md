@@ -4,6 +4,7 @@ slug: ley-20285-transparencia
 titulo_oficial: Sobre acceso a la información pública
 publicacion: 2008-08-20
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=276363
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-secretaria-general-de-la-presidencia/2008-08-20/20285
 ultima_modificacion: actualización continua
 vigencia: vigente
 materia:

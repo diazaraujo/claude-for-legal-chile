@@ -4,6 +4,7 @@ slug: codigo-organico-tribunales
 titulo_oficial: Código Orgánico de Tribunales
 publicacion: 1943-07-09
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=25563
+bcn_uri: http://datos.bcn.cl/recurso/cl/cod/ministerio-de-justicia/1943-07-09/orgánico-de-tribunales---no-operativo
 cuerpo_normativo: Ley 7.421 de 1943, con múltiples reformas
 ultima_modificacion: actualización continua
 vigencia: vigente

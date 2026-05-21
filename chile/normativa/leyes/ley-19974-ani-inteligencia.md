@@ -4,6 +4,7 @@ slug: ley-19974-ani-inteligencia
 titulo_oficial: Sobre el Sistema de Inteligencia del Estado y crea la Agencia Nacional de Inteligencia
 publicacion: 2004-10-02
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=230999
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-del-interior_subsecretaria-del-interior/2004-10-02/19974
 ultima_modificacion: actualización por Ley 21.668 (reforma 2024)
 vigencia: vigente con reforma 2024
 materia:

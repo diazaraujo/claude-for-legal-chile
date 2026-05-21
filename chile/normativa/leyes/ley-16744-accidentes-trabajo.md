@@ -4,6 +4,7 @@ slug: ley-16744-accidentes-trabajo
 titulo_oficial: Establece normas sobre accidentes del trabajo y enfermedades profesionales
 publicacion: 1968-02-01
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=28650
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-del-trabajo-y-prevision-social_subsecretaria-de-prevision-social/1968-02-01/16744
 ultima_modificacion: actualización continua (ver historia en BCN)
 vigencia: vigente
 capa: 3

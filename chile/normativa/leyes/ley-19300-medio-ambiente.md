@@ -4,6 +4,7 @@ slug: ley-19300-medio-ambiente
 titulo_oficial: Ley sobre Bases Generales del Medio Ambiente
 publicacion: 1994-03-09
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=30667
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-secretaria-general-de-la-presidencia/1994-03-09/19300
 ultima_modificacion: actualización continua (Ley 20.417 / 2010 creó MMA + SMA + SEA; Ley 21.595 / 2023 delitos ambientales)
 vigencia: vigente
 materia:
