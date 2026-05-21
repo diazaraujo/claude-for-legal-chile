@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-agricultura_2004-03-22_100-exento
+tipo: dto
+numero: 100-exento
+titulo_oficial: "MODIFICA DECRETO Nº 461, DE 2003, QUE FIJO TARIFAS PARA LAS PRESTACIONES QUE EFECTUE EL SERVICIO AGRICOLA Y GANADERO EN EL PROCESO DE CERTIFICACION DE SEMILLAS Y DERECHOS POR LA INSCRIPCION DE VARIEDADES EN EL REGISTRO DE VARIEDADES APTAS PARA LA CERTIFICACION"
+publicacion: 2004-03-22
+emisor: ministerio-de-agricultura
+leychile_code: 222797
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=222797
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-agricultura/2004-03-22/100-exento
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 100-exento
+
+**Título oficial:** MODIFICA DECRETO Nº 461, DE 2003, QUE FIJO TARIFAS PARA LAS PRESTACIONES QUE EFECTUE EL SERVICIO AGRICOLA Y GANADERO EN EL PROCESO DE CERTIFICACION DE SEMILLAS Y DERECHOS POR LA INSCRIPCION DE VARIEDADES EN EL REGISTRO DE VARIEDADES APTAS PARA LA CERTIFICACION

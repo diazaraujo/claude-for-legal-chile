@@ -4,7 +4,6 @@ slug: ley-21133-cotizacion-independientes
 titulo_oficial: Modifica las normas para la incorporación de los trabajadores independientes a los regímenes de protección social
 publicacion: 2019-02-02
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1128420
-bcn_uri: http://datos.bcn.cl/recurso/cl/proyecto-de-ley/12002-13
 ultima_modificacion: 2019-02-02
 vigencia: vigente con escalonamiento (régimen pleno 2028)
 materia:

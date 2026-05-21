@@ -4,7 +4,6 @@ slug: ley-21663-ciberseguridad
 titulo_oficial: Ley Marco sobre Ciberseguridad e Infraestructura Crítica de la Información
 publicacion: 2024-04-08
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1202434
-bcn_uri: http://datos.bcn.cl/recurso/cl/proyecto-de-ley/14847-06
 ultima_modificacion: 2024-04-08
 vigencia: vigente con escalonamiento (régimen pleno desde 2025)
 materia:

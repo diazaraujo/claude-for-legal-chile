@@ -4,7 +4,6 @@ slug: ley-21398-pague-lo-justo
 titulo_oficial: Establece medidas para incentivar la protección de los derechos de los consumidores ("Pague lo Justo")
 publicacion: 2021-12-24
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1170464
-bcn_uri: http://datos.bcn.cl/recurso/cl/proyecto-de-ley/12409-03
 ultima_modificacion: 2021-12-24
 vigencia: vigente
 materia:

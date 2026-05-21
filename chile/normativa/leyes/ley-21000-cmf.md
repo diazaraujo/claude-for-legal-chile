@@ -4,7 +4,6 @@ slug: ley-21000-cmf
 titulo_oficial: Crea la Comisión para el Mercado Financiero
 publicacion: 2017-02-23
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1100517
-bcn_uri: http://datos.bcn.cl/recurso/cl/proyecto-de-ley/9015-05
 ultima_modificacion: actualización por Ley 21.521 (Fintec) y otras
 vigencia: vigente
 materia:

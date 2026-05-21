@@ -4,7 +4,6 @@ slug: ley-21400-matrimonio-igualitario
 titulo_oficial: Modifica diversos cuerpos legales para regular, en igualdad de condiciones, el matrimonio entre personas del mismo sexo
 publicacion: 2021-12-10
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1169572
-bcn_uri: http://datos.bcn.cl/recurso/cl/proyecto-de-ley/11422-07
 ultima_modificacion: 2021-12-10
 vigencia: vigente desde marzo 2022
 materia:

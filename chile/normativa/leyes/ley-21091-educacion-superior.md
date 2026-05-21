@@ -4,7 +4,6 @@ slug: ley-21091-educacion-superior
 titulo_oficial: Sobre Educación Superior
 publicacion: 2018-05-29
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1118991
-bcn_uri: http://datos.bcn.cl/recurso/cl/proyecto-de-ley/10783-04
 ultima_modificacion: actualización continua
 vigencia: vigente
 materia:

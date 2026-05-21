@@ -4,7 +4,6 @@ slug: ley-21719-modificacion-lpd
 titulo_oficial: Ley que regula la protección y el tratamiento de datos personales y crea la Agencia de Protección de Datos Personales
 publicacion: 2024-12-13
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1209272
-bcn_uri: http://datos.bcn.cl/recurso/cl/proyecto-de-ley/11144-07
 ultima_modificacion: 2024-12-13
 vigencia: vigencia diferida — entra en plena vigencia el 2026-12-01
 capa: 3

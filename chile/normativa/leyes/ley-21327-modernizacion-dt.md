@@ -4,7 +4,6 @@ slug: ley-21327-modernizacion-dt
 titulo_oficial: Modernización de la Dirección del Trabajo
 publicacion: 2021-04-30
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1158983
-bcn_uri: http://datos.bcn.cl/recurso/cl/proyecto-de-ley/12827-13
 ultima_modificacion: 2021-04-30
 vigencia: vigente
 materia:

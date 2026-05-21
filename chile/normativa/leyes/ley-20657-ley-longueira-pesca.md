@@ -4,7 +4,6 @@ slug: ley-20657-ley-longueira-pesca
 titulo_oficial: Modifica la Ley General de Pesca y Acuicultura en el ámbito de la sustentabilidad de recursos hidrobiológicos
 publicacion: 2013-02-09
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1048776
-bcn_uri: http://datos.bcn.cl/recurso/cl/proyecto-de-ley/8091-21
 ultima_modificacion: 2013-02-09 (en discusión legislativa nueva reforma 2024-2026)
 vigencia: vigente con discusión legislativa pendiente
 materia:

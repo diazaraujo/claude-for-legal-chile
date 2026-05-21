@@ -4,7 +4,6 @@ slug: ley-21591-royalty-minero
 titulo_oficial: Establece un royalty a la minería
 publicacion: 2023-08-10
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1194982
-bcn_uri: http://datos.bcn.cl/recurso/cl/proyecto-de-ley/12093-08
 ultima_modificacion: 2023-08-10
 vigencia: vigente desde 2024
 materia:

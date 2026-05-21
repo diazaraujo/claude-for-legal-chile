@@ -4,7 +4,6 @@ slug: ley-20903-carrera-docente
 titulo_oficial: Crea el Sistema de Desarrollo Profesional Docente
 publicacion: 2016-04-01
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1087343
-bcn_uri: http://datos.bcn.cl/recurso/cl/proyecto-de-ley/10008-04
 ultima_modificacion: actualización continua
 vigencia: vigente con implementación escalonada
 materia:

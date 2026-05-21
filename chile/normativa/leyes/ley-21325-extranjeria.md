@@ -4,7 +4,6 @@ slug: ley-21325-extranjeria
 titulo_oficial: Ley de Migración y Extranjería
 publicacion: 2021-04-20
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1158549
-bcn_uri: http://datos.bcn.cl/recurso/cl/proyecto-de-ley/8970-06
 ultima_modificacion: 2022-02-12 (vigencia plena tras reglamento DS 296/2022)
 vigencia: vigente
 materia:

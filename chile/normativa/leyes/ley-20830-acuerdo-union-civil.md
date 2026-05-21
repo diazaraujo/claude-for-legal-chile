@@ -4,7 +4,6 @@ slug: ley-20830-acuerdo-union-civil
 titulo_oficial: Crea el Acuerdo de Unión Civil
 publicacion: 2015-04-21
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1075210
-bcn_uri: http://datos.bcn.cl/recurso/cl/proyecto-de-ley/7873-07
 ultima_modificacion: 2015-04-21 (con efectos por Ley 21.400 sobre matrimonio igualitario)
 vigencia: vigente
 materia:

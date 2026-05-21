@@ -4,7 +4,6 @@ slug: ley-20880-probidad-publica
 titulo_oficial: Sobre probidad en la función pública y prevención de los conflictos de intereses
 publicacion: 2016-01-05
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1086062
-bcn_uri: http://datos.bcn.cl/recurso/cl/proyecto-de-ley/7616-06
 ultima_modificacion: actualización continua
 vigencia: vigente
 materia:
