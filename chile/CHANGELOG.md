@@ -3,6 +3,68 @@
 Cambios al contenido de `chile/`. Para cambios del upstream ver `git log` con
 `upstream/main`.
 
+## 0.7.0 — 2026-05-21 — Grafo BCN completo + backlog capa 3 priorizado
+
+### Grafo BCN (pilar 2 cerrado)
+
+Scrape SPARQL de los 9 predicados de bcn-norms completo en 2h:
+
+| Predicado | Edges |
+|---|---:|
+| modifiesTo | 328.203 |
+| isModifiedBy | 327.507 |
+| agreeWith | 91.853 |
+| isRegulatedBy | 3.906 |
+| regulates | 2.049 |
+| isRectifiedBy | 959 |
+| rectifies | 901 |
+| recasts | 661 |
+| isRecastedBy | 126 |
+| **Total** | **746.165** |
+
+Paginación por URI lexicográfica (evita bug Virtuoso de OFFSET >10k).
+
+### Capa 3 enriquecida con grafo (90 perfiles, 3.017 edges)
+
+Frontmatter ahora incluye 9 sub-campos en `grafo_relaciones`:
+modifica, modificada_por, reglamenta, reglamentada_por, refunde,
+refundida_por, rectifica, rectificada_por, acuerda_con.
+
+Canonicalización: quita `/es@YYYY-MM-DD` (versiones temporales) +
+normaliza separadores BCN inconsistentes (`_` vs `-`).
+
+### 22 borradores capa 3 nuevos (priorizados por degree del grafo)
+
+Generador `generar-borradores-capa3.py` crea perfiles con **solo
+metadata verificable** (catálogo BCN + grafo) + checklist de pendientes
+para abogado. Marca `borrador-generado-no-validado`.
+
+Borradores nuevos:
+- Tránsito/Civil: Ley 18290 (Tránsito), Ley 18020 (SUF)
+- Penal: Ley 19806 (Adecuatorias PP), Ley 19047 (Garantías), Ley 19828 (SENAMA)
+- Societario: Ley 19705 (OPAs), Ley 20552 (Modernización Financiera), DFL 3 (Propiedad Industrial)
+- Administrativo: Ley 19653 (Probidad), Ley 20088 (Decl. Patrimonial), Ley 19882 (Personal Funcionarios), Ley 20128 (Resp. Fiscal)
+- Tributario: Ley 19738 (Evasión), Ley 20322 (TTA), Ley 20026 (Royalty Minero), Ley 18634 (Aduana)
+- Otros: Ley 19925 (Bebidas), Ley 20502 (SENDA), Ley 20530 (Min Des Social), Ley 20283 (Bosque Nativo), DL 3501 (Cotiz. Previsional), DFL 850 (Caminos OOPP)
+
+### MCP enriquecido
+
+- `lookup_by_uri()` en LocalCatalog.
+- `get_relaciones` ahora resuelve dst URIs a slugs locales (output más útil).
+- CLI `mcp-bcn-cli` con misma mejora.
+- 11/11 tests offline en verde.
+
+### Auditorías nuevas
+
+- `audits/densidad-grafo-2026-05-21.md` — densidad 3% del grafo, gap dto/res.
+- `audits/cobertura-leyes-2026-05-21.md` — distribución por rango numérico.
+- `scripts/audit/hubs-sin-capa3.py` — backlog priorizado por degree.
+- `scripts/audit/check-mcp-resolves-capa3.py` — verifica 158/158 perfiles resuelven via MCP.
+
+### Capa 3 corpus
+
+- 158 perfiles inicial + 22 borradores sesión = **180 perfiles**.
+
 ## 0.6.0 — 2026-05-21 — Catálogo + grafo BCN + MCP local-first
 
 **Resumen:** transición arquitectural del scrape REST-por-norma al

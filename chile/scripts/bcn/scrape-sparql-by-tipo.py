@@ -47,6 +47,7 @@ SELECT ?norma ?leychileCode ?label ?numero ?publishDate ?promulgationDate ?organ
 WHERE {{
   ?norma a bcnnorms:RootNorm .
   ?norma bcnnorms:type <{tipo_uri}> .
+  FILTER (str(?norma) > "{after_uri}")
   OPTIONAL {{ ?norma bcnnorms:leychileCode ?leychileCode }}
   OPTIONAL {{ ?norma rdfs:label ?label }}
   OPTIONAL {{ ?norma bcnnorms:hasNumber ?numero }}
@@ -55,7 +56,7 @@ WHERE {{
   OPTIONAL {{ ?norma bcnnorms:createdBy ?organismo }}
 }}
 ORDER BY ?norma
-LIMIT {limit} OFFSET {offset}
+LIMIT {limit}
 """
 
 
@@ -140,13 +141,13 @@ def write_norma(row: dict, tipo: str) -> Path | None:
 
 def scrape_tipo(tipo: str, batch: int, max_per_tipo: int, rate: float) -> int:
     tipo_uri = TIPO_URI.format(tipo=tipo)
-    offset = 0
+    after_uri = ""
     total = 0
     start = time.time()
     print(f"\n[TIPO] {tipo} (uri={tipo_uri})", flush=True)
 
     while total < max_per_tipo:
-        query = QUERY_TPL.format(tipo_uri=tipo_uri, limit=batch, offset=offset)
+        query = QUERY_TPL.format(tipo_uri=tipo_uri, limit=batch, after_uri=after_uri)
         retries = 0
         data = None
         while True:
@@ -183,15 +184,22 @@ def scrape_tipo(tipo: str, batch: int, max_per_tipo: int, rate: float) -> int:
             break
 
         written = 0
+        new_after = after_uri
         for row in rows:
+            uri = row.get("norma", {}).get("value", "")
             if write_norma(row, tipo):
                 written += 1
+            if uri and uri > new_after:
+                new_after = uri
+        if new_after == after_uri:
+            print(f"  [BREAK] cursor sin avance, fin de {tipo}", flush=True)
+            break
+        after_uri = new_after
 
         total += written
-        offset += batch
         elapsed = time.time() - start
         print(
-            f"  [BATCH] offset={offset} written={written} total={total} "
+            f"  [BATCH] after={after_uri[-50:]!r} written={written} total={total} "
             f"elapsed={elapsed:.0f}s",
             flush=True,
         )
