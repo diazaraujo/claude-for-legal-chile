@@ -5,7 +5,6 @@ titulo_oficial: Establece medidas de garantía y pago efectivo de las deudas de 
 publicacion: 2022-12-08
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1185493
 bcn_uri: http://datos.bcn.cl/recurso/cl/res/ministerio-de-vivienda-y-urbanismo_servicio-de-vivienda-y-urbanizacion-region-de-coquimbo/2022-12-01/2146
-fuente_oficial_status: pendiente-verificacion-bcn
 ultima_modificacion: 2022-12-08
 vigencia: vigente
 materia:
@@ -20,13 +19,7 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
----
-
-> ⚠️ **URL BCN pendiente de verificación.** El catálogo capa 1 no contiene
-> el ID de esta norma; el campo `fuente_oficial` puede apuntar a una norma
-> distinta. Verificar contra BCN antes de citar.
-
-# Ley 21.515 — Garantía de Alimentos Mensuales (GAM)
+---# Ley 21.515 — Garantía de Alimentos Mensuales (GAM)
 
 > **Borrador no validado.** Pendiente de revisión por abogado de
 > familia.

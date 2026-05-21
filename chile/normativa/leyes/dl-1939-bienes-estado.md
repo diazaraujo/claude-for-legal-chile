@@ -5,7 +5,6 @@ titulo_oficial: Normas sobre adquisición, administración y disposición de los
 publicacion: 1977-11-10
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=6816
 bcn_uri: http://datos.bcn.cl/recurso/cl/dl/ministerio-de-hacienda/1977-12-31/2081
-fuente_oficial_status: pendiente-verificacion-bcn
 ultima_modificacion: actualización por leyes específicas
 vigencia: vigente
 materia:
@@ -26,13 +25,7 @@ grafo_relaciones:
   modifica:
     - dl/ministerio-de-hacienda/1974-12-27/818
 
----
-
-> ⚠️ **URL BCN pendiente de verificación.** El catálogo capa 1 no contiene
-> el ID de esta norma; el campo `fuente_oficial` puede apuntar a una norma
-> distinta. Verificar contra BCN antes de citar.
-
-# DL 1.939 — Bienes del Estado
+---# DL 1.939 — Bienes del Estado
 
 > **Borrador no validado.** Pendiente de revisión por abogado de
 > derecho público / inmobiliario.

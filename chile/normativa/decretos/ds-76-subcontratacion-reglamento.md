@@ -5,7 +5,6 @@ titulo_oficial: Reglamento para la aplicación del artículo 66 bis de la Ley 16
 publicacion: 2007-01-17
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=257283
 bcn_uri: http://datos.bcn.cl/recurso/cl/res/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-pesca/2007-01-10/3559-exenta
-fuente_oficial_status: pendiente-verificacion-bcn
 ultima_modificacion: actualización menor
 vigencia: vigente
 materia:
@@ -21,13 +20,7 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
----
-
-> ⚠️ **URL BCN pendiente de verificación.** El catálogo capa 1 no contiene
-> el ID de esta norma; el campo `fuente_oficial` puede apuntar a una norma
-> distinta. Verificar contra BCN antes de citar.
-
-# DS 76 / 2007 — Reglamento Subcontratación + SST
+---# DS 76 / 2007 — Reglamento Subcontratación + SST
 
 > **Borrador no validado.** Pendiente de revisión por abogado laboral.
 

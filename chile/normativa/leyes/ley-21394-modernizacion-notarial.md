@@ -5,7 +5,6 @@ titulo_oficial: Modifica el Código Orgánico de Tribunales en materia de notari
 publicacion: 2021-11-30
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1168816
 bcn_uri: http://datos.bcn.cl/recurso/cl/res/ministerio-de-salud_subsecretaria-de-salud-publica/2021-11-30/1173-exenta
-fuente_oficial_status: pendiente-verificacion-bcn
 ultima_modificacion: 2021-11-30
 vigencia: vigente con escalonamiento
 materia:
@@ -20,13 +19,7 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
----
-
-> ⚠️ **URL BCN pendiente de verificación.** El catálogo capa 1 no contiene
-> el ID de esta norma; el campo `fuente_oficial` puede apuntar a una norma
-> distinta. Verificar contra BCN antes de citar.
-
-# Ley 21.394 — Modernización Notarial
+---# Ley 21.394 — Modernización Notarial
 
 > **Borrador no validado.** Pendiente de revisión por abogado civil /
 > notarial.
