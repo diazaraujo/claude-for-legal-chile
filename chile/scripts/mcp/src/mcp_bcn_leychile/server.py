@@ -20,11 +20,13 @@ from mcp.server.stdio import stdio_server
 from mcp.types import TextContent, Tool
 
 from .bcn_client import BCNClient
+from .local_catalog import LocalCatalog
 
 logger = logging.getLogger(__name__)
 
 server: Server = Server("mcp-bcn-leychile")
 _client = BCNClient()
+_catalog = LocalCatalog()
 
 
 @server.list_tools()
@@ -89,6 +91,84 @@ async def list_tools() -> list[Tool]:
                 "required": ["id_norma"],
             },
         ),
+        Tool(
+            name="lookup_norma",
+            description=(
+                "Resuelve una norma chilena por número, leychile_code, o "
+                "slug usando el catálogo local indexado. Devuelve "
+                "metadata + ruta al .md curado. Más rápido que "
+                "`bcn_get_norma` y funciona sin red. Provee uno de los "
+                "tres argumentos."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "tipo": {
+                        "type": "string",
+                        "description": "Tipo de norma (ley, dl, dfl, dto, cod, aa, acd, tra). Requerido si usas 'numero'.",
+                    },
+                    "numero": {"type": "string"},
+                    "leychile_code": {"type": "string"},
+                    "slug": {"type": "string"},
+                },
+            },
+        ),
+        Tool(
+            name="search_normas",
+            description=(
+                "Busca normas en el catálogo local por título (LIKE). "
+                "Resultados ordenados por capa (3 = curado, 2 = "
+                "estructural, 1 = catálogo). Para fuzzy/semántica, "
+                "complementar con bcn_get_norma."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "q": {"type": "string"},
+                    "tipo": {
+                        "type": "string",
+                        "description": "Filtrar por tipo (opcional)",
+                    },
+                    "limit": {
+                        "type": "integer",
+                        "default": 20,
+                    },
+                },
+                "required": ["q"],
+            },
+        ),
+        Tool(
+            name="get_relaciones",
+            description=(
+                "Devuelve relaciones entre normas desde el grafo BCN "
+                "(modifiesTo, isModifiedBy, regulates, isRegulatedBy, "
+                "recasts, rectifies, agreeWith). Útil para entender qué "
+                "modifica/deroga/reglamenta una norma."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "bcn_uri": {
+                        "type": "string",
+                        "description": "URI BCN (http://datos.bcn.cl/recurso/cl/...). Si no la conoces, usar lookup_norma primero.",
+                    },
+                    "direction": {
+                        "type": "string",
+                        "enum": ["outgoing", "incoming", "both"],
+                        "default": "outgoing",
+                    },
+                },
+                "required": ["bcn_uri"],
+            },
+        ),
+        Tool(
+            name="catalog_stats",
+            description=(
+                "Estadísticas del catálogo local: total normas, edges, "
+                "por tipo. Útil para verificar cobertura."
+            ),
+            inputSchema={"type": "object", "properties": {}},
+        ),
     ]
 
 
@@ -145,6 +225,111 @@ async def call_tool(name: str, arguments: dict[str, Any]) -> list[TextContent]:
                     ),
                 )
             ]
+
+    if name == "lookup_norma":
+        norma = None
+        if arguments.get("slug"):
+            norma = _catalog.lookup_by_slug(arguments["slug"])
+        elif arguments.get("leychile_code"):
+            norma = _catalog.lookup_by_leychile_code(arguments["leychile_code"])
+        elif arguments.get("tipo") and arguments.get("numero"):
+            norma = _catalog.lookup_by_numero(
+                arguments["tipo"], arguments["numero"]
+            )
+        if not norma:
+            return [
+                TextContent(
+                    type="text",
+                    text=json.dumps(
+                        {"found": False, "hint": "Probar bcn_get_norma con id_norma BCN."},
+                        ensure_ascii=False,
+                    ),
+                )
+            ]
+        payload = {
+            "found": True,
+            "slug": norma.slug,
+            "tipo": norma.tipo,
+            "numero": norma.numero,
+            "titulo": norma.titulo,
+            "publicacion": norma.publicacion,
+            "promulgacion": norma.promulgacion,
+            "organismo": norma.organismo,
+            "leychile_code": norma.leychile_code,
+            "bcn_uri": norma.bcn_uri,
+            "fuente_oficial": norma.fuente_oficial,
+            "capa": norma.capa,
+            "md_path": norma.md_path,
+        }
+        return [
+            TextContent(
+                type="text",
+                text=json.dumps(payload, ensure_ascii=False, indent=2),
+            )
+        ]
+
+    if name == "search_normas":
+        q = arguments["q"]
+        tipo = arguments.get("tipo")
+        limit = int(arguments.get("limit", 20))
+        results = _catalog.search(q, limit=limit, tipo=tipo)
+        payload = {
+            "query": q,
+            "tipo_filter": tipo,
+            "count": len(results),
+            "results": [
+                {
+                    "slug": n.slug,
+                    "tipo": n.tipo,
+                    "numero": n.numero,
+                    "titulo": n.titulo,
+                    "capa": n.capa,
+                    "leychile_code": n.leychile_code,
+                    "fuente_oficial": n.fuente_oficial,
+                    "md_path": n.md_path,
+                }
+                for n in results
+            ],
+        }
+        return [
+            TextContent(
+                type="text",
+                text=json.dumps(payload, ensure_ascii=False, indent=2),
+            )
+        ]
+
+    if name == "get_relaciones":
+        uri = arguments["bcn_uri"]
+        direction = arguments.get("direction", "outgoing")
+        edges = _catalog.relaciones(uri, direction=direction)
+        return [
+            TextContent(
+                type="text",
+                text=json.dumps(
+                    {
+                        "bcn_uri": uri,
+                        "direction": direction,
+                        "count": len(edges),
+                        "edges": [
+                            {"src": e.src_uri, "rel": e.rel, "dst": e.dst_uri}
+                            for e in edges
+                        ],
+                    },
+                    ensure_ascii=False,
+                    indent=2,
+                ),
+            )
+        ]
+
+    if name == "catalog_stats":
+        return [
+            TextContent(
+                type="text",
+                text=json.dumps(
+                    _catalog.stats(), ensure_ascii=False, indent=2
+                ),
+            )
+        ]
 
     return [TextContent(type="text", text=json.dumps({"error": f"tool desconocido: {name}"}))]
 

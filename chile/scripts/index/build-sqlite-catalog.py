@@ -32,6 +32,11 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
 CATALOG_ROOT = REPO_ROOT / "chile/normativa/catalogo"
+CAPA3_ROOTS = [
+    REPO_ROOT / "chile/normativa/leyes",
+    REPO_ROOT / "chile/normativa/codigos",
+    REPO_ROOT / "chile/normativa/decretos",
+]
 GRAFO_FILE = REPO_ROOT / "chile/normativa/grafo/relaciones-bcn.jsonl"
 DB_DIR = REPO_ROOT / "chile/normativa/index"
 DB_PATH = DB_DIR / "catalogo.sqlite3"
@@ -115,49 +120,93 @@ def init_db(conn: sqlite3.Connection) -> None:
         print("[WARN] FTS5 no disponible, búsqueda por LIKE solamente")
 
 
+SLUG_TIPO_RE = re.compile(r"^(ley|dl|dfl|ds|cod|codigo|aa|acd|tra|res|dto)-")
+SLUG_NUMERO_RE = re.compile(r"^(?:ley|dl|dfl|ds|aa|acd|tra|res|dto)-(\d+)")
+LEYCHILE_URL_RE = re.compile(r"idNorma=(\d+)")
+
+
+def _infer_tipo_from_slug(slug: str) -> str | None:
+    m = SLUG_TIPO_RE.match(slug)
+    if not m:
+        return None
+    raw = m.group(1)
+    return {"codigo": "cod", "ds": "dto"}.get(raw, raw)
+
+
+def _index_file(cur: sqlite3.Cursor, f: Path, default_tipo: str) -> str | None:
+    try:
+        fm = parse_frontmatter(f.read_text(encoding="utf-8"))
+    except Exception as e:
+        print(f"  [SKIP] {f}: {e}")
+        return None
+    slug = fm.get("slug") or f.stem
+    tipo = fm.get("tipo") or _infer_tipo_from_slug(slug) or default_tipo
+
+    # Derivar leychile_code desde fuente_oficial si no está explícito
+    leychile = fm.get("leychile_code")
+    if not leychile and (fuente := fm.get("fuente_oficial")):
+        m = LEYCHILE_URL_RE.search(fuente)
+        if m:
+            leychile = m.group(1)
+
+    # Derivar numero desde slug si no está explícito
+    numero = fm.get("numero")
+    if not numero:
+        m = SLUG_NUMERO_RE.match(slug)
+        if m:
+            numero = m.group(1)
+    try:
+        capa = int(fm.get("capa", "1"))
+    except ValueError:
+        capa = 1
+    cur.execute(
+        "INSERT OR REPLACE INTO normas("
+        "slug, tipo, numero, titulo, publicacion, promulgacion, "
+        "organismo, leychile_code, bcn_uri, capa, md_path"
+        ") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+        (
+            slug,
+            tipo,
+            numero,
+            fm.get("titulo_oficial"),
+            fm.get("publicacion"),
+            fm.get("promulgacion"),
+            fm.get("emisor"),
+            leychile,
+            fm.get("bcn_uri"),
+            capa,
+            str(f.relative_to(REPO_ROOT)),
+        ),
+    )
+    return tipo
+
+
 def index_catalog(conn: sqlite3.Connection) -> tuple[int, dict[str, int]]:
     cur = conn.cursor()
     total = 0
     by_tipo: dict[str, int] = {}
-    if not CATALOG_ROOT.exists():
-        return 0, {}
 
-    for tipo_dir in sorted(CATALOG_ROOT.iterdir()):
-        if not tipo_dir.is_dir():
-            continue
-        for f in tipo_dir.glob("*.md"):
-            try:
-                fm = parse_frontmatter(f.read_text(encoding="utf-8"))
-            except Exception as e:
-                print(f"  [SKIP] {f}: {e}")
+    # Capa 1 — catalogo BCN
+    if CATALOG_ROOT.exists():
+        for tipo_dir in sorted(CATALOG_ROOT.iterdir()):
+            if not tipo_dir.is_dir():
                 continue
-            slug = fm.get("slug") or f.stem
-            tipo = fm.get("tipo") or tipo_dir.name
-            try:
-                capa = int(fm.get("capa", "1"))
-            except ValueError:
-                capa = 1
-            cur.execute(
-                "INSERT OR REPLACE INTO normas("
-                "slug, tipo, numero, titulo, publicacion, promulgacion, "
-                "organismo, leychile_code, bcn_uri, capa, md_path"
-                ") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-                (
-                    slug,
-                    tipo,
-                    fm.get("numero"),
-                    fm.get("titulo_oficial"),
-                    fm.get("publicacion"),
-                    fm.get("promulgacion"),
-                    fm.get("emisor"),
-                    fm.get("leychile_code"),
-                    fm.get("bcn_uri"),
-                    capa,
-                    str(f.relative_to(REPO_ROOT)),
-                ),
-            )
-            total += 1
-            by_tipo[tipo] = by_tipo.get(tipo, 0) + 1
+            for f in tipo_dir.glob("*.md"):
+                tipo = _index_file(cur, f, tipo_dir.name)
+                if tipo:
+                    total += 1
+                    by_tipo[tipo] = by_tipo.get(tipo, 0) + 1
+            conn.commit()
+
+    # Capa 3 — perfiles curados (leyes, codigos, decretos)
+    for capa3_dir in CAPA3_ROOTS:
+        if not capa3_dir.exists():
+            continue
+        for f in capa3_dir.glob("*.md"):
+            tipo = _index_file(cur, f, capa3_dir.name.rstrip("s"))
+            if tipo:
+                total += 1
+                by_tipo[tipo] = by_tipo.get(tipo, 0) + 1
         conn.commit()
 
     # Rebuild FTS si existe

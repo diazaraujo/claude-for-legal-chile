@@ -210,7 +210,7 @@ def main() -> int:
                 data = sparql_query(query)
                 break
             except urllib.error.HTTPError as e:
-                if e.code in (429, 502, 503, 504) and retries < 5:
+                if e.code in (429, 500, 502, 503, 504) and retries < 8:
                     sleep_s = 5 * (2 ** retries)
                     print(f"  [WARN] HTTP {e.code}, retry in {sleep_s}s", flush=True)
                     time.sleep(sleep_s)
