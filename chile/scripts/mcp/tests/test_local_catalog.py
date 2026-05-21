@@ -156,6 +156,13 @@ class LocalCatalogTest(unittest.TestCase):
         self.assertIsNone(self.cat.lookup_by_slug("no-existe"))
         self.assertIsNone(self.cat.lookup_by_leychile_code("999999999"))
         self.assertIsNone(self.cat.lookup_by_numero("ley", "999999"))
+        self.assertIsNone(self.cat.lookup_by_uri("http://x.invented/y"))
+
+    def test_lookup_by_uri(self) -> None:
+        n = self.cat.lookup_by_uri("http://datos.bcn.cl/recurso/cl/ley/21643")
+        self.assertIsNotNone(n)
+        self.assertEqual(n.slug, "ley-21643")
+        self.assertEqual(n.leychile_code, "1200096")
 
     def test_relaciones_outgoing(self) -> None:
         rels = self.cat.relaciones(
