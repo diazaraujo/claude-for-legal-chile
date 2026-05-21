@@ -4,6 +4,7 @@ slug: ley-21212-femicidio-gabriela
 titulo_oficial: Modifica el Código Penal, el Código Procesal Penal y la Ley N° 18.216 en materia de tipificación del femicidio ("Ley Gabriela")
 publicacion: 2020-03-04
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1143040
+bcn_uri: http://datos.bcn.cl/recurso/cl/proyecto-de-ley/11970-34
 ultima_modificacion: 2020-03-04
 vigencia: vigente
 materia:

@@ -4,6 +4,7 @@ slug: ley-20727-factura-electronica-masiva
 titulo_oficial: Introduce modificaciones a la legislación tributaria en materia de factura electrónica
 publicacion: 2014-01-31
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1058909
+bcn_uri: http://datos.bcn.cl/recurso/cl/proyecto-de-ley/8874-05
 ultima_modificacion: 2014-01-31
 vigencia: vigente con escalonamiento completo
 materia:

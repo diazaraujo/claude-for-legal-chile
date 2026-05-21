@@ -4,6 +4,7 @@ slug: ley-20885-subsecretaria-ddhh
 titulo_oficial: Crea la Subsecretaría de Derechos Humanos y adecúa la Ley Orgánica del Ministerio de Justicia
 publicacion: 2016-01-05
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1086063
+bcn_uri: http://datos.bcn.cl/recurso/cl/proyecto-de-ley/8207-07
 ultima_modificacion: 2016-01-05
 vigencia: vigente
 materia:

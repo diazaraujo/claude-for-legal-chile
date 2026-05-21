@@ -4,6 +4,7 @@ slug: ley-21595-delitos-economicos
 titulo_oficial: Sobre delitos económicos y atentados contra el medio ambiente
 publicacion: 2023-08-17
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1195119
+bcn_uri: http://datos.bcn.cl/recurso/cl/proyecto-de-ley/13204-07
 ultima_modificacion: 2023-08-17 (entrada en vigencia escalonada)
 vigencia: vigente con vigencias diferidas — régimen pleno desde septiembre de 2024
 materia:

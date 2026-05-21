@@ -4,6 +4,7 @@ slug: ley-21419-pgu
 titulo_oficial: Crea la Pensión Garantizada Universal y modifica los cuerpos legales que indica
 publicacion: 2022-02-04
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1171923
+bcn_uri: http://datos.bcn.cl/recurso/cl/proyecto-de-ley/14588-13
 ultima_modificacion: 2022-02-04 (con ajustes posteriores de monto vía leyes anuales)
 vigencia: vigente
 materia:

@@ -4,6 +4,7 @@ slug: ley-21314-gobierno-corporativo
 titulo_oficial: Establece nuevas exigencias de transparencia y refuerza las responsabilidades de los agentes de los mercados
 publicacion: 2021-04-13
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1158144
+bcn_uri: http://datos.bcn.cl/recurso/cl/proyecto-de-ley/10162-05
 ultima_modificacion: 2021-04-13
 vigencia: vigente
 materia:

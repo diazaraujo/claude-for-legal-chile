@@ -4,6 +4,7 @@ slug: ley-21561-reduccion-jornada
 titulo_oficial: Modifica el Código del Trabajo, con el objeto de reducir la jornada laboral
 publicacion: 2023-04-26
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1191554
+bcn_uri: http://datos.bcn.cl/recurso/cl/proyecto-de-ley/11179-13
 ultima_modificacion: 2023-04-26
 vigencia: vigente, con reducción escalonada hasta 2028
 capa: 3

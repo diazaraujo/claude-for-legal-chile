@@ -4,6 +4,7 @@ slug: ley-20422-discapacidad
 titulo_oficial: Establece normas sobre igualdad de oportunidades e inclusión social de personas con discapacidad
 publicacion: 2010-02-10
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1010903
+bcn_uri: http://datos.bcn.cl/recurso/cl/proyecto-de-ley/3875-11
 ultima_modificacion: actualización continua (Ley 21.545 autismo)
 vigencia: vigente
 materia:

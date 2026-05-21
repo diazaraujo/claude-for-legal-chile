@@ -4,6 +4,7 @@ slug: ley-3918-srl
 titulo_oficial: Sobre Sociedades de Responsabilidad Limitada
 publicacion: 1923-03-14
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=26117
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-hacienda/1949-12-01/9538
 fuente_oficial_status: pendiente-verificacion-bcn
 ultima_modificacion: actualización continua
 vigencia: vigente
@@ -20,6 +21,10 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dl/ministerio-de-hacienda/1925-08-22/486
+
 ---
 
 > ⚠️ **URL BCN pendiente de verificación.** El catálogo capa 1 no contiene

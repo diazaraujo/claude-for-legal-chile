@@ -4,6 +4,7 @@ slug: ley-21515-gam-alimentos
 titulo_oficial: Establece medidas de garantía y pago efectivo de las deudas de pensiones alimenticias
 publicacion: 2022-12-08
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1185493
+bcn_uri: http://datos.bcn.cl/recurso/cl/res/ministerio-de-vivienda-y-urbanismo_servicio-de-vivienda-y-urbanizacion-region-de-coquimbo/2022-12-01/2146
 fuente_oficial_status: pendiente-verificacion-bcn
 ultima_modificacion: 2022-12-08
 vigencia: vigente

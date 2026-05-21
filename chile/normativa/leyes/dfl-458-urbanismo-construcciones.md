@@ -4,6 +4,7 @@ slug: dfl-458-urbanismo-construcciones
 titulo_oficial: Ley General de Urbanismo y Construcciones (LGUC)
 publicacion: 1976-04-13
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=8201
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-vivienda-y-urbanismo/1992-06-05/47
 fuente_oficial_status: pendiente-verificacion-bcn
 cuerpo_normativo: DFL 458 (Vivienda, 1975)
 ultima_modificacion: actualización continua (Ley 21.078 sobre Transparencia del Mercado del Suelo; Ley 20.234 sobre Loteos Irregulares)
@@ -22,6 +23,41 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-del-interior/1931-05-30/345
+    - dto/ministerio-de-vivienda-y-urbanismo/1984-11-29/168
+  modificada_por:
+    - dto/ministerio-de-vivienda-y-urbanismo/1993-01-05/112
+    - dto/ministerio-de-vivienda-y-urbanismo/1993-03-23/26
+    - dto/ministerio-de-vivienda-y-urbanismo/1993-07-14/67
+    - dto/ministerio-de-vivienda-y-urbanismo/1993-08-25/85
+    - dto/ministerio-de-vivienda-y-urbanismo/1993-12-22/101
+    - dto/ministerio-de-vivienda-y-urbanismo/1994-02-19/7
+    - dto/ministerio-de-vivienda-y-urbanismo/1994-03-07/4
+    - dto/ministerio-de-vivienda-y-urbanismo/1994-03-30/14
+    - dto/ministerio-de-vivienda-y-urbanismo/1994-10-29/158
+    - dto/ministerio-de-vivienda-y-urbanismo/1995-01-03/182
+    - dto/ministerio-de-vivienda-y-urbanismo/1995-04-27/28
+    - dto/ministerio-de-vivienda-y-urbanismo/1995-06-20/40
+    - dto/ministerio-de-vivienda-y-urbanismo/1996-04-30/29
+    - dto/ministerio-de-vivienda-y-urbanismo/1996-11-02/128
+    - dto/ministerio-de-vivienda-y-urbanismo/1997-01-17/171
+    - dto/ministerio-de-vivienda-y-urbanismo/1997-03-12/173
+    - dto/ministerio-de-vivienda-y-urbanismo/1997-09-06/78
+    - dto/ministerio-de-vivienda-y-urbanismo/1997-11-11/120
+    - dto/ministerio-de-vivienda-y-urbanismo/1998-07-29/111
+    - dto/ministerio-de-vivienda-y-urbanismo/1998-07-29/89
+  reglamenta:
+    - dfl/ministerio-de-hacienda/1959-07-31/2
+    - dto/ministerio-de-obras-publicas/1960-07-18/1101
+    - dto/ministerio-de-obras-publicas/1963-05-16/880
+    - ley/ministerio-de-justicia/1937-08-16/6071
+  rectifica:
+    - dfl/ministerio-del-interior/1931-05-30/345
+  rectificada_por:
+    - res/ministerio-de-vivienda-y-urbanismo/2008-10-22/693
+
 ---
 
 > ⚠️ **URL BCN pendiente de verificación.** El catálogo capa 1 no contiene

@@ -4,6 +4,7 @@ slug: dfl-2-1998-subvencion-escolar
 titulo_oficial: Subvención del Estado a Establecimientos Educacionales (texto refundido)
 publicacion: 1998-11-28 (texto refundido DFL 2/1998 Mineduc)
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=127911
+bcn_uri: http://datos.bcn.cl/recurso/cl/dfl/ministerio-de-educacion/1998-11-28/2
 ultima_modificacion: actualización continua (Ley 20.501, Ley 21.040, Ley 20.529)
 vigencia: vigente
 materia:
@@ -19,6 +20,73 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modificada_por:
+    - dto/ministerio-de-educacion-publica/1996-04-27/166
+    - dto/ministerio-de-educacion/1999-03-12/14
+    - dto/ministerio-de-educacion/1999-03-26/37
+    - dto/ministerio-de-educacion/2000-02-22/14
+    - dto/ministerio-de-educacion/2000-06-13/223
+    - dto/ministerio-de-educacion/2002-03-02/324
+    - dto/ministerio-de-educacion/2002-03-02/58
+    - dto/ministerio-de-educacion/2006-05-16/40
+    - dto/ministerio-de-educacion/2007-02-23/409
+    - ley/ministerio-de-educacion-publica/1993-12-13/19271
+    - ley/ministerio-de-educacion/1995-09-02/19410
+    - ley/ministerio-de-educacion/1997-05-31/19504
+    - ley/ministerio-de-educacion/1997-11-17/19532
+    - ley/ministerio-de-educacion/1999-01-09/19598
+    - ley/ministerio-de-educacion/2000-03-07/19662
+    - ley/ministerio-de-educacion/2001-01-31/19715
+    - ley/ministerio-de-educacion/2003-05-29/19873
+    - ley/ministerio-de-educacion/2004-02-12/19933
+    - ley/ministerio-de-educacion/2004-11-06/19979
+    - ley/ministerio-de-educacion/2007-06-23/20184
+  reglamentada_por:
+    - dto/ministerio-de-educacion/1999-04-21/21
+    - dto/ministerio-de-educacion/2000-03-22/48
+    - dto/ministerio-de-educacion/2001-06-12/71
+    - dto/ministerio-de-educacion/2001-06-12/72
+    - dto/ministerio-de-educacion/2002-04-02/54
+    - dto/ministerio-de-educacion/2002-04-02/55
+    - dto/ministerio-de-educacion/2003-04-16/40
+    - dto/ministerio-de-educacion/2003-05-07/41
+    - dto/ministerio-de-educacion/2003-10-06/216
+    - dto/ministerio-de-educacion/2004-04-13/53
+    - dto/ministerio-de-educacion/2005-03-28/28
+    - dto/ministerio-de-educacion/2006-01-09/196
+    - dto/ministerio-de-educacion/2006-05-06/24
+    - dto/ministerio-de-educacion/2006-07-14/101
+    - dto/ministerio-de-educacion/2006-11-17/257
+    - dto/ministerio-de-educacion/2007-03-21/100
+    - dto/ministerio-de-educacion/2007-04-30/106
+    - dto/ministerio-de-educacion/2007-12-10/306
+    - dto/ministerio-de-educacion/2008-01-22/246
+    - dto/ministerio-de-educacion/2008-06-26/423
+  refunde:
+    - dfl/ministerio-de-educacion/1997-01-15/2
+  acuerda_con:
+    - dfl/ministerio-de-educacion/2006-02-21/1
+    - dfl/ministerio-de-educacion/2010-07-02/2
+    - dfl/ministerio-de-educacion/2016-05-17/1
+    - dfl/ministerio-del-interior/1980-10-27/1
+    - dl/ministerio-de-educacion-publica/1980-02-06/3166
+    - dto/ministerio-de-educacion-publica/1993-12-21/588
+    - dto/ministerio-de-educacion-publica/1996-01-17/747
+    - dto/ministerio-de-educacion/1998-01-31/601
+    - dto/ministerio-de-educacion/1998-03-23/10
+    - dto/ministerio-de-educacion/1998-03-23/11
+    - dto/ministerio-de-educacion/1998-12-17/481
+    - dto/ministerio-de-educacion/1999-05-12/99
+    - dto/ministerio-de-educacion/1999-11-16/380
+    - dto/ministerio-de-educacion/2000-02-22/14
+    - dto/ministerio-de-educacion/2000-06-23/270
+    - dto/ministerio-de-educacion/2002-04-02/18
+    - dto/ministerio-de-educacion/2002-04-08/29
+    - dto/ministerio-de-educacion/2002-10-14/202
+    - dto/ministerio-de-educacion/2003-03-13/265
+    - dto/ministerio-de-educacion/2003-05-13/97
+
 ---
 
 # DFL 2/1998 — Subvención Escolar

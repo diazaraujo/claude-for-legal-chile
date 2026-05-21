@@ -25,6 +25,16 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modificada_por:
+    - dfl/ministerio-de-justicia/2000-05-30/1
+    - dto/ministerio-de-justicia/1949-07-04/2200
+    - ley/ministerio-de-justicia/1934-12-19/5521
+    - ley/ministerio-de-justicia/1935-12-02/5750
+    - ley/ministerio-de-justicia/1938-01-28/6162
+    - ley/ministerio-de-justicia/1949-10-06/9400
+    - ley/ministerio-de-justicia/1962-10-05/14908
+
 ---
 
 # Código Civil

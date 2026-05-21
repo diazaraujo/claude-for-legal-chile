@@ -4,6 +4,7 @@ slug: ds-250-reglamento-19886
 titulo_oficial: Reglamento de la Ley N° 19.886 de Bases sobre Contratos Administrativos de Suministro y Prestación de Servicios
 publicacion: 2004-09-24
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=230608
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-hacienda/2004-09-24/250
 ultima_modificacion: actualización continua
 vigencia: vigente
 materia:
@@ -19,6 +20,21 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modificada_por:
+    - dto/ministerio-de-hacienda/2006-04-20/1562
+    - dto/ministerio-de-hacienda/2007-05-03/20
+    - dto/ministerio-de-hacienda/2007-07-13/620
+    - dto/ministerio-de-hacienda/2011-12-27/1383
+    - dto/ministerio-de-hacienda-subsecretaria-de-hacienda/2009-10-06/1763
+  reglamenta:
+    - ley/ministerio-de-hacienda/2003-07-30/19886
+  acuerda_con:
+    - dl/ministerio-de-hacienda/1974-01-05/249
+    - dl/ministerio-de-hacienda/1976-12-07/1608
+    - dto/ministerio-de-hacienda/1991-03-19/98
+    - ley/ministerio-de-hacienda/2003-07-30/19886
+
 ---
 
 # DS 250 / 2004 — Reglamento Compras Públicas

@@ -4,6 +4,7 @@ slug: ds-76-subcontratacion-reglamento
 titulo_oficial: Reglamento para la aplicación del artículo 66 bis de la Ley 16.744 sobre subcontratación y servicios transitorios
 publicacion: 2007-01-17
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=257283
+bcn_uri: http://datos.bcn.cl/recurso/cl/res/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-pesca/2007-01-10/3559-exenta
 fuente_oficial_status: pendiente-verificacion-bcn
 ultima_modificacion: actualización menor
 vigencia: vigente

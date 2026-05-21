@@ -4,6 +4,7 @@ slug: ley-21015-inclusion-laboral
 titulo_oficial: Incentiva la inclusión de personas con discapacidad al mundo laboral
 publicacion: 2017-06-15
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1103997
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-desarrollo-social/2017-06-15/21015
 ultima_modificacion: 2017-06-15
 vigencia: vigente
 capa: 3
@@ -17,6 +18,21 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-de-hacienda/2005-03-16/29
+    - dfl/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2003-01-16/1
+    - ley/ministerio-de-hacienda/1987-02-19/18600
+    - ley/ministerio-de-planificacion/2010-02-10/20422
+    - ley/ministerio-del-trabajo-y-prevision-social/1966-01-28/16395
+  reglamentada_por:
+    - dto/ministerio-del-trabajo-y-prevision-social/2018-02-01/64
+    - dto/ministerio-del-trabajo-y-prevision-social/2018-02-01/65
+  acuerda_con:
+    - res/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social-instituto-de-prevision-social/2018-04-13/120-exenta
+    - res/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo-direccion-del-trabajo/2018-04-04/358-exenta
+    - res/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo-direccion-del-trabajo/2018-06-29/812-exenta
+
 ---
 
 # Ley 21.015 — Inclusión laboral de personas con discapacidad

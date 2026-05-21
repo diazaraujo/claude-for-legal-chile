@@ -4,6 +4,7 @@ slug: ds-40-prevencion-riesgos
 titulo_oficial: Aprueba Reglamento sobre Prevención de Riesgos Profesionales
 publicacion: 1969-03-07
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1041130
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-del-trabajo-y-prevision-social_subsecretaria-de-prevision-social/1969-03-07/40
 ultima_modificacion: actualización por DS posteriores
 vigencia: vigente
 materia:
@@ -20,6 +21,12 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modificada_por:
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/1980-05-05/20
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/1988-07-21/50
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/1995-09-16/95
+
 ---
 
 # DS 40 / 1969 — Reglamento Prevención Riesgos Profesionales

@@ -4,6 +4,7 @@ slug: dl-211-libre-competencia
 titulo_oficial: Fija normas para la defensa de la libre competencia
 publicacion: 1973-12-22
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=236106
+bcn_uri: http://datos.bcn.cl/recurso/cl/dfl/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion/2005-03-07/1
 fuente_oficial_status: pendiente-verificacion-bcn
 cuerpo_normativo: Decreto Ley N° 211 de 1973, texto refundido por DFL 1/2005 de Economía
 ultima_modificacion: Ley 20.945 / 2016 (reforma estructural — delación compensada y control de fusiones); Ley 21.595 / 2023
@@ -22,6 +23,34 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dl/ministerio-de-economia-fomento-y-reconstruccion/1973-12-22/211
+    - dto/ministerio-de-economia/1980-10-27/511
+  modificada_por:
+    - dl/ministerio-de-economia/1979-07-05/2760
+    - dl/ministerio-de-economia-fomento-y-reconstruccion/1973-12-22/211
+    - dl/ministerio-de-hacienda/1979-10-17/2879
+    - dl/ministerio-de-hacienda/1980-01-10/3057
+    - dl/ministerio-de-justicia/1976-03-31/1386
+    - dto/ministerio-de-economia/1980-10-27/511
+    - ley/ministerio-de-economia-fomento-y-reconstruccion/1982-05-22/18118
+    - ley/ministerio-de-economia-fomento-y-reconstruccion/1994-09-29/19336
+    - ley/ministerio-de-economia-fomento-y-reconstruccion-subsecretaria-de-economia-fomento-y-econstruccion/1999-05-19/19610
+    - ley/ministerio-de-economia-fomento-y-reconstruccion-subsecretaria-de-economia-fomento-y-reconstruccion/2003-11-14/19911
+    - ley/ministerio-de-economia-fomento-y-reconstruccion-subsecretaria-de-economia-fomento-y-reconstruccion/2009-07-13/20361
+    - ley/ministerio-de-justicia/2002-05-31/19806
+    - ley/ministerio-secretaria-general-de-la-presidencia/2006-01-05/20088
+  refunde:
+    - dl/ministerio-de-economia-fomento-y-reconstruccion/1973-12-22/211
+    - dto/ministerio-de-economia/1980-10-27/511
+  acuerda_con:
+    - dfl/ministerio-de-hacienda/1960-04-06/338
+    - dto/ministerio-de-hacienda/1964-07-10/2421
+    - ley/ministerio-de-hacienda/1952-05-29/10336
+    - ley/ministerio-de-justicia/1902-08-30/1552
+    - ley/ministerio-de-justicia/1906-02-19/1853
+
 ---
 
 > ⚠️ **URL BCN pendiente de verificación.** El catálogo capa 1 no contiene

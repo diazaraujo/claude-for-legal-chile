@@ -4,6 +4,7 @@ slug: ley-21040-slep
 titulo_oficial: Crea el Sistema de Educación Pública (SLEP)
 publicacion: 2017-11-24
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1111237
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-educacion/2017-11-24/21040
 ultima_modificacion: actualización por leyes específicas
 vigencia: vigente con implementación escalonada
 materia:
@@ -19,6 +20,57 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-de-educacion/1997-01-22/1
+    - dfl/ministerio-de-educacion/1998-11-28/2
+    - dfl/ministerio-de-educacion/2010-07-02/2
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
+    - dl/ministerio-de-educacion-publica/1980-02-06/3166
+    - dto/ministerio-del-interior/1996-11-20/2385
+    - ley/ministerio-de-educacion-publica/1990-03-08/18956
+    - ley/ministerio-de-educacion-publica/1996-08-05/19464
+    - ley/ministerio-de-educacion/1995-09-02/19410
+    - ley/ministerio-de-educacion/2004-11-06/19979
+    - ley/ministerio-de-educacion/2008-02-01/20248
+    - ley/ministerio-de-educacion/2011-08-27/20529
+    - ley/ministerio-de-educacion/2015-06-08/20845
+    - ley/ministerio-de-educacion/2016-04-01/20903
+    - ley/ministerio-de-hacienda/1993-09-15/19247
+    - ley/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/1994-03-14/19296
+  modificada_por:
+    - ley/ministerio-de-educacion/2018-05-23/21093
+    - ley/ministerio-de-educacion/2019-04-25/21152
+    - ley/ministerio-de-salud/2019-12-13/21188
+  reglamentada_por:
+    - dto/ministerio-de-educacion/2018-02-07/375
+    - dto/ministerio-de-educacion/2018-07-07/104
+    - dto/ministerio-de-educacion/2018-08-18/101
+    - dto/ministerio-de-educacion-subsecretaria-de-educacion/2018-10-11/102
+    - dto/ministerio-de-educacion-subsecretaria-de-educacion/2018-12-14/254
+    - dto/ministerio-de-educacion-subsecretaria-de-educacion/2020-08-19/126
+  acuerda_con:
+    - dfl/ministerio-de-educacion/2018-01-12/32
+    - dfl/ministerio-de-educacion/2018-01-12/33
+    - dfl/ministerio-de-educacion/2018-01-18/34
+    - dfl/ministerio-de-educacion-subsecretaria-de-educacion/2018-12-21/14
+    - dfl/ministerio-de-educacion-subsecretaria-de-educacion/2018-12-21/39
+    - dfl/ministerio-de-educacion-subsecretaria-de-educacion/2018-12-21/60
+    - dfl/ministerio-de-educacion-subsecretaria-de-educacion/2018-12-21/61
+    - dfl/ministerio-de-educacion-subsecretaria-de-educacion/2018-12-21/62
+    - dfl/ministerio-de-educacion-subsecretaria-de-educacion/2018-12-21/68
+    - dfl/ministerio-de-educacion-subsecretaria-de-educacion/2019-01-26/18
+    - dfl/ministerio-de-educacion-subsecretaria-de-educacion/2019-01-26/19
+    - dfl/ministerio-de-educacion-subsecretaria-de-educacion/2019-01-26/20
+    - dfl/ministerio-de-educacion-subsecretaria-de-educacion/2019-01-26/21
+    - dfl/ministerio-de-educacion-subsecretaria-de-educacion/2019-01-26/23
+    - dfl/ministerio-de-educacion-subsecretaria-de-educacion/2019-01-26/24
+    - dfl/ministerio-de-educacion-subsecretaria-de-educacion/2019-01-26/25
+    - dfl/ministerio-de-educacion-subsecretaria-de-educacion/2019-01-26/26
+    - dfl/ministerio-de-educacion-subsecretaria-de-educacion/2019-01-26/27
+    - dfl/ministerio-de-educacion-subsecretaria-de-educacion/2019-01-26/28
+    - dfl/ministerio-de-educacion-subsecretaria-de-educacion/2019-01-26/29
+
 ---
 
 # Ley 21.040 — Sistema de Educación Pública (SLEP)

@@ -4,6 +4,7 @@ slug: ds-54-comite-paritario
 titulo_oficial: Aprueba Reglamento para la Constitución y Funcionamiento de los Comités Paritarios de Higiene y Seguridad
 publicacion: 1969-03-21
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1041128
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-energia/2012-06-18/48
 fuente_oficial_status: pendiente-verificacion-bcn
 ultima_modificacion: actualización menor
 vigencia: vigente

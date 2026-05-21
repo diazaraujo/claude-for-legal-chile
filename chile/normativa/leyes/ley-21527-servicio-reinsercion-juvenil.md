@@ -4,6 +4,7 @@ slug: ley-21527-servicio-reinsercion-juvenil
 titulo_oficial: Crea el Servicio Nacional de Reinserción Social Juvenil e introduce modificaciones a la ley N° 20.084
 publicacion: 2023-01-23
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1187684
+bcn_uri: http://datos.bcn.cl/recurso/cl/proyecto-de-ley/11174-07
 ultima_modificacion: 2023-01-23
 vigencia: vigente con implementación escalonada
 materia:

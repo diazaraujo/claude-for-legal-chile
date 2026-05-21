@@ -4,6 +4,7 @@ slug: ley-21442-modernizacion-condominios
 titulo_oficial: Sobre Copropiedad Inmobiliaria (texto refundido coordinado)
 publicacion: 2022-04-13
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1174663
+bcn_uri: http://datos.bcn.cl/recurso/cl/proyecto-de-ley/11540-14
 ultima_modificacion: 2022-04-13
 vigencia: vigente
 materia:

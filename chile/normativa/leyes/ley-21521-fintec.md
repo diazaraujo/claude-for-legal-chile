@@ -4,6 +4,7 @@ slug: ley-21521-fintec
 titulo_oficial: Promueve la competencia e inclusión financiera a través de la innovación y tecnología en la prestación de servicios financieros
 publicacion: 2023-01-04
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1187323
+bcn_uri: http://datos.bcn.cl/recurso/cl/proyecto-de-ley/14570-05
 ultima_modificacion: 2023-01-04 (vigencia escalonada con reglamentos CMF)
 vigencia: vigente con escalonamiento (Sistema Financiero Abierto desde 2025)
 materia:

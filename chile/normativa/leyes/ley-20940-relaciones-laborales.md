@@ -4,6 +4,7 @@ slug: ley-20940-relaciones-laborales
 titulo_oficial: Moderniza el sistema de relaciones laborales
 publicacion: 2016-09-08
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1094436
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-del-trabajo-y-prevision-social/2016-09-08/20940
 ultima_modificacion: actualización continua
 vigencia: vigente (régimen pleno desde 2017-04-01)
 materia:
@@ -20,6 +21,24 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2003-01-16/1
+    - ley/ministerio-de-hacienda/2003-07-30/19886
+    - ley/ministerio-del-trabajo-y-prevision-social/1997-10-14/19518
+  reglamentada_por:
+    - dto/ministerio-del-trabajo-y-prevision-social/2017-03-03/6
+    - dto/ministerio-del-trabajo-y-prevision-social/2017-03-03/7
+  acuerda_con:
+    - dto/ministerio-del-trabajo-y-prevision-social/2017-04-26/16
+    - dto/ministerio-del-trabajo-y-prevision-social/2017-06-23/26
+    - dto/ministerio-del-trabajo-y-prevision-social/2018-04-24/56-exento
+    - res/ministerio-de-economia-fomento-y-turismo/2017-04-01/41-exenta
+    - res/ministerio-de-hacienda/2017-05-25/460
+    - res/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2017-05-29/696-exenta
+    - res/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2017-06-23/3
+    - res/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo-direccion-del-trabajo/2017-04-07/386-exenta
+
 ---
 
 # Ley 20.940 — Modernización del Sistema de Relaciones Laborales

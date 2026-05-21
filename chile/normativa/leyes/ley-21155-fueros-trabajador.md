@@ -4,6 +4,7 @@ slug: ley-21155-fueros-trabajador
 titulo_oficial: Establece medidas de protección a la lactancia materna y su ejercicio
 publicacion: 2019-05-02
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1131064
+bcn_uri: http://datos.bcn.cl/recurso/cl/proyecto-de-ley/9303-11
 ultima_modificacion: 2019-05-02
 vigencia: vigente
 materia:

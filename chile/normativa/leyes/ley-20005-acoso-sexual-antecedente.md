@@ -4,6 +4,7 @@ slug: ley-20005-acoso-sexual-antecedente
 titulo_oficial: Tipifica y sanciona el acoso sexual
 publicacion: 2005-03-18
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=236425
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-del-trabajo-y-prevision-social_subsecretaria-del-trabajo/2005-03-18/20005
 ultima_modificacion: reemplazada/ampliada por Ley 21.643 ("Ley Karin", 2024)
 vigencia: vigente con cambios estructurales por Ley 21.643
 materia:
@@ -17,6 +18,13 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-de-hacienda/2005-03-16/29
+    - dfl/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2003-01-16/1
+    - ley/ministerio-del-interior/1989-09-23/18834
+    - ley/ministerio-del-interior/1989-12-29/18883
+
 ---
 
 # Ley 20.005 — Acoso Sexual (antecedente Ley Karin)

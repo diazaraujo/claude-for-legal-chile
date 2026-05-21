@@ -4,6 +4,7 @@ slug: codigo-trabajo
 titulo_oficial: Código del Trabajo
 publicacion: 2003-01-16 (texto refundido, coordinado y sistematizado)
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=207436
+bcn_uri: http://datos.bcn.cl/recurso/cl/dfl/ministerio-del-trabajo-y-prevision-social_subsecretaria-del-trabajo/2003-01-16/1
 cuerpo_normativo: DFL N° 1 del Ministerio del Trabajo y Previsión Social, 2002
 ultima_modificacion: actualización continua (ver historia de modificaciones en BCN)
 vigencia: vigente
@@ -29,6 +30,68 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - ley/ministerio-del-trabajo-y-prevision-social/1990-11-29/19010
+    - ley/ministerio-del-trabajo-y-prevision-social/1991-02-19/19049
+    - ley/ministerio-del-trabajo-y-prevision-social/1991-07-30/19069
+  modificada_por:
+    - avi/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2003-03-27/s-n
+    - avi/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2003-03-27/s/n
+    - ley/ministerio-de-agricultura/2008-12-27/20308
+    - ley/ministerio-de-desarrollo-social/2017-06-15/21015
+    - ley/ministerio-de-economia-fomento-y-reconstruccion-subsecretaria-de-economia-fomento-y-reconstruccion/2010-02-03/20416
+    - ley/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-economia-y-empresas-de-menor-tamano/2014-01-09/20720
+    - ley/ministerio-de-educacion/2015-05-05/20832
+    - ley/ministerio-de-educacion/2016-04-01/20903
+    - ley/ministerio-de-hacienda/2007-10-03/20219
+    - ley/ministerio-de-hacienda/2008-07-01/20279
+    - ley/ministerio-de-hacienda/2010-08-13/20448
+    - ley/ministerio-de-hacienda/2014-09-29/20780
+    - ley/ministerio-de-hacienda/2016-02-08/20899
+    - ley/ministerio-de-hacienda/2020-02-24/21210
+    - ley/ministerio-de-justicia-y-derechos-humanos/2017-07-07/21017
+    - ley/ministerio-de-justicia/1995-02-18/19374
+    - ley/ministerio-de-justicia/2004-05-25/19945
+    - ley/ministerio-de-justicia/2008-02-15/20252
+    - ley/ministerio-de-justicia/2014-09-04/20774
+    - ley/ministerio-de-justicia/2015-11-06/20876
+  reglamentada_por:
+    - dto/ministerio-de-obras-publicas/2004-12-10/603
+    - dto/ministerio-del-trabajo-y-prevision-social/2017-04-26/16
+    - dto/ministerio-del-trabajo-y-prevision-social/2018-02-01/64
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2007-09-11/50
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/1999-07-16/49
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2000-01-24/90
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2001-06-16/20
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2005-05-10/101
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2007-01-20/319
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2020-07-03/18
+  refunde:
+    - dfl/ministerio-del-trabajo-y-prevision-social/1994-01-24/1
+    - ley/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/1987-07-06/18620
+  acuerda_con:
+    - avi/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2003-03-27/s/n
+    - cci/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/1988-06-16/bancos-34
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2003-08-12/bancos-3233
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2015-01-30/bancos-3575
+    - cir/ministerio-de-hacienda-superintendencia-de-pensiones-superintendencia-de-bancos-e-instituciones-financieras-superintendencia-de-valores-y-seguros/2008-09-08/1534
+    - dfl/ministerio-de-educacion/2015-05-23/1
+    - dic/ministerio-del-trabajo-y-prevision-social-direccion-del-trabajo/1999-11-18/5372
+    - dto/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-economia-y-empresas-de-menor-tamano/2019-09-24/156
+    - dto/ministerio-de-hacienda/2011-11-12/1433
+    - dto/ministerio-de-hacienda/2018-03-29/1540
+    - dto/ministerio-de-justicia-y-derechos-humanos/2016-01-28/294-exento
+    - dto/ministerio-de-justicia-y-derechos-humanos/2016-07-09/1454-exento
+    - dto/ministerio-de-justicia-y-derechos-humanos/2017-02-02/314-exento
+    - dto/ministerio-de-justicia-y-derechos-humanos/2017-05-29/1038-exento
+    - dto/ministerio-de-justicia-y-derechos-humanos/2017-08-30/1674-exento
+    - dto/ministerio-de-justicia-y-derechos-humanos/2018-02-08/144-exento
+    - dto/ministerio-de-justicia-y-derechos-humanos-subsecretaria-de-justicia/2018-12-05/2076-exento
+    - dto/ministerio-de-justicia-y-derechos-humanos-subsecretaria-de-justicia/2019-01-24/130-exento
+    - dto/ministerio-de-justicia-y-derechos-humanos-subsecretaria-de-justicia/2019-09-26/1897-exento
+    - dto/ministerio-de-justicia/1996-11-26/1149
+
 ---
 
 # Código del Trabajo (DFL N° 1 / 2002)

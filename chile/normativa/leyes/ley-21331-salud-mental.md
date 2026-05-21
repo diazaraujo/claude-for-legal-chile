@@ -4,6 +4,7 @@ slug: ley-21331-salud-mental
 titulo_oficial: Del reconocimiento y protección de los derechos de las personas en la atención de salud mental
 publicacion: 2021-05-11
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1159383
+bcn_uri: http://datos.bcn.cl/recurso/cl/proyecto-de-ley/10563-11
 ultima_modificacion: 2021-05-11
 vigencia: vigente
 materia:

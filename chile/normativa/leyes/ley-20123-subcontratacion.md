@@ -4,6 +4,7 @@ slug: ley-20123-subcontratacion
 titulo_oficial: Regula trabajo en régimen de subcontratación, el funcionamiento de empresas de servicios transitorios y el contrato de trabajo de servicios transitorios
 publicacion: 2006-10-16
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=254080
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-del-trabajo-y-prevision-social_subsecretaria-del-trabajo/2006-10-16/20123
 ultima_modificacion: 2006-10-16
 vigencia: vigente
 capa: 3
@@ -18,6 +19,11 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2003-01-16/1
+    - ley/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/1968-02-01/16744
+
 ---
 
 # Ley 20.123 — Subcontratación y suministro de trabajadores

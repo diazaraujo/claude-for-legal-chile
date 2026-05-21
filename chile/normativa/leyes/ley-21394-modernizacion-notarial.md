@@ -4,6 +4,7 @@ slug: ley-21394-modernizacion-notarial
 titulo_oficial: Modifica el Código Orgánico de Tribunales en materia de notariado, conservadores y archiveros judiciales
 publicacion: 2021-11-30
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1168816
+bcn_uri: http://datos.bcn.cl/recurso/cl/res/ministerio-de-salud_subsecretaria-de-salud-publica/2021-11-30/1173-exenta
 fuente_oficial_status: pendiente-verificacion-bcn
 ultima_modificacion: 2021-11-30
 vigencia: vigente con escalonamiento

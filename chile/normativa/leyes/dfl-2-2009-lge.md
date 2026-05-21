@@ -4,6 +4,7 @@ slug: dfl-2-2009-lge
 titulo_oficial: Ley General de Educación (texto refundido DFL 2/2009)
 publicacion: 2009-07-02 (texto refundido)
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1014974
+bcn_uri: http://datos.bcn.cl/recurso/cl/dfl/ministerio-de-educacion/2010-07-02/2
 ultima_modificacion: actualización por Ley 21.040 + Ley 20.501 + Ley 21.094 + otras
 vigencia: vigente
 materia:
@@ -21,6 +22,71 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modificada_por:
+    - dto/ministerio-de-educacion/2017-09-28/1126-exento
+    - ley/ministerio-de-educacion/1991-04-13/19054
+    - ley/ministerio-de-educacion/1998-09-10/19584
+    - ley/ministerio-de-educacion/2000-08-05/19688
+    - ley/ministerio-de-educacion/2001-11-15/19771
+    - ley/ministerio-de-educacion/2003-04-08/19864
+    - ley/ministerio-de-educacion/2004-03-10/19938
+    - ley/ministerio-de-educacion/2004-11-06/19979
+    - ley/ministerio-de-educacion/2005-09-27/20054
+    - ley/ministerio-de-educacion/2006-11-17/20129
+    - ley/ministerio-de-educacion/2009-09-12/20370
+    - ley/ministerio-de-educacion/2010-12-30/20483
+    - ley/ministerio-de-educacion/2011-02-26/20501
+    - ley/ministerio-de-educacion/2011-09-17/20536
+    - ley/ministerio-de-educacion/2013-04-25/20668
+    - ley/ministerio-de-educacion/2015-05-05/20835
+    - ley/ministerio-de-educacion/2015-06-08/20845
+    - ley/ministerio-de-educacion/2015-06-18/20843
+    - ley/ministerio-de-educacion/2017-11-24/21040
+    - ley/ministerio-de-educacion/2017-11-30/21049
+  reglamentada_por:
+    - dto/ministerio-de-educacion-publica/1990-05-11/524
+    - dto/ministerio-de-educacion-publica/1990-11-08/565
+    - dto/ministerio-de-educacion-publica/1996-02-03/40
+    - dto/ministerio-de-educacion-publica/1996-07-18/177
+    - dto/ministerio-de-educacion-publica/1996-10-10/716
+    - dto/ministerio-de-educacion/1991-04-08/291-exento
+    - dto/ministerio-de-educacion/1991-04-12/577
+    - dto/ministerio-de-educacion/1995-09-02/477-exento
+    - dto/ministerio-de-educacion/2003-03-12/311
+    - dto/ministerio-de-educacion/2003-05-03/92
+    - dto/ministerio-de-educacion/2005-03-24/79
+    - dto/ministerio-de-educacion/2007-12-24/2169-exento
+    - dto/ministerio-de-educacion/2011-06-29/315
+    - dto/ministerio-de-educacion/2014-01-16/359
+    - dto/ministerio-de-educacion/2014-10-02/238
+    - dto/ministerio-de-educacion/2018-07-10/301
+    - dto/ministerio-de-educacion-subsecretaria-de-educacion/2020-02-28/327
+  refunde:
+    - dfl/ministerio-de-educacion/2006-02-21/1
+    - ley/ministerio-de-educacion/2009-09-12/20370
+  acuerda_con:
+    - acd/consejo-nacional-de-educacion/2011-04-21/111
+    - acd/consejo-nacional-de-educacion/2011-04-21/138
+    - acd/consejo-nacional-de-educacion/2011-05-19/22
+    - acd/consejo-nacional-de-educacion/2011-05-23/7
+    - acd/consejo-nacional-de-educacion/2014-08-20/44
+    - acd/ministerio-de-educacion-consejo-nacional-de-educacion/2014-12-11/58
+    - acd/ministerio-de-educacion-consejo-nacional-de-educacion/2016-03-16/78
+    - acd/ministerio-de-educacion-consejo-nacional-de-educacion/2017-01-10/74
+    - acd/ministerio-de-educacion-consejo-nacional-de-educacion/2017-01-12/77
+    - acd/ministerio-de-educacion-consejo-nacional-de-educacion/2017-01-18/80
+    - acd/ministerio-de-educacion-consejo-nacional-de-educacion/2017-12-04/65
+    - acd/ministerio-de-educacion-consejo-nacional-de-educacion/2018-01-25/83
+    - acd/ministerio-de-educacion-consejo-nacional-de-educacion/2018-02-02/85
+    - acd/ministerio-de-educacion-consejo-nacional-de-educacion/2018-02-14/20
+    - acd/ministerio-de-educacion-consejo-nacional-de-educacion/2018-02-14/79
+    - acd/ministerio-de-educacion-consejo-nacional-de-educacion/2019-02-02/163
+    - acd/ministerio-de-educacion-consejo-nacional-de-educacion/2020-01-24/135
+    - dfl/ministerio-de-educacion-publica/1981-02-16/5
+    - dfl/ministerio-de-educacion-publica/1981-04-16/24
+    - dfl/ministerio-de-educacion-publica/1993-03-09/5
+
 ---
 
 # DFL 2/2009 — Ley General de Educación (LGE)

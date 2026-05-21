@@ -4,6 +4,7 @@ slug: ley-21420-reduccion-exenciones
 titulo_oficial: Reduce o elimina exenciones tributarias que indica
 publicacion: 2022-02-04
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1172303
+bcn_uri: http://datos.bcn.cl/recurso/cl/proyecto-de-ley/14763-05
 ultima_modificacion: 2022-02-04 (vigencia escalonada)
 vigencia: vigente con escalonamiento (régimen pleno desde 2023-2024)
 materia:

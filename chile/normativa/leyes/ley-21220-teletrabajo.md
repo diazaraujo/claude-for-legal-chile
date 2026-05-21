@@ -4,6 +4,7 @@ slug: ley-21220-teletrabajo
 titulo_oficial: Modifica el Código del Trabajo en materia de trabajo a distancia
 publicacion: 2020-03-26
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1143741
+bcn_uri: http://datos.bcn.cl/recurso/cl/proyecto-de-ley/12008-13
 ultima_modificacion: 2020-03-26
 vigencia: vigente
 capa: 3

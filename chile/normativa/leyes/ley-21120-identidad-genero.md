@@ -4,6 +4,7 @@ slug: ley-21120-identidad-genero
 titulo_oficial: Reconoce y da protección al derecho a la identidad de género
 publicacion: 2018-12-10
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1126480
+bcn_uri: http://datos.bcn.cl/recurso/cl/proyecto-de-ley/8924-07
 ultima_modificacion: 2019-12-27 (vigencia plena tras reglamento)
 vigencia: vigente
 materia:

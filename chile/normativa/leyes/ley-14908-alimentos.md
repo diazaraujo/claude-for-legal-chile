@@ -22,6 +22,30 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - cod/ministerio-de-justicia/1855-12-14/1855
+    - dfl/ministerio-de-justicia/1996-12-26/2
+  modificada_por:
+    - ley/ministerio-de-hacienda/1951-10-05/10003
+    - ley/ministerio-de-justicia/1949-02-19/9293
+    - ley/ministerio-de-justicia/1952-04-02/10271
+    - ley/ministerio-de-justicia/1964-08-13/15632
+    - ley/ministerio-de-justicia/1972-11-17/17814
+    - ley/ministerio-de-justicia/1994-09-23/19335
+    - ley/ministerio-de-justicia/1998-10-26/19585
+    - ley/ministerio-de-justicia/2001-07-24/19741
+    - ley/ministerio-de-justicia/2004-08-30/19968
+    - ley/ministerio-de-justicia/2005-12-15/20086
+    - ley/ministerio-de-justicia/2007-01-09/20152
+    - ley/ministerio-del-interior-subsecretaria-del-interior/2000-09-28/19693
+  refunde:
+    - ley/ministerio-de-justicia/1935-12-02/5750
+  acuerda_con:
+    - cod/ministerio-de-justicia/1855-12-14/1855
+    - dfl/ministerio-de-justicia/1996-12-26/2
+    - ley/ministerio-de-justicia/1902-08-30/1552
+
 ---
 
 # Ley 14.908 — Pensiones Alimenticias
