@@ -1,6 +1,6 @@
 [project]
 name = "mcp-bcn-leychile"
-version = "0.1.0"
+version = "0.6.0"
 description = "MCP server para consultar normativa chilena vía BCN/LeyChile en tiempo real"
 authors = [{name = "Unholster", email = "antonio@unholster.com"}]
 license = {text = "Apache-2.0"}
@@ -16,6 +16,7 @@ Documentation = "https://github.com/diazaraujo/claude-for-legal-chile/tree/main/
 
 [project.scripts]
 mcp-bcn-leychile = "mcp_bcn_leychile.server:main"
+mcp-bcn-cli = "mcp_bcn_leychile.cli:main"
 
 [build-system]
 requires = ["hatchling"]
