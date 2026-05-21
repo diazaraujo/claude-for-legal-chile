@@ -58,9 +58,10 @@ PREFIX bcnnorms: <http://datos.bcn.cl/ontologies/bcn-norms#>
 SELECT ?src ?dst
 WHERE {{
   ?src bcnnorms:{rel} ?dst .
+  FILTER (str(?src) > "{after_src}")
 }}
 ORDER BY ?src ?dst
-LIMIT {limit} OFFSET {offset}
+LIMIT {limit}
 """
 
 
@@ -75,11 +76,15 @@ def sparql_query(query: str, timeout: int = 180) -> dict:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Dump relaciones BCN")
-    parser.add_argument("--batch", type=int, default=5000)
+    parser.add_argument("--batch", type=int, default=2000)
     parser.add_argument("--rate", type=float, default=2.0)
     parser.add_argument(
         "--max-per-rel", type=int, default=500000,
         help="Tope de seguridad por relación",
+    )
+    parser.add_argument(
+        "--append", action="store_true",
+        help="Append al JSONL existente y reanudar por last_src",
     )
     args = parser.parse_args()
 
@@ -88,20 +93,44 @@ def main() -> int:
     by_rel: dict[str, int] = {}
     start = time.time()
 
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as fh:
+    # Resume from existing jsonl: precompute last src per rel
+    last_src_by_rel: dict[str, str] = {rel: "" for rel in RELATIONS}
+    counts_by_rel: dict[str, int] = {rel: 0 for rel in RELATIONS}
+    if OUTPUT_FILE.exists() and args.append:
+        print(f"[INFO] Reanudando desde {OUTPUT_FILE}", flush=True)
+        with open(OUTPUT_FILE, "r", encoding="utf-8") as fh:
+            for line in fh:
+                try:
+                    row = json.loads(line)
+                except json.JSONDecodeError:
+                    continue
+                rel = row.get("rel")
+                src = row.get("src")
+                if rel in last_src_by_rel and src:
+                    if src > last_src_by_rel[rel]:
+                        last_src_by_rel[rel] = src
+                    counts_by_rel[rel] += 1
+        for rel, n in counts_by_rel.items():
+            if n:
+                print(f"  [RESUME] {rel}: {n} edges ya en JSONL, last_src={last_src_by_rel[rel][:60]!r}")
+
+    mode = "a" if args.append else "w"
+    with open(OUTPUT_FILE, mode, encoding="utf-8") as fh:
         for rel in RELATIONS:
             print(f"\n[REL] {rel}", flush=True)
-            offset = 0
-            rel_count = 0
+            after_src = last_src_by_rel[rel]
+            rel_count = counts_by_rel[rel]
             while rel_count < args.max_per_rel:
-                query = QUERY_TPL.format(rel=rel, limit=args.batch, offset=offset)
+                query = QUERY_TPL.format(
+                    rel=rel, limit=args.batch, after_src=after_src
+                )
                 retries = 0
                 while True:
                     try:
                         data = sparql_query(query)
                         break
                     except urllib.error.HTTPError as e:
-                        if e.code in (429, 502, 503, 504) and retries < 5:
+                        if e.code in (429, 500, 502, 503, 504) and retries < 8:
                             sleep_s = 5 * (2 ** retries)
                             print(f"  HTTP {e.code}, retry {sleep_s}s", flush=True)
                             time.sleep(sleep_s)
@@ -124,6 +153,7 @@ def main() -> int:
                 if not rows:
                     break
 
+                batch_added = 0
                 for row in rows:
                     src = row.get("src", {}).get("value")
                     dst = row.get("dst", {}).get("value")
@@ -137,14 +167,23 @@ def main() -> int:
                         )
                         rel_count += 1
                         total += 1
+                        batch_added += 1
+                        if src > after_src:
+                            after_src = src
+                fh.flush()
 
-                offset += args.batch
+                if batch_added == 0:
+                    print(f"  [BREAK] batch sin datos nuevos, fin de {rel}")
+                    break
                 elapsed = time.time() - start
                 print(
-                    f"  offset={offset} rel_total={rel_count} "
-                    f"grand_total={total} elapsed={elapsed:.0f}s",
+                    f"  added={batch_added} rel_total={rel_count} "
+                    f"grand_total={total} elapsed={elapsed:.0f}s "
+                    f"after_src={after_src[-60:]!r}",
                     flush=True,
                 )
+                if len(rows) < args.batch:
+                    break
                 time.sleep(args.rate)
 
             by_rel[rel] = rel_count
