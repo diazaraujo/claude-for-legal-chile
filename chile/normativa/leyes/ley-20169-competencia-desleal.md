@@ -3,7 +3,7 @@ norma: Ley 20.169
 slug: ley-20169-competencia-desleal
 titulo_oficial: Regula la competencia desleal
 publicacion: 2007-02-16
-fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=259507
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=258377
 ultima_modificacion: actualización menor
 vigencia: vigente
 materia:

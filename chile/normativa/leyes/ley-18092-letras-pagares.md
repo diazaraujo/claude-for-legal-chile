@@ -3,7 +3,7 @@ norma: Ley 18.092
 slug: ley-18092-letras-pagares
 titulo_oficial: Dicta nuevas normas sobre letra de cambio y pagaré
 publicacion: 1982-01-14
-fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=29691
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=29517
 ultima_modificacion: actualización menor
 vigencia: vigente
 materia:

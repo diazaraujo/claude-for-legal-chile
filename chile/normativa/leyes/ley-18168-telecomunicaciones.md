@@ -3,7 +3,7 @@ norma: Ley 18.168
 slug: ley-18168-telecomunicaciones
 titulo_oficial: Ley General de Telecomunicaciones
 publicacion: 1982-10-02
-fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=29952
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=29591
 ultima_modificacion: actualización continua (Ley 20.453 / Neutralidad de Red; Ley 21.541 / Acceso Universal a Internet)
 vigencia: vigente
 materia:

@@ -3,7 +3,7 @@ norma: Ley 18.916 (Código Aeronáutico)
 slug: ley-18916-codigo-aeronautico
 titulo_oficial: Aprueba Código Aeronáutico
 publicacion: 1990-02-08
-fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=30253
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=30287
 ultima_modificacion: actualización por Ley 21.080 + otras
 vigencia: vigente
 materia:

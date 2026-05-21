@@ -3,7 +3,7 @@ norma: Ley 18.695
 slug: ley-18695-loc-municipalidades
 titulo_oficial: Ley Orgánica Constitucional de Municipalidades
 publicacion: 1988-03-31 (DFL 1/2006 texto refundido)
-fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=251693
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=30077
 ultima_modificacion: actualización continua (numerosas reformas)
 vigencia: vigente
 materia:

@@ -3,7 +3,7 @@ norma: Ley 19.718
 slug: ley-19718-defensoria-penal-publica
 titulo_oficial: Crea la Defensoría Penal Pública
 publicacion: 2001-03-10
-fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=184382
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=182755
 ultima_modificacion: actualización continua
 vigencia: vigente
 materia:

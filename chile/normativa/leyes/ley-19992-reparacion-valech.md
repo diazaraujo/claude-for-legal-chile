@@ -3,7 +3,7 @@ norma: Ley 19.992
 slug: ley-19992-reparacion-valech
 titulo_oficial: Establece pensión de reparación y otorga otros beneficios a favor de personas que indica
 publicacion: 2004-12-24
-fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=233396
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=233930
 ultima_modificacion: ampliada por Ley 20.874 (Valech II)
 vigencia: vigente
 materia:

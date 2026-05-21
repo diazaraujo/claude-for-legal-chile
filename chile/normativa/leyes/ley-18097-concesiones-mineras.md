@@ -3,7 +3,7 @@ norma: Ley 18.097
 slug: ley-18097-concesiones-mineras
 titulo_oficial: LOC sobre Concesiones Mineras
 publicacion: 1982-01-21
-fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=29658
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=29522
 ultima_modificacion: 1982-01-21
 vigencia: vigente
 materia:

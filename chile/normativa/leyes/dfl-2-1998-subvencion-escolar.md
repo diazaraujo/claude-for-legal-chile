@@ -3,7 +3,7 @@ norma: DFL 2/1998 (Subvención Escolar)
 slug: dfl-2-1998-subvencion-escolar
 titulo_oficial: Subvención del Estado a Establecimientos Educacionales (texto refundido)
 publicacion: 1998-11-28 (texto refundido DFL 2/1998 Mineduc)
-fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=88195
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=127911
 ultima_modificacion: actualización continua (Ley 20.501, Ley 21.040, Ley 20.529)
 vigencia: vigente
 materia:

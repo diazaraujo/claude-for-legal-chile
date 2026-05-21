@@ -3,7 +3,7 @@ norma: Ley 19.983
 slug: ley-19983-factura-electronica
 titulo_oficial: Regula la transferencia y otorga mérito ejecutivo a copia de la factura
 publicacion: 2004-12-15
-fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=233593
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=233421
 ultima_modificacion: actualización por leyes posteriores (Ley 20.727 factura electrónica masiva)
 vigencia: vigente
 materia:

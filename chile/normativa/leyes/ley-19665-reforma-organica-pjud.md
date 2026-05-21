@@ -3,7 +3,7 @@ norma: Ley 19.665
 slug: ley-19665-reforma-organica-pjud
 titulo_oficial: Modifica el Código Orgánico de Tribunales para la reforma procesal penal
 publicacion: 2000-03-09
-fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=160227
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=160254
 ultima_modificacion: actualización por leyes posteriores
 vigencia: vigente
 materia:

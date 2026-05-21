@@ -3,7 +3,7 @@ norma: Ley 20.005
 slug: ley-20005-acoso-sexual-antecedente
 titulo_oficial: Tipifica y sanciona el acoso sexual
 publicacion: 2005-03-18
-fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=237096
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=236425
 ultima_modificacion: reemplazada/ampliada por Ley 21.643 ("Ley Karin", 2024)
 vigencia: vigente con cambios estructurales por Ley 21.643
 materia:

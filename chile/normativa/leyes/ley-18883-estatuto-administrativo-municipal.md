@@ -3,7 +3,7 @@ norma: Ley 18.883
 slug: ley-18883-estatuto-administrativo-municipal
 titulo_oficial: Estatuto Administrativo para Funcionarios Municipales
 publicacion: 1989-12-29
-fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=30290
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=30256
 ultima_modificacion: actualización continua
 vigencia: vigente
 materia:

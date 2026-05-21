@@ -3,7 +3,7 @@ norma: Ley 18.834 (DFL 29/2004)
 slug: ley-18834-estatuto-administrativo
 titulo_oficial: Estatuto Administrativo (texto refundido DFL 29/2004)
 publicacion: 1989-09-23 (texto refundido DFL 29/2004)
-fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=236392
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=30210
 ultima_modificacion: actualización continua
 vigencia: vigente
 materia:
