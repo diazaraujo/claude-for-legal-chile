@@ -89,6 +89,16 @@ class LocalCatalog:
 
     # ----- queries -----
 
+    def lookup_by_uri(self, uri: str) -> NormaLocal | None:
+        if not self.available:
+            return None
+        cur = self._connect().cursor()
+        row = cur.execute(
+            "SELECT * FROM normas WHERE bcn_uri = ? ORDER BY capa DESC LIMIT 1",
+            (uri,),
+        ).fetchone()
+        return self._row_to_norma(row) if row else None
+
     def lookup_by_slug(self, slug: str) -> NormaLocal | None:
         if not self.available:
             return None

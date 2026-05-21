@@ -80,8 +80,28 @@ def cmd_search(args: argparse.Namespace) -> int:
 def cmd_relaciones(args: argparse.Namespace) -> int:
     cat = LocalCatalog()
     edges = cat.relaciones(args.uri, direction=args.direction)
+    # Resolver URIs a slugs locales si están en catálogo
+    con = sqlite3.connect(str(cat.db_path))
+
+    def resolve(uri: str) -> dict:
+        row = con.execute(
+            "SELECT slug, tipo, numero, titulo, capa FROM normas WHERE bcn_uri = ?",
+            (uri,),
+        ).fetchone()
+        if row:
+            return {
+                "uri": uri, "slug": row[0], "tipo": row[1],
+                "numero": row[2], "titulo": row[3], "capa": row[4],
+            }
+        return {"uri": uri, "slug": None}
+
     _dump([
-        {"src": e.src_uri, "rel": e.rel, "dst": e.dst_uri} for e in edges
+        {
+            "rel": e.rel,
+            "direction": "outgoing" if e.src_uri == args.uri else "incoming",
+            "other": resolve(e.dst_uri if e.src_uri == args.uri else e.src_uri),
+        }
+        for e in edges
     ])
     return 0
 

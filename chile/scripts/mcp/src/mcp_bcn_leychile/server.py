@@ -302,6 +302,16 @@ async def call_tool(name: str, arguments: dict[str, Any]) -> list[TextContent]:
         uri = arguments["bcn_uri"]
         direction = arguments.get("direction", "outgoing")
         edges = _catalog.relaciones(uri, direction=direction)
+
+        def _resolve(other_uri: str) -> dict:
+            n = _catalog.lookup_by_uri(other_uri)
+            if n:
+                return {
+                    "uri": other_uri, "slug": n.slug, "tipo": n.tipo,
+                    "numero": n.numero, "titulo": n.titulo, "capa": n.capa,
+                }
+            return {"uri": other_uri, "slug": None}
+
         return [
             TextContent(
                 type="text",
@@ -311,7 +321,11 @@ async def call_tool(name: str, arguments: dict[str, Any]) -> list[TextContent]:
                         "direction": direction,
                         "count": len(edges),
                         "edges": [
-                            {"src": e.src_uri, "rel": e.rel, "dst": e.dst_uri}
+                            {
+                                "rel": e.rel,
+                                "direction": "outgoing" if e.src_uri == uri else "incoming",
+                                "other": _resolve(e.dst_uri if e.src_uri == uri else e.src_uri),
+                            }
                             for e in edges
                         ],
                     },
