@@ -3,6 +3,59 @@
 Cambios al contenido de `chile/`. Para cambios del upstream ver `git log` con
 `upstream/main`.
 
+## 0.6.0 — 2026-05-21 — Catálogo + grafo BCN + MCP local-first
+
+**Resumen:** transición arquitectural del scrape REST-por-norma al
+endpoint SPARQL del grafo BCN. Cobertura del catálogo +193% (de ~9.500
+a 17.817 normas) en una sesión, con 7 tools MCP expuestas y testeadas.
+
+### Catálogo (capa 1)
+
+- **+8.360 normas nuevas via SPARQL** en 10 tipos previamente no
+  cubiertos: cer (2.952), avi (1.008), cir (791), aa (533), dfl (530),
+  tra (167), cci (143), bando (71), cod (19), alc (16).
+- **DL/DFL/DS resueltos** — eran bloqueo crítico: el endpoint REST
+  `cl/ley/{N}` solo soporta `ley/`. Vía SPARQL ahora 3.656 DL + 530 DFL.
+- Pendiente segunda pasada: ~340k dto/res operacionales (no core legales).
+
+### Mapping relacional (capa 2 grafo)
+
+- `chile/normativa/grafo/relaciones-bcn.jsonl` — JSONL con edges del
+  ontology bcn-norms (modifiesTo, isModifiedBy, regulates,
+  isRegulatedBy, recasts, rectifies, agreeWith, hasVersion).
+- Scraper `scrape-sparql-relaciones.py` con pagination por URI
+  lexicográfico (evita el bug Virtuoso de OFFSET >10k).
+- 329k+ edges solo de `modifiesTo` (a medida que termine la pasada).
+
+### MCP `mcp-bcn-leychile` v0.6
+
+**4 tools nuevas** complementan las 3 BCN-remote existentes:
+
+| Tool | Lat. | Descripción |
+|---|---|---|
+| `lookup_norma` | <10ms | Resuelve por tipo+numero / leychile_code / slug |
+| `search_normas` | <50ms | LIKE en título, ordenado por capa DESC |
+| `get_relaciones` | <50ms | Edges del grafo BCN (outgoing/incoming/both) |
+| `catalog_stats` | <10ms | Totales por tipo + edges |
+
+- `LocalCatalog` (cliente SQLite read-only, 10 tests offline en verde).
+- SQLite indexa capa 1 + 2 + 3 unificadamente. Lookup prioriza capa
+  alta (3 > 2 > 1) — si hay perfil curado, gana sobre el catálogo.
+- Indexer `build-sqlite-catalog.py` deriva `leychile_code` desde
+  `fuente_oficial` URL si no está explícito + `numero` desde slug.
+
+### Setup
+
+`chile/scripts/mcp/INSTALL.md` — instrucciones para registrar el MCP
+en Claude Code (`claude mcp add bcn-leychile <path>`).
+
+### Aprendizajes técnicos (memoria)
+
+- `reference_bcn_sparql_endpoint.md` — datos.bcn.cl/sparql, 748k
+  normas, paginar por tipo o por URI (OFFSET >10k rompe).
+- `feedback_no_inventar_ids_urls_referencias.md` (2026-05-20):
+  nunca generar IDs/URLs por inferencia cronológica.
+
 ## 0.0.15 — 2026-05-19
 
 - **Ley 21.057 — Entrevista Videograbada** (1 archivo capa 3):
