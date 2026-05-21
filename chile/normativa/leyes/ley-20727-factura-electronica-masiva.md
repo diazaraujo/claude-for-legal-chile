@@ -4,6 +4,7 @@ slug: ley-20727-factura-electronica-masiva
 titulo_oficial: Introduce modificaciones a la legislación tributaria en materia de factura electrónica
 publicacion: 2014-01-31
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1058643
+fuente_oficial_status: pendiente-verificacion-bcn
 ultima_modificacion: 2014-01-31
 vigencia: vigente con escalonamiento completo
 materia:
@@ -20,6 +21,10 @@ estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
 ---
+
+> ⚠️ **URL BCN pendiente de verificación.** El catálogo capa 1 no contiene
+> el ID de esta norma; el campo `fuente_oficial` puede apuntar a una norma
+> distinta. Verificar contra BCN antes de citar.
 
 # Ley 20.727 — Factura Electrónica Masiva
 

@@ -4,6 +4,7 @@ slug: ley-21515-gam-alimentos
 titulo_oficial: Establece medidas de garantía y pago efectivo de las deudas de pensiones alimenticias
 publicacion: 2022-12-08
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1185493
+fuente_oficial_status: pendiente-verificacion-bcn
 ultima_modificacion: 2022-12-08
 vigencia: vigente
 materia:
@@ -19,6 +20,10 @@ estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
 ---
+
+> ⚠️ **URL BCN pendiente de verificación.** El catálogo capa 1 no contiene
+> el ID de esta norma; el campo `fuente_oficial` puede apuntar a una norma
+> distinta. Verificar contra BCN antes de citar.
 
 # Ley 21.515 — Garantía de Alimentos Mensuales (GAM)
 

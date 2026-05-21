@@ -4,6 +4,7 @@ slug: ley-21234-fraude-tarjetas
 titulo_oficial: Limita la responsabilidad de los usuarios de tarjetas de crédito y débito por operaciones realizadas con tarjetas extraviadas, hurtadas o robadas
 publicacion: 2020-05-29
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1146361
+fuente_oficial_status: pendiente-verificacion-bcn
 ultima_modificacion: 2020-05-29
 vigencia: vigente
 materia:
@@ -20,6 +21,10 @@ estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
 ---
+
+> ⚠️ **URL BCN pendiente de verificación.** El catálogo capa 1 no contiene
+> el ID de esta norma; el campo `fuente_oficial` puede apuntar a una norma
+> distinta. Verificar contra BCN antes de citar.
 
 # Ley 21.234 — Limitación de Responsabilidad por Fraude con Tarjetas
 

@@ -4,6 +4,7 @@ slug: ley-20903-carrera-docente
 titulo_oficial: Crea el Sistema de Desarrollo Profesional Docente
 publicacion: 2016-04-01
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1088963
+fuente_oficial_status: pendiente-verificacion-bcn
 ultima_modificacion: actualización continua
 vigencia: vigente con implementación escalonada
 materia:
@@ -21,6 +22,10 @@ estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
 ---
+
+> ⚠️ **URL BCN pendiente de verificación.** El catálogo capa 1 no contiene
+> el ID de esta norma; el campo `fuente_oficial` puede apuntar a una norma
+> distinta. Verificar contra BCN antes de citar.
 
 # Ley 20.903 — Carrera Profesional Docente
 

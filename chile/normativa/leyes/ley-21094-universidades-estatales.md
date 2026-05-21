@@ -4,6 +4,7 @@ slug: ley-21094-universidades-estatales
 titulo_oficial: Sobre Universidades Estatales
 publicacion: 2018-06-05
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1118991
+fuente_oficial_status: pendiente-verificacion-bcn
 ultima_modificacion: actualización continua
 vigencia: vigente
 materia:
@@ -20,6 +21,10 @@ estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
 ---
+
+> ⚠️ **URL BCN pendiente de verificación.** El catálogo capa 1 no contiene
+> el ID de esta norma; el campo `fuente_oficial` puede apuntar a una norma
+> distinta. Verificar contra BCN antes de citar.
 
 # Ley 21.094 — Universidades Estatales
 

@@ -4,6 +4,7 @@ slug: ley-21420-reduccion-exenciones
 titulo_oficial: Reduce o elimina exenciones tributarias que indica
 publicacion: 2022-02-04
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1171677
+fuente_oficial_status: pendiente-verificacion-bcn
 ultima_modificacion: 2022-02-04 (vigencia escalonada)
 vigencia: vigente con escalonamiento (régimen pleno desde 2023-2024)
 materia:
@@ -21,6 +22,10 @@ estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
 ---
+
+> ⚠️ **URL BCN pendiente de verificación.** El catálogo capa 1 no contiene
+> el ID de esta norma; el campo `fuente_oficial` puede apuntar a una norma
+> distinta. Verificar contra BCN antes de citar.
 
 # Ley 21.420 — Reducción de Exenciones Tributarias
 

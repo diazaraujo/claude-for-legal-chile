@@ -4,6 +4,7 @@ slug: ley-21601-crimen-organizado
 titulo_oficial: Establece normas para fortalecer la lucha contra el crimen organizado
 publicacion: 2023-08-21
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1195188
+fuente_oficial_status: pendiente-verificacion-bcn
 ultima_modificacion: 2023-08-21
 vigencia: vigente
 materia:
@@ -22,6 +23,10 @@ estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
 ---
+
+> ⚠️ **URL BCN pendiente de verificación.** El catálogo capa 1 no contiene
+> el ID de esta norma; el campo `fuente_oficial` puede apuntar a una norma
+> distinta. Verificar contra BCN antes de citar.
 
 # Ley 21.601 — Lucha contra el Crimen Organizado
 

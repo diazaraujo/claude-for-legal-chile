@@ -4,6 +4,7 @@ slug: dl-211-libre-competencia
 titulo_oficial: Fija normas para la defensa de la libre competencia
 publicacion: 1973-12-22
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=236106
+fuente_oficial_status: pendiente-verificacion-bcn
 cuerpo_normativo: Decreto Ley N° 211 de 1973, texto refundido por DFL 1/2005 de Economía
 ultima_modificacion: Ley 20.945 / 2016 (reforma estructural — delación compensada y control de fusiones); Ley 21.595 / 2023
 vigencia: vigente
@@ -22,6 +23,10 @@ estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
 ---
+
+> ⚠️ **URL BCN pendiente de verificación.** El catálogo capa 1 no contiene
+> el ID de esta norma; el campo `fuente_oficial` puede apuntar a una norma
+> distinta. Verificar contra BCN antes de citar.
 
 # DL 211 — Libre Competencia
 

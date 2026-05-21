@@ -4,6 +4,7 @@ slug: ley-21595-delitos-economicos
 titulo_oficial: Sobre delitos económicos y atentados contra el medio ambiente
 publicacion: 2023-08-17
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1195164
+fuente_oficial_status: pendiente-verificacion-bcn
 ultima_modificacion: 2023-08-17 (entrada en vigencia escalonada)
 vigencia: vigente con vigencias diferidas — régimen pleno desde septiembre de 2024
 materia:
@@ -21,6 +22,10 @@ estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
 ---
+
+> ⚠️ **URL BCN pendiente de verificación.** El catálogo capa 1 no contiene
+> el ID de esta norma; el campo `fuente_oficial` puede apuntar a una norma
+> distinta. Verificar contra BCN antes de citar.
 
 # Ley 21.595 — Delitos económicos y atentados al medio ambiente
 

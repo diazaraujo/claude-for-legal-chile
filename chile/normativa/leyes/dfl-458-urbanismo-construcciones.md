@@ -4,6 +4,7 @@ slug: dfl-458-urbanismo-construcciones
 titulo_oficial: Ley General de Urbanismo y Construcciones (LGUC)
 publicacion: 1976-04-13
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=8201
+fuente_oficial_status: pendiente-verificacion-bcn
 cuerpo_normativo: DFL 458 (Vivienda, 1975)
 ultima_modificacion: actualización continua (Ley 21.078 sobre Transparencia del Mercado del Suelo; Ley 20.234 sobre Loteos Irregulares)
 vigencia: vigente
@@ -22,6 +23,10 @@ estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
 ---
+
+> ⚠️ **URL BCN pendiente de verificación.** El catálogo capa 1 no contiene
+> el ID de esta norma; el campo `fuente_oficial` puede apuntar a una norma
+> distinta. Verificar contra BCN antes de citar.
 
 # DFL 458 — Ley General de Urbanismo y Construcciones (LGUC)
 

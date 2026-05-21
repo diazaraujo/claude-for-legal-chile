@@ -4,6 +4,7 @@ slug: ds-54-comite-paritario
 titulo_oficial: Aprueba Reglamento para la Constitución y Funcionamiento de los Comités Paritarios de Higiene y Seguridad
 publicacion: 1969-03-21
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1041128
+fuente_oficial_status: pendiente-verificacion-bcn
 ultima_modificacion: actualización menor
 vigencia: vigente
 materia:
@@ -20,6 +21,10 @@ estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
 ---
+
+> ⚠️ **URL BCN pendiente de verificación.** El catálogo capa 1 no contiene
+> el ID de esta norma; el campo `fuente_oficial` puede apuntar a una norma
+> distinta. Verificar contra BCN antes de citar.
 
 # DS 54 / 1969 — Reglamento del Comité Paritario (CPHS)
 

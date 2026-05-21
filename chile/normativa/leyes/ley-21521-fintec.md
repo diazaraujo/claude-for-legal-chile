@@ -4,6 +4,7 @@ slug: ley-21521-fintec
 titulo_oficial: Promueve la competencia e inclusión financiera a través de la innovación y tecnología en la prestación de servicios financieros
 publicacion: 2023-01-04
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1188785
+fuente_oficial_status: pendiente-verificacion-bcn
 ultima_modificacion: 2023-01-04 (vigencia escalonada con reglamentos CMF)
 vigencia: vigente con escalonamiento (Sistema Financiero Abierto desde 2025)
 materia:
@@ -21,6 +22,10 @@ estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
 ---
+
+> ⚠️ **URL BCN pendiente de verificación.** El catálogo capa 1 no contiene
+> el ID de esta norma; el campo `fuente_oficial` puede apuntar a una norma
+> distinta. Verificar contra BCN antes de citar.
 
 # Ley 21.521 — Ley Fintec
 

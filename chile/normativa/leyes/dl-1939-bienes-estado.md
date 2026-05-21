@@ -4,6 +4,7 @@ slug: dl-1939-bienes-estado
 titulo_oficial: Normas sobre adquisición, administración y disposición de los bienes del Estado
 publicacion: 1977-11-10
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=6816
+fuente_oficial_status: pendiente-verificacion-bcn
 ultima_modificacion: actualización por leyes específicas
 vigencia: vigente
 materia:
@@ -21,6 +22,10 @@ estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
 ---
+
+> ⚠️ **URL BCN pendiente de verificación.** El catálogo capa 1 no contiene
+> el ID de esta norma; el campo `fuente_oficial` puede apuntar a una norma
+> distinta. Verificar contra BCN antes de citar.
 
 # DL 1.939 — Bienes del Estado
 

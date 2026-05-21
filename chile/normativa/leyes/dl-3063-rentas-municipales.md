@@ -4,6 +4,7 @@ slug: dl-3063-rentas-municipales
 titulo_oficial: Sobre Rentas Municipales (texto refundido DFL 1/2006)
 publicacion: 1979-12-29 (texto refundido DFL 1/2006)
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=251690
+fuente_oficial_status: pendiente-verificacion-bcn
 ultima_modificacion: actualización continua
 vigencia: vigente
 materia:
@@ -20,6 +21,10 @@ estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
 ---
+
+> ⚠️ **URL BCN pendiente de verificación.** El catálogo capa 1 no contiene
+> el ID de esta norma; el campo `fuente_oficial` puede apuntar a una norma
+> distinta. Verificar contra BCN antes de citar.
 
 # DL 3.063 — Ley de Rentas Municipales
 

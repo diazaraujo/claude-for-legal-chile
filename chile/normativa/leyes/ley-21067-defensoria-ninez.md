@@ -4,6 +4,7 @@ slug: ley-21067-defensoria-ninez
 titulo_oficial: Crea la Defensoría de los Derechos de la Niñez
 publicacion: 2018-01-22
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1115175
+fuente_oficial_status: pendiente-verificacion-bcn
 ultima_modificacion: 2018-01-22
 vigencia: vigente
 materia:
@@ -20,6 +21,10 @@ estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
 ---
+
+> ⚠️ **URL BCN pendiente de verificación.** El catálogo capa 1 no contiene
+> el ID de esta norma; el campo `fuente_oficial` puede apuntar a una norma
+> distinta. Verificar contra BCN antes de citar.
 
 # Ley 21.067 — Defensoría de los Derechos de la Niñez
 

@@ -4,6 +4,7 @@ slug: ley-21713-reforma-tributaria-2024
 titulo_oficial: Establece normas para asegurar el cumplimiento de las obligaciones tributarias
 publicacion: 2024-10-24
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1207870
+fuente_oficial_status: pendiente-verificacion-bcn
 ultima_modificacion: 2024-10-24
 vigencia: vigente con escalonamiento (régimen pleno desde 2025-2026)
 materia:
@@ -22,6 +23,10 @@ estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
 ---
+
+> ⚠️ **URL BCN pendiente de verificación.** El catálogo capa 1 no contiene
+> el ID de esta norma; el campo `fuente_oficial` puede apuntar a una norma
+> distinta. Verificar contra BCN antes de citar.
 
 # Ley 21.713 — Reforma Tributaria 2024
 

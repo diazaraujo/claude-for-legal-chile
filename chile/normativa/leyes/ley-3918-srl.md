@@ -4,6 +4,7 @@ slug: ley-3918-srl
 titulo_oficial: Sobre Sociedades de Responsabilidad Limitada
 publicacion: 1923-03-14
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=26117
+fuente_oficial_status: pendiente-verificacion-bcn
 ultima_modificacion: actualización continua
 vigencia: vigente
 materia:
@@ -20,6 +21,10 @@ estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
 ---
+
+> ⚠️ **URL BCN pendiente de verificación.** El catálogo capa 1 no contiene
+> el ID de esta norma; el campo `fuente_oficial` puede apuntar a una norma
+> distinta. Verificar contra BCN antes de citar.
 
 # Ley 3.918 — SRL (Sociedad de Responsabilidad Limitada)
 
