@@ -1,0 +1,18 @@
+---
+slug: dfl_ministerio-del-interior_1994-07-25_44
+tipo: dfl
+numero: 44
+titulo_oficial: "ADECUA, MODIFICA Y ESTABLECE PLANTA DE PERSONAL DE LA MUNICIPALIDAD DE CONCEPCION"
+publicacion: 1994-07-25
+promulgacion: 1994-06-15
+emisor: ministerio-del-interior
+leychile_code: 4259
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=4259
+bcn_uri: http://datos.bcn.cl/recurso/cl/dfl/ministerio-del-interior/1994-07-25/44
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DFL 44
+
+**Título oficial:** ADECUA, MODIFICA Y ESTABLECE PLANTA DE PERSONAL DE LA MUNICIPALIDAD DE CONCEPCION
