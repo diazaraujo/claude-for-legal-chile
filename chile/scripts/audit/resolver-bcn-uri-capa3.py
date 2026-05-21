@@ -76,11 +76,12 @@ def lookup_sqlite(con: sqlite3.Connection, code: str) -> str | None:
 
 
 def lookup_sparql(code: str, timeout: int = 30) -> str | None:
+    """Busca URI canónica (sin alias /es@) por leychileCode."""
     query = f'''
 PREFIX bcnnorms: <http://datos.bcn.cl/ontologies/bcn-norms#>
 SELECT ?n WHERE {{
   ?n bcnnorms:leychileCode "{code}" .
-  FILTER NOT EXISTS {{ ?n bcnnorms:type ?t . FILTER(REGEX(str(?n), "/es@")) }}
+  FILTER (!REGEX(str(?n), "/es@"))
 }} LIMIT 1
 '''
     url = SPARQL_URL + "?" + urllib.parse.urlencode(
