@@ -38,6 +38,29 @@ más citadas en práctica moderna.
 2. **Verificar Leyes antiguas via DTO**: muchas leyes pre-1900 están
    como decretos en el catálogo BCN.
 
+## Hallazgo 2026-05-21: idNorma >1.000.000 faltantes
+
+Al resolver `bcn_uri` para los 180 perfiles capa 3, **65 quedaron sin
+match en SQLite**. Patrón claro por rango idNorma:
+
+| Rango idNorma | Perfiles | Tipo |
+|---|---:|---|
+| 0..10.000 | 1 | antiguas (DFL 458 urbanismo) |
+| 10.000..100.000 | 1 | mediano (Ley 3918 SRL) |
+| 100.000..500.000 | 6 | refundidos (DL 211, DFL 2/98, DL 3063) |
+| **1.000.000+** | **57** | **leyes 2010+** (Ley 20422, 20584, etc.) |
+
+**Diagnóstico**: el scrape SPARQL inicial cortó en offset~10k antes de
+completar el rango moderno. Los idNorma >1M corresponden a leyes
+publicadas después de ~2010, y representan el grueso del gap.
+
+**Fix planificado**: el `resolver-bcn-uri-capa3.py` con backoff 429
+ahora resuelve uno por uno via `?n bcnnorms:leychileCode "X"`. Esperado
+recuperar 50-60 URIs en 30-60 min.
+
+Para resolver el gap masivo: `scrape-sparql-uris-grafo.py` scrapea solo
+URIs del grafo (80k necesarias, ~30 min con batch VALUES).
+
 ## Validación funcional
 
 El MCP cumple su función a pesar de los gaps porque:
