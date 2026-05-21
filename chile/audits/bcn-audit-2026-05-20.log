@@ -1,0 +1,285 @@
+[INFO] 156 perfiles capa 3 a verificar contra BCN
+[INFO] Rate limit: 1 req/seg → ~156 segundos estimados
+
+
+[DISCREPANCIA] chile/normativa/leyes/dfl-2-1998-subvencion-escolar.md
+  - NUMERO: declarado='2' BCN='85 EXENTO'
+  - TITULO: declarado='Subvención del Estado a Establecimientos Educacionales (text...' BCN='MODIFICA ORDENANZA MUNICIPAL...'
+
+[DISCREPANCIA] chile/normativa/leyes/dfl-458-urbanismo-construcciones.md
+  - NUMERO: declarado='458' BCN='47'
+
+[DISCREPANCIA] chile/normativa/leyes/dl-1939-bienes-estado.md
+  - NUMERO: declarado='1939' BCN='2081'
+  - TITULO: declarado='Normas sobre adquisición, administración y disposición de lo...' BCN='PRORROGA PLAZO ESTABLECIDO EN EL ARTICULO 1° TRANSITORIO DEL...'
+
+[DISCREPANCIA] chile/normativa/leyes/dl-211-libre-competencia.md
+  - NUMERO: declarado='211' BCN='1'
+  - TITULO: declarado='Fija normas para la defensa de la libre competencia...' BCN='FIJA EL TEXTO REFUNDIDO, COORDINADO Y SISTEMATIZADO DEL DECR...'
+
+[DISCREPANCIA] chile/normativa/leyes/dl-3063-rentas-municipales.md
+  - BCN error (ParseError): no se pudo verificar id=251690
+
+[DISCREPANCIA] chile/normativa/leyes/ley-10336-cgr.md
+  - NUMERO: declarado='10336' BCN='10394'
+  - TITULO: declarado='Sobre Organización y Atribuciones de la Contraloría General ...' BCN='ESTABLECE EL IMPUESTO QUE INDICA A BENEFICIO DE LA
+MUNICIPAL...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-14908-alimentos.md
+  - NUMERO: declarado='14908' BCN='1'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-17235-impuesto-territorial.md
+  - NUMERO: declarado='17235' BCN='17282'
+  - TITULO: declarado='Sobre Impuesto Territorial...' BCN='DECLARA ILEGAL EL LLAMADO A RETIRO DEL MAYOR DE CARABINEROS ...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-17997-loc-tc.md
+  - NUMERO: declarado='17997' BCN='17956'
+  - TITULO: declarado='Ley Orgánica Constitucional del Tribunal Constitucional...' BCN='PRORROGA PLAZO QUE INDICA PARA APLICACION DEL
+IMPUESTO ESTAB...'
+  [20/156] ok (37s elapsed)
+
+[DISCREPANCIA] chile/normativa/leyes/ley-18092-letras-pagares.md
+  - NUMERO: declarado='18092' BCN='18272'
+  - TITULO: declarado='Dicta nuevas normas sobre letra de cambio y pagaré...' BCN='MODIFICA LEY N° 18.203...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-18097-concesiones-mineras.md
+  - NUMERO: declarado='18097' BCN='18238'
+  - TITULO: declarado='LOC sobre Concesiones Mineras...' BCN='INTERPRETA DISPOSICIONES QUE INDICA DE LA LEY N°
+18.175, QUE...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-18168-telecomunicaciones.md
+  - NUMERO: declarado='18168' BCN='18559'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-18216-penas-sustitutivas.md
+  - NUMERO: declarado='18216' BCN='18531'
+  - TITULO: declarado='Establece penas que indica como sustitutivas a las penas pri...' BCN='MODIFICA EL DECRETO CON FUERZA DE LEY N° 1, DE 1968, DE LA S...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-18695-loc-municipalidades.md
+  - NUMERO: declarado='18695' BCN='1'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-18834-estatuto-administrativo.md
+  - NUMERO: declarado='18834' BCN='29'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-18840-loc-banco-central.md
+  - NUMERO: declarado='18840' BCN='18875'
+  - TITULO: declarado='LOC del Banco Central de Chile...' BCN='MODIFICA EL ARTICULO 32 DEL DECRETO CON FUERZA DE LEY N° 1 (...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-18883-estatuto-administrativo-municipal.md
+  - NUMERO: declarado='18883' BCN='18919'
+  - TITULO: declarado='Estatuto Administrativo para Funcionarios Municipales...' BCN='INTERPRETA NORMAS RELATIVAS AL FONDO NACIONAL DE
+DESARROLLO ...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-18916-codigo-aeronautico.md
+  - NUMERO: declarado='18916' BCN='18880'
+  - TITULO: declarado='Aprueba Código Aeronáutico...' BCN='OTORGA A FUNCIONARIOS DEL PODER JUDICIAL EL DERECHO
+A JUBILA...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-19070-estatuto-docente.md
+  - NUMERO: declarado='19070' BCN='1'
+  [40/156] ok (65s elapsed)
+
+[DISCREPANCIA] chile/normativa/leyes/ley-19418-juntas-vecinos.md
+  - NUMERO: declarado='19418' BCN='19477'
+  - TITULO: declarado='Sobre Juntas de Vecinos y Demás Organizaciones Comunitarias...' BCN='APRUEBA LEY ORGANICA DEL SERVICIO DE REGISTRO CIVIL E IDENTI...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-19518-sence-capacitacion.md
+  - NUMERO: declarado='19518' BCN='978'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-19665-reforma-organica-pjud.md
+  - NUMERO: declarado='19665' BCN='6267 EXENTA'
+  - TITULO: declarado='Modifica el Código Orgánico de Tribunales para la reforma pr...' BCN='APLICA, A CONTAR DE FECHA QUE SEÑALA Y POR PLAZO DE UN AÑO, ...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-19718-defensoria-penal-publica.md
+  - NUMERO: declarado='19718' BCN='S/N'
+  - TITULO: declarado='Crea la Defensoría Penal Pública...' BCN='EXTRACTO ACTA CONSTITUCION ENTIDAD RELIGIOSA EVANGELICA IGLE...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-19728-seguro-cesantia.md
+  - NUMERO: declarado='19728' BCN='425 EXENTO'
+  [60/156] ok (89s elapsed)
+
+[DISCREPANCIA] chile/normativa/leyes/ley-19974-ani-inteligencia.md
+  - NUMERO: declarado='19974' BCN='16502'
+  - TITULO: declarado='Sobre el Sistema de Inteligencia del Estado y crea la Agenci...' BCN='AUTORIZA AL PRESIDENTE DE LA REPUBLICA PARA TRANSFERIR
+EL PR...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-19983-factura-electronica.md
+  - NUMERO: declarado='19983' BCN='1055'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-19992-reparacion-valech.md
+  - NUMERO: declarado='19992' BCN='610'
+  - TITULO: declarado='Establece pensión de reparación y otorga otros beneficios a ...' BCN='MODIFICA CONCESION DE SERVICIO PUBLICO DE TELEFONIA
+MOVIL DI...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-20005-acoso-sexual-antecedente.md
+  - NUMERO: declarado='20005' BCN='247'
+  - TITULO: declarado='Tipifica y sanciona el acoso sexual...' BCN='DECRETO COMPLEMENTARIO, QUE FIJA FORMULAS TARIFARIAS DE LOS ...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-20022-tribunales-trabajo.md
+  - NUMERO: declarado='20022' BCN='2030 EXENTA'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-20087-procedimiento-laboral.md
+  - NUMERO: declarado='20087' BCN='15591'
+  - TITULO: declarado='Sustituye el procedimiento laboral...' BCN='AUMENTA, POR GRACIA, LA PENSION DE DON MANLIO ANZIANI
+PEDRER...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-20169-competencia-desleal.md
+  - NUMERO: declarado='20169' BCN='1472 EXENTA'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-20405-indh.md
+  - NUMERO: declarado='20405' BCN='1982 EXENTO'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-20727-factura-electronica-masiva.md
+  - NUMERO: declarado='20727' BCN='Bancos 20'
+  - TITULO: declarado='Introduce modificaciones a la legislación tributaria en mate...' BCN='INFORMACION CONSOLIDADA DE DEUDAS. ENTREGA DE DATOS EN EL AR...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-20885-subsecretaria-ddhh.md
+  - NUMERO: declarado='20885' BCN='80'
+  - TITULO: declarado='Crea la Subsecretaría de Derechos Humanos y adecúa la Ley Or...' BCN='DESIGNA A DOÑA JOSEFINA ESCOBAR MARTÍNEZ COMO REPRESENTANTE ...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-20903-carrera-docente.md
+  - NUMERO: declarado='20903' BCN='20911'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-21000-cmf.md
+  - NUMERO: declarado='21000' BCN='222 EXENTA'
+  - TITULO: declarado='Crea la Comisión para el Mercado Financiero...' BCN='RECTIFÍQUESE LA RESOLUCIÓN 3.745, DE FECHA 09/11/2016, EN LO...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-21057-entrevista-videograbada.md
+  - BCN error (ParseError): no se pudo verificar id=1115208
+
+[DISCREPANCIA] chile/normativa/leyes/ley-21067-defensoria-ninez.md
+  - NUMERO: declarado='21067' BCN='6956 EXENTA'
+  - TITULO: declarado='Crea la Defensoría de los Derechos de la Niñez...' BCN='NOTIFICACIÓN...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-21073-gobernadores-regionales.md
+  - NUMERO: declarado='21073' BCN='4 EXENTA'
+  - TITULO: declarado='Regula la elección de gobernadores regionales y realiza adec...' BCN='NOTIFICA RESOLUCIÓN DE INICIO DE PROCESO DE PARTICIPACIÓN CI...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-21094-universidades-estatales.md
+  - NUMERO: declarado='21094' BCN='21091'
+  - TITULO: declarado='Sobre Universidades Estatales...' BCN='SOBRE EDUCACIÓN SUPERIOR...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-21133-cotizacion-independientes.md
+  - NUMERO: declarado='21133' BCN='448 EXENTA'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-21155-fueros-trabajador.md
+  - NUMERO: declarado='21155' BCN='3583 EXENTA'
+  - TITULO: declarado='Establece medidas de protección a la lactancia materna y su ...' BCN='APRUEBA PROCEDIMIENTO DE TOMA DE MUESTRAS PARA EXÁMENES DE A...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-21212-femicidio-gabriela.md
+  - NUMERO: declarado='21212' BCN='898 EXENTO'
+  - TITULO: declarado='Modifica el Código Penal, el Código Procesal Penal y la Ley ...' BCN='MODIFICA CONCESIÓN DE SERVICIO PÚBLICO DE TELEFONÍA MÓVIL DI...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-21234-fraude-tarjetas.md
+  - BCN error (ParseError): no se pudo verificar id=1146361
+
+[DISCREPANCIA] chile/normativa/leyes/ley-21302-snn-servicio-nacional-ninez.md
+  - BCN error (ParseError): no se pudo verificar id=1153043
+
+[DISCREPANCIA] chile/normativa/leyes/ley-21314-gobierno-corporativo.md
+  - NUMERO: declarado='21314' BCN='767 EXENTA'
+  - TITULO: declarado='Establece nuevas exigencias de transparencia y refuerza las ...' BCN='NOTIFICA RESOLUCIÓN Nº 2021/PA/13/0767 EXENTA, DE FECHA 09/0...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-21327-modernizacion-dt.md
+  - NUMERO: declarado='21327' BCN='394 EXENTO'
+  - TITULO: declarado='Modernización de la Dirección del Trabajo...' BCN='AUTORIZA CIRCULACIÓN DEL VEHÍCULO EN LOS TÉRMINOS QUE INDICA...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-21394-modernizacion-notarial.md
+  - NUMERO: declarado='21394' BCN='1173 EXENTA'
+  - TITULO: declarado='Modifica el Código Orgánico de Tribunales en materia de nota...' BCN='MODIFICA RESOLUCIÓN Nº 1.099 EXENTA, DE 3 DE NOVIEMBRE DE 20...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-21398-pague-lo-justo.md
+  - NUMERO: declarado='21398' BCN='1304 EXENTA'
+  - TITULO: declarado='Establece medidas para incentivar la protección de los derec...' BCN='EXTRACTO...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-21400-matrimonio-igualitario.md
+  - NUMERO: declarado='21400' BCN='1183 EXENTA'
+  - TITULO: declarado='Modifica diversos cuerpos legales para regular, en igualdad ...' BCN='RECONOCE, POR SOLICITUD MUNICIPAL, HUMEDAL URBANO DE LINARES...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-21419-pgu.md
+  - NUMERO: declarado='21419' BCN='94 EXENTO'
+  - TITULO: declarado='Crea la Pensión Garantizada Universal y modifica los cuerpos...' BCN='DETERMINA NUEVO ORDEN DE SUBROGANCIA PARA EL CARGO DE DIRECT...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-21420-reduccion-exenciones.md
+  - NUMERO: declarado='21420' BCN='52 EXENTA'
+  - TITULO: declarado='Reduce o elimina exenciones tributarias que indica...' BCN='OTORGA PERMISO EXTRAORDINARIO DE PESCA PARA LA UNIDAD DE PES...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-21435-reforma-codigo-aguas.md
+  - BCN error (ParseError): no se pudo verificar id=1175131
+
+[DISCREPANCIA] chile/normativa/leyes/ley-21442-modernizacion-condominios.md
+  - NUMERO: declarado='21442' BCN='153 EXENTA'
+  - TITULO: declarado='Sobre Copropiedad Inmobiliaria (texto refundido coordinado)...' BCN='PUBLICACIÓN DE CIERRE DE CALLES EN LA REGIÓN DE LOS RÍOS...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-21484-compraventa-inmuebles.md
+  - BCN error (ParseError): no se pudo verificar id=1178904
+
+[DISCREPANCIA] chile/normativa/leyes/ley-21515-gam-alimentos.md
+  - NUMERO: declarado='21515' BCN='2146'
+  - TITULO: declarado='Establece medidas de garantía y pago efectivo de las deudas ...' BCN='NOTIFICACIÓN...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-21521-fintec.md
+  - NUMERO: declarado='21521' BCN='7106 EXENTA'
+  - TITULO: declarado='Promueve la competencia e inclusión financiera a través de l...' BCN='PUBLICACIÓN CORTES DE TRÁNSITO GOBIERNO REGIONAL DEL MAULE P...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-21527-servicio-reinsercion-juvenil.md
+  - NUMERO: declarado='21527' BCN='957 EXENTO'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-21541-ive-ges.md
+  - NUMERO: declarado='21541' BCN='194'
+  - TITULO: declarado='Incorpora a las garantías explícitas en salud la interrupció...' BCN='OTORGA CONCESIÓN DE RADIODIFUSIÓN SONORA EN FRECUENCIA MODUL...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-21561-reduccion-jornada.md
+  - NUMERO: declarado='21561' BCN='31 EXENTA'
+  - TITULO: declarado='Modifica el Código del Trabajo, con el objeto de reducir la ...' BCN='INFORMA PRECIOS DE REFERENCIA DE LAS SUSTANCIAS METÁLICAS Y ...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-21591-royalty-minero.md
+  - NUMERO: declarado='21591' BCN='213'
+  - TITULO: declarado='Establece un royalty a la minería...' BCN='OTORGA CONCESIÓN DE SERVICIO PÚBLICO DE TRANSMISIÓN DE DATOS...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-21595-delitos-economicos.md
+  - NUMERO: declarado='21595' BCN='1562 EXENTA'
+  - TITULO: declarado='Sobre delitos económicos y atentados contra el medio ambient...' BCN='EXTRACTO DE RESOLUCIÓN Nº 1.562 EXENTA, DE 15 DE MAYO DE 202...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-21601-crimen-organizado.md
+  - NUMERO: declarado='21601' BCN='158'
+  - TITULO: declarado='Establece normas para fortalecer la lucha contra el crimen o...' BCN='ACTA Nº 158-2023...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-21634-reforma-compras-publicas.md
+  - NUMERO: declarado='21634' BCN='4892 EXENTA'
+  - TITULO: declarado='Moderniza el sistema de compras públicas...' BCN='NOTIFICACIÓN...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-21643-acoso-laboral.md
+  - NUMERO: declarado='21643' BCN='124'
+  - TITULO: declarado='Ley que modifica el Código del Trabajo y otros cuerpos legal...' BCN='MODIFICA DECRETO SUPREMO Nº 53, DE 2011, DEL MINISTERIO DE E...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-21663-ciberseguridad.md
+  - NUMERO: declarado='21663' BCN='17'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-21671-reforma-indultos.md
+  - NUMERO: declarado='21671' BCN='337'
+  - TITULO: declarado='Modifica diversos cuerpos legales para regular los indultos ...' BCN='CONSTITUYE ÁREA METROPOLITANA DE SANTIAGO...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-21713-reforma-tributaria-2024.md
+  - NUMERO: declarado='21713' BCN='795 EXENTA'
+  - TITULO: declarado='Establece normas para asegurar el cumplimiento de las obliga...' BCN='RESOLUCIÓN QUE PONE TÉRMINO A LA EVALUACIÓN DE LA OFERTA PRE...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-21719-modificacion-lpd.md
+  - NUMERO: declarado='21719' BCN='1432 EXENTA'
+  - TITULO: declarado='Ley que regula la protección y el tratamiento de datos perso...' BCN='AUTORIZA COMERCIALIZACIÓN DE PRODUCTOS DE TABACO QUE INDICA ...'
+
+[DISCREPANCIA] chile/normativa/leyes/ley-3918-srl.md
+  - NUMERO: declarado='3918' BCN='9538'
+  - TITULO: declarado='Sobre Sociedades de Responsabilidad Limitada...' BCN='MODIFICA EN LA FORMA QUE INDICA EL DECRETO LEY QUE
+CREO EL B...'
+
+[DISCREPANCIA] chile/normativa/decretos/ds-54-comite-paritario.md
+  - NUMERO: declarado='54' BCN='48'
+  - TITULO: declarado='Aprueba Reglamento para la Constitución y Funcionamiento de ...' BCN='OTORGA A EMPRESA ELÉCTRICA DE MAGALLANES S.A., CONCESIÓN DEF...'
+
+[DISCREPANCIA] chile/normativa/decretos/ds-76-subcontratacion-reglamento.md
+  - NUMERO: declarado='76' BCN='3559 EXENTA'
+
+[SUMMARY] 214s elapsed
+  OK: 84
+  Discrepancias: 72
+  Errores BCN: 0

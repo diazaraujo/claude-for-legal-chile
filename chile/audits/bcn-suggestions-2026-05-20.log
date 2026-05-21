@@ -1,0 +1,132 @@
+[INFO] 156 perfiles capa 3 a procesar
+
+[SUGGEST] 32 URLs con cambio sugerido (catálogo capa 1):
+  chile/normativa/leyes/dfl-2-1998-subvencion-escolar.md
+    dfl 2: id_actual=88195 → id_sugerido=3515
+    titulo catálogo: MODIFICA PLANTAS DEL PERSONAL DE LAS MUNICIPALIDADES\nQUE INDICA, DE LA REGION D
+  chile/normativa/leyes/dfl-2-2009-lge.md
+    dfl 2: id_actual=1014974 → id_sugerido=3515
+    titulo catálogo: MODIFICA PLANTAS DEL PERSONAL DE LAS MUNICIPALIDADES\nQUE INDICA, DE LA REGION D
+  chile/normativa/leyes/ley-10336-cgr.md
+    ley 10336: id_actual=26393 → id_sugerido=26356
+    titulo catálogo: LEY DE ORGANIZACION Y ATRIBUCIONES DE LA CONTRALORIA GENERAL DE LA REPUBLICA
+  chile/normativa/leyes/ley-14908-alimentos.md
+    ley 14908: id_actual=172986 → id_sugerido=27977
+    titulo catálogo: FIJA EL TEXTO DEFINITIVO Y REFUNDIDO DE LA LEY NUMERO 5.750, CON LAS MODIFICACIO
+  chile/normativa/leyes/ley-17235-impuesto-territorial.md
+    ley 17235: id_actual=28886 → id_sugerido=28849
+    titulo catálogo: FIJA EL TEXTO REFUNDIDO, SISTEMATIZADO Y COORDINADO DE LA LEY SOBRE IMPUESTO TER
+  chile/normativa/leyes/ley-17997-loc-tc.md
+    ley 17997: id_actual=29393 → id_sugerido=29427
+    titulo catálogo: LEY ORGANICA CONSTITUCIONAL DEL TRIBUNAL CONSTITUCIONAL
+  chile/normativa/leyes/ley-18092-letras-pagares.md
+    ley 18092: id_actual=29691 → id_sugerido=29517
+    titulo catálogo: DICTA NUEVAS NORMAS SOBRE LETRA DE CAMBIO Y PAGARE Y DEROGA DISPOSICIONES DEL CO
+  chile/normativa/leyes/ley-18097-concesiones-mineras.md
+    ley 18097: id_actual=29658 → id_sugerido=29522
+    titulo catálogo: LEY ORGANICA CONSTITUCIONAL SOBRE CONCESIONES MINERAS
+  chile/normativa/leyes/ley-18168-telecomunicaciones.md
+    ley 18168: id_actual=29952 → id_sugerido=29591
+    titulo catálogo: LEY GENERAL DE TELECOMUNICACIONES
+  chile/normativa/leyes/ley-18216-penas-sustitutivas.md
+    ley 18216: id_actual=29928 → id_sugerido=29636
+    titulo catálogo: ESTABLECE PENAS QUE INDICA COMO SUSTITUTIVAS A LAS PENAS PRIVATIVAS O RESTRICTIV
+  chile/normativa/leyes/ley-18695-loc-municipalidades.md
+    ley 18695: id_actual=251693 → id_sugerido=30077
+    titulo catálogo: LEY ORGANICA CONSTITUCIONAL DE MUNICIPALIDADES
+  chile/normativa/leyes/ley-18834-estatuto-administrativo.md
+    ley 18834: id_actual=236392 → id_sugerido=30210
+    titulo catálogo: APRUEBA ESTATUTO ADMINISTRATIVO
+  chile/normativa/leyes/ley-18840-loc-banco-central.md
+    ley 18840: id_actual=30248 → id_sugerido=30216
+    titulo catálogo: LEY ORGANICA CONSTITUCIONAL DEL BANCO CENTRAL DE CHILE
+  chile/normativa/leyes/ley-18883-estatuto-administrativo-municipal.md
+    ley 18883: id_actual=30290 → id_sugerido=30256
+    titulo catálogo: APRUEBA ESTATUTO ADMINISTRATIVO PARA FUNCIONARIOS MUNICIPALES
+  chile/normativa/leyes/ley-18916-codigo-aeronautico.md
+    ley 18916: id_actual=30253 → id_sugerido=30287
+    titulo catálogo: APRUEBA CODIGO AERONAUTICO
+  chile/normativa/leyes/ley-19070-estatuto-docente.md
+    ley 19070: id_actual=60439 → id_sugerido=30437
+    titulo catálogo: APRUEBA ESTATUTO DE LOS PROFESIONALES DE LA EDUCACION
+  chile/normativa/leyes/ley-19418-juntas-vecinos.md
+    ley 19418: id_actual=30844 → id_sugerido=30785
+    titulo catálogo: ESTABLECE NORMAS SOBRE JUNTAS DE VECINOS Y DEMAS ORGANIZACIONES COMUNITARIAS
+  chile/normativa/leyes/ley-19518-sence-capacitacion.md
+    ley 19518: id_actual=81780 → id_sugerido=76201
+    titulo catálogo: FIJA NUEVO ESTATUTO DE CAPACITACION Y EMPLEO
+  chile/normativa/leyes/ley-19665-reforma-organica-pjud.md
+    ley 19665: id_actual=160227 → id_sugerido=160254
+    titulo catálogo: REFORMA EL CODIGO ORGANICO DE TRIBUNALES
+  chile/normativa/leyes/ley-19718-defensoria-penal-publica.md
+    ley 19718: id_actual=184382 → id_sugerido=182755
+    titulo catálogo: CREA LA DEFENSORIA PENAL PUBLICA
+  chile/normativa/leyes/ley-19728-seguro-cesantia.md
+    ley 19728: id_actual=185412 → id_sugerido=184979
+    titulo catálogo: ESTABLECE UN SEGURO DE DESEMPLEO
+  chile/normativa/leyes/ley-19974-ani-inteligencia.md
+    ley 19974: id_actual=231413 → id_sugerido=230999
+    titulo catálogo: SOBRE EL SISTEMA DE INTELIGENCIA DEL ESTADO Y CREA LA AGENCIA NACIONAL DE INTELI
+  chile/normativa/leyes/ley-19983-factura-electronica.md
+    ley 19983: id_actual=233593 → id_sugerido=233421
+    titulo catálogo: REGULA LA TRANSFERENCIA Y OTORGA MERITO EJECUTIVO A COPIA DE LA FACTURA
+  chile/normativa/leyes/ley-19992-reparacion-valech.md
+    ley 19992: id_actual=233396 → id_sugerido=233930
+    titulo catálogo: ESTABLECE PENSION DE REPARACION Y OTORGA OTROS BENEFICIOS A FAVOR DE LAS PERSONA
+  chile/normativa/leyes/ley-20005-acoso-sexual-antecedente.md
+    ley 20005: id_actual=237096 → id_sugerido=236425
+    titulo catálogo: TIPIFICA Y SANCIONA EL ACOSO SEXUAL
+  chile/normativa/leyes/ley-20022-tribunales-trabajo.md
+    ley 20022: id_actual=240161 → id_sugerido=238321
+    titulo catálogo: CREA JUZGADOS LABORALES Y JUZGADOS DE COBRANZA LABORAL Y PREVISIONAL EN LAS COMU
+  chile/normativa/leyes/ley-20087-procedimiento-laboral.md
+    ley 20087: id_actual=246212 → id_sugerido=245804
+    titulo catálogo: SUSTITUYE EL PROCEDIMIENTO LABORAL CONTEMPLADO EN EL LIBRO V DEL CODIGO DEL TRAB
+  chile/normativa/leyes/ley-20169-competencia-desleal.md
+    ley 20169: id_actual=259507 → id_sugerido=258377
+    titulo catálogo: REGULA LA COMPETENCIA DESLEAL
+  chile/normativa/leyes/ley-20405-indh.md
+    ley 20405: id_actual=1009157 → id_sugerido=1008867
+    titulo catálogo: DEL INSTITUTO NACIONAL DE DERECHOS HUMANOS
+  chile/normativa/leyes/ley-21057-entrevista-videograbada.md
+    ley 21057: id_actual=1115208 → id_sugerido=1113932
+    titulo catálogo: REGULA ENTREVISTAS GRABADAS EN VIDEO Y, OTRAS MEDIDAS DE RESGUARDO A MENORES DE 
+  chile/normativa/leyes/ley-21435-reforma-codigo-aguas.md
+    ley 21435: id_actual=1175131 → id_sugerido=1174443
+    titulo catálogo: REFORMA EL CÓDIGO DE AGUAS
+  chile/normativa/leyes/ley-3918-srl.md
+    ley 3918: id_actual=26117 → id_sugerido=24349
+    titulo catálogo: SIN TITULO
+
+[PENDIENTE-MANUAL] 66 archivos sin match en catálogo:
+  chile/normativa/leyes/dfl-458-urbanismo-construcciones.md: no encontrado en catálogo capa 1
+  chile/normativa/leyes/dl-1939-bienes-estado.md: no encontrado en catálogo capa 1
+  chile/normativa/leyes/dl-211-libre-competencia.md: no encontrado en catálogo capa 1
+  chile/normativa/leyes/dl-3063-rentas-municipales.md: no encontrado en catálogo capa 1
+  chile/normativa/leyes/dl-3500-pensiones.md: no encontrado en catálogo capa 1
+  chile/normativa/leyes/dl-824-renta.md: no encontrado en catálogo capa 1
+  chile/normativa/leyes/dl-825-iva.md: no encontrado en catálogo capa 1
+  chile/normativa/leyes/ley-20422-discapacidad.md: no encontrado en catálogo capa 1
+  chile/normativa/leyes/ley-20584-derechos-deberes-paciente.md: no encontrado en catálogo capa 1
+  chile/normativa/leyes/ley-20609-no-discriminacion.md: no encontrado en catálogo capa 1
+  chile/normativa/leyes/ley-20657-ley-longueira-pesca.md: no encontrado en catálogo capa 1
+  chile/normativa/leyes/ley-20720-concursal.md: no encontrado en catálogo capa 1
+  chile/normativa/leyes/ley-20727-factura-electronica-masiva.md: no encontrado en catálogo capa 1
+  chile/normativa/leyes/ley-20730-lobby.md: no encontrado en catálogo capa 1
+  chile/normativa/leyes/ley-20830-acuerdo-union-civil.md: no encontrado en catálogo capa 1
+  chile/normativa/leyes/ley-20880-probidad-publica.md: no encontrado en catálogo capa 1
+  chile/normativa/leyes/ley-20885-subsecretaria-ddhh.md: no encontrado en catálogo capa 1
+  chile/normativa/leyes/ley-20903-carrera-docente.md: no encontrado en catálogo capa 1
+  chile/normativa/leyes/ley-20940-relaciones-laborales.md: no encontrado en catálogo capa 1
+  chile/normativa/leyes/ley-21000-cmf.md: no encontrado en catálogo capa 1
+  chile/normativa/leyes/ley-21015-inclusion-laboral.md: no encontrado en catálogo capa 1
+  chile/normativa/leyes/ley-21040-slep.md: no encontrado en catálogo capa 1
+  chile/normativa/leyes/ley-21067-defensoria-ninez.md: no encontrado en catálogo capa 1
+  chile/normativa/leyes/ley-21073-gobernadores-regionales.md: no encontrado en catálogo capa 1
+  chile/normativa/leyes/ley-21091-educacion-superior.md: no encontrado en catálogo capa 1
+  chile/normativa/leyes/ley-21094-universidades-estatales.md: no encontrado en catálogo capa 1
+  chile/normativa/leyes/ley-21120-identidad-genero.md: no encontrado en catálogo capa 1
+  chile/normativa/leyes/ley-21133-cotizacion-independientes.md: no encontrado en catálogo capa 1
+  chile/normativa/leyes/ley-21155-fueros-trabajador.md: no encontrado en catálogo capa 1
+  chile/normativa/leyes/ley-21180-transformacion-digital.md: no encontrado en catálogo capa 1
+  ... y 36 más
