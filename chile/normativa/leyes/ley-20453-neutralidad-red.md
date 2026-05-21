@@ -18,6 +18,10 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - ley/ministerio-de-transportes-y-telecomunicaciones/1982-10-02/18168
+
 ---
 
 # Ley 20.453 — Neutralidad de la Red

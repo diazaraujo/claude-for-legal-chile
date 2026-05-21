@@ -19,6 +19,10 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - ley/ministerio-del-interior/1993-04-30/19212
+
 ---
 
 # Ley 19.974 — Sistema de Inteligencia del Estado (ANI)

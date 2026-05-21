@@ -20,6 +20,13 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-de-salud_subsecretaria-de-salud-publica/2006-04-24/1
+    - dl/ministerio-de-salud-publica/1979-08-03/2763
+    - ley/ministerio-de-salud/1985-11-23/18469
+    - ley/ministerio-de-salud/1990-03-09/18933
+
 ---
 
 # Ley 19.966 — AUGE / GES (Garantías Explícitas en Salud)

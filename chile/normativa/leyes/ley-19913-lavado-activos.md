@@ -19,6 +19,18 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-de-justicia/1995-10-18/1
+    - ley/ministerio-de-hacienda/1989-10-10/18840
+    - ley/ministerio-de-justicia/1995-01-30/19366
+  modificada_por:
+    - ley/ministerio-de-economia_fomento-y-turismo_subsecretaria-de-economia-y-empresas-de-menor-tamano/2011-11-02/20549
+    - ley/ministerio-de-hacienda/2006-08-31/20119
+    - ley/ministerio-de-hacienda_subsecretaria-de-hacienda/2009-12-02/20393
+    - ley/ministerio-de-justicia/2009-08-25/20371
+    - ley/ministerio-del-interior-y-seguridad-publica_subsecretaria-del-interior/2011-04-08/20507
+
 ---
 
 # Ley 19.913 — Lavado de Activos y UAF

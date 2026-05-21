@@ -19,6 +19,19 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - cod/ministerio-de-justicia/1874-11-12/penal
+    - dfl/ministerio-de-justicia/2000-05-30/1
+    - dl/ministerio-de-justicia/1980-05-22/3346
+    - ley/ministerio-de-justicia/1902-08-30/1552
+    - ley/ministerio-de-justicia/1930-02-10/4808
+    - ley/ministerio-de-justicia/1943-07-09/7421
+    - ley/ministerio-de-justicia/1967-03-08/16618
+    - ley/ministerio-de-justicia/1999-08-05/19620
+  modificada_por:
+    - ley/ministerio-de-justicia/2008-09-15/20286
+
 ---
 
 # Ley 19.947 — Matrimonio Civil

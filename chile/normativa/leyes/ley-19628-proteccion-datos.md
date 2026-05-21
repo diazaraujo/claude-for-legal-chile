@@ -18,6 +18,15 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-de-salud-publica/1968-01-31/725
+  modificada_por:
+    - ley/ministerio-de-economia_fomento-y-turismo_subsecretaria-de-economia-y-empresas-de-menor-tamano/2010-10-25/20463
+    - ley/ministerio-de-economia_fomento-y-turismo_subsecretaria-de-economia-y-empresas-de-menor-tamano/2011-07-23/20521
+    - ley/ministerio-de-economia_fomento-y-turismo_subsecretaria-de-economia-y-empresas-de-menor-tamano/2012-02-17/20575
+    - ley/ministerio-secretaria-general-de-la-presidencia/2002-06-13/19812
+
 ---
 
 # Ley 19.628 sobre Protección de la Vida Privada

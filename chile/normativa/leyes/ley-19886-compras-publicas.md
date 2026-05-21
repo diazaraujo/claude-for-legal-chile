@@ -21,6 +21,25 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2000-01-11/2
+    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2002-05-03/1
+    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
+    - dl/ministerio-de-hacienda/1979-10-17/2879
+    - dl/ministerio-de-hacienda/1980-12-06/3529
+    - dto/ministerio-de-hacienda/1978-08-29/404
+    - dto/ministerio-del-interior/1977-06-25/104
+    - dto/ministerio-del-interior/1992-08-27/662
+    - ley/ministerio-de-defensa-nacional/1990-02-13/18928
+    - ley/ministerio-de-hacienda/1965-07-28/16282
+    - ley/ministerio-de-hacienda/1985-12-28/18482
+    - ley/ministerio-del-interior/1988-03-31/18695
+  modificada_por:
+    - dfl/ministerio-de-hacienda/2010-03-01/11
+    - ley/ministerio-de-hacienda/2008-01-19/20238
+    - ley/ministerio-secretaria-general-de-la-presidencia/2006-01-05/20088
+
 ---
 
 # Ley 19.886 — Compras públicas (Ley de Bases)

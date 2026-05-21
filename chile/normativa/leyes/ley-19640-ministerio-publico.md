@@ -20,6 +20,23 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - ley/ministerio-del-trabajo-y-prevision-social/1994-11-07/19345
+  modificada_por:
+    - ley/ministerio-de-hacienda/2003-08-13/19893
+    - ley/ministerio-de-justicia/2001-10-13/19762
+    - ley/ministerio-de-justicia/2002-05-31/19806
+    - ley/ministerio-de-justicia/2003-12-20/19919
+    - ley/ministerio-de-justicia/2005-11-14/20074
+    - ley/ministerio-de-justicia/2005-12-07/20084
+    - ley/ministerio-de-justicia/2008-03-14/20253
+    - ley/ministerio-de-relaciones-exteriores/2009-07-18/20357
+    - ley/ministerio-del-interior_subsecretaria-del-interior/2007-04-05/20174
+    - ley/ministerio-del-interior_subsecretaria-del-interior/2007-04-11/20175
+    - ley/ministerio-del-interior_subsecretaria-del-interior/2010-10-08/20467
+    - ley/ministerio-secretaria-general-de-la-presidencia/2006-01-05/20088
+
 ---
 
 # Ley 19.640 — LOC del Ministerio Público

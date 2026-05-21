@@ -18,6 +18,17 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modificada_por:
+    - dto/ministerio-del-interior/1993-10-09/1359
+    - ley/ministerio-de-hacienda/1998-12-02/19595
+    - ley/ministerio-del-interior/1993-04-19/19209
+    - ley/ministerio-del-interior/1993-12-10/19274
+    - ley/ministerio-del-interior/1994-12-29/19358
+    - ley/ministerio-del-interior/1996-01-23/19441
+    - ley/ministerio-del-interior_subsecretaria-del-interior/2004-11-09/19980
+    - ley/ministerio-secretaria-general-de-la-presidencia_subsecretaria-general-de-la-presidencia/2009-12-10/20405
+
 ---
 
 # Ley 19.123 — Reparación Comisión Rettig

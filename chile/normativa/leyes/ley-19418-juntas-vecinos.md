@@ -18,6 +18,15 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - ley/ministerio-del-interior/1989-12-30/18893
+  modificada_por:
+    - ley/ministerio-de-justicia/2002-05-31/19806
+    - ley/ministerio-del-interior/1996-11-30/19483
+    - ley/ministerio-del-interior_subsecretaria-del-interior/2000-09-25/19692
+    - ley/ministerio-del-interior_subsecretaria-del-interior/2006-11-17/20131
+
 ---
 
 # Ley 19.418 — Juntas de Vecinos y Organizaciones Comunitarias

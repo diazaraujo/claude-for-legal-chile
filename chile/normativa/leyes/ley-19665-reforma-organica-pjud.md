@@ -21,6 +21,28 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dl/ministerio-de-justicia/1979-12-29/3058
+    - dto/ministerio-de-justicia/1978-05-23/307
+    - ley/ministerio-de-justicia/1943-07-09/7421
+    - ley/ministerio-de-justicia/1963-08-08/15231
+    - ley/ministerio-de-justicia/1969-04-14/17105
+    - ley/ministerio-de-justicia/1982-05-18/18120
+  modificada_por:
+    - ley/ministerio-de-justicia/2001-01-05/19708
+    - ley/ministerio-de-justicia/2001-03-10/19718
+    - ley/ministerio-de-justicia/2001-10-13/19762
+    - ley/ministerio-de-justicia/2002-03-05/19794
+    - ley/ministerio-de-justicia/2003-01-31/19861
+    - ley/ministerio-de-justicia/2003-12-20/19919
+    - ley/ministerio-de-justicia/2004-10-23/19976
+    - ley/ministerio-de-justicia/2005-11-14/20074
+    - ley/ministerio-de-justicia/2005-12-07/20084
+    - ley/ministerio-de-justicia/2007-06-16/20199
+    - ley/ministerio-de-justicia/2011-09-23/20534
+    - ley/ministerio-de-justicia_subsecretaria-de-justicia/2009-12-22/20408
+
 ---
 
 # Ley 19.665 — Reforma Orgánica del PJUD para la RPP

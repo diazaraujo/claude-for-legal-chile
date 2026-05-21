@@ -21,6 +21,16 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-del-interior/1931-05-30/221
+    - dl/ministerio-de-transportes-y-telecomunicaciones_subsecretaria-de-transportes/1975-12-23/1286
+  modificada_por:
+    - dfl/ministerio-de-justicia/1995-10-18/1
+    - ley/ministerio-de-defensa-nacional_subsecretaria-para-las-fuerzas-armadas/2010-12-30/20477
+    - ley/ministerio-de-justicia/1991-02-14/19047
+    - ley/ministerio-de-justicia/1995-01-30/19366
+
 ---
 
 # Ley 18.916 — Código Aeronáutico

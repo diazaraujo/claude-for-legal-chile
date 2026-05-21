@@ -22,6 +22,32 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dl/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion/1974-01-24/280
+    - ley/ministerio-de-hacienda/1965-12-18/16394
+  modificada_por:
+    - ley/ministerio-de-hacienda/1984-10-19/18350
+    - ley/ministerio-de-hacienda/1987-10-20/18660
+    - ley/ministerio-de-hacienda/1989-07-29/18815
+    - ley/ministerio-de-hacienda/1989-12-21/18876
+    - ley/ministerio-de-hacienda/1989-12-30/18899
+    - ley/ministerio-de-hacienda/1990-02-01/18919
+    - ley/ministerio-de-hacienda/1994-03-19/19301
+    - ley/ministerio-de-hacienda/1995-05-18/19389
+    - ley/ministerio-de-hacienda/1997-07-30/19506
+    - ley/ministerio-de-hacienda/1999-01-18/19601
+    - ley/ministerio-de-hacienda/2000-12-20/19705
+    - ley/ministerio-de-hacienda/2001-11-07/19768
+    - ley/ministerio-de-hacienda/2001-11-07/19769
+    - ley/ministerio-de-hacienda/2007-06-05/20190
+    - ley/ministerio-de-hacienda/2009-04-28/20343
+    - ley/ministerio-de-hacienda/2009-06-06/20345
+    - ley/ministerio-de-hacienda/2010-08-13/20448
+    - ley/ministerio-de-hacienda/2011-12-17/20552
+    - ley/ministerio-de-hacienda_subsecretaria-de-hacienda/2009-10-20/20382
+    - ley/ministerio-de-justicia/1993-06-01/19221
+
 ---
 
 # Ley 18.045 — Mercado de Valores (LMV)

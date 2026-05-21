@@ -19,6 +19,19 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dto/ministerio-de-defensa-nacional/1992-11-18/1
+    - res/ministerio-de-salud/no-tiene/1215
+  modificada_por:
+    - dfl/ministerio-de-hacienda/2007-10-02/20
+    - dfl/ministerio-de-hacienda/2007-10-02/25
+    - dfl/ministerio-secretaria-general-de-la-presidencia/2007-12-21/3
+    - ley/ministerio-de-agricultura/2008-07-30/20283
+    - ley/ministerio-del-medio-ambiente/2010-11-13/20473
+    - ley/ministerio-secretaria-general-de-la-presidencia/2007-03-27/20173
+    - ley/ministerio-secretaria-general-de-la-presidencia/2010-01-26/20417
+
 ---
 
 # Ley 19.300 — Bases Generales del Medio Ambiente

@@ -20,6 +20,25 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - ley/ministerio-de-educacion-publica/1987-02-23/18602
+  modificada_por:
+    - dto/ministerio-de-educacion-publica/1991-11-06/324
+    - ley/ministerio-de-educacion/1995-09-02/19410
+    - ley/ministerio-de-educacion/1997-11-17/19532
+    - ley/ministerio-de-educacion/2001-01-31/19715
+    - ley/ministerio-de-educacion/2002-06-07/19808
+    - ley/ministerio-de-educacion/2004-02-12/19933
+    - ley/ministerio-de-educacion/2004-08-14/19961
+    - ley/ministerio-de-educacion/2004-11-06/19979
+    - ley/ministerio-de-educacion/2005-03-22/20006
+    - ley/ministerio-de-educacion/2006-12-29/20158
+    - ley/ministerio-de-educacion/2008-02-01/20248
+    - ley/ministerio-de-hacienda/1992-12-12/19185
+    - ley/ministerio-de-justicia/2002-05-31/19806
+    - ley/ministerio-del-trabajo-y-prevision-social/1993-01-18/19200
+
 ---
 
 # Ley 19.070 (DFL 1/1996) — Estatuto Docente

@@ -20,6 +20,30 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-de-hacienda/1960-03-29/171
+    - dto/ministerio-del-interior/1960-11-04/5037
+    - ley/ministerio-del-interior/1962-12-27/15113
+  modificada_por:
+    - dfl/ministerio-de-transportes-y-telecomunicaciones/1987-02-21/1
+    - ley/ministerio-de-hacienda/1987-01-03/18591
+    - ley/ministerio-de-hacienda/1987-12-31/18681
+    - ley/ministerio-de-transportes-y-telecomunicaciones/1991-11-07/19091
+    - ley/ministerio-de-transportes-y-telecomunicaciones/1994-01-20/19277
+    - ley/ministerio-de-transportes-y-telecomunicaciones/1994-03-10/19302
+    - ley/ministerio-de-transportes-y-telecomunicaciones_subsecretaria-de-telecomunicaciones/2001-05-11/19724
+    - ley/ministerio-de-transportes-y-telecomunicaciones_subsecretaria-de-telecomunicaciones/2007-07-12/20196
+    - ley/ministerio-de-transportes-y-telecomunicaciones_subsecretaria-de-telecomunicaciones/2008-09-13/20292
+    - ley/ministerio-de-transportes-y-telecomunicaciones_subsecretaria-de-telecomunicaciones/2009-02-06/20335
+    - ley/ministerio-de-transportes-y-telecomunicaciones_subsecretaria-de-telecomunicaciones/2010-05-04/20433
+    - ley/ministerio-de-transportes-y-telecomunicaciones_subsecretaria-de-telecomunicaciones/2010-08-26/20453
+    - ley/ministerio-de-transportes-y-telecomunicaciones_subsecretaria-de-telecomunicaciones/2010-12-10/20471
+    - ley/ministerio-de-transportes-y-telecomunicaciones_subsecretaria-de-telecomunicaciones/2010-12-10/20478
+    - ley/ministerio-de-transportes-y-telecomunicaciones_subsecretaria-de-telecomunicaciones/2011-07-06/20522
+    - ley/ministerio-de-transportes-y-telecomunicaciones_subsecretaria-de-telecomunicaciones/2011-11-11/20546
+    - ley/ministerio-del-interior/1989-09-30/18838
+
 ---
 
 # Ley 18.168 — General de Telecomunicaciones

@@ -19,6 +19,10 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modificada_por:
+    - ley/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion/2007-11-12/20217
+
 ---
 
 # Ley 19.799 — Firma Electrónica y Documentos Electrónicos

@@ -19,6 +19,23 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dl/ministerio-de-hacienda/1980-05-28/3410
+  modificada_por:
+    - ley/ministerio-de-hacienda/2003-06-23/19882
+    - ley/ministerio-del-interior/1987-11-28/18670
+    - ley/ministerio-del-interior/1988-11-26/18762
+    - ley/ministerio-del-interior/1989-08-05/18821
+    - ley/ministerio-del-interior/1989-09-30/18838
+    - ley/ministerio-del-interior/1990-01-06/18891
+    - ley/ministerio-del-interior/1990-03-10/18972
+    - ley/ministerio-del-interior/1992-08-03/19154
+    - ley/ministerio-secretaria-general-de-la-presidencia/1999-12-14/19653
+    - ley/ministerio-secretaria-general-de-la-presidencia/2006-01-05/20088
+    - ley/ministerio-secretaria-general-de-la-presidencia/2007-07-24/20205
+    - ley/ministerio-secretaria-general-de-la-presidencia/2008-08-20/20285
+
 ---
 
 # Ley 18.575 — LOC de Bases Generales de la Administración del Estado

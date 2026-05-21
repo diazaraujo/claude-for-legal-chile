@@ -19,6 +19,14 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - ley/ministerio-del-interior/1992-02-08/19123
+    - ley/ministerio-del-interior_subsecretaria-del-interior/2004-11-09/19980
+    - ley/ministerio-del-interior_subsecretaria-del-interior/2004-12-24/19992
+  modificada_por:
+    - ley/ministerio-del-interior_subsecretaria-del-interior/2011-02-05/20496
+
 ---
 
 # Ley 20.405 — Instituto Nacional de Derechos Humanos (INDH)

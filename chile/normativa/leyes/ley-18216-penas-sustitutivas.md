@@ -20,6 +20,18 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dl/ministerio-de-defensa-nacional_subsecretaria-de-guerra/1977-11-12/1969
+    - ley/ministerio-de-justicia/1944-08-29/7821
+    - ley/ministerio-de-justicia/1972-05-04/17642
+  modificada_por:
+    - ley/ministerio-de-justicia/1991-02-14/19047
+    - ley/ministerio-de-justicia/1999-07-12/19617
+    - ley/ministerio-de-justicia/2002-04-18/19802
+    - ley/ministerio-de-justicia/2002-05-31/19806
+    - ley/ministerio-de-justicia/2005-10-07/20066
+
 ---
 
 # Ley 18.216 — Penas Sustitutivas

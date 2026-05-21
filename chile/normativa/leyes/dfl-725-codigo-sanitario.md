@@ -21,6 +21,31 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-de-bienestar-social/1931-05-29/226
+  modificada_por:
+    - dfl/ministerio-de-salud-publica/1968-11-29/1003
+    - dl/ministerio-de-salud-publica/1974-12-14/793
+    - dl/ministerio-de-salud-publica/1975-07-10/1085
+    - dto/ministerio-de-vivienda-y-urbanismo/1976-04-13/458
+    - ley/ministerio-de-agricultura/2008-12-27/20308
+    - ley/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-econstruccion/1989-05-24/18796
+    - ley/ministerio-de-justicia/1969-06-11/17155
+    - ley/ministerio-de-justicia/1989-09-15/18826
+    - ley/ministerio-de-justicia/2002-05-31/19806
+    - ley/ministerio-de-mineria/1983-10-14/18248
+    - ley/ministerio-de-salud-publica/1982-11-15/18173
+    - ley/ministerio-de-salud/1984-05-04/18303
+    - ley/ministerio-de-salud/1986-02-04/18498
+    - ley/ministerio-de-salud/1996-04-10/19451
+    - ley/ministerio-de-salud/1997-03-22/19497
+    - ley/ministerio-de-salud/1997-12-16/19536
+    - ley/ministerio-de-salud/2004-02-24/19937
+    - ley/ministerio-de-salud/2005-07-13/20029
+    - ley/ministerio-de-salud_subsecretaria-de-salud-publica/2009-10-03/20380
+    - ley/ministerio-de-salud_subsecretaria-de-salud-publica/2010-12-17/20470
+
 ---
 
 # DFL 725 — Código Sanitario

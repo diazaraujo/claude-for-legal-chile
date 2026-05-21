@@ -19,6 +19,26 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - cod/ministerio-de-justicia/1874-11-12/penal
+    - dfl/ministerio-de-justicia/2000-05-30/1
+    - dl/ministerio-de-justicia/1925-10-28/645
+    - dl/ministerio-de-justicia/1979-09-15/2859
+    - dto/ministerio-de-justicia/1944-12-19/2226
+    - ley/ministerio-de-justicia/1943-07-09/7421
+    - ley/ministerio-de-justicia/1967-03-08/16618
+    - ley/ministerio-de-justicia/1984-02-07/18287
+    - ley/ministerio-de-justicia/1999-10-15/19640
+    - ley/ministerio-de-justicia/2000-03-09/19665
+    - ley/ministerio-de-justicia/2001-03-10/19718
+    - ley/ministerio-de-justicia/2004-08-30/19968
+  modificada_por:
+    - ley/ministerio-de-justicia/2006-06-01/20110
+    - ley/ministerio-de-justicia/2007-06-02/20191
+    - ley/ministerio-de-justicia/2007-06-16/20191
+    - ley/ministerio-de-justicia/2011-08-13/20526
+
 ---
 
 # Ley 20.084 — Responsabilidad Penal Adolescente (RPA)

@@ -22,6 +22,29 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modificada_por:
+    - dfl/ministerio-de-obras-publicas/1998-02-25/850
+    - dl/ministerio-de-hacienda/1973-10-02/38
+    - dl/ministerio-de-hacienda/1973-10-05/61
+    - dl/ministerio-de-hacienda/1974-11-05/728
+    - dl/ministerio-de-hacienda/1974-12-04/785
+    - dl/ministerio-de-hacienda/1975-11-18/1254
+    - dl/ministerio-de-hacienda/1975-11-28/1263
+    - dl/ministerio-de-hacienda/1975-11-29/1273
+    - dl/ministerio-de-hacienda/1981-01-02/3551
+    - dto/ministerio-de-hacienda/1956-11-28/6973
+    - dto/ministerio-de-obras-publicas/1985-05-20/294
+    - ley/ministerio-de-defensa-nacional/1990-03-10/18974
+    - ley/ministerio-de-hacienda/1954-12-27/11764
+    - ley/ministerio-de-hacienda/1956-08-18/12084
+    - ley/ministerio-de-hacienda/1956-10-30/12120
+    - ley/ministerio-de-hacienda/1959-04-06/13305
+    - ley/ministerio-de-hacienda/1962-01-24/14832
+    - ley/ministerio-de-hacienda/1965-01-02/16068
+    - ley/ministerio-de-hacienda/1966-02-16/16433
+    - ley/ministerio-de-hacienda/1972-02-21/17617
+
 ---
 
 # Ley 10.336 — Contraloría General de la República (CGR)

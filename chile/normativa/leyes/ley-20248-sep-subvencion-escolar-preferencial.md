@@ -19,6 +19,17 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-de-educacion/1997-01-22/1
+    - dfl/ministerio-de-educacion/1998-11-28/2
+    - ley/ministerio-de-educacion-publica/1991-07-01/19070
+  modificada_por:
+    - ley/ministerio-de-educacion/2011-02-26/20501
+    - ley/ministerio-de-educacion/2011-08-27/20529
+    - ley/ministerio-de-educacion/2011-10-26/20550
+    - ley/ministerio-de-educacion/2012-02-02/20567
+
 ---
 
 # Ley 20.248 — Subvención Escolar Preferencial (SEP)

@@ -19,6 +19,17 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - cod/ministerio-de-justicia/1874-11-12/penal
+    - ley/ministerio-de-justicia/1983-05-14/18216
+    - ley/ministerio-de-justicia/1994-08-27/19325
+    - ley/ministerio-de-justicia/2004-08-30/19968
+  modificada_por:
+    - ley/ministerio-de-justicia/2008-09-15/20286
+    - ley/ministerio-de-justicia/2010-03-18/20427
+    - ley/ministerio-de-justicia/2010-12-18/20480
+
 ---
 
 # Ley 20.066 — Violencia Intrafamiliar (VIF)

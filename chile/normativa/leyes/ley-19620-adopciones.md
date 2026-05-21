@@ -21,6 +21,21 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-de-justicia/1996-12-26/2
+    - dfl/ministerio-de-justicia/2000-05-30/1
+    - dfl/ministerio-del-trabajo-y-prevision-social/1982-03-25/150
+    - ley/ministerio-de-justicia/1943-10-21/7613
+    - ley/ministerio-de-justicia/1967-03-08/16618
+    - ley/ministerio-de-justicia/1988-05-10/18703
+  modificada_por:
+    - ley/ministerio-de-justicia/1999-12-20/19658
+    - ley/ministerio-de-justicia/2003-10-28/19910
+    - ley/ministerio-de-justicia/2004-05-17/19947
+    - ley/ministerio-de-justicia/2004-08-30/19968
+    - ley/ministerio-de-planificacion/2007-08-03/20203
+
 ---
 
 # Ley 19.620 — Adopciones

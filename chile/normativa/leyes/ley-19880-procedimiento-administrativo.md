@@ -19,6 +19,10 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modificada_por:
+    - ley/ministerio-secretaria-general-de-la-presidencia/2008-08-20/20285
+
 ---
 
 # Ley 19.880 — Procedimiento administrativo

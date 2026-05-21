@@ -20,6 +20,33 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - ley/ministerio-de-educacion-publica/1954-12-30/11766
+    - ley/ministerio-de-hacienda/1964-02-14/15564
+    - ley/ministerio-de-hacienda/1966-01-29/16419
+  modificada_por:
+    - cir/ministerio-de-hacienda/1993-12-07/56
+    - cir/ministerio-de-hacienda_servicio-de-impuestos-internos_direccion-nacional/1995-10-03/37
+    - cir/ministerio-de-hacienda_servicio-de-impuestos-internos_direccion-nacional/2001-02-16/11
+    - dl/ministerio-de-hacienda/1975-03-01/910
+    - dl/ministerio-de-hacienda/1975-05-15/1017
+    - dl/ministerio-de-hacienda/1975-06-28/1076
+    - dl/ministerio-de-hacienda/1975-08-02/1122
+    - dl/ministerio-de-hacienda/1975-11-08/1244
+    - dl/ministerio-de-hacienda/1976-01-16/1328
+    - dl/ministerio-de-hacienda/1976-03-06/1362
+    - dl/ministerio-de-hacienda/1976-07-08/1512
+    - dl/ministerio-de-hacienda/1976-07-29/1533
+    - dl/ministerio-de-hacienda/1976-08-25/1541
+    - dl/ministerio-de-hacienda/1976-12-03/1604
+    - dl/ministerio-de-hacienda/1977-01-26/1681
+    - dl/ministerio-de-hacienda/1977-03-22/1754
+    - dl/ministerio-de-hacienda/1977-05-05/1770
+    - dl/ministerio-de-hacienda/1977-07-26/1859
+    - dl/ministerio-de-hacienda/1977-08-09/1874
+    - dl/ministerio-de-hacienda/1978-08-31/2324
+
 ---
 
 # DL 824 — Ley sobre Impuesto a la Renta (LIR)

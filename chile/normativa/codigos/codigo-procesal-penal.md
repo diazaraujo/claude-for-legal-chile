@@ -20,6 +20,28 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - ley/ministerio-de-justicia/1906-02-19/1853
+  modificada_por:
+    - ley/ministerio-de-justicia/2001-10-13/19762
+    - ley/ministerio-de-justicia/2002-01-30/19789
+    - ley/ministerio-de-justicia/2002-05-31/19806
+    - ley/ministerio-de-justicia/2002-07-11/19815
+    - ley/ministerio-de-justicia/2003-12-20/19919
+    - ley/ministerio-de-justicia/2004-01-14/19927
+    - ley/ministerio-de-justicia/2004-04-15/19942
+    - ley/ministerio-de-justicia/2004-06-05/19950
+    - ley/ministerio-de-justicia/2004-10-06/19970
+    - ley/ministerio-de-justicia/2005-11-14/20074
+    - ley/ministerio-de-justicia/2006-01-11/20090
+    - ley/ministerio-de-justicia/2008-03-14/20253
+    - ley/ministerio-de-justicia/2011-08-13/20526
+    - ley/ministerio-de-salud_subsecretaria-de-salud/2012-05-11/20585
+    - ley/ministerio-del-interior-y-seguridad-publica_subsecretaria-del-interior/2011-04-08/20507
+    - ley/ministerio-del-interior-y-seguridad-publica_subsecretaria-del-interior/2012-06-02/20592
+    - ley/ministerio-del-interior_subsecretaria-del-interior/2007-11-15/20227
+
 ---
 
 # Código Procesal Penal (Ley 19.696 / 2000)

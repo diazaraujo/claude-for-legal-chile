@@ -19,6 +19,29 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modificada_por:
+    - ley/ministerio-del-interior/1988-08-13/18733
+    - ley/ministerio-del-interior/1989-05-26/18799
+    - ley/ministerio-del-interior/1989-06-15/18807
+    - ley/ministerio-del-interior/1989-06-15/18808
+    - ley/ministerio-del-interior/1989-06-15/18809
+    - ley/ministerio-del-interior/1989-08-30/18828
+    - ley/ministerio-del-interior/1990-08-16/18991
+    - ley/ministerio-del-interior/1993-08-20/19237
+    - ley/ministerio-del-interior/1994-11-23/19351
+    - ley/ministerio-del-interior_subsecretaria-del-interior/1990-03-10/18963
+    - ley/ministerio-del-interior_subsecretaria-del-interior/1996-01-17/19438
+    - ley/ministerio-del-interior_subsecretaria-del-interior/1999-11-30/19654
+    - ley/ministerio-del-interior_subsecretaria-del-interior/2001-07-19/19745
+    - ley/ministerio-del-interior_subsecretaria-del-interior/2002-09-04/19823
+    - ley/ministerio-del-interior_subsecretaria-del-interior/2003-08-05/19884
+    - ley/ministerio-del-interior_subsecretaria-del-interior/2005-05-02/20010
+    - ley/ministerio-del-interior_subsecretaria-del-interior/2007-04-05/20174
+    - ley/ministerio-del-interior_subsecretaria-del-interior/2007-06-08/20183
+    - ley/ministerio-del-interior_subsecretaria-del-interior/2009-09-17/20384
+    - ley/ministerio-secretaria-general-de-la-presidencia/2011-10-17/20542
+
 ---
 
 # Ley 18.700 — LOC sobre Votaciones Populares y Escrutinios

@@ -19,6 +19,10 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modificada_por:
+    - ley/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion/2010-02-03/20416
+
 ---
 
 # Ley 20.169 — Competencia Desleal

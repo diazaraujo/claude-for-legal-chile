@@ -21,6 +21,17 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - ley/ministerio-de-justicia/1983-06-10/18223
+  modificada_por:
+    - ley/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-econstruccion/1999-12-27/19659
+    - ley/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-econstruccion/2004-07-14/19955
+    - ley/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion/2001-11-08/19761
+    - ley/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion/2010-02-03/20416
+    - ley/ministerio-de-economia_fomento-y-turismo_subsecretaria-de-economia-y-empresas-de-menor-tamano/2011-10-21/20543
+    - ley/ministerio-de-economia_fomento-y-turismo_subsecretaria-de-economia-y-empresas-de-menor-tamano/2011-12-05/20555
+
 ---
 
 # Ley 19.496 — Protección de los derechos de los consumidores (LPC)

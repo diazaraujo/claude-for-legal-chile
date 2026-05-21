@@ -19,6 +19,35 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2000-01-11/2
+    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2002-05-03/1
+    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
+    - dto/ministerio-del-interior/1992-08-27/662
+    - ley/ministerio-del-interior/1988-03-31/18695
+  modificada_por:
+    - dfl/ministerio-del-interior/1994-09-07/265
+    - dfl/ministerio-del-interior/1994-09-07/267
+    - dfl/ministerio-del-interior/1994-09-09/262
+    - dfl/ministerio-del-interior/1994-09-09/281
+    - dfl/ministerio-del-interior/1994-09-13/260
+    - dfl/ministerio-del-interior/1994-09-13/264
+    - dfl/ministerio-del-interior/1994-09-17/261
+    - dfl/ministerio-del-interior/1994-09-23/259
+    - dfl/ministerio-del-interior/1994-09-23/284
+    - dfl/ministerio-del-interior/1994-09-23/288
+    - dfl/ministerio-del-interior/1994-09-26/277
+    - dfl/ministerio-del-interior/1994-09-26/298
+    - dfl/ministerio-del-interior/1994-09-27/290
+    - dfl/ministerio-del-interior/1994-09-27/292
+    - dfl/ministerio-del-interior/1994-09-27/297
+    - dfl/ministerio-del-interior/1994-09-29/283
+    - dfl/ministerio-del-interior/1994-09-30/270
+    - dfl/ministerio-del-interior/1994-09-30/273
+    - dfl/ministerio-del-interior/1994-09-30/275
+    - dfl/ministerio-del-interior/1994-09-30/287
+
 ---
 
 # Ley 18.883 — Estatuto Administrativo Municipal

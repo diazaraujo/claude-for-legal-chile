@@ -21,6 +21,27 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-de-hacienda/1931-05-20/191
+    - dfl/ministerio-de-salud-publica/1968-01-31/725
+    - dl/ministerio-de-fomento/1932-08-27/488
+    - dl/ministerio-de-mineria/1974-05-15/448
+    - dl/ministerio-de-mineria/1975-07-09/1090
+    - dl/ministerio-de-mineria/1977-04-20/1759
+    - dl/ministerio-de-mineria/1979-12-27/3060
+    - dto/ministerio-de-economia-y-comercio_subsecretaria-de-economia-y-comercio_departamento-de-minas-y-petroleo/1952-07-12/917
+    - ley/ministerio-de-economia-y-comercio_subsecretaria-de-economia-y-comercio_departamento-de-minas-y-petroleo/1952-02-28/10263
+    - ley/ministerio-de-economia_fomento-y-reconstruccion/1965-10-23/16319
+    - ley/ministerio-de-mineria/1957-10-16/12576
+  modificada_por:
+    - ley/ministerio-de-hacienda/1987-12-31/18681
+    - ley/ministerio-de-mineria/1990-02-22/18941
+    - ley/ministerio-de-mineria/1994-03-03/19294
+    - ley/ministerio-de-mineria/1998-07-25/19573
+    - ley/ministerio-de-mineria/2000-09-22/19694
+    - ley/ministerio-de-mineria/2001-03-30/19719
+
 ---
 
 # Ley 18.248 — Código de Minería

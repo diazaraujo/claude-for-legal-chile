@@ -21,6 +21,29 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modificada_por:
+    - dl/ministerio-de-hacienda/1981-03-11/3650
+    - dl/ministerio-del-trabajo-y-prevision-social/1981-02-21/3626
+    - ley/ministerio-de-hacienda/1982-12-29/18196
+    - ley/ministerio-de-hacienda/1987-12-31/18681
+    - ley/ministerio-de-hacienda/1989-10-10/18840
+    - ley/ministerio-de-hacienda/1993-09-15/19247
+    - ley/ministerio-de-hacienda/1994-03-19/19301
+    - ley/ministerio-de-hacienda/1995-05-18/19389
+    - ley/ministerio-de-hacienda/1995-09-30/19415
+    - ley/ministerio-de-hacienda/1996-09-03/19469
+    - ley/ministerio-de-hacienda/1998-07-29/19578
+    - ley/ministerio-de-hacienda/1999-01-18/19601
+    - ley/ministerio-de-hacienda/2000-12-20/19705
+    - ley/ministerio-de-hacienda/2001-11-07/19768
+    - ley/ministerio-de-hacienda/2007-06-05/20190
+    - ley/ministerio-de-hacienda/2009-06-06/20345
+    - ley/ministerio-de-hacienda/2010-07-31/20455
+    - ley/ministerio-de-hacienda/2010-08-13/20448
+    - ley/ministerio-de-hacienda/2011-08-31/20531
+    - ley/ministerio-de-hacienda/2011-12-17/20552
+
 ---
 
 # DL 3.500 — Sistema de Pensiones

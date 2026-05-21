@@ -22,6 +22,16 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - cod/ministerio-de-justicia/1865-11-23/1865
+    - cod/ministerio-de-justicia/1865-11-23/de-comercio
+    - dfl/ministerio-de-justicia/1982-10-07/707
+    - ley/ministerio-de-hacienda/1943-08-30/7498
+    - ley/ministerio-de-justicia/1929-02-04/4558
+  modificada_por:
+    - ley/ministerio-de-hacienda/1986-09-20/18552
+
 ---
 
 # Ley 18.092 — Letra de Cambio y Pagaré

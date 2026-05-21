@@ -20,6 +20,15 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modificada_por:
+    - ley/ministerio-de-salud/1995-08-31/19405
+    - ley/ministerio-de-salud/1999-05-14/19607
+    - ley/ministerio-de-salud/2002-06-25/19813
+    - ley/ministerio-de-salud/2004-02-24/19937
+    - ley/ministerio-de-salud_subsecretaria-de-salud-publica/2007-01-05/20157
+    - ley/ministerio-de-salud_subsecretaria-de-salud-publica/2008-02-09/20250
+
 ---
 
 # Ley 19.378 — Estatuto APS Municipal de Salud

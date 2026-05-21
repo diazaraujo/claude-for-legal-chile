@@ -20,6 +20,31 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - ley/ministerio-de-hacienda/1956-10-30/12120
+  modificada_por:
+    - dfl/ministerio-de-hacienda/1995-12-30/2
+    - dfl/ministerio-de-hacienda/2001-09-11/1
+    - dl/ministerio-de-hacienda/1975-03-01/910
+    - dl/ministerio-de-hacienda/1975-05-15/1017
+    - dl/ministerio-de-hacienda/1975-05-16/1024
+    - dl/ministerio-de-hacienda/1975-06-28/1076
+    - dl/ministerio-de-hacienda/1975-08-02/1122
+    - dl/ministerio-de-hacienda/1975-11-08/1244
+    - dl/ministerio-de-hacienda/1976-01-13/1325
+    - dl/ministerio-de-hacienda/1976-03-06/1362
+    - dl/ministerio-de-hacienda/1976-06-23/1504
+    - dl/ministerio-de-hacienda/1976-07-08/1512
+    - dl/ministerio-de-hacienda/1976-12-03/1606
+    - dl/ministerio-de-hacienda/1977-06-11/1819
+    - dl/ministerio-de-hacienda/1977-08-03/1844
+    - dl/ministerio-de-hacienda/1977-08-09/1874
+    - dl/ministerio-de-hacienda/1978-08-25/2312
+    - dl/ministerio-de-hacienda/1978-08-31/2324
+    - dl/ministerio-de-hacienda/1978-12-22/2415
+    - dl/ministerio-de-hacienda/1979-04-04/2563
+
 ---
 
 # DL 825 — Ley sobre Impuesto a las Ventas y Servicios (IVA)

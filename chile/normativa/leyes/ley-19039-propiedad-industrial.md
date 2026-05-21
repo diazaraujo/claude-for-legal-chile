@@ -20,6 +20,16 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dl/ministerio-de-agricultura_industria-y-colonizacion/1925-11-03/588
+    - ley/ministerio-de-economia_fomento-y-reconstruccion/1990-02-24/18935
+    - ley/ministerio-de-hacienda/1987-01-03/18591
+    - ley/ministerio-de-hacienda/1987-12-31/18681
+  modificada_por:
+    - ley/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion/2005-03-11/19996
+    - ley/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion/2007-01-26/20160
+
 ---
 
 # Ley 19.039 — Propiedad Industrial

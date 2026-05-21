@@ -19,6 +19,21 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2000-01-11/2
+    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2002-05-03/1
+    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
+    - dfl/ministerio-secretaria-general-de-la-presidencia/2001-11-17/1
+    - dl/ministerio-de-instruccion-publica/1925-08-24/488
+    - dto/ministerio-de-hacienda/1964-07-10/2421
+    - dto/ministerio-del-interior/1992-08-27/662
+    - ley/ministerio-de-hacienda/1952-05-29/10336
+    - ley/ministerio-de-hacienda/1989-10-10/18840
+    - ley/ministerio-del-interior/1988-03-31/18695
+    - ley/ministerio-del-interior_subsecretaria-del-interior/1986-12-05/18575
+    - ley/ministerio-secretaria-general-de-la-presidencia/2003-05-29/19880
+
 ---
 
 # Ley 20.285 — Transparencia y acceso a información pública

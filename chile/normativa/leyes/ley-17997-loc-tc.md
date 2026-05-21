@@ -18,6 +18,14 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modificada_por:
+    - ley/ministerio-de-justicia/2002-05-31/19806
+    - ley/ministerio-del-interior/1990-02-17/18930
+    - ley/ministerio-del-interior/2005-02-16/20000
+    - ley/ministerio-secretaria-general-de-la-presidencia/2006-01-05/20088
+    - ley/ministerio-secretaria-general-de-la-presidencia_subsecretaria-general-de-la-presidencia/2009-10-28/20381
+
 ---
 
 # Ley 17.997 — LOC del Tribunal Constitucional

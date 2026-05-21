@@ -20,6 +20,21 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-del-trabajo-y-prevision-social/1989-09-27/1
+    - dl/ministerio-del-trabajo-y-prevision-social/1976-05-08/1446
+    - ley/ministerio-del-trabajo-y-prevision-social_subsecretaria-de-prevision-social/1968-02-01/16744
+  modificada_por:
+    - dfl/ministerio-de-hacienda/2007-10-02/21
+    - dfl/ministerio-de-hacienda/2007-10-02/22
+    - dfl/ministerio-del-trabajo-y-prevision-social_subsecretaria-del-trabajo/2003-12-22/3
+    - ley/ministerio-del-interior_subsecretaria-del-interior/2006-09-04/20121
+    - ley/ministerio-del-trabajo-y-prevision-social_subsecretaria-del-trabajo/2001-11-02/19765
+    - ley/ministerio-del-trabajo-y-prevision-social_subsecretaria-del-trabajo/2004-09-04/19967
+    - ley/ministerio-del-trabajo-y-prevision-social_subsecretaria-del-trabajo/2006-10-27/20124
+    - ley/ministerio-del-trabajo-y-prevision-social_subsecretaria-del-trabajo/2008-06-25/20267
+
 ---
 
 # Ley 19.518 — Estatuto de Capacitación y Empleo (SENCE)

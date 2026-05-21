@@ -18,6 +18,15 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modificada_por:
+    - ley/ministerio-de-desarrollo-social_subsecretaria-de-evaluacion-social/2012-05-17/20595
+    - ley/ministerio-de-hacienda/2009-05-30/20351
+    - ley/ministerio-de-hacienda/2011-12-17/20552
+    - ley/ministerio-de-planificacion/2011-10-13/20530
+    - ley/ministerio-del-trabajo-y-prevision-social_subsecretaria-de-prevision-social/2008-09-03/20288
+    - ley/ministerio-del-trabajo-y-prevision-social_subsecretaria-del-trabajo/2009-01-30/20328
+
 ---
 
 # Ley 19.728 — Seguro de Cesantía

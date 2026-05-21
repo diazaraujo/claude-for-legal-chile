@@ -21,6 +21,19 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - cod/ministerio-de-justicia/1865-11-23/1865
+    - cod/ministerio-de-justicia/1865-11-23/de-comercio
+    - dl/ministerio-de-hacienda/1974-05-25/455
+    - dl/ministerio-de-hacienda/1974-12-31/824
+    - dl/ministerio-de-hacienda/1975-06-28/1078
+    - ley/ministerio-de-hacienda/1962-10-11/14949
+  modificada_por:
+    - ley/ministerio-de-hacienda/1989-10-10/18840
+    - ley/ministerio-de-hacienda/1997-11-04/19528
+    - ley/ministerio-de-hacienda/2004-06-26/19951
+
 ---
 
 # Ley 18.010 — Operaciones de Crédito de Dinero

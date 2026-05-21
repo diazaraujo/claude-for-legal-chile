@@ -19,6 +19,19 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modificada_por:
+    - ley/ministerio-de-hacienda/2003-05-28/19875
+    - ley/ministerio-de-hacienda/2003-09-03/19896
+    - ley/ministerio-de-justicia/2001-08-18/19750
+    - ley/ministerio-del-interior/1990-02-27/18947
+    - ley/ministerio-del-interior/1991-11-14/19094
+    - ley/ministerio-del-interior/1994-03-09/19297
+    - ley/ministerio-secretaria-general-de-la-presidencia/1999-12-14/19653
+    - ley/ministerio-secretaria-general-de-la-presidencia/2006-01-05/20088
+    - ley/ministerio-secretaria-general-de-la-presidencia/2010-07-03/20447
+    - ley/ministerio-secretaria-general-de-la-presidencia/2010-10-12/20464
+
 ---
 
 # Ley 18.918 — LOC del Congreso Nacional

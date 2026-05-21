@@ -20,6 +20,18 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dto/ministerio-de-obras-publicas/1963-05-16/880
+    - dto/ministerio-de-vivienda-y-urbanismo/1976-04-13/458
+    - ley/ministerio-de-justicia/1937-08-16/6071
+  modificada_por:
+    - ley/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion/2002-11-22/19838
+    - ley/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion/2002-11-22/19839
+    - ley/ministerio-de-vivienda-y-urbanismo/2007-02-14/20168
+    - ley/ministerio-de-vivienda-y-urbanismo/2008-10-23/20296
+    - ley/ministerio-de-vivienda-y-urbanismo/2012-03-07/20579
+
 ---
 
 # Ley 19.537 — Copropiedad Inmobiliaria (Condominios)

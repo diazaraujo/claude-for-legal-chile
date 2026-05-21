@@ -21,6 +21,11 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modificada_por:
+    - ley/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion/2009-01-29/20323
+    - ley/ministerio-de-hacienda/2007-10-03/20219
+
 ---
 
 # Ley 19.983 — Factura Electrónica + Mérito Ejecutivo

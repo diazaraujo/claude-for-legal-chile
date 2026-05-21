@@ -20,6 +20,18 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-secretaria-general-de-la-presidencia/2001-11-17/1
+    - ley/ministerio-de-transportes-y-telecomunicaciones/1982-10-02/18168
+    - ley/ministerio-del-interior/1970-10-24/17377
+    - ley/ministerio-del-interior_subsecretaria-del-interior/1986-12-05/18575
+  modificada_por:
+    - ley/ministerio-de-hacienda/1989-12-30/18899
+    - ley/ministerio-secretaria-general-de-gobierno/1992-04-08/19131
+    - ley/ministerio-secretaria-general-de-gobierno/2003-01-04/19846
+    - ley/ministerio-secretaria-general-de-gobierno/2004-11-30/19982
+
 ---
 
 # Ley 18.838 — Consejo Nacional de Televisión (CNTV)

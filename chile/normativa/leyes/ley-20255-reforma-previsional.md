@@ -19,6 +19,28 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-de-hacienda/1931-05-22/251
+    - dfl/ministerio-de-hacienda/1997-12-19/3
+    - dfl/ministerio-del-trabajo-y-prevision-social/1982-03-25/150
+    - dl/ministerio-de-hacienda/1974-12-31/824
+    - dl/ministerio-de-hacienda/1974-12-31/825
+    - dl/ministerio-de-hacienda/1975-11-28/1263
+    - dl/ministerio-de-hacienda/1979-02-09/2448
+    - dl/ministerio-del-trabajo-y-prevision-social/1975-01-28/869
+    - dl/ministerio-del-trabajo-y-prevision-social/1980-11-13/3500
+    - ley/ministerio-de-hacienda/1987-02-19/18600
+    - ley/ministerio-de-hacienda/1987-04-23/18611
+    - ley/ministerio-de-hacienda/1987-12-31/18681
+    - ley/ministerio-de-hacienda/2006-09-30/20128
+    - ley/ministerio-de-planificacion-y-cooperacion/2004-06-05/19949
+    - ley/ministerio-del-trabajo-y-prevision-social_subsecretaria-de-prevision-social/1995-08-21/19404
+  modificada_por:
+    - ley/ministerio-de-hacienda/2011-08-31/20531
+    - ley/ministerio-del-trabajo-y-prevision-social_subsecretaria-de-prevision-social/2009-07-29/20366
+    - ley/ministerio-del-trabajo-y-prevision-social_subsecretaria-de-prevision-social/2010-09-04/20459
+
 ---
 
 # Ley 20.255 — Reforma Previsional 2008

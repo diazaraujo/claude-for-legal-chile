@@ -18,6 +18,31 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - cod/ministerio-de-justicia/1865-11-23/1865
+    - cod/ministerio-de-justicia/1865-11-23/de-comercio
+    - dfl/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion/2004-02-17/5
+    - dfl/ministerio-de-hacienda/1931-05-22/251
+    - dfl/ministerio-de-hacienda/1960-04-06/326
+    - dfl/ministerio-de-justicia/2000-05-30/1
+    - dfl/ministerio-de-obras-publicas/1991-09-04/164
+    - dfl/ministerio-del-trabajo-y-prevision-social/1980-11-29/101
+    - dl/ministerio-de-hacienda/1974-12-31/824
+    - dl/ministerio-de-hacienda/1974-12-31/825
+    - dl/ministerio-de-hacienda/1976-01-16/1328
+    - dl/ministerio-de-hacienda/1980-09-04/3475
+    - dl/ministerio-de-hacienda/1980-12-23/3538
+    - dl/ministerio-de-tierras-y-colonizacion/1977-11-10/1939
+    - dl/ministerio-del-trabajo-y-prevision-social/1980-11-13/3500
+    - dto/ministerio-de-hacienda/1979-12-19/1019
+    - dto/ministerio-de-obras-publicas/1996-12-18/900
+    - ley/ministerio-de-agricultura_industria-y-colonizacion/1926-09-25/4097
+    - ley/ministerio-de-fomento/1935-09-17/5687
+    - ley/ministerio-de-hacienda/1981-10-22/18045
+  modificada_por:
+    - ley/ministerio-de-hacienda/2010-08-13/20448
+
 ---
 
 # Ley 20.190 — SpA (Sociedad por Acciones)

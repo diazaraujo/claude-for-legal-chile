@@ -23,6 +23,29 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modificada_por:
+    - dfl/ministerio-de-hacienda/1931-05-31/119
+    - dl/ministerio-de-defensa-nacional/1978-05-31/2222
+    - dl/ministerio-de-hacienda/1974-05-25/455
+    - dl/ministerio-de-hacienda/1974-06-28/544
+    - dl/ministerio-de-hacienda/1976-07-29/1533
+    - dl/ministerio-de-hacienda/1977-10-15/1953
+    - dl/ministerio-de-justicia/1925-12-22/777
+    - ley/ministerio-de-economia_fomento-y-reconstruccion/1982-05-22/18118
+    - ley/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion/2010-02-03/20416
+    - ley/ministerio-de-hacienda/1936-08-19/5884
+    - ley/ministerio-de-hacienda/1950-10-03/9686
+    - ley/ministerio-de-hacienda/1965-09-28/16324
+    - ley/ministerio-de-hacienda/1970-07-01/17308
+    - ley/ministerio-de-hacienda/1970-08-01/17318
+    - ley/ministerio-de-hacienda/1981-06-27/18010
+    - ley/ministerio-de-hacienda/1981-10-22/18046
+    - ley/ministerio-de-hacienda/1997-11-04/19528
+    - ley/ministerio-de-hacienda/1998-04-16/19559
+    - ley/ministerio-de-hacienda/2007-06-05/20190
+    - ley/ministerio-de-hacienda_subsecretaria-de-hacienda/2009-10-20/20382
+
 ---
 
 # Código de Comercio

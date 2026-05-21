@@ -19,6 +19,12 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - ley/ministerio-del-interior_subsecretaria-del-interior/2004-11-09/19980
+  modificada_por:
+    - ley/ministerio-secretaria-general-de-la-presidencia_subsecretaria-general-de-la-presidencia/2009-12-10/20405
+
 ---
 
 # Ley 19.992 — Reparación Valech (Tortura y Prisión Política)

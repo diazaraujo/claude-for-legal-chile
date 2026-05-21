@@ -21,6 +21,19 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - cod/ministerio-de-justicia/1874-11-12/penal
+    - dto/ministerio-del-interior/1975-08-26/890
+    - ley/ministerio-de-justicia/1906-02-19/1853
+    - ley/ministerio-de-justicia/1943-07-09/7421
+    - ley/ministerio-de-justicia/1967-09-04/16643
+    - ley/ministerio-del-interior/1958-08-06/12927
+  modificada_por:
+    - ley/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion/2009-07-13/20361
+    - ley/ministerio-de-justicia/2002-05-31/19806
+    - ley/ministerio-secretaria-general-de-gobierno/2010-09-08/20461
+
 ---
 
 # Ley 19.733 — Libertades de Opinión e Información y Periodismo

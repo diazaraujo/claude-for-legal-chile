@@ -20,6 +20,24 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-de-agricultura/1968-01-20/11
+    - dfl/ministerio-de-agricultura/1979-08-03/1
+    - dto/ministerio-de-justicia/1969-03-12/162
+    - ley/ministerio-de-justicia/1951-05-28/9909
+  modificada_por:
+    - dfl/ministerio-de-justicia/1992-11-30/4
+    - ley/ministerio-de-agricultura/1984-12-27/18377
+    - ley/ministerio-de-agricultura/1985-04-20/18405
+    - ley/ministerio-de-hacienda/1987-12-31/18681
+    - ley/ministerio-de-obras-publicas/1984-12-29/18373
+    - ley/ministerio-de-obras-publicas/1992-06-25/19145
+    - ley/ministerio-de-obras-publicas/2005-06-16/20017
+    - ley/ministerio-de-obras-publicas/2006-05-15/20099
+    - ley/ministerio-de-obras-publicas/2008-12-13/20304
+    - ley/ministerio-secretaria-general-de-la-presidencia/2010-01-26/20417
+
 ---
 
 # DFL 1.122 — Código de Aguas (con reforma Ley 21.435/2022)

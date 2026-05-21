@@ -18,6 +18,33 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-de-justicia/1990-03-24/1
+    - dfl/ministerio-de-justicia/1996-12-26/2
+    - dfl/ministerio-de-justicia/2000-05-30/1
+    - dl/ministerio-de-justicia/1979-12-29/3058
+    - dl/ministerio-de-justicia/1980-05-22/3346
+    - ley/ministerio-de-justicia/1902-08-30/1552
+    - ley/ministerio-de-justicia/1943-07-09/7421
+    - ley/ministerio-de-justicia/1962-10-05/14908
+    - ley/ministerio-de-justicia/1967-03-08/16618
+    - ley/ministerio-de-justicia/1994-08-27/19325
+    - ley/ministerio-de-justicia/1999-08-05/19620
+  modificada_por:
+    - ley/ministerio-de-justicia/2005-07-05/20030
+    - ley/ministerio-de-justicia/2005-10-07/20066
+    - ley/ministerio-de-justicia/2005-12-07/20084
+    - ley/ministerio-de-justicia/2005-12-15/20086
+    - ley/ministerio-de-justicia/2007-01-09/20152
+    - ley/ministerio-de-justicia/2007-06-02/20191
+    - ley/ministerio-de-justicia/2007-09-29/20222
+    - ley/ministerio-de-justicia/2008-09-15/20286
+    - ley/ministerio-de-justicia/2010-03-18/20427
+    - ley/ministerio-de-justicia/2010-12-18/20480
+    - ley/ministerio-del-interior_subsecretaria-del-interior/2007-04-05/20174
+    - ley/ministerio-del-interior_subsecretaria-del-interior/2007-04-11/20175
+
 ---
 
 # Ley 19.968 — Tribunales de Familia

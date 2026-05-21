@@ -19,6 +19,29 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modificada_por:
+    - dfl/ministerio-de-justicia/1992-09-03/3
+    - ley/ministerio-de-defensa-nacional_subsecretaria-de-investigaciones/2002-05-24/19804
+    - ley/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-econstruccion/1999-12-27/19659
+    - ley/ministerio-de-hacienda_subsecretaria-de-hacienda/2009-12-02/20393
+    - ley/ministerio-de-justicia/1969-06-11/17155
+    - ley/ministerio-de-justicia/1970-01-06/17266
+    - ley/ministerio-de-justicia/1972-09-27/17727
+    - ley/ministerio-de-justicia/1988-04-29/18699
+    - ley/ministerio-de-justicia/1991-02-14/19047
+    - ley/ministerio-de-justicia/1991-08-28/19077
+    - ley/ministerio-de-justicia/1992-09-02/19164
+    - ley/ministerio-de-justicia/1994-09-23/19335
+    - ley/ministerio-de-justicia/1995-09-07/19409
+    - ley/ministerio-de-justicia/1995-09-20/19413
+    - ley/ministerio-de-justicia/1996-03-08/19449
+    - ley/ministerio-de-justicia/1996-03-18/19450
+    - ley/ministerio-de-justicia/1997-05-15/19501
+    - ley/ministerio-de-justicia/1998-07-01/19567
+    - ley/ministerio-de-justicia/1999-07-12/19617
+    - ley/ministerio-de-justicia/1999-12-11/19645
+
 ---
 
 # Código Penal

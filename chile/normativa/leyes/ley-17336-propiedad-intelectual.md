@@ -19,6 +19,24 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - ley/ministerio-de-educacion-publica/1950-01-21/9549
+    - ley/ministerio-del-trabajo-y-prevision-social/1964-02-04/15478
+    - ley/ministerio-del-trabajo-y-prevision-social/1966-10-27/16571
+  modificada_por:
+    - dl/ministerio-de-educacion-publica/1973-11-14/104
+    - dl/ministerio-de-educacion-publica/1976-11-04/1572
+    - ley/ministerio-de-bienes-nacionales/1991-08-19/19072
+    - ley/ministerio-de-educacion-publica/1972-10-18/17773
+    - ley/ministerio-de-educacion-publica/1992-09-17/19166
+    - ley/ministerio-de-educacion/2004-01-31/19928
+    - ley/ministerio-de-educacion/2010-05-04/20435
+    - ley/ministerio-de-hacienda/2003-11-04/19912
+    - ley/ministerio-de-hacienda/2003-11-19/19914
+    - ley/ministerio-de-justicia/1985-10-17/18443
+    - ley/ministerio-de-justicia/1990-03-05/18957
+
 ---
 
 # Ley 17.336 — Propiedad Intelectual (Derechos de Autor)

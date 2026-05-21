@@ -20,6 +20,29 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modificada_por:
+    - dfl/ministerio-de-hacienda/1990-06-30/11
+    - dfl/ministerio-de-hacienda/1995-01-30/1
+    - dl/ministerio-de-hacienda/1973-10-13/54
+    - dl/ministerio-de-hacienda/1974-01-30/296
+    - dl/ministerio-de-hacienda/1974-05-29/482
+    - dl/ministerio-de-hacienda/1975-03-21/935
+    - dl/ministerio-de-hacienda/1975-11-06/1225
+    - dl/ministerio-de-hacienda/1978-01-28/2129
+    - dl/ministerio-de-hacienda/1978-09-08/2325
+    - dl/ministerio-de-hacienda/1980-09-05/3474
+    - dto/ministerio-de-hacienda/2006-01-19/1456
+    - ley/ministerio-de-hacienda/1933-04-10/5154
+    - ley/ministerio-de-hacienda/1945-09-24/8283
+    - ley/ministerio-de-hacienda/1949-02-04/9311
+    - ley/ministerio-de-hacienda/1965-01-02/16068
+    - ley/ministerio-de-hacienda/1970-11-06/17382
+    - ley/ministerio-de-hacienda/1971-03-09/17416
+    - ley/ministerio-de-hacienda/1971-11-22/17564
+    - ley/ministerio-de-hacienda/1987-01-03/18591
+    - ley/ministerio-de-hacienda/1987-06-26/18627
+
 ---
 
 # Ley 17.235 — Impuesto Territorial (Contribuciones)

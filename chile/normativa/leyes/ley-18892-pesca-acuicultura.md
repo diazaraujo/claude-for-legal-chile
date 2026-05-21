@@ -21,6 +21,20 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-de-hacienda/1960-04-06/340
+    - dl/ministerio-de-defensa-nacional/1978-05-31/2222
+  modificada_por:
+    - ley/ministerio-de-economia_fomento-y-reconstruccion/1990-03-30/18977
+    - ley/ministerio-de-economia_fomento-y-reconstruccion/1990-09-22/18999
+    - ley/ministerio-de-economia_fomento-y-reconstruccion/1990-11-29/19009
+    - ley/ministerio-de-economia_fomento-y-reconstruccion/1991-01-31/19043
+    - ley/ministerio-de-economia_fomento-y-reconstruccion/1991-06-28/19066
+    - ley/ministerio-de-economia_fomento-y-reconstruccion/1991-09-06/19079
+    - ley/ministerio-de-economia_fomento-y-reconstruccion/1991-09-06/19080
+    - ley/ministerio-de-hacienda/1989-12-30/18899
+
 ---
 
 # Ley 18.892 — LGPA (Ley General de Pesca y Acuicultura)

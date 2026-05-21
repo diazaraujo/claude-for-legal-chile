@@ -20,6 +20,20 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modificada_por:
+    - ley/ministerio-de-justicia/1991-02-14/19047
+    - ley/ministerio-de-justicia/1993-08-28/19241
+    - ley/ministerio-de-justicia/2002-05-31/19806
+    - ley/ministerio-de-justicia/2005-11-14/20074
+    - ley/ministerio-de-justicia/2011-06-21/20519
+    - ley/ministerio-de-relaciones-exteriores/2003-11-13/19906
+    - ley/ministerio-del-interior/1986-12-19/18585
+    - ley/ministerio-del-interior/1990-02-20/18925
+    - ley/ministerio-del-interior/1990-02-22/18937
+    - ley/ministerio-del-interior/1991-01-24/19027
+    - ley/ministerio-del-interior_subsecretaria-del-interior/2010-10-08/20467
+
 ---
 
 # Ley 18.314 — Antiterrorismo

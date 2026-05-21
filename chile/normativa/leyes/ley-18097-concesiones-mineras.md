@@ -19,6 +19,10 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modificada_por:
+    - ley/ministerio-de-mineria/1983-09-24/18246
+
 ---
 
 # Ley 18.097 — LOC sobre Concesiones Mineras

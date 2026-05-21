@@ -20,6 +20,29 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modificada_por:
+    - aa/corte-suprema/1997-01-31/s-n
+    - aa/corte-suprema/1998-02-03/s-n
+    - dl/ministerio-de-hacienda/1978-10-28/2349
+    - dl/ministerio-de-justicia/1976-04-29/1417
+    - dl/ministerio-de-justicia/1980-11-18/3503
+    - ley/ministerio-de-bienes-nacionales/2003-10-10/19903
+    - ley/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion/2007-11-12/20217
+    - ley/ministerio-de-justicia/1952-04-02/10271
+    - ley/ministerio-de-justicia/1985-01-09/18384
+    - ley/ministerio-de-justicia/1988-05-24/18705
+    - ley/ministerio-de-justicia/1989-06-10/18804
+    - ley/ministerio-de-justicia/1989-12-20/18882
+    - ley/ministerio-de-justicia/1991-02-14/19047
+    - ley/ministerio-de-justicia/1993-06-22/19225
+    - ley/ministerio-de-justicia/1994-08-08/19317
+    - ley/ministerio-de-justicia/1994-10-07/19334
+    - ley/ministerio-de-justicia/1995-02-18/19374
+    - ley/ministerio-de-justicia/1995-05-24/19382
+    - ley/ministerio-de-justicia/1995-09-20/19411
+    - ley/ministerio-de-justicia/1995-12-16/19426
+
 ---
 
 # Código de Procedimiento Civil (CPC)

@@ -20,6 +20,16 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-de-justicia/2000-05-30/1
+    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
+    - dfl/ministerio-secretaria-general-de-gobierno/1992-02-12/1
+    - dfl/ministerio-secretaria-general-de-la-presidencia/2001-11-17/1
+    - dto/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/1997-03-20/58
+    - ley/ministerio-del-interior/1987-01-09/18593
+    - ley/ministerio-secretaria-general-de-gobierno/1991-02-04/19032
+
 ---
 
 # Ley 20.500 — Asociaciones y Participación Ciudadana

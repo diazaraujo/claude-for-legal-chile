@@ -19,6 +19,17 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - ley/ministerio-de-justicia/1943-07-09/7421
+    - ley/ministerio-de-justicia/2000-03-09/19665
+  modificada_por:
+    - dfl/ministerio-de-hacienda/2007-10-02/34
+    - dfl/ministerio-de-hacienda/2007-10-02/4
+    - ley/ministerio-de-justicia/2001-10-13/19762
+    - ley/ministerio-de-justicia/2005-11-14/20074
+    - ley/ministerio-de-justicia/2005-12-07/20084
+
 ---
 
 # Ley 19.718 — Defensoría Penal Pública

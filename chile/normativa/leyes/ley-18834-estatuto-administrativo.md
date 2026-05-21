@@ -19,6 +19,32 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-de-hacienda/1960-04-06/338
+    - dfl/ministerio-de-hacienda/2005-03-16/29
+  modificada_por:
+    - dfl/ministerio-de-hacienda/2005-03-16/29
+    - ley/ministerio-de-hacienda/1989-10-19/18842
+    - ley/ministerio-de-hacienda/1991-04-08/19056
+    - ley/ministerio-de-hacienda/1991-12-11/19103
+    - ley/ministerio-de-hacienda/1993-11-29/19269
+    - ley/ministerio-de-hacienda/1994-12-06/19356
+    - ley/ministerio-de-hacienda/1995-12-11/19430
+    - ley/ministerio-de-hacienda/1996-12-02/19486
+    - ley/ministerio-de-hacienda/1997-12-12/19540
+    - ley/ministerio-de-hacienda/1998-12-02/19596
+    - ley/ministerio-de-hacienda/2003-06-23/19882
+    - ley/ministerio-de-hacienda/2003-12-20/19921
+    - ley/ministerio-de-justicia/2002-05-31/19806
+    - ley/ministerio-del-interior/1990-03-10/18972
+    - ley/ministerio-del-interior/1990-10-06/19001
+    - ley/ministerio-del-interior/1992-08-03/19154
+    - ley/ministerio-del-interior/1992-09-01/19165
+    - ley/ministerio-del-trabajo-y-prevision-social_subsecretaria-del-trabajo/2003-12-20/19920
+    - ley/ministerio-del-trabajo-y-prevision-social_subsecretaria-del-trabajo/2005-03-18/20005
+    - ley/ministerio-del-trabajo-y-prevision-social_subsecretaria-del-trabajo/2006-12-16/20137
+
 ---
 
 # Ley 18.834 (DFL 29/2004) — Estatuto Administrativo

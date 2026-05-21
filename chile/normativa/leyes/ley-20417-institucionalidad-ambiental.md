@@ -18,6 +18,19 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-de-hacienda/1960-04-05/294
+    - dfl/ministerio-de-justicia/1981-10-29/1122
+    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
+    - dl/ministerio-de-tierras-y-colonizacion/1977-11-10/1939
+    - dto/ministerio-de-economia_fomento-y-reconstruccion/1992-01-21/430
+    - dto/ministerio-secretaria-general-de-la-presidencia/2002-12-07/95
+    - ley/ministerio-de-economia/1990-01-27/18902
+    - ley/ministerio-de-educacion-publica/1970-02-04/17288
+    - ley/ministerio-secretaria-general-de-la-presidencia/1994-03-09/19300
+    - ley/ministerio-secretaria-general-de-la-presidencia/2007-03-27/20173
+
 ---
 
 # Ley 20.417 — Institucionalidad Ambiental (MMA + SEA + SMA + TA)

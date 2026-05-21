@@ -19,6 +19,19 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-de-salud-publica/1968-01-31/725
+    - dfl/ministerio-de-salud_subsecretaria-de-salud-publica/2006-04-24/1
+    - dl/ministerio-de-salud-publica/1979-08-03/2763
+    - ley/ministerio-de-hacienda/2003-06-23/19882
+    - ley/ministerio-de-salud-publica/1982-05-17/18122
+    - ley/ministerio-de-salud/1990-03-09/18933
+    - ley/ministerio-de-salud/1991-10-08/19086
+    - ley/ministerio-de-salud/1995-04-13/19378
+    - ley/ministerio-de-salud/1997-01-03/19490
+    - ley/ministerio-de-salud_subsecretaria-de-salud-publica/2008-12-31/20319
+
 ---
 
 # Ley 19.937 — Autoridad Sanitaria

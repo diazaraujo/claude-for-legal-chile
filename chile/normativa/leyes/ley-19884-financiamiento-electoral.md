@@ -19,6 +19,21 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2000-01-11/2
+    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2002-05-03/1
+    - dfl/ministerio-del-interior_subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
+    - dto/ministerio-del-interior/1992-08-27/662
+    - ley/ministerio-del-interior/1987-03-23/18603
+    - ley/ministerio-del-interior/1988-03-31/18695
+    - ley/ministerio-del-interior/1988-05-06/18700
+  modificada_por:
+    - ley/ministerio-del-interior_subsecretaria-del-interior/2004-08-26/19963
+    - ley/ministerio-del-interior_subsecretaria-del-interior/2004-08-26/19964
+    - ley/ministerio-del-interior_subsecretaria-del-interior/2005-09-06/20053
+    - ley/ministerio-secretaria-general-de-la-presidencia/2012-01-31/20568
+
 ---
 
 # Ley 19.884 — Financiamiento Electoral
