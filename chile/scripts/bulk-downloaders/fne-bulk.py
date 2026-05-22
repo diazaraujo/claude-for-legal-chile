@@ -80,6 +80,10 @@ def main() -> int:
                         help="Comma-separated category IDs (default: todas las legal)")
     parser.add_argument("--workers", type=int, default=4)
     parser.add_argument("--skip-pdfs", action="store_true")
+    parser.add_argument("--fetch-links", action="store_true",
+                        help="Fetch HTML de cada post link (API esconde content)")
+    parser.add_argument("--skip-enum", action="store_true",
+                        help="Saltar Fase 1 (usa manifest existente)")
     args = parser.parse_args()
 
     if args.categories:
@@ -95,6 +99,24 @@ def main() -> int:
 
     client = FNEClient(rate_seconds=0.4)
 
+    if args.skip_enum:
+        existing = conn.execute("SELECT COUNT(*) FROM posts").fetchone()[0]
+        print(f"[FASE 1 SKIP] manifest tiene {existing} posts", flush=True)
+        if existing == 0:
+            print("  ERROR: manifest vacío.", flush=True)
+            return 1
+    else:
+        _enumerate(client, cats, conn, output_dir)
+
+    if args.fetch_links:
+        _fetch_links_phase(conn, db_path, output_dir, args.workers)
+
+    if args.skip_pdfs:
+        return 0
+    return _pdfs_phase(conn, db_path, output_dir, args.workers)
+
+
+def _enumerate(client, cats, conn, output_dir):
     print(f"[FASE 1] Enumerando posts FNE en {len(cats)} categorías...", flush=True)
     for cat_id, cat_name in cats.items():
         # Reverse chronological: per_page=100, page=1 has most recent
@@ -141,9 +163,100 @@ def main() -> int:
     total_pdfs = conn.execute("SELECT COUNT(*) FROM pdfs").fetchone()[0]
     print(f"\n[FASE 1 DONE] {total_posts} posts, {total_pdfs} PDFs embebidos", flush=True)
 
-    if args.skip_pdfs:
-        return 0
 
+def _fetch_links_phase(conn, db_path, output_dir, workers):
+    """Fetch HTML real de cada post link (API WP esconde content).
+    Re-extrae PDF URLs del HTML descargado y los inserta al manifest.
+    """
+    rows = conn.execute(
+        "SELECT post_id, link, date FROM posts WHERE downloaded=0 "
+        "AND link IS NOT NULL AND link != '' ORDER BY date DESC"
+    ).fetchall()
+    print(f"\n[FASE LINKS] Descargando HTML de {len(rows)} post links...", flush=True)
+    if not rows:
+        return
+
+    from mcp_fne.fne_client import FNEClient
+    fclient = FNEClient(rate_seconds=0.0)
+    pdf_re_global = __import__("re").compile(
+        r'href=["\']([^"\']+\.pdf)["\']', __import__("re").IGNORECASE,
+    )
+
+    def worker(row):
+        post_id, link, date = row
+        year = (date[:4] if date else "0000")
+        html_dest = output_dir / "links" / year / f"{post_id}.html"
+        if html_dest.exists() and html_dest.stat().st_size > 100:
+            with _LOCK: _STATS["pdfs_skip"] += 1
+            return post_id, "skip"
+        html_dest.parent.mkdir(parents=True, exist_ok=True)
+        try:
+            req = urllib.request.Request(
+                link, headers={"User-Agent": USER_AGENT}
+            )
+            with urllib.request.urlopen(req, timeout=20) as r:
+                body = r.read()
+            tmp = html_dest.with_suffix(".tmp")
+            tmp.write_bytes(body)
+            tmp.rename(html_dest)
+            # Re-extraer PDFs del HTML real (no del API)
+            html_text = body.decode("utf-8", errors="replace")
+            for m in pdf_re_global.finditer(html_text):
+                u = m.group(1)
+                if u.startswith("//"):
+                    u = "https:" + u
+                elif u.startswith("/"):
+                    u = "https://www.fne.gob.cl" + u
+                # Filter: only wp-content/uploads (documentos), exclude
+                # PDFs de header/menu (e.g. codigo-etica)
+                if "wp-content/uploads" not in u:
+                    continue
+                if "codigo-etica" in u.lower() or "logo" in u.lower():
+                    continue
+                c = sqlite3.connect(str(db_path), timeout=30)
+                try:
+                    c.execute(
+                        "INSERT OR IGNORE INTO pdfs(url, post_id) "
+                        "VALUES (?, ?)", (u, post_id),
+                    )
+                    c.commit()
+                finally:
+                    c.close()
+            c = sqlite3.connect(str(db_path), timeout=30)
+            try:
+                c.execute("UPDATE posts SET downloaded=1 WHERE post_id=?",
+                          (post_id,))
+                c.commit()
+            finally:
+                c.close()
+            with _LOCK:
+                _STATS["pdfs_ok"] += 1
+                _STATS["bytes"] += len(body)
+            return post_id, "ok"
+        except Exception:
+            with _LOCK: _STATS["pdfs_err"] += 1
+            return post_id, "err"
+
+    start = time.time()
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        futures = [pool.submit(worker, r) for r in rows]
+        for i, fut in enumerate(as_completed(futures), 1):
+            try: fut.result()
+            except Exception: pass
+            if i % 100 == 0 or i == len(rows):
+                mb = _STATS["bytes"] / 1024 / 1024
+                elapsed = time.time() - start
+                rate = i / elapsed if elapsed > 0 else 0
+                eta = (len(rows) - i) / rate if rate > 0 else 0
+                print(
+                    f"  [{i}/{len(rows)}] ok={_STATS['pdfs_ok']} "
+                    f"err={_STATS['pdfs_err']} | {mb:.0f} MB | "
+                    f"elapsed={elapsed:.0f}s eta={eta:.0f}s",
+                    flush=True,
+                )
+
+
+def _pdfs_phase(conn, db_path, output_dir, workers):
     pending_pdfs = conn.execute(
         "SELECT url, post_id FROM pdfs WHERE downloaded=0"
     ).fetchall()
@@ -153,7 +266,6 @@ def main() -> int:
 
     def worker(item):
         url, post_id = item
-        # Get year from post
         c = sqlite3.connect(str(db_path), timeout=30)
         try:
             row = c.execute(
@@ -176,7 +288,7 @@ def main() -> int:
         return url, status
 
     start = time.time()
-    with ThreadPoolExecutor(max_workers=args.workers) as pool:
+    with ThreadPoolExecutor(max_workers=workers) as pool:
         futures = [pool.submit(worker, p) for p in pending_pdfs]
         for i, fut in enumerate(as_completed(futures), 1):
             try:
