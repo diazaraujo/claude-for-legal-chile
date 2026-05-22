@@ -22,6 +22,7 @@ SOURCES = [
     ("SERNAC",         "sernac",         None,         None),
     ("Subtel",         "subtel",         "documentos", "downloaded=1"),
     ("TDPI",           "tdpi",           "fallos",     "downloaded=1"),
+    ("FNE",             "fne",           "posts",      "1=1"),
     ("CGR",            "cgr",            None,         None),
 ]
 

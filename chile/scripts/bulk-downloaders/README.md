@@ -66,9 +66,11 @@ chile/data/diario-oficial/
 | `cmf-bulk.py` | ✅ Completo | 301 PDFs | 240 MB | workers=4 (16 daba 60% 404) |
 | `sernac-bulk.py` | ✅ Completo | 127 PDFs | 309 MB | Circulares + dictámenes |
 | `subtel-bulk.py` | ✅ Completo | 71 PDFs | 20 MB | res. exentas + decretos supremos |
+| `tdpi-bulk.py` | ✅ Completo | 167 PDFs | 64 MB | URL-encode necesario (N°, acentos) |
+| `fne-bulk.py` | ✅ Metadata + PDFs | 7.047 posts / 289 PDFs | 124 MB | WP REST API, 15 categorías legal |
 | `cgr-bulk.py` | 🔴 Bloqueado | — | — | robots.txt Disallow:/, IDs no-secuenciales |
 
-**Total al cierre**: ~52.158 documentos / ~24.9 GB en 8 fuentes operativas.
+**Total al cierre**: ~48.717 documentos / ~25.5 GB en 10 fuentes operativas.
 
 ## Issues comunes y soluciones
 

@@ -96,6 +96,21 @@ def test_bcn_tram():
 check("mcp-bcn-tramitacion", test_bcn_tram)
 
 
+def test_fne():
+    from mcp_fne.fne_client import FNEClient, LEGAL_CATEGORIES
+    c = FNEClient()
+    assert callable(c.list_posts_by_category)
+    assert callable(c.extract_pdf_urls)
+    assert 151 in LEGAL_CATEGORIES  # Dictamen
+    assert 106 in LEGAL_CATEGORIES  # Jurisprudencia
+    # extract_pdf_urls puro
+    html = '<p><a href="https://www.fne.gob.cl/wp-content/x.pdf">Doc</a></p>'
+    assert c.extract_pdf_urls(html) == [
+        "https://www.fne.gob.cl/wp-content/x.pdf"
+    ]
+check("mcp-fne", test_fne)
+
+
 def report():
     print(f"\n{'='*60}")
     print(f"{'MCP':30s} {'STATUS':>10s}")
