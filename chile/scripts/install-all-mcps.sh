@@ -23,6 +23,7 @@ declare -a MCPS=(
     "mcp-cgr-dictamenes:cgr-dictamenes"
     "mcp-tc-fallos:tc-fallos"
     "mcp-cmf:cmf"
+    "mcp-dt-dictamenes:dt-dictamenes"
     "mcp-pjud:pjud"
 )
 
