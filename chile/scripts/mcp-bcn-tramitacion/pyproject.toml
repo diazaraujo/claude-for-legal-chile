@@ -1,0 +1,19 @@
+[project]
+name = "mcp-bcn-tramitacion"
+version = "0.1.0"
+description = "MCP server para Historia de la Ley BCN — tramitación legislativa"
+authors = [{name = "Unholster", email = "antonio@unholster.com"}]
+license = {text = "Apache-2.0"}
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["mcp>=0.9.0"]
+
+[project.scripts]
+mcp-bcn-tramitacion = "mcp_bcn_tramitacion.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mcp_bcn_tramitacion"]
