@@ -4,6 +4,7 @@ slug: ley-21094-universidades-estatales
 titulo_oficial: Sobre Universidades Estatales
 publicacion: 2018-06-05
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1119253
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-educacion/2018-06-05/21094
 ultima_modificacion: actualización continua
 vigencia: vigente
 materia:

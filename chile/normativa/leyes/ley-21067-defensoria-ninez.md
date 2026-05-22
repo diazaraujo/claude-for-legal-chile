@@ -4,6 +4,7 @@ slug: ley-21067-defensoria-ninez
 titulo_oficial: Crea la Defensoría de los Derechos de la Niñez
 publicacion: 2018-01-22
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1114173
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-secretaria-general-de-la-presidencia/2018-01-29/21067
 ultima_modificacion: 2018-01-22
 vigencia: vigente
 materia:

@@ -4,6 +4,7 @@ slug: ley-21302-snn-servicio-nacional-ninez
 titulo_oficial: Crea el Servicio Nacional de Protección Especializada a la Niñez y Adolescencia
 publicacion: 2020-12-30
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1154203
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-desarrollo-social-y-familia/2021-01-05/21302
 ultima_modificacion: 2020-12-30
 vigencia: vigente
 materia:

@@ -4,6 +4,7 @@ slug: ley-20730-lobby
 titulo_oficial: Regula el lobby y las gestiones que representen intereses particulares ante las autoridades y funcionarios
 publicacion: 2014-03-08
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1060115
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-secretaria-general-de-la-presidencia/2014-03-08/20730
 ultima_modificacion: actualización continua
 vigencia: vigente
 materia:

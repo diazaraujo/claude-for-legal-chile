@@ -4,6 +4,7 @@ slug: ley-21713-reforma-tributaria-2024
 titulo_oficial: Establece normas para asegurar el cumplimiento de las obligaciones tributarias
 publicacion: 2024-10-24
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1207746
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-hacienda/2024-10-24/21713
 ultima_modificacion: 2024-10-24
 vigencia: vigente con escalonamiento (régimen pleno desde 2025-2026)
 materia:

@@ -4,6 +4,7 @@ slug: ley-21634-reforma-compras-publicas
 titulo_oficial: Moderniza el sistema de compras públicas
 publicacion: 2023-12-11
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1198903
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-hacienda/2023-12-11/21634
 ultima_modificacion: 2023-12-11
 vigencia: vigente con escalonamiento
 materia:

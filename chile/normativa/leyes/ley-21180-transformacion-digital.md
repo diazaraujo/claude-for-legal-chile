@@ -4,6 +4,7 @@ slug: ley-21180-transformacion-digital
 titulo_oficial: Sobre transformación digital del Estado
 publicacion: 2019-11-11
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1138479
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-secretaria-general-de-la-presidencia/2019-11-11/21180
 ultima_modificacion: actualización continua
 vigencia: vigente con escalonamiento (régimen pleno desde 2023-2024)
 materia:

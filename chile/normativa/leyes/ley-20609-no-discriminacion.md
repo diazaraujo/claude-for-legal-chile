@@ -4,6 +4,7 @@ slug: ley-20609-no-discriminacion
 titulo_oficial: Establece medidas contra la discriminación
 publicacion: 2012-07-24
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1042092
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-secretaria-general-de-gobierno/2012-07-24/20609
 ultima_modificacion: actualización continua
 vigencia: vigente
 materia:

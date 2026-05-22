@@ -4,6 +4,7 @@ slug: ley-21227-empleo-emergencia-covid
 titulo_oficial: Faculta el acceso a prestaciones del seguro de cesantía en circunstancias excepcionales
 publicacion: 2020-04-06
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1144080
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-del-trabajo-y-prevision-social/2020-04-06/21227
 ultima_modificacion: actualización por Ley 21.232, 21.263, 21.328 + otras
 vigencia: vigente (con desactivación parcial post-pandemia)
 materia:

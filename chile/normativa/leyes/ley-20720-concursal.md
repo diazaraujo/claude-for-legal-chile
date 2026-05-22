@@ -4,6 +4,7 @@ slug: ley-20720-concursal
 titulo_oficial: Sustituye el régimen concursal vigente por una ley de reorganización y liquidación de empresas y personas, y perfecciona el rol de la Superintendencia del ramo
 publicacion: 2014-01-09
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1058072
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-economia-fomento-y-turismo_subsecretaria-de-economia-y-empresas-de-menor-tamano/2014-01-09/20720
 ultima_modificacion: actualización continua (Ley 21.563/2023 — modernización + procedimiento simplificado)
 vigencia: vigente
 materia:

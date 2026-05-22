@@ -4,6 +4,7 @@ slug: ley-21541-ive-ges
 titulo_oficial: Incorpora a las garantías explícitas en salud la interrupción voluntaria del embarazo
 publicacion: 2023-04-13
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1190336
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-salud/2023-03-17/21541
 ultima_modificacion: 2023-04-13
 vigencia: vigente
 materia:

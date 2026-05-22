@@ -4,6 +4,7 @@ slug: ley-21210-modernizacion-tributaria
 titulo_oficial: Moderniza la legislación tributaria
 publicacion: 2020-02-24
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1142667
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-hacienda/2020-02-24/21210
 ultima_modificacion: actualización por Ley 21.713/2024 (Cumplimiento Tributario)
 vigencia: vigente
 materia:

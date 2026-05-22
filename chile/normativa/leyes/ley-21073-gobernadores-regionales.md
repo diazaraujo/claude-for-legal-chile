@@ -4,6 +4,7 @@ slug: ley-21073-gobernadores-regionales
 titulo_oficial: Regula la elección de gobernadores regionales y realiza adecuaciones a diversos cuerpos legales
 publicacion: 2018-02-22
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1115503
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-del-interior-y-seguridad-publica/2018-02-22/21073
 ultima_modificacion: 2018-02-22 (con Ley 21.074 sobre fortalecimiento regionalización)
 vigencia: vigente
 materia:

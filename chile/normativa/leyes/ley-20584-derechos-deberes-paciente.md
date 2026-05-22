@@ -4,6 +4,7 @@ slug: ley-20584-derechos-deberes-paciente
 titulo_oficial: Regula los derechos y deberes que tienen las personas en relación con acciones vinculadas a su atención en salud
 publicacion: 2012-04-24
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1039348
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-salud_subsecretaria-de-salud-publica/2012-04-24/20584
 ultima_modificacion: actualización continua
 vigencia: vigente
 materia:

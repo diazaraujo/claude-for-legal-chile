@@ -4,6 +4,7 @@ slug: ley-21430-garantias-nna
 titulo_oficial: Sobre Garantías y Protección Integral de los Derechos de la Niñez y Adolescencia
 publicacion: 2022-03-15
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1173643
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-desarrollo-social-y-familia/2022-03-15/21430
 ultima_modificacion: 2022-03-15 (vigencia escalonada)
 vigencia: vigente con escalonamiento
 materia:

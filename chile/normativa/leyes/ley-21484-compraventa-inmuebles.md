@@ -4,6 +4,7 @@ slug: ley-21484-compraventa-inmuebles
 titulo_oficial: Establece la responsabilidad del vendedor por las acciones de los demás intervinientes en las compraventas con financiamiento bancario, ante hechos falsos
 publicacion: 2022-07-20
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1181003
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-la-mujer-y-la-equidad-de-genero/2022-09-07/21484
 ultima_modificacion: 2022-07-20
 vigencia: vigente
 materia:

@@ -4,6 +4,7 @@ slug: ley-21234-fraude-tarjetas
 titulo_oficial: Limita la responsabilidad de los usuarios de tarjetas de crédito y débito por operaciones realizadas con tarjetas extraviadas, hurtadas o robadas
 publicacion: 2020-05-29
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1145840
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-hacienda/2020-05-29/21234
 ultima_modificacion: 2020-05-29
 vigencia: vigente
 materia:

@@ -4,6 +4,7 @@ slug: ley-20393-rppj
 titulo_oficial: Establece la responsabilidad penal de las personas jurídicas en los delitos que indica
 publicacion: 2009-12-02
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1008668
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-hacienda_subsecretaria-de-hacienda/2009-12-02/20393
 ultima_modificacion: Ley 21.595 / 2023 — Ampliación del catálogo de delitos y refuerzo del modelo
 vigencia: vigente
 materia:
