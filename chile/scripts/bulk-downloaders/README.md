@@ -54,12 +54,21 @@ chile/data/diario-oficial/
     └── {CVE}.pdf  × ~25
 ```
 
-## Próximas fuentes (mismo patrón)
+## Estado al 2026-05-22
 
-- `sii-bulk.py`: circulares + oficios SII (~30 años, ~1500 PDFs)
-- `tdlc-bulk.py`: 213 sentencias × PDFs anexos
-- `cgr-bulk.py`: dictámenes CGR por año
-- `cmf-bulk.py`: NCG + Circulares CMF
-- `tc-bulk.py`: TC legacy IDs 1..12000
-- `dt-bulk.py`: dictámenes DT por año
-- `sernac-bulk.py`: circulares + dictámenes interpretativos
+| Bulk | Estado | PDFs | Notas |
+|---|---|---:|---|
+| `diario-oficial-bulk.py` | 🟡 Fase 2 en curso | ~12k de ~38k | Run de ~50 min total |
+| `sii-bulk.py` | ✅ Completo | 596 / 159 MB | Solo años 2013+ en web |
+| `tdlc-bulk.py` | ✅ Completo | 332 / 142 MB | WP REST API limpio |
+| `sernac-bulk.py` | ✅ Completo | 127 / 309 MB | Circulares + dictámenes |
+| `tc-bulk.py` | 🟡 75% en curso | ~5500 ok / ~3300 404 | UA matters: usar mismo del MCP |
+| `cgr-bulk.py` | 🔴 Pendiente rediseño | — | Números no-secuenciales (~50% 404) |
+| `cmf-bulk.py` | 🔴 Pendiente | — | High error rate workers=16; bajar |
+| `dt-bulk.py` | 🔴 Form no filtra fechas | ~40 únicos | DT search siempre devuelve mismos |
+
+## Issues comunes y soluciones
+
+1. **SQLite database malformed**: `PRAGMA journal_mode=WAL` + connection-per-thread.
+2. **User-Agent rechazado silenciosamente**: usar el mismo UA que el cliente del MCP (no añadir "bulk-X").
+3. **Form sin paginación real**: site puede tener límite implícito (DT 57); investigar antes de batch.
