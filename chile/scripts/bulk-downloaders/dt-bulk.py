@@ -16,7 +16,7 @@ _REPO_ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(_REPO_ROOT / "chile/scripts/mcp-dt-dictamenes/src"))
 from mcp_dt_dictamenes.dt_client import DTClient
 
-USER_AGENT = "claude-legal-chile/0.7 bulk-dt"
+USER_AGENT = "Mozilla/5.0 claude-legal-chile/0.7 (unholster.com)"
 _STATS = {"ok": 0, "skip": 0, "err": 0, "bytes": 0}
 _LOCK = Lock()
 

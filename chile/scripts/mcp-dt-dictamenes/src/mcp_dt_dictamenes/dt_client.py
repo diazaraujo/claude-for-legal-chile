@@ -32,6 +32,13 @@ ARTICLE_RE = re.compile(
     r'<a[^>]*?href=["\']([^"\']*?w3-article-(\d+)\.html)["\'][^>]*>([^<]+)</a>',
     re.IGNORECASE,
 )
+# Match solo dentro de resultados reales (h3 titulo aid-N)
+REAL_RESULT_RE = re.compile(
+    r'<h3 class="titulo aid-(\d+)[^"]*"[^>]*>\s*'
+    r'<a\s+href=["\']([^"\']*?w3-article-\d+\.html)["\']'
+    r'[^>]*?title=["\']([^"\']+)["\']',
+    re.IGNORECASE | re.DOTALL,
+)
 
 
 @dataclass
@@ -92,17 +99,14 @@ class DTClient:
 
         seen: set[int] = set()
         results: list[DictamenDT] = []
-        for match in ARTICLE_RE.finditer(body):
-            url_part = match.group(1)
-            article_id = int(match.group(2))
+        # Match solo h3 titulo aid (resultados reales, no navegación)
+        for match in REAL_RESULT_RE.finditer(body):
+            article_id = int(match.group(1))
+            url_part = match.group(2)
             title = match.group(3).strip()
             if article_id in seen:
                 continue
-            # Filtrar headers/links de navegación (típicamente cortos)
-            if len(title) < 8:
-                continue
             seen.add(article_id)
-            # Normalizar URL a absoluta
             if not url_part.startswith("http"):
                 if url_part.startswith("/"):
                     url_part = f"http://www.dt.gob.cl{url_part}"
@@ -130,23 +134,8 @@ class DTClient:
         return self.search(query="", since=since, until=until)
 
     def list_all_by_year(self, year: int) -> list[DictamenDT]:
-        """Itera mes por mes para enumerar todos los dictámenes del año.
-        Aplica principio 'toda la data' (Antonio 2026-05-22).
+        """1 query por año con rango fecha completo. El form DT pagina
+        agrupado por mes — devuelve todos los del año en una sola
+        respuesta (~40-60 dictámenes/año típico).
         """
-        import calendar
-        results: list[DictamenDT] = []
-        seen: set[int] = set()
-        for month in range(1, 13):
-            last_day = calendar.monthrange(year, month)[1]
-            since = f"{year}-{month:02d}-01"
-            until = f"{year}-{month:02d}-{last_day:02d}"
-            try:
-                items = self.list_by_date_range(since, until)
-            except Exception:
-                continue
-            for d in items:
-                if d.article_id in seen:
-                    continue
-                seen.add(d.article_id)
-                results.append(d)
-        return results
+        return self.list_by_date_range(f"{year}-01-01", f"{year}-12-31")

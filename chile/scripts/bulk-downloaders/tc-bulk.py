@@ -10,7 +10,7 @@ _REPO_ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(_REPO_ROOT / "chile/scripts/mcp-tc-fallos/src"))
 from mcp_tc_fallos.tc_client import TCClient
 
-USER_AGENT = "claude-legal-chile/0.7 bulk-tc"
+USER_AGENT = "claude-legal-chile/0.7 (unholster.com)"
 _STATS = {"ok": 0, "skip": 0, "404": 0, "err": 0, "bytes": 0}
 _LOCK = Lock()
 
