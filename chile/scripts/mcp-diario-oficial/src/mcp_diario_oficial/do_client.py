@@ -170,3 +170,53 @@ class DiarioOficialClient:
         else:
             date_path = date.replace("-", "/")
         return f"{BASE_URL}publicaciones/{date_path}/sumarios/{edition}.pdf"
+
+    def fetch_by_date(self, date: str) -> tuple[str, str, list[Publicacion]]:
+        """date: DD-MM-YYYY. Resuelve la edición de ese día sin
+        conocerla previamente. Devuelve (date, edition, publicaciones).
+        """
+        self._rate_limit()
+        url = f"{BASE_URL}?date={date}"
+        req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+        with urllib.request.urlopen(req, timeout=30) as r:
+            html = r.read().decode("utf-8", errors="replace")
+
+        edition_m = re.search(r"edition=(\d+)", html)
+        if not edition_m:
+            return date, "", []
+        edition = edition_m.group(1)
+        return date, edition, self.parse_publicaciones(html, edition, date)
+
+    def enumerate_date_range(
+        self, from_date: str, to_date: str
+    ) -> list[tuple[str, str, list[Publicacion]]]:
+        """Enumera todas las ediciones del Diario Oficial entre dos
+        fechas (DD-MM-YYYY). Aplica principio 'toda la data' — recorre
+        día por día.
+
+        Skip fines de semana y festivos (no hay edición).
+        """
+        import datetime
+        def parse(d: str) -> datetime.date:
+            day, mon, yr = d.split("-")
+            return datetime.date(int(yr), int(mon), int(day))
+
+        start = parse(from_date)
+        end = parse(to_date)
+        if start > end:
+            return []
+
+        results: list[tuple[str, str, list[Publicacion]]] = []
+        current = start
+        while current <= end:
+            # DO publica L-V; weekends sin edición
+            if current.weekday() < 5:
+                d_str = current.strftime("%d-%m-%Y")
+                try:
+                    date, edition, pubs = self.fetch_by_date(d_str)
+                    if edition:
+                        results.append((date, edition, pubs))
+                except (urllib.error.HTTPError, urllib.error.URLError):
+                    pass
+            current += datetime.timedelta(days=1)
+        return results

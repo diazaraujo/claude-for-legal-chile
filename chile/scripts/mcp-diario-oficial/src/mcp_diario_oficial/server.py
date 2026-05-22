@@ -94,6 +94,37 @@ async def list_tools() -> list[Tool]:
                 "required": ["date", "edition"],
             },
         ),
+        Tool(
+            name="do_fetch_by_date",
+            description=(
+                "Resuelve la edición del Diario Oficial de un día específico "
+                "(DD-MM-YYYY) sin necesidad de conocer el número de edición. "
+                "Devuelve {date, edition, publicaciones}."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "date": {"type": "string", "description": "DD-MM-YYYY"},
+                },
+                "required": ["date"],
+            },
+        ),
+        Tool(
+            name="do_enumerate_date_range",
+            description=(
+                "Enumera TODAS las ediciones del Diario Oficial entre dos "
+                "fechas. Skip fines de semana/festivos. Histórico desde "
+                "01-01-2010 está disponible vía edición electrónica."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "from_date": {"type": "string", "description": "DD-MM-YYYY"},
+                    "to_date": {"type": "string", "description": "DD-MM-YYYY"},
+                },
+                "required": ["from_date", "to_date"],
+            },
+        ),
     ]
 
 
@@ -129,6 +160,38 @@ async def call_tool(name: str, arguments: dict[str, Any]) -> list[TextContent]:
         return [TextContent(type="text", text=json.dumps(
             {"pdf_url": url}, ensure_ascii=False
         ))]
+
+    if name == "do_fetch_by_date":
+        date, edition, pubs = _client.fetch_by_date(arguments["date"])
+        return [TextContent(type="text", text=json.dumps({
+            "date": date, "edition": edition,
+            "count": len(pubs),
+            "publicaciones": [
+                {"cve": p.cve, "title": p.title, "pdf_url": p.pdf_url}
+                for p in pubs
+            ],
+        }, ensure_ascii=False, indent=2))]
+
+    if name == "do_enumerate_date_range":
+        results = _client.enumerate_date_range(
+            arguments["from_date"], arguments["to_date"]
+        )
+        return [TextContent(type="text", text=json.dumps({
+            "from_date": arguments["from_date"],
+            "to_date": arguments["to_date"],
+            "edition_count": len(results),
+            "total_publicaciones": sum(len(p) for _, _, p in results),
+            "ediciones": [
+                {
+                    "date": d, "edition": e,
+                    "publicaciones": [
+                        {"cve": p.cve, "title": p.title, "pdf_url": p.pdf_url}
+                        for p in pubs
+                    ],
+                }
+                for d, e, pubs in results
+            ],
+        }, ensure_ascii=False, indent=2))]
 
     if name == "do_get_sumario_url":
         url = _client.get_sumario_pdf_url(
