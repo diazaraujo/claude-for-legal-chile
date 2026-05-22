@@ -86,6 +86,7 @@ SELECT DISTINCT ?n ?c WHERE {{
   VALUES ?c {{ {values_str} }}
   ?n bcnnorms:leychileCode ?c .
   FILTER (!REGEX(str(?n), "/es@"))
+  FILTER (!REGEX(str(?n), "/proyecto-de-ley/"))
 }}
 """
     url = SPARQL_URL + "?" + urllib.parse.urlencode(

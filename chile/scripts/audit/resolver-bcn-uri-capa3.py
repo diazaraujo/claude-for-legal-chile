@@ -69,7 +69,10 @@ def parse_fm_dict(fm_raw: str) -> dict[str, str]:
 def lookup_sqlite(con: sqlite3.Connection, code: str) -> str | None:
     row = con.execute(
         "SELECT bcn_uri FROM normas WHERE leychile_code = ? "
-        "AND bcn_uri IS NOT NULL AND bcn_uri NOT LIKE '%/es@%' LIMIT 1",
+        "AND bcn_uri IS NOT NULL "
+        "AND bcn_uri NOT LIKE '%/es@%' "
+        "AND bcn_uri NOT LIKE '%/proyecto-de-ley/%' "
+        "LIMIT 1",
         (code,),
     ).fetchone()
     return row[0] if row else None
