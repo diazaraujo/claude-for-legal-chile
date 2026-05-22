@@ -75,3 +75,34 @@ class CMFClient:
             tipo=tipo, numero=numero, year=year, url=url,
             available=False,
         )
+
+    def enumerate(
+        self,
+        tipo: str,
+        from_year: int = 1990,
+        to_year: int | None = None,
+        from_numero: int = 1,
+        to_numero: int = 3000,
+        verify: bool = False,
+    ) -> list[NormaURL]:
+        """Enumera URLs candidatas CMF para tipo + rango años/números.
+
+        Sin red por default (URLs sintéticas). verify=True hace HEAD a
+        cada URL (costoso). Aplica principio 'toda la data'.
+
+        NCG van ~1..600+, Circ van ~1..2400+. Total normas CMF
+        históricas estimado ~5000.
+        """
+        import datetime
+        if to_year is None:
+            to_year = datetime.date.today().year
+        results: list[NormaURL] = []
+        for year in range(from_year, to_year + 1):
+            for n in range(from_numero, to_numero + 1):
+                if verify:
+                    r = self.check_norma(tipo, n, year)
+                    if r.available:
+                        results.append(r)
+                else:
+                    results.append(self.get_norma_url(tipo, n, year))
+        return results

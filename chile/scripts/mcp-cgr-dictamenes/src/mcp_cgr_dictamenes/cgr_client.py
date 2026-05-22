@@ -71,3 +71,24 @@ class CGRClient:
                 return r.status == 200
         except (urllib.error.HTTPError, Exception):
             return False
+
+    def enumerate_year(
+        self,
+        year: int,
+        from_numero: int = 1,
+        to_numero: int = 100000,
+        verify: bool = False,
+    ) -> list[DictamenURLs]:
+        """Enumera todos los dictamen IDs de un año en rango
+        [from_numero, to_numero]. Aplica principio 'toda la data'.
+
+        verify=False (default): solo construye URLs sintéticas (instantáneo).
+        verify=True: HEAD a cada uno (costoso: hasta 100k requests).
+        """
+        results: list[DictamenURLs] = []
+        for n in range(from_numero, to_numero + 1):
+            if verify:
+                if not self.check_exists(n, year):
+                    continue
+            results.append(self.build_urls(n, year))
+        return results

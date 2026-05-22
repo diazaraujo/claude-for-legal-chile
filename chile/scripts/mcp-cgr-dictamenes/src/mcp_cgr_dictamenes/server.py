@@ -52,6 +52,24 @@ async def list_tools() -> list[Tool]:
                 "required": ["numero", "year"],
             },
         ),
+        Tool(
+            name="cgr_enumerate_year",
+            description=(
+                "Enumera TODAS las URLs candidatas de dictámenes CGR de un "
+                "año específico en rango [from_numero, to_numero]. Sin red "
+                "por default (URLs sintéticas instantáneas)."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "year": {"type": "integer"},
+                    "from_numero": {"type": "integer", "default": 1},
+                    "to_numero": {"type": "integer", "default": 100000},
+                    "verify": {"type": "boolean", "default": False},
+                },
+                "required": ["year"],
+            },
+        ),
     ]
 
 
@@ -63,6 +81,27 @@ async def call_tool(name: str, arguments: dict[str, Any]) -> list[TextContent]:
             "numero": urls.numero, "year": urls.year,
             "dictamen_id": urls.dictamen_id,
             "html_url": urls.html_url, "pdf_url": urls.pdf_url,
+        }, ensure_ascii=False, indent=2))]
+
+    if name == "cgr_enumerate_year":
+        year = int(arguments["year"])
+        from_numero = int(arguments.get("from_numero", 1))
+        to_numero = int(arguments.get("to_numero", 100000))
+        verify = bool(arguments.get("verify", False))
+        results = _client.enumerate_year(
+            year, from_numero=from_numero, to_numero=to_numero, verify=verify,
+        )
+        return [TextContent(type="text", text=json.dumps({
+            "year": year, "from_numero": from_numero, "to_numero": to_numero,
+            "verified": verify, "count": len(results),
+            "dictamenes": [
+                {
+                    "numero": d.numero, "year": d.year,
+                    "dictamen_id": d.dictamen_id,
+                    "html_url": d.html_url, "pdf_url": d.pdf_url,
+                }
+                for d in results
+            ],
         }, ensure_ascii=False, indent=2))]
 
     if name == "cgr_check_dictamen":
