@@ -68,8 +68,7 @@ class DTClient:
         - title_only: limitar a título
         - since/until: rango YYYY-MM-DD (formato DT: depende — pasar tal cual)
         """
-        if not query and not (since or until):
-            raise ValueError("query o rango de fechas requerido")
+        # Allow empty query if date range provided
 
         data_dict: dict[str, str] = {
             "palabrasand": "" if (exact or title_only) else query,
@@ -121,3 +120,33 @@ class DTClient:
             f"http://www.dt.gob.cl/legislacion/1624/"
             f"w3-article-{article_id}.html"
         )
+
+    def list_by_date_range(
+        self, since: str, until: str
+    ) -> list[DictamenDT]:
+        """Lista dictámenes DT en rango de fechas (YYYY-MM-DD).
+        Sin palabra clave — devuelve TODO en ese rango.
+        """
+        return self.search(query="", since=since, until=until)
+
+    def list_all_by_year(self, year: int) -> list[DictamenDT]:
+        """Itera mes por mes para enumerar todos los dictámenes del año.
+        Aplica principio 'toda la data' (Antonio 2026-05-22).
+        """
+        import calendar
+        results: list[DictamenDT] = []
+        seen: set[int] = set()
+        for month in range(1, 13):
+            last_day = calendar.monthrange(year, month)[1]
+            since = f"{year}-{month:02d}-01"
+            until = f"{year}-{month:02d}-{last_day:02d}"
+            try:
+                items = self.list_by_date_range(since, until)
+            except Exception:
+                continue
+            for d in items:
+                if d.article_id in seen:
+                    continue
+                seen.add(d.article_id)
+                results.append(d)
+        return results

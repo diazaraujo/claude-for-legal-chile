@@ -73,6 +73,35 @@ async def list_tools() -> list[Tool]:
                 "required": ["article_id"],
             },
         ),
+        Tool(
+            name="dt_list_by_date_range",
+            description=(
+                "Lista TODOS los dictámenes DT publicados en rango de "
+                "fechas (sin palabra clave). Formato YYYY-MM-DD."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "since": {"type": "string"},
+                    "until": {"type": "string"},
+                },
+                "required": ["since", "until"],
+            },
+        ),
+        Tool(
+            name="dt_list_all_by_year",
+            description=(
+                "Itera mes por mes para enumerar TODOS los dictámenes DT "
+                "de un año específico. Aplica principio 'toda la data'."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "year": {"type": "integer"},
+                },
+                "required": ["year"],
+            },
+        ),
     ]
 
 
@@ -101,6 +130,30 @@ async def call_tool(name: str, arguments: dict[str, Any]) -> list[TextContent]:
             {"article_id": int(arguments["article_id"]), "url": url},
             ensure_ascii=False,
         ))]
+
+    if name == "dt_list_by_date_range":
+        results = _client.list_by_date_range(
+            arguments["since"], arguments["until"]
+        )
+        return [TextContent(type="text", text=json.dumps({
+            "since": arguments["since"], "until": arguments["until"],
+            "count": len(results),
+            "results": [
+                {"article_id": d.article_id, "url": d.url, "title": d.title}
+                for d in results
+            ],
+        }, ensure_ascii=False, indent=2))]
+
+    if name == "dt_list_all_by_year":
+        year = int(arguments["year"])
+        results = _client.list_all_by_year(year)
+        return [TextContent(type="text", text=json.dumps({
+            "year": year, "count": len(results),
+            "results": [
+                {"article_id": d.article_id, "url": d.url, "title": d.title}
+                for d in results
+            ],
+        }, ensure_ascii=False, indent=2))]
 
     return [TextContent(type="text", text=json.dumps(
         {"error": f"tool desconocido: {name}"}
