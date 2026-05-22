@@ -208,7 +208,16 @@ def fetch_and_process(
     """Fetch + procesa una edición. Devuelve (date, status_msg)."""
     existing = manifest_get(conn, date)
     if existing and existing["status"] == "ok":
-        return date, "skip-manifest"
+        # Skip solo si:
+        # - skip_pdfs (no necesitamos descargar): manifest ok es suficiente
+        # - O downloaded ya >= total_pubs (todos los PDFs en disco)
+        if skip_pdfs:
+            return date, "skip-manifest"
+        if (existing.get("downloaded") or 0) >= (existing.get("total_pubs") or 0) + 1:
+            # +1 por el sumario
+            return date, "skip-manifest"
+        # Si manifest ok pero downloaded < total_pubs, reprocesar para
+        # descargar los PDFs faltantes.
     try:
         d, edition, pubs = do_client.fetch_by_date(date)
         if not edition:
@@ -295,10 +304,21 @@ def main() -> int:
     conn = init_manifest(db_path)
     manifest_lock = Lock()
 
-    # Skip ya completadas
+    # Skip ya completadas:
+    # - Si skip-pdfs: status='ok' es suficiente
+    # - Si Fase 2 (PDFs): solo skip las que tienen downloaded >= total+1 (incluido sumario)
     completed = set()
-    for row in conn.execute("SELECT date FROM descargas WHERE status = 'ok'"):
-        completed.add(row[0])
+    if args.skip_pdfs:
+        for row in conn.execute("SELECT date FROM descargas WHERE status='ok'"):
+            completed.add(row[0])
+    else:
+        for row in conn.execute(
+            "SELECT date FROM descargas WHERE status='ok' AND downloaded >= total_pubs + 1"
+        ):
+            completed.add(row[0])
+        # También skip no-edition (no hay nada que descargar)
+        for row in conn.execute("SELECT date FROM descargas WHERE status='no-edition'"):
+            completed.add(row[0])
     pending = [d for d in dates if d not in completed]
     print(f"[INFO] Ya completadas (skip): {len(completed)}")
     print(f"[INFO] Pendientes: {len(pending)}")
