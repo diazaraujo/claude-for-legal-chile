@@ -74,6 +74,21 @@ async def list_tools() -> list[Tool]:
                 "required": ["query", "year"],
             },
         ),
+        Tool(
+            name="sii_list_all_circulares",
+            description=(
+                "Enumera TODAS las circulares SII desde un año mínimo hasta "
+                "el actual. Cubre histórico completo, no solo el último "
+                "año. ~50 circulares/año × 30+ años ≈ 1500+ items."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "since": {"type": "integer", "default": 1990},
+                    "until": {"type": "integer"},
+                },
+            },
+        ),
     ]
 
 
@@ -102,6 +117,28 @@ async def call_tool(name: str, arguments: dict[str, Any]) -> list[TextContent]:
         )
         return [TextContent(type="text", text=json.dumps(
             {"pdf_url": url}, ensure_ascii=False
+        ))]
+
+    if name == "sii_list_all_circulares":
+        since = int(arguments.get("since", 1990))
+        until = arguments.get("until")
+        circs = _client.list_all_circulares(
+            since=since, until=int(until) if until else None
+        )
+        payload = {
+            "since": since, "until": until,
+            "count": len(circs),
+            "circulares": [
+                {
+                    "number": c.number, "year": c.year,
+                    "title": c.title, "summary": c.summary,
+                    "pdf_url": c.pdf_url,
+                }
+                for c in circs
+            ],
+        }
+        return [TextContent(type="text", text=json.dumps(
+            payload, ensure_ascii=False, indent=2
         ))]
 
     if name == "sii_search_circulares":

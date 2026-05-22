@@ -125,3 +125,23 @@ class SIIJurisClient:
             c for c in circulares
             if q in c.title.lower() or q in c.summary.lower()
         ]
+
+    def list_all_circulares(
+        self, since: int = 1990, until: int | None = None
+    ) -> list[Circular]:
+        """Enumera TODAS las circulares SII desde 'since' hasta 'until'
+        (o año actual si None). Aplica principio 'toda la data'
+        (feedback Antonio 2026-05-22).
+        """
+        import datetime
+        if until is None:
+            until = datetime.date.today().year
+        all_circs: list[Circular] = []
+        for year in range(since, until + 1):
+            try:
+                circs = self.list_circulares(year)
+                all_circs.extend(circs)
+            except (urllib.error.HTTPError, urllib.error.URLError):
+                # Año sin índice — saltar
+                continue
+        return all_circs
