@@ -69,7 +69,11 @@ DEFAULT_FROM = "17-08-2016"  # Inicio edición electrónica DO
 
 def init_manifest(db_path: Path) -> sqlite3.Connection:
     db_path.parent.mkdir(parents=True, exist_ok=True)
-    conn = sqlite3.connect(str(db_path), check_same_thread=False)
+    conn = sqlite3.connect(str(db_path), check_same_thread=False, timeout=30)
+    # WAL para concurrent writes seguros
+    conn.execute("PRAGMA journal_mode=WAL")
+    conn.execute("PRAGMA synchronous=NORMAL")
+    conn.execute("PRAGMA busy_timeout=30000")
     conn.execute(
         "CREATE TABLE IF NOT EXISTS descargas ("
         "date TEXT PRIMARY KEY, edition TEXT, total_pubs INTEGER, "
@@ -307,12 +311,19 @@ def main() -> int:
     start_ts = time.time()
 
     def worker(date: str) -> tuple[str, str]:
-        # Cliente per-worker para rate limit independiente
+        # Cliente + conn per-worker (SQLite no es safe en multithread
+        # con conn compartida — terminamos con "database disk image is
+        # malformed").
         client = DiarioOficialClient(rate_seconds=args.rate_seconds)
-        return fetch_and_process(
-            date, output_dir, client, conn, manifest_lock,
-            skip_pdfs=args.skip_pdfs,
-        )
+        local_conn = sqlite3.connect(str(db_path), timeout=30)
+        local_conn.execute("PRAGMA busy_timeout=30000")
+        try:
+            return fetch_and_process(
+                date, output_dir, client, local_conn, manifest_lock,
+                skip_pdfs=args.skip_pdfs,
+            )
+        finally:
+            local_conn.close()
 
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
         futures = {pool.submit(worker, d): d for d in pending}
