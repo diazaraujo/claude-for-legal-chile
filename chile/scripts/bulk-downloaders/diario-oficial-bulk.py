@@ -261,7 +261,9 @@ def main() -> int:
     parser.add_argument("--dry-run", action="store_true",
                         help="Solo listar fechas, no descargar")
     parser.add_argument("--skip-pdfs", action="store_true",
-                        help="Solo bajar metadata, no PDFs")
+                        help="Solo bajar metadata, no PDFs (Fase 1)")
+    parser.add_argument("--forward", action="store_true",
+                        help="Cronológico (from→to). Default es reverse (hoy→atrás)")
     args = parser.parse_args()
 
     from_d = parse_date(args.from_date)
@@ -270,7 +272,11 @@ def main() -> int:
     output_dir.mkdir(parents=True, exist_ok=True)
 
     dates = iter_business_days(from_d, to_d)
+    # Reverse chronological: hoy → atrás (feedback Antonio 2026-05-22)
+    if not args.forward:
+        dates = list(reversed(dates))
     print(f"[INFO] Rango: {args.from_date} → {args.to_date}")
+    print(f"[INFO] Orden: {'forward' if args.forward else 'reverse (hoy→atrás)'}")
     print(f"[INFO] Días hábiles: {len(dates)}")
     print(f"[INFO] Output: {output_dir}")
     print(f"[INFO] Workers: {args.workers}, rate: {args.rate_seconds}s")
