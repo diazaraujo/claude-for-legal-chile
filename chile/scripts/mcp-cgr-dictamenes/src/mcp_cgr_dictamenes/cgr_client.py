@@ -25,10 +25,22 @@ USER_AGENT = "claude-legal-chile/0.7 (unholster.com)"
 BASE_URL = "https://www.contraloria.cl/pdfbuscador/dictamenes/"
 
 
-def format_dictamen_id(numero: int, year: int) -> str:
-    """Genera ID canonical: 066847N10 (6 dígitos número + N + 2 dígitos año)."""
+def format_dictamen_id(numero: int, year: int, prefix: str = "") -> str:
+    """Genera ID canonical CGR.
+
+    Formatos observados:
+    - Antiguo (pre-2023): 066847N10 (6 dígitos + N + 2 dígitos año)
+    - Moderno (2023+): E525080N24 (E + 6 dígitos + N + 2 dígitos año)
+    - Variante: 0E6586N25 (0E + 4 dígitos + N + 2 dígitos año)
+
+    prefix='' → antiguo
+    prefix='E' → moderno (typical 2023+)
+    prefix='0E' → variante con padding distinto
+    """
     yy = year % 100
-    return f"{numero:06d}N{yy:02d}"
+    if prefix == "0E":
+        return f"0E{numero:04d}N{yy:02d}"
+    return f"{prefix}{numero:06d}N{yy:02d}"
 
 
 @dataclass
@@ -51,8 +63,8 @@ class CGRClient:
             time.sleep(wait)
         self._last_request = time.time()
 
-    def build_urls(self, numero: int, year: int) -> DictamenURLs:
-        dictamen_id = format_dictamen_id(numero, year)
+    def build_urls(self, numero: int, year: int, prefix: str = "") -> DictamenURLs:
+        dictamen_id = format_dictamen_id(numero, year, prefix=prefix)
         return DictamenURLs(
             numero=numero, year=year, dictamen_id=dictamen_id,
             html_url=f"{BASE_URL}{dictamen_id}/html",
