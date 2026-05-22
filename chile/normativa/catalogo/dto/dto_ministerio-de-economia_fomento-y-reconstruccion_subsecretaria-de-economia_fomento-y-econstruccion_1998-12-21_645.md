@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-econstruccion_1998-12-21_645
+tipo: dto
+numero: 645
+titulo_oficial: "OTORGA A COLBUN MACHICURA S.A. CONCESION DEFINITIVA PARA LINEA 220 KV POLPAICO-MAITENES"
+publicacion: 1998-12-21
+emisor: ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-econstruccion
+leychile_code: 128596
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=128596
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-econstruccion/1998-12-21/645
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 645
+
+**Título oficial:** OTORGA A COLBUN MACHICURA S.A. CONCESION DEFINITIVA PARA LINEA 220 KV POLPAICO-MAITENES

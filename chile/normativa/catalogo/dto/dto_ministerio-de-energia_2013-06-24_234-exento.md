@@ -1,0 +1,18 @@
+---
+slug: dto_ministerio-de-energia_2013-06-24_234-exento
+tipo: dto
+numero: 234 exento
+titulo_oficial: "MODIFICA DECRETOS Nº 174 Y N° 210, AMBOS DE 2009, Y DEL MINISTERIO DE MINERÍA, Y DECRETO Nº 245, DE 2010, DEL MINISTERIO DE ENERGÍA, A TRAVÉS DE LOS CUALES SE OTORGARON, RESPECTIVAMENTE, LAS CONCESIONES DE EXPLORACIÓN DE ENERGÍA GEOTÉRMICA DENOMINADAS \"PUCHULDIZA SUR 2\", \"HUISCAPI\" Y \"RANQUIL ESTE\", A LA EMPRESA GGE CHILE SpA, EN VIRTUD DE LA LEY N° 19.657 "
+publicacion: 2013-06-24
+promulgacion: 2013-06-04
+emisor: ministerio-de-energia
+leychile_code: 1052164
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1052164
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-energia/2013-06-24/234-exento
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 234 exento
+
+**Título oficial:** MODIFICA DECRETOS Nº 174 Y N° 210, AMBOS DE 2009, Y DEL MINISTERIO DE MINERÍA, Y DECRETO Nº 245, DE 2010, DEL MINISTERIO DE ENERGÍA, A TRAVÉS DE LOS CUALES SE OTORGARON, RESPECTIVAMENTE, LAS CONCESIONES DE EXPLORACIÓN DE ENERGÍA GEOTÉRMICA DENOMINADAS "PUCHULDIZA SUR 2", "HUISCAPI" Y "RANQUIL ESTE", A LA EMPRESA GGE CHILE SpA, EN VIRTUD DE LA LEY N° 19.657 

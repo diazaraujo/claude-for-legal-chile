@@ -1,0 +1,16 @@
+---
+slug: dto_ministerio-de-obras-publicas_fiscalia_2012-12-15_3026-exento
+tipo: dto
+numero: 3026 exento
+publicacion: 2012-12-15
+promulgacion: 2012-12-04
+emisor: ministerio-de-obras-publicas_fiscalia
+leychile_code: 1047145
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1047145
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/2012-12-15/3026-exento
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 3026 exento
+

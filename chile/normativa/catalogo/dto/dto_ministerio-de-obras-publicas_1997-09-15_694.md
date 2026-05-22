@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-obras-publicas_1997-09-15_694
+tipo: dto
+numero: 694
+titulo_oficial: "DECLARA FORMALIZADAS CONCESIONES DE PRODUCCION Y DISTRIBUCION DE AGUA POTABLE Y RECOLECCION Y DISPOSICION DE AGUAS SERVIDAS DE EMOS S.A., CORRESPONDIENTES A COMUNAS QUE SE INDICAN Y QUE INTEGRAN EL AREA DENOMINADA 'GRAN  SANTIAGO', REGION METROPOLITANA"
+publicacion: 1997-09-15
+emisor: ministerio-de-obras-publicas
+leychile_code: 75832
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=75832
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas/1997-09-15/694
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 694
+
+**Título oficial:** DECLARA FORMALIZADAS CONCESIONES DE PRODUCCION Y DISTRIBUCION DE AGUA POTABLE Y RECOLECCION Y DISPOSICION DE AGUAS SERVIDAS DE EMOS S.A., CORRESPONDIENTES A COMUNAS QUE SE INDICAN Y QUE INTEGRAN EL AREA DENOMINADA 'GRAN  SANTIAGO', REGION METROPOLITANA

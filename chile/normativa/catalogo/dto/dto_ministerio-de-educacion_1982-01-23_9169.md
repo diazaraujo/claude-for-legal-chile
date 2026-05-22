@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-educacion_1982-01-23_9169
+tipo: dto
+numero: 9169
+titulo_oficial: "MODIFICA DECRETO SUPREMO DE EDUCACION Nº 8143, DE 1980, QUE REGLAMENTA REQUISITOS DE ADQUISICION Y PERDIDA DEL RECONOCIMIENTO DE COOPERADOR DE LA FUNCION EDUCACIONAL DEL ESTADO A ESTABLECIMIENTOS DE EDUCACION PARTICULAR"
+publicacion: 1982-01-23
+emisor: ministerio-de-educacion
+leychile_code: 126581
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=126581
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-educacion/1982-01-23/9169
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 9169
+
+**Título oficial:** MODIFICA DECRETO SUPREMO DE EDUCACION Nº 8143, DE 1980, QUE REGLAMENTA REQUISITOS DE ADQUISICION Y PERDIDA DEL RECONOCIMIENTO DE COOPERADOR DE LA FUNCION EDUCACIONAL DEL ESTADO A ESTABLECIMIENTOS DE EDUCACION PARTICULAR

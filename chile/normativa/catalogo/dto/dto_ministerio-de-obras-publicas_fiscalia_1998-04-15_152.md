@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-obras-publicas_fiscalia_1998-04-15_152
+tipo: dto
+numero: 152
+titulo_oficial: "SIN TITULO"
+publicacion: 1998-04-15
+emisor: ministerio-de-obras-publicas_fiscalia
+leychile_code: 98033
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=98033
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/1998-04-15/152
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 152
+
+**Título oficial:** SIN TITULO

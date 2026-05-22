@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-hacienda_1979-07-06_505
+tipo: dto
+numero: 505
+titulo_oficial: "MODIFICACION DEL APORTE FISCAL, LIBRE EN EL TESORO PUBLICO Y EN LOS SERVICIOS, SUBSECRETARIA DE SALUD Y SERVICIO NACIONAL DE SALUD"
+publicacion: 1979-07-06
+emisor: ministerio-de-hacienda
+leychile_code: 13831
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=13831
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-hacienda/1979-07-06/505
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 505
+
+**Título oficial:** MODIFICACION DEL APORTE FISCAL, LIBRE EN EL TESORO PUBLICO Y EN LOS SERVICIOS, SUBSECRETARIA DE SALUD Y SERVICIO NACIONAL DE SALUD

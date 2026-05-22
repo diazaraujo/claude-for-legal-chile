@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-justicia_1998-05-09_266
+tipo: dto
+numero: 266
+titulo_oficial: "CONCEDE PERSONALIDAD JURIDICA Y APRUEBA ESTATUTOS A ''SOCIEDAD DE GESTION DE LOS CREADORES DE IMAGEN FIJA'', DE SANTIAGO"
+publicacion: 1998-05-09
+emisor: ministerio-de-justicia
+leychile_code: 98772
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=98772
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia/1998-05-09/266
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 266
+
+**Título oficial:** CONCEDE PERSONALIDAD JURIDICA Y APRUEBA ESTATUTOS A ''SOCIEDAD DE GESTION DE LOS CREADORES DE IMAGEN FIJA'', DE SANTIAGO

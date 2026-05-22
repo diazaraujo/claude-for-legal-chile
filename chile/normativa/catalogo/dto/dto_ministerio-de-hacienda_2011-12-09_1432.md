@@ -1,0 +1,18 @@
+---
+slug: dto_ministerio-de-hacienda_2011-12-09_1432
+tipo: dto
+numero: 1432
+titulo_oficial: "DEJA SIN EFECTO DESIGNACIÓN Y NOMBRA REEMPLAZANTE DE PRESIDENTE TITULAR Y SUPLENTE EN EL TRIBUNAL ESPECIAL DE ALZADA DE LOS BIENES RAÍCES DE LA SEGUNDA SERIE, CON JURISDICCIÓN EN EL TERRITORIO DE LA ILUSTRÍSIMA CORTE DE APELACIONES DE VALPARAÍSO"
+publicacion: 2011-12-09
+promulgacion: 2011-10-17
+emisor: ministerio-de-hacienda
+leychile_code: 1033981
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1033981
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-hacienda/2011-12-09/1432
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 1432
+
+**Título oficial:** DEJA SIN EFECTO DESIGNACIÓN Y NOMBRA REEMPLAZANTE DE PRESIDENTE TITULAR Y SUPLENTE EN EL TRIBUNAL ESPECIAL DE ALZADA DE LOS BIENES RAÍCES DE LA SEGUNDA SERIE, CON JURISDICCIÓN EN EL TERRITORIO DE LA ILUSTRÍSIMA CORTE DE APELACIONES DE VALPARAÍSO

@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-mineria_2007-11-09_186-exento
+tipo: dto
+numero: 186-exento
+titulo_oficial: "MODIFICA DECRETOS NOS 20 Y 28, DE 2007, QUE ESTABLECEN ORDEN DE SUBROGACIÓN EN SECRETARÍA EJECUTIVA DE LA COMISIÓN NACIONAL DE ENERGÍA"
+publicacion: 2007-11-09
+emisor: ministerio-de-mineria
+leychile_code: 266327
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=266327
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-mineria/2007-11-09/186-exento
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 186-exento
+
+**Título oficial:** MODIFICA DECRETOS NOS 20 Y 28, DE 2007, QUE ESTABLECEN ORDEN DE SUBROGACIÓN EN SECRETARÍA EJECUTIVA DE LA COMISIÓN NACIONAL DE ENERGÍA

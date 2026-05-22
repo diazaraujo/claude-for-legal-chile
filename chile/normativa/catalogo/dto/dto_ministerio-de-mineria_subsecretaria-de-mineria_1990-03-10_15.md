@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-mineria_subsecretaria-de-mineria_1990-03-10_15
+tipo: dto
+numero: 15
+titulo_oficial: "ACEPTA RENUNCIA AL CARGO DE DIRECTORA NACIONAL DEL SERVICIO NACIONAL DE GEOLOGIA Y MINERIA, A LA SEÑORA MARIA TERESA CAÑAS PINOCHET"
+publicacion: 1990-03-10
+emisor: ministerio-de-mineria_subsecretaria-de-mineria
+leychile_code: 90554
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=90554
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-mineria_subsecretaria-de-mineria/1990-03-10/15
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 15
+
+**Título oficial:** ACEPTA RENUNCIA AL CARGO DE DIRECTORA NACIONAL DEL SERVICIO NACIONAL DE GEOLOGIA Y MINERIA, A LA SEÑORA MARIA TERESA CAÑAS PINOCHET

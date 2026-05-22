@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-obras-publicas_2004-09-01_5
+tipo: dto
+numero: 5
+titulo_oficial: "OTORGA A LA EMPRESA DE SERVICIOS SANITARIOS DE LOS LAGOS S.A. (ESSAL S.A.) LAS CONCESIONES DE PRODUCCION Y DISTRIBUCION DE AGUA POTABLE Y DE RECOLECCION Y DISPOSICION DE AGUAS SERVIDAS PARA ATENDER LA LOCALIDAD DE ALERCE, UBICADA EN LAS COMUNAS DE PUERTO MONTT Y PUERTO VARAS, X REGION"
+publicacion: 2004-09-01
+emisor: ministerio-de-obras-publicas
+leychile_code: 229762
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=229762
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas/2004-09-01/5
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 5
+
+**Título oficial:** OTORGA A LA EMPRESA DE SERVICIOS SANITARIOS DE LOS LAGOS S.A. (ESSAL S.A.) LAS CONCESIONES DE PRODUCCION Y DISTRIBUCION DE AGUA POTABLE Y DE RECOLECCION Y DISPOSICION DE AGUAS SERVIDAS PARA ATENDER LA LOCALIDAD DE ALERCE, UBICADA EN LAS COMUNAS DE PUERTO MONTT Y PUERTO VARAS, X REGION

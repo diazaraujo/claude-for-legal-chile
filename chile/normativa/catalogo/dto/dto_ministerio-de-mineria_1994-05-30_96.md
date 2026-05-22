@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-mineria_1994-05-30_96
+tipo: dto
+numero: 96
+titulo_oficial: "ACEPTA RENUNCIA A CARGOS QUE INDICA DE LOS SRES. IVAN VALENZUELA RABI Y JORGE MANTEROLA FIGUETTI. DESIGNA DIRECTORES DE LIBRE ELECCION DEL PRESIDENTE DE LA REPUBLICA, EN LA EMPRESA NACIONAL DE MINERIA, A LOS SRES. JAIME VARELA CHADWICK Y RAUL ALVAREZ CORTES"
+publicacion: 1994-05-30
+emisor: ministerio-de-mineria
+leychile_code: 9149
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=9149
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-mineria/1994-05-30/96
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 96
+
+**Título oficial:** ACEPTA RENUNCIA A CARGOS QUE INDICA DE LOS SRES. IVAN VALENZUELA RABI Y JORGE MANTEROLA FIGUETTI. DESIGNA DIRECTORES DE LIBRE ELECCION DEL PRESIDENTE DE LA REPUBLICA, EN LA EMPRESA NACIONAL DE MINERIA, A LOS SRES. JAIME VARELA CHADWICK Y RAUL ALVAREZ CORTES

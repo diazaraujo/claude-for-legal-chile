@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-justicia_2003-10-27_864-exento
+tipo: dto
+numero: 864-exento
+titulo_oficial: "APRUEBA REFORMAS DE ESTATUTOS A FUNDACION EDUCACIONAL Y DE BENEFICENCIA ALTO LAS CONDES, DE SANTIAGO"
+publicacion: 2003-10-27
+emisor: ministerio-de-justicia
+leychile_code: 216297
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=216297
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia/2003-10-27/864-exento
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 864-exento
+
+**Título oficial:** APRUEBA REFORMAS DE ESTATUTOS A FUNDACION EDUCACIONAL Y DE BENEFICENCIA ALTO LAS CONDES, DE SANTIAGO

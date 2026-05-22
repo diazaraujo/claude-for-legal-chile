@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-justicia_2007-10-30_3141-exento
+tipo: dto
+numero: 3141-exento
+titulo_oficial: "APRUEBA REFORMAS DE ESTATUTOS A CORPORACIÓN EDUCACIONAL RAIMAPU, DE SANTIAGO"
+publicacion: 2007-10-30
+emisor: ministerio-de-justicia
+leychile_code: 266029
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=266029
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia/2007-10-30/3141-exento
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 3141-exento
+
+**Título oficial:** APRUEBA REFORMAS DE ESTATUTOS A CORPORACIÓN EDUCACIONAL RAIMAPU, DE SANTIAGO

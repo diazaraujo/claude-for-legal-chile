@@ -1,0 +1,17 @@
+---
+slug: dfl_ministerio-de-educacion-publica_1992-08-22_4
+tipo: dfl
+numero: 4
+titulo_oficial: "FIJA NUEVAS PLANTAS DEL PERSONAL DEPENDIENTE DEL MINISTERIO DE EDUCACION, ESTABLECE TRAMOS Y NIVELES PARA LOS DISTINTOS ESCALAFONES DE ESPECIALIDAD Y DETERMINA LOS REQUISITOS GENERALES Y ESPECIFICOS PARA EL DESEMPEÑO DE LOS RESPECTIVOS CARGOS"
+publicacion: 1992-08-22
+emisor: ministerio-de-educacion-publica
+leychile_code: 3648
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=3648
+bcn_uri: http://datos.bcn.cl/recurso/cl/dfl/ministerio-de-educacion-publica/1992-08-22/4
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DFL 4
+
+**Título oficial:** FIJA NUEVAS PLANTAS DEL PERSONAL DEPENDIENTE DEL MINISTERIO DE EDUCACION, ESTABLECE TRAMOS Y NIVELES PARA LOS DISTINTOS ESCALAFONES DE ESPECIALIDAD Y DETERMINA LOS REQUISITOS GENERALES Y ESPECIFICOS PARA EL DESEMPEÑO DE LOS RESPECTIVOS CARGOS

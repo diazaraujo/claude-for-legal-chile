@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-obras-publicas_1998-01-15_1122
+tipo: dto
+numero: 1122
+titulo_oficial: "DECLARA FORMALIZADAS LAS CONCESIONES DE PRODUCCION Y DISTRIBUCION DE AGUA POTABLE Y RECOLECCION Y DISPOSICION DE AGUAS SERVIDAS DE ESSAR S.A., CORRESPONDIENTE A LOS SERVICIOS DE LAS LOCALIDADES DE FREIRE, GORBEA, LICAN-RAY Y VICTORIA, IX REGION"
+publicacion: 1998-01-15
+emisor: ministerio-de-obras-publicas
+leychile_code: 87161
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=87161
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas/1998-01-15/1122
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 1122
+
+**Título oficial:** DECLARA FORMALIZADAS LAS CONCESIONES DE PRODUCCION Y DISTRIBUCION DE AGUA POTABLE Y RECOLECCION Y DISPOSICION DE AGUAS SERVIDAS DE ESSAR S.A., CORRESPONDIENTE A LOS SERVICIOS DE LAS LOCALIDADES DE FREIRE, GORBEA, LICAN-RAY Y VICTORIA, IX REGION

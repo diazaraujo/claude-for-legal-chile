@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-justicia_1998-06-08_407
+tipo: dto
+numero: 407
+titulo_oficial: "CONCEDE PERSONALIDAD JURIDICA Y APRUEBA ESTATUTOS A 'CORPORACION PRIVADA DE DESARROLLO REGIONAL 'EL LIBERTADOR', DE CACHAPOAL"
+publicacion: 1998-06-08
+emisor: ministerio-de-justicia
+leychile_code: 100790
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=100790
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia/1998-06-08/407
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 407
+
+**Título oficial:** CONCEDE PERSONALIDAD JURIDICA Y APRUEBA ESTATUTOS A 'CORPORACION PRIVADA DE DESARROLLO REGIONAL 'EL LIBERTADOR', DE CACHAPOAL

@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-relaciones-exteriores_2009-08-07_87
+tipo: dto
+numero: 87
+titulo_oficial: "PROMULGA EL ACUERDO CON EL PROGRAMA DE LAS NACIONES UNIDAS PARA EL DESARROLLO SOBRE EL PROYECTO CONTRALORÍA GENERAL DE LA REPÚBLICA: FORTALECIENDO LA TRANSPARENCIA Y PROBIDAD EN LA GESTIÓN PÚBLICA EN CHILE A TRAVÉS DE LA COOPERACIÓN INTERNACIONAL Y SEGUIMIENTO DE UNCAC"
+publicacion: 2009-08-07
+emisor: ministerio-de-relaciones-exteriores
+leychile_code: 1004875
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1004875
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-relaciones-exteriores/2009-08-07/87
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 87
+
+**Título oficial:** PROMULGA EL ACUERDO CON EL PROGRAMA DE LAS NACIONES UNIDAS PARA EL DESARROLLO SOBRE EL PROYECTO CONTRALORÍA GENERAL DE LA REPÚBLICA: FORTALECIENDO LA TRANSPARENCIA Y PROBIDAD EN LA GESTIÓN PÚBLICA EN CHILE A TRAVÉS DE LA COOPERACIÓN INTERNACIONAL Y SEGUIMIENTO DE UNCAC

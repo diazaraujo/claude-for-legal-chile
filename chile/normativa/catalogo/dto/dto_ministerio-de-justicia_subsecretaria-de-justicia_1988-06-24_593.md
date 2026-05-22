@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-justicia_subsecretaria-de-justicia_1988-06-24_593
+tipo: dto
+numero: 593
+titulo_oficial: "CONCEDE PERSONALIDAD JURIDICA Y APRUEBA ESTATUTOS A ASOCIACION DEPORTIVA DIVISION MAYOR DEL BASQUETBOL DE CHILE DIMAYOR DE TALCA"
+publicacion: 1988-06-24
+emisor: ministerio-de-justicia_subsecretaria-de-justicia
+leychile_code: 131965
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=131965
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia_subsecretaria-de-justicia/1988-06-24/593
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 593
+
+**Título oficial:** CONCEDE PERSONALIDAD JURIDICA Y APRUEBA ESTATUTOS A ASOCIACION DEPORTIVA DIVISION MAYOR DEL BASQUETBOL DE CHILE DIMAYOR DE TALCA

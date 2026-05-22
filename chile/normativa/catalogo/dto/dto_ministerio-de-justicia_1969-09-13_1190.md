@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-justicia_1969-09-13_1190
+tipo: dto
+numero: 1190
+titulo_oficial: "CONCEDE PERSONALIDAD JURIDICA Y APRUEBA LOS ESTATUTOS A LA CORPORACION DENOMINADA 'CENTRO DE PADRES Y APODERADOS DE LA ESCUELA MIXTA COEDUCACIONAL NUMERO UNO', CON DOMICILIO EN PORVENIR, DEPARTAMENTO DE TIERRA DEL FUEGO"
+publicacion: 1969-09-13
+emisor: ministerio-de-justicia
+leychile_code: 1028968
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1028968
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia/1969-09-13/1190
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 1190
+
+**Título oficial:** CONCEDE PERSONALIDAD JURIDICA Y APRUEBA LOS ESTATUTOS A LA CORPORACION DENOMINADA 'CENTRO DE PADRES Y APODERADOS DE LA ESCUELA MIXTA COEDUCACIONAL NUMERO UNO', CON DOMICILIO EN PORVENIR, DEPARTAMENTO DE TIERRA DEL FUEGO

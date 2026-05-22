@@ -1,0 +1,17 @@
+---
+slug: dfl_ministerio-de-hacienda_1953-03-21_9
+tipo: dfl
+numero: 9
+titulo_oficial: "DECLARA EN REORGANIZACION EL SERVICIO DE LA PRESIDENCIA DE LA REPUBLICA Y FIJA LA PLANTA DE SU PERSONAL ESTABLECE QUE LA SECCION INFORMACIONES, DEPENDIENTE DE LA PRESIDENCIA DE LA REPUBLICA, PASARA A DEPENDER DEL MINISTERIO DEL INTERIOR."
+publicacion: 1953-03-21
+emisor: ministerio-de-hacienda
+leychile_code: 3798
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=3798
+bcn_uri: http://datos.bcn.cl/recurso/cl/dfl/ministerio-de-hacienda/1953-03-21/9
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DFL 9
+
+**Título oficial:** DECLARA EN REORGANIZACION EL SERVICIO DE LA PRESIDENCIA DE LA REPUBLICA Y FIJA LA PLANTA DE SU PERSONAL ESTABLECE QUE LA SECCION INFORMACIONES, DEPENDIENTE DE LA PRESIDENCIA DE LA REPUBLICA, PASARA A DEPENDER DEL MINISTERIO DEL INTERIOR.

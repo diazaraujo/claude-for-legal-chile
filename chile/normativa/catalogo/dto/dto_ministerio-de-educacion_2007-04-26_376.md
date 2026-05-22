@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-educacion_2007-04-26_376
+tipo: dto
+numero: 376
+titulo_oficial: "MODIFICA DECRETO Nº 177, DE 1996"
+publicacion: 2007-04-26
+emisor: ministerio-de-educacion
+leychile_code: 260417
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=260417
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-educacion/2007-04-26/376
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 376
+
+**Título oficial:** MODIFICA DECRETO Nº 177, DE 1996

@@ -1,0 +1,18 @@
+---
+slug: dto_ministerio-de-mineria_1993-03-02_252
+tipo: dto
+numero: 252
+titulo_oficial: "APRUEBA PLAN DE DESCONTAMINACION DEL COMPLEJO INDUSTRIAL LAS VENTANAS PROPUESTO CONJUNTAMENTE POR LA EMPRESA NACIONAL DE MINERIA, FUNDICION Y REFINERIA LAS VENTANAS Y LA PLANTA TERMOELECTRICA DE CHILGENER S.A., EN LOS TERMINOS QUE SE INDICAN"
+publicacion: 1993-03-02
+promulgacion: 1992-12-30
+emisor: ministerio-de-mineria
+leychile_code: 11529
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=11529
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-mineria/1993-03-02/252
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 252
+
+**Título oficial:** APRUEBA PLAN DE DESCONTAMINACION DEL COMPLEJO INDUSTRIAL LAS VENTANAS PROPUESTO CONJUNTAMENTE POR LA EMPRESA NACIONAL DE MINERIA, FUNDICION Y REFINERIA LAS VENTANAS Y LA PLANTA TERMOELECTRICA DE CHILGENER S.A., EN LOS TERMINOS QUE SE INDICAN

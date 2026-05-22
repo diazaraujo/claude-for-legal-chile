@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-justicia_2002-06-22_217
+tipo: dto
+numero: 217
+titulo_oficial: "APRUEBA REFORMAS DE ESTATUTOS A INSTITUTO FORESTAL, DE SANTIAGO"
+publicacion: 2002-06-22
+emisor: ministerio-de-justicia
+leychile_code: 199657
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=199657
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia/2002-06-22/217
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 217
+
+**Título oficial:** APRUEBA REFORMAS DE ESTATUTOS A INSTITUTO FORESTAL, DE SANTIAGO

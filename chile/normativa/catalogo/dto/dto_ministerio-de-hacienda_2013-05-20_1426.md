@@ -1,0 +1,18 @@
+---
+slug: dto_ministerio-de-hacienda_2013-05-20_1426
+tipo: dto
+numero: 1426
+titulo_oficial: "MODIFICA DECRETO N° 793, DE 2004, QUE AUTORIZA A CORFO PARA CONTRAER OBLIGACIONES INDIRECTAS, COBERTURAS O SUBSIDIOS CONTINGENTES QUE SE INDICAN, CUYO TEXTO REFUNDIDO SE ENCUENTRA APROBADO POR DECRETO N° 996, DE 2011, Y APRUEBA NUEVO TEXTO REFUNDIDO"
+publicacion: 2013-05-20
+promulgacion: 2012-10-29
+emisor: ministerio-de-hacienda
+leychile_code: 1051224
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1051224
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-hacienda/2013-05-20/1426
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 1426
+
+**Título oficial:** MODIFICA DECRETO N° 793, DE 2004, QUE AUTORIZA A CORFO PARA CONTRAER OBLIGACIONES INDIRECTAS, COBERTURAS O SUBSIDIOS CONTINGENTES QUE SE INDICAN, CUYO TEXTO REFUNDIDO SE ENCUENTRA APROBADO POR DECRETO N° 996, DE 2011, Y APRUEBA NUEVO TEXTO REFUNDIDO

@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-educacion-publica_subsecretaria-de-educacion_1988-07-06_254
+tipo: dto
+numero: 254
+titulo_oficial: "APRUEBA CONVENIO EN VIRTUD DEL CUAL DE COMUN ACUERDO CON LA FUNDACION CONSEJO DE DEFENSA DEL NIÑO SE PONE TERMINO AL CONVENIO APROBADO POR DECRETO SUPREMO N° 1.846, DE EDUCACION DE 1986, Y SE ENTREGA A LA FUNDACION NACIONAL  DE EDUCACION LABORAL LA ADMINISTRACION DEL LICEO COMERCIAL A;NO. 30,DE SANTIAGO EN CONFORMIDAD CON EL DL N° 3.166, DE 1980, Y SU REGLAMENTO"
+publicacion: 1988-07-06
+emisor: ministerio-de-educacion-publica_subsecretaria-de-educacion
+leychile_code: 130024
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=130024
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-educacion-publica_subsecretaria-de-educacion/1988-07-06/254
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 254
+
+**Título oficial:** APRUEBA CONVENIO EN VIRTUD DEL CUAL DE COMUN ACUERDO CON LA FUNDACION CONSEJO DE DEFENSA DEL NIÑO SE PONE TERMINO AL CONVENIO APROBADO POR DECRETO SUPREMO N° 1.846, DE EDUCACION DE 1986, Y SE ENTREGA A LA FUNDACION NACIONAL  DE EDUCACION LABORAL LA ADMINISTRACION DEL LICEO COMERCIAL A;NO. 30,DE SANTIAGO EN CONFORMIDAD CON EL DL N° 3.166, DE 1980, Y SU REGLAMENTO

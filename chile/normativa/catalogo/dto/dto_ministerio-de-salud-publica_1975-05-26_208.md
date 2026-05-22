@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-salud-publica_1975-05-26_208
+tipo: dto
+numero: 208
+titulo_oficial: "APRUEBA RESOLUCIION Nº 1.759, DE 1975, DEL SERVICIO NACIONAL DE SALUD"
+publicacion: 1975-05-26
+emisor: ministerio-de-salud-publica
+leychile_code: 254643
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=254643
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-salud-publica/1975-05-26/208
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 208
+
+**Título oficial:** APRUEBA RESOLUCIION Nº 1.759, DE 1975, DEL SERVICIO NACIONAL DE SALUD

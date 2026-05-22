@@ -1,0 +1,18 @@
+---
+slug: dto_ministerio-de-relaciones-exteriores_2009-02-28_12
+tipo: dto
+numero: 12
+titulo_oficial: "PROMULGA EL ACUERDO DE LIBRE COMERCIO CON LA REPÚBLICA DEL PERÚ QUE MODIFICA Y SUSTITUYE EL ACE Nº 38, SUS ANEXOS, APÉNDICES, PROTOCOLOS Y DEMÁS INSTRUMENTOS QUE HAYAN SIDO SUSCRITOS A SU AMPARO, EL ACUERDO QUE LO MODIFICA, Y EL MEMORÁNDUM DE ENTENDIMIENTO SOBRE COOPERACIÓN LABORAL Y MIGRATORIA"
+publicacion: 2009-02-28
+promulgacion: 2009-01-13
+emisor: ministerio-de-relaciones-exteriores
+leychile_code: 1001839
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1001839
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-relaciones-exteriores/2009-02-28/12
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 12
+
+**Título oficial:** PROMULGA EL ACUERDO DE LIBRE COMERCIO CON LA REPÚBLICA DEL PERÚ QUE MODIFICA Y SUSTITUYE EL ACE Nº 38, SUS ANEXOS, APÉNDICES, PROTOCOLOS Y DEMÁS INSTRUMENTOS QUE HAYAN SIDO SUSCRITOS A SU AMPARO, EL ACUERDO QUE LO MODIFICA, Y EL MEMORÁNDUM DE ENTENDIMIENTO SOBRE COOPERACIÓN LABORAL Y MIGRATORIA

@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-justicia_2005-06-01_1808-exento
+tipo: dto
+numero: 1808-exento
+titulo_oficial: "APRUEBA REFORMAS DE ESTATUTOS ADECUANDOLOS A LA LEY Nº 19.712, LEY DEL DEPORTE"
+publicacion: 2005-06-01
+emisor: ministerio-de-justicia
+leychile_code: 238379
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=238379
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia/2005-06-01/1808-exento
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 1808-exento
+
+**Título oficial:** APRUEBA REFORMAS DE ESTATUTOS ADECUANDOLOS A LA LEY Nº 19.712, LEY DEL DEPORTE

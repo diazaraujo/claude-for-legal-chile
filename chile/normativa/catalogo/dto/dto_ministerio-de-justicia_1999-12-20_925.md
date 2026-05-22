@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-justicia_1999-12-20_925
+tipo: dto
+numero: 925
+titulo_oficial: "RECTIFICA DECRETO Nº 423, DE 1999"
+publicacion: 1999-12-20
+emisor: ministerio-de-justicia
+leychile_code: 149655
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=149655
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia/1999-12-20/925
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 925
+
+**Título oficial:** RECTIFICA DECRETO Nº 423, DE 1999

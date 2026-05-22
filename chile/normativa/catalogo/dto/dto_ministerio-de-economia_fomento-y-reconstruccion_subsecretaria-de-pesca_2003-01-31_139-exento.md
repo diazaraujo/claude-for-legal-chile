@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-pesca_2003-01-31_139-exento
+tipo: dto
+numero: 139-exento
+titulo_oficial: "ESTABLECE PORCENTAJE DE DESEMBARQUE DE ESPECIES COMO FAUNA ACOMPAÑANTE DE RECURSOS QUE INDICA"
+publicacion: 2003-01-31
+emisor: ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-pesca
+leychile_code: 207203
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=207203
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-pesca/2003-01-31/139-exento
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 139-exento
+
+**Título oficial:** ESTABLECE PORCENTAJE DE DESEMBARQUE DE ESPECIES COMO FAUNA ACOMPAÑANTE DE RECURSOS QUE INDICA

@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-defensa-nacional_subsecretaria-de-guerra_1995-12-28_52
+tipo: dto
+numero: 52
+titulo_oficial: "MODIFICA DECRETO (G) N° 77, DE 1982"
+publicacion: 1995-12-28
+emisor: ministerio-de-defensa-nacional_subsecretaria-de-guerra
+leychile_code: 8312
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=8312
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-defensa-nacional_subsecretaria-de-guerra/1995-12-28/52
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 52
+
+**Título oficial:** MODIFICA DECRETO (G) N° 77, DE 1982

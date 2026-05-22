@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-educacion_2008-07-03_231
+tipo: dto
+numero: 231
+titulo_oficial: "MODIFICA DECRETO Nº 81, DE 2004, QUE REGLAMENTA PROGRAMA DE FORTALECIMIENTO DEL APRENDIZAJE DEL IDIOMA INGLÉS EN LA ENSEÑANZA BÁSICA Y MEDIA DE LOS ESTABLECIMIENTOS EDUCACIONALES REGIDOS POR EL DECRETO CON FUERZA DE LEY Nº 2,  DE 1998, Y POR EL DECRETO LEY Nº 3.166, DE 1980"
+publicacion: 2008-07-03
+emisor: ministerio-de-educacion
+leychile_code: 273457
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=273457
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-educacion/2008-07-03/231
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 231
+
+**Título oficial:** MODIFICA DECRETO Nº 81, DE 2004, QUE REGLAMENTA PROGRAMA DE FORTALECIMIENTO DEL APRENDIZAJE DEL IDIOMA INGLÉS EN LA ENSEÑANZA BÁSICA Y MEDIA DE LOS ESTABLECIMIENTOS EDUCACIONALES REGIDOS POR EL DECRETO CON FUERZA DE LEY Nº 2,  DE 1998, Y POR EL DECRETO LEY Nº 3.166, DE 1980

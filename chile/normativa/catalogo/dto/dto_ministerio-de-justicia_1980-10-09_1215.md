@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-justicia_1980-10-09_1215
+tipo: dto
+numero: 1215
+titulo_oficial: "CONCEDE PERSONALIDAD JURIDICA Y APRUEBA LOS ESTATUTOS A LA ENTIDAD DENOMINADA 'SOCIEDAD DE SUBOFICIALES MAYORES Y OFICIALES '(R)' DE CARABINEROS', DE CONCEPCION"
+publicacion: 1980-10-09
+emisor: ministerio-de-justicia
+leychile_code: 189243
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=189243
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia/1980-10-09/1215
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 1215
+
+**Título oficial:** CONCEDE PERSONALIDAD JURIDICA Y APRUEBA LOS ESTATUTOS A LA ENTIDAD DENOMINADA 'SOCIEDAD DE SUBOFICIALES MAYORES Y OFICIALES '(R)' DE CARABINEROS', DE CONCEPCION

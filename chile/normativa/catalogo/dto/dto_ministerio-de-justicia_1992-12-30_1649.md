@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-justicia_1992-12-30_1649
+tipo: dto
+numero: 1649
+titulo_oficial: "CONCEDE PERSONALIDAD JURIDICA Y APRUEBA ESTATUTOS A ASOCIACION DE CAMPAMENTOS INTERNACIONALES DE VERANO PARA NIÑOS, DE SANTIAGO"
+publicacion: 1992-12-30
+emisor: ministerio-de-justicia
+leychile_code: 18301
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=18301
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia/1992-12-30/1649
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 1649
+
+**Título oficial:** CONCEDE PERSONALIDAD JURIDICA Y APRUEBA ESTATUTOS A ASOCIACION DE CAMPAMENTOS INTERNACIONALES DE VERANO PARA NIÑOS, DE SANTIAGO

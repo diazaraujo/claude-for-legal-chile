@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-justicia_1963-05-31_1203
+tipo: dto
+numero: 1203
+titulo_oficial: "CONCEDE PERSONALIDAD JURIDICA Y APRUEBA LOS ESTATUTOS A LA CORPORACION DENOMINADA SOCIEDAD CHILENA DE EDUCACION DE ENFERMERIA, DE SANTIAGO"
+publicacion: 1963-05-31
+emisor: ministerio-de-justicia
+leychile_code: 187903
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=187903
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia/1963-05-31/1203
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 1203
+
+**Título oficial:** CONCEDE PERSONALIDAD JURIDICA Y APRUEBA LOS ESTATUTOS A LA CORPORACION DENOMINADA SOCIEDAD CHILENA DE EDUCACION DE ENFERMERIA, DE SANTIAGO

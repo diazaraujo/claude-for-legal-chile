@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-mineria_2008-10-30_54
+tipo: dto
+numero: 54
+titulo_oficial: "ADJUDICA Y OTORGA CONCESIÓN DE EXPLORACIÓN DE ENERGÍA GEOTÉRMICA DENOMINADA ?TINGUIRIRICA B?, UBICADA EN COMUNA DE SAN FERNANDO, PROVINCIA DE COLCHAGUA, SEXTA REGIÓN DEL LIBERTADOR GENERAL BERNARDO O'HIGGINS A ANTOFAGASTA MINERALS S.A., EN VIRTUD DE LA LEY N°19.657"
+publicacion: 2008-10-30
+emisor: ministerio-de-mineria
+leychile_code: 280606
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=280606
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-mineria/2008-10-30/54
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 54
+
+**Título oficial:** ADJUDICA Y OTORGA CONCESIÓN DE EXPLORACIÓN DE ENERGÍA GEOTÉRMICA DENOMINADA ?TINGUIRIRICA B?, UBICADA EN COMUNA DE SAN FERNANDO, PROVINCIA DE COLCHAGUA, SEXTA REGIÓN DEL LIBERTADOR GENERAL BERNARDO O'HIGGINS A ANTOFAGASTA MINERALS S.A., EN VIRTUD DE LA LEY N°19.657

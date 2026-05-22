@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-obras-publicas_1998-05-02_239
+tipo: dto
+numero: 239
+titulo_oficial: "DECLARA FORMALIZADAS LAS CONCESIONES DE PRODUCCION Y DISTRIBUCION DE AGUA POTABLE Y DE RECOLECCION Y DISPOSICION DE AGUAS SERVIDAS DE EMPRESA DE SERVICIOS SANITARIOS DEL BIO BIO S.A., CORRESPONDIENTE A LAS LOCALIDADES DE TOME, LEBU,  RAMADILLAS Y CARAMPANGUE"
+publicacion: 1998-05-02
+emisor: ministerio-de-obras-publicas
+leychile_code: 120120
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=120120
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas/1998-05-02/239
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 239
+
+**Título oficial:** DECLARA FORMALIZADAS LAS CONCESIONES DE PRODUCCION Y DISTRIBUCION DE AGUA POTABLE Y DE RECOLECCION Y DISPOSICION DE AGUAS SERVIDAS DE EMPRESA DE SERVICIOS SANITARIOS DEL BIO BIO S.A., CORRESPONDIENTE A LAS LOCALIDADES DE TOME, LEBU,  RAMADILLAS Y CARAMPANGUE

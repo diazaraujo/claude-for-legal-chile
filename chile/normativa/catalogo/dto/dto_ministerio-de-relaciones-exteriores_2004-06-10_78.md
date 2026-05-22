@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-relaciones-exteriores_2004-06-10_78
+tipo: dto
+numero: 78
+titulo_oficial: "PROMULGA EL ACUERDO PARA PROMOVER EL CUMPLIMIENTO DE LAS MEDIDAS INTERNACIONALES DE CONSERVACION Y ORDENACION POR LOS BUQUES PESQUEROS QUE PESCAN EN ALTA MAR, ADOPTADO POR LA CONFERENCIA DE LA ORGANIZACION DE LAS NACIONES UNIDAS PARA LA AGRICULTURA Y LA ALIMENTACION (FAO)"
+publicacion: 2004-06-10
+emisor: ministerio-de-relaciones-exteriores
+leychile_code: 226219
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=226219
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-relaciones-exteriores/2004-06-10/78
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 78
+
+**Título oficial:** PROMULGA EL ACUERDO PARA PROMOVER EL CUMPLIMIENTO DE LAS MEDIDAS INTERNACIONALES DE CONSERVACION Y ORDENACION POR LOS BUQUES PESQUEROS QUE PESCAN EN ALTA MAR, ADOPTADO POR LA CONFERENCIA DE LA ORGANIZACION DE LAS NACIONES UNIDAS PARA LA AGRICULTURA Y LA ALIMENTACION (FAO)

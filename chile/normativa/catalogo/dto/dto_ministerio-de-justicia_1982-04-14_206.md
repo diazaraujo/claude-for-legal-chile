@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-justicia_1982-04-14_206
+tipo: dto
+numero: 206
+titulo_oficial: "SIN TITULO"
+publicacion: 1982-04-14
+emisor: ministerio-de-justicia
+leychile_code: 281528
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=281528
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia/1982-04-14/206
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 206
+
+**Título oficial:** SIN TITULO

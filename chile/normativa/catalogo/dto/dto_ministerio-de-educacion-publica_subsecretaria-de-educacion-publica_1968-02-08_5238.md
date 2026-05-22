@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-educacion-publica_subsecretaria-de-educacion-publica_1968-02-08_5238
+tipo: dto
+numero: 5238
+titulo_oficial: "DEROGA EL DECRETO N° 7.759, DE 1949, Y MODIFICA EL DECRETO N° 6.234, DE 1929"
+publicacion: 1968-02-08
+emisor: ministerio-de-educacion-publica_subsecretaria-de-educacion-publica
+leychile_code: 138288
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=138288
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-educacion-publica_subsecretaria-de-educacion-publica/1968-02-08/5238
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 5238
+
+**Título oficial:** DEROGA EL DECRETO N° 7.759, DE 1949, Y MODIFICA EL DECRETO N° 6.234, DE 1929

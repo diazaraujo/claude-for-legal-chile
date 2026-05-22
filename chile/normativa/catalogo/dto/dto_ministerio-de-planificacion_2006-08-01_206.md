@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-planificacion_2006-08-01_206
+tipo: dto
+numero: 206
+titulo_oficial: "FIJA ORDEN DE SUBROGANCIA DEL SECRETARIO REGIONAL MINISTERIAL DE PLANIFICACION III REGION"
+publicacion: 2006-08-01
+emisor: ministerio-de-planificacion
+leychile_code: 251856
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=251856
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-planificacion/2006-08-01/206
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 206
+
+**Título oficial:** FIJA ORDEN DE SUBROGANCIA DEL SECRETARIO REGIONAL MINISTERIAL DE PLANIFICACION III REGION

@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-hacienda_2000-11-08_315-exento
+tipo: dto
+numero: 315-exento
+titulo_oficial: "AMPLIA LISTA DE PERITOS PARA REGION METROPOLITANA"
+publicacion: 2000-11-08
+emisor: ministerio-de-hacienda
+leychile_code: 177556
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=177556
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-hacienda/2000-11-08/315-exento
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 315-exento
+
+**Título oficial:** AMPLIA LISTA DE PERITOS PARA REGION METROPOLITANA

@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-hacienda_1987-07-24_182
+tipo: dto
+numero: 182
+titulo_oficial: "AMPLIA LISTA DE PERITOS PARA LA REGION METROPOLITANA"
+publicacion: 1987-07-24
+emisor: ministerio-de-hacienda
+leychile_code: 146152
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=146152
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-hacienda/1987-07-24/182
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 182
+
+**Título oficial:** AMPLIA LISTA DE PERITOS PARA LA REGION METROPOLITANA

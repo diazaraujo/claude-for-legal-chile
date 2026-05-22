@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-educacion-publica_subsecretaria-de-educacion_1988-07-06_256
+tipo: dto
+numero: 256
+titulo_oficial: "APRUEBA CONVENIO EN VIRTUD DEL CUAL DE COMUN ACUERDO CON LA;FUNDACION CONSEJO DE DEFENSA DEL NIÑO SE PONE TERMINO AL;CONVENIO APROBADO POR DECRETO SUPREMO NO. 1.852, DE;EDUCACION DE 1986, Y SE ENTREGA A LA FUNDACION NACIONAL  DE;EDUCACION LABORAL LA ADMINISTRACION DEL LICEO COMERCIAL B;NO. 106, DE SAN RAMON EN CONFORMIDAD CON EL DL NO. 3.166, DE;1980, Y SU REGLAMENTO"
+publicacion: 1988-07-06
+emisor: ministerio-de-educacion-publica_subsecretaria-de-educacion
+leychile_code: 130028
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=130028
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-educacion-publica_subsecretaria-de-educacion/1988-07-06/256
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 256
+
+**Título oficial:** APRUEBA CONVENIO EN VIRTUD DEL CUAL DE COMUN ACUERDO CON LA;FUNDACION CONSEJO DE DEFENSA DEL NIÑO SE PONE TERMINO AL;CONVENIO APROBADO POR DECRETO SUPREMO NO. 1.852, DE;EDUCACION DE 1986, Y SE ENTREGA A LA FUNDACION NACIONAL  DE;EDUCACION LABORAL LA ADMINISTRACION DEL LICEO COMERCIAL B;NO. 106, DE SAN RAMON EN CONFORMIDAD CON EL DL NO. 3.166, DE;1980, Y SU REGLAMENTO

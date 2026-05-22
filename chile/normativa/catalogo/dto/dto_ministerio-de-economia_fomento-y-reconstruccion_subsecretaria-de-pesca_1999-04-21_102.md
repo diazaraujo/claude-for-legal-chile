@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-pesca_1999-04-21_102
+tipo: dto
+numero: 102
+titulo_oficial: "MODIFICA NOMINACION DE MIEMBRO TITULAR Y SUPLENTE DEL CONSEJO ZONAL DE PESCA DE LA X Y XI REGIONES"
+publicacion: 1999-04-21
+emisor: ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-pesca
+leychile_code: 135243
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=135243
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-pesca/1999-04-21/102
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 102
+
+**Título oficial:** MODIFICA NOMINACION DE MIEMBRO TITULAR Y SUPLENTE DEL CONSEJO ZONAL DE PESCA DE LA X Y XI REGIONES

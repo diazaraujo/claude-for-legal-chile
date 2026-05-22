@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-obras-publicas_fiscalia_2001-11-15_1317-exento
+tipo: dto
+numero: 1317-exento
+titulo_oficial: "SIN TITULO"
+publicacion: 2001-11-15
+emisor: ministerio-de-obras-publicas_fiscalia
+leychile_code: 191516
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=191516
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/2001-11-15/1317-exento
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 1317-exento
+
+**Título oficial:** SIN TITULO

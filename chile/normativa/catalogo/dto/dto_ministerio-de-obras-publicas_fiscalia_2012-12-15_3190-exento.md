@@ -1,0 +1,16 @@
+---
+slug: dto_ministerio-de-obras-publicas_fiscalia_2012-12-15_3190-exento
+tipo: dto
+numero: 3190 exento
+publicacion: 2012-12-15
+promulgacion: 2012-12-10
+emisor: ministerio-de-obras-publicas_fiscalia
+leychile_code: 1047299
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1047299
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/2012-12-15/3190-exento
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 3190 exento
+

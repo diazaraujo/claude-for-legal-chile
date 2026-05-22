@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion_2010-02-13_334
+tipo: dto
+numero: 334
+titulo_oficial: "FIJA FÓRMULAS TARIFARIAS DE LOS SERVICIOS DE PRODUCCIÓN Y DISTRIBUCIÓN DE AGUA POTABLE Y RECOLECCIÓN Y DISPOSICIÓN DE AGUAS SERVIDAS PARA EL CONCESIONARIO CORPORACIÓN BALNEARIO ALGARROBO NORTE"
+publicacion: 2010-02-13
+emisor: ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion
+leychile_code: 1011047
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1011047
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion/2010-02-13/334
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 334
+
+**Título oficial:** FIJA FÓRMULAS TARIFARIAS DE LOS SERVICIOS DE PRODUCCIÓN Y DISTRIBUCIÓN DE AGUA POTABLE Y RECOLECCIÓN Y DISPOSICIÓN DE AGUAS SERVIDAS PARA EL CONCESIONARIO CORPORACIÓN BALNEARIO ALGARROBO NORTE

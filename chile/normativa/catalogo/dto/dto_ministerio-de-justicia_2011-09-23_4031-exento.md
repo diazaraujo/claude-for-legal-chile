@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-justicia_2011-09-23_4031-exento
+tipo: dto
+numero: 4031-exento
+titulo_oficial: "APRUEBA REFORMAS DE ESTATUTOS A 'CORPORACIÓN REHABILITACIÓN SOCIAL', DE SANTIAGO"
+publicacion: 2011-09-23
+emisor: ministerio-de-justicia
+leychile_code: 1030184
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1030184
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia/2011-09-23/4031-exento
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 4031-exento
+
+**Título oficial:** APRUEBA REFORMAS DE ESTATUTOS A 'CORPORACIÓN REHABILITACIÓN SOCIAL', DE SANTIAGO

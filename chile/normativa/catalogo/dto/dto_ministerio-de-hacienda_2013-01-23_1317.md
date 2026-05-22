@@ -1,0 +1,18 @@
+---
+slug: dto_ministerio-de-hacienda_2013-01-23_1317
+tipo: dto
+numero: 1317
+titulo_oficial: "MODIFICA DECRETO N° 922, DE 2008, QUE MODIFICA DECRETO N° 1.046, DE 2007, QUE OTORGA GARANTÍA DEL ESTADO A LA CONTRATACIÓN DE CRÉDITOS EXTERNOS Y/O INTERNOS QUE CONTRATE LA EMPRESA DE LOS FERROCARRILES DEL ESTADO CON MOTIVO DE LA REESTRUCTURACIÓN DE SUS PASIVOS DE CORTO PLAZO"
+publicacion: 2013-01-23
+promulgacion: 2008-10-09
+emisor: ministerio-de-hacienda
+leychile_code: 1048348
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1048348
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-hacienda/2013-01-23/1317
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 1317
+
+**Título oficial:** MODIFICA DECRETO N° 922, DE 2008, QUE MODIFICA DECRETO N° 1.046, DE 2007, QUE OTORGA GARANTÍA DEL ESTADO A LA CONTRATACIÓN DE CRÉDITOS EXTERNOS Y/O INTERNOS QUE CONTRATE LA EMPRESA DE LOS FERROCARRILES DEL ESTADO CON MOTIVO DE LA REESTRUCTURACIÓN DE SUS PASIVOS DE CORTO PLAZO

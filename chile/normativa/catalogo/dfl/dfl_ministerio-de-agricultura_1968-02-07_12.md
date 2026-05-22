@@ -1,0 +1,17 @@
+---
+slug: dfl_ministerio-de-agricultura_1968-02-07_12
+tipo: dfl
+numero: 12
+titulo_oficial: "ESTABLECE NORMAS SOBRE CONSTITUCION, FUNCIONAMIENTO Y ADMINISTRACION DE COOPERATIVAS DE REFORMA AGRARIA; DEJA SIN EFECTO LA LEY 15.020 Y LOS DECRETOS CON FUERZA DE LEY R.R.A. 11 Y 20, DE 1963, EN LO QUE SEAN CONTRARIOS A LAS DISPOSICIONES DE ESTE DECRETO CON FUERZA DE LEY"
+publicacion: 1968-02-07
+emisor: ministerio-de-agricultura
+leychile_code: 3873
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=3873
+bcn_uri: http://datos.bcn.cl/recurso/cl/dfl/ministerio-de-agricultura/1968-02-07/12
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DFL 12
+
+**Título oficial:** ESTABLECE NORMAS SOBRE CONSTITUCION, FUNCIONAMIENTO Y ADMINISTRACION DE COOPERATIVAS DE REFORMA AGRARIA; DEJA SIN EFECTO LA LEY 15.020 Y LOS DECRETOS CON FUERZA DE LEY R.R.A. 11 Y 20, DE 1963, EN LO QUE SEAN CONTRARIOS A LAS DISPOSICIONES DE ESTE DECRETO CON FUERZA DE LEY

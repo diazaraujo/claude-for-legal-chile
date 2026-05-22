@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-educacion_subsecretaria-de-educacion_1988-02-27_1087
+tipo: dto
+numero: 1087
+titulo_oficial: "APRUEBA CONVENIO EN VIRTUD DEL CUAL EL MINISTERIO DE EDUCACION PUBLICA ENTREGA A LA FUNDACION CONSEJO DE DEFENSA DEL NIÑO LA ADMINISTRACLON DEL LICEO INDUSTRIAL A NO. 22, DE SANTIAGO, EN CONFORMIDAD CON EL DECRETO LEY NO. 3.166 DE 29 DE  ENERO DE 1980, Y CON EL REGLAMENTO APROBADO POR DECRETO SUPREMO NO. 5.077, DE EDUCACION, DE 19 DE JUNIO DE 1980"
+publicacion: 1988-02-27
+emisor: ministerio-de-educacion_subsecretaria-de-educacion
+leychile_code: 139558
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=139558
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-educacion_subsecretaria-de-educacion/1988-02-27/1087
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 1087
+
+**Título oficial:** APRUEBA CONVENIO EN VIRTUD DEL CUAL EL MINISTERIO DE EDUCACION PUBLICA ENTREGA A LA FUNDACION CONSEJO DE DEFENSA DEL NIÑO LA ADMINISTRACLON DEL LICEO INDUSTRIAL A NO. 22, DE SANTIAGO, EN CONFORMIDAD CON EL DECRETO LEY NO. 3.166 DE 29 DE  ENERO DE 1980, Y CON EL REGLAMENTO APROBADO POR DECRETO SUPREMO NO. 5.077, DE EDUCACION, DE 19 DE JUNIO DE 1980

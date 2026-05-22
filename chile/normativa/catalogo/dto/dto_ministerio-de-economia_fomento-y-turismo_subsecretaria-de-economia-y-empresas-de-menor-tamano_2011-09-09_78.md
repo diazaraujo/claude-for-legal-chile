@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-economia_fomento-y-turismo_subsecretaria-de-economia-y-empresas-de-menor-tamano_2011-09-09_78
+tipo: dto
+numero: 78
+titulo_oficial: "FIJA FÓRMULAS TARIFARIAS DE LOS SERVICIOS DE PRODUCCIÓN Y DISTRIBUCIÓN DE AGUA POTABLE Y RECOLECCIÓN Y DISPOSICIÓN DE AGUAS SERVIDAS PARA LAS CONCESIONES PARQUE INDUSTRIAL CORONEL (SISTEMA CORONEL) Y SECTOR CAMINO SAN PEDRO-CORONEL (SISTEMA SAN PEDRO) DE LA EMPRESA AGUAS SAN PEDRO S.A."
+publicacion: 2011-09-09
+emisor: ministerio-de-economia_fomento-y-turismo_subsecretaria-de-economia-y-empresas-de-menor-tamano
+leychile_code: 1029485
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1029485
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-economia_fomento-y-turismo_subsecretaria-de-economia-y-empresas-de-menor-tamano/2011-09-09/78
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 78
+
+**Título oficial:** FIJA FÓRMULAS TARIFARIAS DE LOS SERVICIOS DE PRODUCCIÓN Y DISTRIBUCIÓN DE AGUA POTABLE Y RECOLECCIÓN Y DISPOSICIÓN DE AGUAS SERVIDAS PARA LAS CONCESIONES PARQUE INDUSTRIAL CORONEL (SISTEMA CORONEL) Y SECTOR CAMINO SAN PEDRO-CORONEL (SISTEMA SAN PEDRO) DE LA EMPRESA AGUAS SAN PEDRO S.A.

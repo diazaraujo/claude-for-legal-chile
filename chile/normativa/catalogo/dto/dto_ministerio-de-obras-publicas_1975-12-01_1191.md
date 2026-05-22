@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-obras-publicas_1975-12-01_1191
+tipo: dto
+numero: 1191
+titulo_oficial: "MODIFICA DECRETO MOP Nº 1.340, DE 1965, ESTABLECIENDO NUEVOS MONTOS MAXIMOS DE LOS PRESUPUESTOS OFICIALES EN RELACION A LA CLASIFICACION DE LOS CONTRATISTAS EN LAS DISTINTAS CATEGORIAS DEL REGISTRO GENERAL DE CONTRATISTAS. OTRAS MODIFICACIONES"
+publicacion: 1975-12-01
+emisor: ministerio-de-obras-publicas
+leychile_code: 189144
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=189144
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas/1975-12-01/1191
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 1191
+
+**Título oficial:** MODIFICA DECRETO MOP Nº 1.340, DE 1965, ESTABLECIENDO NUEVOS MONTOS MAXIMOS DE LOS PRESUPUESTOS OFICIALES EN RELACION A LA CLASIFICACION DE LOS CONTRATISTAS EN LAS DISTINTAS CATEGORIAS DEL REGISTRO GENERAL DE CONTRATISTAS. OTRAS MODIFICACIONES

@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion_2000-08-18_377
+tipo: dto
+numero: 377
+titulo_oficial: "APRUEBA FORMULAS TARIFARIAS DE LOS SERVICIOS DE PRODUCCION Y DISTRIBUCION DE AGUA POTABLE Y DE RECOLECCION Y DISPOSICION DE AGUAS SERVIDAS PARA LA EMPRESA SERVICIOS DE AGUA POTABLE BARNECHEA S.A., SAPBSA, EX EMPRESA DE SERVICIOS DE AGUA POTABLE BIWATER S.A. PARA LOS SECTORES VALLE LA DEHESA, JARDINES DEL SOL, RINCONADA DEL HUINGANAL, MIRADOR DE LA DEHESA Y EL CHIN, TODOS DE LA COMUNA DE LO BARNECHEA, REGION METROPOLITANA"
+publicacion: 2000-08-18
+emisor: ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion
+leychile_code: 174446
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=174446
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion/2000-08-18/377
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 377
+
+**Título oficial:** APRUEBA FORMULAS TARIFARIAS DE LOS SERVICIOS DE PRODUCCION Y DISTRIBUCION DE AGUA POTABLE Y DE RECOLECCION Y DISPOSICION DE AGUAS SERVIDAS PARA LA EMPRESA SERVICIOS DE AGUA POTABLE BARNECHEA S.A., SAPBSA, EX EMPRESA DE SERVICIOS DE AGUA POTABLE BIWATER S.A. PARA LOS SECTORES VALLE LA DEHESA, JARDINES DEL SOL, RINCONADA DEL HUINGANAL, MIRADOR DE LA DEHESA Y EL CHIN, TODOS DE LA COMUNA DE LO BARNECHEA, REGION METROPOLITANA

@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-justicia_2007-04-19_208
+tipo: dto
+numero: 208
+titulo_oficial: "MODIFICA DECRETO SUPREMO Nº841, DE 2005, QUE APRUEBA REGLAMENTO DE LA LEY Nº20.032, QUE ESTABLECE UN SISTEMA DE ATENCION A LA NIÑEZ Y ADOLESCENCIA A TRAVES DE LA RED DE COLABORADORES ACREDITADOS DEL SERVICIO NACIONAL DE  MENORES, Y SU REGIMEN DE SUBVENCION"
+publicacion: 2007-04-19
+emisor: ministerio-de-justicia
+leychile_code: 260195
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=260195
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia/2007-04-19/208
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 208
+
+**Título oficial:** MODIFICA DECRETO SUPREMO Nº841, DE 2005, QUE APRUEBA REGLAMENTO DE LA LEY Nº20.032, QUE ESTABLECE UN SISTEMA DE ATENCION A LA NIÑEZ Y ADOLESCENCIA A TRAVES DE LA RED DE COLABORADORES ACREDITADOS DEL SERVICIO NACIONAL DE  MENORES, Y SU REGIMEN DE SUBVENCION

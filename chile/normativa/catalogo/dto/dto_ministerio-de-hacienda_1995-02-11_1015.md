@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-hacienda_1995-02-11_1015
+tipo: dto
+numero: 1015
+titulo_oficial: "ESTABLECE LAS NORMAS EN VIRTUD DE LAS CUALES EL DIRECTOR NACIONAL DE ADUANAS PODRA AUTORIZAR A LOS DESPACHADORES DE ADUANAS PARA FORMALIZAR SUS DECLARACIONES MEDIANTE UN SISTEMA DE TRANSMISION ELECTRONICA DE DATOS"
+publicacion: 1995-02-11
+emisor: ministerio-de-hacienda
+leychile_code: 16574
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=16574
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-hacienda/1995-02-11/1015
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 1015
+
+**Título oficial:** ESTABLECE LAS NORMAS EN VIRTUD DE LAS CUALES EL DIRECTOR NACIONAL DE ADUANAS PODRA AUTORIZAR A LOS DESPACHADORES DE ADUANAS PARA FORMALIZAR SUS DECLARACIONES MEDIANTE UN SISTEMA DE TRANSMISION ELECTRONICA DE DATOS

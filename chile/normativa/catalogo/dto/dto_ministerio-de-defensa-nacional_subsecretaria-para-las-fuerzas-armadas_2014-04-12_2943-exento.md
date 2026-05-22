@@ -1,0 +1,18 @@
+---
+slug: dto_ministerio-de-defensa-nacional_subsecretaria-para-las-fuerzas-armadas_2014-04-12_2943-exento
+tipo: dto
+numero: 2943-exento
+titulo_oficial: "REEMPLAZA CARTOGRAFÍA Y DATUM DE LAS ÁREAS APROPIADAS PARA EL EJERCICIO DE LA ACUICULTURA DE LA XIV REGIÓN DE LOS RÍOS, CONTENIDAS EN EL DECRETO (M) Nº 537, DE 1993, QUE FIJA LAS ÁREAS APROPIADAS PARA EL EJERCICIO DE LA ACUICULTURA (A.A.A.) EN LA IX REGIÓN DE LA ARAUCANÍA, MODIFICADO POR DECRETO (M) Nº 371, DE 2001, Y DECRETO (M.D.N.) Nº 1.392 EXENTO, DE 2011, Y AQUELLAS CONTENIDAS EN EL DECRETO (M) Nº 371, DE 1993, Y DECRETO (M) Nº 282, DE 2007, QUE FIJARON LAS A.A.A. EN LA X REGIÓN DE LOS LAGOS, MODIFICADO POR DECRETO (M) Nº 208, DE 2005"
+publicacion: 2014-04-12
+promulgacion: 2013-12-17
+emisor: ministerio-de-defensa-nacional_subsecretaria-para-las-fuerzas-armadas
+leychile_code: 1061095
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1061095
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-defensa-nacional_subsecretaria-para-las-fuerzas-armadas/2014-04-12/2943-exento
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 2943-exento
+
+**Título oficial:** REEMPLAZA CARTOGRAFÍA Y DATUM DE LAS ÁREAS APROPIADAS PARA EL EJERCICIO DE LA ACUICULTURA DE LA XIV REGIÓN DE LOS RÍOS, CONTENIDAS EN EL DECRETO (M) Nº 537, DE 1993, QUE FIJA LAS ÁREAS APROPIADAS PARA EL EJERCICIO DE LA ACUICULTURA (A.A.A.) EN LA IX REGIÓN DE LA ARAUCANÍA, MODIFICADO POR DECRETO (M) Nº 371, DE 2001, Y DECRETO (M.D.N.) Nº 1.392 EXENTO, DE 2011, Y AQUELLAS CONTENIDAS EN EL DECRETO (M) Nº 371, DE 1993, Y DECRETO (M) Nº 282, DE 2007, QUE FIJARON LAS A.A.A. EN LA X REGIÓN DE LOS LAGOS, MODIFICADO POR DECRETO (M) Nº 208, DE 2005

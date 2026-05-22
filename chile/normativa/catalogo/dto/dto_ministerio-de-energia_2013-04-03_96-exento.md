@@ -1,0 +1,18 @@
+---
+slug: dto_ministerio-de-energia_2013-04-03_96-exento
+tipo: dto
+numero: 96-exento
+titulo_oficial: "OTORGA PRÓRROGA DE LA CONCESIÓN DE EXPLORACIÓN DE ENERGÍA GEOTÉRMICA DENOMINADA 'PANIRI' A LA EMPRESA ENERGÍA ANDINA S.A., EN VIRTUD DE LA LEY Nº 19.657"
+publicacion: 2013-04-03
+promulgacion: 2013-03-11
+emisor: ministerio-de-energia
+leychile_code: 1049874
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1049874
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-energia/2013-04-03/96-exento
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 96-exento
+
+**Título oficial:** OTORGA PRÓRROGA DE LA CONCESIÓN DE EXPLORACIÓN DE ENERGÍA GEOTÉRMICA DENOMINADA 'PANIRI' A LA EMPRESA ENERGÍA ANDINA S.A., EN VIRTUD DE LA LEY Nº 19.657

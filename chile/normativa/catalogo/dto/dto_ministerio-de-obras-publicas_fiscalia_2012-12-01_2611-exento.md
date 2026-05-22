@@ -1,0 +1,16 @@
+---
+slug: dto_ministerio-de-obras-publicas_fiscalia_2012-12-01_2611-exento
+tipo: dto
+numero: 2611 exento
+publicacion: 2012-12-01
+promulgacion: 2012-10-31
+emisor: ministerio-de-obras-publicas_fiscalia
+leychile_code: 1046370
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1046370
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/2012-12-01/2611-exento
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 2611 exento
+

@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-educacion_subsecretaria-de-educacion_1989-10-05_132-exento
+tipo: dto
+numero: 132-exento
+titulo_oficial: "EXTRACTO DE DECRETO Nº 132 EXENTO, DE 1989"
+publicacion: 1989-10-05
+emisor: ministerio-de-educacion_subsecretaria-de-educacion
+leychile_code: 90974
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=90974
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-educacion_subsecretaria-de-educacion/1989-10-05/132-exento
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 132-exento
+
+**Título oficial:** EXTRACTO DE DECRETO Nº 132 EXENTO, DE 1989

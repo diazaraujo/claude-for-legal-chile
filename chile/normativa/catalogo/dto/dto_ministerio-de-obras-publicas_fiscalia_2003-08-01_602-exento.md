@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-obras-publicas_fiscalia_2003-08-01_602-exento
+tipo: dto
+numero: 602-exento
+titulo_oficial: "SIN TITULO"
+publicacion: 2003-08-01
+emisor: ministerio-de-obras-publicas_fiscalia
+leychile_code: 213156
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=213156
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/2003-08-01/602-exento
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 602-exento
+
+**Título oficial:** SIN TITULO

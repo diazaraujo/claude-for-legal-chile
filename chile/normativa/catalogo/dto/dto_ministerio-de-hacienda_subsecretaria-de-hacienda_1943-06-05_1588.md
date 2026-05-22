@@ -1,0 +1,18 @@
+---
+slug: dto_ministerio-de-hacienda_subsecretaria-de-hacienda_1943-06-05_1588
+tipo: dto
+numero: 1588
+titulo_oficial: "CREA EL CONSEJO SUPERIOR DE LA HIPICA NACIONAL"
+publicacion: 1943-06-05
+promulgacion: 1943-05-17
+emisor: ministerio-de-hacienda_subsecretaria-de-hacienda
+leychile_code: 204839
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=204839
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-hacienda_subsecretaria-de-hacienda/1943-06-05/1588
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 1588
+
+**Título oficial:** CREA EL CONSEJO SUPERIOR DE LA HIPICA NACIONAL

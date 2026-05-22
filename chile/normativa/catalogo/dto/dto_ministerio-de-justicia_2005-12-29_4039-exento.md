@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-justicia_2005-12-29_4039-exento
+tipo: dto
+numero: 4039-exento
+titulo_oficial: "APRUEBA REFORMAS DE ESTATUTOS A 'SERVICIO DE BIENESTAR DEL PERSONAL DE LA FUNDACION PADRE ALVARO LAVIN' DE SANTIAGO"
+publicacion: 2005-12-29
+emisor: ministerio-de-justicia
+leychile_code: 245614
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=245614
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia/2005-12-29/4039-exento
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 4039-exento
+
+**Título oficial:** APRUEBA REFORMAS DE ESTATUTOS A 'SERVICIO DE BIENESTAR DEL PERSONAL DE LA FUNDACION PADRE ALVARO LAVIN' DE SANTIAGO

@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-pesca_1995-01-23_702
+tipo: dto
+numero: 702
+titulo_oficial: "MODIFICA NOMINACION DE LOS MIEMBROS TITULARES Y SUPLENTES DEL CONSEJO ZONAL DE PESCA DE LA III Y IV REGIONES"
+publicacion: 1995-01-23
+emisor: ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-pesca
+leychile_code: 15170
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=15170
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-pesca/1995-01-23/702
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 702
+
+**Título oficial:** MODIFICA NOMINACION DE LOS MIEMBROS TITULARES Y SUPLENTES DEL CONSEJO ZONAL DE PESCA DE LA III Y IV REGIONES

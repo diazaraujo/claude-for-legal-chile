@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-obras-publicas_2006-06-20_355
+tipo: dto
+numero: 355
+titulo_oficial: "DEROGA DECRETO Nº 72, DE 2006, Y DECLARA NORMA OFICIAL DE LA REPUBLICA DE CHILE"
+publicacion: 2006-06-20
+emisor: ministerio-de-obras-publicas
+leychile_code: 250698
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=250698
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas/2006-06-20/355
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 355
+
+**Título oficial:** DEROGA DECRETO Nº 72, DE 2006, Y DECLARA NORMA OFICIAL DE LA REPUBLICA DE CHILE

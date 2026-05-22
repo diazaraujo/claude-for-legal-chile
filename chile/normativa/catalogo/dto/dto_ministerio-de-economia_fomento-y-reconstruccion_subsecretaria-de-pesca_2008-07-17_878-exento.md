@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-pesca_2008-07-17_878-exento
+tipo: dto
+numero: 878-exento
+titulo_oficial: "ESTABLECE CUOTA ANUAL DE CAPTURA DE ESPECIE PEJERREY DE MAR (ODONTESTHES REGIA) PARA EL AÑO 2008"
+publicacion: 2008-07-17
+emisor: ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-pesca
+leychile_code: 274350
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=274350
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-pesca/2008-07-17/878-exento
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 878-exento
+
+**Título oficial:** ESTABLECE CUOTA ANUAL DE CAPTURA DE ESPECIE PEJERREY DE MAR (ODONTESTHES REGIA) PARA EL AÑO 2008

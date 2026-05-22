@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-mineria_2005-05-20_86
+tipo: dto
+numero: 86
+titulo_oficial: "OTORGA CONCESION DE EXPLORACION DE ENERGIA GEOTERMICA, PRESENTADA POR GEOTERMIA DEL PACIFICO SERVICIOS DE INGENIERIA LIMITADA, EN EL SECTOR DE 'TRIPAN', NOVENA REGION DE LA ARAUCANIA, PROVINCIA DE MALLECO, COMUNA DE CURACAUTIN, EN VIRTUD DE LA LEY Nº 19.657"
+publicacion: 2005-05-20
+emisor: ministerio-de-mineria
+leychile_code: 238209
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=238209
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-mineria/2005-05-20/86
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 86
+
+**Título oficial:** OTORGA CONCESION DE EXPLORACION DE ENERGIA GEOTERMICA, PRESENTADA POR GEOTERMIA DEL PACIFICO SERVICIOS DE INGENIERIA LIMITADA, EN EL SECTOR DE 'TRIPAN', NOVENA REGION DE LA ARAUCANIA, PROVINCIA DE MALLECO, COMUNA DE CURACAUTIN, EN VIRTUD DE LA LEY Nº 19.657

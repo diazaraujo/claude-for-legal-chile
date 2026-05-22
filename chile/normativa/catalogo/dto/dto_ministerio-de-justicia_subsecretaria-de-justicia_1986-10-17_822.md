@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-justicia_subsecretaria-de-justicia_1986-10-17_822
+tipo: dto
+numero: 822
+titulo_oficial: "APRUEBA REFORMAS DE ESTATUTOS A FUNDACION GILDEMEISTER, DE SANTIAGO"
+publicacion: 1986-10-17
+emisor: ministerio-de-justicia_subsecretaria-de-justicia
+leychile_code: 152528
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=152528
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia_subsecretaria-de-justicia/1986-10-17/822
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 822
+
+**Título oficial:** APRUEBA REFORMAS DE ESTATUTOS A FUNDACION GILDEMEISTER, DE SANTIAGO

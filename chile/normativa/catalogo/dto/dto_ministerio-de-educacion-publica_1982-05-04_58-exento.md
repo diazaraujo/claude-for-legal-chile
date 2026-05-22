@@ -1,0 +1,17 @@
+---
+slug: dto_ministerio-de-educacion-publica_1982-05-04_58-exento
+tipo: dto
+numero: 58-exento
+titulo_oficial: "AUTORIZA FUNCIONAMIENTO DE CENTRO DE FORMACION TECNICA QUE INDICA"
+publicacion: 1982-05-04
+emisor: ministerio-de-educacion-publica
+leychile_code: 188733
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=188733
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-educacion-publica/1982-05-04/58-exento
+capa: 1
+estado_revision: catalogo-bcn-grafo-selectivo
+---
+
+# DTO 58-exento
+
+**Título oficial:** AUTORIZA FUNCIONAMIENTO DE CENTRO DE FORMACION TECNICA QUE INDICA
