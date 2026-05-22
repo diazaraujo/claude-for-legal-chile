@@ -13,6 +13,7 @@ fuentes primarias chilenas en tiempo real.
 | [`mcp-diario-oficial`](mcp-diario-oficial/) | Publicaciones diarias DO | ✅ Funcional | 4 |
 | [`mcp-sii-juris`](mcp-sii-juris/) | Circulares SII por año | ✅ Funcional | 3 |
 | [`mcp-cgr-dictamenes`](mcp-cgr-dictamenes/) | Dictámenes CGR por número/año | ✅ Funcional | 2 |
+| [`mcp-cmf`](mcp-cmf/) | NCG + Circulares CMF (financiero) | ✅ Funcional | 2 |
 | [`mcp-tc-fallos`](mcp-tc-fallos/) | Sentencias TC legacy (id ≤ 12k) | 🟡 Parcial | 2 |
 | [`mcp-pjud`](mcp-pjud/) | Jurisprudencia general PJUD | 🔴 Stub | 2 |
 
@@ -59,21 +60,27 @@ solo retorna IDs/URLs que la fuente oficial confirma.
 
 ## Instalación rápida (todos los MCPs)
 
+Script automatizado que crea venvs aislados + registra en Claude Code:
+
 ```bash
-cd chile/scripts
-for d in mcp mcp-diario-oficial mcp-sii-juris mcp-cgr-dictamenes mcp-tc-fallos mcp-pjud; do
-  (cd $d && python3.11 -m venv .venv && .venv/bin/pip install -e .)
-done
+bash chile/scripts/install-all-mcps.sh           # instala + registra
+bash chile/scripts/install-all-mcps.sh --no-register   # solo instala
 ```
 
-Registro en Claude Code:
+Manual:
 
 ```bash
-REPO="/Volumes/SSD ADA/claude-for-legal-chile/chile/scripts"
+cd chile/scripts
+for d in mcp mcp-diario-oficial mcp-sii-juris mcp-cgr-dictamenes mcp-cmf mcp-tc-fallos mcp-pjud; do
+  (cd $d && python3.11 -m venv .venv && .venv/bin/pip install -e .)
+done
+
+REPO="$(pwd)"
 claude mcp add bcn-leychile "$REPO/mcp/.venv/bin/mcp-bcn-leychile"
 claude mcp add diario-oficial "$REPO/mcp-diario-oficial/.venv/bin/mcp-diario-oficial"
 claude mcp add sii-juris "$REPO/mcp-sii-juris/.venv/bin/mcp-sii-juris"
 claude mcp add cgr-dictamenes "$REPO/mcp-cgr-dictamenes/.venv/bin/mcp-cgr-dictamenes"
+claude mcp add cmf "$REPO/mcp-cmf/.venv/bin/mcp-cmf"
 claude mcp add tc-fallos "$REPO/mcp-tc-fallos/.venv/bin/mcp-tc-fallos"
-# mcp-pjud es stub, instalar solo si quieres tener pjud_status disponible
+# pjud es stub — instalar solo si quieres tener pjud_status disponible
 ```
