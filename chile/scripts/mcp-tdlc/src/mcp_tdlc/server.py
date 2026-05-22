@@ -54,6 +54,20 @@ async def list_tools() -> list[Tool]:
                 "required": ["id"],
             },
         ),
+        Tool(
+            name="tdlc_list_all_sentencias",
+            description=(
+                "Enumera TODAS las sentencias TDLC paginando hasta agotar. "
+                "~213 sentencias publicadas (1/2003 → 213/2026)."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "search": {"type": "string"},
+                    "max_pages": {"type": "integer", "default": 50},
+                },
+            },
+        ),
     ]
 
 
@@ -74,6 +88,16 @@ async def call_tool(name: str, arguments: dict[str, Any]) -> list[TextContent]:
             per_page=int(arguments.get("per_page", 20)),
             page=int(arguments.get("page", 1)),
             search=arguments.get("search"),
+        )
+        return [TextContent(type="text", text=json.dumps({
+            "count": len(results),
+            "sentencias": [_serialize(s) for s in results],
+        }, ensure_ascii=False, indent=2))]
+
+    if name == "tdlc_list_all_sentencias":
+        results = _client.list_all_sentencias(
+            search=arguments.get("search"),
+            max_pages=int(arguments.get("max_pages", 50)),
         )
         return [TextContent(type="text", text=json.dumps({
             "count": len(results),

@@ -101,3 +101,32 @@ class TDLCClient:
         if not isinstance(item, dict):
             return None
         return self._parse(item)
+
+    def list_all_sentencias(
+        self, search: str | None = None, max_pages: int = 50
+    ) -> list[SentenciaTDLC]:
+        """Enumera TODAS las sentencias TDLC paginando hasta agotar.
+
+        Aplica principio 'toda la data' (feedback Antonio 2026-05-22).
+        TDLC tiene ~213 sentencias (más reciente Sentencia 213/2026),
+        100 por página → ~3 páginas.
+        """
+        all_results: list[SentenciaTDLC] = []
+        seen: set[int] = set()
+        for page in range(1, max_pages + 1):
+            try:
+                items = self.list_sentencias(per_page=100, page=page, search=search)
+            except urllib.error.HTTPError as e:
+                if e.code == 400:
+                    # WordPress devuelve 400 cuando excede paginación
+                    break
+                raise
+            if not items:
+                break
+            new = [s for s in items if s.id not in seen]
+            if not new:
+                break
+            for s in new:
+                seen.add(s.id)
+                all_results.append(s)
+        return all_results
