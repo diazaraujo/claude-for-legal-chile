@@ -70,6 +70,22 @@ async def list_tools() -> list[Tool]:
                 "required": ["rol_id"],
             },
         ),
+        Tool(
+            name="tc_enumerate_legacy",
+            description=(
+                "Enumera URLs candidatas de sentencias TC legacy en rango "
+                "[from_id, to_id]. Sin red por default. Útil para batch "
+                "scrape posterior. IDs >12000 ya no están en legacy."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "from_id": {"type": "integer", "default": 1},
+                    "to_id": {"type": "integer", "default": 12000},
+                    "verify": {"type": "boolean", "default": False},
+                },
+            },
+        ),
     ]
 
 
@@ -81,6 +97,21 @@ async def call_tool(name: str, arguments: dict[str, Any]) -> list[TextContent]:
         return [TextContent(type="text", text=json.dumps({
             "rol_id": rol_id, "url": url, "type": "legacy_pdf",
             "note": "Usar tc_check_sentencia para confirmar antes de citar.",
+        }, ensure_ascii=False, indent=2))]
+
+    if name == "tc_enumerate_legacy":
+        results = _client.enumerate_legacy_range(
+            from_id=int(arguments.get("from_id", 1)),
+            to_id=int(arguments.get("to_id", 12000)),
+            verify=bool(arguments.get("verify", False)),
+        )
+        return [TextContent(type="text", text=json.dumps({
+            "count": len(results),
+            "sentencias": [
+                {"rol_id": r.rol_id, "url": r.url, "type": r.type,
+                 "pdf_size_bytes": r.pdf_size}
+                for r in results
+            ],
         }, ensure_ascii=False, indent=2))]
 
     if name == "tc_check_sentencia":

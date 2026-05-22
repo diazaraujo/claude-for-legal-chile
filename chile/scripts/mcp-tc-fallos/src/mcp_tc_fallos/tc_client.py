@@ -68,3 +68,27 @@ class TCClient:
     def build_legacy_url(self, rol_id: int) -> str:
         """Sin red — solo construye la URL canónica del descargador."""
         return DESCARGA_LEGACY.format(id=rol_id)
+
+    def enumerate_legacy_range(
+        self, from_id: int = 1, to_id: int = 12000, verify: bool = False
+    ) -> list[SentenciaURL]:
+        """Enumera TODOS los rol_id en rango [from_id, to_id].
+
+        Aplica principio 'toda la data' (Antonio 2026-05-22). TC legacy
+        IDs van 1..~12000. IDs modernos (>13000) migrados a www2.
+
+        verify=False default: solo construye URLs (instantáneo).
+        verify=True: HEAD a cada URL (hasta 12k requests).
+        """
+        results: list[SentenciaURL] = []
+        for rid in range(from_id, to_id + 1):
+            if verify:
+                r = self.try_legacy_url(rid)
+                if r is not None:
+                    results.append(r)
+            else:
+                results.append(SentenciaURL(
+                    rol_id=rid, url=self.build_legacy_url(rid),
+                    type="legacy_pdf",
+                ))
+        return results
