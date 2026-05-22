@@ -15,6 +15,7 @@ fuentes primarias chilenas en tiempo real.
 | [`mcp-cgr-dictamenes`](mcp-cgr-dictamenes/) | Dictámenes CGR por número/año | ✅ Funcional | 2 |
 | [`mcp-cmf`](mcp-cmf/) | NCG + Circulares CMF (financiero) | ✅ Funcional | 2 |
 | [`mcp-dt-dictamenes`](mcp-dt-dictamenes/) | Dictámenes Dirección del Trabajo (search-only) | ✅ Funcional | 2 |
+| [`mcp-sernac`](mcp-sernac/) | Circulares + Dictámenes interpretativos SERNAC | ✅ Funcional | 1 |
 | [`mcp-tc-fallos`](mcp-tc-fallos/) | Sentencias TC legacy (id ≤ 12k) | 🟡 Parcial | 2 |
 | [`mcp-pjud`](mcp-pjud/) | Jurisprudencia general PJUD | 🔴 Stub | 2 |
 
@@ -22,11 +23,11 @@ fuentes primarias chilenas en tiempo real.
 
 | Conector | Fuente | Bloqueo |
 |---|---|---|
-| `mcp-sernac` | Consumidor | Investigar API |
-| `mcp-sbif` / `mcp-cmf` | Financiero | API CMF |
 | `mcp-tgr` | Tesorería Gral | API formal pendiente |
-| `mcp-aduana` | Aduana | Investigar |
+| `mcp-aduana` | Aduana | CMS sin IDs |
 | `mcp-conadi` | Indígenas | HTML público |
+| `mcp-ine` | Estadísticas | API REST disponible |
+| `mcp-leychile-search` | Búsqueda full-text BCN | LeyChile tiene buscador |
 
 ## Bloqueos técnicos comunes
 
