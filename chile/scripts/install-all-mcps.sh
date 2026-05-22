@@ -26,6 +26,7 @@ declare -a MCPS=(
     "mcp-dt-dictamenes:dt-dictamenes"
     "mcp-sernac:sernac"
     "mcp-banco-central:banco-central"
+    "mcp-bcn-tramitacion:bcn-tramitacion"
     "mcp-pjud:pjud"
 )
 
