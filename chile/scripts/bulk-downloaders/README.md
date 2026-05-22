@@ -56,19 +56,25 @@ chile/data/diario-oficial/
 
 ## Estado al 2026-05-22
 
-| Bulk | Estado | PDFs | Notas |
-|---|---|---:|---|
-| `diario-oficial-bulk.py` | 🟡 Fase 2 en curso | ~12k de ~38k | Run de ~50 min total |
-| `sii-bulk.py` | ✅ Completo | 596 / 159 MB | Solo años 2013+ en web |
-| `tdlc-bulk.py` | ✅ Completo | 332 / 142 MB | WP REST API limpio |
-| `sernac-bulk.py` | ✅ Completo | 127 / 309 MB | Circulares + dictámenes |
-| `tc-bulk.py` | 🟡 75% en curso | ~5500 ok / ~3300 404 | UA matters: usar mismo del MCP |
-| `cgr-bulk.py` | 🔴 Pendiente rediseño | — | Números no-secuenciales (~50% 404) |
-| `cmf-bulk.py` | 🔴 Pendiente | — | High error rate workers=16; bajar |
-| `dt-bulk.py` | 🔴 Form no filtra fechas | ~40 únicos | DT search siempre devuelve mismos |
+| Bulk | Estado | Docs | Tamaño | Notas |
+|---|---|---:|---:|---|
+| `diario-oficial-bulk.py` | ✅ Fase 2 done | 37.676 PDFs | 19.8 GB | 2.125 ediciones desde 2014 |
+| `tc-bulk.py` | ✅ Completo | 8.081 PDFs | 4.25 GB | UA matters: usar mismo del MCP |
+| `dt-bulk.py` | 🟡 Fase 2 en curso | 4.974 enum / N descargados | — | Period_id enumerator + requests session |
+| `sii-bulk.py` | ✅ Completo | 596 PDFs | 159 MB | Solo años 2013+ en web |
+| `tdlc-bulk.py` | ✅ Completo | 332 PDFs | 142 MB | WP REST API limpio |
+| `cmf-bulk.py` | ✅ Completo | 301 PDFs | 240 MB | workers=4 (16 daba 60% 404) |
+| `sernac-bulk.py` | ✅ Completo | 127 PDFs | 309 MB | Circulares + dictámenes |
+| `subtel-bulk.py` | ✅ Completo | 71 PDFs | 20 MB | res. exentas + decretos supremos |
+| `cgr-bulk.py` | 🔴 Bloqueado | — | — | robots.txt Disallow:/, IDs no-secuenciales |
+
+**Total al cierre**: ~52.158 documentos / ~24.9 GB en 8 fuentes operativas.
 
 ## Issues comunes y soluciones
 
 1. **SQLite database malformed**: `PRAGMA journal_mode=WAL` + connection-per-thread.
 2. **User-Agent rechazado silenciosamente**: usar el mismo UA que el cliente del MCP (no añadir "bulk-X").
 3. **Form sin paginación real**: site puede tener límite implícito (DT 57); investigar antes de batch.
+4. **DT 302 redirects bloquean urllib**: usar `requests.Session` per-thread con `max_redirects=3` y `timeout=(connect, read)`.
+5. **HTML hrefs relativos resuelven a root, no al path**: en Subtel `images/...` resuelve a `BASE + /images/`, no a `BASE + /path/images/`.
+6. **CGR `robots.txt: Disallow: /`** + IDs hash-like → enumeración inviable sin autenticación al Lotus Notes interno.

@@ -6,11 +6,14 @@ contiene el texto del dictamen y a veces link a PDF. Por ahora bulk
 guarda el HTML de cada dictamen.
 """
 from __future__ import annotations
-import argparse, sqlite3, sys, time, urllib.request, urllib.error
+import argparse, sqlite3, sys, time, urllib.error
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
-from threading import Lock
+from threading import Lock, local
 import datetime
+
+import requests
+from requests.adapters import HTTPAdapter
 
 _REPO_ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(_REPO_ROOT / "chile/scripts/mcp-dt-dictamenes/src"))
@@ -19,6 +22,19 @@ from mcp_dt_dictamenes.dt_client import DTClient
 USER_AGENT = "Mozilla/5.0 claude-legal-chile/0.7 (unholster.com)"
 _STATS = {"ok": 0, "skip": 0, "err": 0, "bytes": 0}
 _LOCK = Lock()
+_THREAD = local()
+
+
+def _session() -> requests.Session:
+    s = getattr(_THREAD, "session", None)
+    if s is None:
+        s = requests.Session()
+        s.headers.update({"User-Agent": USER_AGENT, "Accept": "text/html,*/*;q=0.8"})
+        adapter = HTTPAdapter(pool_connections=4, pool_maxsize=4, max_retries=0)
+        s.mount("http://", adapter)
+        s.mount("https://", adapter)
+        _THREAD.session = s
+    return s
 
 
 def init_manifest(db_path: Path) -> sqlite3.Connection:
@@ -41,9 +57,17 @@ def fetch_html(url: str, dest: Path) -> bool:
         return True
     dest.parent.mkdir(parents=True, exist_ok=True)
     try:
-        req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-        with urllib.request.urlopen(req, timeout=30) as r:
-            body = r.read()
+        # requests con per-thread session + timeout (connect, read) + max 3 redirects.
+        s = _session()
+        s.max_redirects = 3
+        r = s.get(url, timeout=(4, 6), allow_redirects=True)
+        if r.status_code != 200:
+            with _LOCK: _STATS["err"] += 1
+            return False
+        body = r.content
+        if len(body) < 100:
+            with _LOCK: _STATS["err"] += 1
+            return False
         tmp = dest.with_suffix(".tmp")
         tmp.write_bytes(body)
         tmp.rename(dest)
@@ -64,6 +88,8 @@ def main() -> int:
     parser.add_argument("--output", default=str(_REPO_ROOT / "chile/data/dt"))
     parser.add_argument("--workers", type=int, default=4)
     parser.add_argument("--skip-html", action="store_true")
+    parser.add_argument("--skip-enum", action="store_true",
+                        help="Saltar Fase 1 (usar enum existente del manifest)")
     args = parser.parse_args()
 
     output_dir = Path(args.output)
@@ -71,36 +97,57 @@ def main() -> int:
     db_path = output_dir / "manifest.sqlite3"
     conn = init_manifest(db_path)
 
-    # FASE 1: enumerar por año (reverse)
-    print(f"[FASE 1] Enumerando dictámenes DT {args.to_year}..{args.from_year}...")
-    client = DTClient(rate_seconds=1.0)
+    if args.skip_enum:
+        existing = conn.execute("SELECT COUNT(*) FROM dictamenes").fetchone()[0]
+        print(f"[FASE 1 SKIP] manifest tiene {existing} dictámenes enumerados", flush=True)
+        if existing == 0:
+            print("  ERROR: manifest vacío, no se puede skip enum.", flush=True)
+            return 1
+        return _phase2(conn, db_path, output_dir, args)
+
+    # FASE 1: descubrir todos los period_ids del index + enumerar dictámenes
+    # de cada uno (1 page per period = 1 año). Reverse: año más reciente primero.
+    print(f"[FASE 1] Descubriendo period_ids DT...", flush=True)
+    client = DTClient(rate_seconds=0.8)
+    periods = client.discover_period_ids()
+    print(f"  {len(periods)} period_ids descubiertos", flush=True)
+    # Sort: año más reciente primero (label numérico desc)
+    sorted_periods = sorted(
+        periods.items(),
+        key=lambda x: int(x[1]) if x[1].isdigit() else -1,
+        reverse=True,
+    )
     total_meta = 0
-    for year in range(args.to_year, args.from_year - 1, -1):
+    for pid, label in sorted_periods:
+        year_val = int(label) if label.isdigit() else 0
         try:
-            results = client.list_all_by_year(year)
+            results = client.list_by_period_id(pid)
             for r in results:
                 conn.execute(
                     "INSERT OR REPLACE INTO dictamenes(article_id, year, title, url, downloaded) "
                     "VALUES (?, ?, ?, ?, COALESCE((SELECT downloaded FROM dictamenes WHERE article_id=?), 0))",
-                    (r.article_id, year, r.title, r.url, r.article_id),
+                    (r.article_id, year_val, r.title, r.url, r.article_id),
                 )
             conn.commit()
             total_meta += len(results)
-            print(f"  {year}: {len(results)} dictámenes (total {total_meta})", flush=True)
+            print(f"  period {pid} [{label}]: {len(results)} dictámenes (total {total_meta})", flush=True)
         except Exception as e:
-            print(f"  {year}: ERR {e}", flush=True)
+            print(f"  period {pid} [{label}]: ERR {e}", flush=True)
 
     print(f"\n[FASE 1 DONE] {total_meta} dictámenes total")
 
+    return _phase2(conn, db_path, output_dir, args)
+
+
+def _phase2(conn, db_path, output_dir, args) -> int:
     if args.skip_html:
         return 0
-
-    # FASE 2: descargar HTML de cada article
-    print(f"\n[FASE 2] Descargando HTMLs...")
+    print(f"\n[FASE 2] Descargando HTMLs...", flush=True)
     rows = conn.execute(
-        "SELECT article_id, year, url FROM dictamenes WHERE downloaded = 0 ORDER BY article_id DESC"
+        "SELECT article_id, year, url FROM dictamenes WHERE downloaded = 0 "
+        "ORDER BY article_id DESC"
     ).fetchall()
-    print(f"  Pendientes: {len(rows)}\n")
+    print(f"  Pendientes: {len(rows)}\n", flush=True)
     if not rows:
         return 0
 
@@ -111,7 +158,10 @@ def main() -> int:
         if ok:
             c = sqlite3.connect(str(db_path), timeout=30)
             try:
-                c.execute("UPDATE dictamenes SET downloaded = 1 WHERE article_id = ?", (aid,))
+                c.execute(
+                    "UPDATE dictamenes SET downloaded = 1 WHERE article_id = ?",
+                    (aid,),
+                )
                 c.commit()
             finally:
                 c.close()
@@ -119,14 +169,27 @@ def main() -> int:
 
     start = time.time()
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
-        for i, fut in enumerate(as_completed([pool.submit(worker, r) for r in rows]), 1):
-            fut.result()
+        futures = [pool.submit(worker, r) for r in rows]
+        for i, fut in enumerate(as_completed(futures), 1):
+            try:
+                fut.result()
+            except Exception:
+                pass
             if i % 100 == 0 or i == len(rows):
                 mb = _STATS["bytes"] / 1024 / 1024
-                print(f"  [{i}/{len(rows)}] ok={_STATS['ok']} skip={_STATS['skip']} "
-                      f"err={_STATS['err']} | {mb:.1f} MB", flush=True)
-
-    print(f"\n[DONE] {time.time()-start:.0f}s | {_STATS['ok']} HTMLs, {_STATS['bytes']/1024/1024:.0f} MB")
+                elapsed = time.time() - start
+                rate = i / elapsed if elapsed > 0 else 0
+                eta = (len(rows) - i) / rate if rate > 0 else 0
+                print(
+                    f"  [{i}/{len(rows)}] ok={_STATS['ok']} skip={_STATS['skip']} "
+                    f"err={_STATS['err']} | {mb:.1f} MB | "
+                    f"elapsed={elapsed:.0f}s eta={eta:.0f}s",
+                    flush=True,
+                )
+    print(
+        f"\n[DONE] {time.time()-start:.0f}s | {_STATS['ok']} HTMLs, "
+        f"{_STATS['bytes']/1024/1024:.0f} MB"
+    )
     return 0
 
 
