@@ -1,62 +1,65 @@
 # Bulk downloaders
 
 Scripts standalone para descargar el **histórico completo** de fuentes
-chilenas — aplicando feedback "toda la data, no muestras".
+chilenas, en **2 fases** (feedback Antonio 2026-05-22):
+
+1. **Fase 1: metadata-only** — `--skip-pdfs`, recorre toda la fuente
+   en minutos. Valida cobertura + genera manifest SQLite.
+2. **Fase 2: PDFs reverse chronological** — por default `to → from`,
+   prioriza material reciente (mayor valor jurídico).
+
+Ver memoria persistente `feedback-bulk-estrategia-2fases` para detalle.
 
 ## diario-oficial-bulk.py
 
-Descarga toda la edición electrónica del Diario Oficial (desde
-17-08-2016 hasta hoy).
-
-### Uso
+### Fase 1 (recomendada primero)
 
 ```bash
-# Smoke test (1 día, ~4 MB)
 python3 chile/scripts/bulk-downloaders/diario-oficial-bulk.py \
-  --from 22-05-2026 --to 22-05-2026 \
-  --workers 4 --rate-seconds 0.3
-
-# Histórico completo (~2200 ediciones, ~55k PDFs, ~10 GB, ~1.5h)
-python3 chile/scripts/bulk-downloaders/diario-oficial-bulk.py \
-  --workers 8 --rate-seconds 0.5
-
-# Solo metadata (sin PDFs, rápido)
-python3 chile/scripts/bulk-downloaders/diario-oficial-bulk.py \
-  --skip-pdfs --workers 8
-
-# Rango específico
-python3 chile/scripts/bulk-downloaders/diario-oficial-bulk.py \
-  --from 01-01-2024 --to 31-12-2024 \
-  --workers 8 --rate-seconds 0.5
+  --skip-pdfs --workers 8 --rate-seconds 0.3
 ```
+
+Estimación: ~2.500 días hábiles, ~4 minutos, sin uso de disco
+(solo manifest SQLite + JSONL per edition).
+
+### Fase 2 (después de validar Fase 1)
+
+```bash
+# Default: reverse (hoy → atrás)
+python3 chile/scripts/bulk-downloaders/diario-oficial-bulk.py \
+  --workers 8 --rate-seconds 0.5
+
+# Forward (origen → hoy) explícito
+python3 chile/scripts/bulk-downloaders/diario-oficial-bulk.py \
+  --workers 8 --rate-seconds 0.5 --forward
+```
+
+Estimación: ~60k PDFs, ~10 GB, ~1 hora con 8 workers.
+
+### Idempotencia + resume
+
+Manifest SQLite en `chile/data/diario-oficial/manifest.sqlite3`:
+- Ediciones con `status='ok'` se saltean en runs subsecuentes.
+- PDFs ya en disco se saltean.
+- Si el script cae a mitad, simplemente re-lanzar el mismo comando.
 
 ### Output
 
 ```
 chile/data/diario-oficial/
-├── manifest.sqlite3              # tracking: status por edición
-└── YYYY/MM/DD/
-    └── edicion_NNNNN/
-        ├── publicaciones.jsonl   # metadata estructurada
-        ├── sumario.pdf            # tabla contenidos
-        └── {CVE}.pdf              # cada publicación
+├── manifest.sqlite3
+└── YYYY/MM/DD/edicion_NNNNN/
+    ├── publicaciones.jsonl
+    ├── sumario.pdf
+    └── {CVE}.pdf  × ~25
 ```
 
-### Características
+## Próximas fuentes (mismo patrón)
 
-- **Idempotente**: skip ediciones ya en manifest + PDFs ya en disco.
-- **Resume**: si se interrumpe, retomar con el mismo comando.
-- **Paralelo**: ThreadPoolExecutor configurable (default 8 workers).
-- **Rate limit por worker**: respetuoso con BCN.
-- **Manifest SQLite**: tracking + reportes.
-
-### Estimación de recursos
-
-| Métrica | Valor |
-|---|---|
-| Ediciones (días hábiles 2016-2026) | ~2.500 |
-| Publicaciones promedio/edición | ~25 |
-| Total PDFs | ~60.000 |
-| Tamaño promedio/PDF | ~180 KB |
-| Total | **~10 GB** |
-| Tiempo con 8 workers, rate 0.5s | **~2 horas** |
+- `sii-bulk.py`: circulares + oficios SII (~30 años, ~1500 PDFs)
+- `tdlc-bulk.py`: 213 sentencias × PDFs anexos
+- `cgr-bulk.py`: dictámenes CGR por año
+- `cmf-bulk.py`: NCG + Circulares CMF
+- `tc-bulk.py`: TC legacy IDs 1..12000
+- `dt-bulk.py`: dictámenes DT por año
+- `sernac-bulk.py`: circulares + dictámenes interpretativos
