@@ -16,8 +16,10 @@ fuentes primarias chilenas en tiempo real.
 | [`mcp-cmf`](mcp-cmf/) | NCG + Circulares CMF (financiero) | ✅ Funcional | 2 |
 | [`mcp-dt-dictamenes`](mcp-dt-dictamenes/) | Dictámenes Dirección del Trabajo (search-only) | ✅ Funcional | 2 |
 | [`mcp-sernac`](mcp-sernac/) | Circulares + Dictámenes interpretativos SERNAC | ✅ Funcional | 1 |
+| [`mcp-banco-central`](mcp-banco-central/) | BDE BCCh — UF, dólar, TPM, IPC, UTM (req. registro) | ✅ Funcional | 5 |
 | [`mcp-tc-fallos`](mcp-tc-fallos/) | Sentencias TC legacy (id ≤ 12k) | 🟡 Parcial | 2 |
 | [`mcp-pjud`](mcp-pjud/) | Jurisprudencia general PJUD | 🔴 Stub | 2 |
+| [`mcp-ine`](mcp-ine/) | INE (series ya en BCCh) | 🔴 Stub (doc) | 0 |
 
 ### Tier 2 — Pendientes (próximas fases)
 
