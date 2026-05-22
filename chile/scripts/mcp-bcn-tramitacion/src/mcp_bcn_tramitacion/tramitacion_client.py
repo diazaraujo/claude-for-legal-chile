@@ -60,13 +60,7 @@ class TramitacionClient:
             ),
         )
 
-    def list_recientes(self) -> list[HistoriaLey]:
-        """Lista las historias más recientes (típicamente 10) de la home."""
-        self._rate_limit()
-        req = urllib.request.Request(BASE_URL, headers={"User-Agent": USER_AGENT})
-        with urllib.request.urlopen(req, timeout=20) as r:
-            body = r.read().decode("utf-8", errors="replace")
-
+    def _parse_page(self, body: str) -> list[HistoriaLey]:
         results: list[HistoriaLey] = []
         seen: set[int] = set()
         for m in HISTORIA_RE.finditer(body):
@@ -81,6 +75,64 @@ class TramitacionClient:
                 standard_url=f"{BASE_URL}nc/historia-de-la-ley/{history_id}/",
                 vista_expandida_url=(
                     f"{BASE_URL}historia-de-la-ley/vista-expandida/{history_id}/"
+                ),
+            ))
+        return results
+
+    def list_page(self, page: int = 1) -> list[HistoriaLey]:
+        """Lista historias de una página específica."""
+        self._rate_limit()
+        url = BASE_URL if page == 1 else f"{BASE_URL}?page={page}"
+        req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+        with urllib.request.urlopen(req, timeout=20) as r:
+            body = r.read().decode("utf-8", errors="replace")
+        return self._parse_page(body)
+
+    def list_all(self, max_pages: int = 1000) -> list[HistoriaLey]:
+        """Intentaba enumerar paginando. NO funciona — el sitio devuelve
+        siempre las 10 más recientes para cualquier ?page=N.
+
+        Para enumeración completa real, usar enumerate_by_id_range(1, 8500)
+        (history_id parecen secuenciales del 1 al ~8500 = más reciente
+        2026-05).
+        """
+        all_results: list[HistoriaLey] = []
+        seen_ids: set[int] = set()
+        for page in range(1, max_pages + 1):
+            page_results = self.list_page(page)
+            if not page_results:
+                break
+            new = [h for h in page_results if h.history_id not in seen_ids]
+            if not new:
+                break
+            for h in new:
+                seen_ids.add(h.history_id)
+                all_results.append(h)
+        return all_results
+
+    def enumerate_by_id_range(
+        self, from_id: int = 1, to_id: int = 8500, check: bool = False
+    ) -> list[HistoriaLey]:
+        """Enumera secuencialmente history_id en rango [from_id, to_id].
+
+        Aplica principio "toda la data" — history_id son ~secuenciales
+        del 1 al ~8500 (más recientes en 2026-05).
+
+        Si check=True, hace HEAD HTTP a cada ID para verificar
+        existencia (costoso: 8500 requests con rate-limit).
+        Si check=False, solo construye URLs (sin red).
+        """
+        results: list[HistoriaLey] = []
+        for hid in range(from_id, to_id + 1):
+            if check:
+                if not self.check_historia(hid):
+                    continue
+            results.append(HistoriaLey(
+                history_id=hid,
+                title="",
+                standard_url=f"{BASE_URL}nc/historia-de-la-ley/{hid}/",
+                vista_expandida_url=(
+                    f"{BASE_URL}historia-de-la-ley/vista-expandida/{hid}/"
                 ),
             ))
         return results

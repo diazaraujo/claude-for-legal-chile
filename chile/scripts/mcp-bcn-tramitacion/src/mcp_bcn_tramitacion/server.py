@@ -22,14 +22,35 @@ _client = TramitacionClient()
 async def list_tools() -> list[Tool]:
     return [
         Tool(
-            name="bcn_historia_recientes",
+            name="bcn_historia_page",
             description=(
-                "Lista las historias de la ley más recientemente publicadas "
-                "por la Biblioteca del Congreso Nacional (típicamente 10 "
-                "últimas en home). Devuelve {history_id, title, "
-                "standard_url, vista_expandida_url}."
+                "Lista historias de la ley de una página específica del "
+                "listado BCN. 10 por página, página 1 es las más recientes."
             ),
-            inputSchema={"type": "object", "properties": {}},
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "page": {"type": "integer", "default": 1, "minimum": 1},
+                },
+            },
+        ),
+        Tool(
+            name="bcn_historia_enumerate",
+            description=(
+                "Enumera TODAS las historias de la ley generando URLs "
+                "secuenciales en rango [from_id, to_id]. history_id son "
+                "casi-secuenciales del 1 al ~8500 (más recientes en 2026). "
+                "Sin red por default (solo construye URLs). Si check=True "
+                "verifica con HEAD cada URL (costoso: hasta 8500 requests)."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "from_id": {"type": "integer", "default": 1},
+                    "to_id": {"type": "integer", "default": 8500},
+                    "check": {"type": "boolean", "default": False},
+                },
+            },
         ),
         Tool(
             name="bcn_historia_url",
@@ -67,13 +88,32 @@ async def list_tools() -> list[Tool]:
 
 @server.call_tool()
 async def call_tool(name: str, arguments: dict[str, Any]) -> list[TextContent]:
-    if name == "bcn_historia_recientes":
-        results = _client.list_recientes()
+    if name == "bcn_historia_page":
+        page = int(arguments.get("page", 1))
+        results = _client.list_page(page)
         return [TextContent(type="text", text=json.dumps({
-            "count": len(results),
+            "page": page, "count": len(results),
             "historias": [
                 {
                     "history_id": h.history_id, "title": h.title,
+                    "standard_url": h.standard_url,
+                    "vista_expandida_url": h.vista_expandida_url,
+                }
+                for h in results
+            ],
+        }, ensure_ascii=False, indent=2))]
+
+    if name == "bcn_historia_enumerate":
+        from_id = int(arguments.get("from_id", 1))
+        to_id = int(arguments.get("to_id", 8500))
+        check = bool(arguments.get("check", False))
+        results = _client.enumerate_by_id_range(from_id, to_id, check=check)
+        return [TextContent(type="text", text=json.dumps({
+            "from_id": from_id, "to_id": to_id, "verified": check,
+            "count": len(results),
+            "historias": [
+                {
+                    "history_id": h.history_id,
                     "standard_url": h.standard_url,
                     "vista_expandida_url": h.vista_expandida_url,
                 }
