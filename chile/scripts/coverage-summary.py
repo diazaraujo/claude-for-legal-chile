@@ -21,6 +21,7 @@ SOURCES = [
     ("TDLC sentencias","tdlc",           "sentencias", "downloaded=1"),
     ("SERNAC",         "sernac",         None,         None),
     ("Subtel",         "subtel",         "documentos", "downloaded=1"),
+    ("TDPI",           "tdpi",           "fallos",     "downloaded=1"),
     ("CGR",            "cgr",            None,         None),
 ]
 
