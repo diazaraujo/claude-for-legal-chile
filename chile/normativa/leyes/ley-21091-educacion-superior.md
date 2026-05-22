@@ -21,6 +21,42 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-de-educacion/2010-07-02/2
+    - ley/ministerio-de-educacion-publica/1990-03-08/18956
+    - ley/ministerio-de-educacion/2005-06-11/20027
+    - ley/ministerio-de-educacion/2006-11-17/20129
+    - ley/ministerio-de-educacion/2014-12-26/20800
+    - ley/ministerio-de-hacienda/1987-01-03/18591
+  modificada_por:
+    - ley/ministerio-de-educacion/2019-11-21/21186
+  reglamentada_por:
+    - dto/ministerio-de-educacion-subsecretaria-de-educacion/2019-02-28/379
+    - dto/ministerio-de-educacion-subsecretaria-de-educacion/2019-03-22/407
+    - dto/ministerio-de-hacienda/2020-09-12/1044
+  acuerda_con:
+    - dfl/ministerio-de-educacion-subsecretaria-de-educacion/2019-05-06/2
+    - dfl/ministerio-de-educacion-subsecretaria-de-educacion/2019-07-04/3
+    - dto/ministerio-de-educacion-subsecretaria-de-educacion-superior/2019-12-10/250
+    - dto/ministerio-de-educacion-subsecretaria-de-educacion-superior/2020-02-21/47-exento
+    - dto/ministerio-de-educacion-subsecretaria-de-educacion-superior/2020-07-20/580-exento
+    - dto/ministerio-de-educacion-subsecretaria-de-educacion-superior/2020-08-03/478-exento
+    - dto/ministerio-de-educacion-subsecretaria-de-educacion/2018-10-06/724-exento
+    - dto/ministerio-de-educacion-subsecretaria-de-educacion/2019-01-11/1-exento
+    - dto/ministerio-de-educacion-subsecretaria-de-educacion/2019-02-19/373
+    - dto/ministerio-de-educacion-subsecretaria-de-educacion/2019-02-28/379
+    - dto/ministerio-de-educacion-subsecretaria-de-educacion/2019-09-11/232
+    - dto/ministerio-de-educacion-subsecretaria-de-educacion/2019-11-08/1199-exento
+    - dto/ministerio-de-educacion-subsecretaria-de-educacion/2019-11-18/893-exento
+    - dto/ministerio-de-educacion-subsecretaria-de-educacion/2019-11-19/1199-exento
+    - res/ministerio-de-educacion-subsecretaria-de-educacion-superior/2020-03-10/6687-exenta
+    - res/ministerio-de-educacion-subsecretaria-de-educacion-superior/2020-05-07/2106-exenta
+    - res/ministerio-de-educacion-subsecretaria-de-educacion-superior/2020-05-07/2107-exenta
+    - res/ministerio-de-educacion-subsecretaria-de-educacion-superior/2020-07-21/2697-exenta
+    - res/ministerio-de-educacion-subsecretaria-de-educacion-superior/2020-07-21/2698-exenta
+    - res/ministerio-de-educacion-subsecretaria-de-educacion-superior/2020-07-22/2808-exenta
+
 ---
 
 # Ley 21.091 — Sobre Educación Superior

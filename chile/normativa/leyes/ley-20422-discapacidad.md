@@ -20,6 +20,51 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2003-01-16/1
+    - ley/ministerio-de-planificacion-y-cooperacion/1994-01-14/19284
+  modificada_por:
+    - dto/ministerio-de-hacienda/2011-05-27/1666
+    - dto/ministerio-de-hacienda/2012-04-05/1625
+    - dto/ministerio-de-hacienda/2013-03-06/1525
+    - dto/ministerio-de-hacienda/2014-02-24/1845
+    - dto/ministerio-de-hacienda/2015-04-09/2211
+    - dto/ministerio-de-hacienda/2016-02-25/1966
+    - dto/ministerio-de-hacienda/2017-02-04/1846-exento
+    - dto/ministerio-de-hacienda/2018-02-20/1741
+    - dto/ministerio-de-hacienda/2020-07-07/298
+    - ley/ministerio-de-desarrollo-social/2016-06-28/20927
+    - ley/ministerio-de-desarrollo-social/2017-06-15/21015
+    - ley/ministerio-de-desarrollo-social/2018-05-23/21089
+    - ley/ministerio-de-desarrollo-social-subsecretaria-de-servicios-sociales/2012-09-25/20602
+    - ley/ministerio-de-hacienda/2017-03-13/20997
+  reglamentada_por:
+    - dto/ministerio-de-desarrollo-social-subsecretaria-de-servicios-sociales/2013-10-17/105
+    - dto/ministerio-de-hacienda/2011-10-21/1253
+    - dto/ministerio-de-justicia/2012-03-31/945-exento
+    - dto/ministerio-de-planificacion/2011-05-12/141
+    - dto/ministerio-de-planificacion/2011-07-09/142
+    - dto/ministerio-de-planificacion/2012-02-04/32
+    - dto/ministerio-de-salud-subsecretaria-de-salud-publica/2013-10-16/47
+    - dto/ministerio-del-trabajo-y-prevision-social/2018-02-01/65
+  acuerda_con:
+    - acd/consejo-nacional-de-television/2014-09-03/s/n
+    - dto/ministerio-de-desarrollo-social-subsecretaria-de-servicios-sociales/2013-10-22/32
+    - dto/ministerio-de-relaciones-exteriores/2017-02-14/155
+    - dto/ministerio-de-salud-subsecretaria-de-salud-publica/2020-10-16/25
+    - ley/ministerio-de-defensa-nacional/2017-08-12/21021
+    - ley/ministerio-de-desarrollo-social-subsecretaria-de-evaluacion-social/2013-04-01/20665
+    - ley/ministerio-de-planificacion/2011-10-13/20530
+    - ley/ministerio-de-vivienda-y-urbanismo/2016-02-04/20898
+    - res/ministerio-de-desarrollo-social-subsecretaria-de-servicios-sociales/2012-07-09/139-exenta
+    - res/ministerio-de-hacienda-servicio-nacional-de-aduanas-direccion-nacional/2017-07-12/56
+    - res/ministerio-de-justicia-y-derechos-humanos-servicio-de-registro-civil-e-identificacion/2016-10-29/371-exenta
+    - res/ministerio-de-salud/2018-03-16/403-exenta
+    - res/ministerio-de-transportes-y-telecomunicaciones/2015-10-21/2855-exenta
+    - res/ministerio-de-transportes-y-telecomunicaciones/2017-01-04/3305-exenta
+    - res/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-transportes/2016-08-18/1773-exenta
+
 ---
 
 # Ley 20.422 — Inclusión Social de Personas con Discapacidad

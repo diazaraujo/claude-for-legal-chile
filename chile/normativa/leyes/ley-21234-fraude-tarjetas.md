@@ -20,6 +20,11 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - ley/ministerio-de-hacienda/2003-12-18/19913
+    - ley/ministerio-de-hacienda/2005-04-01/20009
+
 ---
 # Ley 21.234 — Limitación de Responsabilidad por Fraude con Tarjetas
 

@@ -21,6 +21,17 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-de-educacion-publica/1929-12-10/5200
+    - dfl/ministerio-de-transportes-y-telecomunicaciones-subsecretaria-de-transportes-ministerio-de-justicia-subsecretaria-de-justicia/2009-10-29/1
+    - ley/ministerio-de-educacion/2017-11-03/21045
+    - ley/ministerio-de-hacienda/1985-12-28/18483
+    - ley/ministerio-de-justicia/1989-11-03/18845
+    - ley/ministerio-secretaria-general-de-la-presidencia/2003-05-29/19880
+  acuerda_con:
+    - res/ministerio-de-educacion-subsecretaria-de-educacion/2020-06-02/2437-exenta
+
 ---
 
 # Ley 21.180 — Transformación Digital del Estado

@@ -20,6 +20,19 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-de-hacienda/1980-10-15/7
+    - dfl/ministerio-de-hacienda/2004-07-09/1
+    - dl/ministerio-de-hacienda/1974-12-31/824
+    - dl/ministerio-de-hacienda/1974-12-31/825
+    - dl/ministerio-de-hacienda/1974-12-31/830
+  modificada_por:
+    - ley/ministerio-de-hacienda/2014-09-29/20780
+  acuerda_con:
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2015-02-05/12
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2015-07-03/54
+
 ---
 # Ley 20.727 — Factura Electrónica Masiva
 

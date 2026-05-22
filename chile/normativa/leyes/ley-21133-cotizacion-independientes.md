@@ -20,6 +20,17 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-de-salud-subsecretaria-de-salud-publica/2006-04-24/1
+    - dl/ministerio-de-hacienda/1974-12-31/824
+    - dl/ministerio-del-trabajo-y-prevision-social/1980-11-13/3500
+    - ley/ministerio-del-trabajo-y-prevision-social/2017-12-30/21063
+    - ley/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2008-03-17/20255
+  acuerda_con:
+    - ley/ministerio-de-hacienda/2020-06-24/21242
+    - ley/ministerio-de-hacienda/2020-08-01/21252
+
 ---
 # Ley 21.133 — Cotización Obligatoria Independientes
 

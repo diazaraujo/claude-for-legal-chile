@@ -23,6 +23,50 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-de-hacienda/1980-10-15/7
+    - dfl/ministerio-de-hacienda/1998-12-16/1
+    - dfl/ministerio-de-hacienda/2001-08-10/2
+    - dfl/ministerio-de-hacienda/2001-09-11/1
+    - dfl/ministerio-de-justicia/2000-05-30/1
+    - dfl/ministerio-de-salud-subsecretaria-de-salud-publica/2006-04-24/1
+    - dfl/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2003-01-16/1
+    - dl/ministerio-de-agricultura/1979-04-03/2565
+    - dl/ministerio-de-hacienda/1974-12-31/824
+    - dl/ministerio-de-hacienda/1974-12-31/825
+    - dl/ministerio-de-hacienda/1974-12-31/830
+    - dl/ministerio-de-hacienda/1978-12-01/2398
+    - dl/ministerio-de-hacienda/1980-12-06/3529
+    - dto/ministerio-de-obras-publicas/1960-07-18/1101
+    - dto/ministerio-del-interior/1996-11-20/2385
+    - ley/ministerio-de-agricultura/1998-05-16/19561
+    - ley/ministerio-de-hacienda/1968-05-24/16840
+    - ley/ministerio-de-hacienda/1984-07-17/18320
+    - ley/ministerio-de-hacienda/1985-01-14/18392
+    - ley/ministerio-de-hacienda/1992-07-06/19149
+  modificada_por:
+    - ley/ministerio-de-hacienda/2020-09-02/21256
+  acuerda_con:
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2020-04-03/22
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2020-04-09/24
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2020-04-16/25
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2020-05-05/31
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2020-05-27/37
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2020-06-17/42
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2020-07-01/43
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2020-07-03/44
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2020-08-06/50
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2020-08-14/53
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2020-09-10/56
+    - dto/ministerio-de-hacienda/2020-04-01/420
+    - ley/ministerio-de-hacienda/2020-09-02/21256
+    - res/ministerio-de-educacion-subsecretaria-de-educacion-superior/2020-03-10/6687-exenta
+    - res/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2020-04-09/38-exenta
+    - res/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2020-05-02/45-exenta
+    - res/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2020-07-24/83-exenta
+    - res/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2020-11-18/141-exenta
+
 ---
 
 # Ley 21.210 — Modernización Tributaria 2020

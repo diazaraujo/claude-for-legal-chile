@@ -20,6 +20,22 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-de-justicia/2000-05-30/1
+    - ley/ministerio-de-justicia/2004-05-17/19947
+    - ley/ministerio-secretaria-general-de-gobierno/2012-07-24/20609
+  reglamentada_por:
+    - dto/ministerio-de-desarrollo-social-y-familia-subsecretaria-de-la-ninez/2019-08-29/3
+    - dto/ministerio-de-justicia-y-derechos-humanos-subsecretaria-de-justicia/2019-08-13/355
+  acuerda_con:
+    - dfl/ministerio-de-justicia/1930-08-28/2128
+    - dfl/ministerio-de-justicia/2000-05-30/1
+    - ley/ministerio-de-justicia/2004-05-17/19947
+    - ley/ministerio-de-justicia/2004-08-30/19968
+    - ley/ministerio-secretaria-general-de-gobierno/2012-07-24/20609
+    - ley/ministerio-secretaria-general-de-la-presidencia/1999-08-28/19628
+
 ---
 
 # Ley 21.120 — Identidad de Género

@@ -20,6 +20,29 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  acuerda_con:
+    - cod/ministerio-de-justicia/1874-11-12/penal
+    - cod/ministerio-de-justicia/1943-07-09/orgánico-de-tribunales
+    - dfl/ministerio-de-hacienda/2005-03-16/29
+    - dfl/ministerio-de-justicia/2000-05-30/1
+    - dfl/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2003-01-16/1
+    - dfl/ministerio-secretaria-general-de-la-presidencia/2001-11-17/1
+    - dl/ministerio-de-hacienda/1975-11-28/1263
+    - dto/ministerio-secretaria-general-de-la-presidencia/2005-09-22/100
+    - dto/ministerio-secretaria-general-de-la-presidencia/2018-06-20/8
+    - dto/ministerio-secretaria-general-de-la-presidencia/2019-03-18/15
+    - ley/ministerio-de-hacienda/1965-07-10/16271
+    - ley/ministerio-de-hacienda/2003-06-23/19882
+    - ley/ministerio-de-justicia/2005-10-07/20066
+    - ley/ministerio-del-interior-y-seguridad-publica-subsecretaria-del-interior/2012-06-19/20594
+    - ley/ministerio-secretaria-general-de-gobierno/2012-07-24/20609
+    - ley/ministerio-secretaria-general-de-la-presidencia/1999-08-28/19628
+    - ley/ministerio-secretaria-general-de-la-presidencia/2008-08-20/20285
+    - ley/ministerio-secretaria-general-de-la-presidencia/2014-03-08/20730
+    - ley/ministerio-secretaria-general-de-la-presidencia/2016-01-05/20880
+    - ley/ministerio-secretaria-general-de-la-presidencia-subsecretaria-general-de-la-presidencia/2009-12-10/20405
+
 ---
 # Ley 21.067 — Defensoría de los Derechos de la Niñez
 

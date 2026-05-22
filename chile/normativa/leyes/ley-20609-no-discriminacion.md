@@ -19,6 +19,22 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - cod/ministerio-de-justicia/1874-11-12/penal
+    - dfl/ministerio-de-hacienda/2005-03-16/29
+    - ley/ministerio-del-interior/1989-12-29/18883
+  modificada_por:
+    - ley/ministerio-de-justicia-y-derechos-humanos/2018-12-10/21120
+    - ley/ministerio-de-la-mujer-y-la-equidad-de-genero/2019-05-02/21155
+  acuerda_con:
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2013-01-05/59
+    - dto/ministerio-de-defensa-nacional-subsecretaria-para-las-fuerzas-armadas/2013-03-23/554
+    - dto/ministerio-del-trabajo-y-prevision-social/2016-03-05/5-afecto
+    - ley/ministerio-de-justicia-y-derechos-humanos/2018-12-10/21120
+    - ley/ministerio-secretaria-general-de-la-presidencia/2018-01-29/21067
+    - res/ministerio-secretaria-general-de-gobierno/2014-08-08/272/1080-exenta
+
 ---
 
 # Ley 20.609 — Antidiscriminación ("Ley Zamudio")

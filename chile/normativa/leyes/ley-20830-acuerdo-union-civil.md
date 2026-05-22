@@ -21,6 +21,34 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - cod/ministerio-de-justicia/1874-11-12/penal
+    - cod/ministerio-de-justicia/1943-07-09/orgánico-de-tribunales
+    - dfl/ministerio-de-hacienda/2005-03-16/29
+    - dfl/ministerio-de-justicia/2000-05-30/1
+    - dfl/ministerio-de-salud-publica/1968-01-31/725
+    - dfl/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2003-01-16/1
+    - dl/ministerio-del-trabajo-y-prevision-social/1980-11-13/3500
+    - dto/ministerio-de-hacienda/1975-11-29/1282
+    - ley/ministerio-de-justicia/1902-08-30/1552
+    - ley/ministerio-de-justicia/2000-10-12/19696
+    - ley/ministerio-de-justicia/2004-05-17/19947
+    - ley/ministerio-de-vivienda-y-urbanismo/2009-04-25/20340
+    - ley/ministerio-del-interior/1984-05-17/18314
+    - ley/ministerio-del-interior/1989-12-29/18883
+    - ley/ministerio-del-interior/2005-02-16/20000
+    - ley/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/1968-02-01/16744
+    - ley/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2008-03-17/20255
+  modificada_por:
+    - ley/ministerio-de-justicia-y-derechos-humanos/2020-09-11/21264
+  reglamentada_por:
+    - dto/ministerio-de-justicia/2015-09-16/510
+  acuerda_con:
+    - res/ministerio-de-justicia-y-derechos-humanos-servicio-de-registro-civil-e-identificacion/2018-10-08/158-exenta
+    - res/ministerio-de-justicia-servicio-de-registro-civil-e-identificacion-direccion-nacional/2015-11-18/370-exenta
+    - res/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social-instituto-de-prevision-social/2019-02-05/455-exenta
+
 ---
 
 # Ley 20.830 — Acuerdo de Unión Civil (AUC)

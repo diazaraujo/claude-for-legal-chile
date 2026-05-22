@@ -21,6 +21,42 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-de-justicia/2000-05-30/1
+    - ley/ministerio-de-salud/2004-09-03/19966
+  modificada_por:
+    - ley/ministerio-de-salud/2015-06-06/20850
+    - ley/ministerio-de-salud/2019-07-27/21168
+    - ley/ministerio-de-salud/2019-12-13/21188
+  reglamentada_por:
+    - dto/ministerio-de-salud-subsecretaria-de-redes-asistenciales/2012-11-26/31
+    - dto/ministerio-de-salud-subsecretaria-de-redes-asistenciales/2012-12-15/41
+    - dto/ministerio-de-salud-subsecretaria-de-redes-asistenciales/2012-12-26/38
+    - dto/ministerio-de-salud-subsecretaria-de-redes-asistenciales/2013-07-08/62
+    - dto/ministerio-de-salud-subsecretaria-de-salud-publica/2012-11-26/35
+    - dto/ministerio-de-salud-subsecretaria-de-salud-publica/2012-11-26/40
+    - dto/ministerio-de-salud-subsecretaria-de-salud-publica/2020-07-22/2
+  acuerda_con:
+    - dfl/ministerio-de-salud-subsecretaria-de-salud-publica/2006-04-24/1
+    - dto/ministerio-de-salud/2016-01-16/1245-exento
+    - dto/ministerio-de-salud/2017-05-19/16
+    - dto/ministerio-de-salud-subsecretaria-de-redes-asistenciales/2012-12-15/41
+    - dto/ministerio-de-salud-subsecretaria-de-redes-asistenciales/2019-01-16/144-exento
+    - dto/ministerio-de-salud-subsecretaria-de-salud-publica/2012-12-07/23
+    - dto/ministerio-de-salud-subsecretaria-de-salud-publica/2015-03-18/3
+    - dto/ministerio-de-salud-subsecretaria-de-salud-publica/2020-05-18/23
+    - ley/ministerio-de-salud/1996-04-10/19451
+    - ley/ministerio-de-salud/2020-09-02/21258
+    - ley/ministerio-de-salud-subsecretaria-de-salud-publica/2006-09-22/20120
+    - ley/ministerio-secretaria-general-de-la-presidencia/1999-08-28/19628
+    - ley/ministerio-secretaria-general-de-la-presidencia/2003-05-29/19880
+    - res/ministerio-de-salud/2017-12-06/1341-exenta
+    - res/ministerio-de-salud-subsecretaria-de-redes-asistenciales-servicio-de-salud-nuble-hospital-clinico-herminda-martin/2013-10-05/4045-exenta
+    - res/ministerio-de-salud-subsecretaria-de-salud-publica/2012-09-28/605-exenta
+    - res/ministerio-de-salud-subsecretaria-de-salud-publica/2012-10-22/1031-exenta
+    - res/ministerio-de-salud-subsecretaria-de-salud-publica-servicio-de-salud-nuble-hospital-de-san-carlos/2013-07-10/1476-exenta
+
 ---
 
 # Ley 20.584 — Derechos y Deberes del Paciente

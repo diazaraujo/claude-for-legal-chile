@@ -20,6 +20,39 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - cod/ministerio-de-justicia/1874-11-12/penal
+  modificada_por:
+    - ley/ministerio-de-defensa-nacional/2019-09-26/21174
+    - ley/ministerio-del-interior-y-seguridad-publica/2018-02-22/21073
+  reglamentada_por:
+    - acd/camara-de-diputados/2014-11-27/s/n
+    - acd/senado/2014-11-26/s/n
+    - dto/ministerio-secretaria-general-de-la-presidencia/2014-08-28/71
+    - res/ministerio-publico-fiscalia-nacional/2014-11-28/fn/mp-1857/2014
+  acuerda_con:
+    - acd/banco-central-de-chile/2014-11-04/1863
+    - acd/banco-central-de-chile/2015-08-17/1920
+    - acd/banco-central-de-chile/2020-11-10/2349
+    - ley/ministerio-secretaria-general-de-la-presidencia/2018-01-29/21067
+    - ley/ministerio-secretaria-general-de-la-presidencia/2019-12-24/21200
+    - res/comision-chilena-del-cobre/2015-05-12/488-exenta
+    - res/comision-chilena-del-cobre/2016-05-12/500-exenta
+    - res/consejo-para-la-transparencia/2015-06-04/180-exenta
+    - res/consejo-para-la-transparencia/2018-05-09/144-exenta
+    - res/consejo-para-la-transparencia/2019-05-10/278-exenta
+    - res/consejo-para-la-transparencia/2020-05-27/112-exenta
+    - res/contraloria-general-de-la-republica/2014-11-27/570
+    - res/contraloria-general-de-la-republica/2014-11-27/6175-exenta
+    - res/contraloria-general-de-la-republica/2018-03-13/807-exenta
+    - res/direccion-general-del-credito-prendario/2015-01-28/13-exenta
+    - res/ministerio-de-desarrollo-social-subsecretaria-de-evaluacion-social/2015-12-16/442-exenta
+    - res/ministerio-de-desarrollo-social-subsecretaria-de-servicios-sociales/2017-04-20/262-exenta
+    - res/ministerio-de-desarrollo-social-subsecretaria-de-servicios-sociales/2018-11-17/805-exenta
+    - res/ministerio-de-economia-fomento-y-turismo-fiscalia-nacional-economica/2019-07-19/477-exenta
+    - res/ministerio-de-economia-fomento-y-turismo-instituto-nacional-de-propiedad-industrial/2018-08-17/258-exenta
+
 ---
 
 # Ley 20.730 — Regula el lobby

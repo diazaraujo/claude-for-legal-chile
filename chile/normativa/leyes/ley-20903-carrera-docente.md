@@ -21,6 +21,41 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-de-educacion/1997-01-22/1
+    - dfl/ministerio-de-educacion/1998-11-28/2
+    - dfl/ministerio-de-educacion/2002-03-12/1
+    - dfl/ministerio-de-educacion/2012-04-21/2
+    - dfl/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2003-01-16/1
+    - ley/ministerio-de-educacion/1995-09-02/19410
+    - ley/ministerio-de-educacion/1999-01-09/19598
+    - ley/ministerio-de-educacion/2001-01-31/19715
+    - ley/ministerio-de-educacion/2004-02-12/19933
+    - ley/ministerio-de-educacion/2006-11-17/20129
+  modificada_por:
+    - ley/ministerio-de-educacion/2017-11-24/21040
+    - ley/ministerio-de-educacion/2019-04-25/21152
+    - ley/ministerio-de-hacienda/2019-12-21/21196
+  acuerda_con:
+    - dto/ministerio-de-educacion/2017-06-02/495-exento
+    - dto/ministerio-de-educacion-subsecretaria-de-educacion/2017-10-17/137
+    - ley/ministerio-de-educacion/2016-12-15/20976
+    - ley/ministerio-de-educacion/2017-04-04/21006
+    - res/ministerio-de-educacion-subsecretaria-de-educacion/2016-08-02/3724-exenta
+    - res/ministerio-de-educacion-subsecretaria-de-educacion/2017-05-31/2355-exenta
+    - res/ministerio-de-educacion-subsecretaria-de-educacion/2017-08-30/4864-exenta
+    - res/ministerio-de-educacion-subsecretaria-de-educacion/2017-09-02/4932-exenta
+    - res/ministerio-de-educacion-subsecretaria-de-educacion/2017-09-16/5076-exenta
+    - res/ministerio-de-educacion-subsecretaria-de-educacion/2017-12-19/6577-exenta
+    - res/ministerio-de-educacion-subsecretaria-de-educacion/2018-05-31/2328-exenta
+    - res/ministerio-de-educacion-subsecretaria-de-educacion/2018-12-13/6182-exenta
+    - res/ministerio-de-educacion-subsecretaria-de-educacion/2018-12-28/6636-exenta
+    - res/ministerio-de-educacion-subsecretaria-de-educacion/2019-05-18/2561-exenta
+    - res/ministerio-de-educacion-subsecretaria-de-educacion/2019-12-10/6015-exenta
+    - res/ministerio-de-educacion-subsecretaria-de-educacion/2019-12-19/6410-exenta
+    - res/ministerio-de-educacion-subsecretaria-de-educacion/2020-05-30/2348-exenta
+
 ---
 # Ley 20.903 — Carrera Profesional Docente
 

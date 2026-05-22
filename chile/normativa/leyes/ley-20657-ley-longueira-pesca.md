@@ -19,6 +19,29 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-de-economia-fomento-y-reconstruccion-subsecretaria-de-pesca/1983-11-15/5
+    - dto/ministerio-de-economia-fomento-y-reconstruccion/1992-01-21/430
+    - ley/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-pesca-y-acuicultura/2012-09-29/20625
+  modificada_por:
+    - ley/ministerio-de-economia-fomento-y-turismo/2015-05-28/20837
+  acuerda_con:
+    - dfl/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-economia-y-empresas-de-menor-tamano/2014-04-23/1
+    - dto/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-pesca-y-acuicultura/2020-11-18/114
+    - res/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-pesca-y-acuicultura/2013-07-03/1619-exenta
+    - res/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-pesca-y-acuicultura/2013-08-29/2342-exenta
+    - res/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-pesca-y-acuicultura/2014-03-22/783-exenta
+    - res/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-pesca-y-acuicultura/2015-01-27/116-exenta
+    - res/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-pesca-y-acuicultura/2015-07-28/119-exenta
+    - res/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-pesca-y-acuicultura/2016-07-07/116-exenta
+    - res/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-pesca-y-acuicultura/2017-03-04/752-exenta
+    - res/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-pesca-y-acuicultura/2017-07-26/131-exenta
+    - res/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-pesca-y-acuicultura/2018-03-07/578-exenta
+    - res/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-pesca-y-acuicultura/2018-11-16/3890-exenta
+    - res/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-pesca-y-acuicultura/2019-04-17/1355-exenta
+    - res/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-pesca-y-acuicultura/2019-11-22/3519-exenta
+
 ---
 
 # Ley 20.657 — "Ley Longueira" (Pesca)

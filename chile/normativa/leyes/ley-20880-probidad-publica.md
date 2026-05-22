@@ -21,6 +21,40 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - cod/ministerio-de-justicia/1943-07-09/orgánico-de-tribunales
+    - dfl/ministerio-de-economia-fomento-y-reconstruccion-subsecretaria-de-economia-fomento-y-reconstruccion/2005-03-07/1
+    - dfl/ministerio-secretaria-general-de-la-presidencia/2001-11-17/1
+    - dfl/ministerio-secretaria-general-de-la-presidencia/2010-08-10/5
+    - dl/ministerio-de-hacienda/1974-12-31/830
+    - ley/ministerio-de-hacienda/1989-10-10/18840
+    - ley/ministerio-de-justicia/1999-10-15/19640
+    - ley/ministerio-del-interior/1985-11-15/18460
+    - ley/ministerio-del-interior/1987-01-09/18593
+    - ley/ministerio-del-interior/1990-02-05/18918
+    - ley/ministerio-del-interior-subsecretaria-del-interior/1986-12-05/18575
+    - ley/ministerio-del-medio-ambiente/2012-06-28/20600
+    - ley/ministerio-secretaria-general-de-la-presidencia/2008-08-20/20285
+    - ley/ministerio-secretaria-general-de-la-presidencia-subsecretaria-general-de-la-presidencia/2009-12-10/20405
+  modificada_por:
+    - ley/ministerio-de-defensa-nacional/2019-09-26/21174
+    - ley/ministerio-del-interior-y-seguridad-publica/2018-02-22/21073
+  reglamentada_por:
+    - dto/ministerio-secretaria-general-de-la-presidencia/2016-06-02/2
+  acuerda_con:
+    - aa/corte-suprema/2016-11-02/118
+    - acd/banco-central-de-chile/2016-11-03/2012
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras-superintendencia-de-valores-y-seguros/2016-04-06/bancos-3605
+    - ley/ministerio-de-justicia-y-derechos-humanos/2019-04-25/21154
+    - ley/ministerio-de-obras-publicas/2018-03-24/21082
+    - ley/ministerio-del-interior-y-seguridad-publica/2018-03-23/21070
+    - ley/ministerio-secretaria-general-de-la-presidencia/2018-01-29/21067
+    - ley/ministerio-secretaria-general-de-la-presidencia/2019-12-24/21200
+    - res/contraloria-general-de-la-republica/2017-04-11/1160-exenta
+    - res/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2017-01-14/1
+    - res/ministerio-del-interior-y-seguridad-publica-subsecretaria-del-interior-division-de-carabineros/2017-07-17/259-exenta
+
 ---
 
 # Ley 20.880 — Probidad Pública y Conflictos de Interés

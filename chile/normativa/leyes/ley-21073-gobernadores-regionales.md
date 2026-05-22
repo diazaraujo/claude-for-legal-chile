@@ -19,6 +19,27 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - cod/ministerio-de-justicia/1943-07-09/orgánico-de-tribunales
+    - dfl/ministerio-del-interior/1990-06-01/60
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2005-11-08/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2006-07-26/1
+    - dfl/ministerio-secretaria-general-de-la-presidencia/2017-09-06/1
+    - dfl/ministerio-secretaria-general-de-la-presidencia/2017-09-06/2
+    - dfl/ministerio-secretaria-general-de-la-presidencia/2017-09-06/3
+    - dfl/ministerio-secretaria-general-de-la-presidencia/2017-09-06/4
+    - dfl/ministerio-secretaria-general-de-la-presidencia/2017-09-06/5
+    - dl/ministerio-de-defensa-nacional/1979-01-24/2460
+    - ley/ministerio-de-defensa-nacional/1990-03-07/18961
+    - ley/ministerio-de-justicia/1902-08-30/1552
+    - ley/ministerio-de-justicia/2000-10-12/19696
+    - ley/ministerio-del-interior-y-seguridad-publica/2017-09-05/21033
+    - ley/ministerio-del-interior/1995-04-03/19379
+    - ley/ministerio-del-interior-subsecretaria-del-interior/2007-04-05/20174
+    - ley/ministerio-del-interior-subsecretaria-del-interior/2007-04-11/20175
+    - ley/ministerio-del-interior-subsecretaria-del-interior/2009-08-25/20368
+
 ---
 # Ley 21.073 — Gobernadores Regionales
 

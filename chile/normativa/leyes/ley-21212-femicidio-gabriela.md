@@ -20,6 +20,12 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - cod/ministerio-de-justicia/1874-11-12/penal
+    - ley/ministerio-de-justicia/1983-05-14/18216
+    - ley/ministerio-de-justicia/2000-10-12/19696
+
 ---
 # Ley 21.212 — Femicidio (Ley Gabriela)
 

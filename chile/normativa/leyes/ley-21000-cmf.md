@@ -21,6 +21,24 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-de-hacienda/1981-04-29/13
+    - dl/ministerio-de-hacienda/1980-12-23/3538
+    - ley/ministerio-secretaria-general-de-la-presidencia/2003-05-29/19880
+  modificada_por:
+    - ley/ministerio-de-hacienda/2019-01-12/21130
+  reglamentada_por:
+    - dto/ministerio-de-hacienda/2019-11-22/426
+  rectificada_por:
+    - rec/ministerio-de-hacienda/2017-03-04/1197
+  acuerda_con:
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2019-05-29/bancos-3651
+    - dfl/ministerio-de-hacienda/2017-12-13/10
+    - dfl/ministerio-de-hacienda/2019-03-12/1
+    - dto/ministerio-de-hacienda/2017-10-07/1207
+    - dto/ministerio-de-hacienda/2017-10-07/1208
+
 ---
 # Ley 21.000 — Comisión para el Mercado Financiero (CMF)
 

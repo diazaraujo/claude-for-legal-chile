@@ -21,6 +21,54 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - cod/ministerio-de-justicia/1865-11-23/de-comercio
+    - cod/ministerio-de-justicia/1874-11-12/penal
+    - cod/ministerio-de-justicia/1943-07-09/orgánico-de-tribunales
+    - dfl/ministerio-de-economia-fomento-y-reconstruccion-subsecretaria-de-economia-fomento-y-econstruccion/2007-02-05/4
+    - dfl/ministerio-de-hacienda/1931-05-22/251
+    - dfl/ministerio-de-hacienda/1960-04-05/153
+    - dfl/ministerio-de-hacienda/1997-12-19/3
+    - dfl/ministerio-de-hacienda/2005-06-04/30
+    - dfl/ministerio-de-justicia-y-derechos-humanos/2017-01-31/3
+    - dfl/ministerio-de-justicia/2000-05-30/1
+    - dfl/ministerio-de-obras-publicas/1989-06-21/382
+    - dfl/ministerio-de-salud-subsecretaria-de-salud-publica/2006-04-24/1
+    - dfl/ministerio-de-transportes-y-telecomunicaciones/1982-01-30/10
+    - dfl/ministerio-de-transportes-y-telecomunicaciones/1993-08-03/1
+    - dfl/ministerio-del-interior-subsecretaria-de-desarrollo-regional-y-administrativo/2005-11-08/1
+    - dfl/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2003-01-16/1
+    - dl/ministerio-de-hacienda/1974-12-31/825
+    - dl/ministerio-de-hacienda/1974-12-31/830
+    - dl/ministerio-de-justicia/1980-05-22/3346
+    - dl/ministerio-de-mineria/1976-02-28/1350
+  modificada_por:
+    - ley/ministerio-de-hacienda/2019-01-12/21130
+  reglamentada_por:
+    - dto/ministerio-de-educacion/2017-06-24/576
+  acuerda_con:
+    - aa/corte-de-apelaciones-de-arica/2014-09-26/s/n
+    - aa/corte-de-apelaciones-de-chillan/2014-10-03/s/n
+    - aa/corte-de-apelaciones-de-concepcion/2014-10-24/s/n
+    - aa/corte-de-apelaciones-de-copiapo/2014-10-03/s/n
+    - aa/corte-de-apelaciones-de-la-serena/2014-10-17/84
+    - aa/corte-de-apelaciones-de-puerto-montt/2014-10-10/s/n
+    - aa/corte-de-apelaciones-de-rancagua/2014-10-24/s/n
+    - aa/corte-de-apelaciones-de-santiago/2014-10-10/s/n
+    - aa/corte-de-apelaciones-de-valdivia/2014-10-30/s/n
+    - aa/corte-de-apelaciones-de-valparaiso/2014-11-14/s/n
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2015-07-22/64
+    - cir/ministerio-de-hacienda-servicio-de-impuestos-internos-direccion-nacional/2016-10-22/62
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2015-01-30/bancos-3575
+    - cir/ministerio-de-hacienda-superintendencia-de-bancos-e-instituciones-financieras/2015-04-21/bancos-3581
+    - dfl/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-economia-y-empresas-de-menor-tamano/2014-03-14/2
+    - dto/ministerio-de-economia-fomento-y-turismo-subsecretaria-de-economia-y-empresas-de-menor-tamano/2014-03-29/48
+    - dto/ministerio-del-trabajo-y-prevision-social-subsecretaria-de-prevision-social/2020-01-30/3-exento
+    - ley/ministerio-de-educacion/2016-04-09/20912
+    - ley/ministerio-del-trabajo-y-prevision-social/2020-04-06/21227
+    - ncg/ministerio-de-economia-fomento-y-turismo-superintendencia-de-insolvencia-y-reemprendimiento/2014-10-10/6
+
 ---
 
 # Ley 20.720 — Reorganización y liquidación de empresas y personas

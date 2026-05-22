@@ -20,6 +20,18 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-de-hacienda/2005-03-16/29
+    - ley/ministerio-de-educacion/2014-12-26/20800
+  reglamentada_por:
+    - dto/ministerio-de-educacion-subsecretaria-de-educacion/2019-08-27/121
+  acuerda_con:
+    - dfl/ministerio-de-educacion-subsecretaria-de-educacion/2019-09-06/4
+    - dto/ministerio-de-educacion-subsecretaria-de-educacion-superior/2020-07-21/54
+    - dto/ministerio-de-educacion-subsecretaria-de-educacion-superior/2020-11-09/122
+    - dto/ministerio-de-educacion-subsecretaria-de-educacion/2019-01-17/375
+
 ---
 # Ley 21.094 — Universidades Estatales
 

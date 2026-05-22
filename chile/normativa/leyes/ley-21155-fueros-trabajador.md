@@ -19,6 +19,18 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-de-salud-publica/1968-01-31/725
+    - dfl/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2003-01-16/1
+    - dto/ministerio-de-justicia/1978-05-23/307
+    - ley/ministerio-de-desarrollo-social-subsecretaria-de-servicios-sociales/2013-05-31/20670
+    - ley/ministerio-de-planificacion/2009-09-12/20379
+    - ley/ministerio-secretaria-general-de-gobierno/2012-07-24/20609
+  acuerda_con:
+    - dfl/ministerio-del-trabajo-y-prevision-social-subsecretaria-del-trabajo/2003-01-16/1
+    - ley/ministerio-de-justicia/1984-02-07/18287
+
 ---
 # Ley 21.155 — Fueros del Trabajador (Lactancia)
 

@@ -20,6 +20,16 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - cod/ministerio-de-justicia/1874-11-12/penal
+    - ley/ministerio-de-hacienda/2003-12-18/19913
+  modificada_por:
+    - ley/ministerio-de-economia-fomento-y-turismo/2019-01-31/21132
+    - ley/ministerio-de-justicia-y-derechos-humanos/2016-07-05/20931
+    - ley/ministerio-de-justicia-y-derechos-humanos/2018-11-20/21121
+    - ley/ministerio-de-justicia-y-derechos-humanos/2020-06-20/21240
+
 ---
 
 # Ley 20.393 — Responsabilidad penal de personas jurídicas (RPPJ)

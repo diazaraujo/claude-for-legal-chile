@@ -20,6 +20,13 @@ relacionada_per:
 estado_revision: borrador-no-validado
 validador: null
 fecha_validacion: null
+grafo_relaciones:
+  modifica:
+    - dfl/ministerio-de-justicia-y-derechos-humanos/2017-01-31/3
+    - dl/ministerio-de-justicia/1980-05-22/3346
+  acuerda_con:
+    - dfl/ministerio-de-justicia-y-derechos-humanos/2016-12-31/2
+
 ---
 # Ley 20.885 — Subsecretaría de Derechos Humanos
 
