@@ -89,7 +89,10 @@ def _is_valid_xml(body: bytes) -> bool:
 
 
 def _fetch_zyte(url: str, zyte_auth: str, timeout: int = 60) -> bytes:
-    payload = {"url": url, "httpResponseBody": True, "geolocation": "CL"}
+    # NOTA: NO usar geolocation=CL — CloudFront WAF de BCN bloquea
+    # agresivamente IPs chilenas (520 Website Ban). Auto/US/AR funcionan
+    # con t~0.7s. Descubierto 2026-05-22.
+    payload = {"url": url, "httpResponseBody": True}
     req = urllib.request.Request(
         ZYTE_API, data=json.dumps(payload).encode(),
         headers={"Authorization": f"Basic {zyte_auth}",
