@@ -20,7 +20,7 @@ implementan leyes.
 Idempotente: skip si el XML ya existe y tiene >100 bytes.
 """
 from __future__ import annotations
-import argparse, sqlite3, sys, time, urllib.error, urllib.request, re
+import argparse, base64, json, os, sqlite3, sys, time, urllib.error, urllib.request, re
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from threading import Lock
@@ -29,7 +29,9 @@ _REPO_ROOT = Path(__file__).resolve().parents[3]
 CATALOG = _REPO_ROOT / "chile/normativa/catalogo"
 USER_AGENT = "claude-legal-chile/0.7 (unholster.com)"
 BASE_URL = "https://www.leychile.cl/Consulta/obtxml?opt=7&idNorma="
-_STATS = {"ok": 0, "skip": 0, "404": 0, "err": 0, "bytes": 0}
+BCN_BASE_URL = "https://www.bcn.cl/leychile/Consulta/obtxml?opt=7&idNorma="
+ZYTE_API = "https://api.zyte.com/v1/extract"
+_STATS = {"ok": 0, "skip": 0, "404": 0, "err": 0, "stub": 0, "bytes": 0}
 _LOCK = Lock()
 
 CODE_RE = re.compile(r"^leychile_code:\s*(\d+)\s*$", re.MULTILINE)
@@ -76,20 +78,49 @@ def enumerate_catalog() -> list[tuple[int, str, str, str]]:
     return results
 
 
-def download_xml(id_norma: int, dest: Path) -> str:
-    if dest.exists() and dest.stat().st_size > 100:
+def _is_valid_xml(body: bytes) -> bool:
+    """XML real BCN. Rechaza stubs HTML 'Este sitio fue movido'."""
+    head = body.lstrip()
+    return (
+        (head.startswith(b"<?xml") or head.startswith(b"<Norma"))
+        and b"sitio fue movido" not in body
+        and b"window.location.href" not in head[:300]
+    )
+
+
+def _fetch_zyte(url: str, zyte_auth: str, timeout: int = 60) -> bytes:
+    payload = {"url": url, "httpResponseBody": True, "geolocation": "CL"}
+    req = urllib.request.Request(
+        ZYTE_API, data=json.dumps(payload).encode(),
+        headers={"Authorization": f"Basic {zyte_auth}",
+                 "Content-Type": "application/json"},
+    )
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        data = json.loads(r.read())
+    body_b64 = data.get("httpResponseBody", "")
+    return base64.b64decode(body_b64) if body_b64 else b""
+
+
+def download_xml(id_norma: int, dest: Path, zyte_auth: str | None = None) -> str:
+    if dest.exists() and dest.stat().st_size > 500:
         with _LOCK: _STATS["skip"] += 1
         return "skip"
     dest.parent.mkdir(parents=True, exist_ok=True)
-    url = f"{BASE_URL}{id_norma}"
+    # Direct first if not Zyte (sometimes leychile works for idNorma>1M)
     try:
-        req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-        with urllib.request.urlopen(req, timeout=30) as r:
-            body = r.read()
-        # Reject stub HTML "Este sitio fue movido" — devuelto para
-        # idNormas migrados (típicamente <1M). Real XML empieza con <?xml.
-        if not body.lstrip().startswith(b"<?xml") and not body.lstrip().startswith(b"<Norma"):
-            with _LOCK: _STATS["err"] += 1
+        if zyte_auth:
+            # Try BCN canonical URL via Zyte (handles WAF + redirect)
+            body = _fetch_zyte(BCN_BASE_URL + str(id_norma), zyte_auth)
+        else:
+            req = urllib.request.Request(
+                BASE_URL + str(id_norma),
+                headers={"User-Agent": USER_AGENT},
+            )
+            with urllib.request.urlopen(req, timeout=30) as r:
+                body = r.read()
+
+        if not _is_valid_xml(body):
+            with _LOCK: _STATS["stub"] += 1
             return "stub"
         if len(body) < 500:
             with _LOCK: _STATS["err"] += 1
@@ -121,7 +152,19 @@ def main() -> int:
                              "Ej: 'ley,dto,dfl,dl,cod' para core normativo.")
     parser.add_argument("--max", type=int, default=0,
                         help="Limit total downloads (0 = unlimited)")
+    parser.add_argument("--zyte", action="store_true",
+                        help="Usar Zyte API (bypassa CloudFront WAF de BCN). "
+                             "Requiere env ZYTE_API_KEY")
     args = parser.parse_args()
+
+    zyte_auth = None
+    if args.zyte:
+        key = os.environ.get("ZYTE_API_KEY", "")
+        if not key:
+            print("ERROR: --zyte requiere env ZYTE_API_KEY", flush=True)
+            return 2
+        zyte_auth = base64.b64encode(f"{key}:".encode()).decode()
+        print(f"[ZYTE] proxy habilitado (browser-grade)", flush=True)
 
     output_dir = Path(args.output)
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -160,7 +203,7 @@ def main() -> int:
     def worker(item):
         id_norma, tipo, slug, pub = item
         dest = output_dir / tipo / f"{id_norma}.xml"
-        status = download_xml(id_norma, dest)
+        status = download_xml(id_norma, dest, zyte_auth=zyte_auth)
         if status in ("ok", "skip"):
             c = sqlite3.connect(str(db_path), timeout=30)
             try:
@@ -187,7 +230,7 @@ def main() -> int:
                 eta = (len(pending) - i) / rate if rate > 0 else 0
                 print(
                     f"  [{i}/{len(pending)}] ok={_STATS['ok']} skip={_STATS['skip']} "
-                    f"404={_STATS['404']} err={_STATS['err']} | "
+                    f"stub={_STATS['stub']} 404={_STATS['404']} err={_STATS['err']} | "
                     f"{mb:.0f} MB | rate={rate:.1f}/s eta={eta:.0f}s",
                     flush=True,
                 )
