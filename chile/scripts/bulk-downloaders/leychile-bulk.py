@@ -109,8 +109,12 @@ def download_xml(id_norma: int, dest: Path, zyte_auth: str | None = None) -> str
     # Direct first if not Zyte (sometimes leychile works for idNorma>1M)
     try:
         if zyte_auth:
-            # Try BCN canonical URL via Zyte (handles WAF + redirect)
-            body = _fetch_zyte(BCN_BASE_URL + str(id_norma), zyte_auth)
+            # IMPORTANTE: usar leychile.cl/Consulta (no bcn.cl/leychile/).
+            # bcn.cl/leychile/Consulta/obtxml retorna 520 Website Ban vía
+            # Zyte (CloudFront WAF bloquea hasta pools premium).
+            # leychile.cl/Consulta/obtxml sirve el XML real cuando Zyte usa
+            # IP residencial limpia.
+            body = _fetch_zyte(BASE_URL + str(id_norma), zyte_auth)
         else:
             req = urllib.request.Request(
                 BASE_URL + str(id_norma),
