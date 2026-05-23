@@ -86,7 +86,12 @@ def download_xml(id_norma: int, dest: Path) -> str:
         req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
         with urllib.request.urlopen(req, timeout=30) as r:
             body = r.read()
-        if len(body) < 200:
+        # Reject stub HTML "Este sitio fue movido" — devuelto para
+        # idNormas migrados (típicamente <1M). Real XML empieza con <?xml.
+        if not body.lstrip().startswith(b"<?xml") and not body.lstrip().startswith(b"<Norma"):
+            with _LOCK: _STATS["err"] += 1
+            return "stub"
+        if len(body) < 500:
             with _LOCK: _STATS["err"] += 1
             return "tiny"
         tmp = dest.with_suffix(".tmp")
