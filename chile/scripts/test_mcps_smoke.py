@@ -119,7 +119,45 @@ def test_corpus_search():
     assert len(hits) > 0
     assert hits[0].source
     assert hits[0].snippet
+    # Multi-source + exclude
+    hits = c.search("reajuste", exclude_sources=["diario-oficial"], limit=2)
+    for h in hits:
+        assert h.source != "diario-oficial"
+    # year range
+    hits = c.search("sentencia", year_from="2020", year_to="2024", limit=2)
+    # Recent
+    hits = c.recent(limit=3)
+    assert len(hits) > 0
+    # List sources
+    src = c.list_sources()
+    assert "sources" in src
+    assert len(src["sources"]) > 0
 check("mcp-corpus-search", test_corpus_search)
+
+
+def test_corpus_cite():
+    from mcp_corpus_search.citation import from_path
+    cases = [
+        ("chile/data/tc-moderno/STC_Rol_N_17_083-25_INA.pdf.txt",
+         "STC Rol N° 17.083-2025 (INA)", "tc-moderno"),
+        ("chile/data/tdlc/sentencia-159-2017-foo/Sentencia_159.pdf.txt",
+         "TDLC Sentencia N° 159/2017", "tdlc"),
+        ("chile/data/tdpi/2024/X-PATENTE-DE-INVENCION-BIO-ROL-TdPI-0613-2024-foo.pdf.txt",
+         "TDPI Rol N° 613/2024", "tdpi"),
+        ("chile/data/leychile/ley/1199623.xml.txt",
+         "Ley (idNorma BCN 1199623)", "leychile-ley"),
+        ("chile/data/diario-oficial/2024/03/15/edicion_43844/2123456.pdf.txt",
+         "D.O. edición N° 43844 (15-03-2024)", "diario-oficial"),
+        ("chile/data/sii/2017/circu31.pdf.txt",
+         "SII Circular N° 31/2017", "sii"),
+    ]
+    for path, expected_cite, expected_src in cases:
+        c = from_path(path)
+        assert c.citation == expected_cite, (
+            f"path={path} expected={expected_cite!r} got={c.citation!r}"
+        )
+        assert c.source == expected_src
+check("mcp-corpus-search.citation", test_corpus_cite)
 
 
 def report():

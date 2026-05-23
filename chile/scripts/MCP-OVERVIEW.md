@@ -24,15 +24,35 @@ fuentes primarias chilenas en tiempo real.
 | [`mcp-pjud`](mcp-pjud/) | Jurisprudencia general PJUD | 🔴 Stub | 2 |
 | [`mcp-ine`](mcp-ine/) | INE (series ya en BCCh) | 🔴 Stub (doc) | 0 |
 
+### MCP corpus-search — búsqueda offline + semantic + citas
+
+[`mcp-corpus-search`](mcp-corpus-search/) expone 8 tools al runtime
+Claude sobre el corpus indexado:
+
+| Tool | Función |
+|---|---|
+| `corpus_search` | BM25 FTS5 con multi-source, year range, exclude |
+| `corpus_recent` | Últimos N por fuente sin query |
+| `corpus_list_sources` | Catálogo con n_docs + año min/max |
+| `corpus_stats` | Totales + breakdown |
+| `corpus_get_text` | Texto verbatim para citas |
+| `corpus_cite` | Path → cita formal (ej. "STC Rol N° 17.083-2025 (INA)") |
+| `corpus_related` | Cosine similarity bge-m3 (Ollama local) |
+| `corpus_embeddings_status` | Cobertura del índice semántico |
+
 ### Bulk downloaders + corpus offline
 
-12 fuentes bajadas a `chile/data/`. Total: **51.805+ documentos / 27.81 GB**.
-Búsqueda full-text vía SQLite FTS5 sobre los .pdf.txt extraídos con
-`pdftotext`. Ver [`bulk-downloaders/README.md`](bulk-downloaders/README.md)
-para detalle.
+13 fuentes bajadas a `chile/data/`. Total: **54.792+ documentos / 29.72 GB**.
+- FTS5 BM25 sobre 46.432 docs (902 MB texto + 1.24 GB índice)
+- Embeddings bge-m3 (Ollama local) — indexing on-going
+- 4.117 PDFs solo-imagen recuperados via Tesseract OCR (en curso)
+- Texto íntegro 1.100+ XMLs LeyChile via Zyte API
+- 49 últimas sentencias TC modernas via JSF reverse-engineered
+
+Ver [`bulk-downloaders/README.md`](bulk-downloaders/README.md) para detalle.
 
 ```bash
-# Búsqueda CLI
+# CLI legacy (FTS5 simple)
 python3 chile/scripts/search.py "huelga ilegal" --source dt
 python3 chile/scripts/search.py "patente invención" --source tdpi
 ```
