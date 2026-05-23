@@ -43,9 +43,8 @@ async def list_tools() -> list[Tool]:
                 "(~50k documentos PDF extraídos a texto + indexados en "
                 "SQLite FTS5). Sintaxis: terms separados por espacio (AND "
                 "implícito). Para frase exacta: \"texto literal\". Operador "
-                "NEAR(a b N) para proximidad. Fuentes disponibles: "
-                "diario-oficial, tc, fne, dt, cmf, sii, tdlc, tdpi, sernac, "
-                "subtel, tribunales-ambientales, sec."
+                "NEAR(a b N) para proximidad. Para listar fuentes use "
+                "corpus_list_sources."
             ),
             inputSchema={
                 "type": "object",
@@ -61,14 +60,47 @@ async def list_tools() -> list[Tool]:
                         "type": "string",
                         "default": "",
                         "description": (
-                            "Filtrar por fuente: tc, fne, dt, cmf, sii, tdlc, "
-                            "tdpi, sernac, tribunales-ambientales, etc. Vacío = todas."
+                            "Una sola fuente (tc, fne, dt, cmf, sii, tdlc, "
+                            "tdpi, sernac, tribunales-ambientales, leychile-ley, "
+                            "leychile-dfl, tc-moderno, etc.). Vacío = todas. "
+                            "Para varias use 'sources'."
+                        ),
+                    },
+                    "sources": {
+                        "type": "array",
+                        "items": {"type": "string"},
+                        "default": [],
+                        "description": (
+                            "Lista de fuentes (OR). Ej. ['tc','tc-moderno'] "
+                            "para combinar sentencias TC legacy + modernas."
+                        ),
+                    },
+                    "exclude_sources": {
+                        "type": "array",
+                        "items": {"type": "string"},
+                        "default": [],
+                        "description": (
+                            "Lista de fuentes a excluir. Ej. ['diario-oficial'] "
+                            "para queries que no quieren publicaciones DO."
                         ),
                     },
                     "year": {
                         "type": "string",
                         "default": "",
-                        "description": "Filtrar por año YYYY. Vacío = todos.",
+                        "description": "Año exacto YYYY. Vacío = todos.",
+                    },
+                    "year_from": {
+                        "type": "string",
+                        "default": "",
+                        "description": (
+                            "Inicio de rango YYYY. Combinable con year_to. "
+                            "Ignorado si se especifica 'year'."
+                        ),
+                    },
+                    "year_to": {
+                        "type": "string",
+                        "default": "",
+                        "description": "Fin de rango YYYY.",
                     },
                     "limit": {
                         "type": "integer",
@@ -83,6 +115,38 @@ async def list_tools() -> list[Tool]:
                 },
                 "required": ["query"],
             },
+        ),
+        Tool(
+            name="corpus_recent",
+            description=(
+                "Últimos N documentos en una fuente (orden cronológico "
+                "inverso). Útil para 'qué sentencias TC son recientes', "
+                "'qué circulares SII salieron en 2025', etc. Sin query."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "source": {"type": "string", "default": ""},
+                    "sources": {
+                        "type": "array", "items": {"type": "string"},
+                        "default": [],
+                    },
+                    "year_from": {
+                        "type": "string", "default": "",
+                        "description": "Mínimo año YYYY (ej. '2024')",
+                    },
+                    "limit": {"type": "integer", "default": 10},
+                },
+            },
+        ),
+        Tool(
+            name="corpus_list_sources",
+            description=(
+                "Lista las fuentes disponibles en el índice con: nombre, "
+                "n_docs, year_min, year_max. Útil para discovery antes "
+                "de filtrar searches."
+            ),
+            inputSchema={"type": "object", "properties": {}},
         ),
         Tool(
             name="corpus_stats",
@@ -137,7 +201,11 @@ async def call_tool(name: str, arguments: dict[str, Any]) -> list[TextContent]:
             hits = client.search(
                 query=query,
                 source=str(arguments.get("source", "")),
+                sources=arguments.get("sources") or None,
+                exclude_sources=arguments.get("exclude_sources") or None,
                 year=str(arguments.get("year", "")),
+                year_from=str(arguments.get("year_from", "")),
+                year_to=str(arguments.get("year_to", "")),
                 limit=max(1, min(50, int(arguments.get("limit", 10)))),
                 snippet_len=max(40, min(800, int(
                     arguments.get("snippet_len", 240)
@@ -157,6 +225,29 @@ async def call_tool(name: str, arguments: dict[str, Any]) -> list[TextContent]:
                 } for h in hits
             ],
         }, ensure_ascii=False, indent=2))]
+
+    if name == "corpus_recent":
+        hits = client.recent(
+            source=str(arguments.get("source", "")),
+            sources=arguments.get("sources") or None,
+            year_from=str(arguments.get("year_from", "")),
+            limit=max(1, min(50, int(arguments.get("limit", 10)))),
+        )
+        return [TextContent(type="text", text=json.dumps({
+            "n_hits": len(hits),
+            "results": [
+                {
+                    "rank": h.rank, "source": h.source, "year": h.year,
+                    "path": h.path, "pdf_path": h.pdf_path,
+                    "snippet": h.snippet,
+                } for h in hits
+            ],
+        }, ensure_ascii=False, indent=2))]
+
+    if name == "corpus_list_sources":
+        return [TextContent(type="text", text=json.dumps(
+            client.list_sources(), ensure_ascii=False, indent=2
+        ))]
 
     if name == "corpus_stats":
         return [TextContent(type="text", text=json.dumps(
