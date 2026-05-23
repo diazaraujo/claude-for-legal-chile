@@ -103,12 +103,23 @@ def test_fne():
     assert callable(c.extract_pdf_urls)
     assert 151 in LEGAL_CATEGORIES  # Dictamen
     assert 106 in LEGAL_CATEGORIES  # Jurisprudencia
-    # extract_pdf_urls puro
     html = '<p><a href="https://www.fne.gob.cl/wp-content/x.pdf">Doc</a></p>'
     assert c.extract_pdf_urls(html) == [
         "https://www.fne.gob.cl/wp-content/x.pdf"
     ]
 check("mcp-fne", test_fne)
+
+
+def test_corpus_search():
+    from mcp_corpus_search.search_client import CorpusSearchClient
+    c = CorpusSearchClient()
+    stats = c.stats()
+    assert stats["total_docs"] > 0
+    hits = c.search("ley", limit=2)
+    assert len(hits) > 0
+    assert hits[0].source
+    assert hits[0].snippet
+check("mcp-corpus-search", test_corpus_search)
 
 
 def report():

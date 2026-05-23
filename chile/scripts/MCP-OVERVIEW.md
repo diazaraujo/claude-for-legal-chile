@@ -3,34 +3,39 @@
 Inventario de servidores MCP disponibles para que Claude consulte
 fuentes primarias chilenas en tiempo real.
 
-## Estado v0.7 (2026-05-22)
+## Estado v0.7.2 (2026-05-22)
 
-### Tier 1 — Normativos ✅
+### Tier 1 — Conectores MCP ✅
 
 | Conector | Funcionalidad | Estado | Tools |
 |---|---|---|---|
 | [`mcp-bcn-leychile`](mcp/) | Texto + estructura + grafo BCN + catálogo local | ✅ Producción | 8 |
 | [`mcp-diario-oficial`](mcp-diario-oficial/) | Publicaciones diarias DO | ✅ Funcional | 4 |
 | [`mcp-sii-juris`](mcp-sii-juris/) | Circulares SII por año | ✅ Funcional | 3 |
-| [`mcp-cgr-dictamenes`](mcp-cgr-dictamenes/) | Dictámenes CGR por número/año | ✅ Funcional | 2 |
+| [`mcp-cgr-dictamenes`](mcp-cgr-dictamenes/) | Dictámenes CGR (antiguo + moderno E{NNNNNN}N{YY}) | ✅ Funcional | 2 |
 | [`mcp-cmf`](mcp-cmf/) | NCG + Circulares CMF (financiero) | ✅ Funcional | 2 |
-| [`mcp-dt-dictamenes`](mcp-dt-dictamenes/) | Dictámenes Dirección del Trabajo (search-only) | ✅ Funcional | 2 |
+| [`mcp-dt-dictamenes`](mcp-dt-dictamenes/) | DT con period_id enumerator (4.974 dictámenes) | ✅ Funcional | 4 |
 | [`mcp-sernac`](mcp-sernac/) | Circulares + Dictámenes interpretativos SERNAC | ✅ Funcional | 1 |
 | [`mcp-banco-central`](mcp-banco-central/) | BDE BCCh — UF, dólar, TPM, IPC, UTM (req. registro) | ✅ Funcional | 5 |
 | [`mcp-bcn-tramitacion`](mcp-bcn-tramitacion/) | Historia de la Ley — tramitación legislativa | ✅ Funcional | 3 |
+| [`mcp-fne`](mcp-fne/) | FNE WP REST — 13k posts, 15 categorías legal | ✅ Funcional | 3 |
+| [`mcp-tdlc`](mcp-tdlc/) | TDLC sentencias y consultas | ✅ Funcional | 2 |
 | [`mcp-tc-fallos`](mcp-tc-fallos/) | Sentencias TC legacy (id ≤ 12k) | 🟡 Parcial | 2 |
 | [`mcp-pjud`](mcp-pjud/) | Jurisprudencia general PJUD | 🔴 Stub | 2 |
 | [`mcp-ine`](mcp-ine/) | INE (series ya en BCCh) | 🔴 Stub (doc) | 0 |
 
-### Tier 2 — Pendientes (próximas fases)
+### Bulk downloaders + corpus offline
 
-| Conector | Fuente | Bloqueo |
-|---|---|---|
-| `mcp-tgr` | Tesorería Gral | API formal pendiente |
-| `mcp-aduana` | Aduana | CMS sin IDs |
-| `mcp-conadi` | Indígenas | HTML público |
-| `mcp-ine` | Estadísticas | API REST disponible |
-| `mcp-leychile-search` | Búsqueda full-text BCN | LeyChile tiene buscador |
+12 fuentes bajadas a `chile/data/`. Total: **51.805+ documentos / 27.81 GB**.
+Búsqueda full-text vía SQLite FTS5 sobre los .pdf.txt extraídos con
+`pdftotext`. Ver [`bulk-downloaders/README.md`](bulk-downloaders/README.md)
+para detalle.
+
+```bash
+# Búsqueda CLI
+python3 chile/scripts/search.py "huelga ilegal" --source dt
+python3 chile/scripts/search.py "patente invención" --source tdpi
+```
 
 ## Bloqueos técnicos comunes
 
