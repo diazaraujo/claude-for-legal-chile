@@ -31,8 +31,27 @@ USER_AGENT = "claude-legal-chile/0.7 (unholster.com)"
 BASE_URL = "https://www.leychile.cl/Consulta/obtxml?opt=7&idNorma="
 BCN_BASE_URL = "https://www.bcn.cl/leychile/Consulta/obtxml?opt=7&idNorma="
 ZYTE_API = "https://api.zyte.com/v1/extract"
-_STATS = {"ok": 0, "skip": 0, "404": 0, "err": 0, "stub": 0, "bytes": 0}
+_STATS = {"ok": 0, "skip": 0, "404": 0, "err": 0, "stub": 0, "ban": 0, "bytes": 0}
 _LOCK = Lock()
+# Per-thread rate limiter
+from threading import local as _threadlocal
+_RATE = _threadlocal()
+_GLOBAL_BACKOFF = {"until": 0.0}  # epoch s — pause-all-workers señal
+
+
+def _rate_wait(seconds: float) -> None:
+    """Sleep al menos `seconds` desde la última request en este thread."""
+    now = time.time()
+    # Global backoff (si Zyte está banneando, todos esperan)
+    with _LOCK:
+        until = _GLOBAL_BACKOFF["until"]
+    if until > now:
+        time.sleep(until - now)
+    last = getattr(_RATE, "last", 0.0)
+    wait = seconds - (time.time() - last)
+    if wait > 0:
+        time.sleep(wait)
+    _RATE.last = time.time()
 
 CODE_RE = re.compile(r"^leychile_code:\s*(\d+)\s*$", re.MULTILINE)
 PUBL_RE = re.compile(r"^publicacion:\s*(\d{4}-\d{2}-\d{2})", re.MULTILINE)
@@ -104,50 +123,70 @@ def _fetch_zyte(url: str, zyte_auth: str, timeout: int = 60) -> bytes:
     return base64.b64decode(body_b64) if body_b64 else b""
 
 
-def download_xml(id_norma: int, dest: Path, zyte_auth: str | None = None) -> str:
+def download_xml(
+    id_norma: int,
+    dest: Path,
+    zyte_auth: str | None = None,
+    rate_seconds: float = 1.0,
+    max_retries: int = 2,
+) -> str:
     if dest.exists() and dest.stat().st_size > 500:
         with _LOCK: _STATS["skip"] += 1
         return "skip"
     dest.parent.mkdir(parents=True, exist_ok=True)
-    # Direct first if not Zyte (sometimes leychile works for idNorma>1M)
-    try:
-        if zyte_auth:
-            # IMPORTANTE: usar leychile.cl/Consulta (no bcn.cl/leychile/).
-            # bcn.cl/leychile/Consulta/obtxml retorna 520 Website Ban vía
-            # Zyte (CloudFront WAF bloquea hasta pools premium).
-            # leychile.cl/Consulta/obtxml sirve el XML real cuando Zyte usa
-            # IP residencial limpia.
-            body = _fetch_zyte(BASE_URL + str(id_norma), zyte_auth)
-        else:
-            req = urllib.request.Request(
-                BASE_URL + str(id_norma),
-                headers={"User-Agent": USER_AGENT},
-            )
-            with urllib.request.urlopen(req, timeout=30) as r:
-                body = r.read()
 
-        if not _is_valid_xml(body):
-            with _LOCK: _STATS["stub"] += 1
-            return "stub"
-        if len(body) < 500:
+    for attempt in range(max_retries + 1):
+        _rate_wait(rate_seconds)
+        try:
+            if zyte_auth:
+                body = _fetch_zyte(BASE_URL + str(id_norma), zyte_auth)
+            else:
+                req = urllib.request.Request(
+                    BASE_URL + str(id_norma),
+                    headers={"User-Agent": USER_AGENT},
+                )
+                with urllib.request.urlopen(req, timeout=30) as r:
+                    body = r.read()
+
+            if not _is_valid_xml(body):
+                with _LOCK: _STATS["stub"] += 1
+                return "stub"
+            if len(body) < 500:
+                with _LOCK: _STATS["err"] += 1
+                return "tiny"
+            tmp = dest.with_suffix(".tmp")
+            tmp.write_bytes(body)
+            tmp.rename(dest)
+            with _LOCK:
+                _STATS["ok"] += 1
+                _STATS["bytes"] += len(body)
+            return "ok"
+
+        except urllib.error.HTTPError as e:
+            if e.code == 404:
+                with _LOCK: _STATS["404"] += 1
+                return "404"
+            if e.code == 520:
+                # Zyte Website Ban — Zyte agotó pool, esperar global
+                with _LOCK:
+                    _STATS["ban"] += 1
+                    # Backoff exponencial global: 30s, 60s, 120s
+                    backoff = 30 * (2 ** attempt)
+                    _GLOBAL_BACKOFF["until"] = max(
+                        _GLOBAL_BACKOFF["until"], time.time() + backoff
+                    )
+                if attempt < max_retries:
+                    continue
+                return "ban"
             with _LOCK: _STATS["err"] += 1
-            return "tiny"
-        tmp = dest.with_suffix(".tmp")
-        tmp.write_bytes(body)
-        tmp.rename(dest)
-        with _LOCK:
-            _STATS["ok"] += 1
-            _STATS["bytes"] += len(body)
-        return "ok"
-    except urllib.error.HTTPError as e:
-        if e.code == 404:
-            with _LOCK: _STATS["404"] += 1
-            return "404"
-        with _LOCK: _STATS["err"] += 1
-        return f"http{e.code}"
-    except Exception:
-        with _LOCK: _STATS["err"] += 1
-        return "err"
+            return f"http{e.code}"
+        except Exception:
+            if attempt < max_retries:
+                time.sleep(2 ** attempt)
+                continue
+            with _LOCK: _STATS["err"] += 1
+            return "err"
+    return "err"
 
 
 def main() -> int:
@@ -162,6 +201,9 @@ def main() -> int:
     parser.add_argument("--zyte", action="store_true",
                         help="Usar Zyte API (bypassa CloudFront WAF de BCN). "
                              "Requiere env ZYTE_API_KEY")
+    parser.add_argument("--rate-seconds", type=float, default=1.0,
+                        help="Sleep mínimo per-worker entre requests (default 1s). "
+                             "Sube a 2-3s si Zyte devuelve 520 bans en cascada.")
     args = parser.parse_args()
 
     zyte_auth = None
@@ -210,7 +252,10 @@ def main() -> int:
     def worker(item):
         id_norma, tipo, slug, pub = item
         dest = output_dir / tipo / f"{id_norma}.xml"
-        status = download_xml(id_norma, dest, zyte_auth=zyte_auth)
+        status = download_xml(
+            id_norma, dest, zyte_auth=zyte_auth,
+            rate_seconds=args.rate_seconds,
+        )
         if status in ("ok", "skip"):
             c = sqlite3.connect(str(db_path), timeout=30)
             try:
@@ -237,7 +282,8 @@ def main() -> int:
                 eta = (len(pending) - i) / rate if rate > 0 else 0
                 print(
                     f"  [{i}/{len(pending)}] ok={_STATS['ok']} skip={_STATS['skip']} "
-                    f"stub={_STATS['stub']} 404={_STATS['404']} err={_STATS['err']} | "
+                    f"stub={_STATS['stub']} ban={_STATS['ban']} "
+                    f"404={_STATS['404']} err={_STATS['err']} | "
                     f"{mb:.0f} MB | rate={rate:.1f}/s eta={eta:.0f}s",
                     flush=True,
                 )
