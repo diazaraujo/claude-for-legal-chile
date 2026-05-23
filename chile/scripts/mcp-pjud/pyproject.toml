@@ -1,6 +1,6 @@
 [project]
 name = "mcp-pjud"
-version = "0.1.0-stub"
+version = "0.1.0"
 description = "MCP stub para Portal Unificado Sentencias PJUD (pendiente browser automation)"
 authors = [{name = "Unholster", email = "antonio@unholster.com"}]
 license = {text = "Apache-2.0"}
