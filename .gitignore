@@ -17,3 +17,6 @@ venv/
 # Grafo BCN: 192MB+ — regenerable via chile/scripts/bcn/scrape-sparql-relaciones.py
 chile/normativa/grafo/*.jsonl
 chile/data/
+
+# OCR scratch dir
+chile/tmp/
