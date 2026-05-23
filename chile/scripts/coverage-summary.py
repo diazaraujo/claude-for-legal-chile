@@ -24,6 +24,7 @@ SOURCES = [
     ("TDPI",           "tdpi",           "fallos",     "downloaded=1"),
     ("FNE",             "fne",           "posts",      "1=1"),
     ("Trib. Ambientales","tribunales-ambientales", "sentencias", "downloaded=1"),
+    ("SEC",             "sec",            "files",       "downloaded=1"),
     ("CGR",            "cgr",            None,         None),
 ]
 
