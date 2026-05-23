@@ -179,6 +179,67 @@ async def list_tools() -> list[Tool]:
                 "required": ["path"],
             },
         ),
+        Tool(
+            name="corpus_cite",
+            description=(
+                "Genera cita formal verificable desde el path de un doc del "
+                "corpus. Conoce patrones de naming de cada fuente y extrae "
+                "rol/edición/año. Ejemplos: "
+                "tc-moderno/STC_Rol_N_17_083-25_INA.pdf → 'STC Rol N° 17.083-2025 (INA)'; "
+                "tdlc/sentencia-159-2017-... → 'TDLC Sentencia N° 159/2017'; "
+                "leychile/ley/1199623.xml → 'Ley (idNorma BCN 1199623)'."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "path": {
+                        "type": "string",
+                        "description": "Path del corpus (.pdf.txt o .pdf o .xml.txt)",
+                    },
+                },
+                "required": ["path"],
+            },
+        ),
+        Tool(
+            name="corpus_related",
+            description=(
+                "Encuentra los N documentos más similares al dado, vía "
+                "embeddings semánticos bge-m3 (Ollama local). Score = "
+                "cosine similarity, rango -1..1. Útil para 'qué sentencias "
+                "tratan temas parecidos a este caso' o 'jurisprudencia "
+                "relacionada con esta resolución'. El doc query debe estar "
+                "indexado (o se computa on-the-fly via Ollama)."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "path": {
+                        "type": "string",
+                        "description": "Path del doc base (.pdf.txt o .xml.txt)",
+                    },
+                    "limit": {"type": "integer", "default": 5},
+                    "same_source_only": {
+                        "type": "boolean", "default": False,
+                        "description": "True = restringe a la misma fuente del query",
+                    },
+                    "min_score": {
+                        "type": "number", "default": 0.5,
+                        "description": "Score cosine mínimo (0..1) para incluir",
+                    },
+                },
+                "required": ["path"],
+            },
+        ),
+        Tool(
+            name="corpus_embeddings_status",
+            description=(
+                "Estado del índice de embeddings: cuántos docs tienen "
+                "embedding bge-m3, breakdown por fuente, % cobertura. "
+                "Útil para saber si corpus_related funciona bien para "
+                "una fuente específica."
+            ),
+            inputSchema={"type": "object", "properties": {}},
+        ),
     ]
 
 
@@ -268,6 +329,50 @@ async def call_tool(name: str, arguments: dict[str, Any]) -> list[TextContent]:
             "text": text,
             "length": len(text),
         }, ensure_ascii=False, indent=2))]
+
+    if name == "corpus_cite":
+        path = str(arguments.get("path", ""))
+        if not path:
+            return [TextContent(type="text", text=json.dumps(
+                {"error": "path es requerido"}, ensure_ascii=False
+            ))]
+        c = client.cite(path)
+        return [TextContent(type="text", text=json.dumps({
+            "source": c.source,
+            "citation": c.citation,
+            "long_citation": c.long_citation,
+            "rol": c.rol,
+            "fecha": c.fecha,
+            "extra": c.extra or {},
+        }, ensure_ascii=False, indent=2))]
+
+    if name == "corpus_related":
+        path = str(arguments.get("path", ""))
+        if not path:
+            return [TextContent(type="text", text=json.dumps(
+                {"error": "path es requerido"}, ensure_ascii=False
+            ))]
+        hits = client.related(
+            path=path,
+            limit=max(1, min(20, int(arguments.get("limit", 5)))),
+            same_source_only=bool(arguments.get("same_source_only", False)),
+            min_score=float(arguments.get("min_score", 0.5)),
+        )
+        return [TextContent(type="text", text=json.dumps({
+            "query_path": path, "n_hits": len(hits),
+            "results": [
+                {
+                    "rank": h.rank, "source": h.source, "year": h.year,
+                    "path": h.path, "pdf_path": h.pdf_path,
+                    "snippet": h.snippet, "cosine_similarity": h.score,
+                } for h in hits
+            ],
+        }, ensure_ascii=False, indent=2))]
+
+    if name == "corpus_embeddings_status":
+        return [TextContent(type="text", text=json.dumps(
+            client.embeddings_status(), ensure_ascii=False, indent=2
+        ))]
 
     return [TextContent(type="text", text=json.dumps(
         {"error": f"tool desconocido: {name}"}, ensure_ascii=False

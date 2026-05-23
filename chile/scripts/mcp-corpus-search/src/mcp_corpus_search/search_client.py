@@ -4,11 +4,21 @@ Usa el índice SQLite construido por `chile/scripts/build-fts-index.py`.
 """
 from __future__ import annotations
 
+import json
+import math
 import os
 import re
 import sqlite3
+import struct
+import urllib.error
+import urllib.request
 from dataclasses import dataclass
 from pathlib import Path
+
+from .citation import Citation, from_path as cite_from_path
+
+OLLAMA_EMBED_URL = "http://localhost:11434/api/embed"
+EMBED_MODEL = "bge-m3"
 
 DEFAULT_DB = (
     Path(__file__).resolve().parents[5]
@@ -208,3 +218,140 @@ class CorpusSearchClient:
         if len(content) > max_chars:
             content = content[:max_chars] + f"\n\n[…truncado, total {len(content)} chars]"
         return content
+
+    def cite(self, path: str) -> Citation:
+        """Genera cita formal desde el path."""
+        return cite_from_path(path)
+
+    def _ollama_embed(self, text: str, timeout: int = 60) -> list[float] | None:
+        if len(text) > 8000:
+            text = text[:8000]
+        payload = json.dumps({"model": EMBED_MODEL, "input": text}).encode()
+        req = urllib.request.Request(
+            OLLAMA_EMBED_URL, data=payload,
+            headers={"Content-Type": "application/json"},
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                data = json.loads(r.read())
+            embs = data.get("embeddings") or []
+            return embs[0] if embs else None
+        except Exception:
+            return None
+
+    def _get_embedding(
+        self, path: str, compute_if_missing: bool = True
+    ) -> list[float] | None:
+        """Lee embedding del índice. Si no existe, lo computa via Ollama."""
+        conn = sqlite3.connect(str(self.db_path), timeout=30)
+        try:
+            row = conn.execute(
+                "SELECT vec FROM embeddings WHERE path = ? AND model = ?",
+                (path, EMBED_MODEL),
+            ).fetchone()
+        except sqlite3.OperationalError:
+            conn.close()
+            return None
+        if row:
+            blob = row[0]
+            n = len(blob) // 4
+            return list(struct.unpack(f"<{n}f", blob))
+        conn.close()
+        if not compute_if_missing:
+            return None
+        # Compute on-the-fly
+        text = self.get_full_text(path, max_chars=8000)
+        if not text or len(text) < 50:
+            return None
+        return self._ollama_embed(text)
+
+    @staticmethod
+    def _cosine(a: list[float], b: list[float]) -> float:
+        s = sum(x * y for x, y in zip(a, b))
+        na = math.sqrt(sum(x * x for x in a))
+        nb = math.sqrt(sum(y * y for y in b))
+        return s / (na * nb) if na and nb else 0.0
+
+    def related(
+        self,
+        path: str,
+        limit: int = 5,
+        same_source_only: bool = False,
+        min_score: float = 0.5,
+    ) -> list[SearchHit]:
+        """Encuentra los N documentos más similares al dado, vía embeddings
+        bge-m3 (Ollama local). Compara contra embeddings ya indexados;
+        si el embedding del query no existe, se computa on-the-fly.
+        """
+        q_emb = self._get_embedding(path, compute_if_missing=True)
+        if not q_emb:
+            return []
+        conn = sqlite3.connect(str(self.db_path), timeout=60)
+        try:
+            sql = (
+                "SELECT e.path, d.source, d.year, e.vec "
+                "FROM embeddings e JOIN docs d ON e.path = d.path "
+                "WHERE e.model = ? AND e.path != ?"
+            )
+            params: list = [EMBED_MODEL, path]
+            if same_source_only:
+                # Detect source of query path
+                q_src_row = conn.execute(
+                    "SELECT source FROM docs WHERE path = ?", (path,)
+                ).fetchone()
+                if q_src_row:
+                    sql += " AND d.source = ?"
+                    params.append(q_src_row[0])
+            rows = conn.execute(sql, params).fetchall()
+        finally:
+            conn.close()
+
+        scored: list[tuple[float, str, str, str]] = []
+        for p, src, yr, blob in rows:
+            n = len(blob) // 4
+            v = list(struct.unpack(f"<{n}f", blob))
+            sim = self._cosine(q_emb, v)
+            if sim >= min_score:
+                scored.append((sim, p, src, yr))
+        scored.sort(reverse=True, key=lambda x: x[0])
+
+        results: list[SearchHit] = []
+        for i, (sim, p, src, yr) in enumerate(scored[:limit], 1):
+            snip = self.get_full_text(p, max_chars=240).strip()
+            snip = re.sub(r"\s+", " ", snip)[:240]
+            results.append(SearchHit(
+                rank=i, source=src, year=yr or "",
+                path=p, pdf_path=p.replace(".pdf.txt", ".pdf"),
+                snippet=snip, score=sim,
+            ))
+        return results
+
+    def embeddings_status(self) -> dict:
+        """Reporta cobertura del índice de embeddings."""
+        conn = sqlite3.connect(str(self.db_path), timeout=30)
+        try:
+            try:
+                total_emb = conn.execute(
+                    "SELECT COUNT(*) FROM embeddings WHERE model = ?",
+                    (EMBED_MODEL,)
+                ).fetchone()[0]
+                by_src = conn.execute(
+                    "SELECT d.source, COUNT(*) FROM embeddings e "
+                    "JOIN docs d ON e.path = d.path "
+                    "WHERE e.model = ? "
+                    "GROUP BY d.source ORDER BY 2 DESC",
+                    (EMBED_MODEL,)
+                ).fetchall()
+            except sqlite3.OperationalError:
+                return {"total": 0, "by_source": {}, "model": EMBED_MODEL,
+                        "note": "tabla embeddings no existe — correr build-embeddings-index.py"}
+            total_docs = conn.execute("SELECT COUNT(*) FROM docs").fetchone()[0]
+        finally:
+            conn.close()
+        return {
+            "model": EMBED_MODEL,
+            "total_embedded": total_emb,
+            "total_docs": total_docs,
+            "coverage_pct": round(100 * total_emb / max(total_docs, 1), 1),
+            "by_source": dict(by_src),
+        }
