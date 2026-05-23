@@ -28,9 +28,12 @@ declare -a MCPS=(
     "mcp-banco-central:banco-central"
     "mcp-bcn-tramitacion:bcn-tramitacion"
     "mcp-pjud:pjud"
+    "mcp-fne:fne"
+    "mcp-tdlc:tdlc"
+    "mcp-corpus-search:corpus-search"
 )
 
-echo "==> Instalando 7 MCPs en venvs aislados..."
+echo "==> Instalando ${#MCPS[@]} MCPs en venvs aislados..."
 for entry in "${MCPS[@]}"; do
     pkg_dir="${entry%%:*}"
     pkg_path="$SCRIPT_DIR/$pkg_dir"
