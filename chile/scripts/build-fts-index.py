@@ -43,10 +43,14 @@ def init_db(db_path: Path) -> sqlite3.Connection:
 
 def source_from_path(p: Path) -> str:
     """Infiere fuente desde directorio. p.relative_to(DATA_ROOT) gives
-    e.g. 'diario-oficial/2024/.../foo.pdf.txt' → 'diario-oficial'"""
+    e.g. 'diario-oficial/2024/.../foo.pdf.txt' → 'diario-oficial'.
+    Para leychile, distingue por tipo: leychile-ley, leychile-dto, etc."""
     try:
         rel = p.relative_to(DATA_ROOT)
-        return rel.parts[0]
+        parts = rel.parts
+        if parts[0] == "leychile" and len(parts) >= 2:
+            return f"leychile-{parts[1]}"
+        return parts[0]
     except ValueError:
         return "unknown"
 
@@ -78,8 +82,8 @@ def main() -> int:
     conn = init_db(db_path)
 
     root = Path(args.root)
-    txts = list(root.rglob("*.pdf.txt"))
-    print(f"Archivos .pdf.txt encontrados: {len(txts)}", flush=True)
+    txts = list(root.rglob("*.pdf.txt")) + list(root.rglob("*.xml.txt"))
+    print(f"Archivos .pdf.txt + .xml.txt: {len(txts)}", flush=True)
 
     existing = {
         row[0]: (row[1], row[2])
