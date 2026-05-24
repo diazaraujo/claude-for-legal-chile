@@ -19,10 +19,11 @@ cases:
   - id: ley_proteccion_datos_basica
     query: sobre protección de la vida privada
     sources: ["leychile-ley"]
-    expect_top: 5
+    exclude_modificadoras: true
+    expect_top: 3
     expect_any:
-      # Ley 19.628 — Protección Vida Privada — idNorma 199093 (verified)
-      - path_contains: "/199093.xml.txt"
+      # Ley 19.628 BASE — idNorma 141599 (no 199093 que es modificadora)
+      - path_contains: "/141599.xml.txt"
 
   - id: codigo_trabajo_articulo
     query: código del trabajo articulo 159 161 causales término

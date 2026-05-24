@@ -84,6 +84,25 @@ async def list_tools() -> list[Tool]:
                             "para queries que no quieren publicaciones DO."
                         ),
                     },
+                    "exclude_modificadoras": {
+                        "type": "boolean",
+                        "default": False,
+                        "description": (
+                            "Solo aplica a fuentes leychile-*. True excluye "
+                            "normas cuyo título empieza con 'MODIFICA' "
+                            "(retorna la ley BASE, no las que la modifican). "
+                            "RECOMENDADO=True cuando buscas la ley vigente."
+                        ),
+                    },
+                    "vigentes_only": {
+                        "type": "boolean",
+                        "default": False,
+                        "description": (
+                            "Solo aplica a fuentes leychile-*. True excluye "
+                            "normas marcadas como derogadas en BCN catalog. "
+                            "Combinable con exclude_modificadoras para citas seguras."
+                        ),
+                    },
                     "year": {
                         "type": "string",
                         "default": "",
@@ -264,6 +283,8 @@ async def call_tool(name: str, arguments: dict[str, Any]) -> list[TextContent]:
                 source=str(arguments.get("source", "")),
                 sources=arguments.get("sources") or None,
                 exclude_sources=arguments.get("exclude_sources") or None,
+                exclude_modificadoras=bool(arguments.get("exclude_modificadoras", False)),
+                vigentes_only=bool(arguments.get("vigentes_only", False)),
                 year=str(arguments.get("year", "")),
                 year_from=str(arguments.get("year_from", "")),
                 year_to=str(arguments.get("year_to", "")),

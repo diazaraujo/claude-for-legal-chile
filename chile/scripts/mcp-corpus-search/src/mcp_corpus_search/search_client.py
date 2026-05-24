@@ -20,6 +20,12 @@ from .citation import Citation, from_path as cite_from_path
 OLLAMA_EMBED_URL = "http://localhost:11434/api/embed"
 EMBED_MODEL = "bge-m3"
 
+
+def _leychile_code_from_path(path: str) -> int | None:
+    """Extrae idNorma desde path .../leychile/{tipo}/{N}.xml.txt"""
+    m = re.search(r"/leychile/[^/]+/(\d+)\.xml(\.txt)?$", path)
+    return int(m.group(1)) if m else None
+
 DEFAULT_DB = (
     Path(__file__).resolve().parents[5]
     / "chile/data/_index/corpus.fts.sqlite3"
@@ -45,6 +51,27 @@ class CorpusSearchClient:
                 f"Corpus FTS index no existe: {self.db_path}. "
                 f"Correr 'python3 chile/scripts/build-fts-index.py' primero."
             )
+        self._norma_meta_cache: dict[int, dict] | None = None
+
+    def _load_norma_meta(self, conn: sqlite3.Connection) -> dict[int, dict]:
+        if self._norma_meta_cache is not None:
+            return self._norma_meta_cache
+        try:
+            rows = conn.execute(
+                "SELECT leychile_code, numero, tipo, titulo, derogado, "
+                "es_modificadora, es_codigo FROM docs_norma"
+            ).fetchall()
+        except sqlite3.OperationalError:
+            self._norma_meta_cache = {}
+            return self._norma_meta_cache
+        self._norma_meta_cache = {
+            r[0]: {
+                "numero": r[1], "tipo": r[2], "titulo": r[3],
+                "derogado": r[4], "es_modificadora": bool(r[5]),
+                "es_codigo": bool(r[6]),
+            } for r in rows
+        }
+        return self._norma_meta_cache
 
     def search(
         self,
@@ -55,6 +82,8 @@ class CorpusSearchClient:
         year_from: str = "",
         year_to: str = "",
         exclude_sources: list[str] | None = None,
+        exclude_modificadoras: bool = False,
+        vigentes_only: bool = False,
         limit: int = 10,
         snippet_len: int = 240,
     ) -> list[SearchHit]:
@@ -62,6 +91,9 @@ class CorpusSearchClient:
             return []
         conn = sqlite3.connect(str(self.db_path), timeout=30)
         try:
+            # If user wants vigencia filters, need JOIN to docs_norma.
+            # Extract leychile_code from path: /leychile/{tipo}/{N}.xml.txt
+            use_norma_filter = exclude_modificadoras or vigentes_only
             where_clauses = ["docs MATCH ?"]
             params: list = [query]
             # source = single, sources = list (OR)
@@ -92,6 +124,8 @@ class CorpusSearchClient:
                     )
                     params.append(int(year_to))
             where = " AND ".join(where_clauses)
+            # Over-fetch 4x when filtering por vigencia para tener buffer.
+            fetch_n = (limit * 4) if use_norma_filter else limit
             sql = (
                 f"SELECT source, year, path, "
                 f"snippet(docs, 3, '«', '»', '…', 32) as snip, "
@@ -99,8 +133,33 @@ class CorpusSearchClient:
                 f"FROM docs WHERE {where} "
                 f"ORDER BY bm25(docs) LIMIT ?"
             )
-            params.append(limit)
+            params.append(fetch_n)
             rows = conn.execute(sql, params).fetchall()
+
+            # Apply vigencia filter post-query (in Python — más simple que SQL).
+            if use_norma_filter:
+                norma_meta = self._load_norma_meta(conn)
+                filtered = []
+                for row in rows:
+                    src, yr, path, snip, score = row
+                    code = _leychile_code_from_path(path)
+                    if code is None:
+                        filtered.append(row)
+                        continue
+                    meta = norma_meta.get(code)
+                    if meta is None:
+                        filtered.append(row)
+                        continue
+                    if exclude_modificadoras and meta.get("es_modificadora"):
+                        continue
+                    if vigentes_only:
+                        d = meta.get("derogado", "sin_dato")
+                        if d not in ("no derogado", "sin_dato", "", None):
+                            continue
+                    filtered.append(row)
+                    if len(filtered) >= limit:
+                        break
+                rows = filtered[:limit]
         except sqlite3.OperationalError as e:
             conn.close()
             raise ValueError(f"Error en query FTS5: {e}") from e

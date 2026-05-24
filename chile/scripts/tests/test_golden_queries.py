@@ -106,11 +106,15 @@ def check_case(c: CorpusSearchClient, case: dict) -> tuple[bool, str]:
     year_to = str(case.get("year_to", ""))
     top = int(case.get("expect_top", 1))
     min_score = float(case.get("min_score", -50))
+    excl_mod = str(case.get("exclude_modificadoras", "false")).lower() == "true"
+    vig_only = str(case.get("vigentes_only", "false")).lower() == "true"
 
     hits = c.search(
         query=query, source=source,
         sources=sources if isinstance(sources, list) and sources else None,
-        year_from=year_from, year_to=year_to, limit=top,
+        year_from=year_from, year_to=year_to,
+        exclude_modificadoras=excl_mod, vigentes_only=vig_only,
+        limit=top,
     )
     if not hits:
         return False, "0 hits"
