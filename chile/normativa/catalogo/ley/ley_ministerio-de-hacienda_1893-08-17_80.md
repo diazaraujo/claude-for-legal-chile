@@ -1,0 +1,18 @@
+---
+slug: ley_ministerio-de-hacienda_1893-08-17_80
+tipo: ley
+numero: 80
+titulo_oficial: "Ley 80"
+publicacion: 1893-08-17
+promulgacion: 1893-08-17
+emisor: ministerio-de-hacienda
+leychile_code: 21950
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=21950
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-hacienda/1893-08-17/80
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# LEY 80
+
+**Título oficial:** Ley 80

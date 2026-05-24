@@ -1,0 +1,18 @@
+---
+slug: ley_ministerio-de-educacion_2023-07-08_21583
+tipo: ley
+numero: 21583
+titulo_oficial: "INTERPRETA EL ARTÍCULO CUADRAGÉSIMO SEGUNDO TRANSITORIO DE LA LEY N° 21.040, QUE CREA EL SISTEMA DE EDUCACIÓN PÚBLICA, CON EL OBJETO DE PROTEGER LOS INGRESOS DE LOS TRABAJADORES QUE INDICA TRASPASADOS A LOS SERVICIOS LOCALES DE EDUCACIÓN PÚBLICA"
+publicacion: 2023-07-08
+promulgacion: 2023-06-20
+emisor: ministerio-de-educacion
+leychile_code: 1194083
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1194083
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-educacion/2023-07-08/21583
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# LEY 21583
+
+**Título oficial:** INTERPRETA EL ARTÍCULO CUADRAGÉSIMO SEGUNDO TRANSITORIO DE LA LEY N° 21.040, QUE CREA EL SISTEMA DE EDUCACIÓN PÚBLICA, CON EL OBJETO DE PROTEGER LOS INGRESOS DE LOS TRABAJADORES QUE INDICA TRASPASADOS A LOS SERVICIOS LOCALES DE EDUCACIÓN PÚBLICA

@@ -1,0 +1,18 @@
+---
+slug: ley_ministerio-de-hacienda_1917-01-27_3201
+tipo: ley
+numero: 3201
+titulo_oficial: "DISPONE QUE LOS DERECHOS DE ESPORTACION I OTROS I MULTAS CONSULARES SE PAGARAN EN ORO O EN BILLETES CON EL RECARGO CORRESPONDIENTE, I AUTORIZA AL PRESIDENTE DE LA REPUBLICA PARA DETERMINAR LA PROPORCION EN QUE DEBE HACERSE EL PAGO."
+publicacion: 1917-01-27
+promulgacion: 1917-01-22
+emisor: ministerio-de-hacienda
+leychile_code: 23807
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=23807
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-hacienda/1917-01-27/3201
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# LEY 3201
+
+**Título oficial:** DISPONE QUE LOS DERECHOS DE ESPORTACION I OTROS I MULTAS CONSULARES SE PAGARAN EN ORO O EN BILLETES CON EL RECARGO CORRESPONDIENTE, I AUTORIZA AL PRESIDENTE DE LA REPUBLICA PARA DETERMINAR LA PROPORCION EN QUE DEBE HACERSE EL PAGO.

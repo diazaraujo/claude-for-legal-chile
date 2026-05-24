@@ -1,0 +1,17 @@
+---
+slug: ley_ministerio-de-hacienda_1915-01-04_2969
+tipo: ley
+numero: 2969
+titulo_oficial: "PRORROGA POR SEIS MESES LA AUTORIZACION CONFERIDA AL PRESIDENTE DE LA REPÚBLICA PARA CONCEDER UN ANTICIPO A;  OS PRODUCTORES DE SALITRE QUE SE COMPROMETAN A NO PARALIZAR LA ESPLOTACION DE SUS OFICINAS CON MOTIVO DE LA GUERRA EUROPEA"
+publicacion: 1915-01-04
+emisor: ministerio-de-hacienda
+leychile_code: 23633
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=23633
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-hacienda/1915-01-04/2969
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# LEY 2969
+
+**Título oficial:** PRORROGA POR SEIS MESES LA AUTORIZACION CONFERIDA AL PRESIDENTE DE LA REPÚBLICA PARA CONCEDER UN ANTICIPO A;  OS PRODUCTORES DE SALITRE QUE SE COMPROMETAN A NO PARALIZAR LA ESPLOTACION DE SUS OFICINAS CON MOTIVO DE LA GUERRA EUROPEA

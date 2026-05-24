@@ -1,0 +1,28 @@
+---
+slug: ley_ministerio-de-hacienda_subsecretaria-de-hacienda_1954-06-07_11534
+tipo: ley
+numero: 11534
+titulo_oficial: "DISPONE QUE LAS EXPOSICIONES, YA SEAN NACIONALES O
+EXTRANJERAS, QUE SE REALICEN CON AUTORIZACION O
+PATROCINIO DEL GOBIERNO, QUEDARAN EXENTAS DEL PAGO DE
+LOS IMPUESTOS FISCALES O MUNICIPALES QUE AFECTEN LAS
+ENTRADAS, LOS ACTOS CULTURALES Y LOS ARRIENDOS Y
+SUBARRIENDOS DE ESPACIOS Y LOCALES "
+publicacion: 1954-06-07
+promulgacion: 1954-05-12
+emisor: ministerio-de-hacienda_subsecretaria-de-hacienda
+leychile_code: 205464
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=205464
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-hacienda_subsecretaria-de-hacienda/1954-06-07/11534
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# LEY 11534
+
+**Título oficial:** DISPONE QUE LAS EXPOSICIONES, YA SEAN NACIONALES O
+EXTRANJERAS, QUE SE REALICEN CON AUTORIZACION O
+PATROCINIO DEL GOBIERNO, QUEDARAN EXENTAS DEL PAGO DE
+LOS IMPUESTOS FISCALES O MUNICIPALES QUE AFECTEN LAS
+ENTRADAS, LOS ACTOS CULTURALES Y LOS ARRIENDOS Y
+SUBARRIENDOS DE ESPACIOS Y LOCALES 

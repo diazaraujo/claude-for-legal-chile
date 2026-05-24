@@ -2,7 +2,8 @@
 slug: ley_ministerio-de-agricultura_1995-05-05_19383
 tipo: ley
 numero: 19383
-titulo_oficial: "Ley 19383"
+titulo_oficial: "MODIFICA ARTICULO 11 DE LA LEY N° 18.525, SOBRE
+IMPORTACION DE MERCANCIAS AL PAIS "
 publicacion: 1995-05-05
 promulgacion: 1995-04-24
 emisor: ministerio-de-agricultura
@@ -15,4 +16,5 @@ estado_revision: catalogo-bcn-sparql
 
 # LEY 19383
 
-**Título oficial:** Ley 19383
+**Título oficial:** MODIFICA ARTICULO 11 DE LA LEY N° 18.525, SOBRE
+IMPORTACION DE MERCANCIAS AL PAIS 

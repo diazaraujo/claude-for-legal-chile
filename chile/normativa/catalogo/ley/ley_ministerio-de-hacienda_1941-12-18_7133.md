@@ -1,0 +1,17 @@
+---
+slug: ley_ministerio-de-hacienda_1941-12-18_7133
+tipo: ley
+numero: 7133
+titulo_oficial: "DISPONE QUE LOS FONDOS QUE PRODUZCAN LAS CONTRIBUCIONES CREADAS POR LOS ARTICULOS 31 Y 32 DE LA LEY N.O 4,851, ADEMAS DE LOS INDICADOS SERAN DEPOSITADOS QUINCENALMENTE EN UNA CUENTA ES ESPECIAL QUE SE LLAMARA FONDOS DE CAMINOS"
+publicacion: 1941-12-18
+emisor: ministerio-de-hacienda
+leychile_code: 25438
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=25438
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-hacienda/1941-12-18/7133
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# LEY 7133
+
+**Título oficial:** DISPONE QUE LOS FONDOS QUE PRODUZCAN LAS CONTRIBUCIONES CREADAS POR LOS ARTICULOS 31 Y 32 DE LA LEY N.O 4,851, ADEMAS DE LOS INDICADOS SERAN DEPOSITADOS QUINCENALMENTE EN UNA CUENTA ES ESPECIAL QUE SE LLAMARA FONDOS DE CAMINOS

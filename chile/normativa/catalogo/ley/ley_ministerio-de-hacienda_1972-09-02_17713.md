@@ -1,0 +1,18 @@
+---
+slug: ley_ministerio-de-hacienda_1972-09-02_17713
+tipo: ley
+numero: 17713
+titulo_oficial: "CONCEDE AGUINALDO EXTRAORDINARIO A TODOS LOS TRABAJADORES DEL SECTOR PUBLICO Y PRIVADO. - REAJUSTA TRANSITORIAMENTE POR EL MES DE OCTUBRE LAS REMUNERACIONES Y PENSIONES DE TODOS LOS TRABAJADORES DEL PAIS.- OTRAS NORMAS"
+publicacion: 1972-09-02
+promulgacion: 1972-08-31
+emisor: ministerio-de-hacienda
+leychile_code: 1050348
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1050348
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-hacienda/1972-09-02/17713
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# LEY 17713
+
+**Título oficial:** CONCEDE AGUINALDO EXTRAORDINARIO A TODOS LOS TRABAJADORES DEL SECTOR PUBLICO Y PRIVADO. - REAJUSTA TRANSITORIAMENTE POR EL MES DE OCTUBRE LAS REMUNERACIONES Y PENSIONES DE TODOS LOS TRABAJADORES DEL PAIS.- OTRAS NORMAS

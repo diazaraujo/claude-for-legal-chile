@@ -1,0 +1,18 @@
+---
+slug: ley_ministerio-de-desarrollo-social-y-familia_2020-07-02_21244
+tipo: ley
+numero: 21244
+titulo_oficial: "PRORROGA EL MANDATO DE LOS MIEMBROS DE LAS DIRECTIVAS DE LAS COMUNIDADES Y ASOCIACIONES INDÍGENAS, Y LA VIGENCIA DE LOS ACTUALES REPRESENTANTES INDÍGENAS DEL CONSEJO NACIONAL DE LA CORPORACIÓN NACIONAL DE DESARROLLO INDÍGENA, POR EL IMPACTO DE LA ENFERMEDAD COVID-19 EN CHILE"
+publicacion: 2020-07-02
+promulgacion: 2020-06-26
+emisor: ministerio-de-desarrollo-social-y-familia
+leychile_code: 1147161
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1147161
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-desarrollo-social-y-familia/2020-07-02/21244
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# LEY 21244
+
+**Título oficial:** PRORROGA EL MANDATO DE LOS MIEMBROS DE LAS DIRECTIVAS DE LAS COMUNIDADES Y ASOCIACIONES INDÍGENAS, Y LA VIGENCIA DE LOS ACTUALES REPRESENTANTES INDÍGENAS DEL CONSEJO NACIONAL DE LA CORPORACIÓN NACIONAL DE DESARROLLO INDÍGENA, POR EL IMPACTO DE LA ENFERMEDAD COVID-19 EN CHILE

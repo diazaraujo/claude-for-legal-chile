@@ -1,0 +1,18 @@
+---
+slug: ley_ministerio-de-educacion_2022-01-03_21397
+tipo: ley
+numero: 21397
+titulo_oficial: "MODIFICA LAS NORMAS DE ADMISIÓN ESCOLAR PARA FACILITAR EL ACCESO DE ESTUDIANTES A LOS ESTABLECIMIENTOS EDUCACIONALES CON MODALIDAD DE INTERNADO Y DE AQUELLOS CON NECESIDADES EDUCATIVAS ESPECIALES PERMANENTES"
+publicacion: 2022-01-03
+promulgacion: 2021-12-27
+emisor: ministerio-de-educacion
+leychile_code: 1170744
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1170744
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-educacion/2022-01-03/21397
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# LEY 21397
+
+**Título oficial:** MODIFICA LAS NORMAS DE ADMISIÓN ESCOLAR PARA FACILITAR EL ACCESO DE ESTUDIANTES A LOS ESTABLECIMIENTOS EDUCACIONALES CON MODALIDAD DE INTERNADO Y DE AQUELLOS CON NECESIDADES EDUCATIVAS ESPECIALES PERMANENTES

@@ -44,11 +44,17 @@ def unpack_vec(blob: bytes) -> list[float]:
     return list(struct.unpack(f"<{n}f", blob))
 
 
-def embed_text(text: str, timeout: int = 60) -> list[float] | None:
-    # bge-m3 max 8192 tokens. Truncar a ~4000 chars para safety.
-    if len(text) > 8000:
-        text = text[:8000]
-    payload = json.dumps({"model": MODEL, "input": text}).encode()
+MAX_CHARS = 1500  # bge-m3 con 1500 chars: ~0.1s/doc vs 1s/doc full
+
+def embed_batch(texts: list[str], timeout: int = 120) -> list[list[float]] | None:
+    """Batch embed: pasa hasta N inputs en una sola request a Ollama.
+    bge-m3 acepta arrays — 16-32 inputs en <1s típicamente.
+
+    Trunca a MAX_CHARS para no pagar costo CPU de docs largos —
+    primeras 1500 chars suelen tener título, partes, materia, fecha:
+    suficiente para semantic search/related."""
+    inputs = [t[:MAX_CHARS] for t in texts]
+    payload = json.dumps({"model": MODEL, "input": inputs}).encode()
     req = urllib.request.Request(
         OLLAMA_URL, data=payload,
         headers={"Content-Type": "application/json"},
@@ -56,49 +62,59 @@ def embed_text(text: str, timeout: int = 60) -> list[float] | None:
     try:
         with urllib.request.urlopen(req, timeout=timeout) as r:
             data = json.loads(r.read())
-        embs = data.get("embeddings") or []
-        return embs[0] if embs else None
+        return data.get("embeddings") or None
     except Exception:
         return None
 
 
-def worker(item: tuple[str, float], db_path: str) -> str:
-    path_str, mtime = item
-    p = Path(path_str)
-    try:
-        content = p.read_text(encoding="utf-8", errors="replace").strip()
-    except Exception:
-        with _LOCK: _STATS["err"] += 1
-        return "read_err"
-    if len(content) < 50:
-        with _LOCK: _STATS["skip"] += 1
-        return "too_short"
+def process_batch(items: list[tuple[str, float]], db_path: str) -> int:
+    """Procesa N items en una request Ollama batch + un commit DB."""
+    if not items:
+        return 0
+    # Read texts in parallel-friendly way
+    valid: list[tuple[str, float, str]] = []
+    for path_str, mtime in items:
+        try:
+            content = Path(path_str).read_text(
+                encoding="utf-8", errors="replace"
+            ).strip()
+        except Exception:
+            with _LOCK: _STATS["err"] += 1
+            continue
+        if len(content) < 50:
+            with _LOCK: _STATS["skip"] += 1
+            continue
+        valid.append((path_str, mtime, content))
+    if not valid:
+        return 0
 
-    vec = embed_text(content)
-    if not vec:
-        with _LOCK: _STATS["err"] += 1
-        return "embed_err"
+    vecs = embed_batch([t[2] for t in valid])
+    if not vecs or len(vecs) != len(valid):
+        with _LOCK: _STATS["err"] += len(valid)
+        return 0
 
-    blob = pack_vec(vec)
     c = sqlite3.connect(db_path, timeout=60)
     try:
-        c.execute(
+        c.executemany(
             "INSERT OR REPLACE INTO embeddings(path, model, dim, vec, mtime) "
             "VALUES (?, ?, ?, ?, ?)",
-            (path_str, MODEL, len(vec), blob, mtime),
+            [(p, MODEL, len(v), pack_vec(v), m)
+             for (p, m, _), v in zip(valid, vecs)],
         )
         c.commit()
     finally:
         c.close()
-    with _LOCK: _STATS["ok"] += 1
-    return "ok"
+    with _LOCK: _STATS["ok"] += len(valid)
+    return len(valid)
 
 
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--db", default=str(DB_PATH))
     parser.add_argument("--workers", type=int, default=2,
-                        help="Conservador (default 2) para coexistir con OCR.")
+                        help="Threads paralelos (batch en cada uno).")
+    parser.add_argument("--batch", type=int, default=32,
+                        help="Inputs por batch a Ollama (default 32)")
     parser.add_argument("--source", default="",
                         help="Solo indexar una fuente específica (ej. 'tc-moderno')")
     parser.add_argument("--max", type=int, default=0)
@@ -135,22 +151,31 @@ def main() -> int:
     # Warmup Ollama with 1 call
     print("Warmup bge-m3...", flush=True)
     t0 = time.time()
-    _ = embed_text("warmup")
+    _ = embed_batch(["warmup"])
     print(f"  warmup: {time.time()-t0:.1f}s", flush=True)
+
+    # Group rows into batches
+    batches: list[list[tuple[str, float]]] = []
+    for i in range(0, len(rows), args.batch):
+        batches.append(rows[i:i + args.batch])
+    print(f"Total batches: {len(batches)} x {args.batch} items", flush=True)
 
     start = time.time()
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
-        futures = [pool.submit(worker, r, args.db) for r in rows]
+        futures = [pool.submit(process_batch, b, args.db) for b in batches]
+        n_done = 0
         for i, fut in enumerate(as_completed(futures), 1):
-            try: fut.result()
-            except Exception: pass
-            if i % 100 == 0 or i == len(rows):
+            try: n = fut.result()
+            except Exception: n = 0
+            n_done += args.batch  # progress aprox
+            if i % 10 == 0 or i == len(batches):
                 elapsed = time.time() - start
-                rate = i / elapsed if elapsed > 0 else 0
-                eta = (len(rows) - i) / rate if rate > 0 else 0
+                done_real = _STATS['ok'] + _STATS['skip'] + _STATS['err']
+                rate = done_real / elapsed if elapsed > 0 else 0
+                eta = (len(rows) - done_real) / rate if rate > 0 else 0
                 print(
-                    f"  [{i}/{len(rows)}] ok={_STATS['ok']} skip={_STATS['skip']} "
-                    f"err={_STATS['err']} | "
+                    f"  [batch {i}/{len(batches)}] "
+                    f"ok={_STATS['ok']} skip={_STATS['skip']} err={_STATS['err']} | "
                     f"elapsed={elapsed:.0f}s rate={rate:.1f}/s eta={eta:.0f}s",
                     flush=True,
                 )

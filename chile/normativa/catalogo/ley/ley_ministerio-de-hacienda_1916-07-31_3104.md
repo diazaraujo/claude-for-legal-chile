@@ -1,0 +1,17 @@
+---
+slug: ley_ministerio-de-hacienda_1916-07-31_3104
+tipo: ley
+numero: 3104
+titulo_oficial: "PRORROGA LOS EFECTOS DE LAS LEYES NUMS. 2,913 I 3,064, LAS CUALES DISPONEN QUE SE PAGARAN LOS DERECHOS DE ESPORTACION EN BUENAS LETRAS DE CAMBIO A 90 DIAS VISTA EN MONEDA NACIONAL DE ORO I ADEMAS, EN BILLETES CON EL RECARGO CORRESPONDIENTE."
+publicacion: 1916-07-31
+emisor: ministerio-de-hacienda
+leychile_code: 23739
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=23739
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-hacienda/1916-07-31/3104
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# LEY 3104
+
+**Título oficial:** PRORROGA LOS EFECTOS DE LAS LEYES NUMS. 2,913 I 3,064, LAS CUALES DISPONEN QUE SE PAGARAN LOS DERECHOS DE ESPORTACION EN BUENAS LETRAS DE CAMBIO A 90 DIAS VISTA EN MONEDA NACIONAL DE ORO I ADEMAS, EN BILLETES CON EL RECARGO CORRESPONDIENTE.

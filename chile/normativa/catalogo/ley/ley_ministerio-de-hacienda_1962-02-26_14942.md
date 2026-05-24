@@ -1,0 +1,17 @@
+---
+slug: ley_ministerio-de-hacienda_1962-02-26_14942
+tipo: ley
+numero: 14942
+titulo_oficial: "Ley 14942"
+publicacion: 1962-02-26
+emisor: ministerio-de-hacienda
+leychile_code: 243089
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=243089
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-hacienda/1962-02-26/14942
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# LEY 14942
+
+**Título oficial:** Ley 14942

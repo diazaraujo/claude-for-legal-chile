@@ -1,0 +1,17 @@
+---
+slug: ley_ministerio-de-hacienda_1932-03-24_5086
+tipo: ley
+numero: 5086
+titulo_oficial: "Ley 5086"
+publicacion: 1932-03-24
+emisor: ministerio-de-hacienda
+leychile_code: 25026
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=25026
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-hacienda/1932-03-24/5086
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# LEY 5086
+
+**Título oficial:** Ley 5086

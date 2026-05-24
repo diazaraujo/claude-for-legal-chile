@@ -1,0 +1,18 @@
+---
+slug: ley_ministerio-de-justicia-y-derechos-humanos_2020-10-23_21279
+tipo: ley
+numero: 21279
+titulo_oficial: "PRORROGA LA VIGENCIA DE LAS CÉDULAS DE IDENTIDAD PARA EL EFECTO DE PARTICIPAR EN LAS ELECCIONES O PLEBISCITOS QUE SE REALICEN HASTA EL TÉRMINO DEL PROCESO CONSTITUYENTE ESTABLECIDO DE CONFORMIDAD A LOS ARTÍCULOS 130 Y SIGUIENTES DE LA CONSTITUCIÓN POLÍTICA DE LA REPÚBLICA"
+publicacion: 2020-10-23
+promulgacion: 2020-10-20
+emisor: ministerio-de-justicia-y-derechos-humanos
+leychile_code: 1150883
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1150883
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-justicia-y-derechos-humanos/2020-10-23/21279
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# LEY 21279
+
+**Título oficial:** PRORROGA LA VIGENCIA DE LAS CÉDULAS DE IDENTIDAD PARA EL EFECTO DE PARTICIPAR EN LAS ELECCIONES O PLEBISCITOS QUE SE REALICEN HASTA EL TÉRMINO DEL PROCESO CONSTITUYENTE ESTABLECIDO DE CONFORMIDAD A LOS ARTÍCULOS 130 Y SIGUIENTES DE LA CONSTITUCIÓN POLÍTICA DE LA REPÚBLICA

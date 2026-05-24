@@ -1,0 +1,18 @@
+---
+slug: ley_ministerio-de-hacienda_2023-01-24_21537
+tipo: ley
+numero: 21537
+titulo_oficial: "MODIFICA EL MECANISMO DE ESTABILIZACIÓN DE PRECIOS DE LOS COMBUSTIBLES PARA EVITAR FLUCTUACIONES SEMANALES, Y EXTIENDE EL BENEFICIO DE REINTEGRO PARCIAL DEL IMPUESTO ESPECÍFICO A LOS COMBUSTIBLES PARA TRANSPORTISTAS DE CARGA"
+publicacion: 2023-01-24
+promulgacion: 2023-01-19
+emisor: ministerio-de-hacienda
+leychile_code: 1188163
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1188163
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-hacienda/2023-01-24/21537
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# LEY 21537
+
+**Título oficial:** MODIFICA EL MECANISMO DE ESTABILIZACIÓN DE PRECIOS DE LOS COMBUSTIBLES PARA EVITAR FLUCTUACIONES SEMANALES, Y EXTIENDE EL BENEFICIO DE REINTEGRO PARCIAL DEL IMPUESTO ESPECÍFICO A LOS COMBUSTIBLES PARA TRANSPORTISTAS DE CARGA

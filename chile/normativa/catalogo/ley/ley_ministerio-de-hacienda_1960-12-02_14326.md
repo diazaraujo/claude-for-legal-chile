@@ -1,0 +1,17 @@
+---
+slug: ley_ministerio-de-hacienda_1960-12-02_14326
+tipo: ley
+numero: 14326
+titulo_oficial: "Ley 14326"
+publicacion: 1960-12-02
+emisor: ministerio-de-hacienda
+leychile_code: 252566
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=252566
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-hacienda/1960-12-02/14326
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# LEY 14326
+
+**Título oficial:** Ley 14326

@@ -1,0 +1,17 @@
+---
+slug: ley_ministerio-de-hacienda_1952-11-26_10928
+tipo: ley
+numero: 10928
+titulo_oficial: "Ley 10928"
+publicacion: 1952-11-26
+emisor: ministerio-de-hacienda
+leychile_code: 254500
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=254500
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-hacienda/1952-11-26/10928
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# LEY 10928
+
+**Título oficial:** Ley 10928

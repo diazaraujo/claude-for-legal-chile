@@ -1,0 +1,18 @@
+---
+slug: ley_ministerio-de-hacienda_2023-02-15_21540
+tipo: ley
+numero: 21540
+titulo_oficial: "REPONE EL TRATAMIENTO TRIBUTARIO PARA LOS CONTRATOS DE ARRENDAMIENTO CON OPCIÓN DE COMPRA DE BIENES QUE IMPLIQUEN UNA OPERACIÓN DE FINANCIAMIENTO O LEASING FINANCIEROS, PREVIO A LA LEY N° 21.420, QUE REDUCE O ELIMINA EXENCIONES TRIBUTARIAS"
+publicacion: 2023-02-15
+promulgacion: 2023-02-01
+emisor: ministerio-de-hacienda
+leychile_code: 1189043
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1189043
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-hacienda/2023-02-15/21540
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# LEY 21540
+
+**Título oficial:** REPONE EL TRATAMIENTO TRIBUTARIO PARA LOS CONTRATOS DE ARRENDAMIENTO CON OPCIÓN DE COMPRA DE BIENES QUE IMPLIQUEN UNA OPERACIÓN DE FINANCIAMIENTO O LEASING FINANCIEROS, PREVIO A LA LEY N° 21.420, QUE REDUCE O ELIMINA EXENCIONES TRIBUTARIAS

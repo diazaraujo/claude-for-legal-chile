@@ -1,0 +1,18 @@
+---
+slug: ley_ministerio-de-hacienda_2024-07-13_21685
+tipo: ley
+numero: 21685
+titulo_oficial: "REAJUSTA LOS VALORES DEL SUBSIDIO ÚNICO FAMILIAR Y LA ASIGNACIÓN FAMILIAR, OTORGA UN APORTE PAGADO A TRAVÉS DEL BOLSILLO FAMILIAR ELECTRÓNICO POR LOS MESES DE INVIERNO DE 2024, E INYECTA RECURSOS AL FONDO DE ESTABILIZACIÓN DE PRECIOS DEL PETRÓLEO"
+publicacion: 2024-07-13
+promulgacion: 2024-07-11
+emisor: ministerio-de-hacienda
+leychile_code: 1204943
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1204943
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-hacienda/2024-07-13/21685
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# LEY 21685
+
+**Título oficial:** REAJUSTA LOS VALORES DEL SUBSIDIO ÚNICO FAMILIAR Y LA ASIGNACIÓN FAMILIAR, OTORGA UN APORTE PAGADO A TRAVÉS DEL BOLSILLO FAMILIAR ELECTRÓNICO POR LOS MESES DE INVIERNO DE 2024, E INYECTA RECURSOS AL FONDO DE ESTABILIZACIÓN DE PRECIOS DEL PETRÓLEO

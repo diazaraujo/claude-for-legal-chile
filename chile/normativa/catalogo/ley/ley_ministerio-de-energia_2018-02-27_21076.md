@@ -1,0 +1,18 @@
+---
+slug: ley_ministerio-de-energia_2018-02-27_21076
+tipo: ley
+numero: 21076
+titulo_oficial: "MODIFICA LA LEY GENERAL DE SERVICIOS ELÉCTRICOS PARA IMPONER A LA EMPRESA DISTRIBUIDORA DE ENERGÍA LA OBLIGACIÓN DE SOLVENTAR EL RETIRO Y REPOSICIÓN DEL EMPALME Y MEDIDOR EN CASO DE INUTILIZACIÓN DE LAS INSTALACIONES POR FUERZA MAYOR"
+publicacion: 2018-02-27
+promulgacion: 2018-02-19
+emisor: ministerio-de-energia
+leychile_code: 1115627
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1115627
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-energia/2018-02-27/21076
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# LEY 21076
+
+**Título oficial:** MODIFICA LA LEY GENERAL DE SERVICIOS ELÉCTRICOS PARA IMPONER A LA EMPRESA DISTRIBUIDORA DE ENERGÍA LA OBLIGACIÓN DE SOLVENTAR EL RETIRO Y REPOSICIÓN DEL EMPALME Y MEDIDOR EN CASO DE INUTILIZACIÓN DE LAS INSTALACIONES POR FUERZA MAYOR

@@ -1,0 +1,26 @@
+---
+slug: ley_ministerio-de-hacienda_1990-02-01_18919
+tipo: ley
+numero: 18919
+titulo_oficial: "INTERPRETA NORMAS RELATIVAS AL FONDO NACIONAL DE
+DESARROLLO REGIONAL; CONDONA SALDOS DE PRECIO POR
+VIVIENDAS OBTENIDAS POR MEDIO DE CEMA CHILE; MODIFICA
+NORMAS SOBRE BOLSAS DE COMERCIO, SOBRE INDEMNIZACIONES
+DE LA LEY N° 18.899 Y OTRAS QUE INDICA "
+publicacion: 1990-02-01
+promulgacion: 1990-01-26
+emisor: ministerio-de-hacienda
+leychile_code: 30290
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=30290
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-hacienda/1990-02-01/18919
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# LEY 18919
+
+**Título oficial:** INTERPRETA NORMAS RELATIVAS AL FONDO NACIONAL DE
+DESARROLLO REGIONAL; CONDONA SALDOS DE PRECIO POR
+VIVIENDAS OBTENIDAS POR MEDIO DE CEMA CHILE; MODIFICA
+NORMAS SOBRE BOLSAS DE COMERCIO, SOBRE INDEMNIZACIONES
+DE LA LEY N° 18.899 Y OTRAS QUE INDICA 

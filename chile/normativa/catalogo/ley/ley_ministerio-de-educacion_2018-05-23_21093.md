@@ -1,0 +1,18 @@
+---
+slug: ley_ministerio-de-educacion_2018-05-23_21093
+tipo: ley
+numero: 21093
+titulo_oficial: "MODIFICA LA LEY N° 19.070 QUE APROBÓ EL ESTATUTO DE LOS PROFESIONALES DE LA EDUCACIÓN, Y DE LAS LEYES QUE LA COMPLEMENTAN Y MODIFICAN, PARA PERFECCIONAR LA CAUSAL DE TÉRMINO DE LA RELACIÓN LABORAL DE LOS DOCENTES MUNICIPALES, DETERMINADA POR SALUD INCOMPATIBLE"
+publicacion: 2018-05-23
+promulgacion: 2018-05-14
+emisor: ministerio-de-educacion
+leychile_code: 1118808
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1118808
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-educacion/2018-05-23/21093
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# LEY 21093
+
+**Título oficial:** MODIFICA LA LEY N° 19.070 QUE APROBÓ EL ESTATUTO DE LOS PROFESIONALES DE LA EDUCACIÓN, Y DE LAS LEYES QUE LA COMPLEMENTAN Y MODIFICAN, PARA PERFECCIONAR LA CAUSAL DE TÉRMINO DE LA RELACIÓN LABORAL DE LOS DOCENTES MUNICIPALES, DETERMINADA POR SALUD INCOMPATIBLE

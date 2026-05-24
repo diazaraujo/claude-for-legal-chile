@@ -1,0 +1,18 @@
+---
+slug: ley_ministerio-de-hacienda_1999-11-13_19646
+tipo: ley
+numero: 19646
+titulo_oficial: "CONCEDE BENEFICIOS ECONÓMICOS AL PERSONAL DEL SERVICIO DE IMPUESTOS INTERNOS, DEL CONSEJO DE DEFENSA DEL ESTADO, DE LA DIRECCIÓN DE PRESUPUESTOS Y DE LAS FUERZAS ARMADAS, Y DISPONE OTRAS NORMAS SOBRE RACIONALIZACIÓN DEL SECTOR HACIENDA"
+publicacion: 1999-11-13
+promulgacion: 1999-11-10
+emisor: ministerio-de-hacienda
+leychile_code: 147663
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=147663
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-hacienda/1999-11-13/19646
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# LEY 19646
+
+**Título oficial:** CONCEDE BENEFICIOS ECONÓMICOS AL PERSONAL DEL SERVICIO DE IMPUESTOS INTERNOS, DEL CONSEJO DE DEFENSA DEL ESTADO, DE LA DIRECCIÓN DE PRESUPUESTOS Y DE LAS FUERZAS ARMADAS, Y DISPONE OTRAS NORMAS SOBRE RACIONALIZACIÓN DEL SECTOR HACIENDA

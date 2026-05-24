@@ -1,0 +1,26 @@
+---
+slug: ley_ministerio-de-hacienda_1990-01-09_18898
+tipo: ley
+numero: 18898
+titulo_oficial: "ESTABLECE TRATAMIENTO TRIBUTARIO Y ARANCELARIO
+ESPECIAL PARA LA IMPORTACION DE MERCANCIAS DESTINADAS A
+EXPEDICIONES ANTARTICAS Y A LAS BASES UBICADAS EN EL
+TERRITORIO ANTARTICO CHILENO Y AL PERSONAL QUE LABORA EN
+ELLAS "
+publicacion: 1990-01-09
+promulgacion: 1989-12-28
+emisor: ministerio-de-hacienda
+leychile_code: 30270
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=30270
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-hacienda/1990-01-09/18898
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# LEY 18898
+
+**Título oficial:** ESTABLECE TRATAMIENTO TRIBUTARIO Y ARANCELARIO
+ESPECIAL PARA LA IMPORTACION DE MERCANCIAS DESTINADAS A
+EXPEDICIONES ANTARTICAS Y A LAS BASES UBICADAS EN EL
+TERRITORIO ANTARTICO CHILENO Y AL PERSONAL QUE LABORA EN
+ELLAS 

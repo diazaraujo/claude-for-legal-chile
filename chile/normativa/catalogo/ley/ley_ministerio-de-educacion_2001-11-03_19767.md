@@ -1,0 +1,17 @@
+---
+slug: ley_ministerio-de-educacion_2001-11-03_19767
+tipo: ley
+numero: 19767
+titulo_oficial: "AUTORIZA A LA UNIVERSIDAD DE CHILE LA CONTRATACION DE EMPRESTITOS PARA FINANCIAR LA CONSTRUCCION DE UN PARQUE CIENTIFICO-TECNOLOGICO Y FACULTA AL PRESIDENTE DE LA REPUBLICA PARA OTORGAR GARANTIA DEL ESTADO"
+publicacion: 2001-11-03
+emisor: ministerio-de-educacion
+leychile_code: 191257
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=191257
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-educacion/2001-11-03/19767
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# LEY 19767
+
+**Título oficial:** AUTORIZA A LA UNIVERSIDAD DE CHILE LA CONTRATACION DE EMPRESTITOS PARA FINANCIAR LA CONSTRUCCION DE UN PARQUE CIENTIFICO-TECNOLOGICO Y FACULTA AL PRESIDENTE DE LA REPUBLICA PARA OTORGAR GARANTIA DEL ESTADO

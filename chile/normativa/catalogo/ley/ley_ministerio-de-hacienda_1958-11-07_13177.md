@@ -1,0 +1,17 @@
+---
+slug: ley_ministerio-de-hacienda_1958-11-07_13177
+tipo: ley
+numero: 13177
+titulo_oficial: "Ley 13177"
+publicacion: 1958-11-07
+emisor: ministerio-de-hacienda
+leychile_code: 212966
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=212966
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-hacienda/1958-11-07/13177
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# LEY 13177
+
+**Título oficial:** Ley 13177

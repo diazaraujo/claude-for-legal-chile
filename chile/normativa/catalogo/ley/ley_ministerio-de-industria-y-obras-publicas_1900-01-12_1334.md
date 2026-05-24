@@ -1,0 +1,17 @@
+---
+slug: ley_ministerio-de-industria-y-obras-publicas_1900-01-12_1334
+tipo: ley
+numero: 1334
+titulo_oficial: "Ley 1334"
+publicacion: 1900-01-12
+emisor: ministerio-de-industria-y-obras-publicas
+leychile_code: 22568
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=22568
+bcn_uri: http://datos.bcn.cl/recurso/cl/ley/ministerio-de-industria-y-obras-publicas/1900-01-12/1334
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# LEY 1334
+
+**Título oficial:** Ley 1334
