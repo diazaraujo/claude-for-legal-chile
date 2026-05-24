@@ -282,6 +282,70 @@ class CorpusSearchClient:
         """Genera cita formal desde el path."""
         return cite_from_path(path)
 
+    def verify_quote(
+        self, text: str, path: str, fuzzy: bool = True,
+        context_chars: int = 200,
+    ) -> dict:
+        """Confirma que `text` aparece literalmente en el doc.
+
+        - fuzzy=True: normaliza whitespace + case-insensitive antes de comparar
+          (resiliente a errores OCR tipo doble espacio, saltos línea).
+        - Returns: dict con found (bool), position (int o -1),
+          context_before/after (str), normalized_match (str si fuzzy).
+
+        Uso anti-hallucination: tras `corpus_search` retornar un hit,
+        Claude puede llamar verify_quote para confirmar que la frase
+        que va a citar existe textualmente en el doc."""
+        p = Path(path)
+        if not p.exists():
+            return {"found": False, "error": "path no existe", "position": -1}
+        try:
+            content = p.read_text(encoding="utf-8", errors="replace")
+        except Exception as e:
+            return {"found": False, "error": str(e), "position": -1}
+
+        if not text.strip():
+            return {"found": False, "error": "text vacío", "position": -1}
+
+        # Exact match first
+        idx = content.find(text)
+        if idx >= 0:
+            return {
+                "found": True, "position": idx,
+                "match_type": "exact",
+                "context_before": content[max(0, idx - context_chars):idx],
+                "context_after": content[idx + len(text):idx + len(text) + context_chars],
+                "normalized_match": text,
+            }
+
+        if not fuzzy:
+            return {"found": False, "position": -1, "match_type": "exact_failed"}
+
+        # Fuzzy: normalize whitespace + case
+        def norm(s: str) -> str:
+            return re.sub(r"\s+", " ", s).strip().lower()
+
+        norm_text = norm(text)
+        norm_content = norm(content)
+        idx = norm_content.find(norm_text)
+        if idx >= 0:
+            # Map back to original position (approximate)
+            # Find a unique substring of the normalized match in original
+            sample = re.escape(text[:50])
+            sample_pattern = re.sub(r"\\\\\s", r"\\s+", sample)
+            m = re.search(sample_pattern, content, re.IGNORECASE)
+            orig_idx = m.start() if m else idx
+            orig_end = orig_idx + len(text)
+            return {
+                "found": True, "position": orig_idx,
+                "match_type": "fuzzy",
+                "context_before": content[max(0, orig_idx - context_chars):orig_idx],
+                "context_after": content[orig_end:orig_end + context_chars],
+                "normalized_match": norm_text[:200],
+            }
+
+        return {"found": False, "position": -1, "match_type": "not_found"}
+
     def _ollama_embed(self, text: str, timeout: int = 60) -> list[float] | None:
         if len(text) > 8000:
             text = text[:8000]

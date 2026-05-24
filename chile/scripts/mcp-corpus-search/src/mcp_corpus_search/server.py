@@ -259,6 +259,39 @@ async def list_tools() -> list[Tool]:
             ),
             inputSchema={"type": "object", "properties": {}},
         ),
+        Tool(
+            name="corpus_verify_quote",
+            description=(
+                "Verifica que un texto literal aparece en un documento "
+                "del corpus. Anti-hallucination crítico: antes de citar "
+                "verbatim un párrafo de una sentencia/ley, llamar este "
+                "tool para confirmar. Returns: found, position, "
+                "context_before/after, match_type (exact|fuzzy|not_found). "
+                "fuzzy=True (default) tolera errores OCR de whitespace/case."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "text": {
+                        "type": "string",
+                        "description": "Texto literal a verificar en el doc",
+                    },
+                    "path": {
+                        "type": "string",
+                        "description": "Path al .pdf.txt o .xml.txt (del search)",
+                    },
+                    "fuzzy": {
+                        "type": "boolean", "default": True,
+                        "description": "True: normaliza whitespace/case (recomendado para OCR)",
+                    },
+                    "context_chars": {
+                        "type": "integer", "default": 200,
+                        "description": "Chars de contexto before/after el match",
+                    },
+                },
+                "required": ["text", "path"],
+            },
+        ),
     ]
 
 
@@ -393,6 +426,17 @@ async def call_tool(name: str, arguments: dict[str, Any]) -> list[TextContent]:
     if name == "corpus_embeddings_status":
         return [TextContent(type="text", text=json.dumps(
             client.embeddings_status(), ensure_ascii=False, indent=2
+        ))]
+
+    if name == "corpus_verify_quote":
+        result = client.verify_quote(
+            text=str(arguments.get("text", "")),
+            path=str(arguments.get("path", "")),
+            fuzzy=bool(arguments.get("fuzzy", True)),
+            context_chars=int(arguments.get("context_chars", 200)),
+        )
+        return [TextContent(type="text", text=json.dumps(
+            result, ensure_ascii=False, indent=2
         ))]
 
     return [TextContent(type="text", text=json.dumps(
