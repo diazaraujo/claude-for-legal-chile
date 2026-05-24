@@ -1,0 +1,112 @@
+# Golden test suite — queries jurídicamente significativas con
+# resultados esperados en el corpus actual. Verifica regressions al
+# cambiar índice / chunking / re-ranking.
+#
+# Schema:
+#   query: texto de búsqueda
+#   source: filtro de fuente (opcional)
+#   sources: lista de fuentes (opcional, OR)
+#   year_from/year_to: rango temporal (opcional)
+#   expect_top: cuántos resultados verificar (default 1)
+#   expect_any:
+#     - path_contains: substring que algún path en top_N debe contener
+#     - or:
+#       - path_contains: alternativa A
+#       - path_contains: alternativa B
+#   min_score: BM25 score mínimo (más cercano a 0 = mejor; default -50)
+
+cases:
+  - id: ley_proteccion_datos_basica
+    query: sobre protección de la vida privada
+    sources: ["leychile-ley"]
+    expect_top: 5
+    expect_any:
+      # Ley 19.628 — Protección Vida Privada — idNorma 199093 (verified)
+      - path_contains: "/199093.xml.txt"
+
+  - id: codigo_trabajo_articulo
+    query: código del trabajo articulo 159 161 causales término
+    sources: ["leychile-cod", "leychile-dfl"]
+    expect_top: 5
+    expect_any:
+      # Código del Trabajo — DFL 1 de 2002 — idNorma 207436 (en /dfl/, no /cod/)
+      - path_contains: "/207436.xml.txt"
+
+  - id: ley_libre_competencia
+    query: decreto ley 211 libre competencia tribunal
+    sources: ["leychile-dl"]
+    expect_top: 3
+    expect_any:
+      # DL 211 de 1973 — Libre Competencia — idNorma 5872 (verified)
+      - path_contains: "/5872.xml.txt"
+
+  - id: tdlc_caso_farmacias
+    query: "colusión farmacias precio"
+    sources: ["tdlc"]
+    expect_top: 5
+    expect_any:
+      # Sentencia 119/2012 sentencia colusión farmacias (FASA, Cruz Verde, SalcoBrand)
+      - path_contains: "sentencia-119-2012"
+
+  - id: tdlc_caso_supermercados
+    query: "supermercados precio carne pollo cerdo"
+    sources: ["tdlc"]
+    expect_top: 5
+    expect_any:
+      # Sentencia 167/2019 caso colusión carne
+      - path_contains: "sentencia-167-2019"
+      - path_contains: "sentencia-167-2018"
+
+  - id: tdpi_patente_invencion
+    query: "patente invención bioquímica rechazo"
+    source: "tdpi"
+    expect_top: 3
+    expect_any:
+      - path_contains: "PATENTE-DE-INVENCION-BIOQUIMICA"
+
+  - id: tribunal_ambiental_contaminacion
+    query: "contaminación atmosférica material particulado"
+    source: "tribunales-ambientales"
+    expect_top: 5
+    expect_any:
+      - path_contains: "tribunal-12"
+      - path_contains: "tribunal-3"
+
+  - id: diario_oficial_reciente_uf
+    query: "Unidad de Fomento reajuste"
+    source: "diario-oficial"
+    year_from: "2024"
+    expect_top: 5
+    expect_any:
+      - path_contains: "diario-oficial/2024/"
+      - path_contains: "diario-oficial/2025/"
+      - path_contains: "diario-oficial/2026/"
+
+  - id: tc_moderno_inaplicabilidad
+    query: "inaplicabilidad por inconstitucionalidad código orgánico"
+    source: "tc-moderno"
+    expect_top: 3
+    expect_any:
+      - path_contains: "STC_Rol_N"
+
+  - id: cmf_circular_bancaria
+    query: "circular norma bancos sociedades anónimas"
+    source: "cmf"
+    expect_top: 5
+    expect_any:
+      - path_contains: "cmf/"
+
+  - id: sii_circular_impuesto
+    query: "impuesto al valor agregado IVA contribuyente"
+    source: "sii"
+    expect_top: 5
+    expect_any:
+      - path_contains: "sii/"
+
+  - id: cross_source_libre_competencia
+    query: "libre competencia adquisición control"
+    sources: ["tdlc", "fne", "leychile-dl"]
+    expect_top: 10
+    expect_any:
+      - path_contains: "tdlc/"
+      - path_contains: "fne/"
