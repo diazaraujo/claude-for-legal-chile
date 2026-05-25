@@ -282,6 +282,59 @@ class CorpusSearchClient:
         """Genera cita formal desde el path."""
         return cite_from_path(path)
 
+    def search_articulos(
+        self, query: str,
+        leychile_code: int | None = None,
+        articulo_num: str = "",
+        limit: int = 10,
+        snippet_len: int = 240,
+    ) -> list[dict]:
+        """Búsqueda por ARTÍCULO específico (no por doc completo).
+        Útil para queries tipo 'art. 161 código del trabajo causales'.
+
+        - query: texto FTS5 (puede estar vacío si filter es por num/code)
+        - leychile_code: filtrar a artículos de un idNorma específico
+        - articulo_num: filtrar a un número (ej. "161", "1 bis")
+        Returns: list de hits con doc_path, articulo_num, seccion, snippet, score.
+        """
+        conn = sqlite3.connect(str(self.db_path), timeout=30)
+        try:
+            where = []
+            params: list = []
+            if query.strip():
+                where.append("articulos MATCH ?")
+                params.append(query)
+            if leychile_code is not None:
+                where.append("leychile_code = ?")
+                params.append(leychile_code)
+            if articulo_num:
+                where.append("articulo_num = ?")
+                params.append(articulo_num)
+            if not where:
+                return []
+            order_by = "bm25(articulos)" if query.strip() else "rowid"
+            sql = (
+                f"SELECT doc_path, leychile_code, articulo_num, seccion, "
+                f"snippet(articulos, 4, '«', '»', '…', 32) as snip, "
+                f"{order_by if query.strip() else '0'} as score "
+                f"FROM articulos WHERE {' AND '.join(where)} "
+                f"ORDER BY {order_by} LIMIT ?"
+            )
+            params.append(limit)
+            rows = conn.execute(sql, params).fetchall()
+        finally:
+            conn.close()
+        results = []
+        for path, code, art_num, seccion, snip, score in rows:
+            clean = re.sub(r"\s+", " ", snip).strip()[:snippet_len]
+            results.append({
+                "doc_path": path, "leychile_code": code,
+                "articulo_num": art_num or "(sin número)",
+                "seccion": seccion or "",
+                "snippet": clean, "score": float(score),
+            })
+        return results
+
     def verify_quote(
         self, text: str, path: str, fuzzy: bool = True,
         context_chars: int = 200,

@@ -260,6 +260,37 @@ async def list_tools() -> list[Tool]:
             inputSchema={"type": "object", "properties": {}},
         ),
         Tool(
+            name="corpus_search_articulos",
+            description=(
+                "Búsqueda por ARTÍCULO específico de leyes/decretos chilenos "
+                "(218k artículos extraídos de XMLs LeyChile). Granularidad "
+                "más fina que corpus_search. Combina query + filtros leychile_code "
+                "y articulo_num. Ej: query='causales término' + leychile_code=207436 "
+                "(Código Trabajo) → retorna artículos 159, 161, 168 etc. con "
+                "esa frase. Para citar 'Art. X de Ley Y' verificable."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "query": {
+                        "type": "string", "default": "",
+                        "description": "FTS5 query (puede vacío si filtras por num/code)",
+                    },
+                    "leychile_code": {
+                        "type": "integer",
+                        "description": "idNorma BCN del documento (filtra a artículos de esa norma)",
+                    },
+                    "articulo_num": {
+                        "type": "string", "default": "",
+                        "description": "Número exacto del artículo (ej '161', '1 bis')",
+                    },
+                    "limit": {"type": "integer", "default": 10},
+                    "snippet_len": {"type": "integer", "default": 240},
+                },
+                "required": ["query"],
+            },
+        ),
+        Tool(
             name="corpus_verify_quote",
             description=(
                 "Verifica que un texto literal aparece en un documento "
@@ -427,6 +458,18 @@ async def call_tool(name: str, arguments: dict[str, Any]) -> list[TextContent]:
         return [TextContent(type="text", text=json.dumps(
             client.embeddings_status(), ensure_ascii=False, indent=2
         ))]
+
+    if name == "corpus_search_articulos":
+        results = client.search_articulos(
+            query=str(arguments.get("query", "")),
+            leychile_code=arguments.get("leychile_code"),
+            articulo_num=str(arguments.get("articulo_num", "")),
+            limit=max(1, min(50, int(arguments.get("limit", 10)))),
+            snippet_len=max(40, min(800, int(arguments.get("snippet_len", 240)))),
+        )
+        return [TextContent(type="text", text=json.dumps({
+            "n_hits": len(results), "results": results,
+        }, ensure_ascii=False, indent=2))]
 
     if name == "corpus_verify_quote":
         result = client.verify_quote(
