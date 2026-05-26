@@ -323,6 +323,37 @@ async def list_tools() -> list[Tool]:
             },
         ),
         Tool(
+            name="corpus_summarize",
+            description=(
+                "Resumen ejecutivo (~200 palabras) de un doc legal chileno "
+                "usando Claude Haiku. Estructura: tipo, materia/partes, "
+                "decisión, fundamento legal. Útil para entender una sentencia "
+                "de 50pp en 30s antes de citar. Requiere ANTHROPIC_API_KEY. "
+                "~$0.001/llamada."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "path": {
+                        "type": "string",
+                        "description": "Path al doc del corpus (.pdf.txt, .xml.txt)",
+                    },
+                    "max_words": {
+                        "type": "integer", "default": 200,
+                        "description": "Longitud objetivo (50-500)",
+                    },
+                    "focus": {
+                        "type": "string", "default": "",
+                        "description": (
+                            "Instrucción extra opcional. Ej: 'foco en causal "
+                            "despido', 'identifica votación disidente'."
+                        ),
+                    },
+                },
+                "required": ["path"],
+            },
+        ),
+        Tool(
             name="corpus_expand_query",
             description=(
                 "Reformula query en lenguaje natural a términos legales "
@@ -561,6 +592,21 @@ async def _call_tool_impl(name: str, arguments: dict[str, Any]) -> list[TextCont
         return [TextContent(type="text", text=json.dumps({
             "n_hits": len(results), "results": results,
         }, ensure_ascii=False, indent=2))]
+
+    if name == "corpus_summarize":
+        path = str(arguments.get("path", "")).strip()
+        if not path:
+            return [TextContent(type="text", text=json.dumps(
+                {"error": "path es requerido"}, ensure_ascii=False
+            ))]
+        result = client.summarize_document(
+            path=path,
+            max_words=max(50, min(500, int(arguments.get("max_words", 200)))),
+            focus=str(arguments.get("focus", "")),
+        )
+        return [TextContent(type="text", text=json.dumps(
+            result, ensure_ascii=False, indent=2
+        ))]
 
     if name == "corpus_expand_query":
         natural = str(arguments.get("natural_query", "")).strip()

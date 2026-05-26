@@ -287,6 +287,71 @@ class CorpusSearchClient:
         """Genera cita formal desde el path."""
         return cite_from_path(path)
 
+    def summarize_document(
+        self,
+        path: str,
+        max_words: int = 200,
+        focus: str = "",
+        model: str = "claude-haiku-4-5-20251001",
+    ) -> dict:
+        """Resumen ejecutivo de un documento legal chileno con Haiku.
+
+        Lee primeros ~12k chars del doc y pide a Haiku un resumen
+        estructurado: tipo, partes/materia, decisión/disposición,
+        fundamento legal clave. ~$0.001 por llamada.
+        """
+        try:
+            text = self.get_full_text(path, max_chars=12000)
+        except Exception as e:
+            return {"summary": "", "error": f"no se pudo leer: {e}", "path": path}
+        if not text.strip():
+            return {"summary": "", "error": "doc vacío", "path": path}
+
+        try:
+            from anthropic import Anthropic
+        except ImportError:
+            return {"summary": "", "error": "anthropic SDK no instalado", "path": path}
+        if not os.environ.get("ANTHROPIC_API_KEY"):
+            return {"summary": "", "error": "ANTHROPIC_API_KEY no seteado", "path": path}
+
+        try:
+            cit = self.cite(path)
+            cita_str = cit.citation if cit else ""
+        except Exception:
+            cita_str = ""
+
+        focus_line = f"\nFoco adicional: {focus}\n" if focus else ""
+        prompt = (
+            f"Documento legal chileno{f' ({cita_str})' if cita_str else ''}. "
+            f"Resume en máximo {max_words} palabras, en español chileno formal "
+            f"(NO 'che', 'vos', NO rioplatense). Estructura:\n"
+            f"- **Tipo**: ley/sentencia/dictamen/decreto\n"
+            f"- **Materia/Partes** (si aplica)\n"
+            f"- **Disposición/Decisión clave**\n"
+            f"- **Fundamento legal central** (artículos/normas citados)\n"
+            f"{focus_line}\n"
+            f"Texto del documento:\n---\n{text}\n---\n\n"
+            f"Resumen:"
+        )
+        try:
+            client = Anthropic()
+            resp = client.messages.create(
+                model=model,
+                max_tokens=max(300, int(max_words * 4)),
+                messages=[{"role": "user", "content": prompt}],
+            )
+            summary = resp.content[0].text.strip()
+        except Exception as e:
+            return {"summary": "", "error": f"Haiku err: {type(e).__name__}", "path": path}
+
+        return {
+            "summary": summary,
+            "words": len(summary.split()),
+            "model": model,
+            "path": path,
+            "citation": cita_str,
+        }
+
     def expand_query(
         self,
         natural_query: str,
