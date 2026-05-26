@@ -131,6 +131,18 @@ async def list_tools() -> list[Tool]:
                         "default": 240,
                         "description": "Caracteres del snippet (40-800).",
                     },
+                    "rerank": {
+                        "type": "boolean",
+                        "default": False,
+                        "description": (
+                            "Re-rankea con Claude Haiku post-BM25. Pide a "
+                            "Haiku que ordene los top-4x por relevancia "
+                            "semántica real al query. Cuesta ~$0.0002 por "
+                            "llamada. Requiere ANTHROPIC_API_KEY en env. "
+                            "Útil para queries naturales ambiguas; "
+                            "innecesario para queries con keywords precisos."
+                        ),
+                    },
                 },
                 "required": ["query"],
             },
@@ -356,6 +368,7 @@ async def call_tool(name: str, arguments: dict[str, Any]) -> list[TextContent]:
                 snippet_len=max(40, min(800, int(
                     arguments.get("snippet_len", 240)
                 ))),
+                rerank=bool(arguments.get("rerank", False)),
             )
         except ValueError as e:
             return [TextContent(type="text", text=json.dumps(

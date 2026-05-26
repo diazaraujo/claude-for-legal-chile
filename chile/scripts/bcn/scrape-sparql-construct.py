@@ -22,11 +22,23 @@ Output: chile/normativa/catalogo/{tipo}/{slug}.md (mismo formato que
 los otros scrapers).
 """
 from __future__ import annotations
-import argparse, re, sys, time, urllib.error, urllib.parse, urllib.request
+import argparse, base64, json, os, re, sys, time, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).resolve().parents[3]
-CATALOG_ROOT = REPO_ROOT / "chile/normativa/catalogo"
+ZYTE_API = "https://api.zyte.com/v1/extract"
+
+# Default — overridable via --output-dir or CATALOG_OUTPUT env
+def _default_catalog_root() -> Path:
+    env = __import__("os").environ.get("CATALOG_OUTPUT", "")
+    if env:
+        return Path(env)
+    try:
+        return Path(__file__).resolve().parents[3] / "chile/normativa/catalogo"
+    except IndexError:
+        return Path(".") / "catalog"
+
+
+CATALOG_ROOT = _default_catalog_root()
 SPARQL_URL = "https://datos.bcn.cl/sparql"
 USER_AGENT = "claude-legal-chile/0.7 (unholster.com)"
 
@@ -36,14 +48,9 @@ TIPO_URI = "http://datos.bcn.cl/recurso/cl/norma/tipo#{tipo}"
 # Pagination via FILTER(STR(?n) > "X") — cada batch trae los siguientes
 # URIs por orden léxico, sin OFFSET costoso.
 QUERY_TPL = """PREFIX bcnnorms: <http://datos.bcn.cl/ontologies/bcn-norms#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 CONSTRUCT {{
   ?n bcnnorms:leychileCode ?code ;
-     bcnnorms:hasNumber ?num ;
-     bcnnorms:publishDate ?pd ;
-     bcnnorms:promulgationDate ?prd ;
-     bcnnorms:createdBy ?org ;
-     rdfs:label ?lab .
+     bcnnorms:hasNumber ?num .
 }}
 WHERE {{
   ?n a bcnnorms:RootNorm ;
@@ -51,36 +58,69 @@ WHERE {{
   FILTER (STR(?n) > "{after}")
   OPTIONAL {{ ?n bcnnorms:leychileCode ?code }}
   OPTIONAL {{ ?n bcnnorms:hasNumber ?num }}
-  OPTIONAL {{ ?n bcnnorms:publishDate ?pd }}
-  OPTIONAL {{ ?n bcnnorms:promulgationDate ?prd }}
-  OPTIONAL {{ ?n bcnnorms:createdBy ?org }}
-  OPTIONAL {{ ?n rdfs:label ?lab }}
 }}
 ORDER BY ?n
 LIMIT {limit}"""
 
-# Patrones para parsear turtle simple
+# Parser turtle vía rdflib (maneja @prefix correctamente — fundamental
+# porque Virtuoso namespacea para reducir bytes).
+try:
+    import rdflib
+    _HAS_RDFLIB = True
+except ImportError:
+    _HAS_RDFLIB = False
+
+# Fallback parser regex (sin prefixes — solo si rdflib no disponible)
 TRIPLE_RE = re.compile(
-    r"<(http://datos\.bcn\.cl/recurso/cl/[^>]+)>\s+"
-    r"<(http://datos\.bcn\.cl/ontologies/bcn-norms#\w+|"
-    r"http://www\.w3\.org/2000/01/rdf-schema#label)>\s+"
-    r'("([^"]*)"(\^\^<[^>]+>)?(@\w+)?|<([^>]+)>)\s*[.;]'
+    r'<(http://datos\.bcn\.cl/recurso/cl/[^>]+)>\s+'
+    r'<(http://[^>]+)>\s+'
+    r'("([^"\\]*(?:\\.[^"\\]*)*)"(\^\^<[^>]+>)?(@[\w-]+)?|<([^>]+)>)\s*\.'
 )
 
 
 def sparql_construct(tipo: str, after: str, limit: int = 5000,
-                     timeout: int = 240) -> str:
+                     timeout: int = 240, zyte_auth: str | None = None) -> str:
     q = QUERY_TPL.format(tipo_uri=TIPO_URI.format(tipo=tipo),
                          limit=limit, after=after)
+
+    # Turtle: usamos rdflib para parsear (maneja @prefix correctamente).
+    fmt = "text/turtle"
+
+    if zyte_auth:
+        # Encode query as URL params, send via Zyte API
+        # Rotación geo: BR/MX/AR/ES funcionan más rápido (~10s) que US/CL.
+        import random
+        geo = random.choice(["BR", "MX", "AR", "ES"])
+        target_url = SPARQL_URL + "?" + urllib.parse.urlencode({
+            "query": q, "format": fmt,
+        })
+        payload = {
+            "url": target_url, "httpResponseBody": True,
+            "geolocation": geo,
+        }
+        req = urllib.request.Request(
+            ZYTE_API, data=json.dumps(payload).encode(),
+            headers={
+                "Authorization": f"Basic {zyte_auth}",
+                "Content-Type": "application/json",
+            },
+        )
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            zyte_resp = json.loads(r.read())
+        body_b64 = zyte_resp.get("httpResponseBody", "")
+        body = base64.b64decode(body_b64) if body_b64 else b""
+        return body.decode("utf-8", errors="replace")
+
+    # Direct (no proxy)
     data = urllib.parse.urlencode({
-        "query": q, "format": "text/turtle",
+        "query": q, "format": fmt,
     }).encode()
     req = urllib.request.Request(
         SPARQL_URL, data=data,
         headers={
             "User-Agent": USER_AGENT,
             "Content-Type": "application/x-www-form-urlencoded",
-            "Accept": "text/turtle",
+            "Accept": fmt,
         },
     )
     with urllib.request.urlopen(req, timeout=timeout) as r:
@@ -88,13 +128,31 @@ def sparql_construct(tipo: str, after: str, limit: int = 5000,
 
 
 def parse_turtle(text: str) -> dict[str, dict]:
-    """Parse triples turtle simple → dict[uri][predicate] = value."""
+    """Parse triples turtle → dict[uri][predicate] = value.
+    Usa rdflib si está disponible (maneja @prefix). Fallback a regex
+    para n-triples format (sin prefixes)."""
     out: dict[str, dict] = {}
-    # Split por triplets — turtle puede usar . o ; como separator
-    # Approach: regex sobre cada match
+    if _HAS_RDFLIB:
+        try:
+            g = rdflib.Graph()
+            g.parse(data=text, format="turtle")
+        except Exception:
+            return out
+        for s, p, o in g:
+            s_str = str(s)
+            if not s_str.startswith("http://datos.bcn.cl/recurso/cl/"):
+                continue
+            pred = str(p)
+            if "#" in pred:
+                local = pred.rsplit("#", 1)[1]
+            else:
+                local = pred.rsplit("/", 1)[1]
+            out.setdefault(s_str, {})[local] = str(o)
+        return out
+
+    # Fallback regex (n-triples only)
     for m in TRIPLE_RE.finditer(text):
         subject, pred, _full, lit_val, _dtype, _lang, uri_val = m.groups()
-        # Local name
         if "#" in pred: local = pred.rsplit("#", 1)[1]
         else: local = pred.rsplit("/", 1)[1]
         val = lit_val if lit_val is not None else uri_val
@@ -161,7 +219,23 @@ def main() -> int:
                         help="URI desde el cual continuar (cursor pagination)")
     parser.add_argument("--rate", type=float, default=2.0,
                         help="sleep entre batches")
+    parser.add_argument("--zyte", action="store_true",
+                        help="Routear queries SPARQL por Zyte (evita rate-limit IP local)")
+    parser.add_argument("--output-dir", default="",
+                        help="Override CATALOG_ROOT (útil corriendo en otra máquina)")
     args = parser.parse_args()
+    if args.output_dir:
+        global CATALOG_ROOT
+        CATALOG_ROOT = Path(args.output_dir)
+
+    zyte_auth = None
+    if args.zyte:
+        key = os.environ.get("ZYTE_API_KEY", "")
+        if not key:
+            print("ERROR: --zyte requiere env ZYTE_API_KEY", flush=True)
+            return 2
+        zyte_auth = base64.b64encode(f"{key}:".encode()).decode()
+        print(f"[ZYTE] routing SPARQL via api.zyte.com (bypassa rate-limit BCN)", flush=True)
 
     tipos = [t.strip() for t in args.tipos.split(",") if t.strip()]
     start = time.time()
@@ -175,7 +249,7 @@ def main() -> int:
         while True:
             t0 = time.time()
             try:
-                turtle = sparql_construct(tipo, after, args.limit)
+                turtle = sparql_construct(tipo, after, args.limit, zyte_auth=zyte_auth)
             except urllib.error.HTTPError as e:
                 wait = 30 * (2 ** min(consecutive_empty, 3))
                 print(f"  HTTP {e.code} after={after[-40:]}, retry {wait}s", flush=True)

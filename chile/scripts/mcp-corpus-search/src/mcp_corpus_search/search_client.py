@@ -86,6 +86,7 @@ class CorpusSearchClient:
         vigentes_only: bool = False,
         limit: int = 10,
         snippet_len: int = 240,
+        rerank: bool = False,
     ) -> list[SearchHit]:
         if not query.strip():
             return []
@@ -170,7 +171,9 @@ class CorpusSearchClient:
                 pass
 
         results: list[SearchHit] = []
-        for i, (src, yr, path, snip, score) in enumerate(rows, 1):
+        # Si rerank=True, traer 4x para que Haiku ordene
+        keep_n = limit * 4 if rerank else limit
+        for i, (src, yr, path, snip, score) in enumerate(rows[:keep_n], 1):
             snip_clean = re.sub(r"\s+", " ", snip).strip()
             if len(snip_clean) > snippet_len:
                 snip_clean = snip_clean[:snippet_len] + "…"
@@ -180,7 +183,9 @@ class CorpusSearchClient:
                 path=path, pdf_path=pdf_path,
                 snippet=snip_clean, score=float(score),
             ))
-        return results
+        if rerank and len(results) > 1:
+            results = self.rerank_with_haiku(query, results, top_k=limit)
+        return results[:limit]
 
     def recent(
         self,
@@ -281,6 +286,91 @@ class CorpusSearchClient:
     def cite(self, path: str) -> Citation:
         """Genera cita formal desde el path."""
         return cite_from_path(path)
+
+    def rerank_with_haiku(
+        self,
+        query: str,
+        hits: list["SearchHit"],
+        top_k: int = 5,
+        model: str = "claude-haiku-4-5-20251001",
+    ) -> list["SearchHit"]:
+        """Re-rankea hits con Claude Haiku.
+
+        Toma los top-N de BM25 + sus snippets, le pide a Haiku que
+        ordene por relevancia semántica real al query. Retorna top-K.
+        Requiere ANTHROPIC_API_KEY en env.
+
+        Costo aprox: input ~500 tokens (query + N snippets) × $0.25/1M
+                     output ~50 tokens (lista de IDs ordenados) × $1.25/1M
+                     = ~$0.0002 por rerank — negligible.
+        """
+        if not hits or len(hits) <= 1:
+            return hits[:top_k]
+        try:
+            from anthropic import Anthropic
+        except ImportError:
+            return hits[:top_k]
+        if not os.environ.get("ANTHROPIC_API_KEY"):
+            return hits[:top_k]
+
+        # Build prompt: enumerated snippets
+        items = []
+        for i, h in enumerate(hits):
+            cite_label = ""
+            try:
+                from .citation import from_path
+                cite_label = from_path(h.path).citation
+            except Exception:
+                pass
+            items.append(
+                f"[{i+1}] {cite_label or h.source}: {h.snippet[:300]}"
+            )
+        prompt = (
+            f"Query del usuario: {query!r}\n\n"
+            f"Tienes {len(hits)} documentos candidatos (rankeados por BM25):\n\n"
+            + "\n\n".join(items)
+            + f"\n\nReordéna los top-{top_k} más relevantes SEMÁNTICAMENTE para "
+            f"esa query. Responde SÓLO con los índices separados por coma, "
+            f"sin explicación. Ej: '3,1,7,2,5'"
+        )
+        try:
+            client = Anthropic()
+            resp = client.messages.create(
+                model=model,
+                max_tokens=200,
+                messages=[{"role": "user", "content": prompt}],
+            )
+            text = resp.content[0].text.strip()
+        except Exception:
+            return hits[:top_k]
+
+        # Parse índices "3,1,7,2,5"
+        try:
+            indices = [int(x.strip()) - 1 for x in re.split(r"[,;\s]+", text) if x.strip().isdigit()]
+        except Exception:
+            return hits[:top_k]
+
+        # Reorder + dedupe + cap
+        seen = set()
+        result: list[SearchHit] = []
+        for idx in indices:
+            if 0 <= idx < len(hits) and idx not in seen:
+                seen.add(idx)
+                # Re-rank: assign new rank + bump score to reflect order
+                h = hits[idx]
+                result.append(SearchHit(
+                    rank=len(result) + 1, source=h.source, year=h.year,
+                    path=h.path, pdf_path=h.pdf_path,
+                    snippet=h.snippet, score=h.score,
+                ))
+            if len(result) >= top_k:
+                break
+        # Si Haiku no devolvió suficientes, completar con orden BM25 original
+        for i, h in enumerate(hits):
+            if i not in seen and len(result) < top_k:
+                seen.add(i)
+                result.append(h)
+        return result
 
     def search_articulos(
         self, query: str,
