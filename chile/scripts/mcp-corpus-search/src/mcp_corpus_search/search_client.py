@@ -287,6 +287,79 @@ class CorpusSearchClient:
         """Genera cita formal desde el path."""
         return cite_from_path(path)
 
+    def expand_query(
+        self,
+        natural_query: str,
+        max_terms: int = 8,
+        model: str = "claude-haiku-4-5-20251001",
+    ) -> dict:
+        """Reformula query natural a términos legales chilenos precisos.
+
+        Usa Claude Haiku para traducir lenguaje coloquial → keywords
+        técnicos. Ej:
+          'puede despedir embarazada' → ['fuero maternal', 'despido
+          embarazada', 'artículo 174', 'causal despido']
+          'que pasa si chocan mi auto sin licencia' → ['daños emergente',
+          'lucro cesante', 'culpa', 'Ley 18.290', 'responsabilidad civil']
+
+        Returns: dict con keys 'fts_query' (string FTS5 lista a usar),
+        'terms' (list expandida), 'rationale' (explicación corta).
+
+        Requiere ANTHROPIC_API_KEY. Costo ~$0.0001 por expansion.
+        """
+        if not natural_query.strip():
+            return {"fts_query": "", "terms": [], "rationale": "query vacía"}
+        try:
+            from anthropic import Anthropic
+        except ImportError:
+            return {"fts_query": natural_query, "terms": [natural_query],
+                    "rationale": "anthropic SDK no disponible"}
+        if not os.environ.get("ANTHROPIC_API_KEY"):
+            return {"fts_query": natural_query, "terms": [natural_query],
+                    "rationale": "ANTHROPIC_API_KEY no seteado"}
+
+        prompt = (
+            f"Query del usuario (lenguaje natural): {natural_query!r}\n\n"
+            f"Reformula a términos legales chilenos para búsqueda FTS5 sobre "
+            f"corpus de leyes/sentencias/dictámenes. Identifica:\n"
+            f"- Términos técnicos legales\n"
+            f"- Números de ley o artículo si son obvios\n"
+            f"- Sinónimos relevantes en jerga jurídica chilena\n\n"
+            f"Responde SOLO un JSON con shape exacta:\n"
+            f'{{"fts_query": "term1 OR term2 OR \\"frase exacta\\"", '
+            f'"terms": ["term1","term2"], "rationale": "explicación 1 línea"}}\n\n'
+            f"Máx {max_terms} términos. FTS5 syntax (OR, NEAR, frases entre comillas)."
+        )
+        try:
+            client = Anthropic()
+            resp = client.messages.create(
+                model=model,
+                max_tokens=400,
+                messages=[{"role": "user", "content": prompt}],
+            )
+            text = resp.content[0].text.strip()
+        except Exception as e:
+            return {"fts_query": natural_query, "terms": [natural_query],
+                    "rationale": f"err Haiku: {type(e).__name__}"}
+
+        # Parse JSON output (Haiku puede agregar prosa antes/después)
+        import json as _json
+        m = re.search(r"\{[^{}]*\"fts_query\"[^{}]*\}", text, re.DOTALL)
+        if m:
+            try:
+                data = _json.loads(m.group(0))
+                if "fts_query" in data:
+                    return {
+                        "fts_query": data.get("fts_query", natural_query),
+                        "terms": data.get("terms", []),
+                        "rationale": data.get("rationale", ""),
+                    }
+            except _json.JSONDecodeError:
+                pass
+        # Fallback
+        return {"fts_query": natural_query, "terms": [natural_query],
+                "rationale": f"parse_failed: {text[:100]}"}
+
     def rerank_with_haiku(
         self,
         query: str,

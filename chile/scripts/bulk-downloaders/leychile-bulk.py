@@ -167,16 +167,10 @@ def download_xml(
                 with _LOCK: _STATS["404"] += 1
                 return "404"
             if e.code == 520:
-                # Zyte Website Ban — Zyte agotó pool, esperar global
-                with _LOCK:
-                    _STATS["ban"] += 1
-                    # Backoff exponencial global: 30s, 60s, 120s
-                    backoff = 30 * (2 ** attempt)
-                    _GLOBAL_BACKOFF["until"] = max(
-                        _GLOBAL_BACKOFF["until"], time.time() + backoff
-                    )
-                if attempt < max_retries:
-                    continue
+                # Zyte Website Ban — sin retry, sin global backoff. El
+                # global backoff paraliza todos los workers; mejor skip
+                # y reintentar en próximo run idempotente.
+                with _LOCK: _STATS["ban"] += 1
                 return "ban"
             with _LOCK: _STATS["err"] += 1
             return f"http{e.code}"

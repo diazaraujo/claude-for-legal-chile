@@ -11,6 +11,8 @@ import asyncio
 import json
 import logging
 import os
+import time
+from pathlib import Path
 from typing import Any
 
 from mcp.server import Server
@@ -24,6 +26,24 @@ server: Server = Server("mcp-corpus-search")
 
 _DB_PATH = os.environ.get("CORPUS_FTS_DB", "")
 _client: CorpusSearchClient | None = None
+
+# Telemetry: 1 JSON-line por tool call. Path overridable via CORPUS_TELEMETRY_LOG.
+# Vacío explícito = telemetry off. None (default) = ~/.claude-legal-chile/telemetry.jsonl
+_TELEMETRY_PATH = os.environ.get("CORPUS_TELEMETRY_LOG")
+if _TELEMETRY_PATH is None:
+    _TELEMETRY_PATH = str(Path.home() / ".claude-legal-chile" / "telemetry.jsonl")
+
+
+def _log_telemetry(entry: dict) -> None:
+    if not _TELEMETRY_PATH:
+        return
+    try:
+        p = Path(_TELEMETRY_PATH)
+        p.parent.mkdir(parents=True, exist_ok=True)
+        with p.open("a", encoding="utf-8") as f:
+            f.write(json.dumps(entry, ensure_ascii=False) + "\n")
+    except OSError:
+        pass  # nunca romper tool call por telemetry
 
 
 def _get_client() -> CorpusSearchClient:
@@ -303,6 +323,32 @@ async def list_tools() -> list[Tool]:
             },
         ),
         Tool(
+            name="corpus_expand_query",
+            description=(
+                "Reformula query en lenguaje natural a términos legales "
+                "chilenos precisos para FTS5. Útil cuando el usuario pregunta "
+                "en jerga coloquial. Ej: 'puede despedir embarazada' → "
+                "'fuero maternal OR \"artículo 174\" OR despido OR causal'. "
+                "Returns: {fts_query, terms, rationale}. Sugerencia de uso: "
+                "primero corpus_expand_query(natural) → luego corpus_search("
+                "fts_query, ...). Requiere ANTHROPIC_API_KEY (~$0.0001/llamada)."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "natural_query": {
+                        "type": "string",
+                        "description": "Query en lenguaje natural del usuario",
+                    },
+                    "max_terms": {
+                        "type": "integer", "default": 8,
+                        "description": "Máx términos a generar (3-15)",
+                    },
+                },
+                "required": ["natural_query"],
+            },
+        ),
+        Tool(
             name="corpus_verify_quote",
             description=(
                 "Verifica que un texto literal aparece en un documento "
@@ -340,6 +386,38 @@ async def list_tools() -> list[Tool]:
 
 @server.call_tool()
 async def call_tool(name: str, arguments: dict[str, Any]) -> list[TextContent]:
+    t0 = time.time()
+    err = None
+    n_results = None
+    try:
+        result = await _call_tool_impl(name, arguments)
+    except Exception as e:
+        err = f"{type(e).__name__}: {e}"
+        raise
+    finally:
+        try:
+            if not err and result:
+                # Intentar extraer n_hits/n_results del body
+                try:
+                    body = json.loads(result[0].text)
+                    n_results = body.get("n_hits") or body.get("n_results") or body.get("length")
+                except (json.JSONDecodeError, AttributeError, KeyError, IndexError):
+                    pass
+            _log_telemetry({
+                "ts": time.time(),
+                "tool": name,
+                "args_keys": sorted(arguments.keys()),
+                "query": str(arguments.get("query", arguments.get("natural_query", arguments.get("text", ""))))[:200],
+                "latency_ms": round((time.time() - t0) * 1000, 1),
+                "n_results": n_results,
+                "error": err,
+            })
+        except Exception:
+            pass
+    return result
+
+
+async def _call_tool_impl(name: str, arguments: dict[str, Any]) -> list[TextContent]:
     try:
         client = _get_client()
     except FileNotFoundError as e:
@@ -483,6 +561,20 @@ async def call_tool(name: str, arguments: dict[str, Any]) -> list[TextContent]:
         return [TextContent(type="text", text=json.dumps({
             "n_hits": len(results), "results": results,
         }, ensure_ascii=False, indent=2))]
+
+    if name == "corpus_expand_query":
+        natural = str(arguments.get("natural_query", "")).strip()
+        if not natural:
+            return [TextContent(type="text", text=json.dumps(
+                {"error": "natural_query es requerido"}, ensure_ascii=False
+            ))]
+        result = client.expand_query(
+            natural_query=natural,
+            max_terms=max(3, min(15, int(arguments.get("max_terms", 8)))),
+        )
+        return [TextContent(type="text", text=json.dumps(
+            result, ensure_ascii=False, indent=2
+        ))]
 
     if name == "corpus_verify_quote":
         result = client.verify_quote(
