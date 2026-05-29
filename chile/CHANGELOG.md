@@ -3,6 +3,196 @@
 Cambios al contenido de `chile/`. Para cambios del upstream ver `git log` con
 `upstream/main`.
 
+## 0.8.0 — 2026-05-27 — Retrieval semántico/híbrido por artículo en el MCP
+
+### Embeddings: las 4 capas completas
+
+Estado del índice `corpus.fts.sqlite3` (bge-m3, dim 1024):
+
+| Capa | Filas | Embebidas | Cobertura |
+|---|---|---|---|
+| docs (ley/sentencia completa) | 80.145 | 80.145 | 100% |
+| **artículos** | 161.033 | 156.965 | 100% del contenido sustantivo |
+| considerandos (chunks) | 246.121 | 246.121 | 100% |
+| doctrina | — | 10.032 | — |
+
+Los 4.068 artículos sin embedding son stubs `<30` chars (DEROGADO / ELIMINADO /
+encabezados de sección) que el builder filtra a propósito (`len(content) >= 30`).
+No es deuda: es ruido excluido.
+
+### `corpus_search_articulos` ahora soporta `mode`
+
+Hasta ahora la tool era solo FTS5/BM25 — no usaba los 157k `articulos_embeddings`.
+Nuevo parámetro `mode`:
+
+- **`fts`** (default): BM25 keyword, comportamiento previo intacto.
+- **`hybrid`**: vector bge-m3 como backbone + BM25 fusionado vía Reciprocal Rank
+  Fusion (RRF, K=60). El query natural se sanitiza a un FTS5 OR-de-términos para
+  el boost keyword. Recomendado para preguntas en lenguaje natural.
+- **`semantic`**: orden puro por similitud coseno.
+
+Implementación (`mcp-corpus-search/search_client.py`):
+- Matriz de embeddings de artículos cacheada por proceso (numpy, normalizada →
+  coseno = producto punto). Primera query ~10s (carga 157k×1024), siguientes ~1s.
+- Degrada con gracia a FTS si no hay Ollama/numpy/tabla de embeddings.
+
+Ejemplo resuelto que FTS doc-level no acertaba:
+`"puede el empleador despedir a una trabajadora embarazada"` → semantic devuelve
+Art. 202 Código del Trabajo (fuero maternal) en el top, sin overlap léxico exacto.
+
+### Tests
+
+- Smoke MCP: 11/11.
+- Golden suite extendida a 14 casos (de 12): el harness soporta `articulos_mode`
+  (compara `path_contains` contra `leychile_code|articulo_num|snippet`). Nuevos
+  casos: fuero maternal (semantic) y jornada Código del Trabajo (hybrid filtrado).
+
+### Versiones superseded (`docs_norma.superseded_by`)
+
+Nueva columna `superseded_by` (idNorma de la versión que reemplaza) para el caso
+de un refundido reemplazado por otro más nuevo, que LeyChile deja ambos como
+"no derogado". `vigentes_only` ahora también oculta las versiones superseded
+(además de las derogadas). Cableado en `_load_norma_meta` (tolerante a DBs sin la
+columna) + `_passes_vigencia`.
+
+`mark-superseded-versions.py` aplica **solo pares verificados caso a caso** — NO
+hay detección automática: la clave (tipo,numero,titulo) es insegura (p.ej. los
+certificados "DETERMINA INTERÉS CORRIENTE…" comparten tipo+numero+titulo pero son
+publicaciones periódicas distintas, no versiones). Único par marcado hoy:
+**3471 → 207436** (Código del Trabajo 1994 → 2002, verificado). Validado: con
+`vigentes_only` el 3471 desaparece y queda el 207436. Golden suite a 16 casos.
+
+### Gap A: 3.332 leyes con XML pero sin texto en el full-text search
+
+Detectado al auditar `sin_dato`: había 8.240 XML de leyes en disco pero solo
+4.908 con `.xml.txt` extraído → 3.332 leyes estaban en la búsqueda por artículo
+pero NO en `corpus_search` (full-text doc). `extract-xml-text.py` generó los 3.332
+`.xml.txt` (offline, 2s) y `build-fts-index.py` los indexó: **leychile-ley en
+docs 4.908 → 8.240**.
+
+Nota operativa: `build-fts-index.py` debe correrse con `--root` ABSOLUTO. Con ruta
+relativa, `source_from_path` (que usa `relative_to(DATA_ROOT)` absoluto) falla y
+asigna `source='unknown'` + paths relativos que no matchean los existentes →
+duplica filas. (Pasó y se limpió: `DELETE WHERE path LIKE 'data/%'` + reindex
+absoluto.) Pendiente: doc-level embeddings de esas 3.332 (tabla `embeddings`).
+
+### Tools MCP nuevas: considerandos y doctrina (consumen embeddings ya hechos)
+
+Los embeddings de considerandos (246k) y doctrina (10k) estaban construidos pero
+sin ninguna tool que los usara. Agregadas a `mcp-corpus-search`:
+
+- **`corpus_search_considerandos`**: busca párrafos de razonamiento de fallos
+  (TC 224k, tribunales ambientales, TDLC, TDPI). mode fts/hybrid/semantic + RRF,
+  filtro `source`. Matriz cacheada por proceso (~1GB, 1ª query ~30s, luego ~7s).
+- **`corpus_search_doctrina`**: tesis/papers universitarios (UCh, UV, UFT, U.
+  Autónoma, UCN). Semántico puro (sin FTS); extrae título del frontmatter +
+  snippet del .md.
+
+Golden suite a 18 casos (considerandos TC igualdad, doctrina responsabilidad del
+Estado). Mismos helpers que artículos (`_ollama_embed`, `_cosine`, `_fts_or_query`).
+
+### Re-extracción del corpus completo de artículos: 161.666 → 214.839
+
+El bug del regex "Art." no era solo del 207436: medido a nivel corpus, **4.452
+docs afectados, ~56.939 artículos perdidos** por colisión en UNIQUE(doc_path,
+articulo_num). Incluía los textos más citados — Código Penal (756 bloques, solo
+**27** en meta), Código Orgánico de Tribunales (18), Código de Justicia Militar
+(13), refundidos varios.
+
+Rebuild limpio de la capa de artículos (no parche): drop de `articulos` +
+`articulos_meta`, delete de `articulos_embeddings`, y re-extracción de los 35.977
+XML con el regex arreglado + alineación `id==rowid`. Resultado: **214.839
+artículos** (+53.173), FTS==meta, 0 mismatch de alineación. Código Penal 27→756,
+COT 18→680, Justicia Militar 13→473. (No se tocaron docs/considerandos.)
+Re-embedding de los 214.839 corriendo en background.
+
+### Re-extracción Código del Trabajo vigente (207436): 104 → 737 artículos
+
+Bug en `build-articulos-index.py`: el regex `ART_RE` solo reconocía
+"Artículo N" (palabra completa), no el formato abreviado "Art. N.o" que usa el
+DFL 1 de 2002 (207436). De 842 bloques `<EstructuraFuncional>` solo matcheaban
+220; los 619 restantes quedaban con `articulo_num=''` y colisionaban en el
+`UNIQUE(doc_path, articulo_num)` → solo 104 artículos en `articulos_meta` (pese a
+766 filas en el FTS).
+
+Correcciones al extractor (general, beneficia a toda ley con formato "Art."):
+- `ART_RE` acepta "Artículo N", "Art. N", "Art.N", "Art. N.o", ordinales y
+  sufijos bis/ter/quáter/quinquies/sexies.
+- `TITULO_RE` reconoce "Párrafo" como sección.
+- Desambiguación de números repetidos dentro del mismo doc (artículos
+  transitorios) sufijando "(2)", "(3)" — antes se perdían por el UNIQUE.
+- **Alineación `articulos_meta.id == articulos.rowid`** en el insert (FTS rowid
+  explícito). Resuelve el drift histórico que el builder de embeddings asume.
+- Flags `--leychile-code` y `--reset` (borra articulos+meta+embeddings del doc).
+
+207436 re-extraído: **104 → 737 artículos** (0 mismatch de alineación),
+re-embebidos (732 ok, 5 stubs <30c). Ahora los Art. 22, 159, 161, 162, 202 del
+Código del Trabajo **vigente** aparecen en la búsqueda. Total corpus: 161.033 →
+161.666 artículos, 156.965 → 157.593 embeddings.
+
+Efecto colateral: de los 444 artículos del 3471 (1994) solo **9 no están en
+207436** (204, 314 bis, 334 bis, 374 bis, 412, 413, 428 bis, 473 bis, 478 bis).
+Revisados caso a caso (2026-05-27): **verificado** que ni su número ni su
+contenido distintivo están en el texto consolidado vigente (207436) — la
+secuencia del XML fuente tiene huecos exactos ahí (…203,205…; …411,415…) y
+contienen disposiciones procesales de negociación colectiva / juicios laborales.
+O sea: NO son parte del Código del Trabajo vigente. El **mecanismo** (derogación
+formal vs renumeración en reforma vs traslado a otra ley) NO se verificó por
+artículo — requeriría historia legislativa BCN. Implicación operativa: para citar
+derecho vigente esos 9 no aplican; 3471 funciona como versión histórica.
+
+### Vigencia: backfill desde XML local (cobertura 20% → 76%)
+
+Diagnóstico: `docs_norma.derogado` estaba 80% en `sin_dato` y `version_xml` 20%
+poblado — al construir el índice no se parsearon los atributos del root `<Norma>`
+para la mayoría de las normas. La señal autoritativa ya estaba en disco
+(`data/leychile/{tipo}/{idNorma}.xml`, atributos `derogado` + `fechaVersion`).
+
+`backfill-vigencia-from-xml.py` recorre los 35.977 XML locales y actualiza
+`docs_norma` (offline, idempotente, ~9s):
+
+| | derogado | no derogado | sin_dato |
+|---|---:|---:|---:|
+| antes | 413 | 9.010 | 38.019 (80%) |
+| después | 3.138 | 33.030 | 11.274 (24%) |
+
+Cobertura del núcleo legal: dto/dl/dfl ahora 100%, ley 71% (de 32%), cod 57%.
+**2.725 normas derogadas nuevas identificadas → 24.618 artículos indexados ahora
+correctamente marcados como de norma derogada**, que `vigentes_only` filtra.
+
+Los 11.274 `sin_dato` restantes son fuentes sin XML LeyChile (cer/acd/avi/cir de
+otras agencias + 3.369 leyes catalog-only no descargadas) — requieren fetch BCN.
+
+Sobre el "dedup canónico" que se había anotado como pendiente: investigado y
+**descartado como tarea**. La duplicación aparente es legítima — (a) versiones
+complementarias con artículos disjuntos (Código del Trabajo 3471 1994 vs 207436
+2002), (b) plantillas de decretos realmente distintas (p.ej. 195 decretos de
+concesión eléctrica con texto base común). Solo existe **1 grupo** de refundido
+multi-versión por título exacto (el Código del Trabajo), y su causa raíz es que
+207436 (vigente) está sub-extraído (104 de ~500 artículos): se resuelve
+re-extrayendo su XML, no con una regla de superseding frágil.
+
+### Filtros de vigencia en la búsqueda por artículo
+
+`corpus_search_articulos` ahora acepta `vigentes_only` y `exclude_modificadoras`
+(igual que `corpus_search` a nivel doc), en los tres modos (fts/hybrid/semantic).
+Resuelve la vigencia vía `docs_norma` usando el `leychile_code` del artículo;
+helper compartido `_passes_vigencia`. Over-fetch de candidatos (×4 en FTS, ×16 en
+semantic) para compensar lo que se descarta. Sin metadata de norma se deja pasar
+(no se asume derogación sin dato).
+
+Validado: query de fuero maternal con `vigentes_only` excluye el Art. del idNorma
+6850 (derogado) y conserva los artículos vigentes de embarazo. Golden suite a 15
+casos (harness soporta `expect_none` para aseverar exclusión).
+
+### Pendiente conocido
+
+Duplicación de versiones del mismo código en el corpus (p.ej. Código del Trabajo
+bajo idNorma 3471 antiguo y 207436, ambos marcados "no derogado" en docs_norma)
+sigue inyectando ruido: `vigentes_only` NO los desambigua porque metadata no marca
+el antiguo como derogado. Pendiente: deduplicar por norma canónica / preferir la
+versión refundida vigente.
+
 ## 0.7.1 — 2026-05-21 — Resolver batch + dedupe canonical + bug Virtuoso
 
 ### Resolver bcn_uri masivo (batch SPARQL VALUES)

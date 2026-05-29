@@ -14,6 +14,9 @@
 #       - path_contains: alternativa A
 #       - path_contains: alternativa B
 #   min_score: BM25 score mínimo (más cercano a 0 = mejor; default -50)
+#   articulos_mode: si está presente (hybrid|semantic), corre búsqueda
+#     vectorial por ARTÍCULO; expect_any.path_contains se compara contra
+#     "leychile_code|articulo_num|snippet". leychile_code opcional filtra.
 
 cases:
   - id: ley_proteccion_datos_basica
@@ -111,3 +114,67 @@ cases:
     expect_any:
       - path_contains: "tdlc/"
       - path_contains: "fne/"
+
+  # --- Búsqueda semántica/híbrida por artículo (embeddings bge-m3) ---
+
+  - id: articulo_semantic_fuero_maternal
+    # Lenguaje natural sin overlap léxico exacto con el articulado:
+    # FTS doc-level no lo resolvería; el vector sí.
+    query: "puede el empleador despedir a una trabajadora embarazada"
+    articulos_mode: semantic
+    expect_top: 8
+    expect_any:
+      # Fuero maternal — art. del período de embarazo en el corpus laboral.
+      - path_contains: "embarazo"
+      - path_contains: "embarazada"
+
+  - id: articulo_hybrid_codigo_trabajo_jornada
+    # Híbrido filtrado al Código del Trabajo vigente (DFL 1 2002 = 207436).
+    query: "duración máxima de la jornada ordinaria semanal"
+    articulos_mode: hybrid
+    leychile_code: 207436
+    expect_top: 8
+    expect_any:
+      - path_contains: "207436|"
+
+  - id: articulo_semantic_vigentes_only
+    # vigentes_only debe excluir la norma 6850 (derogada en docs_norma) que
+    # SÍ aparece sin el filtro, sin perder los artículos de fuero maternal.
+    query: "puede el empleador despedir a una trabajadora embarazada"
+    articulos_mode: semantic
+    vigentes_only: true
+    expect_top: 8
+    expect_none:
+      - path_contains: "6850|"
+    expect_any:
+      - path_contains: "embarazo"
+
+  - id: considerando_tc_igualdad
+    # Búsqueda semántica de considerandos (razonamiento TC) sobre igualdad
+    # ante la ley — query en lenguaje natural.
+    query: "vulneración del derecho a la igualdad ante la ley por trato discriminatorio"
+    considerandos_mode: hybrid
+    source: tc
+    expect_top: 6
+    expect_any:
+      - path_contains: "igualdad"
+
+  - id: doctrina_responsabilidad_estado
+    # Búsqueda semántica de doctrina universitaria (sin FTS).
+    query: "responsabilidad extracontractual del Estado por falta de servicio"
+    doctrina: true
+    expect_top: 5
+    expect_any:
+      - path_contains: "responsabilidad"
+
+  - id: articulo_superseded_codigo_trabajo
+    # 3471 (Código del Trabajo 1994) está marcado superseded_by 207436 (2002).
+    # vigentes_only debe ocultar el 3471 histórico y traer el 207436 vigente.
+    query: "causales de terminación del contrato de trabajo"
+    articulos_mode: hybrid
+    vigentes_only: true
+    expect_top: 8
+    expect_none:
+      - path_contains: "3471|"
+    expect_any:
+      - path_contains: "207436|"

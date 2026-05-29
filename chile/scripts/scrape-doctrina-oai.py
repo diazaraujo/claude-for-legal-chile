@@ -57,6 +57,31 @@ FUENTES = {
         "set": "col_20.500.14729_4645",
         "label": "Revista de Derecho UCN Coquimbo",
     },
+    "uautonoma": {
+        "base": "https://repositorio.uautonoma.cl/server/oai/request",
+        "set": "com_20.500.12728_7362",
+        "label": "U. Autónoma Facultad de Derecho",
+    },
+    "umayor": {
+        "base": "https://repositorio.umayor.cl/oai/request",
+        "set": "com_sibum_6771",
+        "label": "U. Mayor Derecho",
+    },
+    "uft": {
+        "base": "https://repositorio.uft.cl/server/oai/request",
+        "set": "com_20.500.12254_2321",
+        "label": "U. Finis Terrae Facultad de Derecho",
+    },
+    "unab": {
+        "base": "https://repositorio.unab.cl/server/oai/request",
+        "set": "com_ria_60463",
+        "label": "U. Andrés Bello FADERE",
+    },
+    "uv": {
+        "base": "https://repositoriobibliotecas.uv.cl/oai/request",
+        "set": "com_uvscl_244",
+        "label": "U. Valparaíso Facultad de Derecho",
+    },
 }
 
 

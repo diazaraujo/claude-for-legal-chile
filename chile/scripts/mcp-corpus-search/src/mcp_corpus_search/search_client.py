@@ -56,10 +56,13 @@ class CorpusSearchClient:
     def _load_norma_meta(self, conn: sqlite3.Connection) -> dict[int, dict]:
         if self._norma_meta_cache is not None:
             return self._norma_meta_cache
+        # superseded_by puede no existir en DBs antiguas → fallback sin la col.
+        cols = {r[1] for r in conn.execute("PRAGMA table_info(docs_norma)")}
+        sup = "superseded_by" if "superseded_by" in cols else "NULL"
         try:
             rows = conn.execute(
-                "SELECT leychile_code, numero, tipo, titulo, derogado, "
-                "es_modificadora, es_codigo FROM docs_norma"
+                f"SELECT leychile_code, numero, tipo, titulo, derogado, "
+                f"es_modificadora, es_codigo, {sup} FROM docs_norma"
             ).fetchall()
         except sqlite3.OperationalError:
             self._norma_meta_cache = {}
@@ -68,10 +71,29 @@ class CorpusSearchClient:
             r[0]: {
                 "numero": r[1], "tipo": r[2], "titulo": r[3],
                 "derogado": r[4], "es_modificadora": bool(r[5]),
-                "es_codigo": bool(r[6]),
+                "es_codigo": bool(r[6]), "superseded_by": r[7],
             } for r in rows
         }
         return self._norma_meta_cache
+
+    @staticmethod
+    def _passes_vigencia(
+        meta: dict | None, vigentes_only: bool, exclude_modificadoras: bool
+    ) -> bool:
+        """True si la norma pasa los filtros de vigencia. Sin metadata
+        (meta None) se deja pasar — no asumimos derogación sin dato."""
+        if meta is None:
+            return True
+        if exclude_modificadoras and meta.get("es_modificadora"):
+            return False
+        if vigentes_only:
+            d = meta.get("derogado", "sin_dato")
+            if d not in ("no derogado", "sin_dato", "", None):
+                return False
+            # Versión histórica reemplazada por un refundido más nuevo.
+            if meta.get("superseded_by"):
+                return False
+        return True
 
     def search(
         self,
@@ -516,6 +538,10 @@ class CorpusSearchClient:
         articulo_num: str = "",
         limit: int = 10,
         snippet_len: int = 240,
+        mode: str = "fts",
+        candidate_k: int = 0,
+        vigentes_only: bool = False,
+        exclude_modificadoras: bool = False,
     ) -> list[dict]:
         """Búsqueda por ARTÍCULO específico (no por doc completo).
         Útil para queries tipo 'art. 161 código del trabajo causales'.
@@ -523,8 +549,27 @@ class CorpusSearchClient:
         - query: texto FTS5 (puede estar vacío si filter es por num/code)
         - leychile_code: filtrar a artículos de un idNorma específico
         - articulo_num: filtrar a un número (ej. "161", "1 bis")
-        Returns: list de hits con doc_path, articulo_num, seccion, snippet, score.
+        - mode: "fts" (BM25, default), "hybrid" (BM25 + rerank vectorial bge-m3
+          fusionado vía RRF) o "semantic" (orden puro por similitud coseno).
+          hybrid/semantic requieren Ollama local sirviendo bge-m3 y la tabla
+          `articulos_embeddings` poblada (build-articulos-embeddings.py).
+        - candidate_k: cuántos candidatos FTS reranquear (0 = auto).
+        - vigentes_only: excluye artículos de normas derogadas (vía docs_norma).
+        - exclude_modificadoras: excluye artículos de leyes modificadoras.
+        Returns: list de hits con doc_path, articulo_num, seccion, snippet,
+          score; en hybrid/semantic incluye bm25, cosine y rrf.
         """
+        if mode in ("hybrid", "semantic") and query.strip():
+            sem = self._search_articulos_semantic(
+                query, leychile_code, articulo_num, limit,
+                snippet_len, mode, candidate_k,
+                vigentes_only, exclude_modificadoras,
+            )
+            if sem is not None:
+                return sem
+            # Si embeddings/Ollama no disponibles, degradar a FTS.
+
+        use_vig = vigentes_only or exclude_modificadoras
         conn = sqlite3.connect(str(self.db_path), timeout=30)
         try:
             where = []
@@ -541,6 +586,8 @@ class CorpusSearchClient:
             if not where:
                 return []
             order_by = "bm25(articulos)" if query.strip() else "rowid"
+            # Over-fetch si filtramos vigencia en Python, para tener buffer.
+            fetch_n = (limit * 4) if use_vig else limit
             sql = (
                 f"SELECT doc_path, leychile_code, articulo_num, seccion, "
                 f"snippet(articulos, 4, '«', '»', '…', 32) as snip, "
@@ -548,12 +595,17 @@ class CorpusSearchClient:
                 f"FROM articulos WHERE {' AND '.join(where)} "
                 f"ORDER BY {order_by} LIMIT ?"
             )
-            params.append(limit)
+            params.append(fetch_n)
             rows = conn.execute(sql, params).fetchall()
+            norma_meta = self._load_norma_meta(conn) if use_vig else {}
         finally:
             conn.close()
         results = []
         for path, code, art_num, seccion, snip, score in rows:
+            if use_vig and not self._passes_vigencia(
+                norma_meta.get(code), vigentes_only, exclude_modificadoras
+            ):
+                continue
             clean = re.sub(r"\s+", " ", snip).strip()[:snippet_len]
             results.append({
                 "doc_path": path, "leychile_code": code,
@@ -561,7 +613,466 @@ class CorpusSearchClient:
                 "seccion": seccion or "",
                 "snippet": clean, "score": float(score),
             })
+            if len(results) >= limit:
+                break
         return results
+
+    # --- Búsqueda semántica de artículos (matriz bge-m3 cacheada) ----------
+
+    # Stopwords ES mínimas para sanitizar el query FTS5 (boost BM25 en hybrid).
+    _STOP = frozenset(
+        "el la los las un una unos unas de del al a y o u que se su sus por "
+        "para con sin sobre como mas más este esta esto ese esa eso es son "
+        "puede pueden debe deben le les lo en si no".split()
+    )
+
+    def _artic_matrix(self):
+        """Carga (una vez por proceso) la matriz de embeddings de artículos.
+        Returns (ids: np.int64[N], mat: float32[N,dim] normalizada) o None si
+        no hay numpy/tabla. Cacheada en self._artic_cache."""
+        cache = getattr(self, "_artic_cache", "unset")
+        if cache != "unset":
+            return cache
+        try:
+            import numpy as np
+        except ImportError:
+            self._artic_cache = None
+            return None
+        conn = sqlite3.connect(str(self.db_path), timeout=120)
+        try:
+            try:
+                rows = conn.execute(
+                    "SELECT articulos_meta_id, vec FROM articulos_embeddings "
+                    "WHERE model = ?", [EMBED_MODEL],
+                ).fetchall()
+            except sqlite3.OperationalError:
+                self._artic_cache = None
+                return None
+        finally:
+            conn.close()
+        if not rows:
+            self._artic_cache = None
+            return None
+        ids = np.fromiter((r[0] for r in rows), dtype=np.int64, count=len(rows))
+        mat = np.frombuffer(b"".join(r[1] for r in rows), dtype=np.float32)
+        mat = mat.reshape(len(rows), -1).copy()
+        norms = np.linalg.norm(mat, axis=1, keepdims=True)
+        norms[norms == 0] = 1.0
+        mat /= norms  # normalizada → coseno = producto punto
+        self._artic_cache = (ids, mat)
+        return self._artic_cache
+
+    def _fts_or_query(self, query: str) -> str:
+        """Convierte una frase en lenguaje natural en un FTS5 OR-de-términos
+        (quita stopwords y tokens cortos). '' si no quedan términos."""
+        toks = re.findall(r"\w+", query.lower(), flags=re.UNICODE)
+        terms = [t for t in toks if len(t) > 2 and t not in self._STOP]
+        seen, out = set(), []
+        for t in terms:
+            if t not in seen:
+                seen.add(t)
+                out.append(f'"{t}"')
+        return " OR ".join(out)
+
+    def _search_articulos_semantic(
+        self, query: str,
+        leychile_code: int | None,
+        articulo_num: str,
+        limit: int,
+        snippet_len: int,
+        mode: str,
+        candidate_k: int,
+        vigentes_only: bool = False,
+        exclude_modificadoras: bool = False,
+    ) -> list[dict] | None:
+        """Búsqueda vectorial bge-m3 sobre artículos, con la matriz cacheada
+        como backbone. En hybrid fusiona con BM25 (RRF). Devuelve None si no
+        hay embeddings/Ollama/numpy disponibles (el caller cae a FTS)."""
+        import numpy as np  # garantizado si _artic_matrix devolvió algo
+
+        q_emb = self._ollama_embed(query)
+        if not q_emb:
+            return None
+        mtx = self._artic_matrix()
+        if mtx is None:
+            return None
+        ids, mat = mtx
+
+        q = np.asarray(q_emb, dtype=np.float32)
+        q /= (np.linalg.norm(q) or 1.0)
+        sims = mat @ q  # coseno (mat ya normalizada)
+
+        use_vig = vigentes_only or exclude_modificadoras
+        # Más buffer de candidatos si filtramos vigencia (se descartan algunos).
+        top_n = max(limit * (16 if use_vig else 8), candidate_k, 80)
+        top_idx = np.argpartition(-sims, min(top_n, len(sims) - 1))[:top_n]
+        top_idx = top_idx[np.argsort(-sims[top_idx])]
+
+        conn = sqlite3.connect(str(self.db_path), timeout=60)
+        try:
+            norma_meta = self._load_norma_meta(conn) if use_vig else {}
+            # Metadata + snippet para los top candidatos semánticos.
+            sem: list[dict] = []
+            for idx in top_idx:
+                mid = int(ids[idx])
+                meta = conn.execute(
+                    "SELECT doc_path, leychile_code, articulo_num, seccion, "
+                    "snippet(articulos, 4, '«', '»', '…', 32) "
+                    "FROM articulos WHERE rowid = ?", [mid],
+                ).fetchone()
+                if not meta:
+                    continue
+                path, code, art_num, seccion, snip = meta
+                if leychile_code is not None and code != leychile_code:
+                    continue
+                if articulo_num and (art_num or "") != articulo_num:
+                    continue
+                if use_vig and not self._passes_vigencia(
+                    norma_meta.get(code), vigentes_only, exclude_modificadoras
+                ):
+                    continue
+                sem.append({
+                    "mid": mid, "doc_path": path, "leychile_code": code,
+                    "articulo_num": art_num or "(sin número)",
+                    "seccion": seccion or "",
+                    "snippet": re.sub(r"\s+", " ", snip or "").strip()[:snippet_len],
+                    "cosine": round(float(sims[idx]), 4), "bm25": None,
+                })
+                if len(sem) >= max(limit * 4, 40):
+                    break
+
+            if mode == "semantic":
+                for r in sem:
+                    r["score"] = r["cosine"]
+                    r.pop("bm25", None)
+                results = sem
+            else:  # hybrid: RRF(coseno, BM25). BM25 vía FTS OR-query.
+                rank_cos = {r["mid"]: i for i, r in enumerate(sem)}
+                bm25_rank: dict[int, int] = {}
+                ftsq = self._fts_or_query(query)
+                if ftsq:
+                    where = ["articulos MATCH ?"]
+                    params: list = [ftsq]
+                    if leychile_code is not None:
+                        where.append("leychile_code = ?")
+                        params.append(leychile_code)
+                    if articulo_num:
+                        where.append("articulo_num = ?")
+                        params.append(articulo_num)
+                    params.append(max(top_n, 200))
+                    try:
+                        frows = conn.execute(
+                            f"SELECT rowid, bm25(articulos) FROM articulos "
+                            f"WHERE {' AND '.join(where)} "
+                            f"ORDER BY bm25(articulos) LIMIT ?", params,
+                        ).fetchall()
+                        for i, (rid, _b) in enumerate(frows):
+                            bm25_rank[rid] = i
+                    except sqlite3.OperationalError:
+                        pass
+                # Universo = unión candidatos semánticos ∪ candidatos BM25.
+                extra_ids = [r for r in bm25_rank if r not in rank_cos]
+                for mid in extra_ids[: top_n]:
+                    meta = conn.execute(
+                        "SELECT doc_path, leychile_code, articulo_num, seccion, "
+                        "snippet(articulos, 4, '«', '»', '…', 32) "
+                        "FROM articulos WHERE rowid = ?", [mid],
+                    ).fetchone()
+                    if not meta:
+                        continue
+                    path, code, art_num, seccion, snip = meta
+                    if use_vig and not self._passes_vigencia(
+                        norma_meta.get(code), vigentes_only, exclude_modificadoras
+                    ):
+                        continue
+                    sem.append({
+                        "mid": mid, "doc_path": path, "leychile_code": code,
+                        "articulo_num": art_num or "(sin número)",
+                        "seccion": seccion or "",
+                        "snippet": re.sub(r"\s+", " ", snip or "").strip()[:snippet_len],
+                        "cosine": None, "bm25": None,
+                    })
+                RRF_K = 60
+                n = len(sem)
+                for r in sem:
+                    rc = rank_cos.get(r["mid"], n)
+                    rb = bm25_rank.get(r["mid"])
+                    r["bm25_rank"] = rb  # None = no matcheó keyword
+                    r["rrf"] = round(
+                        1.0 / (RRF_K + rc) + 1.0 / (RRF_K + (rb if rb is not None else n)),
+                        6,
+                    )
+                    r["score"] = r["rrf"]
+                    r.pop("bm25", None)
+                sem.sort(key=lambda d: d["rrf"], reverse=True)
+                results = sem
+        finally:
+            conn.close()
+
+        for r in results:
+            r.pop("mid", None)
+        return results[:limit]
+
+    # --- Búsqueda semántica de CONSIDERANDOS (razonamiento de fallos) --------
+
+    def _consid_matrix(self):
+        """Matriz cacheada de embeddings de considerandos (TC, ambientales,
+        TDLC…). Returns (ids np.int64[N], mat float32[N,dim] normalizada) o
+        None si no hay numpy/tabla."""
+        cache = getattr(self, "_consid_cache", "unset")
+        if cache != "unset":
+            return cache
+        try:
+            import numpy as np
+        except ImportError:
+            self._consid_cache = None
+            return None
+        conn = sqlite3.connect(str(self.db_path), timeout=120)
+        try:
+            try:
+                rows = conn.execute(
+                    "SELECT considerandos_meta_id, vec FROM "
+                    "considerandos_embeddings WHERE model = ?", [EMBED_MODEL],
+                ).fetchall()
+            except sqlite3.OperationalError:
+                self._consid_cache = None
+                return None
+        finally:
+            conn.close()
+        if not rows:
+            self._consid_cache = None
+            return None
+        ids = np.fromiter((r[0] for r in rows), dtype=np.int64, count=len(rows))
+        mat = np.frombuffer(b"".join(r[1] for r in rows), dtype=np.float32)
+        mat = mat.reshape(len(rows), -1).copy()
+        norms = np.linalg.norm(mat, axis=1, keepdims=True)
+        norms[norms == 0] = 1.0
+        mat /= norms
+        self._consid_cache = (ids, mat)
+        return self._consid_cache
+
+    def search_considerandos(
+        self, query: str, source: str = "", mode: str = "hybrid",
+        limit: int = 10, snippet_len: int = 320, candidate_k: int = 0,
+    ) -> list[dict]:
+        """Busca CONSIDERANDOS (párrafos de razonamiento) de fallos del TC,
+        tribunales ambientales y TDLC. mode: fts | hybrid | semantic.
+        source filtra por fuente (tc, tc-moderno, tribunales-ambientales,
+        tdlc, tdpi). Returns hits con doc_path, source, num_label, snippet."""
+        if not query.strip():
+            return []
+        if mode in ("hybrid", "semantic"):
+            res = self._search_considerandos_semantic(
+                query, source, mode, limit, snippet_len, candidate_k)
+            if res is not None:
+                return res
+        # Fallback FTS5/BM25.
+        conn = sqlite3.connect(str(self.db_path), timeout=30)
+        try:
+            where = ["considerandos_chunks MATCH ?"]
+            params: list = [query]
+            if source:
+                where.append("source = ?")
+                params.append(source)
+            params.append(limit)
+            try:
+                rows = conn.execute(
+                    "SELECT doc_path, source, num_label, "
+                    "snippet(considerandos_chunks, 4, '«', '»', '…', 40), "
+                    "bm25(considerandos_chunks) "
+                    f"FROM considerandos_chunks WHERE {' AND '.join(where)} "
+                    "ORDER BY bm25(considerandos_chunks) LIMIT ?", params,
+                ).fetchall()
+            except sqlite3.OperationalError:
+                return []
+        finally:
+            conn.close()
+        out = []
+        for path, src, label, snip, score in rows:
+            out.append({
+                "doc_path": path, "source": src,
+                "num_label": label or "", "pdf_path": path.replace(".txt", ""),
+                "snippet": re.sub(r"\s+", " ", snip or "").strip()[:snippet_len],
+                "score": float(score),
+            })
+        return out
+
+    def _search_considerandos_semantic(
+        self, query: str, source: str, mode: str,
+        limit: int, snippet_len: int, candidate_k: int,
+    ) -> list[dict] | None:
+        """Vectorial bge-m3 sobre considerandos; hybrid fusiona BM25 vía RRF.
+        None si no hay embeddings/Ollama/numpy."""
+        import numpy as np
+        q_emb = self._ollama_embed(query)
+        if not q_emb:
+            return None
+        mtx = self._consid_matrix()
+        if mtx is None:
+            return None
+        ids, mat = mtx
+        q = np.asarray(q_emb, dtype=np.float32)
+        q /= (np.linalg.norm(q) or 1.0)
+        sims = mat @ q
+        top_n = max(limit * 8, candidate_k, 80)
+        top_idx = np.argpartition(-sims, min(top_n, len(sims) - 1))[:top_n]
+        top_idx = top_idx[np.argsort(-sims[top_idx])]
+
+        conn = sqlite3.connect(str(self.db_path), timeout=60)
+        try:
+            sem: list[dict] = []
+            for idx in top_idx:
+                mid = int(ids[idx])
+                meta = conn.execute(
+                    "SELECT doc_path, source, num_label, "
+                    "snippet(considerandos_chunks, 4, '«', '»', '…', 40) "
+                    "FROM considerandos_chunks WHERE rowid = ?", [mid],
+                ).fetchone()
+                if not meta:
+                    continue
+                path, src, label, snip = meta
+                if source and src != source:
+                    continue
+                sem.append({
+                    "mid": mid, "doc_path": path, "source": src,
+                    "num_label": label or "",
+                    "pdf_path": path.replace(".txt", ""),
+                    "snippet": re.sub(r"\s+", " ", snip or "").strip()[:snippet_len],
+                    "cosine": round(float(sims[idx]), 4),
+                })
+                if len(sem) >= max(limit * 4, 40):
+                    break
+
+            if mode == "semantic":
+                for r in sem:
+                    r["score"] = r["cosine"]
+                results = sem
+            else:  # hybrid: RRF(coseno, BM25)
+                rank_cos = {r["mid"]: i for i, r in enumerate(sem)}
+                bm25_rank: dict[int, int] = {}
+                ftsq = self._fts_or_query(query)
+                if ftsq:
+                    w = ["considerandos_chunks MATCH ?"]
+                    p: list = [ftsq]
+                    if source:
+                        w.append("source = ?")
+                        p.append(source)
+                    p.append(max(top_n, 200))
+                    try:
+                        for i, (rid,) in enumerate(conn.execute(
+                            "SELECT rowid FROM considerandos_chunks "
+                            f"WHERE {' AND '.join(w)} "
+                            "ORDER BY bm25(considerandos_chunks) LIMIT ?", p,
+                        ).fetchall()):
+                            bm25_rank[rid] = i
+                    except sqlite3.OperationalError:
+                        pass
+                RRF_K = 60
+                n = len(sem)
+                for r in sem:
+                    rc = rank_cos.get(r["mid"], n)
+                    rb = bm25_rank.get(r["mid"])
+                    r["bm25_rank"] = rb
+                    r["rrf"] = round(
+                        1.0 / (RRF_K + rc) + 1.0 / (RRF_K + (rb if rb is not None else n)), 6)
+                    r["score"] = r["rrf"]
+                sem.sort(key=lambda d: d["rrf"], reverse=True)
+                results = sem
+        finally:
+            conn.close()
+        for r in results:
+            r.pop("mid", None)
+        return results[:limit]
+
+    # --- Búsqueda semántica de DOCTRINA (tesis/papers universitarios) --------
+
+    def _doctrina_matrix(self):
+        """Matriz cacheada de embeddings de doctrina (keyed por md_path).
+        Returns (paths list[str], fuentes list[str], mat float32 normalizada)
+        o None."""
+        cache = getattr(self, "_doctrina_cache", "unset")
+        if cache != "unset":
+            return cache
+        try:
+            import numpy as np
+        except ImportError:
+            self._doctrina_cache = None
+            return None
+        conn = sqlite3.connect(str(self.db_path), timeout=60)
+        try:
+            try:
+                rows = conn.execute(
+                    "SELECT md_path, fuente, vec FROM doctrina_embeddings "
+                    "WHERE model = ?", [EMBED_MODEL],
+                ).fetchall()
+            except sqlite3.OperationalError:
+                self._doctrina_cache = None
+                return None
+        finally:
+            conn.close()
+        if not rows:
+            self._doctrina_cache = None
+            return None
+        paths = [r[0] for r in rows]
+        fuentes = [r[1] for r in rows]
+        mat = np.frombuffer(b"".join(r[2] for r in rows), dtype=np.float32)
+        mat = mat.reshape(len(rows), -1).copy()
+        norms = np.linalg.norm(mat, axis=1, keepdims=True)
+        norms[norms == 0] = 1.0
+        mat /= norms
+        self._doctrina_cache = (paths, fuentes, mat)
+        return self._doctrina_cache
+
+    def search_doctrina(
+        self, query: str, fuente: str = "", limit: int = 10,
+        snippet_len: int = 320,
+    ) -> list[dict]:
+        """Búsqueda semántica (bge-m3) sobre doctrina universitaria. No hay FTS,
+        así que es solo vectorial. fuente filtra por universidad (uch, uv, uft,
+        uautonoma, ucn). Snippet leído del .md. [] si no hay Ollama/numpy."""
+        if not query.strip():
+            return []
+        import numpy as np
+        q_emb = self._ollama_embed(query)
+        if not q_emb:
+            return []
+        mtx = self._doctrina_matrix()
+        if mtx is None:
+            return []
+        paths, fuentes, mat = mtx
+        q = np.asarray(q_emb, dtype=np.float32)
+        q /= (np.linalg.norm(q) or 1.0)
+        sims = mat @ q
+        order = np.argsort(-sims)
+        out = []
+        for idx in order:
+            i = int(idx)
+            if fuente and fuentes[i] != fuente:
+                continue
+            snippet, titulo = "", ""
+            try:
+                txt = Path(paths[i]).read_text(encoding="utf-8", errors="replace")
+                # Separar frontmatter YAML (--- ... ---) del cuerpo.
+                fm = re.match(r"^---\s*\n(.*?)\n---\s*\n(.*)$", txt, re.DOTALL)
+                if fm:
+                    mt = re.search(r'^titulo:\s*"?(.+?)"?\s*$', fm.group(1),
+                                   re.MULTILINE)
+                    titulo = mt.group(1).strip() if mt else ""
+                    body = fm.group(2)
+                else:
+                    body = txt
+                body = re.sub(r"^#.*$", "", body, flags=re.MULTILINE)
+                snippet = re.sub(r"\s+", " ", body).strip()[:snippet_len]
+            except OSError:
+                pass
+            out.append({
+                "md_path": paths[i], "fuente": fuentes[i], "titulo": titulo,
+                "cosine": round(float(sims[i]), 4), "score": round(float(sims[i]), 4),
+                "snippet": snippet,
+            })
+            if len(out) >= limit:
+                break
+        return out
 
     def verify_quote(
         self, text: str, path: str, fuzzy: bool = True,

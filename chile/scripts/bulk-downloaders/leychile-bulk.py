@@ -138,11 +138,13 @@ def download_xml(
     for attempt in range(max_retries + 1):
         _rate_wait(rate_seconds)
         try:
+            # www.leychile.cl ahora redirige ("sitio fue movido") → usar el
+            # endpoint vigente www.bcn.cl/leychile, que sirve el XML real.
             if zyte_auth:
-                body = _fetch_zyte(BASE_URL + str(id_norma), zyte_auth)
+                body = _fetch_zyte(BCN_BASE_URL + str(id_norma), zyte_auth)
             else:
                 req = urllib.request.Request(
-                    BASE_URL + str(id_norma),
+                    BCN_BASE_URL + str(id_norma),
                     headers={"User-Agent": USER_AGENT},
                 )
                 with urllib.request.urlopen(req, timeout=30) as r:

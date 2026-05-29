@@ -19,8 +19,17 @@ LEYCHILE_DIR = _REPO_ROOT / "chile/data/leychile"
 DB_PATH = _REPO_ROOT / "chile/data/_index/corpus.fts.sqlite3"
 
 NS = "{http://www.leychile.cl/esquemas}"
-ART_RE = re.compile(r"^\s*Art[íi]?culo\s+(\d+[ºo°]?(?:\s*bis|\s*ter|\s*quater)?)", re.IGNORECASE)
-TITULO_RE = re.compile(r"^\s*(T[íi]tulo|Cap[íi]tulo|Libro|Pre[a-z]*mbulo)\b", re.IGNORECASE)
+# Acepta "Artículo 161", "Articulo 161", "Art. 161", "Art.161", "Art. 2.o",
+# "Art 161 bis", con ordinal (º/°/o) y sufijos bis/ter/quáter/quinquies/sexies.
+ART_RE = re.compile(
+    r"^\s*Art(?:[íi]culo|\.?)\s*\.?\s*(\d+)\s*[º°o\.\-]*\s*"
+    r"(bis|ter|qu[aá]ter|quinquies|sexies|septies|octies)?",
+    re.IGNORECASE,
+)
+TITULO_RE = re.compile(
+    r"^\s*(T[íi]tulo|Cap[íi]tulo|Libro|Pre[a-z]*mbulo|P[áa]rrafo)\b",
+    re.IGNORECASE,
+)
 
 
 def init_db(db_path: Path) -> sqlite3.Connection:
@@ -85,11 +94,14 @@ def extract_articulos(xml_path: Path) -> list[dict]:
             current_seccion = text.replace("\n", " — ").strip()[:200]
             continue
 
-        # Detectar número artículo
+        # Detectar número artículo (group 1 = dígitos, group 2 = bis/ter/…)
         m_art = ART_RE.match(first_line)
-        articulo_num = m_art.group(1).strip() if m_art else ""
-        # Normalizar (1º → 1, 1° → 1)
-        articulo_num_norm = re.sub(r"[ºo°]$", "", articulo_num).strip()
+        if m_art:
+            num = m_art.group(1)
+            suf = m_art.group(2)
+            articulo_num_norm = f"{num} {suf.lower()}" if suf else num
+        else:
+            articulo_num_norm = ""
 
         results.append({
             "articulo_num": articulo_num_norm,
@@ -99,47 +111,79 @@ def extract_articulos(xml_path: Path) -> list[dict]:
     return results
 
 
-def index_file(conn: sqlite3.Connection, xml_path: Path) -> tuple[int, int]:
-    """Returns (n_inserted, n_skipped)."""
+def reset_doc(conn: sqlite3.Connection, doc_path: str) -> int:
+    """Borra todas las filas de un doc en articulos + articulos_meta +
+    articulos_embeddings (clave = articulos_meta.id == articulos.rowid).
+    Devuelve cuántas filas meta se borraron."""
+    ids = [r[0] for r in conn.execute(
+        "SELECT id FROM articulos_meta WHERE doc_path = ?", (doc_path,)
+    )]
+    if ids:
+        ph = ",".join("?" * len(ids))
+        conn.execute(
+            f"DELETE FROM articulos_embeddings WHERE articulos_meta_id IN ({ph})",
+            ids,
+        )
+    conn.execute("DELETE FROM articulos WHERE doc_path = ?", (doc_path,))
+    conn.execute("DELETE FROM articulos_meta WHERE doc_path = ?", (doc_path,))
+    return len(ids)
+
+
+def index_file(
+    conn: sqlite3.Connection, xml_path: Path, reset: bool = False
+) -> tuple[int, int]:
+    """Returns (n_inserted, n_skipped).
+
+    Inserta cada bloque en `articulos` (FTS) y `articulos_meta` con
+    `meta.id == articulos.rowid` (alineación que asume build-articulos-
+    embeddings). Desambigua números repetidos dentro del mismo doc
+    (p.ej. artículos transitorios) sufijando '(2)', '(3)'… para no
+    perderlos por el UNIQUE(doc_path, articulo_num).
+
+    Idempotente: si el doc ya tiene filas y no se pide reset, se salta.
+    """
     m = re.search(r"/leychile/[^/]+/(\d+)\.xml$", str(xml_path))
     if not m:
         return 0, 0
     code = int(m.group(1))
+    doc_path = str(xml_path)
     try:
         mtime = xml_path.stat().st_mtime
     except OSError:
         return 0, 0
 
-    existing = set(
-        row[0] for row in conn.execute(
-            "SELECT articulo_num FROM articulos_meta WHERE doc_path = ?",
-            (str(xml_path),),
-        )
-    )
+    if reset:
+        reset_doc(conn, doc_path)
+    elif conn.execute(
+        "SELECT 1 FROM articulos_meta WHERE doc_path = ? LIMIT 1", (doc_path,)
+    ).fetchone():
+        return 0, 0  # ya indexado
 
     articulos = extract_articulos(xml_path)
     if not articulos:
         return 0, 0
-    inserted, skipped = 0, 0
+    seen: dict[str, int] = {}
+    inserted = 0
     for art in articulos:
-        if art["articulo_num"] in existing:
-            skipped += 1
-            continue
-        conn.execute(
+        num = art["articulo_num"]
+        seen[num] = seen.get(num, 0) + 1
+        if seen[num] > 1:
+            num = f"{num} ({seen[num]})"  # transitorios / repeticiones
+        cur = conn.execute(
             "INSERT INTO articulos(doc_path, leychile_code, articulo_num, "
             "seccion, content) VALUES (?, ?, ?, ?, ?)",
-            (str(xml_path), code, art["articulo_num"],
-             art["seccion"], art["content"]),
+            (doc_path, code, num, art["seccion"], art["content"]),
         )
+        rowid = cur.lastrowid
         conn.execute(
-            "INSERT OR IGNORE INTO articulos_meta("
-            "doc_path, leychile_code, articulo_num, seccion, chars, mtime"
-            ") VALUES (?, ?, ?, ?, ?, ?)",
-            (str(xml_path), code, art["articulo_num"], art["seccion"],
+            "INSERT INTO articulos_meta("
+            "id, doc_path, leychile_code, articulo_num, seccion, chars, mtime"
+            ") VALUES (?, ?, ?, ?, ?, ?, ?)",
+            (rowid, doc_path, code, num, art["seccion"],
              len(art["content"]), mtime),
         )
         inserted += 1
-    return inserted, skipped
+    return inserted, 0
 
 
 def main() -> int:
@@ -147,20 +191,28 @@ def main() -> int:
     parser.add_argument("--db", default=str(DB_PATH))
     parser.add_argument("--root", default=str(LEYCHILE_DIR))
     parser.add_argument("--limit", type=int, default=0)
+    parser.add_argument("--leychile-code", type=int, default=0,
+                        help="Solo (re)indexar el XML de este idNorma")
+    parser.add_argument("--reset", action="store_true",
+                        help="Borrar y reindexar los docs tocados (articulos, "
+                             "meta y embeddings). Requerido para re-extracción.")
     args = parser.parse_args()
 
     conn = init_db(Path(args.db))
     root = Path(args.root)
-    xmls = list(root.rglob("*.xml"))
+    if args.leychile_code:
+        xmls = list(root.rglob(f"{args.leychile_code}.xml"))
+    else:
+        xmls = list(root.rglob("*.xml"))
     if args.limit > 0:
         xmls = xmls[:args.limit]
-    print(f"XMLs LeyChile: {len(xmls)}", flush=True)
+    print(f"XMLs LeyChile: {len(xmls)} (reset={args.reset})", flush=True)
 
     import time
     start = time.time()
     n_docs, n_articulos, n_skipped = 0, 0, 0
     for i, xml in enumerate(xmls, 1):
-        ins, skp = index_file(conn, xml)
+        ins, skp = index_file(conn, xml, reset=args.reset)
         n_articulos += ins
         n_skipped += skp
         if ins or skp:

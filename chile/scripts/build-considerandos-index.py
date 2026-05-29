@@ -163,8 +163,11 @@ def main() -> int:
     placeholders = ",".join("?" * len(sources))
 
     conn = init_db(Path(args.db))
+    # Leer el texto desde la columna FTS `docs.content` (no del filesystem):
+    # sirve tanto para docs file-based (tc, etc.) como para docs virtuales sin
+    # archivo en disco (pjud, indexados directo desde json.gz).
     rows = conn.execute(
-        f"SELECT d.path, d.source, dm.mtime FROM docs d "
+        f"SELECT d.path, d.source, dm.mtime, d.content FROM docs d "
         f"JOIN docs_meta dm ON d.path = dm.path "
         f"WHERE d.source IN ({placeholders}) "
         f"ORDER BY dm.mtime DESC",
@@ -176,10 +179,8 @@ def main() -> int:
 
     start = time.time()
     n_docs, n_chunks, n_skip = 0, 0, 0
-    for i, (path, source, mtime) in enumerate(rows, 1):
-        try:
-            text = Path(path).read_text(encoding="utf-8", errors="replace")
-        except OSError:
+    for i, (path, source, mtime, text) in enumerate(rows, 1):
+        if not text:
             continue
         ins, skp = index_doc(conn, path, source, text, mtime)
         n_chunks += ins

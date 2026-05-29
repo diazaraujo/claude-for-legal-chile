@@ -77,7 +77,7 @@ def parse_yaml_lite(text: str) -> dict:
             v = v.strip()
             if v == "":
                 # Block — next lines belong
-                if k == "expect_any":
+                if k in ("expect_any", "expect_none"):
                     in_expect_any = []
                     cur[k] = in_expect_any
                     in_or = None
@@ -108,6 +108,72 @@ def check_case(c: CorpusSearchClient, case: dict) -> tuple[bool, str]:
     min_score = float(case.get("min_score", -50))
     excl_mod = str(case.get("exclude_modificadoras", "false")).lower() == "true"
     vig_only = str(case.get("vigentes_only", "false")).lower() == "true"
+
+    # Caso de búsqueda semántica/híbrida por artículo (mode != FTS doc-level).
+    # `path_contains` se compara contra "leychile_code|articulo_num|snippet".
+    art_mode = case.get("articulos_mode", "")
+    if art_mode:
+        lc = case.get("leychile_code")
+        lc = int(lc) if lc not in (None, "") else None
+        arts = c.search_articulos(
+            query=query, mode=art_mode, leychile_code=lc, limit=top,
+            vigentes_only=vig_only, exclude_modificadoras=excl_mod,
+        )
+        if not arts:
+            return False, "0 hits"
+        paths = [
+            f"{a['leychile_code']}|{a['articulo_num']}|{a['snippet']}"
+            for a in arts
+        ]
+        # expect_none: ningún hit puede contener estos substrings (ej. norma
+        # derogada que vigentes_only debe excluir).
+        for cond in case.get("expect_none", []):
+            sub = cond.get("path_contains")
+            if sub and any(sub in p for p in paths):
+                return False, f"'{sub}' presente pese a filtro (top {top})"
+        expect = case.get("expect_any", [])
+        matched = [cond["path_contains"] for cond in expect
+                   if "path_contains" in cond
+                   and any(cond["path_contains"] in p for p in paths)]
+        if not matched and expect:
+            return False, (f"none of {[x.get('path_contains') for x in expect]} "
+                           f"in top {top}")
+        return True, f"matched={matched} top_cos={arts[0].get('cosine')}"
+
+    # Caso de búsqueda de considerandos (razonamiento de fallos).
+    cons_mode = case.get("considerandos_mode", "")
+    if cons_mode:
+        cons = c.search_considerandos(
+            query=query, mode=cons_mode,
+            source=case.get("source", ""), limit=top,
+        )
+        if not cons:
+            return False, "0 hits"
+        paths = [f"{x['source']}|{x['num_label']}|{x['snippet']}" for x in cons]
+        expect = case.get("expect_any", [])
+        matched = [cond["path_contains"] for cond in expect
+                   if "path_contains" in cond
+                   and any(cond["path_contains"] in p for p in paths)]
+        if not matched and expect:
+            return False, (f"none of {[x.get('path_contains') for x in expect]} "
+                           f"in top {top}")
+        return True, f"matched={matched} top_cos={cons[0].get('cosine')}"
+
+    # Caso de búsqueda de doctrina (semántica pura).
+    if str(case.get("doctrina", "")).lower() == "true":
+        doc = c.search_doctrina(
+            query=query, fuente=case.get("source", ""), limit=top)
+        if not doc:
+            return False, "0 hits"
+        blob = [f"{d['fuente']}|{d['titulo']}|{d['snippet']}" for d in doc]
+        expect = case.get("expect_any", [])
+        matched = [cond["path_contains"] for cond in expect
+                   if "path_contains" in cond
+                   and any(cond["path_contains"].lower() in b.lower() for b in blob)]
+        if not matched and expect:
+            return False, (f"none of {[x.get('path_contains') for x in expect]} "
+                           f"in top {top}")
+        return True, f"matched={matched} top_cos={doc[0].get('cosine')}"
 
     hits = c.search(
         query=query, source=source,

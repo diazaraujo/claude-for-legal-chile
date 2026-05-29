@@ -1,0 +1,110 @@
+#!/usr/bin/env python3
+"""Indexa dictámenes DT (Dirección del Trabajo) en docs FTS.
+
+Lee `data/dt/manifest.sqlite3` (tabla `dictamenes` con article_id, year,
+title, url, downloaded) + los .html bajados en `data/dt/{year}/{id}.html`,
+strippea tags, los inserta en `docs` con source='dt' y path sintético
+`dt/{year}/{id}.html`.
+
+Idempotente: skip si el path ya está en docs_meta.
+"""
+from __future__ import annotations
+import re
+import sqlite3
+import sys
+import time
+from pathlib import Path
+
+_REPO_ROOT = Path(__file__).resolve().parents[2]
+DT_ROOT = _REPO_ROOT / "chile/data/dt"
+CORPUS_DB = _REPO_ROOT / "chile/data/_index/corpus.fts.sqlite3"
+DT_MANIFEST = DT_ROOT / "manifest.sqlite3"
+
+_TAG = re.compile(r"<[^>]+>")
+_WS = re.compile(r"[ \t]+")
+_NL = re.compile(r"\n{3,}")
+_SCRIPT = re.compile(r"<(script|style)[^>]*>.*?</\1>", re.DOTALL | re.IGNORECASE)
+
+
+def clean_html(html: str) -> str:
+    t = _SCRIPT.sub("", html)
+    t = _TAG.sub("\n", t)
+    # Decodificar entidades comunes
+    t = (t.replace("&nbsp;", " ").replace("&amp;", "&")
+         .replace("&lt;", "<").replace("&gt;", ">")
+         .replace("&quot;", '"').replace("&#39;", "'"))
+    t = _WS.sub(" ", t)
+    t = _NL.sub("\n\n", t)
+    return t.strip()
+
+
+def main() -> int:
+    if not DT_MANIFEST.exists():
+        print(f"no existe manifest {DT_MANIFEST}", flush=True)
+        return 1
+    m = sqlite3.connect(str(DT_MANIFEST), timeout=30)
+    rows = m.execute(
+        "SELECT article_id, year, title, url FROM dictamenes WHERE downloaded=1"
+    ).fetchall()
+    m.close()
+    print(f"manifest: {len(rows)} dictámenes marcados downloaded", flush=True)
+
+    corpus = sqlite3.connect(str(CORPUS_DB), timeout=120)
+    corpus.execute("PRAGMA journal_mode=WAL")
+    corpus.execute("PRAGMA busy_timeout=120000")
+    existing = set(
+        r[0] for r in corpus.execute(
+            "SELECT path FROM docs_meta WHERE path LIKE 'dt/%'"
+        )
+    )
+
+    n_ok = n_skip = n_missing = n_empty = 0
+    t0 = time.time()
+    now = time.time()
+    for art_id, year, title, url in rows:
+        path = f"dt/{year}/{art_id}.html"
+        if path in existing:
+            n_skip += 1
+            continue
+        html_path = DT_ROOT / str(year) / f"{art_id}.html"
+        if not html_path.exists():
+            n_missing += 1
+            continue
+        try:
+            html = html_path.read_text(encoding="utf-8", errors="replace")
+        except Exception:
+            n_missing += 1
+            continue
+        text = clean_html(html)
+        # Header: número/año/título + cuerpo
+        header = (
+            f"Dictamen DT N°{art_id}/{year}\n"
+            + (f"Título: {title}\n" if title else "")
+            + (f"URL: {url}\n" if url else "")
+        )
+        content = (header + "\n" + text).strip()
+        if len(content) < 50:
+            n_empty += 1
+            continue
+        corpus.execute(
+            "INSERT INTO docs(path, source, year, content) VALUES (?,?,?,?)",
+            (path, "dt", str(year), content),
+        )
+        corpus.execute(
+            "INSERT OR REPLACE INTO docs_meta(path, mtime, size) VALUES (?,?,?)",
+            (path, now, len(content)),
+        )
+        n_ok += 1
+        if n_ok % 500 == 0:
+            corpus.commit()
+            print(f"  ok={n_ok} skip={n_skip} missing={n_missing} empty={n_empty}",
+                  flush=True)
+    corpus.commit()
+    corpus.close()
+    print(f"\n[DONE] {time.time()-t0:.0f}s | ok={n_ok} skip={n_skip} "
+          f"missing={n_missing} empty={n_empty}")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

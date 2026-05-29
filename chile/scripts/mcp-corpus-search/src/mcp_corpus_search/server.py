@@ -295,11 +295,13 @@ async def list_tools() -> list[Tool]:
             name="corpus_search_articulos",
             description=(
                 "Búsqueda por ARTÍCULO específico de leyes/decretos chilenos "
-                "(218k artículos extraídos de XMLs LeyChile). Granularidad "
-                "más fina que corpus_search. Combina query + filtros leychile_code "
-                "y articulo_num. Ej: query='causales término' + leychile_code=207436 "
-                "(Código Trabajo) → retorna artículos 159, 161, 168 etc. con "
-                "esa frase. Para citar 'Art. X de Ley Y' verificable."
+                "(161k artículos extraídos de XMLs LeyChile, 157k con embedding "
+                "bge-m3). Granularidad más fina que corpus_search. Combina query "
+                "+ filtros leychile_code y articulo_num. Ej: query='causales término' "
+                "+ leychile_code=207436 (Código Trabajo) → artículos 159, 161, 168. "
+                "mode='hybrid' (recomendado para lenguaje natural) fusiona BM25 con "
+                "similitud semántica bge-m3; mode='fts' es solo keyword. Para citar "
+                "'Art. X de Ley Y' verificable."
             ),
             inputSchema={
                 "type": "object",
@@ -307,6 +309,15 @@ async def list_tools() -> list[Tool]:
                     "query": {
                         "type": "string", "default": "",
                         "description": "FTS5 query (puede vacío si filtras por num/code)",
+                    },
+                    "mode": {
+                        "type": "string", "default": "fts",
+                        "enum": ["fts", "hybrid", "semantic"],
+                        "description": (
+                            "fts=BM25 keyword; hybrid=BM25+semántico bge-m3 (RRF), "
+                            "mejor para preguntas en lenguaje natural; semantic=orden "
+                            "puro por similitud coseno."
+                        ),
                     },
                     "leychile_code": {
                         "type": "integer",
@@ -316,8 +327,73 @@ async def list_tools() -> list[Tool]:
                         "type": "string", "default": "",
                         "description": "Número exacto del artículo (ej '161', '1 bis')",
                     },
+                    "vigentes_only": {
+                        "type": "boolean", "default": False,
+                        "description": (
+                            "Excluye artículos de normas derogadas (vía docs_norma). "
+                            "Recomendado para citar derecho vigente."
+                        ),
+                    },
+                    "exclude_modificadoras": {
+                        "type": "boolean", "default": False,
+                        "description": "Excluye artículos de leyes modificadoras (ruido).",
+                    },
                     "limit": {"type": "integer", "default": 10},
                     "snippet_len": {"type": "integer", "default": 240},
+                },
+                "required": ["query"],
+            },
+        ),
+        Tool(
+            name="corpus_search_considerandos",
+            description=(
+                "Búsqueda semántica de CONSIDERANDOS (párrafos de razonamiento) "
+                "de fallos chilenos: Tribunal Constitucional, tribunales "
+                "ambientales, TDLC, TDPI (246k chunks con embedding bge-m3). "
+                "Para encontrar el fundamento jurídico de una decisión, no la "
+                "norma. mode='hybrid' (recomendado) combina BM25 + semántico; "
+                "'semantic' orden por coseno; 'fts' solo keyword. source filtra "
+                "por tribunal (tc, tc-moderno, tribunales-ambientales, tdlc, tdpi)."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "query": {"type": "string", "description": "Consulta"},
+                    "mode": {
+                        "type": "string", "default": "hybrid",
+                        "enum": ["fts", "hybrid", "semantic"],
+                    },
+                    "source": {
+                        "type": "string", "default": "",
+                        "description": "Filtra por tribunal (tc, tc-moderno, "
+                                       "tribunales-ambientales, tdlc, tdpi)",
+                    },
+                    "limit": {"type": "integer", "default": 10},
+                    "snippet_len": {"type": "integer", "default": 320},
+                },
+                "required": ["query"],
+            },
+        ),
+        Tool(
+            name="corpus_search_doctrina",
+            description=(
+                "Búsqueda semántica de DOCTRINA universitaria chilena (tesis y "
+                "papers, ~10k docs con embedding bge-m3: U. de Chile, U. de "
+                "Valparaíso, U. F. Toledo, U. Autónoma, UCN). Solo vectorial "
+                "(sin keyword). fuente filtra por universidad (uch, uv, uft, "
+                "uautonoma, ucn). Para fundamentación académica, no normativa "
+                "ni jurisprudencia."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "query": {"type": "string", "description": "Consulta"},
+                    "fuente": {
+                        "type": "string", "default": "",
+                        "description": "Universidad (uch, uv, uft, uautonoma, ucn)",
+                    },
+                    "limit": {"type": "integer", "default": 10},
+                    "snippet_len": {"type": "integer", "default": 320},
                 },
                 "required": ["query"],
             },
@@ -582,12 +658,44 @@ async def _call_tool_impl(name: str, arguments: dict[str, Any]) -> list[TextCont
         ))]
 
     if name == "corpus_search_articulos":
+        mode_arg = str(arguments.get("mode", "fts")).lower()
+        if mode_arg not in ("fts", "hybrid", "semantic"):
+            mode_arg = "fts"
         results = client.search_articulos(
             query=str(arguments.get("query", "")),
             leychile_code=arguments.get("leychile_code"),
             articulo_num=str(arguments.get("articulo_num", "")),
             limit=max(1, min(50, int(arguments.get("limit", 10)))),
             snippet_len=max(40, min(800, int(arguments.get("snippet_len", 240)))),
+            mode=mode_arg,
+            vigentes_only=bool(arguments.get("vigentes_only", False)),
+            exclude_modificadoras=bool(arguments.get("exclude_modificadoras", False)),
+        )
+        return [TextContent(type="text", text=json.dumps({
+            "n_hits": len(results), "results": results,
+        }, ensure_ascii=False, indent=2))]
+
+    if name == "corpus_search_considerandos":
+        mode_arg = str(arguments.get("mode", "hybrid")).lower()
+        if mode_arg not in ("fts", "hybrid", "semantic"):
+            mode_arg = "hybrid"
+        results = client.search_considerandos(
+            query=str(arguments.get("query", "")),
+            source=str(arguments.get("source", "")),
+            mode=mode_arg,
+            limit=max(1, min(50, int(arguments.get("limit", 10)))),
+            snippet_len=max(40, min(800, int(arguments.get("snippet_len", 320)))),
+        )
+        return [TextContent(type="text", text=json.dumps({
+            "n_hits": len(results), "results": results,
+        }, ensure_ascii=False, indent=2))]
+
+    if name == "corpus_search_doctrina":
+        results = client.search_doctrina(
+            query=str(arguments.get("query", "")),
+            fuente=str(arguments.get("fuente", "")),
+            limit=max(1, min(50, int(arguments.get("limit", 10)))),
+            snippet_len=max(40, min(800, int(arguments.get("snippet_len", 320)))),
         )
         return [TextContent(type="text", text=json.dumps({
             "n_hits": len(results), "results": results,
