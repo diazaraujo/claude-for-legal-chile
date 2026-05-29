@@ -27,9 +27,11 @@ def ocr_one(pdf_path_str: str) -> tuple[str, str, int, float]:
     t0 = time.time()
     with tempfile.TemporaryDirectory(prefix="ocr-cm-") as td:
         td_p = Path(td)
-        # pdftoppm @200dpi
+        # pdftoppm @150dpi — 200dpi causa fallos intermitentes de leptonica
+        # ("failed to open") bajo presión de memoria con varios workers en
+        # PDFs escaneados multi-página; 150dpi basta para OCR y mitad de RAM.
         r = subprocess.run(
-            ["pdftoppm", "-r", "200", str(pdf), str(td_p / "p"), "-png"],
+            ["pdftoppm", "-r", "150", str(pdf), str(td_p / "p"), "-png"],
             capture_output=True, timeout=300,
         )
         if r.returncode != 0:
@@ -56,12 +58,12 @@ def ocr_one(pdf_path_str: str) -> tuple[str, str, int, float]:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--workers", type=int, default=6)
+    ap.add_argument("--workers", type=int, default=4)
     ap.add_argument("--limit", type=int, default=None)
     args = ap.parse_args()
 
     OCR_ROOT.mkdir(parents=True, exist_ok=True)
-    pdfs = sorted(ROOT.rglob("*.pdf"))
+    pdfs = sorted(ROOT.rglob("*.pdf"), key=lambda p: p.stat().st_size)
     pdfs = [p for p in pdfs if "_ocr" not in p.parts]
     if args.limit:
         pdfs = pdfs[: args.limit]
