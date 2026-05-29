@@ -41,12 +41,15 @@ def ocr_one(pdf_path_str: str) -> tuple[str, str, int, float]:
             return (str(pdf), "no-pages", 0, time.time() - t0)
         chunks = []
         for png in pngs:
+            # bytes, no text=True: tesseract puede emitir bytes no-utf8 en
+            # stdout/stderr (decode estricto crasheaba ocr_one → fut.result()
+            # propagaba UnicodeDecodeError y mataba todo el run).
             r = subprocess.run(
                 ["tesseract", str(png), "-", "-l", "spa", "--psm", "6"],
-                capture_output=True, text=True, timeout=180,
+                capture_output=True, timeout=180,
             )
             if r.returncode == 0:
-                chunks.append(r.stdout)
+                chunks.append(r.stdout.decode("utf-8", "replace"))
         text = "\n".join(chunks).strip()
         if len(text) < 100:
             return (str(pdf), "empty-ocr", len(text), time.time() - t0)
