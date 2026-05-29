@@ -194,6 +194,24 @@ de **tres capas** (ver `decisions/ADR-0002`):
 | **2** | Estructura por libro/título/artículo desde XML LeyChile | **~11.800 archivos** |
 | **3** | Análisis curado con disclaimer + estado de revisión | **126 perfiles** |
 
+### Capa de jurisprudencia y dictámenes (corpus de búsqueda)
+
+Además de la normativa, el sistema dispone de un **corpus de búsqueda** (índice
+`corpus.fts`, fuera del repo por tamaño) sobre el que opera el MCP `corpus-search`
+con retrieval híbrido (BM25 + embeddings bge-m3). Cubre:
+
+- **Sentencias judiciales:** Poder Judicial (juris.pjud.cl — Corte Suprema,
+  Apelaciones, Familia, Laboral, Civil, Penal, Cobranza), Tribunal Constitucional,
+  Tribunales Ambientales, TDLC, TDPI, TTA.
+- **Dictámenes / jurisprudencia administrativa:** Dirección del Trabajo (DT),
+  CPLT (Ley 20.285), SUSESO, CGR (fiscalizaciones; dictámenes en incorporación).
+- **Doctrina:** ~10k tesis/papers universitarios.
+
+Para citar jurisprudencia rige el **protocolo anti-alucinación**: el sistema cita
+solo fallos/dictámenes recuperados del corpus (con rol/número verificable) y nunca
+inventa roles. Si no recupera respaldo, deriva al Buscador del Poder Judicial o a
+la fuente administrativa. Ver `COVERAGE-STATUS.md` para el estado por fuente.
+
 ### Cobertura capa 3 por área
 
 | Área | Normas con perfil capa 3 |
@@ -273,12 +291,12 @@ antes de citar y sugiere verificar texto vigente en BCN.
   involucre comunidades indígenas requiere abogado especializado + Convenio 169
   OIT.
 - **Derecho marítimo internacional:** fuera de alcance v1.
-- **Derecho militar (justicia militar) y FFAA:** fuera de alcance v1.
 - **Doctrina de DDHH internacional (Sistema Interamericano, ONU):** referenciado
   pero no exhaustivo. Para casos ante CIDH/Corte IDH derivar a especialista.
-- **Jurisprudencia individual**: el corpus cubre normativa, no precedentes
-  específicos. El sistema NO inventa fallos; cuando un razonamiento requiere
-  jurisprudencia, sugiere consultar el Buscador del Poder Judicial.
+
+> **Justicia militar (Cortes Marciales / FFAA):** en incorporación — el corpus
+> está integrando sentencias de Cortes Marciales (OCR de fallos escaneados). Hasta
+> validar la capa, marcar las citas como `borrador-no-validado`.
 
 Cuando una consulta cae en estas áreas, el sistema lo declara y sugiere derivar
 a especialista.
