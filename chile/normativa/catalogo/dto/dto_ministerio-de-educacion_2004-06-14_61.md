@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-educacion_2004-06-14_61
 tipo: dto
 numero: 61
-titulo_oficial: "MODIFICA DECRETO SUPREMO DE EDUCACION Nº 139 DE 1998 QUE FIJA TEXTO REFUNDIDO DEL DECRETO SUPREMO DE EDUCACION Nº 52 DE 1995, Y ESTABLECE CANTIDAD Y MONTO DE LAS BECAS QUE SE OTORGARAN DURANTE EL AÑO 2004 A LOS BENEFICIARIOS DEL PROGRAMA BECAS INDIGENAS"
-publicacion: 2004-06-14
-emisor: ministerio-de-educacion
 leychile_code: 226282
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=226282
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-educacion/2004-06-14/61
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 61
 
-**Título oficial:** MODIFICA DECRETO SUPREMO DE EDUCACION Nº 139 DE 1998 QUE FIJA TEXTO REFUNDIDO DEL DECRETO SUPREMO DE EDUCACION Nº 52 DE 1995, Y ESTABLECE CANTIDAD Y MONTO DE LAS BECAS QUE SE OTORGARAN DURANTE EL AÑO 2004 A LOS BENEFICIARIOS DEL PROGRAMA BECAS INDIGENAS

@@ -2,17 +2,12 @@
 slug: dto_ministerio-de-energia_2012-04-09_111
 tipo: dto
 numero: 111
-titulo_oficial: "ADJUDICA Y OTORGA CONCESIÓN DE EXPLORACIÓN DE ENERGÍA GEOTÉRMICA A LA EMPRESA COMPAÑÍA MINERA ZALDÍVAR LIMITADA, EN EL ÁREA DENOMINADA 'GORBEA', UBICADA EN LAS COMUNAS DE ANTOFAGASTA Y DIEGO DE ALMAGRO, PROVINCIAS DE ANTOFAGASTA Y CHAÑARAL, REGIONES DE ANTOFAGASTA Y ATACAMA, EN VIRTUD DE LA LEY Nº19.657"
-publicacion: 2012-04-09
-promulgacion: 2011-11-25
-emisor: ministerio-de-energia
 leychile_code: 1038817
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1038817
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-energia/2012-04-09/111
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 111
 
-**Título oficial:** ADJUDICA Y OTORGA CONCESIÓN DE EXPLORACIÓN DE ENERGÍA GEOTÉRMICA A LA EMPRESA COMPAÑÍA MINERA ZALDÍVAR LIMITADA, EN EL ÁREA DENOMINADA 'GORBEA', UBICADA EN LAS COMUNAS DE ANTOFAGASTA Y DIEGO DE ALMAGRO, PROVINCIAS DE ANTOFAGASTA Y CHAÑARAL, REGIONES DE ANTOFAGASTA Y ATACAMA, EN VIRTUD DE LA LEY Nº19.657

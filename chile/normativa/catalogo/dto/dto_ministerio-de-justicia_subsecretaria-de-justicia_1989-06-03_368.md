@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-justicia_subsecretaria-de-justicia_1989-06-03_368
+tipo: dto
+numero: 368
+leychile_code: 94709
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=94709
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia_subsecretaria-de-justicia/1989-06-03/368
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 368
+

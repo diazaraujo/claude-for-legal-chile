@@ -2,17 +2,12 @@
 slug: dto_ministerio-de-salud_1974-09-26_310
 tipo: dto
 numero: 310
-titulo_oficial: "REEMPLAZA EL INCISO QUE INDICA DE LOS ARTICULOS QUE SEÑALA DE LOS DECRETOS POR LOS CUALES SE APROBARON LOS ARANCELES DE LOS COLEGIOS DE DENTISTAS, LABORATORISTAS DENTALES, TECNOLOGOS, MEDICOS, ENFERMERAS, MATRONAS, KINESIOLOGOS Y QUIMICOS FARMACEUTICOS "
-publicacion: 1974-09-26
-promulgacion: 1974-08-23
-emisor: ministerio-de-salud
 leychile_code: 277603
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=277603
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-salud/1974-09-26/310
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 310
 
-**Título oficial:** REEMPLAZA EL INCISO QUE INDICA DE LOS ARTICULOS QUE SEÑALA DE LOS DECRETOS POR LOS CUALES SE APROBARON LOS ARANCELES DE LOS COLEGIOS DE DENTISTAS, LABORATORISTAS DENTALES, TECNOLOGOS, MEDICOS, ENFERMERAS, MATRONAS, KINESIOLOGOS Y QUIMICOS FARMACEUTICOS 

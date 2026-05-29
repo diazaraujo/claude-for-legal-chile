@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-obras-publicas_fiscalia_2005-11-02_1027-exento
+tipo: dto
+numero: 1027-exento
+leychile_code: 243512
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=243512
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/2005-11-02/1027-exento
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 1027-exento
+

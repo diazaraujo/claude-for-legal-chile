@@ -2,14 +2,11 @@
 slug: dto_ministerio-de-obras-publicas_fiscalia_2012-04-16_278-exento
 tipo: dto
 numero: 278-exento
-publicacion: 2012-04-16
-promulgacion: 2012-02-29
-emisor: ministerio-de-obras-publicas_fiscalia
 leychile_code: 1038991
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1038991
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/2012-04-16/278-exento
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 278-exento

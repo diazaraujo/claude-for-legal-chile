@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-transportes-y-telecomunicaciones_subsecretaria-de-telecomunicaciones_2018-01-18_910-exento
+tipo: dto
+numero: 910 exento
+leychile_code: 1113889
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1113889
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-transportes-y-telecomunicaciones_subsecretaria-de-telecomunicaciones/2018-01-18/910-exento
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 910 exento
+

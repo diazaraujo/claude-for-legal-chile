@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-obras-publicas_2005-07-04_283
 tipo: dto
 numero: 283
-titulo_oficial: "MODIFICA CONTRATO DE CONCESION DE LA OBRA PUBLICA FISCAL DENOMINADA TERMINAL DE PASAJEROS AEROPUERTO LA FLORIDA DE LA SERENA EN CUMPLIMIENTO DE SENTENCIA DEFINITIVA DICTADA CON FECHA 4 DE NOVIEMBRE DE 2004, POR LA RESPECTIVA COMISION ARBITRAL"
-publicacion: 2005-07-04
-emisor: ministerio-de-obras-publicas
 leychile_code: 239794
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=239794
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas/2005-07-04/283
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 283
 
-**Título oficial:** MODIFICA CONTRATO DE CONCESION DE LA OBRA PUBLICA FISCAL DENOMINADA TERMINAL DE PASAJEROS AEROPUERTO LA FLORIDA DE LA SERENA EN CUMPLIMIENTO DE SENTENCIA DEFINITIVA DICTADA CON FECHA 4 DE NOVIEMBRE DE 2004, POR LA RESPECTIVA COMISION ARBITRAL

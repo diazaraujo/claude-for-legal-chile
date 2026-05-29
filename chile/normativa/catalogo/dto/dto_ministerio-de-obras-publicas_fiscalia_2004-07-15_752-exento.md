@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-obras-publicas_fiscalia_2004-07-15_752-exento
+tipo: dto
+numero: 752-exento
+leychile_code: 227697
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=227697
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/2004-07-15/752-exento
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 752-exento
+

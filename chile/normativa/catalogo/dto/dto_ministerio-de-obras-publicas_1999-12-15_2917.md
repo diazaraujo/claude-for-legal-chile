@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-obras-publicas_1999-12-15_2917
 tipo: dto
 numero: 2917
-titulo_oficial: "DECLARA FORMALIZADAS LAS CONCESIONES DE PRODUCCION Y DISTRIBUCION DE AGUA POTABLE Y DE RECOLECCION Y DISPOSICION DE AGUAS SERVIDAS DE EMPRESA DE SERVICIOS SANITARIOS DEL BIO-BIO S.A., CORRESPONDIENTE A LAS LOCALIDADES DE COBQUECURA Y QUIRIHUE, VIII REGION"
-publicacion: 1999-12-15
-emisor: ministerio-de-obras-publicas
 leychile_code: 149338
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=149338
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas/1999-12-15/2917
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 2917
 
-**Título oficial:** DECLARA FORMALIZADAS LAS CONCESIONES DE PRODUCCION Y DISTRIBUCION DE AGUA POTABLE Y DE RECOLECCION Y DISPOSICION DE AGUAS SERVIDAS DE EMPRESA DE SERVICIOS SANITARIOS DEL BIO-BIO S.A., CORRESPONDIENTE A LAS LOCALIDADES DE COBQUECURA Y QUIRIHUE, VIII REGION

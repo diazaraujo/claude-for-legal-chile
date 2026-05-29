@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-transportes-y-telecomunicaciones_subsecretaria-de-telecomunicaciones_2007-02-10_41
+tipo: dto
+numero: 41
+leychile_code: 258293
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=258293
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-transportes-y-telecomunicaciones_subsecretaria-de-telecomunicaciones/2007-02-10/41
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 41
+

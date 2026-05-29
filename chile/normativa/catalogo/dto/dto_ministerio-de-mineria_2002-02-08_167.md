@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-mineria_2002-02-08_167
 tipo: dto
 numero: 167
-titulo_oficial: "OTORGA A SOCIEDAD GEOTERMICA DEL NORTE S.A. CONCESION DE EXPLORACION DE ENERGIA GEOTERMICA, EN VIRTUD DEL DERECHO EXCLUSIVO PREVISTO EN EL ARTICULO TRANSITORIO DE LA LEY 19.657, EN EL SECTOR DE LA TORTA, COMUNA DE SAN PEDRO DE ATACAMA, PROVINCIA DE EL LOA, II REGION DE ANTOFAGASTA"
-publicacion: 2002-02-08
-emisor: ministerio-de-mineria
 leychile_code: 194469
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=194469
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-mineria/2002-02-08/167
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 167
 
-**Título oficial:** OTORGA A SOCIEDAD GEOTERMICA DEL NORTE S.A. CONCESION DE EXPLORACION DE ENERGIA GEOTERMICA, EN VIRTUD DEL DERECHO EXCLUSIVO PREVISTO EN EL ARTICULO TRANSITORIO DE LA LEY 19.657, EN EL SECTOR DE LA TORTA, COMUNA DE SAN PEDRO DE ATACAMA, PROVINCIA DE EL LOA, II REGION DE ANTOFAGASTA

@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-obras-publicas_fiscalia_2007-06-01_228
+tipo: dto
+numero: 228
+leychile_code: 261315
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=261315
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/2007-06-01/228
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 228
+

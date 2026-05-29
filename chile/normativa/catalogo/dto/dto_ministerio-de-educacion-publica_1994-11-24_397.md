@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-educacion-publica_1994-11-24_397
+tipo: dto
+numero: 397
+leychile_code: 21147
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=21147
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-educacion-publica/1994-11-24/397
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 397
+

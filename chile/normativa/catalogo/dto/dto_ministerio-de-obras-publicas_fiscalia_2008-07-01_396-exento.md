@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-obras-publicas_fiscalia_2008-07-01_396-exento
+tipo: dto
+numero: 396-exento
+leychile_code: 273194
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=273194
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/2008-07-01/396-exento
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 396-exento
+

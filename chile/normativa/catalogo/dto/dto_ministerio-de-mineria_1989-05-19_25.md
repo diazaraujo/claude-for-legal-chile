@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-mineria_1989-05-19_25
 tipo: dto
 numero: 25
-titulo_oficial: "ESTABLECE REQUISITOS Y CONDICIONES DEL CONTRATO ESPECIAL DE OPERACION PARA LA EXPLORACION Y EXPLOTACION DE YACIMIENTO DE HIDROCARBUROS QUE EL ESTADO DE CHILE SUSCRIBIRA CON MAXUS CHILE INC. Y CON ENAP, EN LA REGION DE ANTOFAGASTA."
-publicacion: 1989-05-19
-emisor: ministerio-de-mineria
 leychile_code: 7742
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=7742
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-mineria/1989-05-19/25
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 25
 
-**Título oficial:** ESTABLECE REQUISITOS Y CONDICIONES DEL CONTRATO ESPECIAL DE OPERACION PARA LA EXPLORACION Y EXPLOTACION DE YACIMIENTO DE HIDROCARBUROS QUE EL ESTADO DE CHILE SUSCRIBIRA CON MAXUS CHILE INC. Y CON ENAP, EN LA REGION DE ANTOFAGASTA.

@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-obras-publicas_1997-12-15_958
 tipo: dto
 numero: 958
-titulo_oficial: "DECLARA FORMALIZADAS LAS CONCESIONES DE PRODUCCION Y DISTRIBUCION DE AGUA POTABLE Y RECOLECCION Y DISPOSICION DE AGUAS SERVIDAS DE ESSAR S.A., CORRESPONDIENTE A LOS SERVICIOS DE LAS LOCALIDADES DE CHERQUENCO, LASTARRIA, LUMACO, TRAIGUEN Y VILCUN, IX REGION"
-publicacion: 1997-12-15
-emisor: ministerio-de-obras-publicas
 leychile_code: 83891
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=83891
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas/1997-12-15/958
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 958
 
-**Título oficial:** DECLARA FORMALIZADAS LAS CONCESIONES DE PRODUCCION Y DISTRIBUCION DE AGUA POTABLE Y RECOLECCION Y DISPOSICION DE AGUAS SERVIDAS DE ESSAR S.A., CORRESPONDIENTE A LOS SERVICIOS DE LAS LOCALIDADES DE CHERQUENCO, LASTARRIA, LUMACO, TRAIGUEN Y VILCUN, IX REGION

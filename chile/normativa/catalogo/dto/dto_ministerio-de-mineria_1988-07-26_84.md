@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-mineria_1988-07-26_84
 tipo: dto
 numero: 84
-titulo_oficial: "ESTABLECE REQUISITOS Y CONDICIONES DEL CONTRATO ESPECIAL DE OPERACION PARA LA EXPLORACION Y EXPLOTACION DE YACIMIENTOS DE HIDROCARBUROS QUE EL ESTADO DE CHILE SUSCRIBIRA CON CHILE HUNT OIL COMPANY Y CON LA EMPRESA NACIONAL DEL PETROLEO"
-publicacion: 1988-07-26
-emisor: ministerio-de-mineria
 leychile_code: 134439
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=134439
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-mineria/1988-07-26/84
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 84
 
-**Título oficial:** ESTABLECE REQUISITOS Y CONDICIONES DEL CONTRATO ESPECIAL DE OPERACION PARA LA EXPLORACION Y EXPLOTACION DE YACIMIENTOS DE HIDROCARBUROS QUE EL ESTADO DE CHILE SUSCRIBIRA CON CHILE HUNT OIL COMPANY Y CON LA EMPRESA NACIONAL DEL PETROLEO

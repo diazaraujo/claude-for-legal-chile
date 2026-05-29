@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-econstruccion_1999-01-04_684
+tipo: dto
+numero: 684
+leychile_code: 128836
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=128836
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-econstruccion/1999-01-04/684
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 684
+

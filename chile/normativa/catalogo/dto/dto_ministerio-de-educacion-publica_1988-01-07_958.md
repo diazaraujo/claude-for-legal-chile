@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-educacion-publica_1988-01-07_958
+tipo: dto
+numero: 958
+leychile_code: 171547
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=171547
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-educacion-publica/1988-01-07/958
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 958
+

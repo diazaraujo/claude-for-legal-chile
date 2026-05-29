@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-economia_fomento-y-turismo_subsecretaria-de-pesca-y-acuicultura_2013-11-28_100
+tipo: dto
+numero: 100
+leychile_code: 1056578
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1056578
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-economia_fomento-y-turismo_subsecretaria-de-pesca-y-acuicultura/2013-11-28/100
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 100
+

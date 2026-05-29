@@ -1,18 +1,13 @@
 ---
 slug: dto_ministerio-de-educacion_2014-01-07_1979-exento
 tipo: dto
-numero: 1979-exento
-titulo_oficial: "REVOCA RECONOCIMIENTO OFICIAL Y ELIMINA DEL REGISTRO DE CENTROS DE FORMACIÓN TÉCNICA A INSTITUCIÓN QUE INDICA"
-publicacion: 2014-01-07
-promulgacion: 2013-12-27
-emisor: ministerio-de-educacion
+numero: 1979 exento
 leychile_code: 1057907
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1057907
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-educacion/2014-01-07/1979-exento
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
-# DTO 1979-exento
+# DTO 1979 exento
 
-**Título oficial:** REVOCA RECONOCIMIENTO OFICIAL Y ELIMINA DEL REGISTRO DE CENTROS DE FORMACIÓN TÉCNICA A INSTITUCIÓN QUE INDICA

@@ -2,17 +2,12 @@
 slug: dto_ministerio-de-justicia_2012-09-14_537
 tipo: dto
 numero: 537
-titulo_oficial: "CANCELA PERSONALIDAD JURÍDICA A 'CORPORACIÓN MUTUAL DE FUNCIONARIOS DE LA ESCUELA AMÉRICA DE ARICA'"
-publicacion: 2012-09-14
-promulgacion: 2012-08-13
-emisor: ministerio-de-justicia
 leychile_code: 1043735
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1043735
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia/2012-09-14/537
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 537
 
-**Título oficial:** CANCELA PERSONALIDAD JURÍDICA A 'CORPORACIÓN MUTUAL DE FUNCIONARIOS DE LA ESCUELA AMÉRICA DE ARICA'

@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-transportes-y-telecomunicaciones_subsecretaria-de-telecomunicaciones_2014-11-07_678-exento
+tipo: dto
+numero: 678 exento
+leychile_code: 1069194
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1069194
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-transportes-y-telecomunicaciones_subsecretaria-de-telecomunicaciones/2014-11-07/678-exento
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 678 exento
+

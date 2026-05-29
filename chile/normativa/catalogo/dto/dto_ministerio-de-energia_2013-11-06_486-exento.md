@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-energia_2013-11-06_486-exento
+tipo: dto
+numero: 486-exento
+leychile_code: 1055878
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1055878
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-energia/2013-11-06/486-exento
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 486-exento
+

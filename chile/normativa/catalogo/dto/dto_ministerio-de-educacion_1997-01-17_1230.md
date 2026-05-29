@@ -2,17 +2,12 @@
 slug: dto_ministerio-de-educacion_1997-01-17_1230
 tipo: dto
 numero: 1230
-titulo_oficial: "APRUEBA CONVENIO EN VIRTUD DEL CUAL EL MINISTERIO DE EDUCACION ENTREGA A LA FUNDACION ALMIRANTE CARLOS CONDELL, LA ADMINISTRACION DEL INSTITUTO DEL MAR ALMIRANTE CARLOS CONDELL (EX LICEO INDUSTRIAL A Nº 8) DE IQUIQUE, DE ACUERDO AL DECRETO LEY Nº 3.166, DE 1980"
-publicacion: 1997-01-17
-promulgacion: 1996-11-25
-emisor: ministerio-de-educacion
 leychile_code: 60154
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=60154
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-educacion/1997-01-17/1230
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 1230
 
-**Título oficial:** APRUEBA CONVENIO EN VIRTUD DEL CUAL EL MINISTERIO DE EDUCACION ENTREGA A LA FUNDACION ALMIRANTE CARLOS CONDELL, LA ADMINISTRACION DEL INSTITUTO DEL MAR ALMIRANTE CARLOS CONDELL (EX LICEO INDUSTRIAL A Nº 8) DE IQUIQUE, DE ACUERDO AL DECRETO LEY Nº 3.166, DE 1980

@@ -2,17 +2,12 @@
 slug: dto_ministerio-de-energia_2012-12-31_130
 tipo: dto
 numero: 130
-titulo_oficial: "APRUEBA REGLAMENTO QUE ESTABLECE LAS DISPOSICIONES APLICABLES A LOS SERVICIOS COMPLEMENTARIOS CON QUE DEBERÁ CONTAR CADA SISTEMA ELÉCTRICO PARA LA COORDINACIÓN DE LA OPERACIÓN DEL SISTEMA EN LOS TÉRMINOS A QUE SE REFIERE EL ARTÍCULO 137º DE LA LEY GENERAL DE SERVICIOS ELÉCTRICOS"
-publicacion: 2012-12-31
-promulgacion: 2011-12-22
-emisor: ministerio-de-energia
 leychile_code: 1047565
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1047565
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-energia/2012-12-31/130
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 130
 
-**Título oficial:** APRUEBA REGLAMENTO QUE ESTABLECE LAS DISPOSICIONES APLICABLES A LOS SERVICIOS COMPLEMENTARIOS CON QUE DEBERÁ CONTAR CADA SISTEMA ELÉCTRICO PARA LA COORDINACIÓN DE LA OPERACIÓN DEL SISTEMA EN LOS TÉRMINOS A QUE SE REFIERE EL ARTÍCULO 137º DE LA LEY GENERAL DE SERVICIOS ELÉCTRICOS

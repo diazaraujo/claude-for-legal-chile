@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-obras-publicas_fiscalia_2012-06-15_951-exento
+tipo: dto
+numero: 951 exento
+leychile_code: 1041030
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1041030
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/2012-06-15/951-exento
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 951 exento
+

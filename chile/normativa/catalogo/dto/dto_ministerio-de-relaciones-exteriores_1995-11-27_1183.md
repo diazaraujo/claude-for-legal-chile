@@ -2,17 +2,12 @@
 slug: dto_ministerio-de-relaciones-exteriores_1995-11-27_1183
 tipo: dto
 numero: 1183
-titulo_oficial: "PROMULGA PROTOCOLO SUSTITUTIVO DEL PROTOCOLO N° 2 DEL ACUERDO DE COMPLEMENTACION ECONOMICA N° 16 ENTRE LA REPUBLICA DE CHILE Y LA REPUBLICA ARGENTINA POR EL CUAL SE ESTABLECEN LAS NORMAS QUE REGULAN LA INTERCONEXION GASIFERA Y EL SUMINISTRO DE GAS NATURAL ENTRE AMBOS PAISES"
-publicacion: 1995-11-27
-promulgacion: 1995-09-07
-emisor: ministerio-de-relaciones-exteriores
 leychile_code: 17134
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=17134
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-relaciones-exteriores/1995-11-27/1183
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 1183
 
-**Título oficial:** PROMULGA PROTOCOLO SUSTITUTIVO DEL PROTOCOLO N° 2 DEL ACUERDO DE COMPLEMENTACION ECONOMICA N° 16 ENTRE LA REPUBLICA DE CHILE Y LA REPUBLICA ARGENTINA POR EL CUAL SE ESTABLECEN LAS NORMAS QUE REGULAN LA INTERCONEXION GASIFERA Y EL SUMINISTRO DE GAS NATURAL ENTRE AMBOS PAISES

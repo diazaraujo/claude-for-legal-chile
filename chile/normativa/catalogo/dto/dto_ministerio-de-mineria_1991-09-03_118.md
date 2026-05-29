@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-mineria_1991-09-03_118
 tipo: dto
 numero: 118
-titulo_oficial: "AUTORIZA PARA PONER TERMINO AL CONTRATO ESPECIAL DE OPERACION PARA LA EXPLORACION Y EXPLOTACION DE YACIMIENTOS DE HIDROCARBUROS QUE EL ESTADO DE CHILE SUSCRIBIO CON EUROCAN (BERMUDA) LTD. DE CHILE Y CON LA EMPRESA NACIONAL DEL PETROLEO EN LA II REGION DE ANTOFAGASTA"
-publicacion: 1991-09-03
-emisor: ministerio-de-mineria
 leychile_code: 9538
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=9538
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-mineria/1991-09-03/118
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 118
 
-**Título oficial:** AUTORIZA PARA PONER TERMINO AL CONTRATO ESPECIAL DE OPERACION PARA LA EXPLORACION Y EXPLOTACION DE YACIMIENTOS DE HIDROCARBUROS QUE EL ESTADO DE CHILE SUSCRIBIO CON EUROCAN (BERMUDA) LTD. DE CHILE Y CON LA EMPRESA NACIONAL DEL PETROLEO EN LA II REGION DE ANTOFAGASTA

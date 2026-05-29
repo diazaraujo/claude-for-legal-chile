@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-educacion_2006-11-20_248
 tipo: dto
 numero: 248
-titulo_oficial: "APRUEBA MODIFICACION DE CONVENIO CELEBRADO ENTRE EL MINISTERIO DE EDUCACION Y LA CORPORACION PRIVADA DE DESARROLLO DE CURICO MEDIANTE EL CUAL SE ENTREGA LA ADMINISTRACION DEL LICEO POLITECNICO 'EGIDIO ROZZI SACHETTI' (EX B Nº 22) DE ACUERDO AL DECRETO LEY Nº 3.166, DE 1980"
-publicacion: 2006-11-20
-emisor: ministerio-de-educacion
 leychile_code: 255384
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=255384
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-educacion/2006-11-20/248
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 248
 
-**Título oficial:** APRUEBA MODIFICACION DE CONVENIO CELEBRADO ENTRE EL MINISTERIO DE EDUCACION Y LA CORPORACION PRIVADA DE DESARROLLO DE CURICO MEDIANTE EL CUAL SE ENTREGA LA ADMINISTRACION DEL LICEO POLITECNICO 'EGIDIO ROZZI SACHETTI' (EX B Nº 22) DE ACUERDO AL DECRETO LEY Nº 3.166, DE 1980

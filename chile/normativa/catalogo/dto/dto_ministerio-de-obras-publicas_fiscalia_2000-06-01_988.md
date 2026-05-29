@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-obras-publicas_fiscalia_2000-06-01_988
+tipo: dto
+numero: 988
+leychile_code: 169772
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=169772
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/2000-06-01/988
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 988
+

@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-hacienda_2003-07-11_287-exento
 tipo: dto
 numero: 287-exento
-titulo_oficial: "COMPLEMENTA DECRETO Nº 225 EXENTO, DE 2003"
-publicacion: 2003-07-11
-emisor: ministerio-de-hacienda
 leychile_code: 212347
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=212347
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-hacienda/2003-07-11/287-exento
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 287-exento
 
-**Título oficial:** COMPLEMENTA DECRETO Nº 225 EXENTO, DE 2003

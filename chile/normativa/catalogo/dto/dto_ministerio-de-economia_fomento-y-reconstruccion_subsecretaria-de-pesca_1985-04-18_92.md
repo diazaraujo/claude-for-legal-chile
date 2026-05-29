@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-pesca_1985-04-18_92
+tipo: dto
+numero: 92
+leychile_code: 162162
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=162162
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-pesca/1985-04-18/92
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 92
+

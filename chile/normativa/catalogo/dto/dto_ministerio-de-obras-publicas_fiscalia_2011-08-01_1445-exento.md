@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-obras-publicas_fiscalia_2011-08-01_1445-exento
+tipo: dto
+numero: 1445-exento
+leychile_code: 1028230
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1028230
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/2011-08-01/1445-exento
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 1445-exento
+

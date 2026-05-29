@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-educacion-publica_subsecretaria-de-educacion-publica_1988-07-05_253
 tipo: dto
 numero: 253
-titulo_oficial: "APRUEBA CONVENIO EN VIRTUD DEL CUAL DE COMUN ACUERDO CON LA FUNDACION CONSEJO DE DEFENSA DEL NIÑO SE PONE TERMINO AL CONVENIO APROBADO POR DECRETO SUPREMO NO. 1.847, DE EDUCACION DE 1986, Y SE ENTREGA A LA FUNDACION NACIONAL DE EDUCACION LABORAL LA ADMINISTRACION DEL LICEO COMERCIAL A NO. 130, DE SAN BERNARDO EN CONFORMIDAD CON EL DL NO. 3.166, DE 1980, Y SU REGLAMENTO"
-publicacion: 1988-07-05
-emisor: ministerio-de-educacion-publica_subsecretaria-de-educacion-publica
 leychile_code: 130016
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=130016
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-educacion-publica_subsecretaria-de-educacion-publica/1988-07-05/253
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 253
 
-**Título oficial:** APRUEBA CONVENIO EN VIRTUD DEL CUAL DE COMUN ACUERDO CON LA FUNDACION CONSEJO DE DEFENSA DEL NIÑO SE PONE TERMINO AL CONVENIO APROBADO POR DECRETO SUPREMO NO. 1.847, DE EDUCACION DE 1986, Y SE ENTREGA A LA FUNDACION NACIONAL DE EDUCACION LABORAL LA ADMINISTRACION DEL LICEO COMERCIAL A NO. 130, DE SAN BERNARDO EN CONFORMIDAD CON EL DL NO. 3.166, DE 1980, Y SU REGLAMENTO

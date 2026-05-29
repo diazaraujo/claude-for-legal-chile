@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-justicia_subsecretaria-de-justicia_1987-09-29_748
+tipo: dto
+numero: 748
+leychile_code: 151900
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=151900
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia_subsecretaria-de-justicia/1987-09-29/748
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 748
+

@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-obras-publicas_fiscalia_2004-09-01_639
 tipo: dto
 numero: 639
-titulo_oficial: "SIN TITULO"
-publicacion: 2004-09-01
-emisor: ministerio-de-obras-publicas_fiscalia
 leychile_code: 229720
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=229720
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/2004-09-01/639
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 639
 
-**Título oficial:** SIN TITULO

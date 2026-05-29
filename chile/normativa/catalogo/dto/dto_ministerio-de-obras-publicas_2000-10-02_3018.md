@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-obras-publicas_2000-10-02_3018
 tipo: dto
 numero: 3018
-titulo_oficial: "RECTIFICA DECRETO Nº 1.741 DE 1999, QUE FORMALIZO LAS CONCESIONES DE PRODUCCION Y DISTRIBUCION DE AGUA POTABLE Y DE RECOLECCION Y DISPOSICION DE AGUAS SERVIDAS DE EMPRESA METROPOLITANA DE OBRAS SANITARIAS S.A., CORRESPONDIENTES A LAS LOCALIDADES DE MELIPILLA Y TALAGANTE"
-publicacion: 2000-10-02
-emisor: ministerio-de-obras-publicas
 leychile_code: 176211
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=176211
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas/2000-10-02/3018
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 3018
 
-**Título oficial:** RECTIFICA DECRETO Nº 1.741 DE 1999, QUE FORMALIZO LAS CONCESIONES DE PRODUCCION Y DISTRIBUCION DE AGUA POTABLE Y DE RECOLECCION Y DISPOSICION DE AGUAS SERVIDAS DE EMPRESA METROPOLITANA DE OBRAS SANITARIAS S.A., CORRESPONDIENTES A LAS LOCALIDADES DE MELIPILLA Y TALAGANTE

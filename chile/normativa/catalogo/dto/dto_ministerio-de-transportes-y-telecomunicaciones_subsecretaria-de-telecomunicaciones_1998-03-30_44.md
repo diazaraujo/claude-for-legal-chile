@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-transportes-y-telecomunicaciones_subsecretaria-de-telecomunicaciones_1998-03-30_44
+tipo: dto
+numero: 44
+leychile_code: 97448
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=97448
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-transportes-y-telecomunicaciones_subsecretaria-de-telecomunicaciones/1998-03-30/44
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 44
+

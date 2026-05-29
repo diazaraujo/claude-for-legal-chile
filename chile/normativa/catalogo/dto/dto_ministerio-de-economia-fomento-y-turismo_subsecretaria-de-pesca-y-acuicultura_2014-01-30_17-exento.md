@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-economia-fomento-y-turismo_subsecretaria-de-pesca-y-acuicultura_2014-01-30_17-exento
+tipo: dto
+numero: 17 exento
+leychile_code: 1058876
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1058876
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-economia-fomento-y-turismo_subsecretaria-de-pesca-y-acuicultura/2014-01-30/17-exento
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 17 exento
+

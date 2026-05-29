@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-desarrollo-social-y-familia_subsecretaria-de-servicios-sociales_2021-12-14_28
+tipo: dto
+numero: 28
+leychile_code: 1169675
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1169675
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-desarrollo-social-y-familia_subsecretaria-de-servicios-sociales/2021-12-14/28
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 28
+

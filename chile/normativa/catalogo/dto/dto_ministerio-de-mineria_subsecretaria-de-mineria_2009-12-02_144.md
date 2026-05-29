@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-mineria_subsecretaria-de-mineria_2009-12-02_144
 tipo: dto
 numero: 144
-titulo_oficial: "ACEPTA RENUNCIA AL CARGO QUE INDICA DE LA SRTA. SOFÍA MORENO CAPRILE Y NOMBRA EN EL CARGO DE SECRETARIO EJECUTIVO DE LA SECCIÓN CHILENA DE LA COMISIÓN ADMINISTRADORA DEL TRATADO SOBRE INTEGRACIÓN Y COMPLEMENTACIÓN MINERA ENTRE LA REPÚBLICA DE CHILE Y LA REPÚBLICA ARGENTINA AL SR. JUAN PABLO ESPINOZA JARA"
-publicacion: 2009-12-02
-emisor: ministerio-de-mineria_subsecretaria-de-mineria
 leychile_code: 1008675
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1008675
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-mineria_subsecretaria-de-mineria/2009-12-02/144
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 144
 
-**Título oficial:** ACEPTA RENUNCIA AL CARGO QUE INDICA DE LA SRTA. SOFÍA MORENO CAPRILE Y NOMBRA EN EL CARGO DE SECRETARIO EJECUTIVO DE LA SECCIÓN CHILENA DE LA COMISIÓN ADMINISTRADORA DEL TRATADO SOBRE INTEGRACIÓN Y COMPLEMENTACIÓN MINERA ENTRE LA REPÚBLICA DE CHILE Y LA REPÚBLICA ARGENTINA AL SR. JUAN PABLO ESPINOZA JARA

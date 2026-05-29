@@ -2,17 +2,12 @@
 slug: dto_ministerio-de-hacienda_2013-01-05_1501
 tipo: dto
 numero: 1501
-titulo_oficial: "MODIFICA DECRETO N° 1.222, DE 13 DE NOVIEMBRE DE 2006, QUE AUTORIZA CONTRATACIÓN DE CRÉDITO EXTERNO CON EL BANCO KREDITANSTALT FÜR WIEDERAUFBAU (KFW) Y APRUEBA ADDENDUM Nº 1 AL CONVENIO DE PRÉSTAMO KFW, COMPONENTE DE INVERSIONES DEL PROYECTO \"MANEJO SUSTENTABLE DE RESIDUOS SÓLIDOS X REGIÓN\" "
-publicacion: 2013-01-05
-promulgacion: 2012-11-16
-emisor: ministerio-de-hacienda
 leychile_code: 1047830
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1047830
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-hacienda/2013-01-05/1501
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 1501
 
-**Título oficial:** MODIFICA DECRETO N° 1.222, DE 13 DE NOVIEMBRE DE 2006, QUE AUTORIZA CONTRATACIÓN DE CRÉDITO EXTERNO CON EL BANCO KREDITANSTALT FÜR WIEDERAUFBAU (KFW) Y APRUEBA ADDENDUM Nº 1 AL CONVENIO DE PRÉSTAMO KFW, COMPONENTE DE INVERSIONES DEL PROYECTO "MANEJO SUSTENTABLE DE RESIDUOS SÓLIDOS X REGIÓN" 

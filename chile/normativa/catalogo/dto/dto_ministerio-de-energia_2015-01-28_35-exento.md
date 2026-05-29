@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-energia_2015-01-28_35-exento
+tipo: dto
+numero: 35 exento
+leychile_code: 1074263
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1074263
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-energia/2015-01-28/35-exento
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 35 exento
+

@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-educacion-publica_1975-04-25_190
+tipo: dto
+numero: 190
+leychile_code: 259273
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=259273
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-educacion-publica/1975-04-25/190
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 190
+

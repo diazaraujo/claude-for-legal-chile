@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-justicia_subsecretaria-de-justicia_1986-09-27_682
 tipo: dto
 numero: 682
-titulo_oficial: "MODIFICA DECRETO NO. 497, DE 1984, QUE FIJA LOS TERRITORIOS JURISDICCIONALES PARA LOS JUZGADOS DEL CRIMEN DEL DEPARTAMENTO DE SANTIAGO Y DETERMINA LOS NUEVOS TERRITORIOS QUE DEBERAN ATENDER LOS JUZGADOS CUARTO, SEPTIMO, DECIMO OCTAVO, VIGESIMO CUARTO, VIGESIMO QUINTO Y VIGESIMO SEXTO DE ESA JURISDICCION"
-publicacion: 1986-09-27
-emisor: ministerio-de-justicia_subsecretaria-de-justicia
 leychile_code: 155964
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=155964
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia_subsecretaria-de-justicia/1986-09-27/682
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 682
 
-**Título oficial:** MODIFICA DECRETO NO. 497, DE 1984, QUE FIJA LOS TERRITORIOS JURISDICCIONALES PARA LOS JUZGADOS DEL CRIMEN DEL DEPARTAMENTO DE SANTIAGO Y DETERMINA LOS NUEVOS TERRITORIOS QUE DEBERAN ATENDER LOS JUZGADOS CUARTO, SEPTIMO, DECIMO OCTAVO, VIGESIMO CUARTO, VIGESIMO QUINTO Y VIGESIMO SEXTO DE ESA JURISDICCION

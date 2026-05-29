@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-justicia_subsecretaria-de-justicia_1992-05-27_128-exento
 tipo: dto
 numero: 128-exento
-titulo_oficial: "CREA LAS CIRCUNSCRIPCIONES DEL REGISTRO CIVIL DE SAN JOAQUIN, PEDRO AGUIRRE CERDA Y EL BOSQUE; CAMBIA LA DENOMINACION DE LA CIRCUNSCRIPCION DE CARDENAL CARO POR LA DE LO ESPEJO, Y ADECUA LOS LIMITES DE ESTAS CIRCUNSCRIPCIONES Y LAS DE SAN MIGUEL Y LA CISTERNA, A LOS DE LAS COMUNAS DEL MISMO NOMBRE DE LA PROVINCIA DE SANTIAGO"
-publicacion: 1992-05-27
-emisor: ministerio-de-justicia_subsecretaria-de-justicia
 leychile_code: 95956
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=95956
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia_subsecretaria-de-justicia/1992-05-27/128-exento
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 128-exento
 
-**Título oficial:** CREA LAS CIRCUNSCRIPCIONES DEL REGISTRO CIVIL DE SAN JOAQUIN, PEDRO AGUIRRE CERDA Y EL BOSQUE; CAMBIA LA DENOMINACION DE LA CIRCUNSCRIPCION DE CARDENAL CARO POR LA DE LO ESPEJO, Y ADECUA LOS LIMITES DE ESTAS CIRCUNSCRIPCIONES Y LAS DE SAN MIGUEL Y LA CISTERNA, A LOS DE LAS COMUNAS DEL MISMO NOMBRE DE LA PROVINCIA DE SANTIAGO

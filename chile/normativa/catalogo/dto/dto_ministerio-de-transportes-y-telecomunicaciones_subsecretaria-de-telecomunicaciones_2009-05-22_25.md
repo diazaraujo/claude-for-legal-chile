@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-transportes-y-telecomunicaciones_subsecretaria-de-telecomunicaciones_2009-05-22_25
+tipo: dto
+numero: 25
+leychile_code: 1002554
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1002554
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-transportes-y-telecomunicaciones_subsecretaria-de-telecomunicaciones/2009-05-22/25
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 25
+

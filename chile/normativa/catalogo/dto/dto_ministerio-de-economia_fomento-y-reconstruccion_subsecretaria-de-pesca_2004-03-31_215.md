@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-pesca_2004-03-31_215
 tipo: dto
 numero: 215
-titulo_oficial: "MODIFICA NOMINACION DE MIEMBROS QUE INDICA DEL CONSEJO ZONAL DE PESCA DE LA XII REGION Y ANTARTICA CHILENA"
-publicacion: 2004-03-31
-emisor: ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-pesca
 leychile_code: 223129
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=223129
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-pesca/2004-03-31/215
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 215
 
-**Título oficial:** MODIFICA NOMINACION DE MIEMBROS QUE INDICA DEL CONSEJO ZONAL DE PESCA DE LA XII REGION Y ANTARTICA CHILENA

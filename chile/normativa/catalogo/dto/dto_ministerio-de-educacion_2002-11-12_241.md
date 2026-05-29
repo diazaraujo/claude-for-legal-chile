@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-educacion_2002-11-12_241
 tipo: dto
 numero: 241
-titulo_oficial: "APRUEBA MODIFICACION DE CONVENIO CELEBRADO ENTRE EL MINISTERIO DE EDUCACION Y LA FUNDACION EDUCACIONAL Y CULTURAL SAN PABLO, MEDIANTE EL CUAL SE ENTREGA LA ADMINISTRACION DEL LICEO TECNICO DE RANCAGUA, DE ACUERDO CON EL D.L. Nº3.166, DE 1980"
-publicacion: 2002-11-12
-emisor: ministerio-de-educacion
 leychile_code: 204413
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=204413
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-educacion/2002-11-12/241
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 241
 
-**Título oficial:** APRUEBA MODIFICACION DE CONVENIO CELEBRADO ENTRE EL MINISTERIO DE EDUCACION Y LA FUNDACION EDUCACIONAL Y CULTURAL SAN PABLO, MEDIANTE EL CUAL SE ENTREGA LA ADMINISTRACION DEL LICEO TECNICO DE RANCAGUA, DE ACUERDO CON EL D.L. Nº3.166, DE 1980

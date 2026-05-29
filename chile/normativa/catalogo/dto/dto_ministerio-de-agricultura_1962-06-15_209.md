@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-agricultura_1962-06-15_209
 tipo: dto
 numero: 209
-titulo_oficial: "SIN TITULO"
-publicacion: 1962-06-15
-emisor: ministerio-de-agricultura
 leychile_code: 284521
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=284521
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-agricultura/1962-06-15/209
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 209
 
-**Título oficial:** SIN TITULO

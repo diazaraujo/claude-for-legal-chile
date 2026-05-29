@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-obras-publicas_2009-03-02_1280-exento
+tipo: dto
+numero: 1280-exento
+leychile_code: 287766
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=287766
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas/2009-03-02/1280-exento
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 1280-exento
+

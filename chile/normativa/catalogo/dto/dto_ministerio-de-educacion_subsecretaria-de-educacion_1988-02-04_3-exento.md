@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-educacion_subsecretaria-de-educacion_1988-02-04_3-exento
 tipo: dto
 numero: 3-exento
-titulo_oficial: "EXTRACTO DE DECRETO EXENTO DE EDUCACION N° 3, DE 1988"
-publicacion: 1988-02-04
-emisor: ministerio-de-educacion_subsecretaria-de-educacion
 leychile_code: 139014
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=139014
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-educacion_subsecretaria-de-educacion/1988-02-04/3-exento
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 3-exento
 
-**Título oficial:** EXTRACTO DE DECRETO EXENTO DE EDUCACION N° 3, DE 1988

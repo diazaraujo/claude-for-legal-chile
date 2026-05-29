@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-obras-publicas_fiscalia_2009-07-01_821-exento
+tipo: dto
+numero: 821-exento
+leychile_code: 1003901
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1003901
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/2009-07-01/821-exento
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 821-exento
+

@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-obras-publicas_2010-11-17_186
 tipo: dto
 numero: 186
-titulo_oficial: "DEJA SIN EFECTO DECRETO SUPREMO QUE INDICA, MODIFICA POR RAZONES DE INTERÉS PÚBLICO, LAS CARACTERÍSTICAS DE LAS OBRAS Y SERVICIOS QUE INDICA DEL CONTRATO DE CONCESIÓN DE LA OBRA PÚBLICA FISCAL DENOMINADA 'CONCESIÓN INTERNACIONAL RUTA 5 TRAMO CHILLÁN - COLLIPULLI' Y APRUEBA CONVENIO AD – REFERÉNDUM N° 1"
-publicacion: 2010-11-17
-emisor: ministerio-de-obras-publicas
 leychile_code: 1019677
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1019677
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas/2010-11-17/186
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 186
 
-**Título oficial:** DEJA SIN EFECTO DECRETO SUPREMO QUE INDICA, MODIFICA POR RAZONES DE INTERÉS PÚBLICO, LAS CARACTERÍSTICAS DE LAS OBRAS Y SERVICIOS QUE INDICA DEL CONTRATO DE CONCESIÓN DE LA OBRA PÚBLICA FISCAL DENOMINADA 'CONCESIÓN INTERNACIONAL RUTA 5 TRAMO CHILLÁN - COLLIPULLI' Y APRUEBA CONVENIO AD – REFERÉNDUM N° 1

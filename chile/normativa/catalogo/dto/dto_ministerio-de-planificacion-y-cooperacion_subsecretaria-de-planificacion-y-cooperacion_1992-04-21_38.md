@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-planificacion-y-cooperacion_subsecretaria-de-planificacion-y-cooperacion_1992-04-21_38
 tipo: dto
 numero: 38
-titulo_oficial: "AUTORIZA CIRCULACION DE VEHICULO QUE INDICA"
-publicacion: 1992-04-21
-emisor: ministerio-de-planificacion-y-cooperacion_subsecretaria-de-planificacion-y-cooperacion
 leychile_code: 79211
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=79211
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-planificacion-y-cooperacion_subsecretaria-de-planificacion-y-cooperacion/1992-04-21/38
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 38
 
-**Título oficial:** AUTORIZA CIRCULACION DE VEHICULO QUE INDICA

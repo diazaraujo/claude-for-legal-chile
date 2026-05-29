@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-agricultura_1984-04-18_21
 tipo: dto
 numero: 21
-titulo_oficial: "DECLARA NORMAS OFICIALES DE LA REPUBLICA DE CHILE LAS NORMAS QUE INDICA"
-publicacion: 1984-04-18
-emisor: ministerio-de-agricultura
 leychile_code: 7664
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=7664
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-agricultura/1984-04-18/21
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 21
 
-**Título oficial:** DECLARA NORMAS OFICIALES DE LA REPUBLICA DE CHILE LAS NORMAS QUE INDICA

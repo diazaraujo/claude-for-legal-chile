@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-hacienda_2002-07-16_393-exento
+tipo: dto
+numero: 393-exento
+leychile_code: 200566
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=200566
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-hacienda/2002-07-16/393-exento
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 393-exento
+

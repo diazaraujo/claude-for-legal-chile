@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-obras-publicas_2016-12-09_1407-exento
+tipo: dto
+numero: 1407 exento
+leychile_code: 1097663
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1097663
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas/2016-12-09/1407-exento
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 1407 exento
+

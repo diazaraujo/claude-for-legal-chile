@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-desarrollo-social_2018-05-09_17
+tipo: dto
+numero: 17
+leychile_code: 1118310
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1118310
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-desarrollo-social/2018-05-09/17
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 17
+

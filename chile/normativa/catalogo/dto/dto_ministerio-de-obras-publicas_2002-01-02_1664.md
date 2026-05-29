@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-obras-publicas_2002-01-02_1664
 tipo: dto
 numero: 1664
-titulo_oficial: "DECLARA FORMALIZADAS CONCESIONES DE DISTRIBUCION DE AGUA POTABLE Y DE RECOLECCION DE AGUAS SERVIDAS PARA LOTEO LOMAS DE RELONCAVI, UBICADO EN LA CIUDAD DE PUERTO MONTT, X REGION, A SOCIEDAD INMOBILIARIA, CONSTRUCTORA Y DE RENTAS SANZ MILETIC S.A."
-publicacion: 2002-01-02
-emisor: ministerio-de-obras-publicas
 leychile_code: 193149
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=193149
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas/2002-01-02/1664
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 1664
 
-**Título oficial:** DECLARA FORMALIZADAS CONCESIONES DE DISTRIBUCION DE AGUA POTABLE Y DE RECOLECCION DE AGUAS SERVIDAS PARA LOTEO LOMAS DE RELONCAVI, UBICADO EN LA CIUDAD DE PUERTO MONTT, X REGION, A SOCIEDAD INMOBILIARIA, CONSTRUCTORA Y DE RENTAS SANZ MILETIC S.A.

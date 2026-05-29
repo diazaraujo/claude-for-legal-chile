@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-mineria_2004-01-31_13
 tipo: dto
 numero: 13
-titulo_oficial: "OTORGA A LA SOCIEDAD CFG CHILE S.A. CONCESION DE EXPLORACION DE ENERGIA GEOTERMICA, EN VIRTUD DEL DERECHO EXCLUSIVO PREVISTO EN EL ARTICULO TRANSITORIO DE LA LEY 19.657, EN EL SECTOR DE CHILLAN, COMUNAS DE COIHUECO Y PINTO, PROVINCIA DE ÑUBLE, VIII REGION DEL BIO-BIO"
-publicacion: 2004-01-31
-emisor: ministerio-de-mineria
 leychile_code: 220719
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=220719
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-mineria/2004-01-31/13
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 13
 
-**Título oficial:** OTORGA A LA SOCIEDAD CFG CHILE S.A. CONCESION DE EXPLORACION DE ENERGIA GEOTERMICA, EN VIRTUD DEL DERECHO EXCLUSIVO PREVISTO EN EL ARTICULO TRANSITORIO DE LA LEY 19.657, EN EL SECTOR DE CHILLAN, COMUNAS DE COIHUECO Y PINTO, PROVINCIA DE ÑUBLE, VIII REGION DEL BIO-BIO

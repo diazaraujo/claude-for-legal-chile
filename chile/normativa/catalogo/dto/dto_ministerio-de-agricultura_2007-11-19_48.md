@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-agricultura_2007-11-19_48
 tipo: dto
 numero: 48
-titulo_oficial: "AUTORIZA AL MINISTERIO DE AGRICULTURA Y AL INSTITUTO DE DESARROLLO AGROPECUARIO A OTORGAR ASISTENCIA CREDITICIA Y TÉCNICA A AGRICULTORES DAMNIFICADOS POR LAS HELADAS Y BAJAS TEMPERATURAS DE LAS COMUNAS DECLARADAS COMO ZONA DE  CATÁSTROFE"
-publicacion: 2007-11-19
-emisor: ministerio-de-agricultura
 leychile_code: 266599
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=266599
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-agricultura/2007-11-19/48
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 48
 
-**Título oficial:** AUTORIZA AL MINISTERIO DE AGRICULTURA Y AL INSTITUTO DE DESARROLLO AGROPECUARIO A OTORGAR ASISTENCIA CREDITICIA Y TÉCNICA A AGRICULTORES DAMNIFICADOS POR LAS HELADAS Y BAJAS TEMPERATURAS DE LAS COMUNAS DECLARADAS COMO ZONA DE  CATÁSTROFE

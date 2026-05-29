@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-justicia_subsecretaria-de-justicia_1989-03-11_133
+tipo: dto
+numero: 133
+leychile_code: 94585
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=94585
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia_subsecretaria-de-justicia/1989-03-11/133
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 133
+

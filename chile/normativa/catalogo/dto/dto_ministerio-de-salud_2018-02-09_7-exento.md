@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-salud_2018-02-09_7-exento
+tipo: dto
+numero: 7 exento
+leychile_code: 1114843
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1114843
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-salud/2018-02-09/7-exento
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 7 exento
+

@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-defensa-nacional_subsecretaria-para-las-fuerzas-armadas_armada-de-chile_capitania-de-puerto-de-san-antonio_2020-01-02_370
+tipo: dto
+numero: 370
+leychile_code: 1140615
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1140615
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-defensa-nacional_subsecretaria-para-las-fuerzas-armadas_armada-de-chile_capitania-de-puerto-de-san-antonio/2020-01-02/370
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 370
+

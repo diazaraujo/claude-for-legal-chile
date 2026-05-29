@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-relaciones-exteriores_2005-07-14_71
 tipo: dto
 numero: 71
-titulo_oficial: "PROMULGA ENMIENDAS AL ANEXO DEL CONVENIO INTERNACIONAL PARA LA SEGURIDAD DE LA VIDA HUMANA EN EL MAR (SOLAS 1974) Y EL CODIGO INTERNACIONAL PARA LA PROTECCION DE LOS BUQUES Y DE LAS INSTALACIONES PORTUARIAS PBIP, ADOPTADAS POR LA CONFERENCIA DE LOS GOBIERNOS CONTRATANTES DE DICHO CONVENIO"
-publicacion: 2005-07-14
-emisor: ministerio-de-relaciones-exteriores
 leychile_code: 240027
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=240027
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-relaciones-exteriores/2005-07-14/71
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 71
 
-**Título oficial:** PROMULGA ENMIENDAS AL ANEXO DEL CONVENIO INTERNACIONAL PARA LA SEGURIDAD DE LA VIDA HUMANA EN EL MAR (SOLAS 1974) Y EL CODIGO INTERNACIONAL PARA LA PROTECCION DE LOS BUQUES Y DE LAS INSTALACIONES PORTUARIAS PBIP, ADOPTADAS POR LA CONFERENCIA DE LOS GOBIERNOS CONTRATANTES DE DICHO CONVENIO

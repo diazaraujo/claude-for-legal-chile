@@ -2,17 +2,12 @@
 slug: dto_ministerio-de-educacion_2009-08-19_257
 tipo: dto
 numero: 257
-titulo_oficial: "ESTABLECE OBJETIVOS FUNDAMENTALES Y CONTENIDOS MÍNIMOS OBLIGATORIOS PARA LA EDUCACIÓN DE ADULTOS Y FIJA NORMAS GENERALES PARA SU APLICACIÓN Y DEROGA DECRETO SUPREMO Nº 239, DE 2004, DEL MINISTERIO DE EDUCACIÓN Y SUS MODIFICACIONES EN LA FORMA QUE SEÑALA"
-publicacion: 2009-08-19
-promulgacion: 2009-07-01
-emisor: ministerio-de-educacion
 leychile_code: 1005224
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1005224
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-educacion/2009-08-19/257
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 257
 
-**Título oficial:** ESTABLECE OBJETIVOS FUNDAMENTALES Y CONTENIDOS MÍNIMOS OBLIGATORIOS PARA LA EDUCACIÓN DE ADULTOS Y FIJA NORMAS GENERALES PARA SU APLICACIÓN Y DEROGA DECRETO SUPREMO Nº 239, DE 2004, DEL MINISTERIO DE EDUCACIÓN Y SUS MODIFICACIONES EN LA FORMA QUE SEÑALA

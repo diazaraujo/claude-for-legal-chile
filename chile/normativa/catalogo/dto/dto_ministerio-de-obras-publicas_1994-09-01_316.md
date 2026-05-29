@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-obras-publicas_1994-09-01_316
+tipo: dto
+numero: 316
+leychile_code: 12277
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=12277
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas/1994-09-01/316
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 316
+

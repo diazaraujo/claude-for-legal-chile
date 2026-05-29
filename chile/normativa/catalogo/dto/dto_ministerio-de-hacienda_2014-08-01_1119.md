@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-hacienda_2014-08-01_1119
+tipo: dto
+numero: 1119
+leychile_code: 1064960
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1064960
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-hacienda/2014-08-01/1119
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 1119
+

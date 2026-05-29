@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-obras-publicas_fiscalia_2008-06-02_177-exento
+tipo: dto
+numero: 177-exento
+leychile_code: 271640
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=271640
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/2008-06-02/177-exento
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 177-exento
+

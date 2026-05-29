@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-obras-publicas_fiscalia_2015-06-15_325-exento
+tipo: dto
+numero: 325 exento
+leychile_code: 1078381
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1078381
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/2015-06-15/325-exento
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 325 exento
+

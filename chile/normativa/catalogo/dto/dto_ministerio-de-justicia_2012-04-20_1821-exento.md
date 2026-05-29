@@ -2,17 +2,12 @@
 slug: dto_ministerio-de-justicia_2012-04-20_1821-exento
 tipo: dto
 numero: 1821-exento
-titulo_oficial: "APRUEBA REFORMAS DE ESTATUTOS A 'CORPORACIÓN DE ESTUDIO Y CAPACITACIÓN ABRIENDO PUERTAS', DE SANTIAGO"
-publicacion: 2012-04-20
-promulgacion: 2012-03-29
-emisor: ministerio-de-justicia
 leychile_code: 1039309
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1039309
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia/2012-04-20/1821-exento
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 1821-exento
 
-**Título oficial:** APRUEBA REFORMAS DE ESTATUTOS A 'CORPORACIÓN DE ESTUDIO Y CAPACITACIÓN ABRIENDO PUERTAS', DE SANTIAGO

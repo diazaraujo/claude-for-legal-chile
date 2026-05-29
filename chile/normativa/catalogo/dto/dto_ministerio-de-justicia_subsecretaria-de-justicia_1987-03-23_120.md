@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-justicia_subsecretaria-de-justicia_1987-03-23_120
 tipo: dto
 numero: 120
-titulo_oficial: "APRUEBA CONVENIO EN VIRTUD DEL CUAL DE COMUN ACUERDO CON LA;FUNDACION CONSEJO DE DEFENSA DEL NIÑO SE PONE TERMINO AL CONVENIO APROBADO POR DECRETO SUPREMO N° 1.846, DE EDUCACION DE 1986, Y SE ENTREGA A LA FUNDACION NACIONAL  DE EDUCACION LABORAL LA ADMINISTRACION DEL LICEO COMERCIAL A N° 30, DE SANTIAGO EN CONFORMIDAD CON EL DL N° 3.166, DE 1980, Y SU REGLAMENTO"
-publicacion: 1987-03-23
-emisor: ministerio-de-justicia_subsecretaria-de-justicia
 leychile_code: 141658
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=141658
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia_subsecretaria-de-justicia/1987-03-23/120
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 120
 
-**Título oficial:** APRUEBA CONVENIO EN VIRTUD DEL CUAL DE COMUN ACUERDO CON LA;FUNDACION CONSEJO DE DEFENSA DEL NIÑO SE PONE TERMINO AL CONVENIO APROBADO POR DECRETO SUPREMO N° 1.846, DE EDUCACION DE 1986, Y SE ENTREGA A LA FUNDACION NACIONAL  DE EDUCACION LABORAL LA ADMINISTRACION DEL LICEO COMERCIAL A N° 30, DE SANTIAGO EN CONFORMIDAD CON EL DL N° 3.166, DE 1980, Y SU REGLAMENTO

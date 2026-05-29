@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-obras-publicas_fiscalia_2010-12-15_3013-exento
+tipo: dto
+numero: 3013-exento
+leychile_code: 1021241
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1021241
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/2010-12-15/3013-exento
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 3013-exento
+

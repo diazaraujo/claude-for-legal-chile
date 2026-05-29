@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-guerra_1827-05-05_s_n
+tipo: dto
+numero: s/n
+leychile_code: 1156588
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1156588
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-guerra/1827-05-05/s/n
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO s/n
+

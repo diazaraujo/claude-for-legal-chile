@@ -2,17 +2,12 @@
 slug: dto_ministerio-de-energia_2011-03-11_6
 tipo: dto
 numero: 6
-titulo_oficial: "OTORGA CONCESIÓN DE EXPLORACIÓN DE ENERGÍA GEOTÉRMICA SOBRE EL ÁREA DENOMINADA 'COLPITAS', UBICADA EN LAS COMUNAS DE PUTRE Y GENERAL LAGOS, PROVINCIA DE PARINACOTA, REGIÓN DE ARICA Y PARINACOTA, A LA EMPRESA ANTOFAGASTA MINERALS S.A., EN VIRTUD DE LA LEY Nº 19.657, Y DEJA SIN EFECTO DECRETO Nº 236, DE 2010"
-publicacion: 2011-03-11
-promulgacion: 2011-01-14
-emisor: ministerio-de-energia
 leychile_code: 1023659
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1023659
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-energia/2011-03-11/6
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 6
 
-**Título oficial:** OTORGA CONCESIÓN DE EXPLORACIÓN DE ENERGÍA GEOTÉRMICA SOBRE EL ÁREA DENOMINADA 'COLPITAS', UBICADA EN LAS COMUNAS DE PUTRE Y GENERAL LAGOS, PROVINCIA DE PARINACOTA, REGIÓN DE ARICA Y PARINACOTA, A LA EMPRESA ANTOFAGASTA MINERALS S.A., EN VIRTUD DE LA LEY Nº 19.657, Y DEJA SIN EFECTO DECRETO Nº 236, DE 2010

@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-obras-publicas_2015-02-06_428
+tipo: dto
+numero: 428
+leychile_code: 1074546
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1074546
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas/2015-02-06/428
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 428
+

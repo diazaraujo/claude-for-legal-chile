@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-obras-publicas_fiscalia_2001-09-15_962
 tipo: dto
 numero: 962
-titulo_oficial: "SIN TITULO"
-publicacion: 2001-09-15
-emisor: ministerio-de-obras-publicas_fiscalia
 leychile_code: 189541
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=189541
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/2001-09-15/962
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 962
 
-**Título oficial:** SIN TITULO

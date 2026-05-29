@@ -1,18 +1,13 @@
 ---
 slug: dto_ministerio-de-educacion-publica_1989-02-16_10-exento
 tipo: dto
-numero: 10 exento
-titulo_oficial: "EXTRACTO DE DECRETO EXENTO N° 10, DE 1989"
-publicacion: 1989-02-16
-promulgacion: 1989-01-20
-emisor: ministerio-de-educacion-publica
+numero: 10-exento
 leychile_code: 94506
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=94506
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-educacion-publica/1989-02-16/10-exento
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
-# DTO 10 exento
+# DTO 10-exento
 
-**Título oficial:** EXTRACTO DE DECRETO EXENTO N° 10, DE 1989

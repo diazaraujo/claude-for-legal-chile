@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-desarrollo-social_subsecretaria-de-servicios-sociales_2014-06-23_40
+tipo: dto
+numero: 40
+leychile_code: 1063557
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1063557
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-desarrollo-social_subsecretaria-de-servicios-sociales/2014-06-23/40
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 40
+

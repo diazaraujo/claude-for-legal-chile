@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-justicia_1994-04-16_54
+tipo: dto
+numero: 54
+leychile_code: 8348
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=8348
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia/1994-04-16/54
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 54
+

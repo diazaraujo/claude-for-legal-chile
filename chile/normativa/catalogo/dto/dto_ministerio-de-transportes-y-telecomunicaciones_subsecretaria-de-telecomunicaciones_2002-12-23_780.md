@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-transportes-y-telecomunicaciones_subsecretaria-de-telecomunicaciones_2002-12-23_780
+tipo: dto
+numero: 780
+leychile_code: 206112
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=206112
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-transportes-y-telecomunicaciones_subsecretaria-de-telecomunicaciones/2002-12-23/780
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 780
+

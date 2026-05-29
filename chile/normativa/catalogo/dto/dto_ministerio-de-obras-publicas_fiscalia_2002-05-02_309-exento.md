@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-obras-publicas_fiscalia_2002-05-02_309-exento
+tipo: dto
+numero: 309-exento
+leychile_code: 197676
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=197676
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/2002-05-02/309-exento
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 309-exento
+

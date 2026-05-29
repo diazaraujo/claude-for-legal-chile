@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-pesca_1985-09-25_262
 tipo: dto
 numero: 262
-titulo_oficial: "ESTABLECE MEDIDAS EXTRAORDINARIAS PARA REGULAR LA EXPLOTACION DE RECURSO DENOMINADO LOCO"
-publicacion: 1985-09-25
-emisor: ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-pesca
 leychile_code: 198581
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=198581
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-pesca/1985-09-25/262
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 262
 
-**Título oficial:** ESTABLECE MEDIDAS EXTRAORDINARIAS PARA REGULAR LA EXPLOTACION DE RECURSO DENOMINADO LOCO

@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion_2005-11-19_279
 tipo: dto
 numero: 279
-titulo_oficial: "FIJA FORMULAS TARIFARIAS DE LOS SERVICIOS DE PRODUCCION Y DISTRIBUCION DE AGUA POTABLE Y RECOLECCION Y DISPOSICION DE AGUAS SERVIDAS PARA LA EMPRESA AGUAS LA SERENA S.A."
-publicacion: 2005-11-19
-emisor: ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion
 leychile_code: 244227
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=244227
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion/2005-11-19/279
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 279
 
-**Título oficial:** FIJA FORMULAS TARIFARIAS DE LOS SERVICIOS DE PRODUCCION Y DISTRIBUCION DE AGUA POTABLE Y RECOLECCION Y DISPOSICION DE AGUAS SERVIDAS PARA LA EMPRESA AGUAS LA SERENA S.A.

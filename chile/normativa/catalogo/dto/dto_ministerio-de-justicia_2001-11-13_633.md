@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-justicia_2001-11-13_633
 tipo: dto
 numero: 633
-titulo_oficial: "APRUEBA REFORMAS DE ESTATUTOS A ASOCIACION DE EX-ALUMNOS DEL PROGRAMA DE ESTUDIOS SUPERIORES EN ADMINISTRACION DE EMPRESAS Y DEL PROGRAMA DE MAGISTER EN ADMINISTRACION DE EMPRESAS DE LA PONTIFICIA UNIVERSIDAD CATOLICA DE CHILE, DE SANTIAGO"
-publicacion: 2001-11-13
-emisor: ministerio-de-justicia
 leychile_code: 191457
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=191457
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia/2001-11-13/633
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 633
 
-**Título oficial:** APRUEBA REFORMAS DE ESTATUTOS A ASOCIACION DE EX-ALUMNOS DEL PROGRAMA DE ESTUDIOS SUPERIORES EN ADMINISTRACION DE EMPRESAS Y DEL PROGRAMA DE MAGISTER EN ADMINISTRACION DE EMPRESAS DE LA PONTIFICIA UNIVERSIDAD CATOLICA DE CHILE, DE SANTIAGO

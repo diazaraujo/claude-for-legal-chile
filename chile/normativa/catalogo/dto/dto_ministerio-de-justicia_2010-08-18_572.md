@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-justicia_2010-08-18_572
 tipo: dto
 numero: 572
-titulo_oficial: "APRUEBA ACUERDO DE DISOLUCIÓN Y CANCELA PERSONALIDAD JURÍDICA A 'COMUNIDAD DE APOYO A LA SALUD DE LA MUJER - COASAM', DE SANTIAGO"
-publicacion: 2010-08-18
-emisor: ministerio-de-justicia
 leychile_code: 1016352
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1016352
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia/2010-08-18/572
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 572
 
-**Título oficial:** APRUEBA ACUERDO DE DISOLUCIÓN Y CANCELA PERSONALIDAD JURÍDICA A 'COMUNIDAD DE APOYO A LA SALUD DE LA MUJER - COASAM', DE SANTIAGO

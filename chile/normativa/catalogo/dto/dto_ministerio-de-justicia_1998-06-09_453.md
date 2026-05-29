@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-justicia_1998-06-09_453
+tipo: dto
+numero: 453
+leychile_code: 100691
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=100691
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia/1998-06-09/453
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 453
+

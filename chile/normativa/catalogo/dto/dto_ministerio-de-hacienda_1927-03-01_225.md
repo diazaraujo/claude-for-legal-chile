@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-hacienda_1927-03-01_225
 tipo: dto
 numero: 225
-titulo_oficial: "SIN TITULO"
-publicacion: 1927-03-01
-emisor: ministerio-de-hacienda
 leychile_code: 213896
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=213896
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-hacienda/1927-03-01/225
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 225
 
-**Título oficial:** SIN TITULO

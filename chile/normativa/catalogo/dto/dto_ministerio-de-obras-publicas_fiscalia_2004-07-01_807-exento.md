@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-obras-publicas_fiscalia_2004-07-01_807-exento
+tipo: dto
+numero: 807-exento
+leychile_code: 227064
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=227064
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/2004-07-01/807-exento
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 807-exento
+

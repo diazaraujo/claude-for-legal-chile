@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-obras-publicas_superintendencia-de-servicios-sanitarios_2015-09-15_210
+tipo: dto
+numero: 210
+leychile_code: 1081575
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1081575
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_superintendencia-de-servicios-sanitarios/2015-09-15/210
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 210
+

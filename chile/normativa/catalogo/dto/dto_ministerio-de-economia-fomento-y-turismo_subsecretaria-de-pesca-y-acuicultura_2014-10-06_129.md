@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-economia-fomento-y-turismo_subsecretaria-de-pesca-y-acuicultura_2014-10-06_129
+tipo: dto
+numero: 129
+leychile_code: 1067868
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1067868
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-economia-fomento-y-turismo_subsecretaria-de-pesca-y-acuicultura/2014-10-06/129
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 129
+

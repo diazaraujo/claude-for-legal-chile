@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-obras-publicas_1961-07-07_1336
+tipo: dto
+numero: 1336
+leychile_code: 1085423
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1085423
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas/1961-07-07/1336
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 1336
+

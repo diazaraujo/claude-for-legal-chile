@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-obras-publicas_fiscalia_1998-06-01_452
+tipo: dto
+numero: 452
+leychile_code: 99971
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=99971
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/1998-06-01/452
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 452
+

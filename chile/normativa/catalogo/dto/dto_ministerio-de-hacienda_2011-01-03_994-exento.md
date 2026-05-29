@@ -1,18 +1,13 @@
 ---
 slug: dto_ministerio-de-hacienda_2011-01-03_994-exento
 tipo: dto
-numero: 994-exento
-titulo_oficial: "AGREGA NÚMERO 15 EN LETRA N DEL ARTÍCULO 3º DEL DECRETO Nº 1.230, DE 1989"
-publicacion: 2011-01-03
-promulgacion: 2010-11-23
-emisor: ministerio-de-hacienda
+numero: 994 exento
 leychile_code: 1021691
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1021691
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-hacienda/2011-01-03/994-exento
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
-# DTO 994-exento
+# DTO 994 exento
 
-**Título oficial:** AGREGA NÚMERO 15 EN LETRA N DEL ARTÍCULO 3º DEL DECRETO Nº 1.230, DE 1989

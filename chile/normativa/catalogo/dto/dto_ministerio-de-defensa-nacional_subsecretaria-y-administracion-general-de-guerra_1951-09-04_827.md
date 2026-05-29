@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-defensa-nacional_subsecretaria-y-administracion-general-de-guerra_1951-09-04_827
+tipo: dto
+numero: 827
+leychile_code: 1147829
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1147829
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-defensa-nacional_subsecretaria-y-administracion-general-de-guerra/1951-09-04/827
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 827
+

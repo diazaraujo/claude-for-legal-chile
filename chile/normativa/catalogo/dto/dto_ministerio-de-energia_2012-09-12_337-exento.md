@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-energia_2012-09-12_337-exento
+tipo: dto
+numero: 337-exento
+leychile_code: 1043647
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1043647
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-energia/2012-09-12/337-exento
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 337-exento
+

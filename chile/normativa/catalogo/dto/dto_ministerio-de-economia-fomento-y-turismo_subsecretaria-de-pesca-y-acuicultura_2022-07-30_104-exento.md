@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-economia-fomento-y-turismo_subsecretaria-de-pesca-y-acuicultura_2022-07-30_104-exento
+tipo: dto
+numero: 104 exento
+leychile_code: 1179327
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1179327
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-economia-fomento-y-turismo_subsecretaria-de-pesca-y-acuicultura/2022-07-30/104-exento
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 104 exento
+

@@ -2,14 +2,11 @@
 slug: dto_ministerio-de-obras-publicas_fiscalia_2013-12-02_2055-exento
 tipo: dto
 numero: 2055 exento
-publicacion: 2013-12-02
-promulgacion: 2013-11-20
-emisor: ministerio-de-obras-publicas_fiscalia
-leychile_code: 1056818
-fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1056818
+leychile_code: 1056817
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1056817
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/2013-12-02/2055-exento
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 2055 exento

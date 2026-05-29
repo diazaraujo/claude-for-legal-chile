@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-relaciones-exteriores_1982-12-22_736
 tipo: dto
 numero: 736
-titulo_oficial: "PROMULGA EL ACUERDO CONCERTADO ENTRE CHILE Y ARGENTINA, POR INTERMEDIO DE NOTAS DEL 10 DE SEPTIEMBRE DE 1982, POR EL CUAL SE PRORROGA LA VIGENCIA DEL TRATADO GENERAL SOBRE SOLUCION JUDICIAL DE CONTROVERSIAS SUSCRITO EN BUENOS AIRES ENTRE AMBOS PAISES EL 5 DE ABRIL DE 1972"
-publicacion: 1982-12-22
-emisor: ministerio-de-relaciones-exteriores
 leychile_code: 15355
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=15355
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-relaciones-exteriores/1982-12-22/736
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 736
 
-**Título oficial:** PROMULGA EL ACUERDO CONCERTADO ENTRE CHILE Y ARGENTINA, POR INTERMEDIO DE NOTAS DEL 10 DE SEPTIEMBRE DE 1982, POR EL CUAL SE PRORROGA LA VIGENCIA DEL TRATADO GENERAL SOBRE SOLUCION JUDICIAL DE CONTROVERSIAS SUSCRITO EN BUENOS AIRES ENTRE AMBOS PAISES EL 5 DE ABRIL DE 1972

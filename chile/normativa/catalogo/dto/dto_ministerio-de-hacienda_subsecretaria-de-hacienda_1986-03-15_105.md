@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-hacienda_subsecretaria-de-hacienda_1986-03-15_105
 tipo: dto
 numero: 105
-titulo_oficial: "PRORROGA VIGENCIA DE DECRETO NO. 1.149, DE 1984"
-publicacion: 1986-03-15
-emisor: ministerio-de-hacienda_subsecretaria-de-hacienda
 leychile_code: 158059
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=158059
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-hacienda_subsecretaria-de-hacienda/1986-03-15/105
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 105
 
-**Título oficial:** PRORROGA VIGENCIA DE DECRETO NO. 1.149, DE 1984

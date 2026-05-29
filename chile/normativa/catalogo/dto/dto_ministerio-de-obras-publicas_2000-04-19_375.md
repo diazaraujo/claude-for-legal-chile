@@ -2,17 +2,12 @@
 slug: dto_ministerio-de-obras-publicas_2000-04-19_375
 tipo: dto
 numero: 375
-titulo_oficial: "ADJUDICA CONTRATO DE CONCESION PARA LA EJECUCION, CONSERVACION Y EXPLOTACION DE LA OBRA PUBLICA FISCAL DENOMINADA CONCESION INTERNACIONAL SISTEMA ORIENTE - PONIENTE AL GRUPO LICITANTE IMPREGILO S.P.A., EMPRESA CONSTRUCTORA FE GRANDE S.A. Y EMPRESA CONSTRUCTORA TECSA S.A."
-publicacion: 2000-04-19
-promulgacion: 2000-02-24
-emisor: ministerio-de-obras-publicas
 leychile_code: 166402
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=166402
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas/2000-04-19/375
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 375
 
-**Título oficial:** ADJUDICA CONTRATO DE CONCESION PARA LA EJECUCION, CONSERVACION Y EXPLOTACION DE LA OBRA PUBLICA FISCAL DENOMINADA CONCESION INTERNACIONAL SISTEMA ORIENTE - PONIENTE AL GRUPO LICITANTE IMPREGILO S.P.A., EMPRESA CONSTRUCTORA FE GRANDE S.A. Y EMPRESA CONSTRUCTORA TECSA S.A.

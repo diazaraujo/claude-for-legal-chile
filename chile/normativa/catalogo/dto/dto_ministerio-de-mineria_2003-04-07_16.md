@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-mineria_2003-04-07_16
+tipo: dto
+numero: 16
+leychile_code: 209063
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=209063
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-mineria/2003-04-07/16
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 16
+

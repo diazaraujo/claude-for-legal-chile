@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-obras-publicas_1994-08-16_252
+tipo: dto
+numero: 252
+leychile_code: 11537
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=11537
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas/1994-08-16/252
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 252
+

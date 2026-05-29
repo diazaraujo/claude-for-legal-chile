@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-agricultura_1954-08-11_393
 tipo: dto
 numero: 393
-titulo_oficial: "SIN TITULO"
-publicacion: 1954-08-11
-emisor: ministerio-de-agricultura
 leychile_code: 283562
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=283562
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-agricultura/1954-08-11/393
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 393
 
-**Título oficial:** SIN TITULO

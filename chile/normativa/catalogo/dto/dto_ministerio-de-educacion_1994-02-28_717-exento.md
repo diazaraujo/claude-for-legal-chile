@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-educacion_1994-02-28_717-exento
 tipo: dto
 numero: 717-exento
-titulo_oficial: "EXTRACTO DE DECRETO EXENTO N° 717, DE 1993"
-publicacion: 1994-02-28
-emisor: ministerio-de-educacion
 leychile_code: 21735
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=21735
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-educacion/1994-02-28/717-exento
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 717-exento
 
-**Título oficial:** EXTRACTO DE DECRETO EXENTO N° 717, DE 1993

@@ -1,18 +1,13 @@
 ---
 slug: dto_ministerio-de-justicia_2012-01-14_6753-exento
 tipo: dto
-numero: 6753-exento
-titulo_oficial: "APRUEBA REFORMAS DE ESTATUTOS A \"CORPORACIÓN MUTUAL WATTINA, VALPARAÍSO\" "
-publicacion: 2012-01-14
-promulgacion: 2011-12-29
-emisor: ministerio-de-justicia
+numero: 6753 exento
 leychile_code: 1036155
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1036155
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia/2012-01-14/6753-exento
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
-# DTO 6753-exento
+# DTO 6753 exento
 
-**Título oficial:** APRUEBA REFORMAS DE ESTATUTOS A "CORPORACIÓN MUTUAL WATTINA, VALPARAÍSO" 

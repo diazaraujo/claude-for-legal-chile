@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-mineria_2010-01-18_10-exento
 tipo: dto
 numero: 10-exento
-titulo_oficial: "DENIEGA SOLICITUDES DE CONCESIÓN DE EXPLORACIÓN DE ENERGÍA GEOTÉRMICA DENOMINADAS: 'HÉCAR' Y 'LASTARRIA', AMBAS PRESENTADAS POR ANTOFAGASTA MINERALS S.A.; 'AZUFRE ESTE', 'OLLAGÜE SUR' Y 'SAN PEDRO', TODAS PRESENTADAS POR SOCIEDAD CONTRACTUAL MINERA EL ABRA Y 'SAN MARCOS', PRESENTADA POR HOT ROCK CHILE S.A., EN VIRTUD DE LA LEY Nº 19.657"
-publicacion: 2010-01-18
-emisor: ministerio-de-mineria
 leychile_code: 1010279
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1010279
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-mineria/2010-01-18/10-exento
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 10-exento
 
-**Título oficial:** DENIEGA SOLICITUDES DE CONCESIÓN DE EXPLORACIÓN DE ENERGÍA GEOTÉRMICA DENOMINADAS: 'HÉCAR' Y 'LASTARRIA', AMBAS PRESENTADAS POR ANTOFAGASTA MINERALS S.A.; 'AZUFRE ESTE', 'OLLAGÜE SUR' Y 'SAN PEDRO', TODAS PRESENTADAS POR SOCIEDAD CONTRACTUAL MINERA EL ABRA Y 'SAN MARCOS', PRESENTADA POR HOT ROCK CHILE S.A., EN VIRTUD DE LA LEY Nº 19.657

@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-educacion_1999-02-18_715
 tipo: dto
 numero: 715
-titulo_oficial: "MODIFICA DECRETO Nº 759 DE 1997, QUE MODIFICO EL DECRETO Nº 1.316 DE 1996 SOBRE REQUISITOS TECNICOS-PEDAGOGICOS PARA LA CREACION Y AMPLIACION DE INTERNADOS SUBVENCIONADOS Y FIJA PROCEDIMIENTO PARA POSTULACION Y APROBACION  DURANTE 1999"
-publicacion: 1999-02-18
-emisor: ministerio-de-educacion
 leychile_code: 131808
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=131808
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-educacion/1999-02-18/715
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 715
 
-**Título oficial:** MODIFICA DECRETO Nº 759 DE 1997, QUE MODIFICO EL DECRETO Nº 1.316 DE 1996 SOBRE REQUISITOS TECNICOS-PEDAGOGICOS PARA LA CREACION Y AMPLIACION DE INTERNADOS SUBVENCIONADOS Y FIJA PROCEDIMIENTO PARA POSTULACION Y APROBACION  DURANTE 1999

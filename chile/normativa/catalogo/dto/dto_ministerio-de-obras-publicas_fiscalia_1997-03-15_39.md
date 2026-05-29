@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-obras-publicas_fiscalia_1997-03-15_39
+tipo: dto
+numero: 39
+leychile_code: 61679
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=61679
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/1997-03-15/39
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 39
+

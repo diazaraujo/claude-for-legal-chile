@@ -2,17 +2,12 @@
 slug: dto_ministerio-de-relaciones-exteriores_2006-11-08_354
 tipo: dto
 numero: 354
-titulo_oficial: "PROMULGA EL ACUERDO ESTRATEGICO TRANSPACIFICO DE ASOCIACION ECONOMICA, INCLUIDOS SUS ANEXOS EL MEMORANDUM DE ENTENDIMIENTO SOBRE COOPERACION LABORAL Y SU ANEXO 1, Y EL ACUERDO DE COOPERACION AMBIENTAL ENTRE CHILE, BRUNEI DARUSSALAM, NUEVA ZELANDA Y SINGAPUR"
-publicacion: 2006-11-08
-promulgacion: 2006-10-17
-emisor: ministerio-de-relaciones-exteriores
 leychile_code: 254991
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=254991
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-relaciones-exteriores/2006-11-08/354
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 354
 
-**Título oficial:** PROMULGA EL ACUERDO ESTRATEGICO TRANSPACIFICO DE ASOCIACION ECONOMICA, INCLUIDOS SUS ANEXOS EL MEMORANDUM DE ENTENDIMIENTO SOBRE COOPERACION LABORAL Y SU ANEXO 1, Y EL ACUERDO DE COOPERACION AMBIENTAL ENTRE CHILE, BRUNEI DARUSSALAM, NUEVA ZELANDA Y SINGAPUR

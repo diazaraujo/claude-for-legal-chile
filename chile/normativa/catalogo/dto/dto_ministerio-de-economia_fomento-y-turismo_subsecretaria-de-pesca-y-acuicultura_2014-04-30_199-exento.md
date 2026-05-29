@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-economia_fomento-y-turismo_subsecretaria-de-pesca-y-acuicultura_2014-04-30_199-exento
 tipo: dto
 numero: 199-exento
-titulo_oficial: "MODIFICA DECRETO Nº 12 EXENTO, DE 2014"
-publicacion: 2014-04-30
-emisor: ministerio-de-economia_fomento-y-turismo_subsecretaria-de-pesca-y-acuicultura
 leychile_code: 1061668
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1061668
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-economia_fomento-y-turismo_subsecretaria-de-pesca-y-acuicultura/2014-04-30/199-exento
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 199-exento
 
-**Título oficial:** MODIFICA DECRETO Nº 12 EXENTO, DE 2014

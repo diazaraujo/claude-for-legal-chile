@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-mineria_2002-10-21_88
 tipo: dto
 numero: 88
-titulo_oficial: "NOMBRA SECRETARIO EJECUTIVO DE LA SECRETARIA EJECUTIVA DE LA SECCION CHILENA DE LA COMISION ADMINISTRADORA DEL TRATADO ENTRE LA REPUBLICA DE CHILE Y LA REPUBLICA ARGENTINA SOBRE INTEGRACION Y COMPLEMENTACION MINERA"
-publicacion: 2002-10-21
-emisor: ministerio-de-mineria
 leychile_code: 203775
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=203775
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-mineria/2002-10-21/88
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 88
 
-**Título oficial:** NOMBRA SECRETARIO EJECUTIVO DE LA SECRETARIA EJECUTIVA DE LA SECCION CHILENA DE LA COMISION ADMINISTRADORA DEL TRATADO ENTRE LA REPUBLICA DE CHILE Y LA REPUBLICA ARGENTINA SOBRE INTEGRACION Y COMPLEMENTACION MINERA

@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-educacion_2004-06-14_81
 tipo: dto
 numero: 81
-titulo_oficial: "REGLAMENTA PROGRAMA DE FORTALECIMIENTO DEL APRENDIZAJE DEL IDIOMA INGLES EN LA ENSEÑANZA BASICA Y MEDIA DE LOS ESTABLECIMIENTOS EDUCACIONALES REGIDOS POR EL DECRETO CON FUERZA DE LEY Nº 2, DE 1998, DEL MINISTERIO DE EDUCACION Y POR EL DECRETO LEY Nº 3.166, DE 1980"
-publicacion: 2004-06-14
-emisor: ministerio-de-educacion
 leychile_code: 226283
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=226283
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-educacion/2004-06-14/81
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 81
 
-**Título oficial:** REGLAMENTA PROGRAMA DE FORTALECIMIENTO DEL APRENDIZAJE DEL IDIOMA INGLES EN LA ENSEÑANZA BASICA Y MEDIA DE LOS ESTABLECIMIENTOS EDUCACIONALES REGIDOS POR EL DECRETO CON FUERZA DE LEY Nº 2, DE 1998, DEL MINISTERIO DE EDUCACION Y POR EL DECRETO LEY Nº 3.166, DE 1980

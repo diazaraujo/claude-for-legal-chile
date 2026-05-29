@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-economia-fomento-y-reconstruccion_subsecretaria-de-pesca_2005-01-18_114-exento
+tipo: dto
+numero: 114 exento
+leychile_code: 234839
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=234839
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-economia-fomento-y-reconstruccion_subsecretaria-de-pesca/2005-01-18/114-exento
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 114 exento
+

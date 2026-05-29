@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-obras-publicas_fiscalia_2008-11-03_991-exento
+tipo: dto
+numero: 991-exento
+leychile_code: 280718
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=280718
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/2008-11-03/991-exento
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 991-exento
+

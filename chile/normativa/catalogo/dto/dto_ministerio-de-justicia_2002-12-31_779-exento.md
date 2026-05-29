@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-justicia_2002-12-31_779-exento
 tipo: dto
 numero: 779-exento
-titulo_oficial: "APRUEBA REFORMAS DE ESTATUTOS A CORPORACION DE BENEFICENCIA PEOPLE HELP PEOPLE, DE SANTIAGO"
-publicacion: 2002-12-31
-emisor: ministerio-de-justicia
 leychile_code: 206348
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=206348
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia/2002-12-31/779-exento
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 779-exento
 
-**Título oficial:** APRUEBA REFORMAS DE ESTATUTOS A CORPORACION DE BENEFICENCIA PEOPLE HELP PEOPLE, DE SANTIAGO

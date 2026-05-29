@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-relaciones-exteriores_1997-08-29_987
+tipo: dto
+numero: 987
+leychile_code: 75392
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=75392
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-relaciones-exteriores/1997-08-29/987
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 987
+

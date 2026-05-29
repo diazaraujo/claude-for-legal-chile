@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-transportes-y-telecomunicaciones_1993-08-07_163
+tipo: dto
+numero: 163
+leychile_code: 10314
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=10314
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-transportes-y-telecomunicaciones/1993-08-07/163
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 163
+

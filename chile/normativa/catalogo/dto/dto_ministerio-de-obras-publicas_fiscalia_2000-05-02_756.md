@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-obras-publicas_fiscalia_2000-05-02_756
+tipo: dto
+numero: 756
+leychile_code: 167468
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=167468
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/2000-05-02/756
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 756
+

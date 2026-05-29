@@ -2,17 +2,12 @@
 slug: dto_ministerio-de-salud_1982-11-19_161
 tipo: dto
 numero: 161
-titulo_oficial: "APRUEBA REGLAMENTO DE HOSPITALES Y CLINICAS"
-publicacion: 1982-11-19
-promulgacion: 1982-08-06
-emisor: ministerio-de-salud
 leychile_code: 10272
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=10272
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-salud/1982-11-19/161
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 161
 
-**Título oficial:** APRUEBA REGLAMENTO DE HOSPITALES Y CLINICAS

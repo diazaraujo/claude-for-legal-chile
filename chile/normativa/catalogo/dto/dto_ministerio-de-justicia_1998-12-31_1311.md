@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-justicia_1998-12-31_1311
 tipo: dto
 numero: 1311
-titulo_oficial: "APRUEBA REFORMA DE ESTATUTOS DE ''CORPORACION EDUCACIONAL MONSEÑOR MANUEL LARRAIN'', DE VALPARAISO"
-publicacion: 1998-12-31
-emisor: ministerio-de-justicia
 leychile_code: 128827
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=128827
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia/1998-12-31/1311
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 1311
 
-**Título oficial:** APRUEBA REFORMA DE ESTATUTOS DE ''CORPORACION EDUCACIONAL MONSEÑOR MANUEL LARRAIN'', DE VALPARAISO

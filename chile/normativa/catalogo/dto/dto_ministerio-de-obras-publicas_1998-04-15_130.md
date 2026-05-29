@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-obras-publicas_1998-04-15_130
 tipo: dto
 numero: 130
-titulo_oficial: "DECLARA FORMALIZADAS LAS CONCESIONES DE PRODUCCION Y DISTRIBUCION DE AGUA POTABLE Y RECOLECCION Y DISPOSICION DE AGUAS SERVIDAS DE EMPRESA DE SERVICIOS SANITARIOS DE ATACAMA S.A. (EMSSAT S.A.), CORRESPONDIENTES A LOS SERVICIOS DE LA CIUDAD DE VALLENAR DE LA III REGION"
-publicacion: 1998-04-15
-emisor: ministerio-de-obras-publicas
 leychile_code: 97825
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=97825
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas/1998-04-15/130
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 130
 
-**Título oficial:** DECLARA FORMALIZADAS LAS CONCESIONES DE PRODUCCION Y DISTRIBUCION DE AGUA POTABLE Y RECOLECCION Y DISPOSICION DE AGUAS SERVIDAS DE EMPRESA DE SERVICIOS SANITARIOS DE ATACAMA S.A. (EMSSAT S.A.), CORRESPONDIENTES A LOS SERVICIOS DE LA CIUDAD DE VALLENAR DE LA III REGION

@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-obras-publicas_fiscalia_2001-12-15_1776
+tipo: dto
+numero: 1776
+leychile_code: 192825
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=192825
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/2001-12-15/1776
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 1776
+

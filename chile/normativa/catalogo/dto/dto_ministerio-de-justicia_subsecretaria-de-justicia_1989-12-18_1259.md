@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-justicia_subsecretaria-de-justicia_1989-12-18_1259
+tipo: dto
+numero: 1259
+leychile_code: 89342
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=89342
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia_subsecretaria-de-justicia/1989-12-18/1259
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 1259
+

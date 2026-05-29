@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-salud_1995-12-22_2265
+tipo: dto
+numero: 2265
+leychile_code: 18935
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=18935
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-salud/1995-12-22/2265
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 2265
+

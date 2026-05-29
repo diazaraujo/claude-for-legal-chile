@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-defensa-nacional_subsecretaria-de-guerra_1990-02-26_88
+tipo: dto
+numero: 88
+leychile_code: 208304
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=208304
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-defensa-nacional_subsecretaria-de-guerra/1990-02-26/88
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 88
+

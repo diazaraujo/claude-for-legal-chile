@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion_2008-06-21_112
 tipo: dto
 numero: 112
-titulo_oficial: "MODIFICA CONCESIONES DEFINITIVAS PARA DISTRIBUCIÓN DE GAS, EN LA QUINTA REGIÓN, OTORGADAS A ENERGAS S.A., SEGÚN DECRETOS QUE INDICA"
-publicacion: 2008-06-21
-emisor: ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion
 leychile_code: 272691
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=272691
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion/2008-06-21/112
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 112
 
-**Título oficial:** MODIFICA CONCESIONES DEFINITIVAS PARA DISTRIBUCIÓN DE GAS, EN LA QUINTA REGIÓN, OTORGADAS A ENERGAS S.A., SEGÚN DECRETOS QUE INDICA

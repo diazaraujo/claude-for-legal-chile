@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-salud_1987-01-31_184
 tipo: dto
 numero: 184
-titulo_oficial: "SIN TITULO"
-publicacion: 1987-01-31
-emisor: ministerio-de-salud
 leychile_code: 277176
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=277176
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-salud/1987-01-31/184
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 184
 
-**Título oficial:** SIN TITULO

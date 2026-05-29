@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-mineria_1996-08-27_187
 tipo: dto
 numero: 187
-titulo_oficial: "APRUEBA TERMINOS, CONDICIONES Y MODALIDADES DE ACTOS Y CONTRATOS PARA LA EXPLORACION Y EXPLOTACION DE PROSPECTOS MINEROS EXPLORADORA, SIERRA JARDIN, MARIA DELIA Y SIERRA MORENO DE PROPIEDAD DE CODELCO-CHILE, UBICADOS EN LA I, II Y III REGION"
-publicacion: 1996-08-27
-emisor: ministerio-de-mineria
 leychile_code: 10673
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=10673
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-mineria/1996-08-27/187
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 187
 
-**Título oficial:** APRUEBA TERMINOS, CONDICIONES Y MODALIDADES DE ACTOS Y CONTRATOS PARA LA EXPLORACION Y EXPLOTACION DE PROSPECTOS MINEROS EXPLORADORA, SIERRA JARDIN, MARIA DELIA Y SIERRA MORENO DE PROPIEDAD DE CODELCO-CHILE, UBICADOS EN LA I, II Y III REGION

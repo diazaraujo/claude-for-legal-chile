@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-relaciones-exteriores_1997-01-08_1652
 tipo: dto
 numero: 1652
-titulo_oficial: "EL GOBIERNO DE CHILE DECIDE DAR COMPLETO Y ESTRICTO CUMPLIMIENTO A LO DISPUESTO EN LA RESOLUCIÓN Nº 1.054, DE FECHA 26 DE ABRIL DE 1996, DEL CONSEJO DE SEGURIDAD DE LA ORGANIZACIÓN DE LAS NACIONES UNIDAS (REDUCCIÓN Y RESTRICCIÓN DE PERSONAL EN MISIONES EXTRANJERAS DIPLOMÁTICAS DEL SUDÁN)"
-publicacion: 1997-01-08
-emisor: ministerio-de-relaciones-exteriores
 leychile_code: 50244
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=50244
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-relaciones-exteriores/1997-01-08/1652
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 1652
 
-**Título oficial:** EL GOBIERNO DE CHILE DECIDE DAR COMPLETO Y ESTRICTO CUMPLIMIENTO A LO DISPUESTO EN LA RESOLUCIÓN Nº 1.054, DE FECHA 26 DE ABRIL DE 1996, DEL CONSEJO DE SEGURIDAD DE LA ORGANIZACIÓN DE LAS NACIONES UNIDAS (REDUCCIÓN Y RESTRICCIÓN DE PERSONAL EN MISIONES EXTRANJERAS DIPLOMÁTICAS DEL SUDÁN)

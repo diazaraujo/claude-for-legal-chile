@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-educacion-publica_1987-06-30_93-exento
+tipo: dto
+numero: 93-exento
+leychile_code: 150011
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=150011
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-educacion-publica/1987-06-30/93-exento
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 93-exento
+

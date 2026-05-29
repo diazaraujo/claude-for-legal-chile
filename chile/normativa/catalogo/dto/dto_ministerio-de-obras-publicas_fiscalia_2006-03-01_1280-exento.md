@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-obras-publicas_fiscalia_2006-03-01_1280-exento
+tipo: dto
+numero: 1280-exento
+leychile_code: 247679
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=247679
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/2006-03-01/1280-exento
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 1280-exento
+

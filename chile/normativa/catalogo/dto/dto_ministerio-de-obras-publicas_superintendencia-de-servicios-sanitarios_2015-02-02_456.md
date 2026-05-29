@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-obras-publicas_superintendencia-de-servicios-sanitarios_2015-02-02_456
+tipo: dto
+numero: 456
+leychile_code: 1074406
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1074406
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_superintendencia-de-servicios-sanitarios/2015-02-02/456
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 456
+

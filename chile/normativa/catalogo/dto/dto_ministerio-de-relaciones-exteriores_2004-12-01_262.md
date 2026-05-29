@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-relaciones-exteriores_2004-12-01_262
 tipo: dto
 numero: 262
-titulo_oficial: "PROMULGA EL TRATADO DE LIBRE COMERCIO CON LOS ESTADOS MIEMBROS DE LA ASOCIACIÓN EUROPEA DE LIBRE COMERCIO, SUS ANEXOS, APÉNDICES, Y NOTAS, Y LOS ACUERDOS COMPLEMENTARIOS A DICHO TRATADO SOBRE COMERCIO DE MERCANCÍAS AGRÍCOLAS CON SUIZA, NORUEGA E ISLANDIA, SUS ANEXOS Y APÉNDICES"
-publicacion: 2004-12-01
-emisor: ministerio-de-relaciones-exteriores
 leychile_code: 233104
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=233104
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-relaciones-exteriores/2004-12-01/262
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 262
 
-**Título oficial:** PROMULGA EL TRATADO DE LIBRE COMERCIO CON LOS ESTADOS MIEMBROS DE LA ASOCIACIÓN EUROPEA DE LIBRE COMERCIO, SUS ANEXOS, APÉNDICES, Y NOTAS, Y LOS ACUERDOS COMPLEMENTARIOS A DICHO TRATADO SOBRE COMERCIO DE MERCANCÍAS AGRÍCOLAS CON SUIZA, NORUEGA E ISLANDIA, SUS ANEXOS Y APÉNDICES

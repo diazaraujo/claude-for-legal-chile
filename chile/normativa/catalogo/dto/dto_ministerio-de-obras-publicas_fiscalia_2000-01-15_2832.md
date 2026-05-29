@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-obras-publicas_fiscalia_2000-01-15_2832
+tipo: dto
+numero: 2832
+leychile_code: 151569
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=151569
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/2000-01-15/2832
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 2832
+

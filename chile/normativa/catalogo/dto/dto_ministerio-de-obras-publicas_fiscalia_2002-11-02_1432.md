@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-obras-publicas_fiscalia_2002-11-02_1432
+tipo: dto
+numero: 1432
+leychile_code: 204191
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=204191
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/2002-11-02/1432
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 1432
+

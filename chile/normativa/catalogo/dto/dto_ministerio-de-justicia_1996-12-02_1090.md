@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-justicia_1996-12-02_1090
+tipo: dto
+numero: 1090
+leychile_code: 16810
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=16810
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia/1996-12-02/1090
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 1090
+

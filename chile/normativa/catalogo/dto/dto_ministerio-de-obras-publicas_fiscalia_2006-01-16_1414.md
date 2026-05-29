@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-obras-publicas_fiscalia_2006-01-16_1414
+tipo: dto
+numero: 1414
+leychile_code: 246447
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=246447
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/2006-01-16/1414
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 1414
+

@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-obras-publicas_fiscalia_2003-10-15_968-exento
+tipo: dto
+numero: 968-exento
+leychile_code: 215926
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=215926
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/2003-10-15/968-exento
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 968-exento
+

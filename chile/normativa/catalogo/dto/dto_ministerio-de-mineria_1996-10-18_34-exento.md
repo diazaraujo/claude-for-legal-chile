@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-mineria_1996-10-18_34-exento
 tipo: dto
 numero: 34-exento
-titulo_oficial: "AUTORIZA LABORES DE EXPLORACION MINERA A LA COMPAÑIA MINERA ASARCO S.A. FIJANDOLE NORMAS DE PRESERVACION AMBIENTAL PARA PROTEGER LA RESERVA NACIONAL LAS VICUÑAS DECLARADA LUGAR DE INTERES CIENTIFICO PARA EFECTOS MINEROS  UBICADA EN LA PROVINCIA DE PARINACOTA, PRIMERA REGION DE TARAPACA"
-publicacion: 1996-10-18
-emisor: ministerio-de-mineria
 leychile_code: 19820
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=19820
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-mineria/1996-10-18/34-exento
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 34-exento
 
-**Título oficial:** AUTORIZA LABORES DE EXPLORACION MINERA A LA COMPAÑIA MINERA ASARCO S.A. FIJANDOLE NORMAS DE PRESERVACION AMBIENTAL PARA PROTEGER LA RESERVA NACIONAL LAS VICUÑAS DECLARADA LUGAR DE INTERES CIENTIFICO PARA EFECTOS MINEROS  UBICADA EN LA PROVINCIA DE PARINACOTA, PRIMERA REGION DE TARAPACA

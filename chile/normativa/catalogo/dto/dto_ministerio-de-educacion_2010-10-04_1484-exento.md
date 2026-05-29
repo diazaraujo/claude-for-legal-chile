@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-educacion_2010-10-04_1484-exento
 tipo: dto
 numero: 1484-exento
-titulo_oficial: "EXTRACTO DE DECRETO Nº 1.484 EXENTO, DE 2010"
-publicacion: 2010-10-04
-emisor: ministerio-de-educacion
 leychile_code: 1017568
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1017568
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-educacion/2010-10-04/1484-exento
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 1484-exento
 
-**Título oficial:** EXTRACTO DE DECRETO Nº 1.484 EXENTO, DE 2010

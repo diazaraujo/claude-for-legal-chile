@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-obras-publicas_fiscalia_2003-12-01_1460-exento
 tipo: dto
 numero: 1460-exento
-titulo_oficial: "SIN TITULO"
-publicacion: 2003-12-01
-emisor: ministerio-de-obras-publicas_fiscalia
 leychile_code: 218204
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=218204
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/2003-12-01/1460-exento
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 1460-exento
 
-**Título oficial:** SIN TITULO

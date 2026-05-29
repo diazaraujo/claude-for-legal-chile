@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-economia-fomento-y-reconstruccion_subsecretaria-de-economia-fomento-y-econstruccion_1998-09-14_413
+tipo: dto
+numero: 413
+leychile_code: 124244
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=124244
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-economia-fomento-y-reconstruccion_subsecretaria-de-economia-fomento-y-econstruccion/1998-09-14/413
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 413
+

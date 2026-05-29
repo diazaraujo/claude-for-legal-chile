@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-obras-publicas_fiscalia_2008-05-02_145-exento
+tipo: dto
+numero: 145-exento
+leychile_code: 270961
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=270961
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/2008-05-02/145-exento
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 145-exento
+

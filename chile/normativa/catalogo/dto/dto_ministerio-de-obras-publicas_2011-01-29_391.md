@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-obras-publicas_2011-01-29_391
 tipo: dto
 numero: 391
-titulo_oficial: "MODIFICA POR RAZONES DE INTERÉS PÚBLICO LAS CARACTERÍSTICAS DE LAS OBRAS Y SERVICIOS QUE INDICA DEL CONTRATO DE CONCESIÓN DE LA OBRA PÚBLICA FISCAL DENOMINADA 'CONCESIÓN INTERNACIONAL RUTA 5, TRAMO SANTIAGO-TALCA Y ACCESO SUR A SANTIAGO' Y APRUEBA CONVENIO AD – REFERÉMDUM Nº 2"
-publicacion: 2011-01-29
-emisor: ministerio-de-obras-publicas
 leychile_code: 1022491
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1022491
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas/2011-01-29/391
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 391
 
-**Título oficial:** MODIFICA POR RAZONES DE INTERÉS PÚBLICO LAS CARACTERÍSTICAS DE LAS OBRAS Y SERVICIOS QUE INDICA DEL CONTRATO DE CONCESIÓN DE LA OBRA PÚBLICA FISCAL DENOMINADA 'CONCESIÓN INTERNACIONAL RUTA 5, TRAMO SANTIAGO-TALCA Y ACCESO SUR A SANTIAGO' Y APRUEBA CONVENIO AD – REFERÉMDUM Nº 2

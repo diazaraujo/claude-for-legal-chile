@@ -2,17 +2,12 @@
 slug: dto_ministerio-de-relaciones-exteriores_1948-12-29_795
 tipo: dto
 numero: 795
-titulo_oficial: "ORDENA QUE SE LLEVE A EFECTO COMO LEY DE LA REPÚBLICA EL ARREGLO CONCLUIDO ENTRE LOS GOBIERNOS REPRESENTADOS EN LA CONFERENCIA INTERNACIONAL DE LA SALUD, SOBRE EL ESTABLECIMIENTO DE UNA COMISIÓN INTERINA DE LA ORGANIZACIÓN MUNDIAL DE LA SALUD, ADOPTADO EN NUEVA YORK, ESTADOS UNIDOS,  EL 22 DE JULIO DE 1946."
-publicacion: 1948-12-29
-promulgacion: 1948-10-27
-emisor: ministerio-de-relaciones-exteriores
 leychile_code: 400519
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=400519
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-relaciones-exteriores/1948-12-29/795
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 795
 
-**Título oficial:** ORDENA QUE SE LLEVE A EFECTO COMO LEY DE LA REPÚBLICA EL ARREGLO CONCLUIDO ENTRE LOS GOBIERNOS REPRESENTADOS EN LA CONFERENCIA INTERNACIONAL DE LA SALUD, SOBRE EL ESTABLECIMIENTO DE UNA COMISIÓN INTERINA DE LA ORGANIZACIÓN MUNDIAL DE LA SALUD, ADOPTADO EN NUEVA YORK, ESTADOS UNIDOS,  EL 22 DE JULIO DE 1946.

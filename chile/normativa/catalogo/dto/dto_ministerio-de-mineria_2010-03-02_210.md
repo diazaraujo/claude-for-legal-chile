@@ -2,17 +2,12 @@
 slug: dto_ministerio-de-mineria_2010-03-02_210
 tipo: dto
 numero: 210
-titulo_oficial: "OTORGA CONCESIÓN DE EXPLORACIÓN DE ENERGÍA GEOTÉRMICA, A LA EMPRESA GEOTERMIA DEL PACÍFICO SERVICIOS DE INGENIERÍA LIMITADA, EN EL ÁREA DENOMINADA 'HUISCAPI', UBICADA EN LAS REGIONES DEL BÍO BÍO Y DE LA ARAUCANÍA, PROVINCIAS DEL BÍO BÍO Y MALLECO, COMUNAS DE SANTA BÁRBARA Y LONQUIMAY, EN VIRTUD DE LA LEY N° 19.657"
-publicacion: 2010-03-02
-promulgacion: 2009-12-07
-emisor: ministerio-de-mineria
 leychile_code: 1011431
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1011431
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-mineria/2010-03-02/210
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 210
 
-**Título oficial:** OTORGA CONCESIÓN DE EXPLORACIÓN DE ENERGÍA GEOTÉRMICA, A LA EMPRESA GEOTERMIA DEL PACÍFICO SERVICIOS DE INGENIERÍA LIMITADA, EN EL ÁREA DENOMINADA 'HUISCAPI', UBICADA EN LAS REGIONES DEL BÍO BÍO Y DE LA ARAUCANÍA, PROVINCIAS DEL BÍO BÍO Y MALLECO, COMUNAS DE SANTA BÁRBARA Y LONQUIMAY, EN VIRTUD DE LA LEY N° 19.657

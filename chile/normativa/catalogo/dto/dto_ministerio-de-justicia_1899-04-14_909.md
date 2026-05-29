@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-justicia_1899-04-14_909
+tipo: dto
+numero: 909
+leychile_code: 273965
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=273965
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia/1899-04-14/909
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 909
+

@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-mineria_2008-11-24_165
 tipo: dto
 numero: 165
-titulo_oficial: "OTORGA CONCESIÓN DE EXPLORACIÓN DE ENERGÍA GEOTÉRMICA, A LA EMPRESA COMPAÑÍA MINERA DOÑA INÉS DE COLLAHUASI SCM, EN EL ÁREA DENOMINADA ?OLCA?, UBICADA EN LA PRIMERA REGIÓN DE TARAPACÁ, PROVINCIA DE IQUIQUE, COMUNA DE PICA Y EN LA SEGUNDA  REGIÓN DE ANTOFAGASTA, PROVINCIA EL LOA, COMUNA DE OLLAGÜE, EN VIRTUD DE LA LEY N°19.657"
-publicacion: 2008-11-24
-emisor: ministerio-de-mineria
 leychile_code: 282117
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=282117
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-mineria/2008-11-24/165
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 165
 
-**Título oficial:** OTORGA CONCESIÓN DE EXPLORACIÓN DE ENERGÍA GEOTÉRMICA, A LA EMPRESA COMPAÑÍA MINERA DOÑA INÉS DE COLLAHUASI SCM, EN EL ÁREA DENOMINADA ?OLCA?, UBICADA EN LA PRIMERA REGIÓN DE TARAPACÁ, PROVINCIA DE IQUIQUE, COMUNA DE PICA Y EN LA SEGUNDA  REGIÓN DE ANTOFAGASTA, PROVINCIA EL LOA, COMUNA DE OLLAGÜE, EN VIRTUD DE LA LEY N°19.657

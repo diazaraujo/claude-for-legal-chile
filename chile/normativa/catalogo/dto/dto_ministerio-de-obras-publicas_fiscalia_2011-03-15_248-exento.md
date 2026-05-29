@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-obras-publicas_fiscalia_2011-03-15_248-exento
 tipo: dto
 numero: 248-exento
-titulo_oficial: "SIN TITULO"
-publicacion: 2011-03-15
-emisor: ministerio-de-obras-publicas_fiscalia
 leychile_code: 1023735
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1023735
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/2011-03-15/248-exento
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 248-exento
 
-**Título oficial:** SIN TITULO

@@ -2,17 +2,12 @@
 slug: dto_ministerio-de-educacion_2013-06-10_68
 tipo: dto
 numero: 68
-titulo_oficial: "MODIFICA DECRETO Nº 216, DE 2003, QUE REGLAMENTA SUBVENCIÓN ANUAL EDUCACIONAL PRO-RETENCIÓN DE ALUMNOS QUE SE SEÑALAN DE 7º AÑO BÁSICO A 4° AÑO MEDIO HUMANÍSTICO-CIENTÍFICO O TÉCNICO-PROFESIONAL MATRICULADOS EN ESTABLECIMIENTOS EDUCACIONALES SUBVENCIONADOS Y REGIDOS POR EL DECRETO LEY Nº 3.166, DE 1980"
-publicacion: 2013-06-10
-promulgacion: 2013-02-01
-emisor: ministerio-de-educacion
 leychile_code: 1051707
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1051707
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-educacion/2013-06-10/68
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 68
 
-**Título oficial:** MODIFICA DECRETO Nº 216, DE 2003, QUE REGLAMENTA SUBVENCIÓN ANUAL EDUCACIONAL PRO-RETENCIÓN DE ALUMNOS QUE SE SEÑALAN DE 7º AÑO BÁSICO A 4° AÑO MEDIO HUMANÍSTICO-CIENTÍFICO O TÉCNICO-PROFESIONAL MATRICULADOS EN ESTABLECIMIENTOS EDUCACIONALES SUBVENCIONADOS Y REGIDOS POR EL DECRETO LEY Nº 3.166, DE 1980

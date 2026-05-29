@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-energia_2020-02-26_37-exento
+tipo: dto
+numero: 37 exento
+leychile_code: 1142755
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1142755
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-energia/2020-02-26/37-exento
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 37 exento
+

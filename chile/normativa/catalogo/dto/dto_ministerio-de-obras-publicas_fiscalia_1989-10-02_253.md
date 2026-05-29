@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-obras-publicas_fiscalia_1989-10-02_253
+tipo: dto
+numero: 253
+leychile_code: 90920
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=90920
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/1989-10-02/253
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 253
+

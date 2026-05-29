@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-obras-publicas_fiscalia_2009-11-02_1682-exento
+tipo: dto
+numero: 1682-exento
+leychile_code: 1007719
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1007719
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/2009-11-02/1682-exento
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 1682-exento
+

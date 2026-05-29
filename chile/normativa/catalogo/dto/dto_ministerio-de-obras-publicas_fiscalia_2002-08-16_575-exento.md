@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-obras-publicas_fiscalia_2002-08-16_575-exento
 tipo: dto
 numero: 575-exento
-titulo_oficial: "SIN TITULO"
-publicacion: 2002-08-16
-emisor: ministerio-de-obras-publicas_fiscalia
 leychile_code: 201457
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=201457
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/2002-08-16/575-exento
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 575-exento
 
-**Título oficial:** SIN TITULO

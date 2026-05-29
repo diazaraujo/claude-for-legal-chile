@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-relaciones-exteriores_1995-05-12_30
+tipo: dto
+numero: 30
+leychile_code: 7844
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=7844
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-relaciones-exteriores/1995-05-12/30
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 30
+

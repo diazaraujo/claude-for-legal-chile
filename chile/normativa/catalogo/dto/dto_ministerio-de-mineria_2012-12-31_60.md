@@ -2,17 +2,12 @@
 slug: dto_ministerio-de-mineria_2012-12-31_60
 tipo: dto
 numero: 60
-titulo_oficial: "ESTABLECE NUEVA FECHA DE ENTRADA EN VIGENCIA DEL REGLAMENTO QUE REGULA BOLETÍN OFICIAL DE MINERÍA COMO SUPLEMENTO ESPECIAL DEL DIARIO OFICIAL"
-publicacion: 2012-12-31
-promulgacion: 2012-11-29
-emisor: ministerio-de-mineria
 leychile_code: 1047564
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1047564
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-mineria/2012-12-31/60
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 60
 
-**Título oficial:** ESTABLECE NUEVA FECHA DE ENTRADA EN VIGENCIA DEL REGLAMENTO QUE REGULA BOLETÍN OFICIAL DE MINERÍA COMO SUPLEMENTO ESPECIAL DEL DIARIO OFICIAL

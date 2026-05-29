@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion_2001-07-23_421
 tipo: dto
 numero: 421
-titulo_oficial: "DECLARA NORMAS OFICIALES DE LA REPUBLICA LAS QUE INDICA, APROBADAS POR EL INSTITUTO NACIONAL DE NORMALIZACION"
-publicacion: 2001-07-23
-emisor: ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion
 leychile_code: 187892
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=187892
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-economia_fomento-y-reconstruccion/2001-07-23/421
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 421
 
-**Título oficial:** DECLARA NORMAS OFICIALES DE LA REPUBLICA LAS QUE INDICA, APROBADAS POR EL INSTITUTO NACIONAL DE NORMALIZACION

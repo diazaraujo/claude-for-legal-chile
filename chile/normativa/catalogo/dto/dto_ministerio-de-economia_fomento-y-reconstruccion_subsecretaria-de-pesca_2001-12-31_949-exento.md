@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-pesca_2001-12-31_949-exento
+tipo: dto
+numero: 949-exento
+leychile_code: 193173
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=193173
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-economia_fomento-y-reconstruccion_subsecretaria-de-pesca/2001-12-31/949-exento
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 949-exento
+

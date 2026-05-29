@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-justicia_1982-01-23_62
 tipo: dto
 numero: 62
-titulo_oficial: "CONCEDE PERSONALIDAD JURIDICA Y APRUEBA LOS ESTATUTOS A LA ENTIDAD DENOMINADA FUNDACION DE SALUD EL TENIENTE"
-publicacion: 1982-01-23
-emisor: ministerio-de-justicia
 leychile_code: 74527
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=74527
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia/1982-01-23/62
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 62
 
-**Título oficial:** CONCEDE PERSONALIDAD JURIDICA Y APRUEBA LOS ESTATUTOS A LA ENTIDAD DENOMINADA FUNDACION DE SALUD EL TENIENTE

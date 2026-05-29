@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-agricultura_1999-06-10_103
 tipo: dto
 numero: 103
-titulo_oficial: "MODIFICA DECRETO Nº 464, DE 1994, QUE ESTABLECE ZONIFICACION VITICOLA"
-publicacion: 1999-06-10
-emisor: ministerio-de-agricultura
 leychile_code: 137523
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=137523
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-agricultura/1999-06-10/103
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 103
 
-**Título oficial:** MODIFICA DECRETO Nº 464, DE 1994, QUE ESTABLECE ZONIFICACION VITICOLA

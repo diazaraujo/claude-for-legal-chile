@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-obras-publicas_1999-03-15_2621
 tipo: dto
 numero: 2621
-titulo_oficial: "DECLARA FORMALIZADAS CONCESIONES DE PRODUCCION Y DISTRIBUCION DE AGUA POTABLE Y RECOLECCION Y DISPOSICION DE AGUAS SERVIDAS DE ESSAM S.A., CORRESPONDIENTE A LOS SERVICIOS DE LOCALIDADES DE EMPEDRADO, LONTUE, PELLUHUE Y ROMERAL, VII REGION"
-publicacion: 1999-03-15
-emisor: ministerio-de-obras-publicas
 leychile_code: 133612
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=133612
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas/1999-03-15/2621
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 2621
 
-**Título oficial:** DECLARA FORMALIZADAS CONCESIONES DE PRODUCCION Y DISTRIBUCION DE AGUA POTABLE Y RECOLECCION Y DISPOSICION DE AGUAS SERVIDAS DE ESSAM S.A., CORRESPONDIENTE A LOS SERVICIOS DE LOCALIDADES DE EMPEDRADO, LONTUE, PELLUHUE Y ROMERAL, VII REGION

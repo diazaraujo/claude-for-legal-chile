@@ -2,17 +2,12 @@
 slug: dto_ministerio-de-educacion_2003-10-06_216
 tipo: dto
 numero: 216
-titulo_oficial: "REGLAMENTA SUBVENCION ANUAL EDUCACIONAL PRO-RETENCION ALUMNOS QUE SE SEÑALAN DE 7º AÑO BASICO A 4º AÑO MEDIO HUMANISTICO-CIENTIFICO O TECNICO-PROFESIONAL MATRICULADOS EN ESTABLECIMIENTOS EDUCACIONALES SUBVENCIONADOS Y REGIDOS POR EL DECRETO LEY Nº 3.166 DE 1980"
-publicacion: 2003-10-06
-promulgacion: 2003-07-04
-emisor: ministerio-de-educacion
 leychile_code: 215379
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=215379
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-educacion/2003-10-06/216
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 216
 
-**Título oficial:** REGLAMENTA SUBVENCION ANUAL EDUCACIONAL PRO-RETENCION ALUMNOS QUE SE SEÑALAN DE 7º AÑO BASICO A 4º AÑO MEDIO HUMANISTICO-CIENTIFICO O TECNICO-PROFESIONAL MATRICULADOS EN ESTABLECIMIENTOS EDUCACIONALES SUBVENCIONADOS Y REGIDOS POR EL DECRETO LEY Nº 3.166 DE 1980

@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-relaciones-exteriores_1981-02-16_919
 tipo: dto
 numero: 919
-titulo_oficial: "APRUEBA ACUERDO ENTRE CHILE Y MEXICO POR NOTAS REVERSALES, SUSCRITO EN MONTEVIDEO EL 12 DE AGOSTO DE 1980, SOBRE REVISION DE LOS COMPROMISOS DERIVADOS DEL PROGRAMA DE LIBERACION DEL TRATADO QUE INSTITUYO LA ASOCIACION LATINOAMERICANA DE LIBRE COMERCIO (ALALC)"
-publicacion: 1981-02-16
-emisor: ministerio-de-relaciones-exteriores
 leychile_code: 16199
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=16199
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-relaciones-exteriores/1981-02-16/919
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 919
 
-**Título oficial:** APRUEBA ACUERDO ENTRE CHILE Y MEXICO POR NOTAS REVERSALES, SUSCRITO EN MONTEVIDEO EL 12 DE AGOSTO DE 1980, SOBRE REVISION DE LOS COMPROMISOS DERIVADOS DEL PROGRAMA DE LIBERACION DEL TRATADO QUE INSTITUYO LA ASOCIACION LATINOAMERICANA DE LIBRE COMERCIO (ALALC)

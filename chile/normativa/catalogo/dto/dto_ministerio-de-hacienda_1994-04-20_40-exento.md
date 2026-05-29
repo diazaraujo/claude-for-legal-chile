@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-hacienda_1994-04-20_40-exento
 tipo: dto
 numero: 40-exento
-titulo_oficial: "DEJA SIN EFECTO DECRETOS EXENTOS NUMEROS 36 Y 103, DE 1992 Y 154, DE 1993, Y DESIGNA A DON ALVARO CLARKE DE LA CERDA COMO TITULAR, Y A DON PABLO SERRA BANFI EN CALIDAD DE SUPLENTE, ANTE LA COMISION PREVENTIVA CENTRAL. DESIGNA A DON DANIEL YARUR ELSACA COMO INTEGRANTE DE LA COMISION RESOLUTIVA"
-publicacion: 1994-04-20
-emisor: ministerio-de-hacienda
 leychile_code: 19863
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=19863
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-hacienda/1994-04-20/40-exento
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 40-exento
 
-**Título oficial:** DEJA SIN EFECTO DECRETOS EXENTOS NUMEROS 36 Y 103, DE 1992 Y 154, DE 1993, Y DESIGNA A DON ALVARO CLARKE DE LA CERDA COMO TITULAR, Y A DON PABLO SERRA BANFI EN CALIDAD DE SUPLENTE, ANTE LA COMISION PREVENTIVA CENTRAL. DESIGNA A DON DANIEL YARUR ELSACA COMO INTEGRANTE DE LA COMISION RESOLUTIVA

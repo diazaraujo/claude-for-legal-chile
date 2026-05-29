@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-defensa-nacional_subsecretaria-de-marina_1997-04-03_4
 tipo: dto
 numero: 4
-titulo_oficial: "MODIFICA EL DECRETO (M) Nº 397, DE 1985, QUE APROBO EL REGLAMENTO DE PRACTICAJE Y PILOTAJE"
-publicacion: 1997-04-03
-emisor: ministerio-de-defensa-nacional_subsecretaria-de-marina
 leychile_code: 70274
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=70274
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-defensa-nacional_subsecretaria-de-marina/1997-04-03/4
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 4
 
-**Título oficial:** MODIFICA EL DECRETO (M) Nº 397, DE 1985, QUE APROBO EL REGLAMENTO DE PRACTICAJE Y PILOTAJE

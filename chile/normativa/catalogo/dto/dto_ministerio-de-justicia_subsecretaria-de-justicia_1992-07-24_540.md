@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-justicia_subsecretaria-de-justicia_1992-07-24_540
+tipo: dto
+numero: 540
+leychile_code: 78304
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=78304
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia_subsecretaria-de-justicia/1992-07-24/540
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 540
+

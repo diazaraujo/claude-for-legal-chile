@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-energia_2010-05-17_60
 tipo: dto
 numero: 60
-titulo_oficial: "MODIFICA VALORES DE PRECIOS DE NUDO PROMEDIO ESTABLECIDOS EN EL DECRETO Nº 1 DEL MINISTERIO DE ECONOMÍA, FOMENTO Y RECONSTRUCCIÓN, DE FECHA 6 DE ENERO DE 2010, CON MOTIVO DE LA INDEXACIÓN DE PRECIOS CONTENIDOS EN LOS CONTRATOS DE SUMINISTRO QUE INDICA"
-publicacion: 2010-05-17
-emisor: ministerio-de-energia
 leychile_code: 1013348
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1013348
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-energia/2010-05-17/60
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 60
 
-**Título oficial:** MODIFICA VALORES DE PRECIOS DE NUDO PROMEDIO ESTABLECIDOS EN EL DECRETO Nº 1 DEL MINISTERIO DE ECONOMÍA, FOMENTO Y RECONSTRUCCIÓN, DE FECHA 6 DE ENERO DE 2010, CON MOTIVO DE LA INDEXACIÓN DE PRECIOS CONTENIDOS EN LOS CONTRATOS DE SUMINISTRO QUE INDICA

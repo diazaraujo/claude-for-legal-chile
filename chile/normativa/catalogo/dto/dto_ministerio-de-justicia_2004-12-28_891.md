@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-justicia_2004-12-28_891
 tipo: dto
 numero: 891
-titulo_oficial: "NOMBRA E INCLUYE A PERSONA QUE INDICA EN LA TERCERA NOMINA NACIONAL DE SINDICOS"
-publicacion: 2004-12-28
-emisor: ministerio-de-justicia
 leychile_code: 234000
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=234000
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia/2004-12-28/891
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 891
 
-**Título oficial:** NOMBRA E INCLUYE A PERSONA QUE INDICA EN LA TERCERA NOMINA NACIONAL DE SINDICOS

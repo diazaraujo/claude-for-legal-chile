@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-relaciones-exteriores_2001-12-10_486
+tipo: dto
+numero: 486
+leychile_code: 192362
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=192362
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-relaciones-exteriores/2001-12-10/486
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 486
+

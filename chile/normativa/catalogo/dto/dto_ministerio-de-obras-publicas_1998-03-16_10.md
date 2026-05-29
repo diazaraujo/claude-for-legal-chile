@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-obras-publicas_1998-03-16_10
 tipo: dto
 numero: 10
-titulo_oficial: "DECLARA FORMALIZADAS LAS CONCESIONES DE PRODUCCION Y DISTRIBUCION DE AGUA POTABLE Y RECOLECCION Y DISPOSICION DE AGUAS SERVIDAS DE EMPRESA DE SERVICIOS SANITARIOS DE ATACAMA S.A. (EMSSAT S.A.), CORRESPONDIENTES A LOS SERVICIOS DE COPIAPO Y TIERRA AMARILLA, DE LA III REGION"
-publicacion: 1998-03-16
-emisor: ministerio-de-obras-publicas
 leychile_code: 97540
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=97540
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas/1998-03-16/10
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 10
 
-**Título oficial:** DECLARA FORMALIZADAS LAS CONCESIONES DE PRODUCCION Y DISTRIBUCION DE AGUA POTABLE Y RECOLECCION Y DISPOSICION DE AGUAS SERVIDAS DE EMPRESA DE SERVICIOS SANITARIOS DE ATACAMA S.A. (EMSSAT S.A.), CORRESPONDIENTES A LOS SERVICIOS DE COPIAPO Y TIERRA AMARILLA, DE LA III REGION

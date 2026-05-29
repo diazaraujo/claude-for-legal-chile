@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-justicia_1991-07-29_664
 tipo: dto
 numero: 664
-titulo_oficial: "NOMBRA E INCLUYE A PERSONA QUE INDICA EN LA TERCERA NOMINA NACIONAL DE SINDICOS"
-publicacion: 1991-07-29
-emisor: ministerio-de-justicia
 leychile_code: 181209
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=181209
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-justicia/1991-07-29/664
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 664
 
-**Título oficial:** NOMBRA E INCLUYE A PERSONA QUE INDICA EN LA TERCERA NOMINA NACIONAL DE SINDICOS

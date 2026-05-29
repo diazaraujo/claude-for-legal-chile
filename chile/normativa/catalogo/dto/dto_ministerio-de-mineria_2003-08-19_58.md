@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-mineria_2003-08-19_58
 tipo: dto
 numero: 58
-titulo_oficial: "ACEPTA RENUNCIA AL CARGO DE SECRETARIO REGIONAL MINISTERIAL DE MINERIA DE LA XI REGION DE AYSEN AL SEÑOR SEGISMUNDO ORDENES GONZALEZ, Y NOMBRA EN EL CARGO DE SECRETARIO REGIONAL MINISTERIAL DE MINERIA DE LA XI REGION DE AYSEN AL SEÑOR HECTOR GUILLERMO DELFIN CORTES GAETE"
-publicacion: 2003-08-19
-emisor: ministerio-de-mineria
 leychile_code: 213766
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=213766
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-mineria/2003-08-19/58
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 58
 
-**Título oficial:** ACEPTA RENUNCIA AL CARGO DE SECRETARIO REGIONAL MINISTERIAL DE MINERIA DE LA XI REGION DE AYSEN AL SEÑOR SEGISMUNDO ORDENES GONZALEZ, Y NOMBRA EN EL CARGO DE SECRETARIO REGIONAL MINISTERIAL DE MINERIA DE LA XI REGION DE AYSEN AL SEÑOR HECTOR GUILLERMO DELFIN CORTES GAETE

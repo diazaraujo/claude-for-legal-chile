@@ -2,17 +2,12 @@
 slug: dto_ministerio-de-hacienda_2012-11-30_750
 tipo: dto
 numero: 750
-titulo_oficial: "NOMBRA PRESIDENTES TITULARES Y SUPLENTES EN LOS TRIBUNALES ESPECIALES DE ALZADA DE LOS BIENES RAÍCES DE LA PRIMERA Y SEGUNDA SERIE, CON JURISDICCIÓN EN EL TERRITORIO DE LAS ILUSTRÍSIMAS CORTES DE APELACIONES DE TEMUCO, COYHAIQUE Y SAN MIGUEL, SEGÚN INDICA"
-publicacion: 2012-11-30
-promulgacion: 2012-06-08
-emisor: ministerio-de-hacienda
 leychile_code: 1046204
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1046204
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-hacienda/2012-11-30/750
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 750
 
-**Título oficial:** NOMBRA PRESIDENTES TITULARES Y SUPLENTES EN LOS TRIBUNALES ESPECIALES DE ALZADA DE LOS BIENES RAÍCES DE LA PRIMERA Y SEGUNDA SERIE, CON JURISDICCIÓN EN EL TERRITORIO DE LAS ILUSTRÍSIMAS CORTES DE APELACIONES DE TEMUCO, COYHAIQUE Y SAN MIGUEL, SEGÚN INDICA

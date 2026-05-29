@@ -2,25 +2,12 @@
 slug: dto_ministerio-de-educacion-publica_1989-03-11_548
 tipo: dto
 numero: 548
-titulo_oficial: "APRUEBA NORMAS PARA LA PLANTA FISICA DE LOS LOCALES
-EDUCACIONALES QUE ESTABLECEN LAS EXIGENCIAS MINIMAS QUE
-DEBEN CUMPLIR LOS ESTABLECIMIENTOS RECONOCIDOS COMO
-COOPERADORES DE LA FUNCION EDUCACIONAL DEL ESTADO, SEGUN
-EL NIVEL Y MODALIDAD DE LA ENSEÑANZA QUE IMPARTAN "
-publicacion: 1989-03-11
-promulgacion: 1988-11-09
-emisor: ministerio-de-educacion-publica
 leychile_code: 14166
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=14166
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-educacion-publica/1989-03-11/548
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 548
 
-**Título oficial:** APRUEBA NORMAS PARA LA PLANTA FISICA DE LOS LOCALES
-EDUCACIONALES QUE ESTABLECEN LAS EXIGENCIAS MINIMAS QUE
-DEBEN CUMPLIR LOS ESTABLECIMIENTOS RECONOCIDOS COMO
-COOPERADORES DE LA FUNCION EDUCACIONAL DEL ESTADO, SEGUN
-EL NIVEL Y MODALIDAD DE LA ENSEÑANZA QUE IMPARTAN 

@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-economia-fomento-y-turismo_subsecretaria-de-economia-y-empresas-de-menor-tamano_2013-03-12_79
+tipo: dto
+numero: 79
+leychile_code: 1049380
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1049380
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-economia-fomento-y-turismo_subsecretaria-de-economia-y-empresas-de-menor-tamano/2013-03-12/79
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 79
+

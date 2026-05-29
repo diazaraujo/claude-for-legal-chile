@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-hacienda_2001-04-07_139
 tipo: dto
 numero: 139
-titulo_oficial: "MODIFICA DECRETO Nº 1.015, DE 1994, QUE ESTABLECE NORMAS EN VIRTUD DE LAS CUALES EL DIRECTOR NACIONAL DE ADUANAS PODRA AUTORIZAR A LOS DESPACHADORES DE ADUANAS PARA FORMALIZAR SUS DECLARACIONES MEDIANTE UN SISTEMA DE  TRANSMISION ELECTRONICA DE DATOS"
-publicacion: 2001-04-07
-emisor: ministerio-de-hacienda
 leychile_code: 183705
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=183705
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-hacienda/2001-04-07/139
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 139
 
-**Título oficial:** MODIFICA DECRETO Nº 1.015, DE 1994, QUE ESTABLECE NORMAS EN VIRTUD DE LAS CUALES EL DIRECTOR NACIONAL DE ADUANAS PODRA AUTORIZAR A LOS DESPACHADORES DE ADUANAS PARA FORMALIZAR SUS DECLARACIONES MEDIANTE UN SISTEMA DE  TRANSMISION ELECTRONICA DE DATOS

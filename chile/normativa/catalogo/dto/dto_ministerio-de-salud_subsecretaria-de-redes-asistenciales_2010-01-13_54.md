@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-salud_subsecretaria-de-redes-asistenciales_2010-01-13_54
+tipo: dto
+numero: 54
+leychile_code: 1010085
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=1010085
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-salud_subsecretaria-de-redes-asistenciales/2010-01-13/54
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 54
+

@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-hacienda_1964-10-06_3597
 tipo: dto
 numero: 3597
-titulo_oficial: "INCLUYE A LOS TRACTORES DESTINADOS A FAENAS AGRICOLAS QUE SE AFORAN POR LA PARTIDA 1.480 DEL ARANCEL ADUANERO, A LA LISTA DE MERCADERIAS QUE PUEDEN DESCARGARSE EN FORMA PERMANENTE POR EL PUERTO MENOR DE SAN ANTONIO, DE CONFORMIDAD ARTICULO 2.O DE LA LEY NUMERO 12.888"
-publicacion: 1964-10-06
-emisor: ministerio-de-hacienda
 leychile_code: 19363
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=19363
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-hacienda/1964-10-06/3597
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 3597
 
-**Título oficial:** INCLUYE A LOS TRACTORES DESTINADOS A FAENAS AGRICOLAS QUE SE AFORAN POR LA PARTIDA 1.480 DEL ARANCEL ADUANERO, A LA LISTA DE MERCADERIAS QUE PUEDEN DESCARGARSE EN FORMA PERMANENTE POR EL PUERTO MENOR DE SAN ANTONIO, DE CONFORMIDAD ARTICULO 2.O DE LA LEY NUMERO 12.888

@@ -2,16 +2,12 @@
 slug: dto_ministerio-de-educacion_2003-02-07_279
 tipo: dto
 numero: 279
-titulo_oficial: "APRUEBA MODIFICACION DE CONVENIO CELEBRADO ENTRE EL MINISTERIO DE EDUCACIÓN Y LA FUNDACION ALMIRANTE CARLOS CONDELL, PARA LA ADMINISTRACION DEL INSTITUTO DEL MAR ALMIRANTE CARLOS CONDELL (EX LICEO INDUSTRIAL A Nº 8), DE  ACUERDO AL DECRETO LEY Nº 3.166, DE 1980"
-publicacion: 2003-02-07
-emisor: ministerio-de-educacion
 leychile_code: 207421
 fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=207421
 bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-educacion/2003-02-07/279
 capa: 1
-estado_revision: catalogo-bcn-grafo-selectivo
+estado_revision: catalogo-bcn-sparql
 ---
 
 # DTO 279
 
-**Título oficial:** APRUEBA MODIFICACION DE CONVENIO CELEBRADO ENTRE EL MINISTERIO DE EDUCACIÓN Y LA FUNDACION ALMIRANTE CARLOS CONDELL, PARA LA ADMINISTRACION DEL INSTITUTO DEL MAR ALMIRANTE CARLOS CONDELL (EX LICEO INDUSTRIAL A Nº 8), DE  ACUERDO AL DECRETO LEY Nº 3.166, DE 1980

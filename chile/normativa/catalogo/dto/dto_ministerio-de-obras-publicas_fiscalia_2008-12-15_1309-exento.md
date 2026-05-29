@@ -1,0 +1,13 @@
+---
+slug: dto_ministerio-de-obras-publicas_fiscalia_2008-12-15_1309-exento
+tipo: dto
+numero: 1309-exento
+leychile_code: 283840
+fuente_oficial: https://www.bcn.cl/leychile/navegar?idNorma=283840
+bcn_uri: http://datos.bcn.cl/recurso/cl/dto/ministerio-de-obras-publicas_fiscalia/2008-12-15/1309-exento
+capa: 1
+estado_revision: catalogo-bcn-sparql
+---
+
+# DTO 1309-exento
+
