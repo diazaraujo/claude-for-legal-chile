@@ -1,8 +1,8 @@
 {
   "generado": "2026-05-30",
   "total_fuentes": 26,
-  "total_docs": 420800,
-  "total_embebido": 420600,
+  "total_docs": 429515,
+  "total_embebido": 427005,
   "fuentes": [
     {
       "fuente": "cplt",
@@ -11,23 +11,23 @@
       "metodo": "bulk",
       "docs": 117692,
       "enum": 117352,
-      "descargado": 103864,
-      "comp": 88.50637398595677,
+      "descargado": 117047,
+      "comp": 99.74009816620082,
       "embebido": 117692,
       "emb_pct": 100.0,
-      "estado": "parcial"
+      "estado": "completo"
     },
     {
       "fuente": "cgr-dictamenes",
       "tipo": "Dictámenes",
       "organismo": "Contraloría (CGR)",
       "metodo": "Domino",
-      "docs": 111960,
+      "docs": 116116,
       "enum": 113478,
-      "descargado": 72380,
-      "comp": 63.78328839070127,
-      "embebido": 111764,
-      "emb_pct": 99.8,
+      "descargado": 75118,
+      "comp": 66.19609087223955,
+      "embebido": 115522,
+      "emb_pct": 99.5,
       "estado": "parcial"
     },
     {
@@ -48,12 +48,12 @@
       "tipo": "Dictámenes",
       "organismo": "Dirección del Trabajo",
       "metodo": "Zyte (WAF)",
-      "docs": 3075,
+      "docs": 3266,
       "enum": 4974,
-      "descargado": 3075,
-      "comp": 61.82147165259349,
-      "embebido": 3071,
-      "emb_pct": 99.9,
+      "descargado": 3266,
+      "comp": 65.66143948532368,
+      "embebido": 3259,
+      "emb_pct": 99.8,
       "estado": "parcial"
     },
     {
@@ -83,6 +83,19 @@
       "estado": "completo"
     },
     {
+      "fuente": "sii-oficios",
+      "tipo": "Jurisprud. adm.",
+      "organismo": "SII oficios",
+      "metodo": "Zyte+GET",
+      "docs": 3354,
+      "enum": 1678,
+      "descargado": 1675,
+      "comp": 99.82121573301549,
+      "embebido": 1460,
+      "emb_pct": 43.5,
+      "estado": "completo"
+    },
+    {
       "fuente": "sii",
       "tipo": "Jurisprud. adm.",
       "organismo": "SII (legacy)",
@@ -107,19 +120,6 @@
       "embebido": 254,
       "emb_pct": 100.0,
       "estado": "completo"
-    },
-    {
-      "fuente": "sii-oficios",
-      "tipo": "Jurisprud. adm.",
-      "organismo": "SII oficios",
-      "metodo": "Zyte+GET",
-      "docs": 4,
-      "enum": 1678,
-      "descargado": 0,
-      "comp": 0.0,
-      "embebido": 4,
-      "emb_pct": 100.0,
-      "estado": "bloqueado"
     },
     {
       "fuente": "tc",
@@ -165,12 +165,12 @@
       "tipo": "Jurisprudencia",
       "organismo": "FNE",
       "metodo": "WP-REST",
-      "docs": 1157,
+      "docs": 1335,
       "enum": 7047,
-      "descargado": 358,
-      "comp": 5.0801759614020146,
-      "embebido": 1157,
-      "emb_pct": 100.0,
+      "descargado": 536,
+      "comp": 7.6060735064566485,
+      "embebido": 1321,
+      "emb_pct": 99.0,
       "estado": "bloqueado"
     },
     {
@@ -243,11 +243,11 @@
       "tipo": "Normativa",
       "organismo": "Diario Oficial",
       "metodo": "bulk",
-      "docs": 75352,
-      "enum": 37900,
-      "descargado": 37676,
-      "comp": 99.4089709762533,
-      "embebido": 75352,
+      "docs": 76192,
+      "enum": 38516,
+      "descargado": 38516,
+      "comp": 100.0,
+      "embebido": 76191,
       "emb_pct": 100.0,
       "estado": "completo"
     },
