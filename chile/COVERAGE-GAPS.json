@@ -36,12 +36,6 @@
     "detalle": "fecha es de scrape/upload (date_gmt), no del documento — cobertura temporal informativa"
   },
   {
-    "fuente": "tricel",
-    "org": "TRICEL",
-    "tipo": "fecha_no_confiable",
-    "detalle": "fecha es de scrape/upload (date_gmt), no del documento — cobertura temporal informativa"
-  },
-  {
     "fuente": "tdlc",
     "org": "TDLC",
     "tipo": "fecha_no_confiable",
@@ -64,5 +58,29 @@
     "org": "Trib. Ambientales",
     "tipo": "años_faltantes",
     "detalle": "1 años sin docs en 2014-2023: [2020]"
+  },
+  {
+    "fuente": "tricel",
+    "org": "TRICEL",
+    "tipo": "años_faltantes",
+    "detalle": "1 años sin docs en 2020-2025: [2021]"
+  },
+  {
+    "fuente": "subtel",
+    "org": "SUBTEL",
+    "tipo": "años_faltantes",
+    "detalle": "9 años sin docs en 1995-2007: [1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003]"
+  },
+  {
+    "fuente": "leychile",
+    "org": "BCN / LeyChile",
+    "tipo": "años_faltantes",
+    "detalle": "47 años sin docs en 1834-2026: [1835, 1836, 1837, 1838, 1839, 1840, 1841, 1842]"
+  },
+  {
+    "fuente": "tc",
+    "org": "Tribunal Constitucional",
+    "tipo": "años_faltantes",
+    "detalle": "49 años sin docs en 1932-2039: [1933, 1934, 1935, 1936, 1937, 1938, 1939, 1940]"
   }
 ]

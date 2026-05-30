@@ -42,6 +42,15 @@ CFG_DISK = {
  "sec":            ("filename", r"-(\d{4})\.",               "year", "SEC"),
  # Trib. Ambientales: filename "R-279-2021_26-07-2023_..." → fecha sentencia
  "tribunales-ambientales": ("filename", r"_(\d{2}-\d{2}-\d{4})_", "day", "Trib. Ambientales"),
+ # TRICEL: filename "7189_06-09-2022.pdf" → fecha
+ "tricel":         ("filename", r"_(\d{2}-\d{2}-\d{4})\.",   "day",  "TRICEL"),
+ # SUBTEL: filename "res_ex_n1690_2006.pdf" → año
+ "subtel":         ("filename", r"_(\d{4})\.",               "year", "SUBTEL"),
+ # LeyChile: atributo fechaPublicacion en los XML
+ "leychile":       ("xml",      r'fechaPublicacion="(\d{4}-\d{2}-\d{2})"', "day", "BCN / LeyChile"),
+ # TC / SERNAC / doctrina / CDE: fecha en el contenido del .txt
+ "tc":             ("content",  r'de\s+((?:19|20)\d{2})\b', "year", "Tribunal Constitucional"),
+ "sernac":         ("content",  r'(\d{2}[-/]\d{2}[-/](?:19|20)\d{2})', "year", "SERNAC"),
 }
 
 
@@ -84,18 +93,39 @@ def extract_disk(src, mode, pattern):
              if not r[0].startswith("sqlite")][0]
         vals = [r[0] for r in c.execute(f"SELECT title FROM {t} WHERE title IS NOT NULL")]
         c.close()
-    else:  # filename
-        vals = [p.name for p in (DATA / src).rglob("*") if p.is_file()]
-    for v in vals:
-        m = rx.search(str(v))
-        if not m: continue
-        s = m.group(1)
-        if len(s) == 8 and s.isdigit():      # YYYYMMDD
-            p = (int(s[:4]), int(s[4:6]), int(s[6:8]))
-        else:
-            p = parse_date(s)
-        if p: out.append(p)
-    return out
+        for v in vals:
+            m = rx.search(str(v))
+            if m: out.append(_mk(m.group(1)))
+    elif mode == "filename":
+        for p in (DATA / src).rglob("*"):
+            if p.is_file():
+                m = rx.search(p.name)
+                if m: out.append(_mk(m.group(1)))
+    elif mode == "xml":   # leer head de cada XML (la fecha está en el root)
+        for p in (DATA / src).rglob("*.xml"):
+            if p.name.endswith(".txt"): continue
+            try:
+                m = rx.search(p.open("rb").read(2500).decode("latin-1", "replace"))
+                if m: out.append(_mk(m.group(1)))
+            except Exception:
+                pass
+    elif mode == "content":   # primer match de fecha en el .txt
+        for p in (DATA / src).rglob("*.txt"):
+            try:
+                m = rx.search(p.open(encoding="utf-8", errors="replace").read(4000))
+                if m: out.append(_mk(m.group(1)))
+            except Exception:
+                pass
+    return [x for x in out if x]
+
+
+def _mk(s):
+    s = s.strip()
+    if len(s) == 8 and s.isdigit():
+        return (int(s[:4]), int(s[4:6]), int(s[6:8]))
+    if re.fullmatch(r"(19|20)\d{2}", s):
+        return (int(s), None, None)
+    return parse_date(s)
 
 
 def main():
