@@ -1,0 +1,62 @@
+[
+  {
+    "fuente": "suseso",
+    "org": "SUSESO",
+    "tipo": "años_faltantes",
+    "detalle": "6 años sin docs en 1971-2026: [1972, 1973, 1974, 1975, 1976, 1977]"
+  },
+  {
+    "fuente": "cortes-marciales",
+    "org": "Cortes Marciales",
+    "tipo": "años_faltantes",
+    "detalle": "2 años sin docs en 2014-2026: [2023, 2024]"
+  },
+  {
+    "fuente": "dt",
+    "org": "Dirección del Trabajo",
+    "tipo": "años_faltantes",
+    "detalle": "4 años sin docs en 1990-2025: [1991, 1992, 1993, 1994]"
+  },
+  {
+    "fuente": "tdpi",
+    "org": "TDPI",
+    "tipo": "años_faltantes",
+    "detalle": "1 años sin docs en 2015-2026: [2016]"
+  },
+  {
+    "fuente": "dga",
+    "org": "DGA (aguas)",
+    "tipo": "fecha_no_confiable",
+    "detalle": "fecha es de scrape/upload (date_gmt), no del documento — cobertura temporal informativa"
+  },
+  {
+    "fuente": "subtrans",
+    "org": "SUBTRANS",
+    "tipo": "fecha_no_confiable",
+    "detalle": "fecha es de scrape/upload (date_gmt), no del documento — cobertura temporal informativa"
+  },
+  {
+    "fuente": "tcp",
+    "org": "Trib. Contratación Púb.",
+    "tipo": "fecha_no_confiable",
+    "detalle": "fecha es de scrape/upload (date_gmt), no del documento — cobertura temporal informativa"
+  },
+  {
+    "fuente": "tricel",
+    "org": "TRICEL",
+    "tipo": "fecha_no_confiable",
+    "detalle": "fecha es de scrape/upload (date_gmt), no del documento — cobertura temporal informativa"
+  },
+  {
+    "fuente": "tdlc",
+    "org": "TDLC",
+    "tipo": "fecha_no_confiable",
+    "detalle": "fecha es de scrape/upload (date), no del documento — cobertura temporal informativa"
+  },
+  {
+    "fuente": "tc-moderno",
+    "org": "TC (moderno)",
+    "tipo": "fecha_no_confiable",
+    "detalle": "fecha es de scrape/upload (fecha), no del documento — cobertura temporal informativa"
+  }
+]

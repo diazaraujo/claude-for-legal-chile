@@ -1,116 +1,162 @@
 #!/usr/bin/env python3
-"""Vista DETALLADA de cobertura temporal (estilo Decide Mercado Público).
+"""Vista DETALLADA de cobertura temporal por fuente (estilo Mercado Público).
 
-Heatmap de calendario por año (un cuadro por día, verde = día con data) +
-resumen anual. Fuente daily-natural del corpus: Diario Oficial (una edición por
-día). Lee el manifest (date DD-MM-YYYY, downloaded=pubs, status). Solo lectura.
+Por fuente con señal de fecha: cobertura anual (docs/año, rango, años faltantes)
++ heatmap de calendario donde la fecha es a nivel día y confiable. Genera
+COVERAGE-DETAIL.html + COVERAGE-GAPS.json (gaps levantados). Solo lectura.
 """
 from __future__ import annotations
-import sqlite3, sys, datetime, calendar
+import sqlite3, glob, re, sys, json, datetime, calendar
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-MANIFEST = ROOT / "data/diario-oficial/manifest.sqlite3"
+DATA = ROOT / "data"
+
+# por fuente: (columna_fecha, granularidad, confiable_doc_date, organismo)
+# confiable=False → la fecha es de scrape/upload (no del documento) → solo informativa
+CFG = {
+ "diario-oficial":  ("date",          "day",  True,  "Diario Oficial"),
+ "cgr-dictamenes":  ("ventana",       "month",True,  "Contraloría (CGR)"),
+ "suseso":          ("fecha",         "day",  True,  "SUSESO"),
+ "cortes-marciales":("fecha",         "day",  True,  "Cortes Marciales"),
+ "fne":             ("date",          "day",  True,  "FNE"),
+ "sii-oficios":     ("anio",          "year", True,  "SII oficios"),
+ "dt":              ("year",          "year", True,  "Dirección del Trabajo"),
+ "cmf":             ("year",          "year", True,  "CMF"),
+ "sii":             ("year",          "year", True,  "SII (legacy)"),
+ "tdpi":            ("year",          "year", True,  "TDPI"),
+ "dga":             ("date_gmt",      "day",  False, "DGA (aguas)"),
+ "subtrans":        ("date_gmt",      "day",  False, "SUBTRANS"),
+ "tcp":             ("date_gmt",      "day",  False, "Trib. Contratación Púb."),
+ "tricel":          ("date_gmt",      "day",  False, "TRICEL"),
+ "tdlc":            ("date",          "day",  False, "TDLC"),
+ "tc-moderno":      ("fecha",         "day",  False, "TC (moderno)"),
+}
 
 
-def load_days() -> dict:
-    """date(YYYY-MM-DD) -> pubs descargadas (0 si sin data)."""
-    c = sqlite3.connect(f"file:{MANIFEST}?mode=ro", uri=True)
-    days = {}
-    for date, dl, status in c.execute("SELECT date, downloaded, status FROM descargas"):
-        try:
-            d, m, y = date.split("-")
-            iso = f"{y}-{m}-{d}"
-            days[iso] = max(days.get(iso, 0), dl or 0)
-        except Exception:
-            pass
+def parse_date(v):
+    """→ (year, month, day) ; month/day None si no aplica. None si no parsea."""
+    if v is None: return None
+    s = str(v).strip()
+    if not s: return None
+    if re.fullmatch(r"(19|20)\d\d", s): return (int(s), None, None)
+    m = re.match(r"(\d{4})-(\d{2})(?:-(\d{2}))?", s)          # ISO / YYYY-MM
+    if m: return (int(m.group(1)), int(m.group(2)), int(m.group(3)) if m.group(3) else None)
+    m = re.match(r"(\d{2})[/-](\d{2})[/-](\d{4})", s)         # DD/MM/YYYY o DD-MM-YYYY
+    if m: return (int(m.group(3)), int(m.group(2)), int(m.group(1)))
+    return None
+
+
+def extract(src, col):
+    man = glob.glob(str(DATA / src / "manifest.sqlite*"))
+    if not man: return []
+    c = sqlite3.connect(f"file:{man[0]}?mode=ro", uri=True)
+    t = [r[0] for r in c.execute("SELECT name FROM sqlite_master WHERE type='table'")
+         if not r[0].startswith("sqlite")][0]
+    out = []
+    for (v,) in c.execute(f"SELECT {col} FROM {t} WHERE {col} IS NOT NULL AND {col} != ''"):
+        p = parse_date(v)
+        if p: out.append(p)
     c.close()
-    return days
+    return out
 
 
 def main():
-    days = load_days()
-    years = sorted({d[:4] for d in days}, reverse=True)
-    # resumen anual
-    resumen = []
-    for y in years:
-        yi = int(y)
-        total = 366 if calendar.isleap(yi) else 365
-        con = sum(1 for d, p in days.items() if d[:4] == y and p > 0)
-        pubs = sum(p for d, p in days.items() if d[:4] == y)
-        resumen.append((y, con, total, con/total*100, pubs))
-    html = render(days, years, resumen)
-    (ROOT / "COVERAGE-DETAIL.html").write_text(html)
-    tot_pubs = sum(r[4] for r in resumen)
-    print(f"[detail] {len(years)} años · {sum(r[1] for r in resumen)} días con data · "
-          f"{tot_pubs:,} pubs → COVERAGE-DETAIL.html")
+    sources = {}
+    gaps = []
+    for src, (col, gran, reliable, org) in CFG.items():
+        dates = extract(src, col)
+        if not dates: continue
+        byyear = {}
+        for y, m, d in dates:
+            byyear[y] = byyear.get(y, 0) + 1
+        ys = sorted(byyear)
+        # day-level map (ISO->count) si gran==day
+        byday = {}
+        if gran == "day":
+            for y, m, d in dates:
+                if m and d:
+                    try:
+                        byday[datetime.date(y, m, d).isoformat()] = byday.get(datetime.date(y, m, d).isoformat(), 0) + 1
+                    except Exception:
+                        pass
+        sources[src] = dict(org=org, gran=gran, reliable=reliable, byyear=byyear, byday=byday,
+                            total=len(dates), ymin=ys[0], ymax=ys[-1])
+        # GAPS: años faltantes en el rango + años con pocos docs
+        full = set(range(ys[0], ys[-1] + 1))
+        missing = sorted(full - set(ys))
+        if missing:
+            gaps.append(dict(fuente=src, org=org, tipo="años_faltantes",
+                             detalle=f"{len(missing)} años sin docs en {ys[0]}-{ys[-1]}: {missing[:8]}"))
+        if not reliable:
+            gaps.append(dict(fuente=src, org=org, tipo="fecha_no_confiable",
+                             detalle=f"fecha es de scrape/upload ({col}), no del documento — cobertura temporal informativa"))
+    json.dump(gaps, open(ROOT / "COVERAGE-GAPS.json", "w"), ensure_ascii=False, indent=2)
+    (ROOT / "COVERAGE-DETAIL.html").write_text(render(sources, gaps))
+    print(f"[detail] {len(sources)} fuentes con fecha · {len(gaps)} gaps levantados")
+    for g in gaps:
+        print(f"  ⚠️ {g['org']}: {g['detalle']}")
 
 
-def year_grid(days: dict, y: str) -> str:
-    """Grid de días del año (7 filas = día de semana, columnas = semanas)."""
-    yi = int(y)
-    d0 = datetime.date(yi, 1, 1)
+def daygrid(byday, y):
+    yi = int(y); d0 = datetime.date(yi, 1, 1)
     total = 366 if calendar.isleap(yi) else 365
     cells = []
     for n in range(total):
-        d = d0 + datetime.timedelta(days=n)
-        iso = d.isoformat()
-        p = days.get(iso, None)
-        if p is None:
-            col, t = "#ebedef", "sin registro"
-        elif p > 0:
-            # intensidad por nº de pubs
-            col = "#1a7f37" if p >= 15 else ("#3fb950" if p >= 5 else "#90d8a0")
-            t = f"{p} pubs"
-        else:
-            col, t = "#d0d7de", "sin data"
-        wd = d.weekday()           # 0=lunes
-        wk = (n + d0.weekday()) // 7
-        cells.append(f'<div class="c" style="background:{col};grid-row:{wd+1};grid-column:{wk+1}" title="{iso}: {t}"></div>')
+        d = d0 + datetime.timedelta(days=n); iso = d.isoformat()
+        p = byday.get(iso, 0)
+        col = "#ebedef" if p == 0 else ("#1a7f37" if p >= 10 else "#3fb950" if p >= 3 else "#90d8a0")
+        cells.append(f'<div class="c" style="background:{col};grid-row:{d.weekday()+1};grid-column:{(n+d0.weekday())//7+1}" title="{iso}: {p}"></div>')
     return f'<div class="grid">{"".join(cells)}</div>'
 
 
-def render(days, years, resumen) -> str:
-    cards = []
-    for y in years:
-        r = next(x for x in resumen if x[0] == y)
-        pct = r[3]
-        cards.append(f"""<div class="card">
-<div class="hd"><h2>{y}</h2><div class="cov">{pct:.1f}% de cobertura · {r[1]} de {r[2]} días con data</div></div>
-<p class="hint">Pasa el cursor sobre una celda para ver el día.</p>
-{year_grid(days, y)}
+def render(sources, gaps):
+    secs = []
+    for src, s in sorted(sources.items(), key=lambda kv: -kv[1]["total"]):
+        ys = sorted(s["byyear"], reverse=True)
+        rel = "" if s["reliable"] else ' <span class="warn">⚠ fecha de scrape, no del doc</span>'
+        # resumen anual (barras)
+        mx = max(s["byyear"].values())
+        bars = "".join(
+            f'<div class="yr"><span class="yl">{y}</span>'
+            f'<div class="yb"><div class="yf" style="width:{s["byyear"][y]/mx*100:.0f}%"></div></div>'
+            f'<span class="yn">{s["byyear"][y]:,}</span></div>' for y in ys)
+        # calendario de los 3 años más recientes si day-level confiable
+        cal = ""
+        if s["gran"] == "day" and s["byday"]:
+            for y in ys[:3]:
+                con = sum(1 for d, p in s["byday"].items() if d[:4] == str(y) and p > 0)
+                tot = 366 if calendar.isleap(int(y)) else 365
+                cal += f'<div class="cy"><div class="ch"><b>{y}</b> · {con}/{tot} días ({con/tot*100:.0f}%)</div>{daygrid(s["byday"], y)}</div>'
+        secs.append(f"""<div class="card">
+<div class="hd"><h2>{s['org']}{rel}</h2><div class="cov">{s['total']:,} docs · {s['ymin']}–{s['ymax']}</div></div>
+<div class="cols"><div class="yrs">{bars}</div><div class="cals">{cal}</div></div>
 </div>""")
-    rows = "".join(f"<tr><td>{r[0]}</td><td class='n'>{r[1]}</td><td class='n'>{r[2]}</td>"
-                   f"<td class='n' style='color:{'#1a7f37' if r[3]>=99 else '#bf8700' if r[3]>=90 else '#cf222e'}'>{r[3]:.1f}%</td>"
-                   f"<td class='n'>{r[4]:,}</td></tr>" for r in resumen)
+    gaps_html = "".join(f'<tr><td><b>{g["org"]}</b></td><td>{g["tipo"]}</td><td>{g["detalle"]}</td></tr>' for g in gaps)
     return f"""<!doctype html><html lang="es"><head><meta charset="utf-8">
-<title>Cobertura temporal · Diario Oficial · claude-legal-chile</title><style>
+<title>Cobertura temporal detallada · claude-legal-chile</title><style>
 body{{font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;margin:0;background:#f6f8fa;color:#1f2328}}
-.wrap{{max-width:1100px;margin:0 auto;padding:28px}}
-h1{{font-size:22px;margin:0 0 2px}} .meta{{color:#57606a;margin-bottom:22px}}
-.card{{background:#fff;border:1px solid #d0d7de;border-radius:10px;padding:22px 26px;margin-bottom:18px}}
-.hd{{display:flex;justify-content:space-between;align-items:baseline}} .hd h2{{margin:0;font-size:20px}}
-.cov{{color:#57606a;font-size:13px}} .hint{{color:#8c959f;font-size:12px;margin:6px 0 14px}}
-.grid{{display:grid;grid-auto-flow:column;grid-template-rows:repeat(7,11px);gap:3px}}
-.c{{width:11px;height:11px;border-radius:2px}}
-table{{width:100%;border-collapse:collapse;background:#fff;border:1px solid #d0d7de;border-radius:10px;overflow:hidden;margin-top:10px}}
+.wrap{{max-width:1140px;margin:0 auto;padding:28px}} h1{{font-size:22px;margin:0 0 2px}}
+.meta{{color:#57606a;margin-bottom:20px}}
+.card{{background:#fff;border:1px solid #d0d7de;border-radius:10px;padding:20px 24px;margin-bottom:16px}}
+.hd{{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px}} .hd h2{{margin:0;font-size:18px}}
+.cov{{color:#57606a;font-size:13px}} .warn{{color:#bf8700;font-size:11px;font-weight:400}}
+.cols{{display:flex;gap:26px}} .yrs{{flex:0 0 360px}} .cals{{flex:1}}
+.yr{{display:flex;align-items:center;gap:8px;margin:2px 0;font-size:12px}}
+.yl{{width:38px;color:#57606a;text-align:right}} .yb{{flex:1;background:#eaeef2;border-radius:4px;height:13px}}
+.yf{{height:100%;background:#0969da;border-radius:4px}} .yn{{width:54px;text-align:right;font-variant-numeric:tabular-nums}}
+.cy{{margin-bottom:10px}} .ch{{font-size:12px;color:#57606a;margin-bottom:4px}}
+.grid{{display:grid;grid-auto-flow:column;grid-template-rows:repeat(7,9px);gap:2px}} .c{{width:9px;height:9px;border-radius:2px}}
+table{{width:100%;border-collapse:collapse;background:#fff;border:1px solid #d0d7de;border-radius:10px;overflow:hidden}}
 th,td{{padding:8px 12px;text-align:left;border-bottom:1px solid #eaeef2;font-size:13px}}
-th{{background:#f6f8fa;font-size:11px;text-transform:uppercase;letter-spacing:.03em;color:#57606a}}
-.n{{text-align:right;font-variant-numeric:tabular-nums}}
-.leg{{margin:14px 0;color:#57606a;font-size:12px}} .sw{{display:inline-block;width:11px;height:11px;border-radius:2px;vertical-align:middle;margin:0 3px}}
+th{{background:#f6f8fa;font-size:11px;text-transform:uppercase;color:#57606a}}
+h3{{margin:26px 0 8px;font-size:15px}}
 </style></head><body><div class="wrap">
-<h1>Cobertura temporal · Diario Oficial</h1>
-<div class="meta">claude-legal-chile · días con data por año · generado 2026-05-30</div>
-<div class="leg">Cobertura por día:
-<span class="sw" style="background:#1a7f37"></span>≥15 pubs
-<span class="sw" style="background:#3fb950"></span>5-14
-<span class="sw" style="background:#90d8a0"></span>1-4
-<span class="sw" style="background:#d0d7de"></span>sin data
-<span class="sw" style="background:#ebedef"></span>sin registro</div>
-{''.join(cards)}
-<div class="card"><h2 style="font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:#57606a;margin:0 0 8px">Resumen anual</h2>
-<table><thead><tr><th>Año</th><th class="n">Días con data</th><th class="n">Días totales</th><th class="n">% Cobertura</th><th class="n">Pubs capturadas</th></tr></thead>
-<tbody>{rows}</tbody></table></div>
+<h1>Cobertura temporal detallada</h1>
+<div class="meta">claude-legal-chile · {len(sources)} fuentes con fecha · barras = docs/año · calendario = días con data (3 años recientes) · generado 2026-05-30</div>
+{''.join(secs)}
+<h3>⚠️ Gaps levantados</h3>
+<table><thead><tr><th>Fuente</th><th>Tipo</th><th>Detalle</th></tr></thead><tbody>{gaps_html}</tbody></table>
 </div></body></html>"""
 
 
