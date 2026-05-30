@@ -147,6 +147,21 @@ def main():
                              docs=docs, enum=docs, descargado=docs, comp=100.0,
                              embebido=docs, emb_pct=100.0, estado="indexado"))
 
+    # Boletín Concursal: registros en tabla estructurada `concursal` (no archivos sueltos)
+    try:
+        import sqlite3
+        cdb = sqlite3.connect(str(DATA / "_index/new-sources.fts.sqlite3"), timeout=30)
+        nconc = cdb.execute("SELECT count(*) FROM concursal").fetchone()[0]
+        cdb.close()
+        if nconc:
+            rows.append(dict(fuente="boletin-concursal", tipo="Registro público",
+                             organismo="Boletín Concursal · Superir (Ley 20.720)",
+                             metodo="POST getRegistroDiarioPublicacionJson",
+                             docs=nconc, enum=nconc, descargado=nconc, comp=100.0,
+                             embebido=0, emb_pct=0.0, estado="indexado"))
+    except Exception:
+        pass
+
     # orden por tipo luego docs desc
     rows.sort(key=lambda r: (r["tipo"], -r["docs"]))
     total_docs = sum(r["docs"] for r in rows)

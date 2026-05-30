@@ -1,8 +1,8 @@
 {
   "generado": "2026-05-30",
-  "total_fuentes": 40,
-  "total_docs": 3850683,
-  "total_embebido": 3800803,
+  "total_fuentes": 41,
+  "total_docs": 4601074,
+  "total_embebido": 3802691,
   "fuentes": [
     {
       "fuente": "superdesalud",
@@ -26,8 +26,8 @@
       "enum": 11035,
       "descargado": 11035,
       "comp": 100.0,
-      "embebido": 10864,
-      "emb_pct": 98.5,
+      "embebido": 11008,
+      "emb_pct": 99.8,
       "estado": "completo"
     },
     {
@@ -100,12 +100,12 @@
       "tipo": "Dictámenes",
       "organismo": "Contraloría (CGR)",
       "metodo": "Domino",
-      "docs": 128153,
+      "docs": 130690,
       "enum": 113478,
-      "descargado": 82833,
-      "comp": 72.99476550520806,
-      "embebido": 120885,
-      "emb_pct": 94.3,
+      "descargado": 84476,
+      "comp": 74.44262323974691,
+      "embebido": 122629,
+      "emb_pct": 93.8,
       "estado": "parcial"
     },
     {
@@ -139,12 +139,12 @@
       "tipo": "Dictámenes",
       "organismo": "Dirección del Trabajo",
       "metodo": "Zyte (WAF)",
-      "docs": 3822,
+      "docs": 3948,
       "enum": 4974,
-      "descargado": 3822,
-      "comp": 76.83956574185767,
+      "descargado": 3948,
+      "comp": 79.37273823884198,
       "embebido": 3485,
-      "emb_pct": 91.2,
+      "emb_pct": 88.3,
       "estado": "parcial"
     },
     {
@@ -317,6 +317,19 @@
       "estado": "completo"
     },
     {
+      "fuente": "fne",
+      "tipo": "Jurisprudencia",
+      "organismo": "FNE",
+      "metodo": "WP-REST",
+      "docs": 2301,
+      "enum": 7047,
+      "descargado": 1502,
+      "comp": 21.314034340854267,
+      "embebido": 1631,
+      "emb_pct": 70.9,
+      "estado": "bloqueado"
+    },
+    {
       "fuente": "cortes-marciales",
       "tipo": "Jurisprudencia",
       "organismo": "Cortes Marciales",
@@ -328,19 +341,6 @@
       "embebido": 2291,
       "emb_pct": 100.0,
       "estado": "completo"
-    },
-    {
-      "fuente": "fne",
-      "tipo": "Jurisprudencia",
-      "organismo": "FNE",
-      "metodo": "WP-REST",
-      "docs": 2125,
-      "enum": 7047,
-      "descargado": 1326,
-      "comp": 18.81651766709238,
-      "embebido": 1631,
-      "emb_pct": 76.8,
-      "estado": "bloqueado"
     },
     {
       "fuente": "tribunales-ambientales",
@@ -523,6 +523,19 @@
       "embebido": 142,
       "emb_pct": 100.0,
       "estado": "completo"
+    },
+    {
+      "fuente": "boletin-concursal",
+      "tipo": "Registro público",
+      "organismo": "Boletín Concursal · Superir (Ley 20.720)",
+      "metodo": "POST getRegistroDiarioPublicacionJson",
+      "docs": 747552,
+      "enum": 747552,
+      "descargado": 747552,
+      "comp": 100.0,
+      "embebido": 0,
+      "emb_pct": 0.0,
+      "estado": "indexado"
     }
   ]
 }
