@@ -72,21 +72,28 @@ def main() -> int:
     args = ap.parse_args()
 
     c = init_db()
-    done = {r[0] for r in c.execute("SELECT path FROM embeddings").fetchall()}
-    # saltar lo ya embebido en el master (corpus.fts local) — evita duplicar
+    # normaliza un path a su forma relativa-a-data ('cplt/2023/x.txt') para
+    # comparar entre convenciones (absoluta vs source-relativa) del master.
+    def datarel(p: str) -> str:
+        i = p.find("/data/")
+        return p[i + 6:] if i >= 0 else p.lstrip("/")
+
+    done = {datarel(r[0]) for r in c.execute("SELECT path FROM embeddings").fetchall()}
+    # saltar lo ya embebido en el master (corpus.fts local) — evita duplicar.
+    # El master mezcla paths absolutos y source-relativos → comparar por datarel.
     master = _REPO_ROOT / "chile/data/_index/corpus.fts.sqlite3"
     if master.exists():
         try:
             mc = sqlite3.connect(f"file:{master}?mode=ro", uri=True, timeout=60)
-            pref = str((_REPO_ROOT / "chile" / args.src)) + "%"
-            done |= {r[0] for r in mc.execute(
-                "SELECT path FROM embeddings WHERE path LIKE ?", (pref,)).fetchall()}
+            srcname = args.src.rstrip("/").split("/")[-1]
+            done |= {datarel(r[0]) for r in mc.execute(
+                "SELECT path FROM embeddings WHERE path LIKE ?", (f"%{srcname}%",)).fetchall()}
             mc.close()
         except Exception as e:
             print(f"  (aviso: no pude leer master embeddings: {e})", flush=True)
     files = [p for p in sorted((_REPO_ROOT / "chile" / args.src
                                 if not Path(args.src).is_absolute() else Path(args.src)).rglob(args.glob))]
-    pending = [p for p in files if str(p) not in done]
+    pending = [p for p in files if datarel(str(p)) not in done]
     print(f"[{args.source}] {len(files)} archivos, {len(pending)} pendientes de embed", flush=True)
 
     # FTS docs (rápido, local) — solo los que faltan en docs_meta
