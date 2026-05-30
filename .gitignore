@@ -10,6 +10,11 @@ __pycache__/
 chile/normativa/index/*.sqlite3
 chile/normativa/index/*.sqlite3-journal
 
+# Secrets — NUNCA commitear
+.env
+*.env
+.env.*
+
 # Python venvs (per-user, no commitear)
 .venv/
 venv/
