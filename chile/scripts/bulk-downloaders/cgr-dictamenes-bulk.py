@@ -40,6 +40,8 @@ _REPO_ROOT = Path(__file__).resolve().parents[3]
 OUTPUT_ROOT = _REPO_ROOT / "chile/data/cgr-dictamenes"
 NSF = ("https://www.contraloria.cl/appinf/LegisJuri/"
        "DictamenesGeneralesMunicipales.nsf")
+# Full-text por número (E<num>N<yy>): /html (texto) y /pdf (oficial). NO bloqueado.
+PDFBUSCADOR = "https://www.contraloria.cl/pdfbuscador/dictamenes"
 UA = "claude-legal-chile/0.8 cgr-dictamenes (research corpus)"
 _LOCK = Lock()
 _STATS = {"ok": 0, "skip": 0, "err": 0, "empty": 0}
@@ -51,10 +53,14 @@ _TAG_RE = re.compile(r"<[^>]+>")
 _WS_RE = re.compile(r"[ \t]+")
 
 
-def http_get(url: str, timeout: int = 60) -> str:
+def http_get_bytes(url: str, timeout: int = 60) -> bytes:
     req = urllib.request.Request(url, headers={"User-Agent": UA})
     with urllib.request.urlopen(req, timeout=timeout) as r:
-        return r.read().decode("utf-8", "replace")
+        return r.read()
+
+
+def http_get(url: str, timeout: int = 60) -> str:
+    return http_get_bytes(url, timeout).decode("utf-8", "replace")
 
 
 def init_manifest(db_path: Path) -> sqlite3.Connection:
@@ -134,19 +140,28 @@ def download_one(unid: str) -> tuple[str, str, int]:
     except Exception:
         return (unid, "err", 0)
     text, meta = parse_detalle(det)
-    # cuerpo completo: intentar abrir el documento directo (rich text)
-    try:
-        doc = http_get(f"{NSF}/0/{unid}?OpenDocument")
-        dt, _ = parse_detalle(doc)
-        if len(dt) > len(text):
-            text = dt
-    except Exception:
-        pass
+    numero = meta.get("numero", "")
+    # cuerpo COMPLETO vía pdfbuscador por número (texto + PDF oficial)
+    if numero:
+        try:
+            full, _ = parse_detalle(http_get(f"{PDFBUSCADOR}/{numero}/html"))
+            if len(full) > len(text):
+                text = full
+        except Exception:
+            pass
+        try:
+            pdf = http_get_bytes(f"{PDFBUSCADOR}/{numero}/pdf")
+            if pdf[:4] == b"%PDF":
+                pdir = OUTPUT_ROOT / "pdfs"
+                pdir.mkdir(parents=True, exist_ok=True)
+                (pdir / f"{numero}.pdf").write_bytes(pdf)
+        except Exception:
+            pass
     if len(text) < 200:
         return (unid, "empty", len(text))
     out_dir.mkdir(parents=True, exist_ok=True)
-    header = f"# Dictamen CGR {meta.get('numero','')} ({meta.get('fecha','')})\n"
-    header += f"<!-- UNID {unid} · fuente {NSF} -->\n\n"
+    header = f"# Dictamen CGR {numero} ({meta.get('fecha','')})\n"
+    header += f"<!-- UNID {unid} · num {numero} · fuente CGR -->\n\n"
     tmp = out_path.with_suffix(".tmp")
     tmp.write_text(header + text, encoding="utf-8")
     tmp.rename(out_path)
