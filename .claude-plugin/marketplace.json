@@ -109,6 +109,15 @@
       "author": {
         "name": "Thomson Reuters"
       }
+    },
+    {
+      "name": "claude-legal-chile",
+      "source": "./chile",
+      "description": "Asistente de análisis legal para práctica chilena: razona sobre el ordenamiento jurídico de Chile con un corpus real (normativa, jurisprudencia y dictámenes) y retrieval verificable (cita solo lo recuperado o se detiene). Perfiles por rama + skills de corpus.",
+      "author": {
+        "name": "Unholster",
+        "url": "https://github.com/diazaraujo/claude-for-legal-chile"
+      }
     }
   ]
 }
