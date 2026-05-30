@@ -10,7 +10,7 @@ después. Idempotente.
 Ej: python embed-new-source.py --src data/cgr-dictamenes/dictamenes --glob '*.txt' --source cgr-dictamenes
 """
 from __future__ import annotations
-import argparse, json, re, sqlite3, struct, sys, time
+import argparse, json, re, sqlite3, struct, subprocess, sys, time
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
@@ -27,6 +27,13 @@ _LOCK = Lock()
 
 
 def to_text(p: Path) -> str:
+    if p.suffix.lower() == ".pdf":
+        try:
+            r = subprocess.run(["pdftotext", "-layout", str(p), "-"],
+                               capture_output=True, timeout=120)
+            return _WS.sub(" ", r.stdout.decode("utf-8", "replace")).strip()
+        except Exception:
+            return ""
     raw = p.read_text(encoding="utf-8", errors="replace")
     if p.suffix.lower() in (".html", ".htm"):
         raw = re.sub(r"<(script|style)[^>]*>.*?</\1>", " ", raw, flags=re.S | re.I)
