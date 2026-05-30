@@ -1,0 +1,191 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<title>Cobertura y Calidad · claude-legal-chile</title>
+<style>
+body{font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;margin:0;background:#f6f8fa;color:#1f2328}
+.wrap{max-width:1180px;margin:0 auto;padding:28px}
+h1{font-size:22px;margin:0 0 4px} .meta{color:#57606a;margin-bottom:20px}
+.kpis{display:flex;gap:16px;margin-bottom:22px;flex-wrap:wrap}
+.kpi{background:#fff;border:1px solid #d0d7de;border-radius:10px;padding:14px 18px;flex:1;min-width:150px}
+.kpi .n{font-size:26px;font-weight:700} .kpi .l{color:#57606a;font-size:12px}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid #d0d7de;border-radius:10px;overflow:hidden}
+th,td{padding:9px 11px;text-align:left;border-bottom:1px solid #eaeef2;font-size:13px;vertical-align:middle}
+th{background:#f6f8fa;font-size:11px;text-transform:uppercase;letter-spacing:.03em;color:#57606a}
+.num{text-align:right;font-variant-numeric:tabular-nums} .sub{color:#8c959f;font-size:11px}
+.met{font-size:11px;color:#57606a}
+.badge{color:#fff;padding:2px 8px;border-radius:20px;font-size:11px;font-weight:600}
+.bar{position:relative;background:#eaeef2;border-radius:6px;height:16px;min-width:90px}
+.bar .fill{height:100%;border-radius:6px} .bar span{position:absolute;right:5px;top:0;font-size:10px;line-height:16px;color:#1f2328}
+.leg{margin-top:16px;color:#57606a;font-size:12px}
+</style></head><body><div class="wrap">
+<h1>🇨🇱 Mapa de Cobertura y Calidad de Datos</h1>
+<div class="meta">claude-legal-chile · corpus legal · generado 2026-05-30</div>
+<div class="kpis">
+<div class="kpi"><div class="n">26</div><div class="l">fuentes</div></div>
+<div class="kpi"><div class="n">420,248</div><div class="l">documentos</div></div>
+<div class="kpi"><div class="n">420,126</div><div class="l">embebidos (searchable)</div></div>
+</div>
+<table><thead><tr>
+<th>Fuente</th><th>Tipo</th><th>Docs</th><th>Enum.</th><th>Descarg.</th><th>Completitud</th>
+<th>Embeb.</th><th>% Embeb.</th><th>Estado</th><th>Método</th>
+</tr></thead><tbody>
+<tr>
+<td><b>Consejo Transparencia</b><br><span class="sub">cplt</span></td>
+<td>Dictámenes</td><td class="num">117,692</td>
+<td class="num">117,352</td><td class="num">103,864</td><td><div class="bar"><div class="fill" style="width:89%;background:#bf8700"></div><span>89%</span></div></td>
+<td class="num">117,692</td><td><div class="bar"><div class="fill" style="width:100%;background:#0969da"></div><span>100%</span></div></td>
+<td><span class="badge" style="background:#bf8700">parcial</span></td>
+<td class="met">bulk</td></tr><tr>
+<td><b>Contraloría (CGR)</b><br><span class="sub">cgr-dictamenes</span></td>
+<td>Dictámenes</td><td class="num">111,421</td>
+<td class="num">113,478</td><td class="num">72,039</td><td><div class="bar"><div class="fill" style="width:63%;background:#bf8700"></div><span>63%</span></div></td>
+<td class="num">111,325</td><td><div class="bar"><div class="fill" style="width:100%;background:#0969da"></div><span>100%</span></div></td>
+<td><span class="badge" style="background:#bf8700">parcial</span></td>
+<td class="met">Domino</td></tr><tr>
+<td><b>SUSESO</b><br><span class="sub">suseso</span></td>
+<td>Dictámenes</td><td class="num">16,021</td>
+<td class="num">16,021</td><td class="num">—</td><td><div class="bar"><div class="fill" style="width:100%;background:#0969da"></div><span>100%</span></div></td>
+<td class="num">16,021</td><td><div class="bar"><div class="fill" style="width:100%;background:#0969da"></div><span>100%</span></div></td>
+<td><span class="badge" style="background:#0969da">indexado</span></td>
+<td class="met">bulk</td></tr><tr>
+<td><b>Dirección del Trabajo</b><br><span class="sub">dt</span></td>
+<td>Dictámenes</td><td class="num">3,062</td>
+<td class="num">4,974</td><td class="num">3,062</td><td><div class="bar"><div class="fill" style="width:62%;background:#bf8700"></div><span>62%</span></div></td>
+<td class="num">3,060</td><td><div class="bar"><div class="fill" style="width:100%;background:#0969da"></div><span>100%</span></div></td>
+<td><span class="badge" style="background:#bf8700">parcial</span></td>
+<td class="met">Zyte (WAF)</td></tr><tr>
+<td><b>Universidades</b><br><span class="sub">doctrina</span></td>
+<td>Doctrina</td><td class="num">14,824</td>
+<td class="num">—</td><td class="num">—</td><td><div class="bar"><div class="fill" style="width:100%;background:#0969da"></div><span>100%</span></div></td>
+<td class="num">14,824</td><td><div class="bar"><div class="fill" style="width:100%;background:#0969da"></div><span>100%</span></div></td>
+<td><span class="badge" style="background:#0969da">indexado</span></td>
+<td class="met">OAI-PMH</td></tr><tr>
+<td><b>CDE</b><br><span class="sub">cde</span></td>
+<td>Institucional</td><td class="num">6</td>
+<td class="num">6</td><td class="num">6</td><td><div class="bar"><div class="fill" style="width:100%;background:#1a7f37"></div><span>100%</span></div></td>
+<td class="num">6</td><td><div class="bar"><div class="fill" style="width:100%;background:#0969da"></div><span>100%</span></div></td>
+<td><span class="badge" style="background:#1a7f37">completo</span></td>
+<td class="met">sitemap</td></tr><tr>
+<td><b>SII (legacy)</b><br><span class="sub">sii</span></td>
+<td>Jurisprud. adm.</td><td class="num">1,192</td>
+<td class="num">596</td><td class="num">596</td><td><div class="bar"><div class="fill" style="width:100%;background:#1a7f37"></div><span>100%</span></div></td>
+<td class="num">1,192</td><td><div class="bar"><div class="fill" style="width:100%;background:#0969da"></div><span>100%</span></div></td>
+<td><span class="badge" style="background:#1a7f37">completo</span></td>
+<td class="met">bulk</td></tr><tr>
+<td><b>SERNAC</b><br><span class="sub">sernac</span></td>
+<td>Jurisprud. adm.</td><td class="num">254</td>
+<td class="num">128</td><td class="num">127</td><td><div class="bar"><div class="fill" style="width:99%;background:#1a7f37"></div><span>99%</span></div></td>
+<td class="num">254</td><td><div class="bar"><div class="fill" style="width:100%;background:#0969da"></div><span>100%</span></div></td>
+<td><span class="badge" style="background:#1a7f37">completo</span></td>
+<td class="met">bulk</td></tr><tr>
+<td><b>SII oficios</b><br><span class="sub">sii-oficios</span></td>
+<td>Jurisprud. adm.</td><td class="num">4</td>
+<td class="num">1,678</td><td class="num">0</td><td><div class="bar"><div class="fill" style="width:0%;background:#cf222e"></div><span>0%</span></div></td>
+<td class="num">4</td><td><div class="bar"><div class="fill" style="width:100%;background:#0969da"></div><span>100%</span></div></td>
+<td><span class="badge" style="background:#cf222e">bloqueado</span></td>
+<td class="met">Zyte+GET</td></tr><tr>
+<td><b>Tribunal Constitucional</b><br><span class="sub">tc</span></td>
+<td>Jurisprudencia</td><td class="num">16,152</td>
+<td class="num">8,081</td><td class="num">8,081</td><td><div class="bar"><div class="fill" style="width:100%;background:#1a7f37"></div><span>100%</span></div></td>
+<td class="num">16,152</td><td><div class="bar"><div class="fill" style="width:100%;background:#0969da"></div><span>100%</span></div></td>
+<td><span class="badge" style="background:#1a7f37">completo</span></td>
+<td class="met">bulk</td></tr><tr>
+<td><b>Cortes Marciales</b><br><span class="sub">cortes-marciales</span></td>
+<td>Jurisprudencia</td><td class="num">2,291</td>
+<td class="num">2,226</td><td class="num">2,226</td><td><div class="bar"><div class="fill" style="width:100%;background:#1a7f37"></div><span>100%</span></div></td>
+<td class="num">2,291</td><td><div class="bar"><div class="fill" style="width:100%;background:#0969da"></div><span>100%</span></div></td>
+<td><span class="badge" style="background:#1a7f37">completo</span></td>
+<td class="met">scrape+OCR</td></tr><tr>
+<td><b>Trib. Ambientales</b><br><span class="sub">tribunales-ambientales</span></td>
+<td>Jurisprudencia</td><td class="num">2,074</td>
+<td class="num">1,038</td><td class="num">1,037</td><td><div class="bar"><div class="fill" style="width:100%;background:#1a7f37"></div><span>100%</span></div></td>
+<td class="num">2,074</td><td><div class="bar"><div class="fill" style="width:100%;background:#0969da"></div><span>100%</span></div></td>
+<td><span class="badge" style="background:#1a7f37">completo</span></td>
+<td class="met">bulk</td></tr><tr>
+<td><b>FNE</b><br><span class="sub">fne</span></td>
+<td>Jurisprudencia</td><td class="num">1,157</td>
+<td class="num">7,047</td><td class="num">358</td><td><div class="bar"><div class="fill" style="width:5%;background:#cf222e"></div><span>5%</span></div></td>
+<td class="num">1,157</td><td><div class="bar"><div class="fill" style="width:100%;background:#0969da"></div><span>100%</span></div></td>
+<td><span class="badge" style="background:#cf222e">bloqueado</span></td>
+<td class="met">WP-REST</td></tr><tr>
+<td><b>Trib. Contratación Púb.</b><br><span class="sub">tcp</span></td>
+<td>Jurisprudencia</td><td class="num">665</td>
+<td class="num">678</td><td class="num">673</td><td><div class="bar"><div class="fill" style="width:99%;background:#1a7f37"></div><span>99%</span></div></td>
+<td class="num">665</td><td><div class="bar"><div class="fill" style="width:100%;background:#0969da"></div><span>100%</span></div></td>
+<td><span class="badge" style="background:#1a7f37">completo</span></td>
+<td class="met">WP-REST</td></tr><tr>
+<td><b>TDLC</b><br><span class="sub">tdlc</span></td>
+<td>Jurisprudencia</td><td class="num">664</td>
+<td class="num">213</td><td class="num">84</td><td><div class="bar"><div class="fill" style="width:39%;background:#cf222e"></div><span>39%</span></div></td>
+<td class="num">664</td><td><div class="bar"><div class="fill" style="width:100%;background:#0969da"></div><span>100%</span></div></td>
+<td><span class="badge" style="background:#cf222e">bloqueado</span></td>
+<td class="met">bulk</td></tr><tr>
+<td><b>TRICEL</b><br><span class="sub">tricel</span></td>
+<td>Jurisprudencia</td><td class="num">637</td>
+<td class="num">662</td><td class="num">637</td><td><div class="bar"><div class="fill" style="width:96%;background:#1a7f37"></div><span>96%</span></div></td>
+<td class="num">637</td><td><div class="bar"><div class="fill" style="width:100%;background:#0969da"></div><span>100%</span></div></td>
+<td><span class="badge" style="background:#1a7f37">completo</span></td>
+<td class="met">WP-REST</td></tr><tr>
+<td><b>TDPI</b><br><span class="sub">tdpi</span></td>
+<td>Jurisprudencia</td><td class="num">334</td>
+<td class="num">167</td><td class="num">167</td><td><div class="bar"><div class="fill" style="width:100%;background:#1a7f37"></div><span>100%</span></div></td>
+<td class="num">334</td><td><div class="bar"><div class="fill" style="width:100%;background:#0969da"></div><span>100%</span></div></td>
+<td><span class="badge" style="background:#1a7f37">completo</span></td>
+<td class="met">bulk</td></tr><tr>
+<td><b>TC (moderno)</b><br><span class="sub">tc-moderno</span></td>
+<td>Jurisprudencia</td><td class="num">98</td>
+<td class="num">50</td><td class="num">49</td><td><div class="bar"><div class="fill" style="width:98%;background:#1a7f37"></div><span>98%</span></div></td>
+<td class="num">98</td><td><div class="bar"><div class="fill" style="width:100%;background:#0969da"></div><span>100%</span></div></td>
+<td><span class="badge" style="background:#1a7f37">completo</span></td>
+<td class="met">JSF</td></tr><tr>
+<td><b>Diario Oficial</b><br><span class="sub">diario-oficial</span></td>
+<td>Normativa</td><td class="num">75,352</td>
+<td class="num">2,548</td><td class="num">0</td><td><div class="bar"><div class="fill" style="width:0%;background:#cf222e"></div><span>0%</span></div></td>
+<td class="num">75,352</td><td><div class="bar"><div class="fill" style="width:100%;background:#0969da"></div><span>100%</span></div></td>
+<td><span class="badge" style="background:#cf222e">bloqueado</span></td>
+<td class="met">bulk</td></tr><tr>
+<td><b>BCN / LeyChile</b><br><span class="sub">leychile</span></td>
+<td>Normativa</td><td class="num">46,686</td>
+<td class="num">47,442</td><td class="num">46,678</td><td><div class="bar"><div class="fill" style="width:98%;background:#1a7f37"></div><span>98%</span></div></td>
+<td class="num">46,686</td><td><div class="bar"><div class="fill" style="width:100%;background:#0969da"></div><span>100%</span></div></td>
+<td><span class="badge" style="background:#1a7f37">completo</span></td>
+<td class="met">SPARQL+bulk</td></tr><tr>
+<td><b>CMF</b><br><span class="sub">cmf</span></td>
+<td>Normativa fin.</td><td class="num">3,841</td>
+<td class="num">1,930</td><td class="num">1,927</td><td><div class="bar"><div class="fill" style="width:100%;background:#1a7f37"></div><span>100%</span></div></td>
+<td class="num">3,841</td><td><div class="bar"><div class="fill" style="width:100%;background:#0969da"></div><span>100%</span></div></td>
+<td><span class="badge" style="background:#1a7f37">completo</span></td>
+<td class="met">bulk</td></tr><tr>
+<td><b>SEC</b><br><span class="sub">sec</span></td>
+<td>Normativa sect.</td><td class="num">3,825</td>
+<td class="num">2,256</td><td class="num">1,913</td><td><div class="bar"><div class="fill" style="width:85%;background:#bf8700"></div><span>85%</span></div></td>
+<td class="num">3,825</td><td><div class="bar"><div class="fill" style="width:100%;background:#0969da"></div><span>100%</span></div></td>
+<td><span class="badge" style="background:#bf8700">parcial</span></td>
+<td class="met">bulk</td></tr><tr>
+<td><b>DGA (aguas)</b><br><span class="sub">dga</span></td>
+<td>Normativa sect.</td><td class="num">1,501</td>
+<td class="num">1,877</td><td class="num">1,504</td><td><div class="bar"><div class="fill" style="width:80%;background:#bf8700"></div><span>80%</span></div></td>
+<td class="num">1,501</td><td><div class="bar"><div class="fill" style="width:100%;background:#0969da"></div><span>100%</span></div></td>
+<td><span class="badge" style="background:#bf8700">parcial</span></td>
+<td class="met">WordPress</td></tr><tr>
+<td><b>SUBTRANS</b><br><span class="sub">subtrans</span></td>
+<td>Normativa sect.</td><td class="num">305</td>
+<td class="num">398</td><td class="num">305</td><td><div class="bar"><div class="fill" style="width:77%;background:#bf8700"></div><span>77%</span></div></td>
+<td class="num">305</td><td><div class="bar"><div class="fill" style="width:100%;background:#0969da"></div><span>100%</span></div></td>
+<td><span class="badge" style="background:#bf8700">parcial</span></td>
+<td class="met">WordPress</td></tr><tr>
+<td><b>SUBTEL</b><br><span class="sub">subtel</span></td>
+<td>Normativa sect.</td><td class="num">142</td>
+<td class="num">73</td><td class="num">71</td><td><div class="bar"><div class="fill" style="width:97%;background:#1a7f37"></div><span>97%</span></div></td>
+<td class="num">142</td><td><div class="bar"><div class="fill" style="width:100%;background:#0969da"></div><span>100%</span></div></td>
+<td><span class="badge" style="background:#1a7f37">completo</span></td>
+<td class="met">bulk</td></tr><tr>
+<td><b>SAG</b><br><span class="sub">sag-normativa</span></td>
+<td>Normativa sect.</td><td class="num">48</td>
+<td class="num">24</td><td class="num">24</td><td><div class="bar"><div class="fill" style="width:100%;background:#1a7f37"></div><span>100%</span></div></td>
+<td class="num">24</td><td><div class="bar"><div class="fill" style="width:50%;background:#0969da"></div><span>50%</span></div></td>
+<td><span class="badge" style="background:#1a7f37">completo</span></td>
+<td class="met">Zyte (parcial)</td></tr>
+</tbody></table>
+<div class="leg">Completitud = descargado/enumerado · Estado: <b>completo</b> ≥95% · <b>parcial</b> ≥50% ·
+<b>bloqueado</b> &lt;50% · <b>indexado</b> sin manifest. % Embeb. = docs con vector bge-m3 (searchable).</div>
+</div></body></html>
