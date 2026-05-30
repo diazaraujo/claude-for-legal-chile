@@ -117,25 +117,33 @@ def main():
                          docs=docs, enum=enum, descargado=dl, comp=comp,
                          embebido=n_emb, emb_pct=round(emb_pct,1), estado=estado))
 
-    # PJUD: sentencias en batches .json.gz (no las pesca el glob de arriba)
+    # PJUD: sentencias en batches .json.gz, SEPARADAS por competencia/tribunal
     pjud = DATA / "pjud"
     if pjud.exists():
         import gzip
-        batches = list(pjud.rglob("*.json.gz"))
-        if batches:
-            # promedio de registros por batch sobre muestra
+        def avg_per_batch(batches):
             per = []
-            for b in batches[:8]:
+            for b in batches[:6]:
                 try:
                     j = json.loads(gzip.open(b).read())
                     per.append(len(j) if isinstance(j, list)
                                else len(j.get("docs", j.get("response", {}).get("docs", [])) or [1]))
                 except Exception:
                     pass
-            avg = (sum(per)/len(per)) if per else 100
-            docs = int(avg * len(batches))
-            rows.append(dict(fuente="pjud", tipo="Jurisprudencia",
-                             organismo="Poder Judicial (juris.pjud.cl)", metodo="Solr",
+            return (sum(per)/len(per)) if per else 100
+        LABEL = {"Corte_Suprema": "Corte Suprema", "Corte_de_Apelaciones": "Cortes de Apelaciones",
+                 "Civiles": "Juzgados Civiles", "Penales": "Justicia Penal",
+                 "Laborales": "Juzgados Laborales", "Familia": "Tribunales de Familia",
+                 "Cobranza": "Cobranza Laboral y Previsional"}
+        for sub in sorted(pjud.iterdir()):
+            if not sub.is_dir():
+                continue
+            batches = list(sub.rglob("*.json.gz"))
+            if not batches:
+                continue
+            docs = int(avg_per_batch(batches) * len(batches))
+            rows.append(dict(fuente=f"pjud/{sub.name}", tipo="Jurisprudencia",
+                             organismo=f"PJUD · {LABEL.get(sub.name, sub.name)}", metodo="Solr juris.pjud.cl",
                              docs=docs, enum=docs, descargado=docs, comp=100.0,
                              embebido=docs, emb_pct=100.0, estado="indexado"))
 
