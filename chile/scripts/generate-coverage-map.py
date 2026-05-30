@@ -77,7 +77,10 @@ def manifest_counts(d: Path):
         if mx <= 1:
             # flag 0/1 → fila por documento
             dl = c.execute(f"SELECT count(*) FROM {t} WHERE downloaded=1").fetchone()[0]
-            enum = nrows
+            # excluir links muertos (404 confirmados) del universo recuperable
+            dead = (c.execute(f"SELECT count(*) FROM {t} WHERE COALESCE(dead,0)=1").fetchone()[0]
+                    if "dead" in cols else 0)
+            enum = nrows - dead
         else:
             # conteo por fila (p.ej. Diario Oficial: pubs por edición)
             dl = c.execute(f"SELECT sum(downloaded) FROM {t}").fetchone()[0]

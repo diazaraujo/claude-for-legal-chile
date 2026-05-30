@@ -1,8 +1,8 @@
 {
   "generado": "2026-05-30",
   "total_fuentes": 41,
-  "total_docs": 4591786,
-  "total_embebido": 3827132,
+  "total_docs": 4591798,
+  "total_embebido": 3827276,
   "fuentes": [
     {
       "fuente": "superdesalud",
@@ -10,9 +10,9 @@
       "organismo": "superdesalud",
       "metodo": "?",
       "docs": 19066,
-      "enum": 9633,
+      "enum": 9632,
       "descargado": 9632,
-      "comp": 99.9896190179591,
+      "comp": 100.0,
       "embebido": 19066,
       "emb_pct": 100.0,
       "estado": "completo"
@@ -36,9 +36,9 @@
       "organismo": "siss",
       "metodo": "?",
       "docs": 9652,
-      "enum": 8785,
+      "enum": 8675,
       "descargado": 8675,
-      "comp": 98.7478656801366,
+      "comp": 100.0,
       "embebido": 9647,
       "emb_pct": 99.9,
       "estado": "completo"
@@ -62,9 +62,9 @@
       "organismo": "uaf",
       "metodo": "?",
       "docs": 3434,
-      "enum": 3497,
+      "enum": 3433,
       "descargado": 3433,
-      "comp": 98.16985987989706,
+      "comp": 100.0,
       "embebido": 3434,
       "emb_pct": 100.0,
       "estado": "completo"
@@ -88,12 +88,12 @@
       "organismo": "scj",
       "metodo": "?",
       "docs": 234,
-      "enum": 765,
+      "enum": 284,
       "descargado": 280,
-      "comp": 36.60130718954248,
+      "comp": 98.59154929577466,
       "embebido": 187,
       "emb_pct": 79.9,
-      "estado": "bloqueado"
+      "estado": "completo"
     },
     {
       "fuente": "cgr-dictamenes",
@@ -104,8 +104,8 @@
       "enum": 113478,
       "descargado": 113475,
       "comp": 99.99735631576165,
-      "embebido": 159381,
-      "emb_pct": 90.7,
+      "embebido": 159525,
+      "emb_pct": 90.8,
       "estado": "completo"
     },
     {
@@ -139,12 +139,12 @@
       "tipo": "Dictámenes",
       "organismo": "Dirección del Trabajo",
       "metodo": "Zyte (WAF)",
-      "docs": 4675,
+      "docs": 4684,
       "enum": 5003,
-      "descargado": 4675,
-      "comp": 93.44393363981611,
+      "descargado": 4684,
+      "comp": 93.62382570457726,
       "embebido": 4625,
-      "emb_pct": 98.9,
+      "emb_pct": 98.7,
       "estado": "parcial"
     },
     {
@@ -321,10 +321,10 @@
       "tipo": "Jurisprudencia",
       "organismo": "FNE",
       "metodo": "WP-REST",
-      "docs": 4756,
+      "docs": 4759,
       "enum": 7047,
-      "descargado": 4246,
-      "comp": 60.25258975450546,
+      "descargado": 4249,
+      "comp": 60.29516106144459,
       "embebido": 4200,
       "emb_pct": 88.3,
       "estado": "parcial"
@@ -478,9 +478,9 @@
       "organismo": "DGA (aguas)",
       "metodo": "WordPress",
       "docs": 1655,
-      "enum": 1877,
+      "enum": 1857,
       "descargado": 1857,
-      "comp": 98.93446989877464,
+      "comp": 100.0,
       "embebido": 1594,
       "emb_pct": 96.3,
       "estado": "completo"
