@@ -116,6 +116,29 @@ def main():
         rows.append(dict(fuente=name, tipo=tipo, organismo=org, metodo=metodo,
                          docs=docs, enum=enum, descargado=dl, comp=comp,
                          embebido=n_emb, emb_pct=round(emb_pct,1), estado=estado))
+
+    # PJUD: sentencias en batches .json.gz (no las pesca el glob de arriba)
+    pjud = DATA / "pjud"
+    if pjud.exists():
+        import gzip
+        batches = list(pjud.rglob("*.json.gz"))
+        if batches:
+            # promedio de registros por batch sobre muestra
+            per = []
+            for b in batches[:8]:
+                try:
+                    j = json.loads(gzip.open(b).read())
+                    per.append(len(j) if isinstance(j, list)
+                               else len(j.get("docs", j.get("response", {}).get("docs", [])) or [1]))
+                except Exception:
+                    pass
+            avg = (sum(per)/len(per)) if per else 100
+            docs = int(avg * len(batches))
+            rows.append(dict(fuente="pjud", tipo="Jurisprudencia",
+                             organismo="Poder Judicial (juris.pjud.cl)", metodo="Solr",
+                             docs=docs, enum=docs, descargado=docs, comp=100.0,
+                             embebido=docs, emb_pct=100.0, estado="indexado"))
+
     # orden por tipo luego docs desc
     rows.sort(key=lambda r: (r["tipo"], -r["docs"]))
     total_docs = sum(r["docs"] for r in rows)

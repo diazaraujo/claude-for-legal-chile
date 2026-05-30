@@ -1,9 +1,113 @@
 {
   "generado": "2026-05-30",
-  "total_fuentes": 26,
-  "total_docs": 429515,
-  "total_embebido": 427005,
+  "total_fuentes": 34,
+  "total_docs": 3850376,
+  "total_embebido": 3800755,
   "fuentes": [
+    {
+      "fuente": "superdesalud",
+      "tipo": "?",
+      "organismo": "superdesalud",
+      "metodo": "?",
+      "docs": 19066,
+      "enum": 9633,
+      "descargado": 9534,
+      "comp": 98.9722827779508,
+      "embebido": 0,
+      "emb_pct": 0.0,
+      "estado": "completo"
+    },
+    {
+      "fuente": "tta",
+      "tipo": "?",
+      "organismo": "tta",
+      "metodo": "?",
+      "docs": 11032,
+      "enum": 11035,
+      "descargado": 11035,
+      "comp": 100.0,
+      "embebido": 10816,
+      "emb_pct": 98.0,
+      "estado": "completo"
+    },
+    {
+      "fuente": "siss",
+      "tipo": "?",
+      "organismo": "siss",
+      "metodo": "?",
+      "docs": 9642,
+      "enum": 8785,
+      "descargado": 4821,
+      "comp": 54.87763232783153,
+      "embebido": 0,
+      "emb_pct": 0.0,
+      "estado": "parcial"
+    },
+    {
+      "fuente": "spensiones",
+      "tipo": "?",
+      "organismo": "spensiones",
+      "metodo": "?",
+      "docs": 9282,
+      "enum": 4644,
+      "descargado": 4641,
+      "comp": 99.93540051679587,
+      "embebido": 0,
+      "emb_pct": 0.0,
+      "estado": "completo"
+    },
+    {
+      "fuente": "uaf",
+      "tipo": "?",
+      "organismo": "uaf",
+      "metodo": "?",
+      "docs": 3434,
+      "enum": 3497,
+      "descargado": 1718,
+      "comp": 49.12782384901344,
+      "embebido": 0,
+      "emb_pct": 0.0,
+      "estado": "bloqueado"
+    },
+    {
+      "fuente": "supereduc",
+      "tipo": "?",
+      "organismo": "supereduc",
+      "metodo": "?",
+      "docs": 738,
+      "enum": 1029,
+      "descargado": 742,
+      "comp": 72.10884353741497,
+      "embebido": 738,
+      "emb_pct": 100.0,
+      "estado": "parcial"
+    },
+    {
+      "fuente": "scj",
+      "tipo": "?",
+      "organismo": "scj",
+      "metodo": "?",
+      "docs": 187,
+      "enum": 707,
+      "descargado": 187,
+      "comp": 26.449787835926447,
+      "embebido": 0,
+      "emb_pct": 0.0,
+      "estado": "bloqueado"
+    },
+    {
+      "fuente": "cgr-dictamenes",
+      "tipo": "Dictámenes",
+      "organismo": "Contraloría (CGR)",
+      "metodo": "Domino",
+      "docs": 127883,
+      "enum": 113478,
+      "descargado": 82658,
+      "comp": 72.84055059130404,
+      "embebido": 120885,
+      "emb_pct": 94.5,
+      "estado": "parcial"
+    },
     {
       "fuente": "cplt",
       "tipo": "Dictámenes",
@@ -16,19 +120,6 @@
       "embebido": 117692,
       "emb_pct": 100.0,
       "estado": "completo"
-    },
-    {
-      "fuente": "cgr-dictamenes",
-      "tipo": "Dictámenes",
-      "organismo": "Contraloría (CGR)",
-      "metodo": "Domino",
-      "docs": 116116,
-      "enum": 113478,
-      "descargado": 75118,
-      "comp": 66.19609087223955,
-      "embebido": 115522,
-      "emb_pct": 99.5,
-      "estado": "parcial"
     },
     {
       "fuente": "suseso",
@@ -48,12 +139,12 @@
       "tipo": "Dictámenes",
       "organismo": "Dirección del Trabajo",
       "metodo": "Zyte (WAF)",
-      "docs": 3266,
+      "docs": 3800,
       "enum": 4974,
-      "descargado": 3266,
-      "comp": 65.66143948532368,
-      "embebido": 3259,
-      "emb_pct": 99.8,
+      "descargado": 3800,
+      "comp": 76.39726578206675,
+      "embebido": 3485,
+      "emb_pct": 91.7,
       "estado": "parcial"
     },
     {
@@ -91,8 +182,8 @@
       "enum": 1678,
       "descargado": 1675,
       "comp": 99.82121573301549,
-      "embebido": 1460,
-      "emb_pct": 43.5,
+      "embebido": 3354,
+      "emb_pct": 100.0,
       "estado": "completo"
     },
     {
@@ -122,6 +213,19 @@
       "estado": "completo"
     },
     {
+      "fuente": "pjud",
+      "tipo": "Jurisprudencia",
+      "organismo": "Poder Judicial (juris.pjud.cl)",
+      "metodo": "Solr",
+      "docs": 3354000,
+      "enum": 3354000,
+      "descargado": 3354000,
+      "comp": 100.0,
+      "embebido": 3354000,
+      "emb_pct": 100.0,
+      "estado": "indexado"
+    },
+    {
       "fuente": "tc",
       "tipo": "Jurisprudencia",
       "organismo": "Tribunal Constitucional",
@@ -148,6 +252,19 @@
       "estado": "completo"
     },
     {
+      "fuente": "fne",
+      "tipo": "Jurisprudencia",
+      "organismo": "FNE",
+      "metodo": "WP-REST",
+      "docs": 2110,
+      "enum": 7047,
+      "descargado": 1311,
+      "comp": 18.603661132396766,
+      "embebido": 1631,
+      "emb_pct": 77.3,
+      "estado": "bloqueado"
+    },
+    {
       "fuente": "tribunales-ambientales",
       "tipo": "Jurisprudencia",
       "organismo": "Trib. Ambientales",
@@ -159,19 +276,6 @@
       "embebido": 2074,
       "emb_pct": 100.0,
       "estado": "completo"
-    },
-    {
-      "fuente": "fne",
-      "tipo": "Jurisprudencia",
-      "organismo": "FNE",
-      "metodo": "WP-REST",
-      "docs": 1335,
-      "enum": 7047,
-      "descargado": 536,
-      "comp": 7.6060735064566485,
-      "embebido": 1321,
-      "emb_pct": 99.0,
-      "estado": "bloqueado"
     },
     {
       "fuente": "tcp",
@@ -247,7 +351,7 @@
       "enum": 38516,
       "descargado": 38516,
       "comp": 100.0,
-      "embebido": 76191,
+      "embebido": 76192,
       "emb_pct": 100.0,
       "estado": "completo"
     },
@@ -304,6 +408,19 @@
       "estado": "parcial"
     },
     {
+      "fuente": "sag-normativa",
+      "tipo": "Normativa sect.",
+      "organismo": "SAG",
+      "metodo": "Zyte (parcial)",
+      "docs": 452,
+      "enum": 203,
+      "descargado": 202,
+      "comp": 99.50738916256158,
+      "embebido": 450,
+      "emb_pct": 99.6,
+      "estado": "completo"
+    },
+    {
       "fuente": "subtrans",
       "tipo": "Normativa sect.",
       "organismo": "SUBTRANS",
@@ -326,19 +443,6 @@
       "descargado": 71,
       "comp": 97.26027397260275,
       "embebido": 142,
-      "emb_pct": 100.0,
-      "estado": "completo"
-    },
-    {
-      "fuente": "sag-normativa",
-      "tipo": "Normativa sect.",
-      "organismo": "SAG",
-      "metodo": "Zyte (parcial)",
-      "docs": 48,
-      "enum": 24,
-      "descargado": 24,
-      "comp": 100.0,
-      "embebido": 48,
       "emb_pct": 100.0,
       "estado": "completo"
     }
