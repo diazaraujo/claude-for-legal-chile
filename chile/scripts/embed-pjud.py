@@ -28,8 +28,10 @@ def embed(texts, timeout=180):
 
 
 def init_db():
-    c = sqlite3.connect(str(DB), timeout=60)
+    c = sqlite3.connect(str(DB), timeout=120)
     c.execute("PRAGMA journal_mode=WAL")
+    c.execute("PRAGMA busy_timeout=120000")
+    c.execute("PRAGMA synchronous=NORMAL")
     c.execute("CREATE TABLE IF NOT EXISTS docs_meta (path TEXT PRIMARY KEY, source TEXT, chars INTEGER)")
     c.execute("CREATE VIRTUAL TABLE IF NOT EXISTS docs USING fts5(path, content)")
     c.execute("CREATE TABLE IF NOT EXISTS embeddings (path TEXT PRIMARY KEY, model TEXT, dim INTEGER, vec BLOB)")
@@ -94,7 +96,13 @@ def main():
                     total += 1
         c.execute("INSERT OR REPLACE INTO pjud_batches(batch, n) VALUES (?,?)",
                   (str(f.relative_to(DATA)), len(items)))
-        c.commit()
+        for attempt in range(8):
+            try:
+                c.commit(); break
+            except sqlite3.OperationalError as e:
+                if "locked" in str(e) and attempt < 7:
+                    time.sleep(2 * (attempt + 1)); continue
+                raise
         if bi % 20 == 0:
             el = time.time() - t0
             rate = total / el if el else 0
