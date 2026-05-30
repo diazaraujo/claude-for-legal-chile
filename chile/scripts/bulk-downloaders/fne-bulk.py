@@ -16,6 +16,24 @@ sys.path.insert(0, str(_REPO_ROOT / "chile/scripts/mcp-fne/src"))
 from mcp_fne.fne_client import FNEClient, LEGAL_CATEGORIES
 
 USER_AGENT = "claude-legal-chile/0.7 (unholster.com)"
+_ZYTE_AUTH = None  # base64("<key>:") cuando --zyte; bypassa el WAF 503 de fne.gob.cl
+
+
+def _fetch_bytes(url: str, timeout: int = 60) -> bytes:
+    """GET bytes; vía Zyte httpResponseBody+geo CL si --zyte (bypass WAF)."""
+    if _ZYTE_AUTH:
+        import base64 as _b64
+        payload = json.dumps({"url": url, "httpResponseBody": True,
+                              "geolocation": "CL"}).encode()
+        req = urllib.request.Request(
+            "https://api.zyte.com/v1/extract", data=payload,
+            headers={"Authorization": f"Basic {_ZYTE_AUTH}",
+                     "Content-Type": "application/json"})
+        with urllib.request.urlopen(req, timeout=max(timeout, 120)) as r:
+            return _b64.b64decode(json.loads(r.read())["httpResponseBody"])
+    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        return r.read()
 _STATS = {"posts": 0, "pdfs_ok": 0, "pdfs_skip": 0, "pdfs_err": 0, "bytes": 0}
 _LOCK = Lock()
 
@@ -56,11 +74,7 @@ def download_pdf(url: str, dest: Path) -> str:
         (parts.scheme, parts.netloc, encoded_path, parts.query, parts.fragment)
     )
     try:
-        req = urllib.request.Request(
-            encoded_url, headers={"User-Agent": USER_AGENT}
-        )
-        with urllib.request.urlopen(req, timeout=60) as r:
-            body = r.read()
+        body = _fetch_bytes(encoded_url, timeout=60)
         tmp = dest.with_suffix(".tmp")
         tmp.write_bytes(body)
         tmp.rename(dest)
@@ -84,7 +98,24 @@ def main() -> int:
                         help="Fetch HTML de cada post link (API esconde content)")
     parser.add_argument("--skip-enum", action="store_true",
                         help="Saltar Fase 1 (usa manifest existente)")
+    parser.add_argument("--zyte", action="store_true",
+                        help="Fetch vía Zyte httpResponseBody+geo CL (bypass WAF 503)")
     args = parser.parse_args()
+
+    if args.zyte:
+        import base64 as _b64, os as _os
+        key = _os.environ.get("ZYTE_API_KEY", "")
+        if not key:
+            envf = _REPO_ROOT / "chile/.env"
+            if envf.exists():
+                for line in envf.read_text().splitlines():
+                    if line.startswith("ZYTE_API_KEY="):
+                        key = line.split("=", 1)[1].strip()
+        if not key:
+            print("ERROR: --zyte requiere ZYTE_API_KEY", flush=True); return 2
+        global _ZYTE_AUTH
+        _ZYTE_AUTH = _b64.b64encode(f"{key}:".encode()).decode()
+        print("[ZYTE] httpResponseBody + geolocation=CL habilitado", flush=True)
 
     if args.categories:
         cats = {int(x): LEGAL_CATEGORIES.get(int(x), f"cat-{x}")
@@ -191,11 +222,7 @@ def _fetch_links_phase(conn, db_path, output_dir, workers):
             return post_id, "skip"
         html_dest.parent.mkdir(parents=True, exist_ok=True)
         try:
-            req = urllib.request.Request(
-                link, headers={"User-Agent": USER_AGENT}
-            )
-            with urllib.request.urlopen(req, timeout=20) as r:
-                body = r.read()
+            body = _fetch_bytes(link, timeout=20)
             tmp = html_dest.with_suffix(".tmp")
             tmp.write_bytes(body)
             tmp.rename(html_dest)
