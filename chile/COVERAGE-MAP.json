@@ -1,8 +1,8 @@
 {
   "generado": "2026-05-30",
   "total_fuentes": 26,
-  "total_docs": 420248,
-  "total_embebido": 420126,
+  "total_docs": 420800,
+  "total_embebido": 420600,
   "fuentes": [
     {
       "fuente": "cplt",
@@ -22,12 +22,12 @@
       "tipo": "Dictámenes",
       "organismo": "Contraloría (CGR)",
       "metodo": "Domino",
-      "docs": 111421,
+      "docs": 111960,
       "enum": 113478,
-      "descargado": 72039,
-      "comp": 63.48278961560831,
-      "embebido": 111325,
-      "emb_pct": 99.9,
+      "descargado": 72380,
+      "comp": 63.78328839070127,
+      "embebido": 111764,
+      "emb_pct": 99.8,
       "estado": "parcial"
     },
     {
@@ -48,11 +48,11 @@
       "tipo": "Dictámenes",
       "organismo": "Dirección del Trabajo",
       "metodo": "Zyte (WAF)",
-      "docs": 3062,
+      "docs": 3075,
       "enum": 4974,
-      "descargado": 3062,
-      "comp": 61.560112585444315,
-      "embebido": 3060,
+      "descargado": 3075,
+      "comp": 61.82147165259349,
+      "embebido": 3071,
       "emb_pct": 99.9,
       "estado": "parcial"
     },
@@ -192,12 +192,12 @@
       "organismo": "TDLC",
       "metodo": "bulk",
       "docs": 664,
-      "enum": 213,
-      "descargado": 84,
-      "comp": 39.436619718309856,
+      "enum": 332,
+      "descargado": 332,
+      "comp": 100.0,
       "embebido": 664,
       "emb_pct": 100.0,
-      "estado": "bloqueado"
+      "estado": "completo"
     },
     {
       "fuente": "tricel",
@@ -244,12 +244,12 @@
       "organismo": "Diario Oficial",
       "metodo": "bulk",
       "docs": 75352,
-      "enum": 2548,
-      "descargado": 0,
-      "comp": 0.0,
+      "enum": 37900,
+      "descargado": 37676,
+      "comp": 99.4089709762533,
       "embebido": 75352,
       "emb_pct": 100.0,
-      "estado": "bloqueado"
+      "estado": "completo"
     },
     {
       "fuente": "leychile",
@@ -338,8 +338,8 @@
       "enum": 24,
       "descargado": 24,
       "comp": 100.0,
-      "embebido": 24,
-      "emb_pct": 50.0,
+      "embebido": 48,
+      "emb_pct": 100.0,
       "estado": "completo"
     }
   ]

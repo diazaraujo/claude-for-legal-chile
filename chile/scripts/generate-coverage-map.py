@@ -69,11 +69,20 @@ def manifest_counts(d: Path):
         c = sqlite3.connect(f"file:{man[0]}?mode=ro", uri=True, timeout=20)
         t = [r[0] for r in c.execute("SELECT name FROM sqlite_master WHERE type='table'")
              if not r[0].startswith("sqlite")][0]
-        enum = c.execute(f"SELECT count(*) FROM {t}").fetchone()[0]
-        try:
+        cols = [r[1] for r in c.execute(f"PRAGMA table_info({t})")]
+        nrows = c.execute(f"SELECT count(*) FROM {t}").fetchone()[0]
+        if "downloaded" not in cols:
+            c.close(); return nrows, None
+        mx = c.execute(f"SELECT max(downloaded) FROM {t}").fetchone()[0] or 0
+        if mx <= 1:
+            # flag 0/1 → fila por documento
             dl = c.execute(f"SELECT count(*) FROM {t} WHERE downloaded=1").fetchone()[0]
-        except Exception:
-            dl = None
+            enum = nrows
+        else:
+            # conteo por fila (p.ej. Diario Oficial: pubs por edición)
+            dl = c.execute(f"SELECT sum(downloaded) FROM {t}").fetchone()[0]
+            enum = (c.execute(f"SELECT sum(total_pubs) FROM {t}").fetchone()[0]
+                    if "total_pubs" in cols else dl)
         c.close()
         return enum, dl
     except Exception:
