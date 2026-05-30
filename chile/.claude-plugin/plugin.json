@@ -1,6 +1,6 @@
 {
   "name": "claude-legal-chile",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "description": "Asistente de análisis legal para práctica chilena. Razona sobre el ordenamiento jurídico de Chile apoyado en un corpus real (normativa, jurisprudencia y dictámenes) con retrieval verificable: cita solo lo recuperado del corpus (anti-alucinación) o se detiene. Perfiles por rama + skills de corpus (buscar-jurisprudencia, buscar-dictamen, verificar-cita). Adaptación chilena de anthropics/claude-for-legal.",
   "author": {
     "name": "Unholster",

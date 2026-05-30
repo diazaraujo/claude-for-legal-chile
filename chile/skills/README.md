@@ -12,6 +12,7 @@ real, anti-alucinación por retrieval).
 | [`buscar-dictamen`](buscar-dictamen/SKILL.md) | Jurisprudencia administrativa (CGR, DT, CPLT, SUSESO, SII) | cgr-dictamenes, dt-dictamenes, sii-juris |
 | [`linea-jurisprudencial`](linea-jurisprudencial/SKILL.md) | Evolución del criterio sobre un punto de derecho | (compone los anteriores) |
 | [`red-flags-contrato`](red-flags-contrato/SKILL.md) | Revisa contrato vs normativa vigente recuperada | corpus-search + dictamen/jurisprudencia |
+| [`consulta-concursal`](consulta-concursal/SKILL.md) | Procedimientos concursales (Ley 20.720) por RUT/deudor/rol sobre el Registro del Boletín Concursal (747k publicaciones) | concursal (tabla estructurada) |
 
 ## Skills transversales (método)
 | Skill | Función |
