@@ -16,7 +16,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from threading import Lock
 
-_REPO_ROOT = Path(__file__).resolve().parents[1]
+_REPO_ROOT = Path(__file__).resolve().parents[2]
 DB = _REPO_ROOT / "chile/data/_index/new-sources.fts.sqlite3"
 OLLAMA = "http://localhost:11434/api/embed"
 MODEL = "bge-m3"
