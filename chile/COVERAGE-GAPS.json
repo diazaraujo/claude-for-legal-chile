@@ -24,12 +24,6 @@
     "detalle": "1 años sin docs en 2015-2026: [2016]"
   },
   {
-    "fuente": "dga",
-    "org": "DGA (aguas)",
-    "tipo": "fecha_no_confiable",
-    "detalle": "fecha es de scrape/upload (date_gmt), no del documento — cobertura temporal informativa"
-  },
-  {
     "fuente": "subtrans",
     "org": "SUBTRANS",
     "tipo": "fecha_no_confiable",
@@ -58,5 +52,17 @@
     "org": "TC (moderno)",
     "tipo": "fecha_no_confiable",
     "detalle": "fecha es de scrape/upload (fecha), no del documento — cobertura temporal informativa"
+  },
+  {
+    "fuente": "sec",
+    "org": "SEC",
+    "tipo": "años_faltantes",
+    "detalle": "16 años sin docs en 1986-2027: [1987, 1988, 1990, 1991, 1992, 1993, 1994, 1995]"
+  },
+  {
+    "fuente": "tribunales-ambientales",
+    "org": "Trib. Ambientales",
+    "tipo": "años_faltantes",
+    "detalle": "1 años sin docs en 2014-2023: [2020]"
   }
 ]

@@ -33,6 +33,17 @@ CFG = {
  "tc-moderno":      ("fecha",         "day",  False, "TC (moderno)"),
 }
 
+# Fuentes cuya fecha REAL del documento está en el filename o título (no en una
+# columna fecha confiable del manifest). (modo, regex con grupo de fecha).
+CFG_DISK = {
+ # DGA: título "Resolucion_N19_de_20230106" → YYYYMMDD
+ "dga":            ("title",    r"_de_(\d{8})\b",            "day",  "DGA (aguas)"),
+ # SEC: filename "rex_1664-2007.pdf" → año
+ "sec":            ("filename", r"-(\d{4})\.",               "year", "SEC"),
+ # Trib. Ambientales: filename "R-279-2021_26-07-2023_..." → fecha sentencia
+ "tribunales-ambientales": ("filename", r"_(\d{2}-\d{2}-\d{4})_", "day", "Trib. Ambientales"),
+}
+
 
 def parse_date(v):
     """→ (year, month, day) ; month/day None si no aplica. None si no parsea."""
@@ -58,6 +69,32 @@ def extract(src, col):
         p = parse_date(v)
         if p: out.append(p)
     c.close()
+    return out
+
+
+def extract_disk(src, mode, pattern):
+    """Extrae fecha del título (manifest) o del filename con regex."""
+    rx = re.compile(pattern)
+    out = []
+    if mode == "title":
+        man = glob.glob(str(DATA / src / "manifest.sqlite*"))
+        if not man: return []
+        c = sqlite3.connect(f"file:{man[0]}?mode=ro", uri=True)
+        t = [r[0] for r in c.execute("SELECT name FROM sqlite_master WHERE type='table'")
+             if not r[0].startswith("sqlite")][0]
+        vals = [r[0] for r in c.execute(f"SELECT title FROM {t} WHERE title IS NOT NULL")]
+        c.close()
+    else:  # filename
+        vals = [p.name for p in (DATA / src).rglob("*") if p.is_file()]
+    for v in vals:
+        m = rx.search(str(v))
+        if not m: continue
+        s = m.group(1)
+        if len(s) == 8 and s.isdigit():      # YYYYMMDD
+            p = (int(s[:4]), int(s[4:6]), int(s[6:8]))
+        else:
+            p = parse_date(s)
+        if p: out.append(p)
     return out
 
 
@@ -91,6 +128,34 @@ def main():
         if not reliable:
             gaps.append(dict(fuente=src, org=org, tipo="fecha_no_confiable",
                              detalle=f"fecha es de scrape/upload ({col}), no del documento — cobertura temporal informativa"))
+
+    # Fuentes con fecha REAL en filename/título (override las no-confiables)
+    for src, (mode, pattern, gran, org) in CFG_DISK.items():
+        dates = extract_disk(src, mode, pattern)
+        if not dates: continue
+        byyear = {}
+        for y, m, d in dates:
+            byyear[y] = byyear.get(y, 0) + 1
+        ys = sorted(byyear)
+        byday = {}
+        if gran == "day":
+            for y, m, d in dates:
+                if m and d:
+                    try:
+                        iso = datetime.date(y, m, d).isoformat()
+                        byday[iso] = byday.get(iso, 0) + 1
+                    except Exception:
+                        pass
+        sources[src] = dict(org=org, gran=gran, reliable=True, byyear=byyear, byday=byday,
+                            total=len(dates), ymin=ys[0], ymax=ys[-1])
+        # quitar el gap de "fecha_no_confiable" de esta fuente (ahora sí tiene fecha real)
+        gaps = [g for g in gaps if not (g["fuente"] == src and g["tipo"] == "fecha_no_confiable")]
+        full = set(range(ys[0], ys[-1] + 1))
+        missing = sorted(full - set(ys))
+        if missing:
+            gaps.append(dict(fuente=src, org=org, tipo="años_faltantes",
+                             detalle=f"{len(missing)} años sin docs en {ys[0]}-{ys[-1]}: {missing[:8]}"))
+
     json.dump(gaps, open(ROOT / "COVERAGE-GAPS.json", "w"), ensure_ascii=False, indent=2)
     (ROOT / "COVERAGE-DETAIL.html").write_text(render(sources, gaps))
     print(f"[detail] {len(sources)} fuentes con fecha · {len(gaps)} gaps levantados")
