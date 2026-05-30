@@ -55,18 +55,26 @@ def parse_ficha(html: str) -> dict:
            "reclamado": None, "estado": None}
     m = re.search(r"\b([CRA]\d{1,5}-\d{2,4})\b", html)
     if m: out["rol"] = m.group(1)
-    # Fecha ingreso típicamente "Fecha de ingreso: DD/MM/YYYY"
-    m = re.search(r"Fecha\s*(?:de\s*)?[Ii]ngreso\s*[:\-]?\s*([0-9./\-]+)", html)
-    if m: out["fecha_ingreso"] = m.group(1).strip()
-    # Tipo
-    m = re.search(r"Tipo\s*(?:de\s*)?[Cc]aso\s*[:\-]?\s*</[^>]+>\s*([^<]+)", html)
-    if m: out["tipo"] = m.group(1).strip()
-    # Reclamado / Organismo
-    m = re.search(r"(?:Reclamado|Organismo)\s*[:\-]?\s*</[^>]+>\s*([^<]+)", html)
-    if m: out["reclamado"] = m.group(1).strip()[:200]
-    # Estado
-    m = re.search(r"Estado\s*(?:del\s*caso)?\s*[:\-]?\s*</[^>]+>\s*([^<]+)", html)
-    if m: out["estado"] = m.group(1).strip()
+    # Template ACTUAL (ASP.NET): <span id="MainContent_lbl<Campo>">valor</span>
+    spans = {"fecha_ingreso": "FechaIngreso", "tipo": "TipoCaso",
+             "reclamado": "Reclamado", "estado": "Estado"}
+    for key, lbl in spans.items():
+        m = re.search(r'id="MainContent_lbl%s">\s*([^<]+?)\s*<' % lbl, html)
+        if m and m.group(1).strip():
+            out[key] = m.group(1).strip()[:200]
+    # Fallback al template antiguo si algo quedó vacío
+    if not out["fecha_ingreso"]:
+        m = re.search(r"Fecha\s*(?:de\s*)?[Ii]ngreso\s*[:\-]?\s*([0-9./\-]+)", html)
+        if m: out["fecha_ingreso"] = m.group(1).strip()
+    if not out["tipo"]:
+        m = re.search(r"Tipo\s*(?:de\s*)?[Cc]aso\s*[:\-]?\s*</[^>]+>\s*([^<]+)", html)
+        if m: out["tipo"] = m.group(1).strip()
+    if not out["reclamado"]:
+        m = re.search(r"(?:Reclamado|Organismo)\s*[:\-]?\s*</[^>]+>\s*([^<]+)", html)
+        if m: out["reclamado"] = m.group(1).strip()[:200]
+    if not out["estado"]:
+        m = re.search(r"Estado\s*(?:del\s*caso)?\s*[:\-]?\s*</[^>]+>\s*([^<]+)", html)
+        if m: out["estado"] = m.group(1).strip()
     return out
 
 
