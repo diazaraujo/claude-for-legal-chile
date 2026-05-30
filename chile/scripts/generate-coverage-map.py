@@ -100,9 +100,21 @@ def main():
                  if p.suffix.lower() in (".txt", ".html", ".htm", ".pdf") and p.is_file()]
         if not files:
             continue
-        docs = len({f.with_suffix("") for f in files})
+        # colapsar la sombra de extracción X.pdf.txt con su fuente X.pdf (mismo doc lógico)
+        # para no doble-contar (causa del falso 50%). Clave lógica = path sin .txt de sombra.
+        def _logical(p):
+            s = str(p)
+            for ext in (".pdf.txt", ".html.txt", ".htm.txt"):
+                if s.lower().endswith(ext):
+                    return s[: -len(".txt")]  # X.pdf.txt -> X.pdf
+            return s
+        logical = {}  # key lógica -> ¿algún representante embebido?
+        for f in files:
+            k = _logical(f)
+            logical[k] = logical.get(k, False) or (datarel(str(f)) in emb)
+        docs = len(logical)
         enum, dl = manifest_counts(d)
-        n_emb = sum(1 for f in files if datarel(str(f)) in emb)
+        n_emb = sum(1 for v in logical.values() if v)
         tipo, org, metodo = META.get(name, ("?", name, "?"))
         # completitud de descarga
         comp = (dl/enum*100) if (enum and dl is not None and enum > 0) else (100.0 if dl is None else None)
