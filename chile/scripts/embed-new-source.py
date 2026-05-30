@@ -73,6 +73,17 @@ def main() -> int:
 
     c = init_db()
     done = {r[0] for r in c.execute("SELECT path FROM embeddings").fetchall()}
+    # saltar lo ya embebido en el master (corpus.fts local) — evita duplicar
+    master = _REPO_ROOT / "chile/data/_index/corpus.fts.sqlite3"
+    if master.exists():
+        try:
+            mc = sqlite3.connect(f"file:{master}?mode=ro", uri=True, timeout=60)
+            pref = str((_REPO_ROOT / "chile" / args.src)) + "%"
+            done |= {r[0] for r in mc.execute(
+                "SELECT path FROM embeddings WHERE path LIKE ?", (pref,)).fetchall()}
+            mc.close()
+        except Exception as e:
+            print(f"  (aviso: no pude leer master embeddings: {e})", flush=True)
     files = [p for p in sorted((_REPO_ROOT / "chile" / args.src
                                 if not Path(args.src).is_absolute() else Path(args.src)).rglob(args.glob))]
     pending = [p for p in files if str(p) not in done]
