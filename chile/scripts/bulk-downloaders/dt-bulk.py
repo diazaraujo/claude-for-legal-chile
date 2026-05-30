@@ -6,7 +6,7 @@ contiene el texto del dictamen y a veces link a PDF. Por ahora bulk
 guarda el HTML de cada dictamen.
 """
 from __future__ import annotations
-import argparse, sqlite3, sys, time, urllib.error
+import argparse, os, sqlite3, sys, time, urllib.error
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from threading import Lock, local
@@ -23,6 +23,24 @@ USER_AGENT = "Mozilla/5.0 claude-legal-chile/0.7 (unholster.com)"
 _STATS = {"ok": 0, "skip": 0, "err": 0, "bytes": 0}
 _LOCK = Lock()
 _THREAD = local()
+_ZYTE_AUTH = None  # base64("<key>:") cuando --zyte; bypassa el WAF 301-challenge de DT
+
+
+def _fetch_via_zyte(url: str) -> bytes | None:
+    """browserHtml + geolocation CL — resuelve el challenge JS del WAF de DT."""
+    try:
+        r = requests.post(
+            "https://api.zyte.com/v1/extract",
+            headers={"Authorization": f"Basic {_ZYTE_AUTH}"},
+            json={"url": url, "browserHtml": True, "geolocation": "CL"},
+            timeout=120,
+        )
+        if r.status_code != 200:
+            return None
+        html = r.json().get("browserHtml", "")
+        return html.encode("utf-8") if html else None
+    except Exception:
+        return None
 
 
 def _session() -> requests.Session:
@@ -57,14 +75,20 @@ def fetch_html(url: str, dest: Path) -> bool:
         return True
     dest.parent.mkdir(parents=True, exist_ok=True)
     try:
-        # requests con per-thread session + timeout (connect, read) + max 3 redirects.
-        s = _session()
-        s.max_redirects = 3
-        r = s.get(url, timeout=(4, 6), allow_redirects=True)
-        if r.status_code != 200:
-            with _LOCK: _STATS["err"] += 1
-            return False
-        body = r.content
+        if _ZYTE_AUTH:
+            body = _fetch_via_zyte(url)
+            if not body:
+                with _LOCK: _STATS["err"] += 1
+                return False
+        else:
+            # requests con per-thread session + timeout (connect, read) + max 3 redirects.
+            s = _session()
+            s.max_redirects = 3
+            r = s.get(url, timeout=(4, 6), allow_redirects=True)
+            if r.status_code != 200:
+                with _LOCK: _STATS["err"] += 1
+                return False
+            body = r.content
         if len(body) < 100:
             with _LOCK: _STATS["err"] += 1
             return False
@@ -90,7 +114,26 @@ def main() -> int:
     parser.add_argument("--skip-html", action="store_true")
     parser.add_argument("--skip-enum", action="store_true",
                         help="Saltar Fase 1 (usar enum existente del manifest)")
+    parser.add_argument("--zyte", action="store_true",
+                        help="Descargar vía Zyte browserHtml+geo CL (bypass WAF). "
+                             "Lee ZYTE_API_KEY de env o chile/.env")
     args = parser.parse_args()
+
+    if args.zyte:
+        import base64 as _b64
+        key = os.environ.get("ZYTE_API_KEY", "")
+        if not key:
+            envf = _REPO_ROOT / "chile/.env"
+            if envf.exists():
+                for line in envf.read_text().splitlines():
+                    if line.startswith("ZYTE_API_KEY="):
+                        key = line.split("=", 1)[1].strip()
+        if not key:
+            print("ERROR: --zyte requiere ZYTE_API_KEY (env o chile/.env)", flush=True)
+            return 2
+        global _ZYTE_AUTH
+        _ZYTE_AUTH = _b64.b64encode(f"{key}:".encode()).decode()
+        print("[ZYTE] browserHtml + geolocation=CL habilitado", flush=True)
 
     output_dir = Path(args.output)
     output_dir.mkdir(parents=True, exist_ok=True)
