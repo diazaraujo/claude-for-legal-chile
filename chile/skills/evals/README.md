@@ -33,4 +33,11 @@ evals/
 
 ## Casos
 - `laboral-fuero-maternal-desafuero/` — despido de trabajadora con fuero maternal
-  sin desafuero judicial previo (nulidad). Ejercita perfil laboral + verificar-cita.
+  sin desafuero judicial previo (nulidad). Perfil laboral + verificar-cita.
+- `civil-prescripcion-accion-ejecutiva/` — cobro ejecutivo de pagaré vencido hace
+  5+ años (prescripción de la acción ejecutiva). Perfil civil + verificar-cita.
+- `administrativo-acto-sin-fundamentacion/` — resolución que rechaza sin motivos
+  (deber de motivación, Ley 19.880). Perfil administrativo + buscar-dictamen (CGR).
+
+Cada rúbrica deja a propósito SIN fijar el número de artículo: obliga al sistema a
+recuperarlo del corpus, probando la anti-alucinación.
