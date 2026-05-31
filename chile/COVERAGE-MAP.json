@@ -1,8 +1,8 @@
 {
   "generado": "2026-05-30",
-  "total_fuentes": 41,
-  "total_docs": 4595576,
-  "total_embebido": 3847962,
+  "total_fuentes": 48,
+  "total_docs": 4631171,
+  "total_embebido": 3850287,
   "fuentes": [
     {
       "fuente": "superdesalud",
@@ -161,6 +161,32 @@
       "estado": "indexado"
     },
     {
+      "fuente": "indh",
+      "tipo": "Doctrina",
+      "organismo": "INDH (DDHH)",
+      "metodo": "DSpace REST",
+      "docs": 1198,
+      "enum": 1950,
+      "descargado": 1950,
+      "comp": 100.0,
+      "embebido": 0,
+      "emb_pct": 0.0,
+      "estado": "completo"
+    },
+    {
+      "fuente": "dpp",
+      "tipo": "Institucional",
+      "organismo": "Defensoría Penal",
+      "metodo": "BFS crawl",
+      "docs": 2248,
+      "enum": 1148,
+      "descargado": 1147,
+      "comp": 99.91289198606272,
+      "embebido": 0,
+      "emb_pct": 0.0,
+      "estado": "completo"
+    },
+    {
       "fuente": "cde",
       "tipo": "Institucional",
       "organismo": "CDE",
@@ -172,6 +198,19 @@
       "embebido": 6,
       "emb_pct": 100.0,
       "estado": "completo"
+    },
+    {
+      "fuente": "aduanas",
+      "tipo": "Jurisprud. adm.",
+      "organismo": "Servicio Nac. Aduanas",
+      "metodo": "BFS crawl",
+      "docs": 4888,
+      "enum": 6210,
+      "descargado": 2923,
+      "comp": 47.06924315619968,
+      "embebido": 0,
+      "emb_pct": 0.0,
+      "estado": "bloqueado"
     },
     {
       "fuente": "sii-oficios",
@@ -308,12 +347,12 @@
       "tipo": "Jurisprudencia",
       "organismo": "FNE",
       "metodo": "WP-REST",
-      "docs": 8185,
+      "docs": 9158,
       "enum": 7047,
-      "descargado": 1710,
-      "comp": 24.26564495530013,
-      "embebido": 8125,
-      "emb_pct": 99.3,
+      "descargado": 2688,
+      "comp": 38.14389101745424,
+      "embebido": 8418,
+      "emb_pct": 91.9,
       "estado": "bloqueado"
     },
     {
@@ -341,6 +380,19 @@
       "embebido": 2291,
       "emb_pct": 100.0,
       "estado": "completo"
+    },
+    {
+      "fuente": "cam-santiago",
+      "tipo": "Jurisprudencia",
+      "organismo": "CAM Santiago (arbitral)",
+      "metodo": "BFS crawl",
+      "docs": 1944,
+      "enum": 1143,
+      "descargado": 683,
+      "comp": 59.75503062117235,
+      "embebido": 0,
+      "emb_pct": 0.0,
+      "estado": "parcial"
     },
     {
       "fuente": "tribunales-ambientales",
@@ -427,8 +479,8 @@
       "metodo": "SPARQL+bulk",
       "docs": 46686,
       "enum": 169860,
-      "descargado": 47094,
-      "comp": 27.725185446838573,
+      "descargado": 48215,
+      "comp": 28.38514070410927,
       "embebido": 46686,
       "emb_pct": 100.0,
       "estado": "bloqueado"
@@ -444,6 +496,19 @@
       "comp": 100.0,
       "embebido": 38516,
       "emb_pct": 100.0,
+      "estado": "completo"
+    },
+    {
+      "fuente": "sii-normativa",
+      "tipo": "Normativa",
+      "organismo": "SII circulares+resoluciones",
+      "metodo": "brute-force",
+      "docs": 5572,
+      "enum": 2786,
+      "descargado": 2786,
+      "comp": 100.0,
+      "embebido": 2032,
+      "emb_pct": 36.5,
       "estado": "completo"
     },
     {
@@ -512,6 +577,19 @@
       "estado": "completo"
     },
     {
+      "fuente": "servel",
+      "tipo": "Normativa sect.",
+      "organismo": "SERVEL (electoral)",
+      "metodo": "BFS crawl",
+      "docs": 424,
+      "enum": 2001,
+      "descargado": 35,
+      "comp": 1.7491254372813594,
+      "embebido": 0,
+      "emb_pct": 0.0,
+      "estado": "bloqueado"
+    },
+    {
       "fuente": "subtel",
       "tipo": "Normativa sect.",
       "organismo": "SUBTEL",
@@ -536,6 +614,19 @@
       "embebido": 0,
       "emb_pct": 0.0,
       "estado": "indexado"
+    },
+    {
+      "fuente": "historia-ley",
+      "tipo": "Tramitación",
+      "organismo": "Congreso / Cámara",
+      "metodo": "WSDL SOAP",
+      "docs": 18348,
+      "enum": 18349,
+      "descargado": 18348,
+      "comp": 99.99455011172272,
+      "embebido": 0,
+      "emb_pct": 0.0,
+      "estado": "completo"
     }
   ]
 }

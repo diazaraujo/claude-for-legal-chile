@@ -40,6 +40,13 @@ META = {
  "tcp":("Jurisprudencia","Trib. Contratación Púb.","WP-REST"),
  "tricel":("Jurisprudencia","TRICEL","WP-REST"),
  "cortes-marciales":("Jurisprudencia","Cortes Marciales","scrape+OCR"),
+ "sii-normativa":("Normativa","SII circulares+resoluciones","brute-force"),
+ "indh":("Doctrina","INDH (DDHH)","DSpace REST"),
+ "dpp":("Institucional","Defensoría Penal","BFS crawl"),
+ "aduanas":("Jurisprud. adm.","Servicio Nac. Aduanas","BFS crawl"),
+ "servel":("Normativa sect.","SERVEL (electoral)","BFS crawl"),
+ "cam-santiago":("Jurisprudencia","CAM Santiago (arbitral)","BFS crawl"),
+ "historia-ley":("Tramitación","Congreso / Cámara","WSDL SOAP"),
 }
 
 
