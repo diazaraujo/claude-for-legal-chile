@@ -51,8 +51,10 @@ def embed(texts: list[str], timeout=180):
 
 def init_db():
     DB.parent.mkdir(parents=True, exist_ok=True)
-    c = sqlite3.connect(str(DB), timeout=60)
+    c = sqlite3.connect(str(DB), timeout=120)
     c.execute("PRAGMA journal_mode=WAL")
+    c.execute("PRAGMA busy_timeout=120000")
+    c.execute("PRAGMA synchronous=NORMAL")
     c.execute("CREATE TABLE IF NOT EXISTS docs_meta ("
               "path TEXT PRIMARY KEY, source TEXT, chars INTEGER)")
     c.execute("CREATE VIRTUAL TABLE IF NOT EXISTS docs USING fts5(path, content)")
