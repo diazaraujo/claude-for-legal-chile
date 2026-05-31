@@ -77,24 +77,40 @@ def detect_tables(c: sqlite3.Connection):
     return out
 
 
+def _basename(url: str) -> str:
+    """Nombre estable desde la URL: último segmento NO vacío del path (las URLs con
+    slash final colapsarían a '' → antes pisaban todo en doc.pdf)."""
+    path = urllib.parse.urlsplit(url).path
+    segs = [s for s in path.split("/") if s]
+    base = urllib.parse.unquote(segs[-1]) if segs else "doc"
+    return re.sub(r"[^A-Za-z0-9._-]", "_", base) or "doc"
+
+
 def download_one(url, out_dir: Path):
-    name = re.sub(r"[^A-Za-z0-9._-]", "_", urllib.parse.unquote(url.rsplit("/", 1)[-1])) or "doc.pdf"
-    if not name.lower().endswith((".pdf", ".html", ".htm", ".txt", ".xml")):
-        name += ".pdf"
-    dest = out_dir / "pdfs" / name
-    if dest.exists() and dest.stat().st_size > 0:
-        return (url, "ok", dest.stat().st_size)
+    name = _basename(url)
+    has_ext = name.lower().endswith((".pdf", ".html", ".htm", ".txt", ".xml", ".zip", ".xls", ".xlsx", ".doc", ".docx"))
+    # destino provisional; la extensión final se ajusta según el contenido
+    probe = out_dir / "pdfs" / (name if has_ext else name + ".pdf")
+    html_dest = out_dir / "pdfs" / (name if has_ext else name + ".html")
+    if probe.exists() and probe.stat().st_size > 0:
+        return (url, "ok", probe.stat().st_size)
+    if html_dest.exists() and html_dest.stat().st_size > 0:
+        return (url, "ok", html_dest.stat().st_size)
     status, data = fetch(url)
     if status != "ok" or not data:
         return (url, status, 0)
-    # aceptar PDF o HTML/XML con cuerpo razonable
     is_pdf = data[:4] == b"%PDF"
     if not is_pdf and len(data) < 600:
         return (url, "transient", 0)
+    # extensión real: pdf si magic %PDF, sino conservar la del nombre o .html
+    if has_ext:
+        dest = out_dir / "pdfs" / name
+    else:
+        dest = out_dir / "pdfs" / (name + (".pdf" if is_pdf else ".html"))
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_bytes(data)
     if is_pdf:
-        txt = out_dir / "txt" / (name + ".txt")
+        txt = out_dir / "txt" / (dest.name + ".txt")
         txt.parent.mkdir(parents=True, exist_ok=True)
         try:
             subprocess.run(["pdftotext", "-layout", str(dest), str(txt)], capture_output=True, timeout=120)
