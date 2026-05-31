@@ -1,8 +1,8 @@
 {
   "generado": "2026-05-30",
   "total_fuentes": 41,
-  "total_docs": 4591798,
-  "total_embebido": 3827276,
+  "total_docs": 4595576,
+  "total_embebido": 3847962,
   "fuentes": [
     {
       "fuente": "superdesalud",
@@ -39,8 +39,8 @@
       "enum": 8675,
       "descargado": 8675,
       "comp": 100.0,
-      "embebido": 9647,
-      "emb_pct": 99.9,
+      "embebido": 9652,
+      "emb_pct": 100.0,
       "estado": "completo"
     },
     {
@@ -87,12 +87,12 @@
       "tipo": "?",
       "organismo": "scj",
       "metodo": "?",
-      "docs": 234,
-      "enum": 284,
-      "descargado": 280,
-      "comp": 98.59154929577466,
-      "embebido": 187,
-      "emb_pct": 79.9,
+      "docs": 236,
+      "enum": 283,
+      "descargado": 282,
+      "comp": 99.64664310954063,
+      "embebido": 236,
+      "emb_pct": 100.0,
       "estado": "completo"
     },
     {
@@ -104,8 +104,8 @@
       "enum": 113478,
       "descargado": 113475,
       "comp": 99.99735631576165,
-      "embebido": 159525,
-      "emb_pct": 90.8,
+      "embebido": 175761,
+      "emb_pct": 100.0,
       "estado": "completo"
     },
     {
@@ -113,11 +113,11 @@
       "tipo": "Dictámenes",
       "organismo": "Consejo Transparencia",
       "metodo": "bulk",
-      "docs": 117692,
-      "enum": 117352,
-      "descargado": 117047,
-      "comp": 99.74009816620082,
-      "embebido": 117692,
+      "docs": 117699,
+      "enum": 118000,
+      "descargado": 117054,
+      "comp": 99.19830508474577,
+      "embebido": 117699,
       "emb_pct": 100.0,
       "estado": "completo"
     },
@@ -139,13 +139,13 @@
       "tipo": "Dictámenes",
       "organismo": "Dirección del Trabajo",
       "metodo": "Zyte (WAF)",
-      "docs": 4684,
-      "enum": 5003,
-      "descargado": 4684,
-      "comp": 93.62382570457726,
-      "embebido": 4625,
-      "emb_pct": 98.7,
-      "estado": "parcial"
+      "docs": 5020,
+      "enum": 5002,
+      "descargado": 5002,
+      "comp": 100.0,
+      "embebido": 5020,
+      "emb_pct": 100.0,
+      "estado": "completo"
     },
     {
       "fuente": "doctrina",
@@ -205,9 +205,9 @@
       "organismo": "SERNAC",
       "metodo": "bulk",
       "docs": 127,
-      "enum": 128,
+      "enum": 127,
       "descargado": 127,
-      "comp": 99.21875,
+      "comp": 100.0,
       "embebido": 127,
       "emb_pct": 100.0,
       "estado": "completo"
@@ -304,6 +304,19 @@
       "estado": "indexado"
     },
     {
+      "fuente": "fne",
+      "tipo": "Jurisprudencia",
+      "organismo": "FNE",
+      "metodo": "WP-REST",
+      "docs": 8185,
+      "enum": 7047,
+      "descargado": 1710,
+      "comp": 24.26564495530013,
+      "embebido": 8125,
+      "emb_pct": 99.3,
+      "estado": "bloqueado"
+    },
+    {
       "fuente": "tc",
       "tipo": "Jurisprudencia",
       "organismo": "Tribunal Constitucional",
@@ -315,19 +328,6 @@
       "embebido": 8081,
       "emb_pct": 100.0,
       "estado": "completo"
-    },
-    {
-      "fuente": "fne",
-      "tipo": "Jurisprudencia",
-      "organismo": "FNE",
-      "metodo": "WP-REST",
-      "docs": 4759,
-      "enum": 7047,
-      "descargado": 4249,
-      "comp": 60.29516106144459,
-      "embebido": 4200,
-      "emb_pct": 88.3,
-      "estado": "parcial"
     },
     {
       "fuente": "cortes-marciales",
@@ -348,9 +348,9 @@
       "organismo": "Trib. Ambientales",
       "metodo": "bulk",
       "docs": 1037,
-      "enum": 1038,
+      "enum": 1037,
       "descargado": 1037,
-      "comp": 99.90366088631984,
+      "comp": 100.0,
       "embebido": 1037,
       "emb_pct": 100.0,
       "estado": "completo"
@@ -386,11 +386,11 @@
       "tipo": "Jurisprudencia",
       "organismo": "TDLC",
       "metodo": "bulk",
-      "docs": 332,
-      "enum": 332,
-      "descargado": 332,
+      "docs": 338,
+      "enum": 338,
+      "descargado": 338,
       "comp": 100.0,
-      "embebido": 332,
+      "embebido": 338,
       "emb_pct": 100.0,
       "estado": "completo"
     },
@@ -426,12 +426,12 @@
       "organismo": "BCN / LeyChile",
       "metodo": "SPARQL+bulk",
       "docs": 46686,
-      "enum": 47442,
-      "descargado": 46678,
-      "comp": 98.38961257957084,
+      "enum": 169860,
+      "descargado": 47094,
+      "comp": 27.725185446838573,
       "embebido": 46686,
       "emb_pct": 100.0,
-      "estado": "completo"
+      "estado": "bloqueado"
     },
     {
       "fuente": "diario-oficial",
@@ -439,8 +439,8 @@
       "organismo": "Diario Oficial",
       "metodo": "bulk",
       "docs": 38516,
-      "enum": 38516,
-      "descargado": 38516,
+      "enum": 38499,
+      "descargado": 38499,
       "comp": 100.0,
       "embebido": 38516,
       "emb_pct": 100.0,
@@ -464,13 +464,13 @@
       "tipo": "Normativa sect.",
       "organismo": "SEC",
       "metodo": "bulk",
-      "docs": 1913,
+      "docs": 1914,
       "enum": 2256,
-      "descargado": 1913,
-      "comp": 84.79609929078015,
-      "embebido": 1913,
+      "descargado": 2253,
+      "comp": 99.86702127659575,
+      "embebido": 1914,
       "emb_pct": 100.0,
-      "estado": "parcial"
+      "estado": "completo"
     },
     {
       "fuente": "dga",
@@ -481,8 +481,8 @@
       "enum": 1857,
       "descargado": 1857,
       "comp": 100.0,
-      "embebido": 1594,
-      "emb_pct": 96.3,
+      "embebido": 1655,
+      "emb_pct": 100.0,
       "estado": "completo"
     },
     {
@@ -507,8 +507,8 @@
       "enum": 203,
       "descargado": 203,
       "comp": 100.0,
-      "embebido": 450,
-      "emb_pct": 99.3,
+      "embebido": 451,
+      "emb_pct": 99.6,
       "estado": "completo"
     },
     {
