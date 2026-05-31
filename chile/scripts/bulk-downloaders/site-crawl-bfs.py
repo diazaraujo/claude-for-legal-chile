@@ -62,8 +62,11 @@ def crawl(conn, seeds, domain, max_pages) -> int:
         except Exception:
             continue
         for href in _HREF.findall(text):
-            full = urllib.parse.urljoin(url, href)
-            host = urllib.parse.urlsplit(full).netloc
+            try:
+                full = urllib.parse.urljoin(url, href)
+                host = urllib.parse.urlsplit(full).netloc
+            except ValueError:
+                continue  # URL malformada en el HTML (ej. Invalid IPv6) → saltar
             if domain not in host:
                 continue
             if full.lower().endswith(".pdf"):
