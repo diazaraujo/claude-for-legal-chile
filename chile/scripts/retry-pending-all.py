@@ -65,15 +65,26 @@ def ensure_cols(c: sqlite3.Connection, table: str):
     c.commit()
 
 
+# orden de preferencia al elegir la columna de URL de una tabla
+URL_CANDIDATES = ("url", "pdf_url", "link", "page_url", "href", "file_url", "download_url")
+
+
 def detect_tables(c: sqlite3.Connection):
-    """Todas las tablas del manifest que matchean URLCOLS (un manifest puede tener varias)."""
-    tabs = {r[0] for r in c.execute("SELECT name FROM sqlite_master WHERE type='table'")}
+    """Auto-detecta TODA tabla del manifest con flag `downloaded` + una columna tipo
+    URL real (descargable directo). Salta tablas que sólo tienen IDs (cgr.unid,
+    cmf.numero, sii-oficios.guid → esas requieren su scraper que construye la URL)."""
     out = []
-    for t, col in URLCOLS.items():
-        if t in tabs:
-            cols = {r[1] for r in c.execute(f"PRAGMA table_info({t})")}
-            if col in cols:
-                out.append((t, col))
+    for (t,) in c.execute("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite%'"):
+        cols = [r[1] for r in c.execute(f"PRAGMA table_info({t})")]
+        if "downloaded" not in cols:
+            continue
+        col = next((u for u in URL_CANDIDATES if u in cols), None)
+        if not col:
+            continue
+        # verificar que la columna realmente contenga URLs http (no rutas internas/ids)
+        v = c.execute(f"SELECT {col} FROM {t} WHERE {col} IS NOT NULL AND {col} <> '' LIMIT 1").fetchone()
+        if v and str(v[0]).startswith("http"):
+            out.append((t, col))
     return out
 
 
@@ -83,7 +94,8 @@ def _basename(url: str) -> str:
     path = urllib.parse.urlsplit(url).path
     segs = [s for s in path.split("/") if s]
     base = urllib.parse.unquote(segs[-1]) if segs else "doc"
-    return re.sub(r"[^A-Za-z0-9._-]", "_", base) or "doc"
+    base = re.sub(r"[^A-Za-z0-9._-]", "_", base) or "doc"
+    return base[:120]  # evitar nombres > 255 chars (slugs FNE largos → OSError)
 
 
 def download_one(url, out_dir: Path):
@@ -137,7 +149,10 @@ def process_source(mpath: Path, workers: int):
             with ThreadPoolExecutor(max_workers=workers) as ex:
                 futs = {ex.submit(download_one, u, out_dir): u for u in pend}
                 for fut in as_completed(futs):
-                    url, status, size = fut.result()
+                    try:
+                        url, status, size = fut.result()
+                    except Exception:
+                        continue  # una descarga rota no debe abortar el barrido
                     with _LOCK:
                         if status == "ok":
                             c.execute(f"UPDATE {table} SET downloaded=1, size=? WHERE {col}=?", (size, url))
