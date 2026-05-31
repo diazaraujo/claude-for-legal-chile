@@ -1,8 +1,8 @@
 {
   "generado": "2026-05-30",
   "total_fuentes": 48,
-  "total_docs": 4631171,
-  "total_embebido": 3850287,
+  "total_docs": 4638824,
+  "total_embebido": 3850623,
   "fuentes": [
     {
       "fuente": "superdesalud",
@@ -204,13 +204,13 @@
       "tipo": "Jurisprud. adm.",
       "organismo": "Servicio Nac. Aduanas",
       "metodo": "BFS crawl",
-      "docs": 4888,
-      "enum": 6210,
-      "descargado": 2923,
-      "comp": 47.06924315619968,
+      "docs": 9637,
+      "enum": 6397,
+      "descargado": 5310,
+      "comp": 83.00765984055026,
       "embebido": 0,
       "emb_pct": 0.0,
-      "estado": "bloqueado"
+      "estado": "parcial"
     },
     {
       "fuente": "sii-oficios",
@@ -386,12 +386,12 @@
       "tipo": "Jurisprudencia",
       "organismo": "CAM Santiago (arbitral)",
       "metodo": "BFS crawl",
-      "docs": 1944,
-      "enum": 1143,
-      "descargado": 683,
-      "comp": 59.75503062117235,
-      "embebido": 0,
-      "emb_pct": 0.0,
+      "docs": 1962,
+      "enum": 1153,
+      "descargado": 692,
+      "comp": 60.01734605377277,
+      "embebido": 304,
+      "emb_pct": 15.5,
       "estado": "parcial"
     },
     {
@@ -479,8 +479,8 @@
       "metodo": "SPARQL+bulk",
       "docs": 46686,
       "enum": 169860,
-      "descargado": 48215,
-      "comp": 28.38514070410927,
+      "descargado": 48843,
+      "comp": 28.754856941010242,
       "embebido": 46686,
       "emb_pct": 100.0,
       "estado": "bloqueado"
@@ -507,8 +507,8 @@
       "enum": 2786,
       "descargado": 2786,
       "comp": 100.0,
-      "embebido": 2032,
-      "emb_pct": 36.5,
+      "embebido": 2064,
+      "emb_pct": 37.0,
       "estado": "completo"
     },
     {
@@ -523,6 +523,19 @@
       "embebido": 1927,
       "emb_pct": 100.0,
       "estado": "completo"
+    },
+    {
+      "fuente": "servel",
+      "tipo": "Normativa sect.",
+      "organismo": "SERVEL (electoral)",
+      "metodo": "BFS crawl",
+      "docs": 3310,
+      "enum": 2001,
+      "descargado": 1715,
+      "comp": 85.70714642678661,
+      "embebido": 0,
+      "emb_pct": 0.0,
+      "estado": "parcial"
     },
     {
       "fuente": "sec",
@@ -575,19 +588,6 @@
       "embebido": 451,
       "emb_pct": 99.6,
       "estado": "completo"
-    },
-    {
-      "fuente": "servel",
-      "tipo": "Normativa sect.",
-      "organismo": "SERVEL (electoral)",
-      "metodo": "BFS crawl",
-      "docs": 424,
-      "enum": 2001,
-      "descargado": 35,
-      "comp": 1.7491254372813594,
-      "embebido": 0,
-      "emb_pct": 0.0,
-      "estado": "bloqueado"
     },
     {
       "fuente": "subtel",
