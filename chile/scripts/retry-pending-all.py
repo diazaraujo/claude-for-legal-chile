@@ -28,7 +28,8 @@ DATA = ROOT / "data"
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/120 Safari/537.36"
 _LOCK = Lock()
 # tabla -> columna de url (manifests heterogéneos)
-URLCOLS = {"pdfs": "url", "normas": "pdf_url", "docs": "url", "media": "url", "items": "url"}
+URLCOLS = {"pdfs": "url", "normas": "pdf_url", "docs": "url", "media": "url", "items": "url",
+           "files": "pdf_url", "posts": "link", "dictamenes": "url"}
 DEAD_AFTER = 2  # nº de pases con 404/410 antes de marcar dead
 
 
@@ -64,14 +65,16 @@ def ensure_cols(c: sqlite3.Connection, table: str):
     c.commit()
 
 
-def detect_table(c: sqlite3.Connection):
+def detect_tables(c: sqlite3.Connection):
+    """Todas las tablas del manifest que matchean URLCOLS (un manifest puede tener varias)."""
     tabs = {r[0] for r in c.execute("SELECT name FROM sqlite_master WHERE type='table'")}
+    out = []
     for t, col in URLCOLS.items():
         if t in tabs:
             cols = {r[1] for r in c.execute(f"PRAGMA table_info({t})")}
             if col in cols:
-                return t, col
-    return None, None
+                out.append((t, col))
+    return out
 
 
 def download_one(url, out_dir: Path):
@@ -105,32 +108,34 @@ def process_source(mpath: Path, workers: int):
     name = out_dir.name
     c = sqlite3.connect(str(mpath), check_same_thread=False, timeout=60)
     c.execute("PRAGMA busy_timeout=60000")
-    table, col = detect_table(c)
-    if not table:
+    tables = detect_tables(c)
+    if not tables:
         return (name, 0, 0, 0)
-    ensure_cols(c, table)
-    pend = [r[0] for r in c.execute(
-        f"SELECT {col} FROM {table} WHERE COALESCE(downloaded,0)=0 AND COALESCE(dead,0)=0")]
-    if not pend:
-        return (name, 0, 0, 0)
-    ok = dead = 0
-    with ThreadPoolExecutor(max_workers=workers) as ex:
-        futs = {ex.submit(download_one, u, out_dir): u for u in pend}
-        for fut in as_completed(futs):
-            url, status, size = fut.result()
-            with _LOCK:
-                if status == "ok":
-                    c.execute(f"UPDATE {table} SET downloaded=1, size=? WHERE {col}=?", (size, url))
-                    ok += 1
-                elif status == "404":
-                    c.execute(f"UPDATE {table} SET miss=COALESCE(miss,0)+1 WHERE {col}=?", (url,))
-                    c.execute(f"UPDATE {table} SET dead=1 WHERE {col}=? AND COALESCE(miss,0)>=?",
-                              (url, DEAD_AFTER))
-                    if c.execute(f"SELECT dead FROM {table} WHERE {col}=?", (url,)).fetchone()[0]:
-                        dead += 1
-                c.commit()
-    rem = c.execute(
-        f"SELECT count(*) FROM {table} WHERE COALESCE(downloaded,0)=0 AND COALESCE(dead,0)=0").fetchone()[0]
+    ok = dead = rem = 0
+    for table, col in tables:
+        ensure_cols(c, table)
+        pend = [r[0] for r in c.execute(
+            f"SELECT {col} FROM {table} WHERE COALESCE(downloaded,0)=0 AND COALESCE(dead,0)=0 "
+            f"AND {col} IS NOT NULL AND {col} <> ''")]
+        if pend:
+            with ThreadPoolExecutor(max_workers=workers) as ex:
+                futs = {ex.submit(download_one, u, out_dir): u for u in pend}
+                for fut in as_completed(futs):
+                    url, status, size = fut.result()
+                    with _LOCK:
+                        if status == "ok":
+                            c.execute(f"UPDATE {table} SET downloaded=1, size=? WHERE {col}=?", (size, url))
+                            ok += 1
+                        elif status == "404":
+                            c.execute(f"UPDATE {table} SET miss=COALESCE(miss,0)+1 WHERE {col}=?", (url,))
+                            c.execute(f"UPDATE {table} SET dead=1 WHERE {col}=? AND COALESCE(miss,0)>=?",
+                                      (url, DEAD_AFTER))
+                            if c.execute(f"SELECT dead FROM {table} WHERE {col}=?", (url,)).fetchone()[0]:
+                                dead += 1
+                        c.commit()
+        rem += c.execute(
+            f"SELECT count(*) FROM {table} WHERE COALESCE(downloaded,0)=0 AND COALESCE(dead,0)=0 "
+            f"AND {col} IS NOT NULL AND {col} <> ''").fetchone()[0]
     c.close()
     return (name, ok, dead, rem)
 
