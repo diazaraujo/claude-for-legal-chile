@@ -2,7 +2,7 @@
   "generado": "2026-05-30",
   "total_fuentes": 48,
   "total_docs": 4643956,
-  "total_embebido": 3875579,
+  "total_embebido": 3882279,
   "fuentes": [
     {
       "fuente": "superdesalud",
@@ -479,8 +479,8 @@
       "metodo": "SPARQL+bulk",
       "docs": 46686,
       "enum": 169860,
-      "descargado": 57463,
-      "comp": 33.829624396561876,
+      "descargado": 58698,
+      "comp": 34.5566937477923,
       "embebido": 46686,
       "emb_pct": 100.0,
       "estado": "bloqueado"
@@ -624,8 +624,8 @@
       "enum": 18349,
       "descargado": 18348,
       "comp": 99.99455011172272,
-      "embebido": 11648,
-      "emb_pct": 63.5,
+      "embebido": 18348,
+      "emb_pct": 100.0,
       "estado": "completo"
     }
   ]
