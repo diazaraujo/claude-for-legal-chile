@@ -1,8 +1,8 @@
 {
   "generado": "2026-05-30",
   "total_fuentes": 48,
-  "total_docs": 4639987,
-  "total_embebido": 3852667,
+  "total_docs": 4641035,
+  "total_embebido": 3855298,
   "fuentes": [
     {
       "fuente": "superdesalud",
@@ -169,8 +169,8 @@
       "enum": 1950,
       "descargado": 1950,
       "comp": 100.0,
-      "embebido": 384,
-      "emb_pct": 32.1,
+      "embebido": 599,
+      "emb_pct": 50.0,
       "estado": "completo"
     },
     {
@@ -182,8 +182,8 @@
       "enum": 1148,
       "descargado": 1147,
       "comp": 99.91289198606272,
-      "embebido": 416,
-      "emb_pct": 18.5,
+      "embebido": 1568,
+      "emb_pct": 69.8,
       "estado": "completo"
     },
     {
@@ -347,13 +347,13 @@
       "tipo": "Jurisprudencia",
       "organismo": "FNE",
       "metodo": "WP-REST",
-      "docs": 9532,
+      "docs": 10580,
       "enum": 7047,
-      "descargado": 3065,
-      "comp": 43.49368525613737,
-      "embebido": 8418,
-      "emb_pct": 88.3,
-      "estado": "bloqueado"
+      "descargado": 4118,
+      "comp": 58.43621399176955,
+      "embebido": 9682,
+      "emb_pct": 91.5,
+      "estado": "parcial"
     },
     {
       "fuente": "tc",
@@ -479,8 +479,8 @@
       "metodo": "SPARQL+bulk",
       "docs": 46686,
       "enum": 169860,
-      "descargado": 49273,
-      "comp": 29.00800659366537,
+      "descargado": 50680,
+      "comp": 29.836335805957848,
       "embebido": 46686,
       "emb_pct": 100.0,
       "estado": "bloqueado"
