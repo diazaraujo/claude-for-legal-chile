@@ -93,8 +93,13 @@ def main() -> int:
             mc.close()
         except Exception as e:
             print(f"  (aviso: no pude leer master embeddings: {e})", flush=True)
-    files = [p for p in sorted((_REPO_ROOT / "chile" / args.src
-                                if not Path(args.src).is_absolute() else Path(args.src)).rglob(args.glob))]
+    root = (_REPO_ROOT / "chile" / args.src if not Path(args.src).is_absolute() else Path(args.src))
+    files = [p for p in sorted(root.rglob(args.glob))]
+    # evitar doble-conteo: si glob trae .pdf y existe su <basename>.pdf.txt (el texto
+    # ya extraído, que se indexa por separado), saltar el .pdf — mismo contenido.
+    if args.glob.lower().endswith(".pdf"):
+        txt_basenames = {q.name for q in root.rglob("*.pdf.txt")}
+        files = [p for p in files if (p.name + ".txt") not in txt_basenames]
     pending = [p for p in files if datarel(str(p)) not in done]
     print(f"[{args.source}] {len(files)} archivos, {len(pending)} pendientes de embed", flush=True)
 
