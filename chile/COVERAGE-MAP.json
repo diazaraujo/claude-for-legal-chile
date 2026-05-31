@@ -1,8 +1,8 @@
 {
   "generado": "2026-05-30",
   "total_fuentes": 48,
-  "total_docs": 4641035,
-  "total_embebido": 3855298,
+  "total_docs": 4642311,
+  "total_embebido": 3860626,
   "fuentes": [
     {
       "fuente": "superdesalud",
@@ -182,8 +182,8 @@
       "enum": 1148,
       "descargado": 1147,
       "comp": 99.91289198606272,
-      "embebido": 1568,
-      "emb_pct": 69.8,
+      "embebido": 1124,
+      "emb_pct": 50.0,
       "estado": "completo"
     },
     {
@@ -208,8 +208,8 @@
       "enum": 6368,
       "descargado": 6366,
       "comp": 99.96859296482413,
-      "embebido": 0,
-      "emb_pct": 0.0,
+      "embebido": 1536,
+      "emb_pct": 14.7,
       "estado": "completo"
     },
     {
@@ -347,12 +347,12 @@
       "tipo": "Jurisprudencia",
       "organismo": "FNE",
       "metodo": "WP-REST",
-      "docs": 10580,
+      "docs": 11856,
       "enum": 7047,
-      "descargado": 4118,
-      "comp": 58.43621399176955,
-      "embebido": 9682,
-      "emb_pct": 91.5,
+      "descargado": 5395,
+      "comp": 76.55740031218959,
+      "embebido": 10659,
+      "emb_pct": 89.9,
       "estado": "parcial"
     },
     {
@@ -390,8 +390,8 @@
       "enum": 1136,
       "descargado": 1134,
       "comp": 99.82394366197182,
-      "embebido": 972,
-      "emb_pct": 49.5,
+      "embebido": 981,
+      "emb_pct": 50.0,
       "estado": "completo"
     },
     {
@@ -479,8 +479,8 @@
       "metodo": "SPARQL+bulk",
       "docs": 46686,
       "enum": 169860,
-      "descargado": 50680,
-      "comp": 29.836335805957848,
+      "descargado": 53642,
+      "comp": 31.58012480866596,
       "embebido": 46686,
       "emb_pct": 100.0,
       "estado": "bloqueado"
@@ -507,8 +507,8 @@
       "enum": 2786,
       "descargado": 2786,
       "comp": 100.0,
-      "embebido": 2064,
-      "emb_pct": 37.0,
+      "embebido": 2786,
+      "emb_pct": 50.0,
       "estado": "completo"
     },
     {
@@ -624,8 +624,8 @@
       "enum": 18349,
       "descargado": 18348,
       "comp": 99.99455011172272,
-      "embebido": 576,
-      "emb_pct": 3.1,
+      "embebido": 3104,
+      "emb_pct": 16.9,
       "estado": "completo"
     }
   ]
