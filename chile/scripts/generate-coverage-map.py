@@ -110,17 +110,21 @@ def main():
                  if p.suffix.lower() in (".txt", ".html", ".htm", ".pdf", ".xml") and p.is_file()]
         if not files:
             continue
-        # colapsar la sombra de extracción X.pdf.txt con su fuente X.pdf (mismo doc lógico)
-        # para no doble-contar (causa del falso 50%). Clave lógica = path sin .txt de sombra.
-        def _logical(p):
-            s = str(p)
-            for ext in (".pdf.txt", ".html.txt", ".htm.txt"):
-                if s.lower().endswith(ext):
-                    return s[: -len(".txt")]  # X.pdf.txt -> X.pdf
-            return s
-        logical = {}  # key lógica -> ¿algún representante embebido?
+        # colapsar todas las variantes del mismo doc en un solo doc lógico, por STEM
+        # (basename sin la cadena de extensiones): X.pdf / X.pdf.txt / X.xml / X.txt / txt/X.pdf.txt
+        # → mismo doc. Evita el falso 50% por doble-conteo .pdf/.xml + .txt extraído.
+        def _stem(p):
+            n = p.name.lower()
+            for shadow in (".pdf.txt", ".html.txt", ".htm.txt", ".xml.txt"):
+                if n.endswith(shadow):
+                    return p.name[: -len(shadow)]
+            for ext in (".pdf", ".xml", ".html", ".htm", ".txt"):
+                if n.endswith(ext):
+                    return p.name[: -len(ext)]
+            return p.name
+        logical = {}  # stem -> ¿alguna variante embebida?
         for f in files:
-            k = _logical(f)
+            k = _stem(f)
             logical[k] = logical.get(k, False) or (datarel(str(f)) in emb)
         docs = len(logical)
         enum, dl = manifest_counts(d)
