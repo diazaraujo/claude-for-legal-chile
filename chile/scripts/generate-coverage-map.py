@@ -107,7 +107,7 @@ def main():
         if name == "_index":
             continue
         files = [p for p in d.rglob("*")
-                 if p.suffix.lower() in (".txt", ".html", ".htm", ".pdf") and p.is_file()]
+                 if p.suffix.lower() in (".txt", ".html", ".htm", ".pdf", ".xml") and p.is_file()]
         if not files:
             continue
         # colapsar la sombra de extracción X.pdf.txt con su fuente X.pdf (mismo doc lógico)

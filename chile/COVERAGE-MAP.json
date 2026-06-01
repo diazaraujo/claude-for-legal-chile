@@ -1,7 +1,7 @@
 {
   "generado": "2026-05-30",
   "total_fuentes": 48,
-  "total_docs": 4643960,
+  "total_docs": 4747542,
   "total_embebido": 3884046,
   "fuentes": [
     {
@@ -477,12 +477,12 @@
       "tipo": "Normativa",
       "organismo": "BCN / LeyChile",
       "metodo": "SPARQL+bulk",
-      "docs": 46686,
+      "docs": 131920,
       "enum": 169860,
-      "descargado": 85019,
-      "comp": 50.05239609089839,
+      "descargado": 85227,
+      "comp": 50.174849876368775,
       "embebido": 46686,
-      "emb_pct": 100.0,
+      "emb_pct": 35.4,
       "estado": "parcial"
     },
     {
@@ -620,12 +620,12 @@
       "tipo": "Tramitación",
       "organismo": "Congreso / Cámara",
       "metodo": "WSDL SOAP",
-      "docs": 18348,
+      "docs": 36696,
       "enum": 18349,
       "descargado": 18348,
       "comp": 99.99455011172272,
       "embebido": 18348,
-      "emb_pct": 100.0,
+      "emb_pct": 50.0,
       "estado": "completo"
     }
   ]
