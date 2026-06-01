@@ -35,7 +35,7 @@ def to_text(p: Path) -> str:
         except Exception:
             return ""
     raw = p.read_text(encoding="utf-8", errors="replace")
-    if p.suffix.lower() in (".html", ".htm"):
+    if p.suffix.lower() in (".html", ".htm", ".xml"):
         raw = re.sub(r"<(script|style)[^>]*>.*?</\1>", " ", raw, flags=re.S | re.I)
         raw = _TAG.sub(" ", raw)
     return _WS.sub(" ", raw).strip()

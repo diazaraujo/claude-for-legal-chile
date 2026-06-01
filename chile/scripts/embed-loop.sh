@@ -14,7 +14,7 @@ while true; do
   for d in data/*/; do
     name=$(basename "$d")
     [ "$name" = "_index" ] && continue
-    for ext in txt html htm pdf; do
+    for ext in txt html htm pdf xml; do
       [ -n "$(find "$d" -name "*.$ext" -print -quit 2>/dev/null)" ] || continue
       $EMB --src "$d" --glob "*.$ext" --source "$name" --batch 16 --workers 8
     done
