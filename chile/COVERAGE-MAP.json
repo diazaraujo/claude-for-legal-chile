@@ -479,11 +479,11 @@
       "metodo": "SPARQL+bulk",
       "docs": 46686,
       "enum": 169860,
-      "descargado": 62676,
-      "comp": 36.89862239491346,
+      "descargado": 85019,
+      "comp": 50.05239609089839,
       "embebido": 46686,
       "emb_pct": 100.0,
-      "estado": "bloqueado"
+      "estado": "parcial"
     },
     {
       "fuente": "diario-oficial",
