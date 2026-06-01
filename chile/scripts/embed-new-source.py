@@ -105,6 +105,7 @@ def main() -> int:
 
     # FTS docs (rápido, local) — solo los que faltan en docs_meta
     have_meta = {r[0] for r in c.execute("SELECT path FROM docs_meta").fetchall()}
+    _ins = 0
     for p in files:
         sp = str(p)
         if sp in have_meta:
@@ -113,6 +114,9 @@ def main() -> int:
         c.execute("INSERT OR IGNORE INTO docs(path, content) VALUES (?,?)", (sp, txt))
         c.execute("INSERT OR IGNORE INTO docs_meta(path, source, chars) VALUES (?,?,?)",
                   (sp, args.source, len(txt)))
+        _ins += 1
+        if _ins % 1000 == 0:  # commit incremental: suelta el lock para no starve a otros escritores
+            c.commit()
     c.commit()
 
     # Embed en batches vía GPU (túnel)
