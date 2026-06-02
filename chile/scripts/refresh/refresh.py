@@ -18,7 +18,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]   # chile/
 os.chdir(ROOT)
 
-def manifest_downloaded(rel_manifest, where="downloaded=1"):
+def manifest_downloaded(rel_manifest, where="downloaded>=1"):  # >=1 sirve p/ flag 0/1 y p/ pub-count
     p = ROOT / rel_manifest
     if not p.exists(): return None
     try:
