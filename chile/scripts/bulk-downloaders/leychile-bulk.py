@@ -125,6 +125,25 @@ def _fetch_zyte(url: str, zyte_auth: str, geo: str, timeout: int = 25) -> bytes:
     return base64.b64decode(body_b64) if body_b64 else b""
 
 
+_RAW_CAP = 25  # muestras raw por categoría — evidencia de QUÉ bajamos, sin guardar 46k copias
+def _save_raw(dest: Path, status: str, body: bytes | None) -> None:
+    """Guarda una muestra acotada del cuerpo crudo de respuestas fallidas (stub/tiny)
+    en data/leychile/_raw/, para poder inspeccionar EXACTAMENTE qué devolvió la fuente.
+    Acotado a _RAW_CAP por categoría para no inflar el disco."""
+    try:
+        key = f"_raw_{status}"
+        with _LOCK:
+            n = _STATS.get(key, 0)
+            if n >= _RAW_CAP:
+                return
+            _STATS[key] = n + 1
+        raw_dir = dest.parent.parent / "_raw"
+        raw_dir.mkdir(parents=True, exist_ok=True)
+        (raw_dir / f"{status}-{dest.stem}.bin").write_bytes(body or b"")
+    except Exception:
+        pass
+
+
 def download_xml(
     id_norma: int,
     dest: Path,
@@ -167,9 +186,11 @@ def download_xml(
                     body = r.read()
 
             if not _is_valid_xml(body):
+                _save_raw(dest, "stub", body)   # copia raw para depurar "¿por qué stub?"
                 with _LOCK: _STATS["stub"] += 1
                 return "stub"
             if len(body) < 500:
+                _save_raw(dest, "tiny", body)
                 with _LOCK: _STATS["err"] += 1
                 return "tiny"
             tmp = dest.with_suffix(".tmp")
