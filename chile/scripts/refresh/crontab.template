@@ -1,0 +1,17 @@
+# Refresh corpus claude-for-legal-chile — instalar con: crontab scripts/refresh/crontab.template
+# (hora del Mac = hora Chile). Logs en /tmp/legal-refresh-*.log
+# Cómputo pesado (embed/LLM) corre en enigma vía túnel SSH local 11435.
+SHELL=/bin/bash
+LEGAL=/Volumes/SSD ADA/claude-for-legal-chile/chile
+
+# DIARIA 06:00 — Diario Oficial + Boletín Concursal + PJUD (+ downstream)
+0 6 * * *   cd "$LEGAL" && bash scripts/refresh/refresh-daily.sh   >> /tmp/legal-refresh-daily.log 2>&1
+
+# SEMANAL lunes 05:00 — leychile + dictámenes + jurisprudencia esp. (+ downstream)
+0 5 * * 1   cd "$LEGAL" && bash scripts/refresh/refresh-weekly.sh  >> /tmp/legal-refresh-weekly.log 2>&1
+
+# MENSUAL día 1, 04:00 — doctrina + normativa sectorial + resto (+ downstream)
+0 4 1 * *   cd "$LEGAL" && bash scripts/refresh/refresh-monthly.sh >> /tmp/legal-refresh-monthly.log 2>&1
+
+# Túnel enigma vivo cada 30 min (necesario p/ embed/LLM del downstream)
+*/30 * * * * curl -s --max-time 8 localhost:11435/api/tags >/dev/null || (export SSH_AUTH_SOCK=; nohup ssh -N -o ServerAliveInterval=30 -o ExitOnForwardFailure=yes -L 11435:localhost:11434 antonio@10.0.0.3 >/tmp/tunnel-enigma.log 2>&1 &)

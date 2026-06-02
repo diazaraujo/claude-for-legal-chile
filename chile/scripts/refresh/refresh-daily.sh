@@ -1,0 +1,4 @@
+#!/bin/bash
+cd "/Volumes/SSD ADA/claude-for-legal-chile/chile"
+python3 scripts/refresh/refresh.py --cadence daily
+bash scripts/refresh/refresh-downstream.sh
