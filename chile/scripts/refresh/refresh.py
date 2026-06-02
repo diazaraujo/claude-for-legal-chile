@@ -62,7 +62,6 @@ SOURCES = {
  # DIARIAS
  "diario-oficial":   dict(cadence="daily",  manifest="data/diario-oficial/manifest.sqlite3", cmd=_do_cmd),
  "boletin-concursal":dict(cadence="daily",  manifest=None, cmd=["python3","scripts/bulk-downloaders/boletin-concursal-bulk.py"]),
- # TODO[P1]: pjud incremental por fec_actualiza — scrape-pjud-juris.py aún no tiene --incremental.
  "pjud":             dict(cadence="daily",  manifest=None, cmd=["python3","scripts/scrape-pjud-juris.py","--incremental"]),
  # SEMANALES (idempotentes: re-run baja lo nuevo via manifest skip + geo-rotation)
  "leychile":         dict(cadence="weekly", manifest="data/leychile/manifest.sqlite3", shell=f"{ZK} bash scripts/bulk-downloaders/leychile-persist.sh"),

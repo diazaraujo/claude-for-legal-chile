@@ -253,8 +253,65 @@ def scrape(
     return total_written
 
 
+# ── INCREMENTAL (refresh diario) ─────────────────────────────────────────────
+# Los filtros de fecha NO funcionan (handler los rompe), PERO el orden default es
+# fec_sentencia desc (newest-first). Estrategia: paginar desde el tope y PARAR al
+# llegar al `id` de la sentencia más nueva del último run (boundary/cursor).
+CURSOR_FILE = OUTPUT_ROOT / ".refresh-cursor.json"
+BUSCADORES = ["Corte_Suprema", "Corte_de_Apelaciones", "Laborales",
+              "Cobranza", "Penales", "Familia", "Civiles"]
+
+def _load_cursor() -> dict:
+    try: return json.loads(CURSOR_FILE.read_text())
+    except Exception: return {}
+
+def _save_cursor(c: dict) -> None:
+    CURSOR_FILE.write_text(json.dumps(c, ensure_ascii=False, indent=0))
+
+def incremental_scrape(buscador: str, page_size: int = 100, rate: float = 0.5,
+                       max_pages: int = 300) -> int:
+    """Baja solo las sentencias nuevas (arriba del cursor). Idempotente: escribe
+    a refresh-<ts>.json.gz; el embed/extract downstream dedup por sent_id."""
+    session = PjudSession(buscador)
+    cur = _load_cursor(); boundary = cur.get(buscador)
+    out_dir = OUTPUT_ROOT / buscador; out_dir.mkdir(parents=True, exist_ok=True)
+    filtros = empty_filtros()
+    new_docs = []; newest_id = None; offset = 0; stop = False
+    for _ in range(max_pages):
+        try:
+            data = json.loads(session.buscar(offset, filtros, num_filas=page_size))
+        except urllib.error.HTTPError as e:
+            if e.code in (419, 401, 403): session.refresh(); time.sleep(2); continue
+            print(f"  [{buscador} {offset}] HTTP {e.code}", flush=True); break
+        except Exception as e:
+            print(f"  [{buscador} {offset}] {type(e).__name__}", flush=True); time.sleep(3); continue
+        docs = data.get("response", {}).get("docs", [])
+        if not docs: break
+        for d in docs:
+            did = str(d.get("id"))
+            if newest_id is None: newest_id = did
+            if boundary is None: stop = True; break       # primer run = solo sembrar cursor
+            if did == boundary: stop = True; break         # llegamos a lo ya bajado
+            new_docs.append(d)
+        if stop: break
+        offset += page_size; time.sleep(rate)
+    if new_docs:
+        ts = time.strftime("%Y%m%d-%H%M%S")
+        out = out_dir / f"refresh-{ts}.json.gz"
+        with gzip.open(out, "wb") as f:
+            f.write(json.dumps({"response": {"docs": new_docs}}, ensure_ascii=False).encode("utf-8"))
+        print(f"[incremental {buscador}] +{len(new_docs)} nuevas → {out.name}", flush=True)
+    else:
+        print(f"[incremental {buscador}] 0 nuevas ({'sembrando cursor' if boundary is None else 'al día'})", flush=True)
+    if newest_id:
+        cur[buscador] = newest_id; _save_cursor(cur)
+    return len(new_docs)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
+    parser.add_argument("--incremental", action="store_true",
+                        help="refresh: baja solo sentencias nuevas de TODOS los buscadores (cursor por id)")
     parser.add_argument("--buscador", default="Corte_Suprema",
                         help="Corte_Suprema | Corte_de_Apelaciones | Laborales "
                              "| Cobranza | Penales | Familia | Civiles")
@@ -267,6 +324,13 @@ def main() -> int:
     parser.add_argument("--page-size", type=int, default=100)
     parser.add_argument("--rate", type=float, default=0.5)
     args = parser.parse_args()
+
+    if args.incremental:
+        total = 0
+        for b in BUSCADORES:
+            total += incremental_scrape(b, page_size=args.page_size, rate=args.rate)
+        print(f"\n[INCREMENTAL] +{total} sentencias nuevas en total", flush=True)
+        return 0
 
     return 0 if scrape(
         args.buscador,
