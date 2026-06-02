@@ -112,7 +112,7 @@ def _is_valid_xml(body: bytes) -> bool:
 # NUNCA usar CL (BCN banea IPs chilenas). Orden por confiabilidad medida.
 GEO_ROTATION = ["US", "AR", "CA", "GB", "DE", "BR", "MX", "FR", "ES", "NL", "IT", "PL"]
 
-def _fetch_zyte(url: str, zyte_auth: str, geo: str, timeout: int = 60) -> bytes:
+def _fetch_zyte(url: str, zyte_auth: str, geo: str, timeout: int = 25) -> bytes:
     payload = {"url": url, "httpResponseBody": True, "geolocation": geo}
     req = urllib.request.Request(
         ZYTE_API, data=json.dumps(payload).encode(),
@@ -130,7 +130,7 @@ def download_xml(
     dest: Path,
     zyte_auth: str | None = None,
     rate_seconds: float = 1.0,
-    max_retries: int = 2,
+    max_retries: int = 1,
 ) -> str:
     if dest.exists() and dest.stat().st_size > 500:
         with _LOCK: _STATS["skip"] += 1
@@ -244,11 +244,17 @@ def main() -> int:
         )
     conn.commit()
 
-    pending = [
-        e for e in entries
-        if (conn.execute("SELECT downloaded FROM normas WHERE id_norma=?",
-                         (e[0],)).fetchone() or (0,))[0] == 0
-    ]
+    # Excluir status TERMINALES (norma movida/inexistente) para no re-molerlos en
+    # cada run. stub/404/http4xx no van a bajar nunca como XML → fuera de la cola.
+    # Reintentables: status NULL (nunca tocado) + err/ban/tiny/http5xx (transitorios).
+    def _terminal(st):
+        return st in ("stub", "404") or (st or "").startswith("http4")
+    pending = []
+    for e in entries:
+        row = conn.execute("SELECT downloaded, status FROM normas WHERE id_norma=?",
+                           (e[0],)).fetchone() or (0, None)
+        if row[0] == 0 and not _terminal(row[1]):
+            pending.append(e)
     if args.max > 0:
         pending = pending[:args.max]
     print(f"\n[FASE 2] Descargando {len(pending)} XMLs...", flush=True)
@@ -262,17 +268,19 @@ def main() -> int:
             id_norma, dest, zyte_auth=zyte_auth,
             rate_seconds=args.rate_seconds,
         )
-        if status in ("ok", "skip"):
-            c = sqlite3.connect(str(db_path), timeout=30)
-            try:
-                size = dest.stat().st_size if dest.exists() else 0
-                c.execute(
-                    "UPDATE normas SET downloaded=1, size=?, status=? "
-                    "WHERE id_norma=?", (size, status, id_norma),
-                )
-                c.commit()
-            finally:
-                c.close()
+        # Persistir SIEMPRE el status (no solo ok/skip): así los terminales
+        # (stub/404/http4xx) quedan registrados y salen de la cola para siempre.
+        done = 1 if status in ("ok", "skip") else 0
+        c = sqlite3.connect(str(db_path), timeout=30)
+        try:
+            size = dest.stat().st_size if (done and dest.exists()) else 0
+            c.execute(
+                "UPDATE normas SET downloaded=?, size=?, status=? "
+                "WHERE id_norma=?", (done, size, status, id_norma),
+            )
+            c.commit()
+        finally:
+            c.close()
         return id_norma, status
 
     start = time.time()
