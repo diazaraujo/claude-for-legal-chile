@@ -112,7 +112,7 @@ def _is_valid_xml(body: bytes) -> bool:
 # NUNCA usar CL (BCN banea IPs chilenas). Orden por confiabilidad medida.
 GEO_ROTATION = ["US", "AR", "CA", "GB", "DE", "BR", "MX", "FR", "ES", "NL", "IT", "PL"]
 
-def _fetch_zyte(url: str, zyte_auth: str, geo: str, timeout: int = 25) -> bytes:
+def _fetch_zyte(url: str, zyte_auth: str, geo: str, timeout: int = 12) -> bytes:
     payload = {"url": url, "httpResponseBody": True, "geolocation": geo}
     req = urllib.request.Request(
         ZYTE_API, data=json.dumps(payload).encode(),
