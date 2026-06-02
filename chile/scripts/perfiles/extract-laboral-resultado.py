@@ -34,19 +34,22 @@ PJUD   = "data/pjud/Laborales"
 OUT    = "data/_index/perfiles.sqlite3"
 
 BR=re.compile(r"<br\s*/?>",re.I); TAG=re.compile(r"<[^>]+>")
-RESULT={"acogida","rechazada","acogida_parcial","conciliacion","desistimiento","no_aplica"}
+RESULT={"acogida","rechazada","acogida_parcial","conciliacion","avenimiento","desistimiento","no_aplica"}
 VIA={"apelacion","nulidad","ninguna","desconocido"}
+PROC={"ordinario","monitorio","tutela","otro"}
 
 PROMPT=('Eres analista de sentencias laborales chilenas. Del TEXTO (encabezado + parte resolutiva) '
 'extrae el resultado del juicio en JSON. Campos:\n'
-'- resultado: uno de acogida|rechazada|acogida_parcial|conciliacion|desistimiento|no_aplica '
+'- procedimiento: ordinario|monitorio|tutela|otro (por el RIT/tipo: O-=ordinario, M-=monitorio, T-=tutela).\n'
+'- resultado: acogida|rechazada|acogida_parcial|conciliacion|avenimiento|desistimiento|no_aplica '
 '(acogida=demanda del trabajador acogida/empresa condenada; rechazada=demanda rechazada/empresa absuelta).\n'
-'- materias: lista de despido_injustificado|despido_indebido|nulidad_despido|autodespido|cobro_prestaciones|tutela_derechos_fundamentales|accidente_trabajo|practica_antisindical|otra.\n'
-'- monto_total_clp: suma total que se condena a pagar en pesos (entero) o null.\n'
-'- defensas_empleador: lista de necesidades_empresa_art161|falta_probidad|incumplimiento_grave|caso_fortuito|vencimiento_plazo|conclusion_trabajo|niega_relacion_laboral|otra (las que invoque la empresa demandada).\n'
+'- materias: lista de despido_injustificado|despido_indebido|nulidad_despido|autodespido|cobro_prestaciones|feriados|remuneraciones|indemnizaciones|recargos|tutela_derechos_fundamentales|accidente_trabajo|dano_moral|practica_antisindical|otra.\n'
+'- monto_solicitado_clp: total demandado por el trabajador en pesos (entero) o null.\n'
+'- monto_acogido_clp: total que la sentencia condena a pagar en pesos (entero) o null.\n'
+'- defensas_empleador: lista de necesidades_empresa_art161|falta_probidad|incumplimiento_grave|caso_fortuito|vencimiento_plazo|conclusion_trabajo|niega_relacion_laboral|otra.\n'
 '- via_recursiva: apelacion|nulidad|ninguna|desconocido.\n'
 'No inventes. Si no consta, usa null o "desconocido". Responde SOLO JSON: '
-'{"resultado":"...","materias":[],"monto_total_clp":null,"defensas_empleador":[],"via_recursiva":"..."}\n\nTEXTO:\n')
+'{"procedimiento":"...","resultado":"...","materias":[],"monto_solicitado_clp":null,"monto_acogido_clp":null,"defensas_empleador":[],"via_recursiva":"..."}\n\nTEXTO:\n')
 
 def to_text(t):
     if isinstance(t,list): t=" ".join(map(str,t))
@@ -73,15 +76,17 @@ def llm(sec, retries=2):
             o=json.loads(urllib.request.urlopen(urllib.request.Request(
                 OLLAMA,data=body,headers={"Content-Type":"application/json"}),timeout=180).read())
             d=json.loads(o.get("response","{}"))
+            proc=str(d.get("procedimiento","otro")).strip().lower()
+            if proc not in PROC: proc="otro"
             res=str(d.get("resultado","")).strip().lower()
             if res not in RESULT: res="no_aplica"
             via=str(d.get("via_recursiva","desconocido")).strip().lower()
             if via not in VIA: via="desconocido"
             mats=[str(m).strip().lower() for m in (d.get("materias") or []) if str(m).strip()][:6]
             defs=[str(x).strip().lower() for x in (d.get("defensas_empleador") or []) if str(x).strip()][:6]
-            monto=d.get("monto_total_clp")
-            monto=int(monto) if isinstance(monto,(int,float)) else None
-            return res, ",".join(mats), monto, ",".join(defs), via
+            def _money(k):
+                v=d.get(k); return int(v) if isinstance(v,(int,float)) else None
+            return proc, res, ",".join(mats), _money("monto_solicitado_clp"), _money("monto_acogido_clp"), ",".join(defs), via
         except Exception:
             time.sleep(1.5*(i+1))
     return None
@@ -89,8 +94,8 @@ def llm(sec, retries=2):
 def init_db(p):
     c=sqlite3.connect(p,timeout=120); c.execute("PRAGMA busy_timeout=120000")
     c.execute("""CREATE TABLE IF NOT EXISTS laboral_resultado(
-        sent_id TEXT PRIMARY KEY, anio INTEGER, resultado TEXT, materias TEXT,
-        monto_total_clp INTEGER, defensas TEXT, via_recursiva TEXT)""")
+        sent_id TEXT PRIMARY KEY, anio INTEGER, procedimiento TEXT, resultado TEXT, materias TEXT,
+        monto_solicitado_clp INTEGER, monto_acogido_clp INTEGER, defensas TEXT, via_recursiva TEXT)""")
     c.execute("CREATE INDEX IF NOT EXISTS ix_lr_res ON laboral_resultado(resultado)")
     c.commit(); return c
 
@@ -120,9 +125,9 @@ def main():
                     # error LLM (no texto-corto) → no marcar, reintentar luego
                     if len(to_text(r.get("texto_sentencia") or "") )>=300: continue
                 anio=r.get("sent__FEC_ANIO_i")
-                row=(sid,anio,*(out if out else ("no_aplica","",None,"","desconocido")))
+                row=(sid,anio,*(out if out else ("otro","no_aplica","",None,None,"","desconocido")))
                 with lock:
-                    c.execute("INSERT OR REPLACE INTO laboral_resultado VALUES(?,?,?,?,?,?,?)",row)
+                    c.execute("INSERT OR REPLACE INTO laboral_resultado VALUES(?,?,?,?,?,?,?,?,?)",row)
                     c.commit()
                 proc+=1
                 if proc%50==0:
