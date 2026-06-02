@@ -13,7 +13,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data/pjud"
 DB = ROOT / "data/_index/new-sources.fts.sqlite3"
-OLLAMA = "http://localhost:11434/api/embed"
+import os
+OLLAMA = os.environ.get("OLLAMA_EMBED_URL", "http://localhost:11434/api/embed")
 MODEL = "bge-m3"
 MAX_CHARS = 1500
 _TAG = re.compile(r"<[^>]+>")

@@ -10,7 +10,7 @@ después. Idempotente.
 Ej: python embed-new-source.py --src data/cgr-dictamenes/dictamenes --glob '*.txt' --source cgr-dictamenes
 """
 from __future__ import annotations
-import argparse, json, re, sqlite3, struct, subprocess, sys, time
+import argparse, json, os, re, sqlite3, struct, subprocess, sys, time
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
@@ -18,7 +18,7 @@ from threading import Lock
 
 _REPO_ROOT = Path(__file__).resolve().parents[2]
 DB = _REPO_ROOT / "chile/data/_index/new-sources.fts.sqlite3"
-OLLAMA = "http://localhost:11434/api/embed"
+OLLAMA = os.environ.get("OLLAMA_EMBED_URL", "http://localhost:11434/api/embed")
 MODEL = "bge-m3"
 MAX_CHARS = 1500
 _TAG = re.compile(r"<[^>]+>")
