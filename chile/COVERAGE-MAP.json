@@ -1,8 +1,8 @@
 {
-  "generado": "2026-05-30",
+  "generado": "2026-06-02",
   "total_fuentes": 51,
-  "total_docs": 4689502,
-  "total_embebido": 3941545,
+  "total_docs": 4690186,
+  "total_embebido": 4204265,
   "fuentes": [
     {
       "fuente": "tta",
@@ -132,7 +132,7 @@
       "comp": 100.0,
       "embebido": 16021,
       "emb_pct": 100.0,
-      "estado": "indexado"
+      "estado": "completo"
     },
     {
       "fuente": "dt",
@@ -158,7 +158,7 @@
       "comp": 100.0,
       "embebido": 8282,
       "emb_pct": 100.0,
-      "estado": "indexado"
+      "estado": "completo"
     },
     {
       "fuente": "indh",
@@ -262,7 +262,7 @@
       "comp": 100.0,
       "embebido": 1159700,
       "emb_pct": 100.0,
-      "estado": "indexado"
+      "estado": "completo"
     },
     {
       "fuente": "pjud/Civiles",
@@ -275,7 +275,7 @@
       "comp": 100.0,
       "embebido": 679300,
       "emb_pct": 100.0,
-      "estado": "indexado"
+      "estado": "completo"
     },
     {
       "fuente": "pjud/Penales",
@@ -288,7 +288,7 @@
       "comp": 100.0,
       "embebido": 592900,
       "emb_pct": 100.0,
-      "estado": "indexado"
+      "estado": "completo"
     },
     {
       "fuente": "pjud/Familia",
@@ -301,7 +301,7 @@
       "comp": 100.0,
       "embebido": 373000,
       "emb_pct": 100.0,
-      "estado": "indexado"
+      "estado": "completo"
     },
     {
       "fuente": "pjud/Corte_Suprema",
@@ -314,7 +314,7 @@
       "comp": 100.0,
       "embebido": 287500,
       "emb_pct": 100.0,
-      "estado": "indexado"
+      "estado": "completo"
     },
     {
       "fuente": "pjud/Laborales",
@@ -327,7 +327,7 @@
       "comp": 100.0,
       "embebido": 235300,
       "emb_pct": 100.0,
-      "estado": "indexado"
+      "estado": "completo"
     },
     {
       "fuente": "pjud/Cobranza",
@@ -340,7 +340,7 @@
       "comp": 100.0,
       "embebido": 26300,
       "emb_pct": 100.0,
-      "estado": "indexado"
+      "estado": "completo"
     },
     {
       "fuente": "fne",
@@ -384,7 +384,7 @@
     {
       "fuente": "tribunal-ambiental",
       "tipo": "Jurisprudencia",
-      "organismo": "Tribunal Ambiental (SOFOFA)",
+      "organismo": "Tribunal Ambiental",
       "metodo": "rsync Enigma",
       "docs": 1556,
       "enum": null,
@@ -392,7 +392,7 @@
       "comp": 100.0,
       "embebido": 1553,
       "emb_pct": 99.8,
-      "estado": "indexado"
+      "estado": "completo"
     },
     {
       "fuente": "tribunales-ambientales",
@@ -490,13 +490,13 @@
       "tipo": "Normativa",
       "organismo": "BCN / LeyChile",
       "metodo": "SPARQL+bulk",
-      "docs": 119166,
+      "docs": 119850,
       "enum": 169860,
-      "descargado": 119166,
-      "comp": 70.1554221123278,
+      "descargado": 119859,
+      "comp": 70.56340515718827,
       "embebido": 118764,
-      "emb_pct": 99.7,
-      "estado": "parcial"
+      "emb_pct": 99.1,
+      "estado": "completo"
     },
     {
       "fuente": "diario-oficial",
@@ -535,7 +535,7 @@
       "comp": 100.0,
       "embebido": 2285,
       "emb_pct": 100.0,
-      "estado": "indexado"
+      "estado": "completo"
     },
     {
       "fuente": "cmf",
@@ -631,7 +631,7 @@
     {
       "fuente": "recursos-administrativos",
       "tipo": "Recursos adm.",
-      "organismo": "Recursos administrativos (SOFOFA)",
+      "organismo": "Recursos administrativos SEA",
       "metodo": "rsync+pdftotext",
       "docs": 5459,
       "enum": null,
@@ -639,7 +639,7 @@
       "comp": 100.0,
       "embebido": 5459,
       "emb_pct": 100.0,
-      "estado": "indexado"
+      "estado": "completo"
     },
     {
       "fuente": "boletin-concursal",
@@ -650,9 +650,9 @@
       "enum": 747552,
       "descargado": 747552,
       "comp": 100.0,
-      "embebido": 0,
-      "emb_pct": 0.0,
-      "estado": "indexado"
+      "embebido": 262720,
+      "emb_pct": 35.1,
+      "estado": "indexando"
     },
     {
       "fuente": "historia-ley",

@@ -48,8 +48,8 @@ META = {
  "cam-santiago":("Jurisprudencia","CAM Santiago (arbitral)","BFS crawl"),
  "historia-ley":("Tramitación","Congreso / Cámara","WSDL SOAP"),
  # añadidas 2026-06-01/02 (SOFOFA ambiental + DO histórico)
- "tribunal-ambiental":("Jurisprudencia","Tribunal Ambiental (SOFOFA)","rsync Enigma"),
- "recursos-administrativos":("Recursos adm.","Recursos administrativos (SOFOFA)","rsync+pdftotext"),
+ "tribunal-ambiental":("Jurisprudencia","Tribunal Ambiental","rsync Enigma"),
+ "recursos-administrativos":("Recursos adm.","Recursos administrativos SEA","rsync+pdftotext"),
  "diario-oficial-historico":("Normativa","Diario Oficial histórico 1877-2016","scrape do/do-h"),
 }
 
@@ -136,13 +136,18 @@ def main():
         tipo, org, metodo = META.get(name, ("?", name, "?"))
         # completitud de descarga
         comp = (dl/enum*100) if (enum and dl is not None and enum > 0) else (100.0 if dl is None else None)
-        # estado de calidad
-        if enum and dl is not None and enum > 0:
-            r = dl/enum
-            estado = "completo" if r >= 0.95 else ("parcial" if r >= 0.5 else "bloqueado")
-        else:
-            estado = "indexado"
         emb_pct = (n_emb/docs*100) if docs else 0
+        # ESTADO = searchability (lo que importa para el producto): ¿está en el índice?
+        # NO confundir con descarga (eso es la columna COMPLETITUD). Todo lo embebido
+        # al ~100% = "completo/searchable", tenga o no manifest de descarga.
+        if emb_pct >= 95:
+            estado = "completo"
+        elif emb_pct >= 50:
+            estado = "parcial"
+        elif n_emb > 0:
+            estado = "indexando"
+        else:
+            estado = "pendiente"
         rows.append(dict(fuente=name, tipo=tipo, organismo=org, metodo=metodo,
                          docs=docs, enum=enum, descargado=dl, comp=comp,
                          embebido=n_emb, emb_pct=round(emb_pct,1), estado=estado))
@@ -175,20 +180,24 @@ def main():
             rows.append(dict(fuente=f"pjud/{sub.name}", tipo="Jurisprudencia",
                              organismo=f"PJUD · {LABEL.get(sub.name, sub.name)}", metodo="Solr juris.pjud.cl",
                              docs=docs, enum=docs, descargado=docs, comp=100.0,
-                             embebido=docs, emb_pct=100.0, estado="indexado"))
+                             embebido=docs, emb_pct=100.0, estado="completo"))
 
     # Boletín Concursal: registros en tabla estructurada `concursal` (no archivos sueltos)
     try:
         import sqlite3
-        cdb = sqlite3.connect(str(DATA / "_index/new-sources.fts.sqlite3"), timeout=30)
+        cdb = sqlite3.connect(f"file:{DATA}/_index/new-sources.fts.sqlite3?mode=ro", uri=True, timeout=30)
         nconc = cdb.execute("SELECT count(*) FROM concursal").fetchone()[0]
+        # contar embeddings REALES del concursal (no hardcodear 0)
+        nconc_emb = cdb.execute("SELECT count(*) FROM embeddings WHERE path LIKE 'boletin-concursal/%'").fetchone()[0]
         cdb.close()
         if nconc:
+            pct = round(100*nconc_emb/nconc,1) if nconc else 0
+            est = "completo" if pct>=95 else ("parcial" if pct>=50 else ("indexando" if nconc_emb>0 else "pendiente"))
             rows.append(dict(fuente="boletin-concursal", tipo="Registro público",
                              organismo="Boletín Concursal · Superir (Ley 20.720)",
                              metodo="POST getRegistroDiarioPublicacionJson",
                              docs=nconc, enum=nconc, descargado=nconc, comp=100.0,
-                             embebido=0, emb_pct=0.0, estado="indexado"))
+                             embebido=nconc_emb, emb_pct=pct, estado=est))
     except Exception:
         pass
 
@@ -196,7 +205,8 @@ def main():
     rows.sort(key=lambda r: (r["tipo"], -r["docs"]))
     total_docs = sum(r["docs"] for r in rows)
     total_emb = sum(r["embebido"] for r in rows)
-    out = dict(generado="2026-05-30", total_fuentes=len(rows), total_docs=total_docs,
+    import datetime as _dt
+    out = dict(generado=_dt.date.today().isoformat(), total_fuentes=len(rows), total_docs=total_docs,
                total_embebido=total_emb, fuentes=rows)
     (ROOT/"COVERAGE-MAP.json").write_text(json.dumps(out, ensure_ascii=False, indent=2))
     (ROOT/"COVERAGE-MAP.html").write_text(render_html(out))
@@ -257,7 +267,7 @@ th{{background:#f6f8fa;font-size:11px;text-transform:uppercase;letter-spacing:.0
 {''.join(rows_html)}
 </tbody></table>
 <div class="leg">Completitud = descargado/enumerado · Estado: <b>completo</b> ≥95% · <b>parcial</b> ≥50% ·
-<b>bloqueado</b> &lt;50% · <b>indexado</b> sin manifest. % Embeb. = docs con vector bge-m3 (searchable).</div>
+ESTADO = searchability (% embebido): <b>completo</b> ≥95% searchable · <b>parcial</b> ≥50% · <b>indexando</b> en curso. COMPLETITUD = descarga (descargado/enumerado). % Embeb. = docs con vector bge-m3 (searchable).</div>
 </div></body></html>"""
 
 
