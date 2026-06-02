@@ -125,16 +125,18 @@ def _fetch_zyte(url: str, zyte_auth: str, geo: str, timeout: int = 25) -> bytes:
     return base64.b64decode(body_b64) if body_b64 else b""
 
 
-_RAW_CAP = 25  # muestras raw por categoría — evidencia de QUÉ bajamos, sin guardar 46k copias
+# PATRÓN (Antonio 2026-06-02): bajar y guardar TODO el raw, sin tope. La copia
+# cruda completa de lo descargado —incl. respuestas fallidas— es la fuente de verdad
+# para depurar. Ver [[feedback_copia_raw_de_descargas]]. Override con env LEYCHILE_RAW_CAP.
+_RAW_CAP = int(os.environ.get("LEYCHILE_RAW_CAP", "0")) or None  # None = sin tope (todo)
 def _save_raw(dest: Path, status: str, body: bytes | None) -> None:
-    """Guarda una muestra acotada del cuerpo crudo de respuestas fallidas (stub/tiny)
-    en data/leychile/_raw/, para poder inspeccionar EXACTAMENTE qué devolvió la fuente.
-    Acotado a _RAW_CAP por categoría para no inflar el disco."""
+    """Guarda el cuerpo crudo de respuestas fallidas (stub/tiny) en data/leychile/_raw/,
+    para inspeccionar EXACTAMENTE qué devolvió la fuente. Por defecto sin tope (todo)."""
     try:
         key = f"_raw_{status}"
         with _LOCK:
             n = _STATS.get(key, 0)
-            if n >= _RAW_CAP:
+            if _RAW_CAP is not None and n >= _RAW_CAP:
                 return
             _STATS[key] = n + 1
         raw_dir = dest.parent.parent / "_raw"

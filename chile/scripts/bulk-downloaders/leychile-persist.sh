@@ -8,7 +8,7 @@ while true; do
   python3 scripts/bulk-downloaders/leychile-bulk.py --workers 6 --zyte
   now=$(sqlite3 data/leychile/manifest.sqlite3 "SELECT COUNT(*) FROM normas WHERE downloaded=1;")
   echo "===== pasada completa · downloaded=$now (antes=$prev) · $(date '+%H:%M:%S') ====="
-  [ "$now" -le "$prev" ] && { echo "Sin progreso nuevo → leychile COMPLETO (lo que falta son 404/bans-todas-las-geos)"; break; }
+  [ "${now:-0}" -le "$prev" ] && { echo "Sin progreso nuevo → leychile COMPLETO (lo que falta son 404/bans-todas-las-geos)"; break; }
   prev=$now
   sleep 10
 done
