@@ -111,7 +111,10 @@ def _fetch_zyte(url: str, zyte_auth: str, timeout: int = 60) -> bytes:
     # NOTA: NO usar geolocation=CL — CloudFront WAF de BCN bloquea
     # agresivamente IPs chilenas (520 Website Ban). Auto/US/AR funcionan
     # con t~0.7s. Descubierto 2026-05-22.
-    payload = {"url": url, "httpResponseBody": True}
+    # FIX 2026-06-02: forzar geolocation=US. Sin fijarla, Zyte "auto" cae a
+    # veces en IPs baneadas → ~19% de 520 + latencias 15-70s. Con US: recupera
+    # los bans y baja a 1-3s (medido en normas 9/48 que daban 520 → XML✓).
+    payload = {"url": url, "httpResponseBody": True, "geolocation": "US"}
     req = urllib.request.Request(
         ZYTE_API, data=json.dumps(payload).encode(),
         headers={"Authorization": f"Basic {zyte_auth}",
