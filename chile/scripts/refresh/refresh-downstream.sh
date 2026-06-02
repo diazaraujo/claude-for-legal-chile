@@ -28,4 +28,6 @@ python3 scripts/perfiles/aggregate-jueces.py --min-causas 5 || true
 echo "=== (5) VERIFICACIÓN: coverage map + audit embeddings ==="
 python3 scripts/generate-coverage-map.py || true
 python3 scripts/audit-embeddings.py | tail -20 || true
+echo "=== (5b) FRESCURA por fuente ==="
+python3 scripts/refresh/check-frescura.py || true
 echo "=== DOWNSTREAM completo · $(date '+%H:%M:%S') ==="

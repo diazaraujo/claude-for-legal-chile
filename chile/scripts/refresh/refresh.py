@@ -72,8 +72,9 @@ SOURCES = {
  "tta":              dict(cadence="weekly", manifest=None, cmd=["python3","scripts/bulk-downloaders/tta-bulk.py"]),
  "tdlc":             dict(cadence="weekly", manifest=None, cmd=["python3","scripts/bulk-downloaders/tdlc-bulk.py"]),
  "fne":              dict(cadence="weekly", manifest=None, cmd=["python3","scripts/bulk-downloaders/fne-bulk.py"]),
- # TODO[P2]: aduanas se bajó con site-crawl-bfs.py (necesita URL seed) — confirmar invocación.
- "aduanas":          dict(cadence="weekly", manifest=None, cmd=["python3","scripts/site-crawl-bfs.py","--aduanas"]),
+ # aduanas: BFS crawl genérico sobre aduana.cl/aduana.gob.cl. Refresh MANUAL:
+ #   python3 scripts/site-crawl-bfs.py <url-jurisprudencia-aduana> data/aduanas (confirmar URL seed).
+ "aduanas":          dict(cadence="manual", manifest=None, cmd=None),
  "sii-oficios":      dict(cadence="weekly", manifest=None, shell=f"{ZK} python3 scripts/bulk-downloaders/sii-oficios-bulk.py"),
  # MENSUALES (resto idempotente)
  "doctrina":         dict(cadence="monthly",manifest=None, cmd=["python3","scripts/scrape-doctrina-oai.py"]),
@@ -89,6 +90,8 @@ def run_one(name, cfg):
     print(f"\n=== REFRESH {name} ({cfg['cadence']}) · {time.strftime('%H:%M:%S')} ===", flush=True)
     before = manifest_downloaded(cfg["manifest"]) if cfg.get("manifest") else None
     cmd = cfg.get("cmd"); shell = cfg.get("shell")
+    if not cmd and not shell:
+        print(f"  {name}: refresh MANUAL (ver config) — SKIP"); return ("manual", 0)
     if callable(cmd): cmd = cmd()
     script = (cmd[1] if cmd and len(cmd) > 1 else "") or shell
     if cmd and not Path(ROOT/cmd[1]).exists() and not shell:
