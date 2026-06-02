@@ -173,10 +173,13 @@ def download_xml(
                         last_ban = False
                         break
                     except urllib.error.HTTPError as e:
-                        if e.code == 520:             # ban en esta geo → siguiente
-                            last_ban = True; continue
-                        raise
-                if body is None:                      # todas las geos baneadas
+                        if e.code == 404:             # 404 real → terminal, no rotar
+                            with _LOCK: _STATS["404"] += 1
+                            return "404"
+                        last_ban = True; continue     # 520 u otro HTTP → siguiente geo
+                    except Exception:                 # 🔑 FIX: timeout/conexión → SIGUIENTE GEO
+                        last_ban = True; continue     # (antes abortaba toda la rotación y reintentaba la MISMA geo)
+                if body is None:                      # todas las geos fallaron (ban/timeout en todas)
                     with _LOCK: _STATS["ban"] += 1
                     return "ban"
             else:
