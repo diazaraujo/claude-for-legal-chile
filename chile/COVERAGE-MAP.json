@@ -1,8 +1,8 @@
 {
   "generado": "2026-05-30",
-  "total_fuentes": 48,
-  "total_docs": 4646299,
-  "total_embebido": 3860162,
+  "total_fuentes": 51,
+  "total_docs": 4689502,
+  "total_embebido": 3941545,
   "fuentes": [
     {
       "fuente": "tta",
@@ -382,6 +382,19 @@
       "estado": "completo"
     },
     {
+      "fuente": "tribunal-ambiental",
+      "tipo": "Jurisprudencia",
+      "organismo": "Tribunal Ambiental (SOFOFA)",
+      "metodo": "rsync Enigma",
+      "docs": 1556,
+      "enum": null,
+      "descargado": null,
+      "comp": 100.0,
+      "embebido": 1553,
+      "emb_pct": 99.8,
+      "estado": "indexado"
+    },
+    {
       "fuente": "tribunales-ambientales",
       "tipo": "Jurisprudencia",
       "organismo": "Trib. Ambientales",
@@ -477,12 +490,12 @@
       "tipo": "Normativa",
       "organismo": "BCN / LeyChile",
       "metodo": "SPARQL+bulk",
-      "docs": 85263,
+      "docs": 119166,
       "enum": 169860,
-      "descargado": 85265,
-      "comp": 50.197221241022014,
-      "embebido": 46678,
-      "emb_pct": 54.7,
+      "descargado": 119166,
+      "comp": 70.1554221123278,
+      "embebido": 118764,
+      "emb_pct": 99.7,
       "estado": "parcial"
     },
     {
@@ -510,6 +523,19 @@
       "embebido": 2786,
       "emb_pct": 100.0,
       "estado": "completo"
+    },
+    {
+      "fuente": "diario-oficial-historico",
+      "tipo": "Normativa",
+      "organismo": "Diario Oficial histórico 1877-2016",
+      "metodo": "scrape do/do-h",
+      "docs": 2285,
+      "enum": 2257,
+      "descargado": null,
+      "comp": 100.0,
+      "embebido": 2285,
+      "emb_pct": 100.0,
+      "estado": "indexado"
     },
     {
       "fuente": "cmf",
@@ -601,6 +627,19 @@
       "embebido": 73,
       "emb_pct": 100.0,
       "estado": "completo"
+    },
+    {
+      "fuente": "recursos-administrativos",
+      "tipo": "Recursos adm.",
+      "organismo": "Recursos administrativos (SOFOFA)",
+      "metodo": "rsync+pdftotext",
+      "docs": 5459,
+      "enum": null,
+      "descargado": null,
+      "comp": 100.0,
+      "embebido": 5459,
+      "emb_pct": 100.0,
+      "estado": "indexado"
     },
     {
       "fuente": "boletin-concursal",

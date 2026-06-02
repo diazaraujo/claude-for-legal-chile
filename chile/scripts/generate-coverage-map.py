@@ -47,6 +47,10 @@ META = {
  "servel":("Normativa sect.","SERVEL (electoral)","BFS crawl"),
  "cam-santiago":("Jurisprudencia","CAM Santiago (arbitral)","BFS crawl"),
  "historia-ley":("Tramitación","Congreso / Cámara","WSDL SOAP"),
+ # añadidas 2026-06-01/02 (SOFOFA ambiental + DO histórico)
+ "tribunal-ambiental":("Jurisprudencia","Tribunal Ambiental (SOFOFA)","rsync Enigma"),
+ "recursos-administrativos":("Recursos adm.","Recursos administrativos (SOFOFA)","rsync+pdftotext"),
+ "diario-oficial-historico":("Normativa","Diario Oficial histórico 1877-2016","scrape do/do-h"),
 }
 
 
