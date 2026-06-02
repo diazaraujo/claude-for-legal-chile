@@ -107,14 +107,13 @@ def _is_valid_xml(body: bytes) -> bool:
     )
 
 
-def _fetch_zyte(url: str, zyte_auth: str, timeout: int = 60) -> bytes:
-    # NOTA: NO usar geolocation=CL — CloudFront WAF de BCN bloquea
-    # agresivamente IPs chilenas (520 Website Ban). Auto/US/AR funcionan
-    # con t~0.7s. Descubierto 2026-05-22.
-    # FIX 2026-06-02: forzar geolocation=US. Sin fijarla, Zyte "auto" cae a
-    # veces en IPs baneadas → ~19% de 520 + latencias 15-70s. Con US: recupera
-    # los bans y baja a 1-3s (medido en normas 9/48 que daban 520 → XML✓).
-    payload = {"url": url, "httpResponseBody": True, "geolocation": "US"}
+# 🥇 ROTACIÓN DE GEOLOCALIZACIONES (regla de oro persistencia anti-ban):
+# si una geo da 520 (Website Ban del WAF de BCN), probar la siguiente, y así.
+# NUNCA usar CL (BCN banea IPs chilenas). Orden por confiabilidad medida.
+GEO_ROTATION = ["US", "AR", "CA", "GB", "DE", "BR", "MX", "FR", "ES", "NL", "IT", "PL"]
+
+def _fetch_zyte(url: str, zyte_auth: str, geo: str, timeout: int = 60) -> bytes:
+    payload = {"url": url, "httpResponseBody": True, "geolocation": geo}
     req = urllib.request.Request(
         ZYTE_API, data=json.dumps(payload).encode(),
         headers={"Authorization": f"Basic {zyte_auth}",
@@ -138,13 +137,27 @@ def download_xml(
         return "skip"
     dest.parent.mkdir(parents=True, exist_ok=True)
 
+    # 🥇 Persistencia anti-ban: si zyte, rotar por TODAS las geos en GEO_ROTATION
+    # ante un 520; solo se declara "ban" si TODAS las geos fallan. Sin zyte, directo.
+    geos = GEO_ROTATION if zyte_auth else [None]
     for attempt in range(max_retries + 1):
         _rate_wait(rate_seconds)
         try:
-            # www.leychile.cl ahora redirige ("sitio fue movido") → usar el
-            # endpoint vigente www.bcn.cl/leychile, que sirve el XML real.
+            body = None
             if zyte_auth:
-                body = _fetch_zyte(BCN_BASE_URL + str(id_norma), zyte_auth)
+                last_ban = False
+                for geo in geos:                     # rotación de geolocalizaciones
+                    try:
+                        body = _fetch_zyte(BCN_BASE_URL + str(id_norma), zyte_auth, geo)
+                        last_ban = False
+                        break
+                    except urllib.error.HTTPError as e:
+                        if e.code == 520:             # ban en esta geo → siguiente
+                            last_ban = True; continue
+                        raise
+                if body is None:                      # todas las geos baneadas
+                    with _LOCK: _STATS["ban"] += 1
+                    return "ban"
             else:
                 req = urllib.request.Request(
                     BCN_BASE_URL + str(id_norma),
@@ -171,12 +184,6 @@ def download_xml(
             if e.code == 404:
                 with _LOCK: _STATS["404"] += 1
                 return "404"
-            if e.code == 520:
-                # Zyte Website Ban — sin retry, sin global backoff. El
-                # global backoff paraliza todos los workers; mejor skip
-                # y reintentar en próximo run idempotente.
-                with _LOCK: _STATS["ban"] += 1
-                return "ban"
             with _LOCK: _STATS["err"] += 1
             return f"http{e.code}"
         except Exception:
