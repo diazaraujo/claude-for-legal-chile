@@ -85,7 +85,12 @@ def llm(sec, retries=2):
             mats=[str(m).strip().lower() for m in (d.get("materias") or []) if str(m).strip()][:6]
             defs=[str(x).strip().lower() for x in (d.get("defensas_empleador") or []) if str(x).strip()][:6]
             def _money(k):
-                v=d.get(k); return int(v) if isinstance(v,(int,float)) else None
+                v=d.get(k)
+                if not isinstance(v,(int,float)): return None
+                try: iv=int(v)
+                except (ValueError,OverflowError): return None
+                # cap a rango razonable; >10^15 CLP es alucinación/parse error → None
+                return iv if 0<=iv<10**15 else None
             return proc, res, ",".join(mats), _money("monto_solicitado_clp"), _money("monto_acogido_clp"), ",".join(defs), via
         except Exception:
             time.sleep(1.5*(i+1))
