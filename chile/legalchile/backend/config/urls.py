@@ -1,7 +1,6 @@
 from django.contrib import admin
 from django.urls import path
 from ninja import NinjaAPI
-from ninja_jwt.authentication import HttpBearer
 from ninja_jwt.controller import NinjaJWTDefaultController
 from ninja_extra import NinjaExtraAPI
 
