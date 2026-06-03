@@ -25,3 +25,6 @@ chile/data/
 
 # OCR scratch dir
 chile/tmp/
+
+# runtime logs (no versionar)
+chile/logs/

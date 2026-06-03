@@ -62,7 +62,19 @@ def iter_records(path):
     yield from (data if isinstance(data,list) else [data])
 
 def _enum(v,allowed,default): v=str(v).strip().lower(); return v if v in allowed else default
-def _int(v): return int(v) if isinstance(v,(int,float)) else None
+def _int(v):
+    try:
+        if isinstance(v,(int,float)): iv=int(v)
+        elif isinstance(v,str) and v.strip().isdigit(): iv=int(v.strip())
+        else: return None
+    except (ValueError,OverflowError): return None
+    return iv if -10**15<iv<10**15 else None  # cap: fuera de rango = alucinación → None (evita OverflowError SQLite)
+def _s(x):  # coerce a string (llama3.1 a veces devuelve {"tipo":...} en vez de "...")
+    if isinstance(x,dict):
+        for v in x.values():
+            if isinstance(v,str) and v.strip(): return v.strip().lower()
+        return ""
+    return str(x).strip().lower()
 
 def llm(sec, retries=2):
     body=json.dumps({"model":MODEL,"prompt":PROMPT+sec,"stream":False,"format":"json",
@@ -72,7 +84,7 @@ def llm(sec, retries=2):
             o=json.loads(urllib.request.urlopen(urllib.request.Request(
                 OLLAMA,data=body,headers={"Content-Type":"application/json"}),timeout=180).read())
             d=json.loads(o.get("response","{}"))
-            dels=[str(x).strip().lower() for x in (d.get("delitos") or []) if str(x).strip()][:6]
+            dels=[s for s in (_s(x) for x in (d.get("delitos") or [])) if s][:6]
             return (_enum(d.get("decision"),DEC,"no_aplica"), ",".join(dels), _int(d.get("dias_pena")),
                     _enum(d.get("tipo_pena"),TIPO,"no_aplica"), _enum(d.get("grado"),GRADO,"desconocido"),
                     _enum(d.get("iter_criminis"),ITER,"desconocido"), _enum(d.get("imputado_genero"),GEN,"desconocido"),
