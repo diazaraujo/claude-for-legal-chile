@@ -10,7 +10,7 @@ help: ## Show this help
 setup: ## Build containers and install dependencies
 	cp -n .env.example .env 2>/dev/null || true
 	$(COMPOSE) build
-	docker compose up -d db && sleep 3 && $(BACKEND) python manage.py migrate
+	docker compose up -d db && sleep 4 && $(COMPOSE) run --rm backend python manage.py migrate
 	@echo "\n✓ Setup complete. Run 'make run' to start."
 
 run: ## Start all services
