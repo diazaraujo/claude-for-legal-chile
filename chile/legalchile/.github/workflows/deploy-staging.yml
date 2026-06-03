@@ -1,0 +1,23 @@
+name: Deploy Staging
+
+on:
+  push:
+    branches: [develop]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy frontend to Vercel
+        working-directory: frontend
+        run: npx vercel --prod --token=${{ secrets.VERCEL_TOKEN }}
+
+
+      - name: Deploy backend
+        run: bash scripts/deploy-staging.sh
+        env:
+          DEPLOY_HOST: ${{ secrets.STAGING_HOST }}
+          DEPLOY_USER: ${{ secrets.STAGING_USER }}

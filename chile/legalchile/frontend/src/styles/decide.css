@@ -1,0 +1,235 @@
+
+  /* === Design system Decide / Mercado Público — tokens canónicos === */
+  :root{
+    --primary:#266FE0; --blue-dark:#184D9B; --blue-light:#E7F0FF;
+    --ink:#171B21; --muted:#6B7280; --line:#E5E7EB; --bg:#F5F5F5;
+    --ok:#10B981; --warn:#F59E0B; --err:#EF4444; --violet:#8B5CF6; --cyan:#06B6D4;
+    --radius:12px; --maxw:1100px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Hanken Grotesk',system-ui,sans-serif;color:var(--ink);background:var(--bg);
+    font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased;font-feature-settings:'tnum' 1}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .mono{font-family:'JetBrains Mono',monospace}
+  a{color:var(--primary);text-decoration:none}
+  h1,h2,h3{font-weight:600;line-height:1.2}
+  svg.ic{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.6;
+    stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+  /* Eyebrow / section tag — mono uppercase primary, letterspacing 0.14em */
+  .section-tag{font-family:'JetBrains Mono',monospace;font-size:10px;line-height:14px;
+    text-transform:uppercase;letter-spacing:.14em;color:var(--primary)}
+  .section-tag.uline{display:block;border-bottom:1px solid var(--line);padding-bottom:6px;margin-bottom:10px}
+  /* Status indicator — punto + mono (estilo "al día · refresco" de Decide) */
+  .status{display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:10px;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .status .dot{width:8px;height:8px;border-radius:50%;background:var(--ok);flex:none}
+
+  /* Botones — Decide btn */
+  .btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:13px;
+    padding:8px 18px;border-radius:99px;border:1px solid transparent;transition:all .15s ease;cursor:pointer}
+  .btn .ic{width:16px;height:16px}
+  .btn-primary{background:var(--primary);color:#fff}
+  .btn-primary:hover{background:var(--blue-dark)}
+  .btn-ghost{background:#fff;color:var(--ink);border-color:var(--line)}
+  .btn-ghost:hover{background:var(--bg)}
+
+  /* Card base — blanca, 12px, borde line, hover:border-primary */
+  .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:16px;transition:border-color .15s ease}
+  @media(min-width:768px){.card{padding:24px}}
+  .card.hov:hover{border-color:var(--primary)}
+
+  /* Icono en cuadro blue-light (kpi-icon del skill) */
+  .ico-box{width:40px;height:40px;border-radius:8px;background:var(--blue-light);color:var(--primary);
+    display:flex;align-items:center;justify-content:center;flex:none}
+  .ico-box svg{width:21px;height:21px}
+
+  /* Badge — mono 10px uppercase, tinted */
+  .badge{font-family:'JetBrains Mono',monospace;font-size:10px;line-height:14px;text-transform:uppercase;
+    letter-spacing:.1em;padding:4px 8px;border-radius:6px;display:inline-flex;align-items:center;gap:6px}
+  .badge-primary{background:rgba(38,111,224,.10);color:var(--primary)}
+  .badge-ok{background:rgba(16,185,129,.10);color:var(--ok)}
+  .badge-err{background:rgba(239,68,68,.10);color:var(--err)}
+
+  /* === HEADER === */
+  header.nav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+  header.nav .wrap{display:flex;align-items:center;gap:16px;height:58px}
+  .brand{display:flex;align-items:center;gap:9px;flex-shrink:0;line-height:1}
+  .brand .logo{display:flex;gap:3px;align-items:flex-end;height:18px}
+  .brand .logo span{width:4px;background:var(--primary);border-radius:1px}
+  .brand b{font-weight:800;font-size:18px;letter-spacing:-.01em}
+  .brand .sub{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--muted)}
+  @media(max-width:640px){.brand .sub{display:none}}
+  .spacer{flex:1}
+  .navlinks{display:flex;gap:20px;align-items:center;font-family:'JetBrains Mono',monospace;
+    font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .navlinks a{color:var(--muted)}
+  .navlinks a:hover{color:var(--primary)}
+  .navlinks .btn{color:#fff}
+  @media(max-width:860px){.navlinks .hidem{display:none}}
+  @media(max-width:680px){.navlinks{display:none}}
+
+  /* === HERO === (header compacto estilo dashboard Decide, flat sin gradiente) */
+  .hero{padding:36px 0 22px}
+  .hero .toprow{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:14px}
+  .hero h1{font-size:clamp(24px,3.4vw,33px);font-weight:600;max-width:26ch;letter-spacing:-.02em;color:var(--ink)}
+  .hero h1 em{font-style:normal;color:var(--primary)}
+  .hero p.lead{font-size:15px;color:var(--muted);max-width:68ch;margin-top:12px;font-weight:300}
+  .hero .cta{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+
+  /* === KPI STATS === (KpiMini exacto: label-arriba mono, valor 22px extrabold abajo) */
+  .kpi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+  @media(min-width:880px){.kpi-grid{grid-template-columns:repeat(4,1fr)}}
+  .kpi-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+  .kpi-label{font-family:'JetBrains Mono',monospace;font-size:10px;line-height:14px;text-transform:uppercase;
+    letter-spacing:.10em;color:var(--muted);margin-bottom:6px}
+  .kpi-value{font-size:22px;font-weight:800;color:var(--ink);line-height:1;font-variant-numeric:tabular-nums}
+
+  /* === SECTIONS === */
+  section.blk{padding:44px 0}
+  .blk.gray{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .sec-head{max-width:72ch;margin-bottom:26px}
+  .sec-head h2{font-size:22px;font-weight:600;margin-top:6px;letter-spacing:-.01em}
+  @media(min-width:768px){.sec-head h2{font-size:24px}}
+  .sec-head p{color:var(--muted);font-size:13.5px;margin-top:8px;font-weight:300}
+
+  /* === ¿QUÉ ES? · ficha-spec (definition list estilo doc Decide) === */
+  .qedl{border-top:1px solid var(--line)}
+  .qrow{display:grid;grid-template-columns:210px 1fr;gap:24px;padding:16px 0;border-bottom:1px solid var(--line)}
+  @media(max-width:760px){.qrow{grid-template-columns:1fr;gap:6px}}
+  .qk{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.10em;text-transform:uppercase;
+    color:var(--primary);padding-top:3px}
+  .qv{font-size:14.5px;color:var(--ink);font-weight:300;line-height:1.55}
+  .qv b{font-weight:600}
+
+  /* grids */
+  .cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media(max-width:860px){.cols3{grid-template-columns:1fr}}
+  .feature h3{font-size:17px;margin:14px 0 8px;font-weight:600}
+  .feature p{color:var(--muted);font-size:14.5px;font-weight:300}
+
+  /* === CORPUS sources === */
+  .csrc .top{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+  .csrc .top .ico-box{width:34px;height:34px;border-radius:8px}
+  .csrc .top .ico-box svg{width:18px;height:18px}
+  .csrc .top h3{font-size:15px;font-weight:600}
+  .csrc .num{font-weight:800;font-size:22px;color:var(--primary);line-height:1;font-variant-numeric:tabular-nums}
+  .csrc ul{list-style:none;margin-top:12px;font-size:13.5px;color:var(--muted);font-weight:300}
+  .csrc ul li{padding:3px 0;line-height:1.45}
+
+  /* === SKILLS === */
+  .skill{display:grid;grid-template-columns:240px 1fr;gap:24px;padding:22px 0;border-top:1px solid var(--line);align-items:start}
+  .skill:last-child{border-bottom:1px solid var(--line)}
+  .skill .name{font-family:'JetBrains Mono',monospace;font-weight:500;font-size:15px;color:var(--blue-dark)}
+  .skill .name .badge{margin-top:8px}
+  .skill .desc p{color:var(--muted);font-size:15px;font-weight:300}
+  .skill .ex{margin-top:12px;font-size:14px;color:var(--ink);background:var(--bg);border:1px solid var(--line);
+    padding:10px 14px;border-radius:8px}
+  .skill .ex::before{content:"Ej.";font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--primary);margin-right:8px}
+  @media(max-width:760px){.skill{grid-template-columns:1fr;gap:10px}}
+
+  /* === COMPARATIVA before/after === */
+  .compare{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:860px){.compare{grid-template-columns:1fr}}
+  .cc{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff}
+  .cc .hd{padding:14px 20px;font-weight:600;font-size:14px;display:flex;align-items:center;gap:9px;border-bottom:1px solid var(--line)}
+  .cc.bad .hd{background:rgba(239,68,68,.06);color:#9a3b2f}
+  .cc.good .hd{background:rgba(16,185,129,.07);color:#1d5e36}
+  .cc .hd .dot{width:8px;height:8px;border-radius:50%}
+  .cc.bad .dot{background:var(--err)}.cc.good .dot{background:var(--ok)}
+  .cc .bd{padding:20px}
+  .qa{font-size:12px;color:var(--muted);margin-bottom:8px;font-family:'JetBrains Mono',monospace;
+    letter-spacing:.04em;text-transform:uppercase}
+  .ans{font-size:15px;color:var(--ink);line-height:1.55;font-weight:300}
+  .ans .hl{background:rgba(239,68,68,.12);border-radius:3px;padding:0 3px;color:#9a3b2f;font-weight:500}
+  .ans .ok{background:rgba(16,185,129,.14);border-radius:3px;padding:0 3px;color:#1d7a42;font-weight:500}
+  .cc ul.feat{list-style:none;margin-top:18px;border-top:1px solid var(--line);padding-top:16px}
+  .cc ul.feat li{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--muted);padding:5px 0;font-weight:300}
+  .cc ul.feat li svg{width:16px;height:16px;flex:none;margin-top:2px}
+  .cc.bad ul.feat li svg{color:var(--err)}.cc.good ul.feat li svg{color:var(--ok)}
+
+  /* === COMPARE TABLE === */
+  .ctbl{margin-top:30px;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff}
+  .ctbl .row{display:grid;grid-template-columns:1.1fr 1.4fr 1.4fr;border-top:1px solid var(--line)}
+  .ctbl .row:first-child{border-top:none}
+  .ctbl .row.head{background:var(--bg);font-size:10px;font-weight:500;font-family:'JetBrains Mono',monospace;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .ctbl .row.head .cell{padding:11px 18px}
+  .ctbl .cell{padding:18px;border-left:1px solid var(--line);font-size:14px;line-height:1.5;font-weight:300}
+  .ctbl .cell:first-child{border-left:none}
+  .ctbl .q{font-weight:600;color:var(--ink)}
+  .ctbl .q .mat{display:block;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--primary);margin-bottom:6px}
+  .ctbl .bad{color:#7a3329;background:rgba(239,68,68,.04)}
+  .ctbl .good{color:#1d5e36;background:rgba(16,185,129,.05)}
+  @media(max-width:860px){.ctbl .row{grid-template-columns:1fr}
+    .ctbl .cell{border-left:none;border-top:1px solid var(--line)}
+    .ctbl .cell:first-child{border-top:none}
+    .ctbl .row.head{display:none}}
+
+  /* === ANALYTICS (light, cards blancas) === */
+  .agrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:860px){.agrid{grid-template-columns:1fr}}
+  .acard .qq{font-family:'JetBrains Mono',monospace;font-size:13.5px;color:var(--ink);line-height:1.5;
+    background:var(--blue-light);border-radius:8px;padding:12px 14px;margin-bottom:16px}
+  .acard .line{display:flex;gap:10px;align-items:flex-start;font-size:14px;margin-top:10px;color:var(--muted);font-weight:300}
+  .acard .line svg{width:16px;height:16px;flex:none;margin-top:3px}
+  .acard .line.with{color:var(--ink)}.acard .line.with svg{color:var(--ok)}
+  .acard .line.without svg{color:var(--muted)}
+  .acard .line b{color:var(--ink);font-weight:600}
+  .afoot{margin-top:28px;text-align:center;color:var(--muted);font-size:14px;font-weight:300}
+  .afoot b{color:var(--ink);font-weight:600}
+  .qchips{margin-top:34px;border-top:1px solid var(--line);padding-top:26px}
+  .qchips-h{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--primary);text-align:center;margin-bottom:18px}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+  .chips span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 15px;
+    font-size:13.5px;color:var(--ink);font-weight:300}
+
+  /* === PIPELINE flow === */
+  .flow{display:flex;align-items:stretch;gap:0;flex-wrap:wrap}
+  .step{flex:1;min-width:150px;position:relative;padding:22px 16px;text-align:center}
+  .step:not(:last-child)::after{content:"";position:absolute;top:42px;right:-9px;width:16px;height:16px;
+    border-top:2px solid var(--primary);border-right:2px solid var(--primary);transform:rotate(45deg);opacity:.5;z-index:2}
+  .step .si{width:46px;height:46px;border-radius:10px;background:#fff;border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;margin:0 auto 14px;color:var(--primary)}
+  .step .si svg{width:22px;height:22px}
+  .step .sn{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);font-weight:500;letter-spacing:.1em}
+  .step h3{font-size:14.5px;margin:5px 0 6px;font-weight:600}
+  .step p{font-size:13px;color:var(--muted);line-height:1.45;font-weight:300}
+  .step .big{font-family:'JetBrains Mono',monospace;font-weight:500;color:var(--primary);font-size:11px;
+    letter-spacing:.06em;text-transform:uppercase;display:block;margin-top:6px}
+  @media(max-width:860px){.flow{flex-direction:column}.step:not(:last-child)::after{display:none}
+    .step{display:flex;gap:16px;text-align:left;align-items:center;border-bottom:1px solid var(--line);padding:16px 0}
+    .step .si{margin:0}.step .bod{flex:1}}
+
+  /* === CTA band (flat, sin gradiente) === */
+  .ctaband{background:var(--blue-dark);color:#fff;border-radius:var(--radius);padding:48px 40px;text-align:center}
+  .ctaband h2{font-size:clamp(22px,3vw,30px);color:#fff;max-width:26ch;margin:0 auto;font-weight:600}
+  .ctaband p{color:#cfe0fb;margin:14px auto 26px;max-width:56ch;font-size:16px;font-weight:300}
+  .ctaband .btn-primary{background:#fff;color:var(--blue-dark)}
+  .ctaband .btn-primary:hover{background:var(--blue-light)}
+  .ctaband .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.45)}
+  .ctaband .btn-ghost:hover{background:rgba(255,255,255,.10)}
+
+  /* === FOOTER === (4 col, mono labels) */
+  footer{background:#fff;border-top:1px solid var(--line);margin-top:8px}
+  footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;padding:44px 0}
+  @media(max-width:760px){footer .cols{grid-template-columns:1fr;gap:24px}}
+  footer .f-brand b{font-weight:800;font-size:17px;letter-spacing:-.01em}
+  footer .f-brand .sub{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--muted);margin-top:4px}
+  footer .f-brand p{font-size:14px;color:var(--muted);font-weight:300;margin-top:12px;max-width:34ch;line-height:1.5}
+  footer .f-h{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--muted);margin-bottom:12px}
+  footer ul{list-style:none}
+  footer ul li{padding:4px 0;font-size:14px;font-weight:300}
+  footer ul li a{color:var(--ink)}
+  footer ul li a:hover{color:var(--primary)}
+  footer .bar{border-top:1px solid var(--line)}
+  footer .bar .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;padding:16px 24px;
+    font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .disc{font-size:12px;color:var(--muted);font-weight:300;line-height:1.5;padding:0 24px 24px;max-width:90ch}
