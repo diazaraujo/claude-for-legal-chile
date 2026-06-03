@@ -15,7 +15,7 @@ def _conn(db_name: str) -> sqlite3.Connection:
     p = Path(settings.CORPUS_INDEX_DIR) / db_name
     if not p.exists():
         raise FileNotFoundError(f"Índice no encontrado: {p}")
-    return sqlite3.connect(f"file:{p}?mode=ro", uri=True, timeout=30)
+    return sqlite3.connect(f"file:{p}?immutable=1", uri=True, timeout=30)
 
 
 def _fts_query(q: str) -> str:
