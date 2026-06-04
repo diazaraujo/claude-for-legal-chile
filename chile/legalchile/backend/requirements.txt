@@ -6,6 +6,10 @@ psycopg2-binary>=2.9
 django-ninja>=1.2
 django-ninja-jwt>=5.3
 
+# Búsqueda semántica (índice vectorial bge-m3 + faiss)
+faiss-cpu>=1.8
+numpy>=1.26
+
 # Dev / Quality
 ruff>=0.5.0
 black>=24.4
