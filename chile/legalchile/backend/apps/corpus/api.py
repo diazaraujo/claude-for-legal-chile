@@ -1,8 +1,24 @@
+import os
+
 from ninja import Router
+from ninja.security import APIKeyHeader
 
 from . import semantic, service
 
-router = Router(tags=["corpus"])
+
+class CorpusApiKey(APIKeyHeader):
+    """Auth por header X-API-Key. Las keys válidas vienen de CORPUS_API_KEYS
+    (lista separada por comas). Si no hay ninguna configurada → abierto (dev)."""
+    param_name = "X-API-Key"
+
+    def authenticate(self, request, key):
+        valid = {k.strip() for k in os.environ.get("CORPUS_API_KEYS", "").split(",") if k.strip()}
+        if not valid:
+            return "open"
+        return key if key in valid else None
+
+
+router = Router(tags=["corpus"], auth=CorpusApiKey())
 
 
 @router.get("/search")

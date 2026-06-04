@@ -1,9 +1,12 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: import.meta.env.VITE_API_URL || '/api',
   headers: {
     'Content-Type': 'application/json',
+    // API key del corpus (header X-API-Key). En sitio público es semi-visible;
+    // el control real por-proyecto es server-to-server con su propia key.
+    ...(import.meta.env.VITE_API_KEY ? { 'X-API-Key': import.meta.env.VITE_API_KEY } : {}),
   },
 })
 
