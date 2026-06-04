@@ -2,6 +2,7 @@
 por el pipeline en chile/data/_index/). Solo lectura — NO mueve los 367GB de data.
 Path configurable vía settings.CORPUS_INDEX_DIR / env CORPUS_INDEX_DIR.
 """
+import json
 import re
 import sqlite3
 from pathlib import Path
@@ -9,6 +10,14 @@ from pathlib import Path
 from django.conf import settings
 
 _INDEX = {"new-sources": "new-sources.fts.sqlite3", "corpus": "corpus.fts.sqlite3"}
+
+# El índice se abre con ?immutable=1 (read-only, nunca cambia en runtime). El conteo
+# de documentos se resuelve así, en orden:
+#   1) _counts.json (COUNT(*) exacto precomputado offline) si existe → instantáneo.
+#   2) max(rowid) — O(1) sobre el índice append-built (≈ count, sin deletes) → fallback rápido.
+# Se cachea por proceso. Antes /stats hacía COUNT(*) sobre FTS5 de 104GB en cada hit,
+# escaneando el índice entero (>90s) y colgando el worker.
+_COUNT_CACHE: dict[str, int | None] = {}
 
 
 def _conn(db_name: str) -> sqlite3.Connection:
@@ -41,16 +50,33 @@ def search(q: str, limit: int = 20, source: str = "new-sources") -> list[dict]:
         con.close()
 
 
-def stats() -> dict:
-    out = {}
-    for key, db in _INDEX.items():
+def _exact_counts() -> dict:
+    p = Path(settings.CORPUS_INDEX_DIR) / "_counts.json"
+    if p.exists():
         try:
-            con = _conn(db)
-            try:
-                n = con.execute("SELECT COUNT(*) FROM docs").fetchone()[0]
-            finally:
-                con.close()
-            out[key] = n
-        except FileNotFoundError:
-            out[key] = None
-    return {"indices": out}
+            return json.loads(p.read_text())
+        except Exception:
+            return {}
+    return {}
+
+
+def _count(key: str, db: str) -> int | None:
+    if key in _COUNT_CACHE:
+        return _COUNT_CACHE[key]
+    exact = _exact_counts().get(key)
+    if isinstance(exact, int):
+        _COUNT_CACHE[key] = exact
+        return exact
+    try:
+        con = _conn(db)
+        try:
+            _COUNT_CACHE[key] = con.execute("SELECT max(rowid) FROM docs").fetchone()[0]
+        finally:
+            con.close()
+    except FileNotFoundError:
+        _COUNT_CACHE[key] = None
+    return _COUNT_CACHE[key]
+
+
+def stats() -> dict:
+    return {"indices": {key: _count(key, db) for key, db in _INDEX.items()}}

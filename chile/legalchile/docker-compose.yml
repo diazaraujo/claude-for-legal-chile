@@ -4,7 +4,8 @@ services:
       context: ./backend
       dockerfile: Dockerfile
     container_name: legalchile-backend
-    command: python manage.py runserver 0.0.0.0:8000
+    # Producción: gunicorn multi-worker (runserver es mono-hilo → una query lenta cuelga todo).
+    command: gunicorn config.wsgi:application --bind 0.0.0.0:8000 --workers 3 --threads 4 --timeout 120 --access-logfile - --error-logfile -
     volumes:
       - ./backend:/app
       - ../data/_index:/index:ro
