@@ -114,6 +114,11 @@
   .kpi-label{font-family:'JetBrains Mono',monospace;font-size:10px;line-height:14px;text-transform:uppercase;
     letter-spacing:.10em;color:var(--muted);margin-bottom:6px}
   .kpi-value{font-size:22px;font-weight:800;color:var(--ink);line-height:1;font-variant-numeric:tabular-nums}
+  .kpi-value.sm{font-size:19px}
+  /* Explorador de entidades · ficha charts responsive */
+  @media(max-width:680px){.ficha-charts{grid-template-columns:1fr !important}}
+  .exp-list::-webkit-scrollbar{width:8px}
+  .exp-list::-webkit-scrollbar-thumb{background:var(--line);border-radius:4px}
 
   /* === SECTIONS === */
   section.blk{padding:44px 0}

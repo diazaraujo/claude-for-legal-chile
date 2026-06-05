@@ -1,98 +1,198 @@
+import { useEffect, useMemo, useState } from 'react'
 import '../styles/decide.css'
+import { Footer } from './Sobre'
 
-type Cfg = { tag: string; h1: string; desc: string; count: string; sub: string; preguntas: string[] }
-
-const ENT: Record<string, Cfg> = {
-  jueces: {
-    tag: 'Jueces',
-    h1: 'La ficha de cada juez, leída de sus fallos',
-    desc: 'Sobre las sentencias públicas de cada juez se construye su ficha — materias que más resuelve, duración de sus causas, tipo de resolución y montos — es decir, su tendencia histórica de fallo. No es opinión: es el comportamiento real medido sobre el corpus.',
-    count: '2.390', sub: 'jueces con ficha en construcción',
-    preguntas: ['¿Cómo tiende a fallar el juez al que le tocó mi causa?', '¿Qué proporción del monto demandado suele acoger?', '¿Cuánto demora una causa con este juez?', '¿Cómo evolucionó su criterio en el tiempo?'],
-  },
-  abogados: {
-    tag: 'Abogados / Partes',
-    h1: 'Cómo litiga cada parte, a partir de sus causas',
-    desc: 'Identificando a la demandante y demandada en cada causa se reconstruye su historial litigioso — qué proporción resuelve por sentencia y cuánta por acuerdo, en qué materias litiga y con qué resultado. El historial real de esa contraparte, no su reputación.',
-    count: '46.485', sub: 'empresas/partes perfiladas en lo laboral',
-    preguntas: ['¿Cómo litiga esta empresa: pelea en tribunal o transa?', '¿En cuántas cuotas suele pactar los avenimientos?', '¿Qué montos se solicitan típicamente contra esta parte?', '¿Cuál es su tasa de resultados adversos?'],
-  },
-  fiscales: {
-    tag: 'Fiscales',
-    h1: 'El comportamiento del Ministerio Público, medido',
-    desc: 'Sobre las causas penales se reconstruye la actuación persecutora — tasa de condena obtenida, delitos perseguidos, penas solicitadas y resultado. La capa penal de extracción se está corriendo sobre el corpus; las fichas se publican cuando están medidas y validadas.',
-    count: 'En extracción', sub: '316.679 causas penales ya leídas',
-    preguntas: ['¿Qué tasa de condena obtiene en esta materia?', '¿Qué delitos concentra la persecución?', '¿Qué penas se imponen típicamente?', '¿Cómo varía el resultado por tribunal?'],
-  },
-  tribunales: {
-    tag: 'Tribunales',
-    h1: 'El perfil de cada tribunal y juzgado',
-    desc: 'Por juzgado se agregan duración de causas, materias, tasa de resultados y carga — para leer cómo opera cada tribunal del país. Construido sobre las sentencias públicas, no sobre estadísticas declaradas.',
-    count: '437', sub: 'tribunales con perfil en construcción',
-    preguntas: ['¿Cuánto demora una causa en este juzgado, en promedio y mediana?', '¿Qué materias concentra?', '¿Cómo es su tasa de acogidas?', '¿Conviene ir a sentencia o buscar conciliación aquí?'],
-  },
+type Mat = [string, number]
+type Row = {
+  key: string; nombre: string; n: number; comp?: string; trib?: string
+  lab_n?: number; lab_acogida?: number | null; pen_n?: number; pen_condena?: number | null; pen_dias?: number | null
+  nres?: number; condena?: number | null; rechazo?: number | null; concil?: number | null; pct_acept?: number | null; monto?: number
+  materias?: Mat[]; defensas?: Mat[]
 }
 
-export default function Entidad({ tipo }: { tipo: keyof typeof ENT }) {
-  const c = ENT[tipo]
+const pct = (x?: number | null) => (x == null ? '—' : `${Math.round(x * 100)}%`)
+const money = (n?: number) => (!n ? '—' : '$' + (n >= 1e9 ? (n / 1e9).toFixed(1) + ' B' : n >= 1e6 ? (n / 1e6).toFixed(0) + ' M' : n.toLocaleString('es-CL')))
+
+const CFG: Record<string, { file: string; tag: string; h1: string; sub: string; intro: string }> = {
+  jueces: { file: '/data/jueces.json', tag: 'Jueces', h1: 'La ficha de cada juez, leída de sus fallos', sub: 'jueces con ficha', intro: 'Materias que más resuelve, tasa de acogida laboral, tasa de condena penal y pena promedio — la tendencia histórica de cada juez, medida sobre sus sentencias públicas.' },
+  tribunales: { file: '/data/tribunales.json', tag: 'Tribunales', h1: 'El perfil de cada tribunal y juzgado', sub: 'tribunales con perfil', intro: 'Volumen de causas, tasa de resultados y competencias de cada juzgado del país, construido sobre las sentencias públicas.' },
+  abogados: { file: '/data/empresas.json', tag: 'Partes / Empresas', h1: 'Cómo litiga cada parte, a partir de sus causas', sub: 'partes perfiladas en lo laboral', intro: 'Historial litigioso de cada empresa demandada — cuánto resuelve por condena, cuánto por conciliación, qué materias enfrenta y con qué montos.' },
+}
+
+function Bars({ items, color }: { items: Mat[]; color: string }) {
+  const max = Math.max(1, ...items.map((m) => m[1]))
   return (
-    <div className="decide-root">
-      <header className="nav">
-        <div className="wrap">
-          <a href="/" className="brand"><b>Claude Legal Chile</b><span className="sub">· Derecho chileno real</span></a>
-          <div className="spacer" />
-          <nav className="navlinks">
-            <a href="/jueces" style={tipo === 'jueces' ? { color: 'var(--primary)' } : undefined}>Jueces</a>
-            <a href="/abogados" style={tipo === 'abogados' ? { color: 'var(--primary)' } : undefined}>Abogados</a>
-            <a href="/fiscales" style={tipo === 'fiscales' ? { color: 'var(--primary)' } : undefined}>Fiscales</a>
-            <a href="/tribunales" style={tipo === 'tribunales' ? { color: 'var(--primary)' } : undefined}>Tribunales</a>
-            <details className="more">
-              <summary>Más <span className="caret">▾</span></summary>
-              <div className="more-menu">
-                <a href="/">Inicio</a>
-                <a href="/buscar">Buscar</a>
-                <a href="/analisis">Análisis ↗</a>
-                <a href="/#que-es">¿Qué es?</a>
-                <a href="/#corpus">El corpus</a>
-                <a href="/#participar">Participar</a>
-              </div>
-            </details>
-            <a className="btn btn-primary" href="mailto:antonio@unholster.com?subject=Claude%20Legal%20Chile">Contacto</a>
-          </nav>
+    <div style={{ marginTop: 4 }}>
+      {items.map(([k, v]) => (
+        <div key={k} style={{ display: 'flex', alignItems: 'center', gap: 10, margin: '6px 0' }}>
+          <span style={{ width: 180, flex: 'none', fontSize: 12.5, color: 'var(--muted)', fontWeight: 300, textTransform: 'capitalize', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{k}</span>
+          <div style={{ flex: 1, background: 'var(--bg)', borderRadius: 5, height: 16, overflow: 'hidden' }}>
+            <div style={{ width: `${(v / max) * 100}%`, height: '100%', background: color, borderRadius: 5 }} />
+          </div>
+          <span style={{ width: 36, textAlign: 'right', fontWeight: 600, fontSize: 12.5, fontVariantNumeric: 'tabular-nums' }}>{v}</span>
         </div>
-      </header>
+      ))}
+    </div>
+  )
+}
 
-      <section className="hero">
-        <div className="wrap">
-          <div className="toprow">
-            <span className="section-tag">{c.tag} · Rayos X de la justicia</span>
-            <span className="status"><span className="dot" style={{ background: 'var(--warn)' }} /> Explorador en construcción</span>
-          </div>
-          <h1>{c.h1}</h1>
-          <p className="lead">{c.desc}</p>
-          <div style={{ marginTop: 22 }}>
-            <span className="kpi-value" style={{ color: 'var(--primary)' }}>{c.count}</span>
-            <span className="mono" style={{ marginLeft: 12, fontSize: 11, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>{c.sub}</span>
-          </div>
-        </div>
-      </section>
+function Kpi({ label, value, sub }: { label: string; value: string; sub?: string }) {
+  return (
+    <div className="kpi-card">
+      <div className="kpi-label">{label}</div>
+      <div className="kpi-value sm">{value}</div>
+      {sub && <div className="mono" style={{ fontSize: 10, color: 'var(--muted)', marginTop: 5 }}>{sub}</div>}
+    </div>
+  )
+}
 
-      <section className="blk gray">
-        <div className="wrap">
-          <div className="sec-head">
-            <span className="section-tag">Lo que este explorador permite responder</span>
-            <h2>Preguntas que se contestan con datos del corpus</h2>
-            <p>Cada ficha se construye leyendo las sentencias públicas. La capa de extracción está procesando el universo completo; las cifras por entidad se publican cuando están medidas y validadas — no antes.</p>
+function Ficha({ tipo, r }: { tipo: string; r: Row }) {
+  const kpis =
+    tipo === 'abogados'
+      ? [
+          { label: 'Juicios', value: r.n.toLocaleString('es-CL') },
+          { label: 'Tasa de condena (en su contra)', value: pct(r.condena), sub: `${r.nres ?? 0} con resultado` },
+          { label: 'Resuelto por conciliación', value: pct(r.concil) },
+          { label: 'Monto acogido total', value: money(r.monto) },
+        ]
+      : [
+          { label: 'Causas', value: r.n.toLocaleString('es-CL') },
+          { label: 'Acogida laboral', value: pct(r.lab_acogida), sub: r.lab_n ? `${r.lab_n.toLocaleString('es-CL')} laborales` : 'sin causas laborales' },
+          { label: 'Condena penal', value: pct(r.pen_condena), sub: r.pen_n ? `${r.pen_n.toLocaleString('es-CL')} penales` : 'sin causas penales' },
+          { label: 'Pena promedio', value: r.pen_dias ? `${Math.round(r.pen_dias)} días` : '—' },
+        ]
+  return (
+    <div className="card" style={{ marginBottom: 22 }}>
+      <div className="section-tag">{CFG[tipo].tag} · ficha</div>
+      <h2 style={{ fontSize: 22, fontWeight: 600, margin: '4px 0 4px' }}>{r.nombre}</h2>
+      {(r.trib || r.comp) && <div className="mono" style={{ fontSize: 11, color: 'var(--muted)', marginBottom: 16 }}>{r.trib || r.comp}</div>}
+      <div className="kpi-grid" style={{ gridTemplateColumns: 'repeat(2,1fr)', gap: 10 }}>
+        {kpis.map((k) => <Kpi key={k.label} {...k} />)}
+      </div>
+      <div style={{ display: 'grid', gridTemplateColumns: r.defensas?.length ? '1fr 1fr' : '1fr', gap: 24, marginTop: 20 }} className="ficha-charts">
+        {r.materias?.length ? (
+          <div>
+            <div className="kpi-label">Materias más frecuentes</div>
+            <Bars items={r.materias} color="var(--primary)" />
           </div>
-          <div className="chips">
-            {c.preguntas.map((q) => <span key={q}>{q}</span>)}
+        ) : null}
+        {r.defensas?.length ? (
+          <div>
+            <div className="kpi-label">Defensas más usadas</div>
+            <Bars items={r.defensas} color="var(--cyan)" />
           </div>
-          <div style={{ marginTop: 30, display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-            <a className="btn btn-primary" href="/buscar">Buscar en el corpus</a>
+        ) : null}
+      </div>
+    </div>
+  )
+}
+
+function Header({ tipo }: { tipo: string }) {
+  const on = (t: string) => (tipo === t ? { color: 'var(--primary)' } : undefined)
+  return (
+    <header className="nav">
+      <div className="wrap">
+        <a href="/" className="brand"><b>Claude Legal Chile</b><span className="sub">· Derecho chileno real</span></a>
+        <div className="spacer" />
+        <nav className="navlinks">
+          <a href="/jueces" style={on('jueces')}>Jueces</a>
+          <a href="/abogados" style={on('abogados')}>Abogados</a>
+          <a href="/fiscales" style={on('fiscales')}>Fiscales</a>
+          <a href="/tribunales" style={on('tribunales')}>Tribunales</a>
+          <details className="more">
+            <summary>Más <span className="caret">▾</span></summary>
+            <div className="more-menu">
+              <a href="/">Inicio</a>
+              <a href="/buscar">Buscar</a>
+              <a href="/analisis">Análisis ↗</a>
+              <a href="/sobre">¿Qué es?</a>
+              <a href="/sobre#corpus">El corpus</a>
+            </div>
+          </details>
+          <a className="btn btn-primary" href="mailto:antonio@unholster.com?subject=Claude%20Legal%20Chile">Contacto</a>
+        </nav>
+      </div>
+    </header>
+  )
+}
+
+export default function Entidad({ tipo }: { tipo: string }) {
+  if (tipo === 'fiscales') {
+    return (
+      <div className="decide-root">
+        <Header tipo={tipo} />
+        <section className="hero"><div className="wrap">
+          <div className="toprow"><span className="section-tag">Fiscales · Rayos X de la justicia</span><span className="status"><span className="dot" style={{ background: 'var(--warn)' }} /> En extracción</span></div>
+          <h1>El comportamiento del Ministerio Público, medido</h1>
+          <p className="lead">Tasa de condena obtenida, delitos perseguidos y penas — sobre las 316.679 causas penales ya leídas. La identificación del fiscal por causa es la siguiente capa de extracción; las fichas se publican cuando estén medidas y validadas.</p>
+          <div style={{ marginTop: 22, display: 'flex', gap: 10 }}>
+            <a className="btn btn-primary" href="/jueces">Ver fichas de jueces</a>
             <a className="btn btn-ghost" href="/">Volver al inicio</a>
           </div>
+        </div></section>
+        <Footer />
+      </div>
+    )
+  }
+
+  const cfg = CFG[tipo]
+  const [data, setData] = useState<Row[]>([])
+  const [q, setQ] = useState('')
+  const [sel, setSel] = useState<Row | null>(null)
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    setLoading(true); setSel(null); setQ('')
+    fetch(cfg.file).then((r) => r.json()).then((d: Row[]) => { setData(d); setSel(d[0] ?? null); setLoading(false) }).catch(() => setLoading(false))
+  }, [cfg.file])
+
+  const filtered = useMemo(() => {
+    const s = q.trim().toLowerCase()
+    return (s ? data.filter((d) => d.nombre.toLowerCase().includes(s)) : data).slice(0, 150)
+  }, [data, q])
+
+  return (
+    <div className="decide-root">
+      <Header tipo={tipo} />
+      <section className="hero" style={{ paddingBottom: 12 }}>
+        <div className="wrap">
+          <div className="toprow">
+            <span className="section-tag">{cfg.tag} · Rayos X de la justicia</span>
+            <span className="status"><span className="dot" /> {data.length.toLocaleString('es-CL')} {cfg.sub} · muestra en aumento</span>
+          </div>
+          <h1>{cfg.h1}</h1>
+          <p className="lead">{cfg.intro}</p>
+          <form className="searchbox" onSubmit={(e) => e.preventDefault()}>
+            <input value={q} onChange={(e) => setQ(e.target.value)} placeholder={`Buscar ${cfg.tag.toLowerCase()} por nombre…`} autoComplete="off" />
+          </form>
         </div>
       </section>
+
+      <section className="blk" style={{ paddingTop: 10 }}>
+        <div className="wrap">
+          {loading ? (
+            <p className="mono" style={{ color: 'var(--muted)', fontSize: 12 }}>Cargando fichas…</p>
+          ) : (
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 24 }} className="exp-grid">
+              {sel && <div><Ficha tipo={tipo} r={sel} /></div>}
+              <div>
+                <div className="section-tag uline">{q ? `${filtered.length} resultados` : `Top ${filtered.length} por volumen de causas`}</div>
+                <div className="exp-list" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 6, maxHeight: 560, overflowY: 'auto' }}>
+                  {filtered.map((r) => (
+                    <button key={r.key} onClick={() => { setSel(r); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
+                      className="card" style={{ textAlign: 'left', cursor: 'pointer', padding: '12px 16px', border: sel?.key === r.key ? '1px solid var(--primary)' : '1px solid var(--line)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12 }}>
+                      <span style={{ fontSize: 14, fontWeight: 600, color: 'var(--ink)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{r.nombre}</span>
+                      <span className="mono" style={{ fontSize: 11, color: 'var(--muted)', flex: 'none' }}>{r.n.toLocaleString('es-CL')} causas{tipo !== 'abogados' && r.pen_condena != null ? ` · ${pct(r.pen_condena)} condena` : ''}{tipo === 'abogados' && r.condena != null ? ` · ${pct(r.condena)} condena` : ''}{tipo !== 'abogados' && r.lab_acogida != null ? ` · ${pct(r.lab_acogida)} acogida` : ''}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+          <p className="mono" style={{ fontSize: 10, color: 'var(--muted)', letterSpacing: '0.08em', marginTop: 18, textTransform: 'uppercase' }}>Datos extraídos de sentencias públicas · muestra en aumento mientras corre la extracción · las tasas son sobre las causas ya procesadas</p>
+        </div>
+      </section>
+      <Footer />
     </div>
   )
 }
