@@ -94,6 +94,19 @@
   .hero p.lead{font-size:15px;color:var(--muted);max-width:68ch;margin-top:12px;font-weight:300}
   .hero .cta{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
 
+  /* Buscador hero (estilo Decide) */
+  .searchbox{margin-top:22px}
+  .searchbox input{width:100%;max-width:620px;padding:13px 18px;border:1px solid var(--line);border-radius:10px;
+    font-size:14px;font-family:'Hanken Grotesk',system-ui,sans-serif;background:#fff;color:var(--ink)}
+  .searchbox input::placeholder{color:var(--muted)}
+  .searchbox input:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px rgba(38,111,224,.10)}
+  /* Pills / tabs (estilo Decide) */
+  .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+  .pill{padding:8px 16px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink);
+    font-size:13px;font-weight:600;transition:all .15s ease}
+  .pill:hover{border-color:var(--primary);color:var(--primary)}
+  .pill.active{background:var(--primary);color:#fff;border-color:var(--primary)}
+
   /* === KPI STATS === (KpiMini exacto: label-arriba mono, valor 22px extrabold abajo) */
   .kpi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
   @media(min-width:880px){.kpi-grid{grid-template-columns:repeat(4,1fr)}}
