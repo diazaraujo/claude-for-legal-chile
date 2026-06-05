@@ -42,7 +42,7 @@ def worker(row):
             with lock: S["stub"]+=1
             return
     with lock: S["ban"]+=1                  # todas las geos fallaron (queda pending p/ retry)
-c = sqlite3.connect(DB); pend=[(r[0],r[1]) for r in c.execute("SELECT id_norma,tipo FROM normas WHERE downloaded=0 AND status IS NULL")]; c.close()
+c = sqlite3.connect(DB); pend=[(r[0],r[1]) for r in c.execute("SELECT id_norma,tipo FROM normas WHERE downloaded=0 AND status IS NULL ORDER BY id_norma DESC")]; c.close()
 print(f"pending: {len(pend)} · {time.strftime('%H:%M:%S')}", flush=True); t0=time.time()
 with ThreadPoolExecutor(max_workers=4) as ex:
     for i,_ in enumerate(ex.map(worker, pend),1):
