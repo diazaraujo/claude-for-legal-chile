@@ -13,13 +13,24 @@ export default function Home() {
           </a>
           <div className="spacer"></div>
           <nav className="navlinks">
-            <a href="#que-es">¿Qué es?</a>
-            <a href="#comparativa" className="hidem">Antes/después</a>
-            <a href="/analisis">Análisis ↗</a>
-            <a href="#corpus">El corpus</a>
-            <a href="#pipeline" className="hidem">El recorrido</a>
-            <a href="#capacidades">Capacidades</a>
-            <a href="#participar">Participar</a>
+            <a href="/jueces">Jueces</a>
+            <a href="/abogados">Abogados</a>
+            <a href="/fiscales">Fiscales</a>
+            <a href="/tribunales">Tribunales</a>
+            <details className="more">
+              <summary>Más <span className="caret">▾</span></summary>
+              <div className="more-menu">
+                <a href="/buscar">Buscar</a>
+                <a href="/analisis">Análisis ↗</a>
+                <a href="#que-es">¿Qué es?</a>
+                <a href="#comparativa">Antes / después</a>
+                <a href="#rayos-x">Rayos X</a>
+                <a href="#corpus">El corpus</a>
+                <a href="#pipeline">El recorrido</a>
+                <a href="#capacidades">Capacidades</a>
+                <a href="#participar">Participar</a>
+              </div>
+            </details>
             <a className="btn btn-primary" href="mailto:antonio@unholster.com?subject=Claude%20Legal%20Chile">Contacto</a>
           </nav>
         </div>
@@ -43,16 +54,74 @@ export default function Home() {
         </div>
       </section>
 
-      {/* KPI STATS · KpiMini denso sobre gris */}
-      <section className="blk" style={{ padding: '8px 0 28px' }}>
+      {/* KPI STATS · KpiMini denso sobre gris — números reales del corpus */}
+      <section className="blk" style={{ padding: '8px 0 24px' }}>
         <div className="wrap">
-          <span className="section-tag uline">Lo que cubre el corpus</span>
+          <span className="section-tag uline">Lo que tiene este corpus</span>
           <div className="kpi-grid">
-            <div className="kpi-card"><div className="kpi-label">Fuentes oficiales</div><div className="kpi-value">48</div></div>
-            <div className="kpi-card"><div className="kpi-label">Documentos jurídicos</div><div className="kpi-value">4,6M</div></div>
-            <div className="kpi-card"><div className="kpi-label">Sentencias judiciales</div><div className="kpi-value">3,3M</div></div>
-            <div className="kpi-card"><div className="kpi-label">Respuestas con cita</div><div className="kpi-value">100%</div></div>
+            <div className="kpi-card"><div className="kpi-label">Documentos indexados</div><div className="kpi-value">4,9 M</div></div>
+            <div className="kpi-card"><div className="kpi-label">Normas vigentes · BCN</div><div className="kpi-value">136.212</div></div>
+            <div className="kpi-card"><div className="kpi-label">Causas leídas por IA</div><div className="kpi-value">455.805</div></div>
+            <div className="kpi-card"><div className="kpi-label">Embeddings semánticos</div><div className="kpi-value">4,8 M</div></div>
           </div>
+        </div>
+      </section>
+
+      {/* ANALÍTICA · Rayos X de la justicia (datos reales extraídos de los fallos) */}
+      <section className="blk gray" id="rayos-x">
+        <div className="wrap">
+          <div className="sec-head" style={{ marginBottom: 18 }}>
+            <span className="section-tag">Lectura del corpus · datos reales</span>
+            <h2>¿Cómo falla la justicia chilena?</h2>
+            <p>No es teoría: la capa de extracción lee la parte resolutiva de cada sentencia y mide el resultado. Estas cifras salen de los fallos ya procesados — algo que una IA general no puede saber porque no tiene los datos.</p>
+          </div>
+          <div className="rayosx-cols">
+              {/* LABORAL */}
+              <div className="card">
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: 8, marginBottom: 16 }}>
+                  <div className="kpi-label" style={{ marginBottom: 0 }}>Justicia laboral · resultado</div>
+                  <div className="mono" style={{ fontSize: 10, color: 'var(--muted)' }}>139.126 causas leídas</div>
+                </div>
+                {[
+                  ['Demanda acogida', 35.7, 'var(--ok)'],
+                  ['Acogida en parte', 32.6, 'var(--cyan)'],
+                  ['Rechazada', 26.3, 'var(--err)'],
+                  ['Otros (desist./concil.)', 5.4, 'var(--muted)'],
+                ].map(([label, pct, color]) => (
+                  <div key={String(label)} style={{ display: 'flex', alignItems: 'center', gap: 12, margin: '9px 0' }}>
+                    <span style={{ width: 140, flex: 'none', fontSize: 13, color: 'var(--muted)', fontWeight: 300 }}>{label}</span>
+                    <div style={{ flex: 1, background: 'var(--bg)', borderRadius: 6, height: 20, overflow: 'hidden' }}>
+                      <div style={{ width: `${pct}%`, height: '100%', background: color as string, borderRadius: 6 }} />
+                    </div>
+                    <span style={{ width: 50, textAlign: 'right', fontWeight: 600, fontSize: 13, fontVariantNumeric: 'tabular-nums' }}>{String(pct).replace('.', ',')}%</span>
+                  </div>
+                ))}
+                <p style={{ marginTop: 14, fontSize: 14, color: 'var(--ink)', fontWeight: 300 }}><b style={{ fontWeight: 600 }}>68% de las demandas laborales prosperan</b> total o parcialmente. Materias más frecuentes: cobro de prestaciones, despido injustificado, nulidad del despido (Ley Bustos).</p>
+              </div>
+              {/* PENAL */}
+              <div className="card">
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: 8, marginBottom: 16 }}>
+                  <div className="kpi-label" style={{ marginBottom: 0 }}>Justicia penal · decisión</div>
+                  <div className="mono" style={{ fontSize: 10, color: 'var(--muted)' }}>316.679 causas leídas</div>
+                </div>
+                {[
+                  ['Condena', 76.7, 'var(--blue-dark)'],
+                  ['Absolución', 17.5, 'var(--ok)'],
+                  ['No aplica', 4.9, 'var(--muted)'],
+                  ['Sobreseimiento', 0.8, 'var(--line)'],
+                ].map(([label, pct, color]) => (
+                  <div key={String(label)} style={{ display: 'flex', alignItems: 'center', gap: 12, margin: '9px 0' }}>
+                    <span style={{ width: 140, flex: 'none', fontSize: 13, color: 'var(--muted)', fontWeight: 300 }}>{label}</span>
+                    <div style={{ flex: 1, background: 'var(--bg)', borderRadius: 6, height: 20, overflow: 'hidden' }}>
+                      <div style={{ width: `${pct}%`, height: '100%', background: color as string, borderRadius: 6 }} />
+                    </div>
+                    <span style={{ width: 50, textAlign: 'right', fontWeight: 600, fontSize: 13, fontVariantNumeric: 'tabular-nums' }}>{String(pct).replace('.', ',')}%</span>
+                  </div>
+                ))}
+                <p style={{ marginTop: 14, fontSize: 14, color: 'var(--ink)', fontWeight: 300 }}><b style={{ fontWeight: 600 }}>Tasa de condena del 81%</b> cuando hay decisión de fondo. La ficha de cada juez y juzgado se construye sobre estas sentencias públicas.</p>
+              </div>
+            </div>
+          <p className="mono" style={{ fontSize: 10, color: 'var(--muted)', letterSpacing: '0.08em', marginTop: 16, textTransform: 'uppercase' }}>Muestra en aumento · la extracción procesa el universo completo de sentencias laborales y penales</p>
         </div>
       </section>
 

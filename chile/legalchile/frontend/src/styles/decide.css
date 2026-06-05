@@ -71,6 +71,21 @@
   @media(max-width:860px){.navlinks .hidem{display:none}}
   @media(max-width:680px){.navlinks{display:none}}
 
+  /* Dropdown "Más" — estilo Decide (details/summary, card blanca con sombra) */
+  .more{position:relative}
+  .more>summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:5px;color:var(--muted)}
+  .more>summary::-webkit-details-marker{display:none}
+  .more>summary::marker{content:''}
+  .more>summary:hover{color:var(--primary)}
+  .more[open]>summary{color:var(--primary)}
+  .more .caret{font-size:8px}
+  .more-menu{position:absolute;right:0;top:100%;margin-top:12px;background:#fff;border:1px solid var(--line);
+    border-radius:12px;box-shadow:0 12px 32px rgba(23,27,33,.10);padding:8px;min-width:200px;z-index:60;
+    display:flex;flex-direction:column;gap:1px}
+  .more-menu a{color:var(--ink);padding:9px 11px;border-radius:8px;font-family:'JetBrains Mono',monospace;
+    font-size:11px;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+  .more-menu a:hover{background:var(--bg);color:var(--primary)}
+
   /* === HERO === (header compacto estilo dashboard Decide, flat sin gradiente) */
   .hero{padding:36px 0 22px}
   .hero .toprow{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:14px}
@@ -103,6 +118,10 @@
     color:var(--primary);padding-top:3px}
   .qv{font-size:14.5px;color:var(--ink);font-weight:300;line-height:1.55}
   .qv b{font-weight:600}
+
+  /* Rayos X · 2 cards laboral/penal lado a lado en desktop */
+  .rayosx-cols{display:grid;grid-template-columns:1fr;gap:16px}
+  @media(min-width:860px){.rayosx-cols{grid-template-columns:1fr 1fr}}
 
   /* grids */
   .cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
