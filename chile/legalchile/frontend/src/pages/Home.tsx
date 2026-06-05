@@ -40,7 +40,7 @@ export default function Home() {
           <div className="spacer" />
           <nav className="navlinks">
             <a href="/jueces">Jueces</a>
-            <a href="/abogados">Abogados</a>
+            <a href="/empresas">Empresas</a>
             <a href="/fiscales">Fiscales</a>
             <a href="/tribunales">Tribunales</a>
             <details className="more">
@@ -78,7 +78,7 @@ export default function Home() {
           </form>
           <div className="pills">
             <a className="pill" href="/jueces">Jueces</a>
-            <a className="pill" href="/abogados">Abogados</a>
+            <a className="pill" href="/empresas">Empresas</a>
             <a className="pill" href="/fiscales">Fiscales</a>
             <a className="pill" href="/tribunales">Tribunales</a>
             <a className="pill" href="/sobre">Sobre el corpus</a>

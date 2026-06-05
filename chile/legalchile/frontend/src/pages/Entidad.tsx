@@ -16,7 +16,7 @@ const money = (n?: number) => (!n ? '—' : '$' + (n >= 1e9 ? (n / 1e9).toFixed(
 const CFG: Record<string, { file: string; tag: string; h1: string; sub: string; intro: string }> = {
   jueces: { file: '/data/jueces.json', tag: 'Jueces', h1: 'La ficha de cada juez, leída de sus fallos', sub: 'jueces con ficha', intro: 'Materias que más resuelve, tasa de acogida laboral, tasa de condena penal y pena promedio — la tendencia histórica de cada juez, medida sobre sus sentencias públicas.' },
   tribunales: { file: '/data/tribunales.json', tag: 'Tribunales', h1: 'El perfil de cada tribunal y juzgado', sub: 'tribunales con perfil', intro: 'Volumen de causas, tasa de resultados y competencias de cada juzgado del país, construido sobre las sentencias públicas.' },
-  abogados: { file: '/data/empresas.json', tag: 'Partes / Empresas', h1: 'Cómo litiga cada parte, a partir de sus causas', sub: 'partes perfiladas en lo laboral', intro: 'Historial litigioso de cada empresa demandada — cuánto resuelve por condena, cuánto por conciliación, qué materias enfrenta y con qué montos.' },
+  empresas: { file: '/data/empresas.json', tag: 'Empresas demandadas', h1: 'Cómo litiga cada empresa, a partir de sus causas', sub: 'empresas demandadas perfiladas', intro: 'Historial litigioso de cada empresa demandada en lo laboral — cuánto resuelve por condena, cuánto por conciliación, qué materias enfrenta, con qué defensas y qué montos. Son las partes empleadoras, no sus abogados.' },
 }
 
 function Bars({ items, color }: { items: Mat[]; color: string }) {
@@ -48,7 +48,7 @@ function Kpi({ label, value, sub }: { label: string; value: string; sub?: string
 
 function Ficha({ tipo, r }: { tipo: string; r: Row }) {
   const kpis =
-    tipo === 'abogados'
+    tipo === 'empresas'
       ? [
           { label: 'Juicios', value: r.n.toLocaleString('es-CL') },
           { label: 'Tasa de condena (en su contra)', value: pct(r.condena), sub: `${r.nres ?? 0} con resultado` },
@@ -96,7 +96,7 @@ function Header({ tipo }: { tipo: string }) {
         <div className="spacer" />
         <nav className="navlinks">
           <a href="/jueces" style={on('jueces')}>Jueces</a>
-          <a href="/abogados" style={on('abogados')}>Abogados</a>
+          <a href="/empresas" style={on('empresas')}>Empresas</a>
           <a href="/fiscales" style={on('fiscales')}>Fiscales</a>
           <a href="/tribunales" style={on('tribunales')}>Tribunales</a>
           <details className="more">
@@ -182,7 +182,7 @@ export default function Entidad({ tipo }: { tipo: string }) {
                     <button key={r.key} onClick={() => { setSel(r); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
                       className="card" style={{ textAlign: 'left', cursor: 'pointer', padding: '12px 16px', border: sel?.key === r.key ? '1px solid var(--primary)' : '1px solid var(--line)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12 }}>
                       <span style={{ fontSize: 14, fontWeight: 600, color: 'var(--ink)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{r.nombre}</span>
-                      <span className="mono" style={{ fontSize: 11, color: 'var(--muted)', flex: 'none' }}>{r.n.toLocaleString('es-CL')} causas{tipo !== 'abogados' && r.pen_condena != null ? ` · ${pct(r.pen_condena)} condena` : ''}{tipo === 'abogados' && r.condena != null ? ` · ${pct(r.condena)} condena` : ''}{tipo !== 'abogados' && r.lab_acogida != null ? ` · ${pct(r.lab_acogida)} acogida` : ''}</span>
+                      <span className="mono" style={{ fontSize: 11, color: 'var(--muted)', flex: 'none' }}>{r.n.toLocaleString('es-CL')} causas{tipo !== 'abogados' && r.pen_condena != null ? ` · ${pct(r.pen_condena)} condena` : ''}{tipo === 'empresas' && r.condena != null ? ` · ${pct(r.condena)} condena` : ''}{tipo !== 'abogados' && r.lab_acogida != null ? ` · ${pct(r.lab_acogida)} acogida` : ''}</span>
                     </button>
                   ))}
                 </div>

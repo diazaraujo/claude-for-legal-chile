@@ -13,7 +13,8 @@ export default function App() {
       <Route path="/analisis" element={<Analisis />} />
       <Route path="/sobre" element={<Sobre />} />
       <Route path="/jueces" element={<Entidad tipo="jueces" />} />
-      <Route path="/abogados" element={<Entidad tipo="abogados" />} />
+      <Route path="/empresas" element={<Entidad tipo="empresas" />} />
+      <Route path="/abogados" element={<Entidad tipo="empresas" />} />
       <Route path="/fiscales" element={<Entidad tipo="fiscales" />} />
       <Route path="/tribunales" element={<Entidad tipo="tribunales" />} />
     </Routes>

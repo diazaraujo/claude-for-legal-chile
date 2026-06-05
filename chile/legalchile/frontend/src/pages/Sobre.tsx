@@ -10,7 +10,7 @@ export default function Sobre() {
           <div className="spacer" />
           <nav className="navlinks">
             <a href="/jueces">Jueces</a>
-            <a href="/abogados">Abogados</a>
+            <a href="/empresas">Empresas</a>
             <a href="/fiscales">Fiscales</a>
             <a href="/tribunales">Tribunales</a>
             <details className="more">
