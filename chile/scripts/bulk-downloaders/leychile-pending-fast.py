@@ -29,9 +29,11 @@ def worker(row):
         mark(nid,1,"ok",dest.stat().st_size); 
         with lock: S["ok"]+=1
         return
+    got_response = False                    # ¿algún geo respondió (aunque vacío)? distingue norma MUERTA de WAF/timeout
     for geo in GEOS:
         try: body = fetch(nid, geo)
-        except Exception: continue          # 520/timeout/conn → siguiente geo
+        except Exception: continue          # timeout/520/conn → el request NO llegó → siguiente geo
+        got_response = True                 # BCN respondió (aunque sea vacío)
         if body and b"<Norma" in body[:300]:
             dest.parent.mkdir(parents=True, exist_ok=True); dest.write_bytes(body)
             mark(nid,1,"ok",len(body))
@@ -41,8 +43,12 @@ def worker(row):
             (RAW/f"stub-{nid}.bin").write_bytes(body[:4000]); mark(nid,0,"stub")
             with lock: S["stub"]+=1
             return
-    mark(nid,0,"ban")                       # todas las geos fallaron → marca TERMINAL (sale del pool,
-    with lock: S["ban"]+=1                  # evita re-loop sobre la misma banda lenta; retry en pasada futura reseteando status='ban'→NULL)
+        # body vacío (b"") → este geo confirma norma vacía; sigue probando otros geos
+    if got_response:                        # algún geo respondió VACÍO → norma MUERTA → terminal (sale del pool)
+        mark(nid,0,"ban")
+        with lock: S["ban"]+=1
+    else:                                   # TODOS hicieron timeout (WAF/red) → NO terminal, queda pending p/ retry
+        with lock: S["ban"]+=1              # (el monitor detecta WAF probando una norma conocida-ok y pausa leychile)
 c = sqlite3.connect(DB); pend=[(r[0],r[1]) for r in c.execute("SELECT id_norma,tipo FROM normas WHERE downloaded=0 AND status IS NULL ORDER BY id_norma DESC")]; c.close()
 print(f"pending: {len(pend)} · {time.strftime('%H:%M:%S')}", flush=True); t0=time.time()
 with ThreadPoolExecutor(max_workers=4) as ex:
