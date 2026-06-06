@@ -12,7 +12,7 @@ BASE = "https://www.bcn.cl/leychile/Consulta/obtxml?opt=7&idNorma="
 DB   = "data/leychile/manifest.sqlite3"
 OUT  = Path("data/leychile"); RAW = OUT/"_raw"; RAW.mkdir(parents=True, exist_ok=True)
 lock = threading.Lock(); S = {"ok":0,"stub":0,"ban":0}
-def fetch(nid, geo, timeout=12):
+def fetch(nid, geo, timeout=6):
     time.sleep(1.5)
     p = json.dumps({"url":BASE+str(nid),"httpResponseBody":True,"geolocation":geo}).encode()
     r = urllib.request.Request("https://api.zyte.com/v1/extract", data=p,
