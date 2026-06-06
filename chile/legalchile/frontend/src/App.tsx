@@ -4,11 +4,13 @@ import Analisis from '@/pages/Analisis'
 import Buscar from '@/pages/Buscar'
 import Entidad from '@/pages/Entidad'
 import Sobre from '@/pages/Sobre'
+import Login from '@/pages/Login'
 
 export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/login" element={<Login />} />
       <Route path="/buscar" element={<Buscar />} />
       <Route path="/analisis" element={<Analisis />} />
       <Route path="/sobre" element={<Sobre />} />

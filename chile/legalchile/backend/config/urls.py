@@ -15,10 +15,12 @@ api.register_controllers(NinjaJWTDefaultController)
 from apps.core.api import router as core_router
 from apps.users.api import router as users_router
 from apps.corpus.api import router as corpus_router
+from apps.jueces.api import router as jueces_router
 
 api.add_router("/", core_router)
 api.add_router("/auth/", users_router)
 api.add_router("/corpus/", corpus_router)
+api.add_router("/jueces/", jueces_router)
 
 urlpatterns = [
     path("admin/", admin.site.urls),

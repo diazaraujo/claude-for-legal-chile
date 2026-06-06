@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from 'react'
 import '../styles/decide.css'
 import { Footer } from './Sobre'
+import api from '@/lib/api'
+import { useAuth } from '@/contexts/AuthContext'
 
 type Mat = [string, number]
 type Row = {
@@ -44,6 +46,109 @@ function Kpi({ label, value, sub }: { label: string; value: string; sub?: string
       <div className="kpi-label">{label}</div>
       <div className="kpi-value sm">{value}</div>
       {sub && <div className="mono" style={{ fontSize: 10, color: 'var(--muted)', marginTop: 5 }}>{sub}</div>}
+    </div>
+  )
+}
+
+// ---- Capa sensible del juez (identidad/patrimonio/familia), solo autenticado ----
+type Familiar = { rel?: string; nombre?: string; rut?: string; decil?: number | null }
+type Perfil = {
+  identificado?: boolean; sin_datos?: boolean; nota?: string; confianza?: number
+  rut?: string; biografia?: string; fuentes?: string[]; actualizado?: string
+  identidad?: { edad?: number | null; genero?: string | null; estado_civil?: string | null; n_hijos?: number | null; comuna?: string | null; nse_decil?: number | null; conyuge?: string | null }
+  patrimonio?: { patrimonio_estimado?: number | null; bienes_raices?: number | null; avaluo_total?: number | null }
+  familia?: Familiar[]
+}
+const clp = (n?: number | null) => (n == null ? '—' : '$' + Number(n).toLocaleString('es-CL'))
+
+function JuezPerfil({ juezKey, nombre }: { juezKey: string; nombre: string }) {
+  const { isAuthenticated } = useAuth()
+  const [p, setP] = useState<Perfil | null>(null)
+  const [loading, setLoading] = useState(false)
+  const [err, setErr] = useState(false)
+
+  useEffect(() => {
+    if (!isAuthenticated) { setP(null); return }
+    setLoading(true); setErr(false)
+    api.get(`/jueces/${encodeURIComponent(juezKey)}/perfil`)
+      .then(({ data }) => setP(data))
+      .catch(() => setErr(true))
+      .finally(() => setLoading(false))
+  }, [juezKey, isAuthenticated])
+
+  if (!isAuthenticated) return (
+    <div className="card" style={{ marginBottom: 22, borderStyle: 'dashed' }}>
+      <div className="section-tag">Capa reservada · identidad · patrimonio · red familiar</div>
+      <p style={{ fontSize: 14, color: 'var(--ink)', fontWeight: 300, margin: '8px 0 14px' }}>
+        La ficha civil del juez (RUT, edad, patrimonio estimado y red familiar, a partir de fuentes públicas)
+        está disponible solo para usuarios autorizados.
+      </p>
+      <a className="btn btn-primary" href="/login">Iniciar sesión para ver</a>
+    </div>
+  )
+  if (loading) return <div className="card" style={{ marginBottom: 22 }}><p className="mono" style={{ fontSize: 12, color: 'var(--muted)' }}>Cargando ficha civil…</p></div>
+  if (err || !p) return null
+  if (p.sin_datos || p.identificado === false) return (
+    <div className="card" style={{ marginBottom: 22, borderStyle: 'dashed' }}>
+      <div className="section-tag">Identidad civil</div>
+      <p style={{ fontSize: 13.5, color: 'var(--muted)', fontWeight: 300, margin: '8px 0 0' }}>
+        {p.nota || `Aún no hay identificación civil confirmada para ${nombre}.`}
+      </p>
+    </div>
+  )
+  const id = p.identidad || {}, pat = p.patrimonio || {}
+  const idKpis = [
+    ['RUT', p.rut || '—'], ['Edad', id.edad != null ? `${id.edad} años` : '—'],
+    ['Género', id.genero || '—'], ['Estado civil', id.estado_civil || '—'],
+    ['Comuna', id.comuna || '—'], ['Decil NSE', id.nse_decil != null ? `${id.nse_decil}/10` : '—'],
+  ] as [string, string][]
+  const patKpis = [
+    ['Patrimonio estimado', clp(pat.patrimonio_estimado)],
+    ['Bienes raíces', pat.bienes_raices != null ? String(pat.bienes_raices) : '—'],
+    ['Avalúo total', clp(pat.avaluo_total)],
+    ['Hijos', id.n_hijos != null ? String(id.n_hijos) : '—'],
+  ] as [string, string][]
+  return (
+    <div className="card" style={{ marginBottom: 22, borderColor: 'var(--primary)' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: 8 }}>
+        <div className="section-tag">Ficha civil · acceso autorizado</div>
+        {p.confianza != null && <span className="mono" style={{ fontSize: 10, color: 'var(--muted)' }}>Identificación probable · confianza {Math.round((p.confianza || 0) * 100)}%</span>}
+      </div>
+      <div className="kpi-grid" style={{ gridTemplateColumns: 'repeat(3,1fr)', gap: 10, marginTop: 8 }}>
+        {idKpis.map(([l, v]) => <Kpi key={l} label={l} value={v} />)}
+      </div>
+      {id.conyuge && <div className="mono" style={{ fontSize: 11, color: 'var(--muted)', marginTop: 10 }}>Cónyuge / pareja: <b style={{ color: 'var(--ink)' }}>{id.conyuge}</b></div>}
+
+      <div className="section-tag uline" style={{ marginTop: 20, display: 'block' }}>Patrimonio</div>
+      <div className="kpi-grid" style={{ gridTemplateColumns: 'repeat(2,1fr)', gap: 10 }}>
+        {patKpis.map(([l, v]) => <Kpi key={l} label={l} value={v} />)}
+      </div>
+
+      {p.familia && p.familia.length > 0 && (
+        <>
+          <div className="section-tag uline" style={{ marginTop: 20, display: 'block' }}>Red familiar</div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(220px,1fr))', gap: 8, marginTop: 6 }}>
+            {p.familia.map((f, i) => (
+              <div key={i} style={{ border: '1px solid var(--line)', borderRadius: 8, padding: '10px 12px' }}>
+                <div className="mono" style={{ fontSize: 9.5, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>{(f.rel || 'familiar').replace(/_/g, ' ')}</div>
+                <div style={{ fontSize: 13.5, fontWeight: 600, color: 'var(--ink)', marginTop: 2 }}>{f.nombre || '—'}</div>
+                <div className="mono" style={{ fontSize: 10.5, color: 'var(--muted)', marginTop: 2 }}>{f.rut || ''}{f.decil != null ? ` · decil ${f.decil}` : ''}</div>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
+
+      {p.biografia && (
+        <>
+          <div className="section-tag uline" style={{ marginTop: 20, display: 'block' }}>Reseña</div>
+          <p style={{ fontSize: 14, color: 'var(--ink)', fontWeight: 300, lineHeight: 1.55, marginTop: 6 }}>{p.biografia}</p>
+        </>
+      )}
+
+      <p className="mono" style={{ fontSize: 9.5, color: 'var(--muted)', marginTop: 16, letterSpacing: '0.06em' }}>
+        Fuentes: {(p.fuentes || []).join(' · ') || 'registros públicos'}. Datos personales de fuentes públicas, sujetos a verificación · uso reservado.
+      </p>
     </div>
   )
 }
@@ -110,6 +215,7 @@ function rowStat(tipo: string, r: Row) {
 
 function Header({ tipo }: { tipo: string }) {
   const on = (t: string) => (tipo === t ? { color: 'var(--primary)' } : undefined)
+  const { isAuthenticated, logout } = useAuth()
   return (
     <header className="nav">
       <div className="wrap">
@@ -130,6 +236,9 @@ function Header({ tipo }: { tipo: string }) {
               <a href="/sobre">¿Qué es?</a>
             </div>
           </details>
+          {isAuthenticated
+            ? <a href="#" onClick={(e) => { e.preventDefault(); logout(); window.location.reload() }} style={{ cursor: 'pointer' }}>Salir</a>
+            : <a href="/login">Ingresar</a>}
           <a className="btn btn-primary" href="mailto:antonio@unholster.com?subject=Claude%20Legal%20Chile">Contacto</a>
         </nav>
       </div>
@@ -177,7 +286,7 @@ export default function Entidad({ tipo }: { tipo: string }) {
             <p className="mono" style={{ color: 'var(--muted)', fontSize: 12 }}>Cargando fichas…</p>
           ) : (
             <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 24 }}>
-              {sel && <div><Ficha tipo={tipo} r={sel} /></div>}
+              {sel && <div><Ficha tipo={tipo} r={sel} />{tipo === 'jueces' && <JuezPerfil juezKey={sel.key} nombre={sel.nombre} />}</div>}
               <div>
                 <div className="section-tag uline">{q ? `${filtered.length} resultados` : `Top ${filtered.length} por volumen de causas`}</div>
                 <div className="exp-list" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 6, maxHeight: 560, overflowY: 'auto' }}>

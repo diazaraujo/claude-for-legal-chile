@@ -112,3 +112,9 @@ NINJA_JWT = {
 CORPUS_INDEX_DIR = os.environ.get(
     "CORPUS_INDEX_DIR", str(BASE_DIR.parent.parent / "data" / "_index")
 )
+
+# Capa sensible de jueces (identidad/patrimonio/familia), servida solo con JWT.
+# Por defecto vive junto a los índices del corpus. Solo lectura.
+JUECES_DB = os.environ.get(
+    "JUECES_DB", str(Path(CORPUS_INDEX_DIR) / "jueces_enriched.sqlite3")
+)
