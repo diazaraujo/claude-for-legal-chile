@@ -4,10 +4,10 @@ import { Footer } from './Sobre'
 
 type Mat = [string, number]
 type Row = {
-  key: string; nombre: string; n: number; comp?: string; trib?: string
+  key: string; nombre: string; n: number; comp?: string; trib?: string; years?: string
   lab_n?: number; lab_acogida?: number | null; pen_n?: number; pen_condena?: number | null; pen_dias?: number | null
   nres?: number; condena?: number | null; rechazo?: number | null; concil?: number | null; pct_acept?: number | null; monto?: number
-  materias?: Mat[]; defensas?: Mat[]
+  materias?: Mat[]; defensas?: Mat[]; contrapartes?: Mat[]; delitos?: Mat[]
 }
 
 const pct = (x?: number | null) => (x == null ? '—' : `${Math.round(x * 100)}%`)
@@ -15,8 +15,10 @@ const money = (n?: number) => (!n ? '—' : '$' + (n >= 1e9 ? (n / 1e9).toFixed(
 
 const CFG: Record<string, { file: string; tag: string; h1: string; sub: string; intro: string }> = {
   jueces: { file: '/data/jueces.json', tag: 'Jueces', h1: 'La ficha de cada juez, leída de sus fallos', sub: 'jueces con ficha', intro: 'Materias que más resuelve, tasa de acogida laboral, tasa de condena penal y pena promedio — la tendencia histórica de cada juez, medida sobre sus sentencias públicas.' },
-  tribunales: { file: '/data/tribunales.json', tag: 'Tribunales', h1: 'El perfil de cada tribunal y juzgado', sub: 'tribunales con perfil', intro: 'Volumen de causas, tasa de resultados y competencias de cada juzgado del país, construido sobre las sentencias públicas.' },
+  abogados: { file: '/data/abogados.json', tag: 'Abogados', h1: 'Cómo litiga cada abogado, a partir de sus causas', sub: 'abogados perfilados', intro: 'Volumen de causas, competencias, materias y las partes/empresas que aparecen en sus causas — el historial litigioso real de cada abogado patrocinante, leído de las sentencias públicas. El rol no distingue siempre a qué parte representa; mostramos las contrapartes presentes en sus causas.' },
+  fiscales: { file: '/data/fiscales.json', tag: 'Fiscales', h1: 'El comportamiento de cada fiscal, medido', sub: 'fiscales perfilados', intro: 'Tasa de condena obtenida, delitos perseguidos y volumen de causas de cada fiscal del Ministerio Público, construido sobre las sentencias penales públicas.' },
   empresas: { file: '/data/empresas.json', tag: 'Empresas demandadas', h1: 'Cómo litiga cada empresa, a partir de sus causas', sub: 'empresas demandadas perfiladas', intro: 'Historial litigioso de cada empresa demandada en lo laboral — cuánto resuelve por condena, cuánto por conciliación, qué materias enfrenta, con qué defensas y qué montos. Son las partes empleadoras, no sus abogados.' },
+  tribunales: { file: '/data/tribunales.json', tag: 'Tribunales', h1: 'El perfil de cada tribunal y juzgado', sub: 'tribunales con perfil', intro: 'Volumen de causas, tasa de resultados y competencias de cada juzgado del país, construido sobre las sentencias públicas.' },
 }
 
 function Bars({ items, color }: { items: Mat[]; color: string }) {
@@ -47,44 +49,63 @@ function Kpi({ label, value, sub }: { label: string; value: string; sub?: string
 }
 
 function Ficha({ tipo, r }: { tipo: string; r: Row }) {
-  const kpis =
-    tipo === 'empresas'
-      ? [
-          { label: 'Juicios', value: r.n.toLocaleString('es-CL') },
-          { label: 'Tasa de condena (en su contra)', value: pct(r.condena), sub: `${r.nres ?? 0} con resultado` },
-          { label: 'Resuelto por conciliación', value: pct(r.concil) },
-          { label: 'Monto acogido total', value: money(r.monto) },
-        ]
-      : [
-          { label: 'Causas', value: r.n.toLocaleString('es-CL') },
-          { label: 'Acogida laboral', value: pct(r.lab_acogida), sub: r.lab_n ? `${r.lab_n.toLocaleString('es-CL')} laborales` : 'sin causas laborales' },
-          { label: 'Condena penal', value: pct(r.pen_condena), sub: r.pen_n ? `${r.pen_n.toLocaleString('es-CL')} penales` : 'sin causas penales' },
-          { label: 'Pena promedio', value: r.pen_dias ? `${Math.round(r.pen_dias)} días` : '—' },
-        ]
+  let kpis: { label: string; value: string; sub?: string }[]
+  if (tipo === 'empresas') kpis = [
+    { label: 'Juicios', value: r.n.toLocaleString('es-CL') },
+    { label: 'Tasa de condena (en su contra)', value: pct(r.condena), sub: `${r.nres ?? 0} con resultado` },
+    { label: 'Resuelto por conciliación', value: pct(r.concil) },
+    { label: 'Monto acogido total', value: money(r.monto) },
+  ]
+  else if (tipo === 'abogados') kpis = [
+    { label: 'Causas', value: r.n.toLocaleString('es-CL') },
+    { label: 'Competencia principal', value: (r.comp || '—').replace(/_/g, ' ') },
+    { label: 'Período', value: r.years || '—' },
+  ]
+  else if (tipo === 'fiscales') kpis = [
+    { label: 'Causas penales', value: r.n.toLocaleString('es-CL') },
+    { label: 'Tasa de condena obtenida', value: pct(r.condena), sub: r.nres ? `${r.nres.toLocaleString('es-CL')} con resultado` : 'sin resultado extraído aún' },
+    { label: 'Período', value: r.years || '—' },
+  ]
+  else kpis = [
+    { label: 'Causas', value: r.n.toLocaleString('es-CL') },
+    { label: 'Acogida laboral', value: pct(r.lab_acogida), sub: r.lab_n ? `${r.lab_n.toLocaleString('es-CL')} laborales` : 'sin causas laborales' },
+    { label: 'Condena penal', value: pct(r.pen_condena), sub: r.pen_n ? `${r.pen_n.toLocaleString('es-CL')} penales` : 'sin causas penales' },
+    { label: 'Pena promedio', value: r.pen_dias ? `${Math.round(r.pen_dias)} días` : '—' },
+  ]
+  // gráficos por tipo
+  const charts: { label: string; items?: Mat[]; color: string }[] = []
+  if (tipo === 'fiscales') charts.push({ label: 'Delitos más perseguidos', items: r.delitos, color: 'var(--blue-dark)' })
+  else charts.push({ label: 'Materias más frecuentes', items: r.materias, color: 'var(--primary)' })
+  if (tipo === 'empresas') charts.push({ label: 'Defensas más usadas', items: r.defensas, color: 'var(--cyan)' })
+  if (tipo === 'abogados') charts.push({ label: 'Partes / empresas en sus causas', items: r.contrapartes, color: 'var(--cyan)' })
+  const shown = charts.filter((c) => c.items && c.items.length)
   return (
     <div className="card" style={{ marginBottom: 22 }}>
       <div className="section-tag">{CFG[tipo].tag} · ficha</div>
       <h2 style={{ fontSize: 22, fontWeight: 600, margin: '4px 0 4px' }}>{r.nombre}</h2>
-      {(r.trib || r.comp) && <div className="mono" style={{ fontSize: 11, color: 'var(--muted)', marginBottom: 16 }}>{r.trib || r.comp}</div>}
+      {(r.trib || r.comp) && <div className="mono" style={{ fontSize: 11, color: 'var(--muted)', marginBottom: 16 }}>{(r.trib || r.comp || '').replace(/_/g, ' ')}</div>}
       <div className="kpi-grid" style={{ gridTemplateColumns: 'repeat(2,1fr)', gap: 10 }}>
         {kpis.map((k) => <Kpi key={k.label} {...k} />)}
       </div>
-      <div style={{ display: 'grid', gridTemplateColumns: r.defensas?.length ? '1fr 1fr' : '1fr', gap: 24, marginTop: 20 }} className="ficha-charts">
-        {r.materias?.length ? (
-          <div>
-            <div className="kpi-label">Materias más frecuentes</div>
-            <Bars items={r.materias} color="var(--primary)" />
-          </div>
-        ) : null}
-        {r.defensas?.length ? (
-          <div>
-            <div className="kpi-label">Defensas más usadas</div>
-            <Bars items={r.defensas} color="var(--cyan)" />
-          </div>
-        ) : null}
-      </div>
+      {shown.length > 0 && (
+        <div style={{ display: 'grid', gridTemplateColumns: shown.length > 1 ? '1fr 1fr' : '1fr', gap: 24, marginTop: 20 }} className="ficha-charts">
+          {shown.map((c) => (
+            <div key={c.label}>
+              <div className="kpi-label">{c.label}</div>
+              <Bars items={c.items as Mat[]} color={c.color} />
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   )
+}
+
+function rowStat(tipo: string, r: Row) {
+  if (tipo === 'fiscales') return `${r.n.toLocaleString('es-CL')} causas${r.condena != null ? ` · ${pct(r.condena)} condena` : ''}`
+  if (tipo === 'abogados') return `${r.n.toLocaleString('es-CL')} causas${r.comp ? ` · ${r.comp.replace(/_/g, ' ')}` : ''}`
+  if (tipo === 'empresas') return `${r.n.toLocaleString('es-CL')} causas${r.condena != null ? ` · ${pct(r.condena)} condena` : ''}`
+  return `${r.n.toLocaleString('es-CL')} causas${r.pen_condena != null ? ` · ${pct(r.pen_condena)} condena` : ''}${r.lab_acogida != null ? ` · ${pct(r.lab_acogida)} acogida` : ''}`
 }
 
 function Header({ tipo }: { tipo: string }) {
@@ -96,17 +117,17 @@ function Header({ tipo }: { tipo: string }) {
         <div className="spacer" />
         <nav className="navlinks">
           <a href="/jueces" style={on('jueces')}>Jueces</a>
-          <a href="/empresas" style={on('empresas')}>Empresas</a>
+          <a href="/abogados" style={on('abogados')}>Abogados</a>
           <a href="/fiscales" style={on('fiscales')}>Fiscales</a>
           <a href="/tribunales" style={on('tribunales')}>Tribunales</a>
           <details className="more">
             <summary>Más <span className="caret">▾</span></summary>
             <div className="more-menu">
+              <a href="/empresas" style={on('empresas')}>Empresas demandadas</a>
               <a href="/">Inicio</a>
               <a href="/buscar">Buscar</a>
               <a href="/analisis">Análisis ↗</a>
               <a href="/sobre">¿Qué es?</a>
-              <a href="/sobre#corpus">El corpus</a>
             </div>
           </details>
           <a className="btn btn-primary" href="mailto:antonio@unholster.com?subject=Claude%20Legal%20Chile">Contacto</a>
@@ -117,24 +138,6 @@ function Header({ tipo }: { tipo: string }) {
 }
 
 export default function Entidad({ tipo }: { tipo: string }) {
-  if (tipo === 'fiscales') {
-    return (
-      <div className="decide-root">
-        <Header tipo={tipo} />
-        <section className="hero"><div className="wrap">
-          <div className="toprow"><span className="section-tag">Fiscales · Rayos X de la justicia</span><span className="status"><span className="dot" style={{ background: 'var(--warn)' }} /> En extracción</span></div>
-          <h1>El comportamiento del Ministerio Público, medido</h1>
-          <p className="lead">Tasa de condena obtenida, delitos perseguidos y penas — sobre las 316.679 causas penales ya leídas. La identificación del fiscal por causa es la siguiente capa de extracción; las fichas se publican cuando estén medidas y validadas.</p>
-          <div style={{ marginTop: 22, display: 'flex', gap: 10 }}>
-            <a className="btn btn-primary" href="/jueces">Ver fichas de jueces</a>
-            <a className="btn btn-ghost" href="/">Volver al inicio</a>
-          </div>
-        </div></section>
-        <Footer />
-      </div>
-    )
-  }
-
   const cfg = CFG[tipo]
   const [data, setData] = useState<Row[]>([])
   const [q, setQ] = useState('')
@@ -173,7 +176,7 @@ export default function Entidad({ tipo }: { tipo: string }) {
           {loading ? (
             <p className="mono" style={{ color: 'var(--muted)', fontSize: 12 }}>Cargando fichas…</p>
           ) : (
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 24 }} className="exp-grid">
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 24 }}>
               {sel && <div><Ficha tipo={tipo} r={sel} /></div>}
               <div>
                 <div className="section-tag uline">{q ? `${filtered.length} resultados` : `Top ${filtered.length} por volumen de causas`}</div>
@@ -182,14 +185,14 @@ export default function Entidad({ tipo }: { tipo: string }) {
                     <button key={r.key} onClick={() => { setSel(r); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
                       className="card" style={{ textAlign: 'left', cursor: 'pointer', padding: '12px 16px', border: sel?.key === r.key ? '1px solid var(--primary)' : '1px solid var(--line)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12 }}>
                       <span style={{ fontSize: 14, fontWeight: 600, color: 'var(--ink)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{r.nombre}</span>
-                      <span className="mono" style={{ fontSize: 11, color: 'var(--muted)', flex: 'none' }}>{r.n.toLocaleString('es-CL')} causas{tipo !== 'abogados' && r.pen_condena != null ? ` · ${pct(r.pen_condena)} condena` : ''}{tipo === 'empresas' && r.condena != null ? ` · ${pct(r.condena)} condena` : ''}{tipo !== 'abogados' && r.lab_acogida != null ? ` · ${pct(r.lab_acogida)} acogida` : ''}</span>
+                      <span className="mono" style={{ fontSize: 11, color: 'var(--muted)', flex: 'none' }}>{rowStat(tipo, r)}</span>
                     </button>
                   ))}
                 </div>
               </div>
             </div>
           )}
-          <p className="mono" style={{ fontSize: 10, color: 'var(--muted)', letterSpacing: '0.08em', marginTop: 18, textTransform: 'uppercase' }}>Datos extraídos de sentencias públicas · muestra en aumento mientras corre la extracción · las tasas son sobre las causas ya procesadas</p>
+          <p className="mono" style={{ fontSize: 10, color: 'var(--muted)', letterSpacing: '0.08em', marginTop: 18, textTransform: 'uppercase' }}>Datos extraídos de sentencias públicas · muestra en aumento mientras corre la extracción · las tasas y materias son sobre las causas ya procesadas</p>
         </div>
       </section>
       <Footer />
