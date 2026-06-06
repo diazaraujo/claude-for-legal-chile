@@ -111,6 +111,10 @@
   .kpi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
   @media(min-width:880px){.kpi-grid{grid-template-columns:repeat(4,1fr)}}
   .kpi-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+  a.kpi-card{display:block;text-decoration:none}
+  .kpi-card.hov{transition:border-color .15s ease;cursor:pointer}
+  .kpi-card.hov:hover{border-color:var(--primary)}
+  .kpi-card.hov .kpi-value{color:var(--primary)}
   .kpi-label{font-family:'JetBrains Mono',monospace;font-size:10px;line-height:14px;text-transform:uppercase;
     letter-spacing:.10em;color:var(--muted);margin-bottom:6px}
   .kpi-value{font-size:22px;font-weight:800;color:var(--ink);line-height:1;font-variant-numeric:tabular-nums}

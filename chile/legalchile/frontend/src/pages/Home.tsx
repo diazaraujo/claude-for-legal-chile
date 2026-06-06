@@ -93,9 +93,16 @@ export default function Home() {
           <span className="section-tag uline">Lo que tiene este corpus</span>
           <div className="kpi-grid">
             <div className="kpi-card"><div className="kpi-label">Documentos indexados</div><div className="kpi-value">4,9 M</div></div>
-            <div className="kpi-card"><div className="kpi-label">Normas vigentes · BCN</div><div className="kpi-value">136.212</div></div>
-            <div className="kpi-card"><div className="kpi-label">Causas leídas por IA</div><div className="kpi-value">455.805</div></div>
+            <div className="kpi-card"><div className="kpi-label">Normas · BCN</div><div className="kpi-value">142.283</div></div>
+            <div className="kpi-card"><div className="kpi-label">Causas leídas por IA</div><div className="kpi-value">585.688</div></div>
             <div className="kpi-card"><div className="kpi-label">Embeddings semánticos</div><div className="kpi-value">4,8 M</div></div>
+          </div>
+          <span className="section-tag uline" style={{ marginTop: 18, display: 'block' }}>Entidades perfiladas · clic para explorar</span>
+          <div className="kpi-grid">
+            <a className="kpi-card hov" href="/jueces"><div className="kpi-label">Jueces</div><div className="kpi-value">2.390</div></a>
+            <a className="kpi-card hov" href="/abogados"><div className="kpi-label">Abogados</div><div className="kpi-value">71.245</div></a>
+            <a className="kpi-card hov" href="/fiscales"><div className="kpi-label">Fiscales</div><div className="kpi-value">8.643</div></a>
+            <a className="kpi-card hov" href="/tribunales"><div className="kpi-label">Tribunales</div><div className="kpi-value">437</div></a>
           </div>
         </div>
       </section>
