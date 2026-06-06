@@ -41,7 +41,8 @@ def worker(row):
             (RAW/f"stub-{nid}.bin").write_bytes(body[:4000]); mark(nid,0,"stub")
             with lock: S["stub"]+=1
             return
-    with lock: S["ban"]+=1                  # todas las geos fallaron (queda pending p/ retry)
+    mark(nid,0,"ban")                       # todas las geos fallaron → marca TERMINAL (sale del pool,
+    with lock: S["ban"]+=1                  # evita re-loop sobre la misma banda lenta; retry en pasada futura reseteando status='ban'→NULL)
 c = sqlite3.connect(DB); pend=[(r[0],r[1]) for r in c.execute("SELECT id_norma,tipo FROM normas WHERE downloaded=0 AND status IS NULL ORDER BY id_norma DESC")]; c.close()
 print(f"pending: {len(pend)} · {time.strftime('%H:%M:%S')}", flush=True); t0=time.time()
 with ThreadPoolExecutor(max_workers=4) as ex:
