@@ -24,17 +24,17 @@ pc = sqlite3.connect(PERF, timeout=60)
 
 # ---- jueces / tribunales / empresas (de *_perfil) ----
 jr = []
-for r in pc.execute("SELECT juez_key,juez,n_causas,competencias,tribunal_principal,lab_n,lab_tasa_acogida,pen_n,pen_tasa_condena,pen_dias_pena_prom,materias_top FROM juez_perfil WHERE juez IS NOT NULL AND n_causas>=20 ORDER BY n_causas DESC"):
+for r in pc.execute("SELECT juez_key,juez,n_causas,competencias,tribunal_principal,lab_n,lab_tasa_acogida,pen_n,pen_tasa_condena,pen_dias_pena_prom,materias_top FROM juez_perfil WHERE juez IS NOT NULL AND n_causas>=1 ORDER BY n_causas DESC"):
     jr.append({"key": r[0], "nombre": r[1], "n": r[2], "comp": r[3], "trib": r[4], "lab_n": r[5], "lab_acogida": f(r[6]), "pen_n": r[7], "pen_condena": f(r[8]), "pen_dias": f(r[9], 1), "materias": [[k.replace('_', ' '), int(v)] for k, v in (x.rsplit(':', 1) for x in (r[10] or '').split(',') if ':' in x)][:8]})
 json.dump(jr, open(f"{OUT}/jueces.json", "w"), ensure_ascii=False)
 
 tr = []
-for r in pc.execute("SELECT tribunal_key,tribunal,n_causas,competencias,lab_n,lab_tasa_acogida,pen_n,pen_tasa_condena,pen_dias_pena_prom FROM tribunal_perfil WHERE tribunal IS NOT NULL AND n_causas>=20 ORDER BY n_causas DESC"):
+for r in pc.execute("SELECT tribunal_key,tribunal,n_causas,competencias,lab_n,lab_tasa_acogida,pen_n,pen_tasa_condena,pen_dias_pena_prom FROM tribunal_perfil WHERE tribunal IS NOT NULL AND n_causas>=1 ORDER BY n_causas DESC"):
     tr.append({"key": r[0], "nombre": r[1], "n": r[2], "comp": r[3], "lab_n": r[4], "lab_acogida": f(r[5]), "pen_n": r[6], "pen_condena": f(r[7]), "pen_dias": f(r[8], 1)})
 json.dump(tr, open(f"{OUT}/tribunales.json", "w"), ensure_ascii=False)
 
 er = []
-for r in pc.execute("SELECT empresa_key,empresa,n_juicios,n_con_resultado,tasa_condena,tasa_rechazo,tasa_conciliacion,pct_aceptado_prom,monto_acogido_total_clp,defensas_top,materias_top FROM empresa_laboral_perfil WHERE empresa IS NOT NULL AND n_juicios>=10 ORDER BY n_juicios DESC LIMIT 2500"):
+for r in pc.execute("SELECT empresa_key,empresa,n_juicios,n_con_resultado,tasa_condena,tasa_rechazo,tasa_conciliacion,pct_aceptado_prom,monto_acogido_total_clp,defensas_top,materias_top FROM empresa_laboral_perfil WHERE empresa IS NOT NULL AND n_juicios>=1 ORDER BY n_juicios DESC"):
     def parse(s): return [[k.replace('_', ' '), int(v)] for k, v in (x.rsplit(':', 1) for x in (s or '').split(',') if ':' in x)][:8]
     er.append({"key": r[0], "nombre": r[1], "n": r[2], "nres": r[3], "condena": f(r[4]), "rechazo": f(r[5]), "concil": f(r[6]), "pct_acept": f(r[7]), "monto": r[8], "defensas": parse(r[9]), "materias": parse(r[10])})
 json.dump(er, open(f"{OUT}/empresas.json", "w"), ensure_ascii=False)
@@ -63,10 +63,10 @@ for sid, comp, nom, key, anio in prt.execute("SELECT sent_id,competencia,nombre,
 abr = []
 for k, d in ab.items():
     n = len(d["sids"])
-    if n < 8: continue
+    if n < 1: continue
     yr = sorted(d["yr"]); rng = f"{yr[0]}–{yr[-1]}" if yr else ""
     abr.append({"key": k, "nombre": d["nombre"], "n": n, "comp": d["comp"].most_common(1)[0][0] if d["comp"] else "", "years": rng, "materias": topk(d["mat"]), "contrapartes": topk(d["cp"], 6)})
-abr.sort(key=lambda x: -x["n"]); abr = abr[:2500]
+abr.sort(key=lambda x: -x["n"])
 json.dump(abr, open(f"{OUT}/abogados.json", "w"), ensure_ascii=False)
 
 fi = collections.defaultdict(lambda: {"nombre": None, "sids": set(), "yr": [], "cond": 0, "res": 0, "del": collections.Counter()})
@@ -83,10 +83,10 @@ prt.close()
 fir = []
 for k, d in fi.items():
     n = len(d["sids"])
-    if n < 8: continue
+    if n < 1: continue
     yr = sorted(d["yr"]); rng = f"{yr[0]}–{yr[-1]}" if yr else ""
     fir.append({"key": k, "nombre": d["nombre"], "n": n, "years": rng, "condena": round(d["cond"] / d["res"], 3) if d["res"] else None, "nres": d["res"], "delitos": topk(d["del"])})
-fir.sort(key=lambda x: -x["n"]); fir = fir[:2000]
+fir.sort(key=lambda x: -x["n"])
 json.dump(fir, open(f"{OUT}/fiscales.json", "w"), ensure_ascii=False)
 
 print(f"export OK · jueces={len(jr)} tribunales={len(tr)} empresas={len(er)} abogados={len(abr)} fiscales={len(fir)}")
