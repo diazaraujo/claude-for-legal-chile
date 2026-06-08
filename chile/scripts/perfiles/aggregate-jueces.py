@@ -57,9 +57,9 @@ def main():
     J=collections.defaultdict(lambda:{"disp":collections.Counter(),"trib":collections.Counter(),
         "comp":collections.Counter(),"mat":collections.Counter(),"mat_out":{},"n":0,
         "lab_n":0,"lab_acog":0,"lab_rech":0,"pcts":[],
-        "pen_n":0,"pen_cond":0,"dias":[]})
+        "pen_n":0,"pen_cond":0,"pen_abs":0,"dias":[]})
     T=collections.defaultdict(lambda:{"disp":collections.Counter(),"comp":collections.Counter(),"n":0,
-        "lab_n":0,"lab_acog":0,"pen_n":0,"pen_cond":0,"dias":[]})
+        "lab_n":0,"lab_acog":0,"pen_n":0,"pen_cond":0,"pen_abs":0,"dias":[]})
 
     for comp in ("Laborales","Penales"):
         res = lab if comp=="Laborales" else pen
@@ -79,23 +79,30 @@ def main():
                         elif resultado=="rechazada": d["lab_rech"]+=1
                         if msol and macog and msol>0: d["pcts"].append(min(100.0,100.0*macog/msol))
                         win = resultado in("acogida","acogida_parcial")
+                        merits = win or resultado=="rechazada"  # denominador limpio: solo veredicto de fondo
                         for m in (materias or "").split(","):
                             mm=m.strip()
                             if mm:
                                 d["mat"][mm]+=1
-                                mo=d["mat_out"].setdefault(mm,[0,0,"a"]); mo[0]+=1; mo[2]="a"
-                                if win: mo[1]+=1
+                                mo=d["mat_out"].setdefault(mm,[0,0,"a"]); mo[2]="a"
+                                if merits:
+                                    mo[0]+=1
+                                    if win: mo[1]+=1
                     elif comp=="Penales" and rr:
                         decision,delitos,dias=rr; d["pen_n"]+=1
                         if decision=="condena": d["pen_cond"]+=1
+                        elif decision=="absolucion": d["pen_abs"]+=1
                         if dias: d["dias"].append(dias)
                         win = decision=="condena"
+                        merits = decision in("condena","absolucion")  # excluye no_aplica/sobreseimiento/mixta
                         for m in (delitos or "").split(","):
                             mm=m.strip()
                             if mm:
                                 d["mat"][mm]+=1
-                                mo=d["mat_out"].setdefault(mm,[0,0,"c"]); mo[0]+=1; mo[2]="c"
-                                if win: mo[1]+=1
+                                mo=d["mat_out"].setdefault(mm,[0,0,"c"]); mo[2]="c"
+                                if merits:
+                                    mo[0]+=1
+                                    if win: mo[1]+=1
                 if tname:
                     k=norm(tname); t=T[k]; t["disp"][tname]+=1; t["n"]+=1; t["comp"][comp]+=1
                     if comp=="Laborales" and rr:
@@ -104,6 +111,7 @@ def main():
                     elif comp=="Penales" and rr:
                         t["pen_n"]+=1
                         if rr[0]=="condena": t["pen_cond"]+=1
+                        elif rr[0]=="absolucion": t["pen_abs"]+=1
                         if rr[2]: t["dias"].append(rr[2])
 
     out=sqlite3.connect(PERFIL,timeout=120); out.execute("PRAGMA busy_timeout=120000")
@@ -126,7 +134,7 @@ def main():
             d["trib"].most_common(1)[0][0] if d["trib"] else None,
             d["lab_n"], round(d["lab_acog"]/labden,3) if labden else None,
             round(sum(d["pcts"])/len(d["pcts"]),1) if d["pcts"] else None,
-            d["pen_n"], round(d["pen_cond"]/d["pen_n"],3) if d["pen_n"] else None,
+            d["pen_n"], round(d["pen_cond"]/(d["pen_cond"]+d["pen_abs"]),3) if (d["pen_cond"]+d["pen_abs"]) else None,
             int(sum(d["dias"])/len(d["dias"])) if d["dias"] else None,
             ",".join(f"{x}:{c}" for x,c in d["mat"].most_common(6)),
             json.dumps([[x, c, (round(100*d["mat_out"][x][1]/d["mat_out"][x][0]) if d["mat_out"].get(x,[0,0])[0] else None),
@@ -138,7 +146,7 @@ def main():
             k, d["disp"].most_common(1)[0][0], d["n"],
             ",".join(f"{c}:{n}" for c,n in d["comp"].most_common()),
             d["lab_n"], round(d["lab_acog"]/d["lab_n"],3) if d["lab_n"] else None,
-            d["pen_n"], round(d["pen_cond"]/d["pen_n"],3) if d["pen_n"] else None,
+            d["pen_n"], round(d["pen_cond"]/(d["pen_cond"]+d["pen_abs"]),3) if (d["pen_cond"]+d["pen_abs"]) else None,
             int(sum(d["dias"])/len(d["dias"])) if d["dias"] else None)); nt+=1
     out.commit()
     print(f"juez_perfil: {nj} jueces · tribunal_perfil: {nt} tribunales\n")
