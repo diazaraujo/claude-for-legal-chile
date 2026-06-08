@@ -96,29 +96,44 @@ function JuezPerfil({ r }: { r: Row }) {
         })()}
         {p.hist && p.hist.length > 1 && (() => {
           const pts = p.hist.map((h) => ({ fecha: h.fecha, total: (h.av_inm || 0) + (h.av_veh || 0) }))
-          const W = 320, Hh = 46
           const vals = pts.map((q) => q.total)
-          const lo = Math.min(...vals), hi = Math.max(...vals, 1)
-          const range = hi - lo || 1
-          const xx = (i: number) => (pts.length === 1 ? W / 2 : (i / (pts.length - 1)) * W)
-          const yy = (v: number) => Hh - 4 - ((v - lo) / range) * (Hh - 8)
-          const path = pts.map((q, i) => `${i === 0 ? 'M' : 'L'} ${xx(i).toFixed(1)} ${yy(q.total).toFixed(1)}`).join(' ')
+          const hi = Math.max(...vals, 1)
+          const peakIdx = vals.indexOf(Math.max(...vals))
+          // eje X temporal real (fallback a índice si las fechas no parsean)
+          const times = pts.map((q) => new Date(q.fecha).getTime())
+          const useDate = times.every((t) => !isNaN(t)) && times[times.length - 1] > times[0]
+          const t0 = useDate ? times[0] : 0
+          const span = (useDate ? times[times.length - 1] - times[0] : pts.length - 1) || 1
+          const W = 760, H = 152, padL = 12, padR = 12, padT = 22, padB = 18
+          const X = (i: number) => padL + (useDate ? (times[i] - t0) / span : (pts.length === 1 ? 0.5 : i / (pts.length - 1))) * (W - padL - padR)
+          const Y = (v: number) => padT + (1 - v / hi) * (H - padT - padB)
+          const line = pts.map((q, i) => `${i === 0 ? 'M' : 'L'} ${X(i).toFixed(1)} ${Y(q.total).toFixed(1)}`).join(' ')
+          const area = `${line} L ${X(pts.length - 1).toFixed(1)} ${(H - padB).toFixed(1)} L ${X(0).toFixed(1)} ${(H - padB).toFixed(1)} Z`
           return (
             <div style={{ marginTop: 16 }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: 8 }}>
                 <span className="section-tag" style={{ margin: 0 }}>Evolución del patrimonio declarado</span>
                 <span className="mono" style={{ fontSize: 10, color: 'var(--muted)' }}>{pts.length} declaraciones · {pts[0].fecha.slice(0, 4)}–{pts[pts.length - 1].fecha.slice(0, 4)}</span>
               </div>
-              <svg viewBox={`0 0 ${W} ${Hh}`} preserveAspectRatio="none" style={{ width: '100%', height: 44, marginTop: 6, overflow: 'visible' }}>
-                <path d={path} fill="none" stroke="var(--primary)" strokeWidth={1.5} vectorEffect="non-scaling-stroke" />
+              <svg viewBox={`0 0 ${W} ${H}`} style={{ width: '100%', height: 'auto', marginTop: 8, display: 'block' }}>
+                <defs>
+                  <linearGradient id="patg" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stopColor="#266FE0" stopOpacity={0.22} />
+                    <stop offset="100%" stopColor="#266FE0" stopOpacity={0} />
+                  </linearGradient>
+                </defs>
+                <line x1={padL} y1={H - padB} x2={W - padR} y2={H - padB} stroke="var(--line)" strokeWidth={1} />
+                <path d={area} fill="url(#patg)" />
+                <path d={line} fill="none" stroke="#266FE0" strokeWidth={2.2} strokeLinejoin="round" strokeLinecap="round" />
                 {pts.map((q, i) => (
-                  <circle key={i} cx={xx(i)} cy={yy(q.total)} r={1.6} fill="var(--primary)">
+                  <circle key={i} cx={X(i)} cy={Y(q.total)} r={i === peakIdx ? 3.8 : 2.3} fill={i === peakIdx ? '#266FE0' : '#fff'} stroke="#266FE0" strokeWidth={1.5}>
                     <title>{q.fecha}: {clp(q.total)}</title>
                   </circle>
                 ))}
+                <text x={Math.min(Math.max(X(peakIdx), 40), W - 40)} y={Math.max(Y(vals[peakIdx]) - 9, 12)} textAnchor="middle" style={{ fill: 'var(--ink)', fontSize: 11, fontWeight: 700, fontFamily: 'ui-monospace, monospace' }}>máx {clp(vals[peakIdx])}</text>
               </svg>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: 2 }}>
-                <span className="mono" style={{ fontSize: 9.5, color: 'var(--muted)' }}>{clp(pts[0].total)}</span>
+                <span className="mono" style={{ fontSize: 9.5, color: 'var(--muted)' }}>{pts[0].fecha.slice(0, 4)} · {clp(pts[0].total)}</span>
                 <span className="mono" style={{ fontSize: 9.5, color: 'var(--ink)' }}>hoy {clp(pts[pts.length - 1].total)}</span>
               </div>
             </div>
