@@ -23,6 +23,8 @@ INSTALLED_APPS = [
     # Third party
     "corsheaders",
     "ninja",
+    "ninja_extra",  # AppConfig arma el injector de DI; sin esto /api/token/pair da 500
+    "ninja_jwt",
     # Local
     "apps.users",
     "apps.core",
