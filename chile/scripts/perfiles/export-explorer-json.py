@@ -57,6 +57,21 @@ if os.path.exists(ENR):
     for j in jr:
         if j["key"] in bios:
             j["bio"] = bios[j["key"]]
+    # patrimonio PÚBLICO: Declaración de Patrimonio e Intereses (Ley 20.880 / InfoProbidad).
+    # Fuente oficial pública, resumen agregado (sin direcciones), SOLO el funcionario.
+    ec2 = sqlite3.connect(f"file:{ENR}?mode=ro", uri=True)
+    try:
+        decl = {r[0]: r for r in ec2.execute(
+            "SELECT juez_key,fecha_declaracion,cargo,n_inmuebles,avaluo_inmuebles,n_vehiculos,avaluo_vehiculos,n_pasivos FROM juez_declaracion")}
+    except Exception:
+        decl = {}
+    ec2.close()
+    for j in jr:
+        d = decl.get(j["key"])
+        if d:
+            j["patrimonio"] = {"fecha": (d[1] or "")[:10] or None, "cargo": cap(d[2]),
+                               "n_inmuebles": d[3], "avaluo_inmuebles": d[4],
+                               "n_vehiculos": d[5], "avaluo_vehiculos": d[6], "n_pasivos": d[7]}
 json.dump(jr, open(f"{OUT}/jueces.json", "w"), ensure_ascii=False)
 
 tr = []

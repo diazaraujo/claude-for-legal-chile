@@ -8,7 +8,7 @@ type Row = {
   lab_n?: number; lab_acogida?: number | null; pen_n?: number; pen_condena?: number | null; pen_dias?: number | null
   nres?: number; condena?: number | null; rechazo?: number | null; concil?: number | null; pct_acept?: number | null; monto?: number
   materias?: Mat[]; defensas?: Mat[]; contrapartes?: Mat[]; delitos?: Mat[]
-  bio?: string; civil?: Civil
+  bio?: string; patrimonio?: Patrimonio
 }
 
 const pct = (x?: number | null) => (x == null ? '—' : `${Math.round(x * 100)}%`)
@@ -49,60 +49,38 @@ function Kpi({ label, value, sub }: { label: string; value: string; sub?: string
   )
 }
 
-// ---- Capa civil del juez (identidad/avalúo/familia + reseña IA), pública ----
-type Familiar = { rel?: string; nombre?: string; rut?: string; decil?: number | null }
-type Civil = {
-  rut?: string; conf?: number; edad?: number | null; genero?: string | null
-  estado_civil?: string | null; n_hijos?: number | null; comuna?: string | null
-  nse_decil?: number | null; avaluo?: number | null; familia?: Familiar[]
+// ---- Patrimonio declarado (Ley 20.880 · InfoProbidad) + reseña IA · público ----
+type Patrimonio = {
+  fecha?: string | null; cargo?: string | null
+  n_inmuebles?: number; avaluo_inmuebles?: number
+  n_vehiculos?: number; avaluo_vehiculos?: number; n_pasivos?: number
 }
-const clp = (n?: number | null) => (n == null ? '—' : '$' + Number(n).toLocaleString('es-CL'))
+const clp = (n?: number | null) => (!n ? '—' : '$' + Number(n).toLocaleString('es-CL'))
 
 function JuezPerfil({ r }: { r: Row }) {
-  const c = r.civil
-  if (!c && !r.bio) return null
-  const idKpis: [string, string][] = c ? [
-    ['RUT', c.rut || '—'], ['Edad', c.edad != null ? `${c.edad} años` : '—'],
-    ['Género', c.genero || '—'], ['Estado civil', c.estado_civil || '—'],
-    ['Comuna', c.comuna || '—'], ['Decil avalúo', c.nse_decil != null ? `${c.nse_decil}/10` : '—'],
-  ] : []
+  const p = r.patrimonio
+  if (!p && !r.bio) return null
   return (
     <div className="card" style={{ marginBottom: 22, borderColor: 'var(--primary)' }}>
-      {c && <>
+      {p && <>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: 8 }}>
-          <div className="section-tag">Ficha civil · fuentes públicas</div>
-          {c.conf != null && <span className="mono" style={{ fontSize: 10, color: 'var(--muted)' }}>Identificación probable · confianza {Math.round((c.conf || 0) * 100)}%</span>}
+          <div className="section-tag">Patrimonio declarado · Ley 20.880</div>
+          {p.fecha && <span className="mono" style={{ fontSize: 10, color: 'var(--muted)' }}>Declaración {p.fecha}{p.cargo ? ` · ${p.cargo}` : ''}</span>}
         </div>
         <div className="kpi-grid" style={{ gridTemplateColumns: 'repeat(3,1fr)', gap: 10, marginTop: 8 }}>
-          {idKpis.map(([l, v]) => <Kpi key={l} label={l} value={v} />)}
+          <Kpi label="Bienes raíces" value={String(p.n_inmuebles ?? 0)} sub={p.avaluo_inmuebles ? `avalúo ${clp(p.avaluo_inmuebles)}` : undefined} />
+          <Kpi label="Vehículos" value={String(p.n_vehiculos ?? 0)} sub={p.avaluo_vehiculos ? `avalúo ${clp(p.avaluo_vehiculos)}` : undefined} />
+          <Kpi label="Deudas declaradas" value={p.n_pasivos != null ? String(p.n_pasivos) : '—'} />
         </div>
-        <div className="kpi-grid" style={{ gridTemplateColumns: 'repeat(2,1fr)', gap: 10, marginTop: 10 }}>
-          <Kpi label="Avalúo fiscal de bienes raíces" value={clp(c.avaluo)} />
-          <Kpi label="Hijos" value={c.n_hijos != null ? String(c.n_hijos) : '—'} />
-        </div>
-        {c.familia && c.familia.length > 0 && (
-          <>
-            <div className="section-tag uline" style={{ marginTop: 20, display: 'block' }}>Red familiar</div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(220px,1fr))', gap: 8, marginTop: 6 }}>
-              {c.familia.map((f, i) => (
-                <div key={i} style={{ border: '1px solid var(--line)', borderRadius: 8, padding: '10px 12px' }}>
-                  <div className="mono" style={{ fontSize: 9.5, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>{(f.rel || 'familiar').replace(/_/g, ' ')}</div>
-                  <div style={{ fontSize: 13.5, fontWeight: 600, color: 'var(--ink)', marginTop: 2 }}>{f.nombre || '—'}</div>
-                  <div className="mono" style={{ fontSize: 10.5, color: 'var(--muted)', marginTop: 2 }}>{f.rut || ''}{f.decil != null ? ` · decil ${f.decil}` : ''}</div>
-                </div>
-              ))}
-            </div>
-          </>
-        )}
       </>}
       {r.bio && (
         <>
-          <div className="section-tag uline" style={{ marginTop: c ? 20 : 0, display: 'block' }}>Reseña</div>
+          <div className="section-tag uline" style={{ marginTop: p ? 20 : 0, display: 'block' }}>Reseña</div>
           <p style={{ fontSize: 14, color: 'var(--ink)', fontWeight: 300, lineHeight: 1.55, marginTop: 6 }}>{r.bio}</p>
         </>
       )}
       <p className="mono" style={{ fontSize: 9.5, color: 'var(--muted)', marginTop: 16, letterSpacing: '0.06em' }}>
-        Reseña generada con IA sobre las sentencias públicas del juez.{c ? ' Datos civiles de fuentes públicas (avalúos SII, registros Mallas), identificación probabilística sujeta a verificación.' : ''}
+        Reseña generada con IA sobre las sentencias públicas del juez.{p ? ' Patrimonio según la Declaración de Intereses y Patrimonio (Ley 20.880), publicada en InfoProbidad.' : ''}
       </p>
     </div>
   )
