@@ -2,7 +2,6 @@ import { useEffect, useMemo, useState } from 'react'
 import '../styles/decide.css'
 import { Footer } from './Sobre'
 import api from '@/lib/api'
-import { useAuth } from '@/contexts/AuthContext'
 
 type Mat = [string, number]
 type Row = {
@@ -62,30 +61,17 @@ type Perfil = {
 const clp = (n?: number | null) => (n == null ? '—' : '$' + Number(n).toLocaleString('es-CL'))
 
 function JuezPerfil({ juezKey, nombre }: { juezKey: string; nombre: string }) {
-  const { isAuthenticated } = useAuth()
   const [p, setP] = useState<Perfil | null>(null)
   const [loading, setLoading] = useState(false)
   const [err, setErr] = useState(false)
 
   useEffect(() => {
-    if (!isAuthenticated) { setP(null); return }
     setLoading(true); setErr(false)
     api.get(`/jueces/${encodeURIComponent(juezKey)}/perfil`)
       .then(({ data }) => setP(data))
       .catch(() => setErr(true))
       .finally(() => setLoading(false))
-  }, [juezKey, isAuthenticated])
-
-  if (!isAuthenticated) return (
-    <div className="card" style={{ marginBottom: 22, borderStyle: 'dashed' }}>
-      <div className="section-tag">Capa reservada · identidad · patrimonio · red familiar</div>
-      <p style={{ fontSize: 14, color: 'var(--ink)', fontWeight: 300, margin: '8px 0 14px' }}>
-        La ficha civil del juez (RUT, edad, patrimonio estimado y red familiar, a partir de fuentes públicas)
-        está disponible solo para usuarios autorizados.
-      </p>
-      <a className="btn btn-primary" href="/login">Iniciar sesión para ver</a>
-    </div>
-  )
+  }, [juezKey])
   if (loading) return <div className="card" style={{ marginBottom: 22 }}><p className="mono" style={{ fontSize: 12, color: 'var(--muted)' }}>Cargando ficha civil…</p></div>
   if (err || !p) return null
   if (p.sin_datos || p.identificado === false) return (
@@ -215,7 +201,6 @@ function rowStat(tipo: string, r: Row) {
 
 function Header({ tipo }: { tipo: string }) {
   const on = (t: string) => (tipo === t ? { color: 'var(--primary)' } : undefined)
-  const { isAuthenticated, logout } = useAuth()
   return (
     <header className="nav">
       <div className="wrap">
@@ -236,9 +221,6 @@ function Header({ tipo }: { tipo: string }) {
               <a href="/sobre">¿Qué es?</a>
             </div>
           </details>
-          {isAuthenticated
-            ? <a href="#" onClick={(e) => { e.preventDefault(); logout(); window.location.reload() }} style={{ cursor: 'pointer' }}>Salir</a>
-            : <a href="/login">Ingresar</a>}
           <a className="btn btn-primary" href="mailto:antonio@unholster.com?subject=Claude%20Legal%20Chile">Contacto</a>
         </nav>
       </div>

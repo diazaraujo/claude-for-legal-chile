@@ -1,12 +1,10 @@
 from ninja import Router
-from ninja_jwt.authentication import JWTAuth
 
 from . import service
 
-# Toda la app requiere sesión autenticada (JWT). La capa de comportamiento
-# judicial (pública) va por JSON estático del frontend; esto es SOLO la capa
-# sensible (identidad/patrimonio/familia).
-router = Router(tags=["jueces"], auth=JWTAuth())
+# Capa de jueces PÚBLICA (identidad/patrimonio/red familiar desde fuentes
+# públicas + Mallas). Antes gateada por JWT; abierta por decisión de producto.
+router = Router(tags=["jueces"])
 
 
 @router.get("/disponible")
