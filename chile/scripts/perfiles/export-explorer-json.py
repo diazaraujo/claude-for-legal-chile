@@ -60,18 +60,32 @@ if os.path.exists(ENR):
     # patrimonio PÚBLICO: Declaración de Patrimonio e Intereses (Ley 20.880 / InfoProbidad).
     # Fuente oficial pública, resumen agregado (sin direcciones), SOLO el funcionario.
     ec2 = sqlite3.connect(f"file:{ENR}?mode=ro", uri=True)
+    hist = {}
     try:
-        decl = {r[0]: r for r in ec2.execute(
-            "SELECT juez_key,fecha_declaracion,cargo,n_inmuebles,avaluo_inmuebles,n_vehiculos,avaluo_vehiculos,n_pasivos FROM juez_declaracion")}
+        for r in ec2.execute(
+            "SELECT juez_key,fecha_declaracion,cargo,n_inmuebles,avaluo_inmuebles,n_vehiculos,avaluo_vehiculos,n_pasivos "
+            "FROM juez_declaracion_hist ORDER BY fecha_declaracion"):
+            hist.setdefault(r[0], []).append(r)
     except Exception:
-        decl = {}
+        hist = {}
+    if not hist:  # fallback: tabla de solo-última si no hay histórico
+        try:
+            for r in ec2.execute("SELECT juez_key,fecha_declaracion,cargo,n_inmuebles,avaluo_inmuebles,n_vehiculos,avaluo_vehiculos,n_pasivos FROM juez_declaracion"):
+                hist[r[0]] = [r]
+        except Exception:
+            pass
     ec2.close()
     for j in jr:
-        d = decl.get(j["key"])
-        if d:
-            j["patrimonio"] = {"fecha": (d[1] or "")[:10] or None, "cargo": cap(d[2]),
-                               "n_inmuebles": d[3], "avaluo_inmuebles": d[4],
-                               "n_vehiculos": d[5], "avaluo_vehiculos": d[6], "n_pasivos": d[7]}
+        rows = hist.get(j["key"])
+        if not rows:
+            continue
+        last = rows[-1]
+        j["patrimonio"] = {"fecha": (last[1] or "")[:10] or None, "cargo": cap(last[2]),
+                           "n_inmuebles": last[3], "avaluo_inmuebles": last[4],
+                           "n_vehiculos": last[5], "avaluo_vehiculos": last[6], "n_pasivos": last[7]}
+        if len(rows) > 1:
+            j["patrimonio"]["hist"] = [{"fecha": (r[1] or "")[:10], "inm": r[3], "av_inm": r[4],
+                                        "veh": r[5], "av_veh": r[6], "pas": r[7]} for r in rows]
 json.dump(jr, open(f"{OUT}/jueces.json", "w"), ensure_ascii=False)
 
 tr = []

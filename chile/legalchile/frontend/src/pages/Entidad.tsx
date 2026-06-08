@@ -50,10 +50,12 @@ function Kpi({ label, value, sub }: { label: string; value: string; sub?: string
 }
 
 // ---- Patrimonio declarado (Ley 20.880 · InfoProbidad) + reseña IA · público ----
+type HistPt = { fecha: string; inm: number; av_inm: number; veh: number; av_veh: number; pas: number }
 type Patrimonio = {
   fecha?: string | null; cargo?: string | null
   n_inmuebles?: number; avaluo_inmuebles?: number
   n_vehiculos?: number; avaluo_vehiculos?: number; n_pasivos?: number
+  hist?: HistPt[]
 }
 const clp = (n?: number | null) => (!n ? '—' : '$' + Number(n).toLocaleString('es-CL'))
 
@@ -72,6 +74,27 @@ function JuezPerfil({ r }: { r: Row }) {
           <Kpi label="Vehículos" value={String(p.n_vehiculos ?? 0)} sub={p.avaluo_vehiculos ? `avalúo ${clp(p.avaluo_vehiculos)}` : undefined} />
           <Kpi label="Deudas declaradas" value={p.n_pasivos != null ? String(p.n_pasivos) : '—'} />
         </div>
+        {p.hist && p.hist.length > 1 && (() => {
+          const pts = p.hist.map((h) => ({ ...h, total: (h.av_inm || 0) + (h.av_veh || 0) }))
+          const mx = Math.max(...pts.map((x) => x.total), 1)
+          return (
+            <>
+              <div className="section-tag uline" style={{ marginTop: 20, display: 'block' }}>Evolución del patrimonio declarado · {pts.length} declaraciones</div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 3, marginTop: 8 }}>
+                {pts.map((h, i) => (
+                  <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                    <span className="mono" style={{ fontSize: 10, color: 'var(--muted)', width: 66, flexShrink: 0 }}>{h.fecha}</span>
+                    <div style={{ flex: 1, background: 'var(--line)', borderRadius: 4, height: 13 }}>
+                      <div style={{ width: `${Math.max(2, (100 * h.total) / mx)}%`, background: 'var(--primary)', height: '100%', borderRadius: 4 }} />
+                    </div>
+                    <span className="mono" style={{ fontSize: 10, color: 'var(--ink)', width: 96, flexShrink: 0, textAlign: 'right' }}>{clp(h.total)}</span>
+                    <span className="mono" style={{ fontSize: 9.5, color: 'var(--muted)', width: 78, flexShrink: 0 }}>{h.inm} b.raíces · {h.veh} veh</span>
+                  </div>
+                ))}
+              </div>
+            </>
+          )
+        })()}
       </>}
       {r.bio && (
         <>
