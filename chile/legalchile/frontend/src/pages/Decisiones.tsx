@@ -86,8 +86,8 @@ export default function Decisiones() {
         <div className="wrap">
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center', marginBottom: 14 }}>
             {([['juez', 'Por juez'], ['materia', 'Por materia'], ['global', 'Nacional']] as [Mode, string][]).map(([m, lbl]) => (
-              <button key={m} onClick={() => switchMode(m)} className="card"
-                style={{ cursor: 'pointer', padding: '7px 16px', fontWeight: 600, fontSize: 13, border: mode === m ? '1px solid var(--primary)' : '1px solid var(--line)', background: mode === m ? 'var(--primary)' : '#fff', color: mode === m ? '#fff' : 'var(--muted)' }}>
+              <button key={m} onClick={() => switchMode(m)}
+                style={{ cursor: 'pointer', padding: '8px 18px', fontWeight: 600, fontSize: 13, borderRadius: 8, border: mode === m ? '1px solid #266FE0' : '1px solid var(--line)', background: mode === m ? '#266FE0' : '#fff', color: mode === m ? '#fff' : 'var(--ink)' }}>
                 {lbl}
               </button>
             ))}

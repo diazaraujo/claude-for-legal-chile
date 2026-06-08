@@ -187,7 +187,7 @@ function Ficha({ tipo, r, arbolNode }: { tipo: string; r: Row; arbolNode?: Arbol
       {hasArbol && (
         <div style={{ display: 'flex', gap: 6, margin: '0 0 18px' }}>
           {(([['ficha', 'Ficha'], ['arbol', 'Árbol de decisión']]) as ['ficha' | 'arbol', string][]).map(([t, lbl]) => (
-            <button key={t} onClick={() => setTab(t)} className="card" style={{ cursor: 'pointer', padding: '6px 14px', fontWeight: 600, fontSize: 12.5, border: tab === t ? '1px solid var(--primary)' : '1px solid var(--line)', background: tab === t ? 'var(--primary)' : '#fff', color: tab === t ? '#fff' : 'var(--muted)' }}>{lbl}</button>
+            <button key={t} onClick={() => setTab(t)} style={{ cursor: 'pointer', padding: '7px 16px', fontWeight: 600, fontSize: 12.5, borderRadius: 8, border: tab === t ? '1px solid #266FE0' : '1px solid var(--line)', background: tab === t ? '#266FE0' : '#fff', color: tab === t ? '#fff' : 'var(--ink)' }}>{lbl}</button>
           ))}
         </div>
       )}
