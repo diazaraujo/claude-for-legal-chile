@@ -62,7 +62,7 @@ const clp = (n?: number | null) => (!n ? '—' : '$' + Number(n).toLocaleString(
 
 function JuezPerfil({ r }: { r: Row }) {
   const p = r.patrimonio
-  if (!p && !r.bio) return null
+  if (!p) return null
   return (
     <div style={{ marginTop: 26, paddingTop: 20, borderTop: '1px solid var(--line)' }}>
       {p && <>
@@ -118,14 +118,8 @@ function JuezPerfil({ r }: { r: Row }) {
           )
         })()}
       </>}
-      {r.bio && (
-        <>
-          <div className="section-tag uline" style={{ marginTop: p ? 20 : 0, display: 'block' }}>Reseña</div>
-          <p style={{ fontSize: 14, color: 'var(--ink)', fontWeight: 300, lineHeight: 1.55, marginTop: 6 }}>{r.bio}</p>
-        </>
-      )}
       <p className="mono" style={{ fontSize: 9.5, color: 'var(--muted)', marginTop: 16, letterSpacing: '0.06em' }}>
-        Reseña generada con IA sobre las sentencias públicas del juez.{p ? ' Patrimonio según la Declaración de Intereses y Patrimonio (Ley 20.880), publicada en InfoProbidad.' : ''}
+        Patrimonio según la Declaración de Intereses y Patrimonio (Ley 20.880), publicada en InfoProbidad.
       </p>
     </div>
   )
@@ -173,6 +167,12 @@ function Ficha({ tipo, r }: { tipo: string; r: Row }) {
       <div className="section-tag">{CFG[tipo].tag} · ficha</div>
       <h2 style={{ fontSize: 22, fontWeight: 600, margin: '4px 0 4px' }}>{r.nombre}</h2>
       {(r.trib || r.comp) && <div className="mono" style={{ fontSize: 11, color: 'var(--muted)', marginBottom: 16 }}>{(r.trib || r.comp || '').replace(/_/g, ' ')}</div>}
+      {tipo === 'jueces' && r.bio && (
+        <p style={{ fontSize: 13.5, color: 'var(--ink)', fontWeight: 300, lineHeight: 1.55, margin: '0 0 18px', maxWidth: 820 }}>
+          {r.bio}
+          <span className="mono" style={{ display: 'block', fontSize: 9.5, color: 'var(--muted)', marginTop: 8, letterSpacing: '0.06em' }}>Reseña generada con IA sobre las sentencias públicas del juez.</span>
+        </p>
+      )}
       <div className="kpi-grid" style={{ gridTemplateColumns: 'repeat(2,1fr)', gap: 10 }}>
         {kpis.map((k) => <Kpi key={k.label} {...k} />)}
       </div>
