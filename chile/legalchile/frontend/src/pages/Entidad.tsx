@@ -25,14 +25,14 @@ const CFG: Record<string, { file: string; tag: string; h1: string; sub: string; 
 function Bars({ items, color }: { items: Mat[]; color: string }) {
   const max = Math.max(1, ...items.map((m) => m[1]))
   return (
-    <div style={{ marginTop: 4 }}>
+    <div style={{ marginTop: 6 }}>
       {items.map(([k, v]) => (
-        <div key={k} style={{ display: 'flex', alignItems: 'center', gap: 10, margin: '6px 0' }}>
-          <span style={{ width: 180, flex: 'none', fontSize: 12.5, color: 'var(--muted)', fontWeight: 300, textTransform: 'capitalize', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{k}</span>
-          <div style={{ flex: 1, background: 'var(--bg)', borderRadius: 5, height: 16, overflow: 'hidden' }}>
-            <div style={{ width: `${(v / max) * 100}%`, height: '100%', background: color, borderRadius: 5 }} />
+        <div key={k} style={{ display: 'flex', alignItems: 'center', gap: 10, margin: '7px 0' }}>
+          <span style={{ width: 140, flex: 'none', fontSize: 12, color: 'var(--ink)', fontWeight: 300, textTransform: 'capitalize', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{k}</span>
+          <div style={{ flex: 1, background: 'var(--line)', borderRadius: 3, height: 7, overflow: 'hidden' }}>
+            <div style={{ width: `${Math.max(2, (v / max) * 100)}%`, height: '100%', background: color, borderRadius: 3 }} />
           </div>
-          <span style={{ width: 36, textAlign: 'right', fontWeight: 600, fontSize: 12.5, fontVariantNumeric: 'tabular-nums' }}>{v}</span>
+          <span style={{ width: 44, textAlign: 'right', fontWeight: 600, fontSize: 12, fontVariantNumeric: 'tabular-nums', color: 'var(--ink)' }}>{v.toLocaleString('es-CL')}</span>
         </div>
       ))}
     </div>
@@ -64,7 +64,7 @@ function JuezPerfil({ r }: { r: Row }) {
   const p = r.patrimonio
   if (!p && !r.bio) return null
   return (
-    <div className="card" style={{ marginBottom: 22, borderColor: 'var(--primary)' }}>
+    <div style={{ marginTop: 26, paddingTop: 20, borderTop: '1px solid var(--line)' }}>
       {p && <>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: 8 }}>
           <div className="section-tag">Patrimonio declarado · Ley 20.880</div>
@@ -149,12 +149,18 @@ function Ficha({ tipo, r }: { tipo: string; r: Row }) {
     { label: 'Tasa de condena obtenida', value: pct(r.condena), sub: r.nres ? `${r.nres.toLocaleString('es-CL')} con resultado` : 'sin resultado extraído aún' },
     { label: 'Período', value: r.years || '—' },
   ]
-  else kpis = [
-    { label: 'Causas', value: r.n.toLocaleString('es-CL') },
-    { label: 'Acogida laboral', value: pct(r.lab_acogida), sub: r.lab_n ? `${r.lab_n.toLocaleString('es-CL')} laborales` : 'sin causas laborales' },
-    { label: 'Condena penal', value: pct(r.pen_condena), sub: r.pen_n ? `${r.pen_n.toLocaleString('es-CL')} penales` : 'sin causas penales' },
-    { label: 'Pena promedio', value: r.pen_dias ? `${Math.round(r.pen_dias)} días` : '—' },
-  ]
+  else {
+    // KPIs adaptativos: solo los tipos de causa que el juez efectivamente resuelve.
+    kpis = [{ label: 'Causas', value: r.n.toLocaleString('es-CL') }]
+    if (r.lab_n) kpis.push({ label: 'Acogida laboral', value: pct(r.lab_acogida), sub: `${r.lab_n.toLocaleString('es-CL')} laborales` })
+    if (r.pen_n) {
+      kpis.push({ label: 'Condena penal', value: pct(r.pen_condena), sub: `${r.pen_n.toLocaleString('es-CL')} penales` })
+      kpis.push({ label: 'Pena promedio', value: r.pen_dias ? `${Math.round(r.pen_dias)} días` : '—' })
+    }
+    if (kpis.length < 4 && r.materias && r.materias.length)
+      kpis.push({ label: 'Materia principal', value: String(r.materias[0][0]), sub: `${r.materias[0][1].toLocaleString('es-CL')} causas` })
+    if (kpis.length < 4 && r.comp) kpis.push({ label: 'Competencia', value: r.comp.replace(/_/g, ' ') })
+  }
   // gráficos por tipo
   const charts: { label: string; items?: Mat[]; color: string }[] = []
   if (tipo === 'fiscales') charts.push({ label: 'Delitos más perseguidos', items: r.delitos, color: 'var(--blue-dark)' })
@@ -180,6 +186,7 @@ function Ficha({ tipo, r }: { tipo: string; r: Row }) {
           ))}
         </div>
       )}
+      {tipo === 'jueces' && <JuezPerfil r={r} />}
     </div>
   )
 }
@@ -260,7 +267,7 @@ export default function Entidad({ tipo }: { tipo: string }) {
             <p className="mono" style={{ color: 'var(--muted)', fontSize: 12 }}>Cargando fichas…</p>
           ) : (
             <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 24 }}>
-              {sel && <div><Ficha tipo={tipo} r={sel} />{tipo === 'jueces' && <JuezPerfil r={sel} />}</div>}
+              {sel && <div><Ficha tipo={tipo} r={sel} /></div>}
               <div>
                 <div className="section-tag uline">{q ? `${filtered.length} resultados` : `Top ${filtered.length} por volumen de causas`}</div>
                 <div className="exp-list" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 6, maxHeight: 560, overflowY: 'auto' }}>
