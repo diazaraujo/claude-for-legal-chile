@@ -71,7 +71,7 @@ function JuezPerfil({ r }: { r: Row }) {
   const p = r.patrimonio
   if (!p) return null
   return (
-    <div style={{ marginTop: 26, paddingTop: 20, borderTop: '1px solid var(--line)' }}>
+    <div style={{ marginTop: 4 }}>
       {p && <>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: 8 }}>
           <div className="section-tag">Patrimonio declarado · Ley 20.880</div>
@@ -133,8 +133,13 @@ function JuezPerfil({ r }: { r: Row }) {
 }
 
 function Ficha({ tipo, r, arbolNode }: { tipo: string; r: Row; arbolNode?: ArbolNode }) {
-  const [tab, setTab] = useState<'ficha' | 'arbol'>('ficha')
+  const [tab, setTab] = useState<'ficha' | 'arbol' | 'patrimonio'>('ficha')
   const hasArbol = tipo === 'jueces' && !!arbolNode
+  const hasPat = tipo === 'jueces' && !!r.patrimonio
+  const hasTabs = hasArbol || hasPat
+  // tab efectivo: si el activo no aplica a este juez, caer en ficha
+  const tab2: 'ficha' | 'arbol' | 'patrimonio' = (tab === 'arbol' && !hasArbol) || (tab === 'patrimonio' && !hasPat) ? 'ficha' : tab
+  const tabDefs: ['ficha' | 'arbol' | 'patrimonio', string][] = [['ficha', 'Ficha'], ...(hasArbol ? [['arbol', 'Árbol de decisión'] as ['arbol', string]] : []), ...(hasPat ? [['patrimonio', 'Patrimonio'] as ['patrimonio', string]] : [])]
   let kpis: { label: string; value: string; sub?: string }[]
   if (tipo === 'empresas') kpis = [
     { label: 'Juicios', value: r.n.toLocaleString('es-CL') },
@@ -184,15 +189,16 @@ function Ficha({ tipo, r, arbolNode }: { tipo: string; r: Row; arbolNode?: Arbol
       <div className="section-tag">{CFG[tipo].tag} · ficha</div>
       <h2 style={{ fontSize: 22, fontWeight: 600, margin: '4px 0 4px' }}>{r.nombre}</h2>
       {(r.trib || r.comp) && <div className="mono" style={{ fontSize: 11, color: 'var(--muted)', marginBottom: 16 }}>{(r.trib || r.comp || '').replace(/_/g, ' ')}</div>}
-      {hasArbol && (
-        <div style={{ display: 'flex', gap: 6, margin: '0 0 18px' }}>
-          {(([['ficha', 'Ficha'], ['arbol', 'Árbol de decisión']]) as ['ficha' | 'arbol', string][]).map(([t, lbl]) => (
-            <button key={t} onClick={() => setTab(t)} style={{ cursor: 'pointer', padding: '7px 16px', fontWeight: 600, fontSize: 12.5, borderRadius: 8, border: tab === t ? '1px solid #266FE0' : '1px solid var(--line)', background: tab === t ? '#266FE0' : '#fff', color: tab === t ? '#fff' : 'var(--ink)' }}>{lbl}</button>
+      {hasTabs && (
+        <div style={{ display: 'flex', gap: 6, margin: '0 0 18px', flexWrap: 'wrap' }}>
+          {tabDefs.map(([t, lbl]) => (
+            <button key={t} onClick={() => setTab(t)} style={{ cursor: 'pointer', padding: '7px 16px', fontWeight: 600, fontSize: 12.5, borderRadius: 8, border: tab2 === t ? '1px solid #266FE0' : '1px solid var(--line)', background: tab2 === t ? '#266FE0' : '#fff', color: tab2 === t ? '#fff' : 'var(--ink)' }}>{lbl}</button>
           ))}
         </div>
       )}
-      {hasArbol && tab === 'arbol' && <ArbolDecision node={arbolNode as ArbolNode} mode="juez" />}
-      {(!hasArbol || tab === 'ficha') && (<>
+      {hasArbol && tab2 === 'arbol' && <ArbolDecision node={arbolNode as ArbolNode} mode="juez" />}
+      {hasPat && tab2 === 'patrimonio' && <JuezPerfil r={r} />}
+      {(!hasTabs || tab2 === 'ficha') && (<>
       {tipo === 'jueces' && r.bio && (
         <p style={{ fontSize: 13.5, color: 'var(--ink)', fontWeight: 300, lineHeight: 1.55, margin: '0 0 18px', maxWidth: 820 }}>
           {r.bio}
@@ -218,7 +224,6 @@ function Ficha({ tipo, r, arbolNode }: { tipo: string; r: Row; arbolNode?: Arbol
           )}
         </div>
       )}
-      {tipo === 'jueces' && <JuezPerfil r={r} />}
       <div className="kpi-grid" style={{ gridTemplateColumns: 'repeat(2,1fr)', gap: 10 }}>
         {kpis.map((k) => <Kpi key={k.label} {...k} />)}
       </div>
