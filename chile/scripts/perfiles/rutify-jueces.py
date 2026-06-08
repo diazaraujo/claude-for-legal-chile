@@ -25,9 +25,13 @@ import os
 import re
 import sqlite3
 import unicodedata
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
+from threading import Lock
 
 import requests
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 try:
     from dotenv import load_dotenv
     load_dotenv(os.path.join(os.path.dirname(__file__), "..", "..", ".env"))
@@ -83,36 +87,40 @@ def query_os(nombre_norm: str) -> dict | None:
     toks = nombre_norm.split()
     if len(toks) < 2:
         return None
+    # persona_natural_v2: campos nested {namespace, value}; rut flat (keyword).
     body = {
         "size": 3,
+        "_source": [F_RUT, F_NOMBRE],
         "query": {
-            "bool": {
-                "should": [
-                    {"span_near": {"clauses": [{"span_term": {F_NOMBRE: t.lower()}} for t in toks],
-                                   "slop": 2, "in_order": True, "boost": 4.0}},
-                    {"match": {F_NOMBRE: {"query": nombre_norm, "fuzziness": "AUTO", "operator": "and", "boost": 2.0}}},
-                    {"span_first": {"match": {"span_term": {F_NOMBRE: toks[0].lower()}}, "end": 2, "boost": 1.0}},
-                ],
-                "minimum_should_match": 1,
+            "nested": {
+                "path": F_NOMBRE,
+                "query": {"match": {f"{F_NOMBRE}.value": {"query": nombre_norm, "operator": "and", "fuzziness": "AUTO"}}},
             }
         },
     }
-    r = requests.post(f"{OS_URL}/{OS_INDEX}/_search", json=body, auth=OS_AUTH, timeout=15)
+    r = requests.post(f"{OS_URL}/{OS_INDEX}/_search", json=body, auth=OS_AUTH, timeout=20, verify=False)
     r.raise_for_status()
     hits = r.json().get("hits", {}).get("hits", [])
     if not hits:
         return None
-    top = hits[0]
-    src = top.get("_source", {})
-    cand = norm(src.get(F_NOMBRE, ""))
-    # similitud por tokens (Jaccard sobre el set de tokens) · escalada 0.85 como icare
-    a, b = set(toks), set(cand.split())
-    sim = len(a & b) / max(1, len(a | b))
-    conf = round(sim * 0.85 + (0.15 if cand.startswith(toks[0]) else 0), 3)
+    src = hits[0].get("_source", {})
+    noms = src.get(F_NOMBRE) or []
+    if isinstance(noms, dict):
+        noms = [noms]
+    cands = [norm(x.get("value", "")) for x in noms if isinstance(x, dict) and x.get("value")]
+    # mejor variante de nombre por solape de tokens (Jaccard) · escala 0.85 como icare
+    best_conf, best_cand = 0.0, ""
+    for cand in cands:
+        b = set(cand.split())
+        sim = len(set(toks) & b) / max(1, len(set(toks) | b))
+        c = sim * 0.85 + (0.15 if cand.startswith(toks[0]) else 0)
+        if c > best_conf:
+            best_conf, best_cand = c, cand
+    conf = round(best_conf, 3)
     rut = re.sub(r"[^0-9kK]", "", str(src.get(F_RUT, "")).split("-")[0])
     if not rut.isdigit():
         return None
-    return {"rut_cuerpo": rut, "confianza": min(conf, 0.99), "nombre_match": cand}
+    return {"rut_cuerpo": rut, "confianza": min(conf, 0.99), "nombre_match": best_cand}
 
 
 def main():
@@ -143,37 +151,49 @@ def main():
         jueces = jueces[:args.limit]
 
     now = datetime.now(timezone.utc).isoformat()
-    hi = mid = lo = err = skip = 0
-    for i, (key, nombre) in enumerate(jueces, 1):
-        if key in done:
-            skip += 1
-            continue
-        nn = norm(nombre)
+    pend = [(k, n) for k, n in jueces if k not in done]
+    skip = len(jueces) - len(pend)
+    hi = mid = lo = err = 0
+    n_total = len(pend)
+    workers = int(os.environ.get("RUTIFY_WORKERS", "12"))
+    write_lock = Lock()
+    FUENTES = json.dumps(["PJUD sentencias", "OpenSearch persona_natural_v2"], ensure_ascii=False)
+
+    def proc(item):
+        key, nombre = item
         try:
-            m = query_os(nn)
+            return key, nombre, query_os(norm(nombre)), None
         except Exception as e:
-            err += 1
-            if err <= 3:
-                print(f"  ! error OS ({nombre}): {e}")
-            continue
-        conf = m["confianza"] if m else 0.0
-        status = "high" if conf >= CONF_HIGH else "mid" if conf >= 0.5 else "low"
-        hi += status == "high"; mid += status == "mid"; lo += status == "low"
-        out.execute(
-            "INSERT INTO juez_enriched(juez_key,nombre,rut_cuerpo,rut_fmt,confianza,conf_status,fuentes_json,rutificado_at,updated_at) "
-            "VALUES(?,?,?,?,?,?,?,?,?) ON CONFLICT(juez_key) DO UPDATE SET "
-            "rut_cuerpo=excluded.rut_cuerpo,rut_fmt=excluded.rut_fmt,confianza=excluded.confianza,"
-            "conf_status=excluded.conf_status,rutificado_at=excluded.rutificado_at,updated_at=excluded.updated_at",
-            (key, nombre, m["rut_cuerpo"] if m else None,
-             fmt_rut(m["rut_cuerpo"]) if m else None, conf, status,
-             json.dumps(["PJUD sentencias", "OpenSearch persona_natural_read"], ensure_ascii=False),
-             now, now))
-        if i % 100 == 0:
-            out.commit()
-            print(f"  [{i}/{len(jueces)}] high={hi} mid={mid} low={lo} err={err}")
+            return key, nombre, None, e
+
+    seen = 0
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        futs = [ex.submit(proc, it) for it in pend]
+        for f in as_completed(futs):
+            key, nombre, m, exc = f.result()
+            seen += 1
+            if exc is not None:
+                err += 1
+                if err <= 3:
+                    print(f"  ! error OS ({nombre}): {exc}")
+                continue
+            conf = m["confianza"] if m else 0.0
+            status = "high" if conf >= CONF_HIGH else "mid" if conf >= 0.5 else "low"
+            hi += status == "high"; mid += status == "mid"; lo += status == "low"
+            with write_lock:
+                out.execute(
+                    "INSERT INTO juez_enriched(juez_key,nombre,rut_cuerpo,rut_fmt,confianza,conf_status,fuentes_json,rutificado_at,updated_at) "
+                    "VALUES(?,?,?,?,?,?,?,?,?) ON CONFLICT(juez_key) DO UPDATE SET "
+                    "rut_cuerpo=excluded.rut_cuerpo,rut_fmt=excluded.rut_fmt,confianza=excluded.confianza,"
+                    "conf_status=excluded.conf_status,rutificado_at=excluded.rutificado_at,updated_at=excluded.updated_at",
+                    (key, nombre, m["rut_cuerpo"] if m else None,
+                     fmt_rut(m["rut_cuerpo"]) if m else None, conf, status, FUENTES, now, now))
+                if seen % 100 == 0:
+                    out.commit()
+                    print(f"  [{seen}/{n_total}] high={hi} mid={mid} low={lo} err={err}", flush=True)
     out.commit()
     out.close()
-    print(f"\nRUTIFICACIÓN OK · {len(jueces)} jueces · high={hi} mid={mid} low={lo} err={err} skip={skip}")
+    print(f"\nRUTIFICACIÓN OK · {n_total} jueces · high={hi} mid={mid} low={lo} err={err} skip={skip}")
     print(f"→ siguiente: python3 scripts/perfiles/enrich-jueces-mallas.py  (solo enriquece los high)")
 
 

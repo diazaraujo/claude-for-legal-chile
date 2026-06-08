@@ -15,7 +15,9 @@ import argparse
 import json
 import os
 import sqlite3
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
+from threading import Lock
 
 import requests
 try:
@@ -113,7 +115,9 @@ def main():
         print(json.dumps(g(tok, f"/unholster/familiares/{c}?depth=1"), ensure_ascii=False, indent=2)[:2000])
         return
 
-    out = sqlite3.connect(OUT)
+    out = sqlite3.connect(OUT, timeout=120)
+    out.execute("PRAGMA busy_timeout=120000")
+    out.execute("PRAGMA journal_mode=WAL")
     rows = out.execute(
         "SELECT juez_key, rut_cuerpo FROM juez_enriched "
         "WHERE conf_status='high' AND rut_cuerpo IS NOT NULL AND mallas_at IS NULL "
@@ -122,36 +126,57 @@ def main():
         rows = rows[:args.limit]
 
     now = datetime.now(timezone.utc).isoformat()
+    fuentes = json.dumps(["PJUD sentencias", "OpenSearch persona_natural_v2", "Mallas Unholster"], ensure_ascii=False)
     ok = nf = err = 0
-    for i, (key, cuerpo) in enumerate(rows, 1):
-        try:
-            persona = g(tok, f"/unholster/persona/{cuerpo}")
-            fam = g(tok, f"/unholster/familiares/{cuerpo}?depth=1")
-        except Exception as e:
-            err += 1
-            if err <= 3:
-                print(f"  ! error Mallas ({cuerpo}): {e}")
-            if "401" in str(e):
-                tok = login()
-            continue
-        if not persona:
-            nf += 1
-            out.execute("UPDATE juez_enriched SET mallas_at=?, updated_at=? WHERE juez_key=?", (now, now, key))
-            continue
-        d = parse_persona(persona)
-        familia = parse_familia(fam)
-        fuentes = json.dumps(["PJUD sentencias", "OpenSearch persona_natural_read", "Mallas Unholster"], ensure_ascii=False)
-        out.execute(
-            "UPDATE juez_enriched SET edad=?,genero=?,estado_civil=?,n_hijos=?,comuna=?,nse_decil=?,"
-            "patrimonio=?,avaluo=?,bienes_raices=?,conyuge=?,familia_json=?,fuentes_json=?,mallas_at=?,updated_at=? "
-            "WHERE juez_key=?",
-            (d["edad"], d["genero"], d["estado_civil"], d["n_hijos"], d["comuna"], d["nse_decil"],
-             d["patrimonio"], d["avaluo"], d["bienes_raices"], d["conyuge"],
-             json.dumps(familia, ensure_ascii=False) if familia else None, fuentes, now, now, key))
-        ok += 1
-        if i % 50 == 0:
-            out.commit()
-            print(f"  [{i}/{len(rows)}] ok={ok} not_found={nf} err={err}")
+    workers = int(os.environ.get("MALLAS_WORKERS", "8"))
+    tok_box = {"tok": tok}
+    tok_lock = Lock()
+    write_lock = Lock()
+
+    def fetch(item):
+        key, cuerpo = item
+        for attempt in (1, 2):
+            try:
+                t = tok_box["tok"]
+                persona = g(t, f"/unholster/persona/{cuerpo}")
+                fam = g(t, f"/unholster/familiares/{cuerpo}?depth=1")
+                return key, cuerpo, persona, fam, None
+            except Exception as e:
+                if "401" in str(e) and attempt == 1:
+                    with tok_lock:
+                        tok_box["tok"] = login()
+                    continue
+                return key, cuerpo, None, None, e
+
+    seen = 0
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        futs = [ex.submit(fetch, it) for it in rows]
+        for f in as_completed(futs):
+            key, cuerpo, persona, fam, exc = f.result()
+            seen += 1
+            if exc is not None:
+                err += 1
+                if err <= 3:
+                    print(f"  ! error Mallas ({cuerpo}): {exc}")
+                continue
+            with write_lock:
+                if not persona:
+                    nf += 1
+                    out.execute("UPDATE juez_enriched SET mallas_at=?, updated_at=? WHERE juez_key=?", (now, now, key))
+                else:
+                    d = parse_persona(persona)
+                    familia = parse_familia(fam)
+                    out.execute(
+                        "UPDATE juez_enriched SET edad=?,genero=?,estado_civil=?,n_hijos=?,comuna=?,nse_decil=?,"
+                        "patrimonio=?,avaluo=?,bienes_raices=?,conyuge=?,familia_json=?,fuentes_json=?,mallas_at=?,updated_at=? "
+                        "WHERE juez_key=?",
+                        (d["edad"], d["genero"], d["estado_civil"], d["n_hijos"], d["comuna"], d["nse_decil"],
+                         d["patrimonio"], d["avaluo"], d["bienes_raices"], d["conyuge"],
+                         json.dumps(familia, ensure_ascii=False) if familia else None, fuentes, now, now, key))
+                    ok += 1
+                if seen % 50 == 0:
+                    out.commit()
+                    print(f"  [{seen}/{len(rows)}] ok={ok} not_found={nf} err={err}", flush=True)
     out.commit()
     out.close()
     print(f"\nMALLAS OK · {len(rows)} jueces high · enriquecidos={ok} not_found={nf} err={err}")
