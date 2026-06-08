@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import '../styles/decide.css'
 import { Footer } from './Sobre'
 
-type Mat = [string, number]
+type Mat = [string, number, (number | null)?, (string | null)?]
 type Row = {
   key: string; nombre: string; n: number; comp?: string; trib?: string; years?: string
   lab_n?: number; lab_acogida?: number | null; pen_n?: number; pen_condena?: number | null; pen_dias?: number | null
@@ -26,15 +26,19 @@ function Bars({ items, color }: { items: Mat[]; color: string }) {
   const max = Math.max(1, ...items.map((m) => m[1]))
   return (
     <div style={{ marginTop: 6 }}>
-      {items.map(([k, v]) => (
-        <div key={k} style={{ display: 'flex', alignItems: 'center', gap: 10, margin: '7px 0' }}>
-          <span style={{ width: 140, flex: 'none', fontSize: 12, color: 'var(--ink)', fontWeight: 300, textTransform: 'capitalize', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{k}</span>
-          <div style={{ flex: 1, background: 'var(--line)', borderRadius: 3, height: 7, overflow: 'hidden' }}>
-            <div style={{ width: `${Math.max(2, (v / max) * 100)}%`, height: '100%', background: color, borderRadius: 3 }} />
+      {items.map(([k, v, tasa, tipo]) => {
+        const lbl = tipo === 'c' ? 'condena' : tipo === 'a' ? 'acogida' : ''
+        return (
+          <div key={k} style={{ display: 'flex', alignItems: 'center', gap: 10, margin: '7px 0' }}>
+            <span style={{ width: 140, flex: 'none', fontSize: 12, color: 'var(--ink)', fontWeight: 300, textTransform: 'capitalize', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{k}</span>
+            <div style={{ flex: 1, background: 'var(--line)', borderRadius: 3, height: 7, overflow: 'hidden' }}>
+              <div style={{ width: `${Math.max(2, (v / max) * 100)}%`, height: '100%', background: color, borderRadius: 3 }} />
+            </div>
+            {tasa != null && <span style={{ width: 92, flex: 'none', textAlign: 'right', fontSize: 11, color: 'var(--muted)', fontVariantNumeric: 'tabular-nums' }}>{tasa}% {lbl}</span>}
+            <span style={{ width: 46, flex: 'none', textAlign: 'right', fontWeight: 600, fontSize: 12, fontVariantNumeric: 'tabular-nums', color: 'var(--ink)' }}>{v.toLocaleString('es-CL')}</span>
           </div>
-          <span style={{ width: 44, textAlign: 'right', fontWeight: 600, fontSize: 12, fontVariantNumeric: 'tabular-nums', color: 'var(--ink)' }}>{v.toLocaleString('es-CL')}</span>
-        </div>
-      ))}
+        )
+      })}
     </div>
   )
 }
@@ -158,7 +162,7 @@ function Ficha({ tipo, r }: { tipo: string; r: Row }) {
   // gráficos por tipo
   const charts: { label: string; items?: Mat[]; color: string }[] = []
   if (tipo === 'fiscales') charts.push({ label: 'Delitos más perseguidos', items: r.delitos, color: 'var(--blue-dark)' })
-  else charts.push({ label: 'Materias más frecuentes', items: r.materias, color: 'var(--primary)' })
+  else charts.push({ label: tipo === 'jueces' ? 'Cómo resuelve por materia · % condena/acogida' : 'Materias más frecuentes', items: r.materias, color: 'var(--primary)' })
   if (tipo === 'empresas') charts.push({ label: 'Defensas más usadas', items: r.defensas, color: 'var(--cyan)' })
   if (tipo === 'abogados') charts.push({ label: 'Partes / empresas en sus causas', items: r.contrapartes, color: 'var(--cyan)' })
   const shown = charts.filter((c) => c.items && c.items.length)

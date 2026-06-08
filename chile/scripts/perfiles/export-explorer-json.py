@@ -42,8 +42,16 @@ pc = sqlite3.connect(PERF, timeout=60)
 
 # ---- jueces / tribunales / empresas (de *_perfil) ----
 jr = []
-for r in pc.execute("SELECT juez_key,juez,n_causas,competencias,tribunal_principal,lab_n,lab_tasa_acogida,pen_n,pen_tasa_condena,pen_dias_pena_prom,materias_top FROM juez_perfil WHERE juez IS NOT NULL AND n_causas>=1 ORDER BY n_causas DESC"):
-    jr.append({"key": r[0], "nombre": cap(r[1]), "n": r[2], "comp": r[3], "trib": cap(r[4]), "lab_n": r[5], "lab_acogida": f(r[6]), "pen_n": r[7], "pen_condena": f(r[8]), "pen_dias": f(r[9], 1), "materias": [[k.replace('_', ' '), int(v)] for k, v in (x.rsplit(':', 1) for x in (r[10] or '').split(',') if ':' in x)][:8]})
+def mat_juez(r10, r11):
+    # materias_outcome (JSON [[materia, n, tasa, tipo], ...]) → [[label, n, tasa, tipo]]
+    if r11:
+        try:
+            return [[m[0].replace('_', ' '), m[1], m[2], m[3]] for m in json.loads(r11)][:8]
+        except Exception:
+            pass
+    return [[k.replace('_', ' '), int(v), None, None] for k, v in (x.rsplit(':', 1) for x in (r10 or '').split(',') if ':' in x)][:8]
+for r in pc.execute("SELECT juez_key,juez,n_causas,competencias,tribunal_principal,lab_n,lab_tasa_acogida,pen_n,pen_tasa_condena,pen_dias_pena_prom,materias_top,materias_outcome FROM juez_perfil WHERE juez IS NOT NULL AND n_causas>=1 ORDER BY n_causas DESC"):
+    jr.append({"key": r[0], "nombre": cap(r[1]), "n": r[2], "comp": r[3], "trib": cap(r[4]), "lab_n": r[5], "lab_acogida": f(r[6]), "pen_n": r[7], "pen_condena": f(r[8]), "pen_dias": f(r[9], 1), "materias": mat_juez(r[10], r[11])})
 
 # ---- capa enriquecida PÚBLICA: SOLO la reseña IA (derivada de sentencias públicas). ----
 # La ficha civil de Mallas (RUT/avalúo/familia) NO va al sitio público: incluye datos

@@ -55,7 +55,7 @@ def main():
 
     # acumuladores: juez/tribunal → por competencia
     J=collections.defaultdict(lambda:{"disp":collections.Counter(),"trib":collections.Counter(),
-        "comp":collections.Counter(),"mat":collections.Counter(),"n":0,
+        "comp":collections.Counter(),"mat":collections.Counter(),"mat_out":{},"n":0,
         "lab_n":0,"lab_acog":0,"lab_rech":0,"pcts":[],
         "pen_n":0,"pen_cond":0,"dias":[]})
     T=collections.defaultdict(lambda:{"disp":collections.Counter(),"comp":collections.Counter(),"n":0,
@@ -78,14 +78,24 @@ def main():
                         if resultado in("acogida","acogida_parcial"): d["lab_acog"]+=1
                         elif resultado=="rechazada": d["lab_rech"]+=1
                         if msol and macog and msol>0: d["pcts"].append(min(100.0,100.0*macog/msol))
+                        win = resultado in("acogida","acogida_parcial")
                         for m in (materias or "").split(","):
-                            if m.strip(): d["mat"][m.strip()]+=1
+                            mm=m.strip()
+                            if mm:
+                                d["mat"][mm]+=1
+                                mo=d["mat_out"].setdefault(mm,[0,0,"a"]); mo[0]+=1; mo[2]="a"
+                                if win: mo[1]+=1
                     elif comp=="Penales" and rr:
                         decision,delitos,dias=rr; d["pen_n"]+=1
                         if decision=="condena": d["pen_cond"]+=1
                         if dias: d["dias"].append(dias)
+                        win = decision=="condena"
                         for m in (delitos or "").split(","):
-                            if m.strip(): d["mat"][m.strip()]+=1
+                            mm=m.strip()
+                            if mm:
+                                d["mat"][mm]+=1
+                                mo=d["mat_out"].setdefault(mm,[0,0,"c"]); mo[0]+=1; mo[2]="c"
+                                if win: mo[1]+=1
                 if tname:
                     k=norm(tname); t=T[k]; t["disp"][tname]+=1; t["n"]+=1; t["comp"][comp]+=1
                     if comp=="Laborales" and rr:
@@ -97,11 +107,11 @@ def main():
                         if rr[2]: t["dias"].append(rr[2])
 
     out=sqlite3.connect(PERFIL,timeout=120); out.execute("PRAGMA busy_timeout=120000")
-    out.execute("""CREATE TABLE IF NOT EXISTS juez_perfil(
+    out.execute("DROP TABLE IF EXISTS juez_perfil")
+    out.execute("""CREATE TABLE juez_perfil(
         juez_key TEXT PRIMARY KEY, juez TEXT, n_causas INTEGER, competencias TEXT, tribunal_principal TEXT,
         lab_n INTEGER, lab_tasa_acogida REAL, lab_pct_aceptado REAL,
-        pen_n INTEGER, pen_tasa_condena REAL, pen_dias_pena_prom INTEGER, materias_top TEXT)""")
-    out.execute("DELETE FROM juez_perfil")
+        pen_n INTEGER, pen_tasa_condena REAL, pen_dias_pena_prom INTEGER, materias_top TEXT, materias_outcome TEXT)""")
     out.execute("""CREATE TABLE IF NOT EXISTS tribunal_perfil(
         tribunal_key TEXT PRIMARY KEY, tribunal TEXT, n_causas INTEGER, competencias TEXT,
         lab_n INTEGER, lab_tasa_acogida REAL, pen_n INTEGER, pen_tasa_condena REAL, pen_dias_pena_prom INTEGER)""")
@@ -110,7 +120,7 @@ def main():
     for k,d in J.items():
         if d["n"]<a.min_causas: continue
         labden=d["lab_acog"]+d["lab_rech"]
-        out.execute("INSERT INTO juez_perfil VALUES(?,?,?,?,?,?,?,?,?,?,?,?)",(
+        out.execute("INSERT INTO juez_perfil VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)",(
             k, d["disp"].most_common(1)[0][0], d["n"],
             ",".join(f"{c}:{n}" for c,n in d["comp"].most_common()),
             d["trib"].most_common(1)[0][0] if d["trib"] else None,
@@ -118,7 +128,9 @@ def main():
             round(sum(d["pcts"])/len(d["pcts"]),1) if d["pcts"] else None,
             d["pen_n"], round(d["pen_cond"]/d["pen_n"],3) if d["pen_n"] else None,
             int(sum(d["dias"])/len(d["dias"])) if d["dias"] else None,
-            ",".join(f"{x}:{c}" for x,c in d["mat"].most_common(6)))); nj+=1
+            ",".join(f"{x}:{c}" for x,c in d["mat"].most_common(6)),
+            json.dumps([[x, c, (round(100*d["mat_out"][x][1]/d["mat_out"][x][0]) if d["mat_out"].get(x,[0,0])[0] else None),
+                         d["mat_out"].get(x,[0,0,""])[2]] for x,c in d["mat"].most_common(6)], ensure_ascii=False))); nj+=1
     nt=0
     for k,d in T.items():
         if d["n"]<a.min_causas: continue
