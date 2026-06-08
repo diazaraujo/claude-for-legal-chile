@@ -32,11 +32,11 @@ function Bars({ items, color }: { items: Mat[]; color: string }) {
         const lbl = tipo === 'c' ? 'condena' : tipo === 'a' ? 'acogida' : ''
         return (
           <div key={k} style={{ display: 'flex', alignItems: 'center', gap: 10, margin: '7px 0' }}>
-            <span style={{ width: 140, flex: 'none', fontSize: 12, color: 'var(--ink)', fontWeight: 300, textTransform: 'capitalize', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{k}</span>
-            <div style={{ flex: 1, background: 'var(--line)', borderRadius: 3, height: 7, overflow: 'hidden' }}>
-              <div style={{ width: `${Math.max(2, (v / max) * 100)}%`, height: '100%', background: color, borderRadius: 3 }} />
+            <span style={{ width: 132, flex: 'none', fontSize: 12, color: 'var(--ink)', fontWeight: 300, textTransform: 'capitalize', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{k}</span>
+            <div style={{ flex: 1, display: 'flex', alignItems: 'center' }}>
+              <div style={{ width: `${Math.max(3, (v / max) * 100)}%`, minWidth: 4, height: 9, background: color, borderRadius: 4 }} />
             </div>
-            {tasa != null && <span style={{ width: 92, flex: 'none', textAlign: 'right', fontSize: 11, color: 'var(--muted)', fontVariantNumeric: 'tabular-nums' }}>{tasa}% {lbl}</span>}
+            {tasa != null && <span style={{ width: 90, flex: 'none', textAlign: 'right', fontSize: 11, color: 'var(--muted)', fontVariantNumeric: 'tabular-nums' }}>{tasa}% {lbl}</span>}
             <span style={{ width: 46, flex: 'none', textAlign: 'right', fontWeight: 600, fontSize: 12, fontVariantNumeric: 'tabular-nums', color: 'var(--ink)' }}>{v.toLocaleString('es-CL')}</span>
           </div>
         )
