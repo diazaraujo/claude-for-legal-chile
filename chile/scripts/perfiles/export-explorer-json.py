@@ -6,9 +6,10 @@ abogados, fiscales (de partes.sqlite3 cruzado con los resultados extraídos).
 Reusable: re-correr cuando avance/termine la extracción para refrescar las fichas.
 Uso: python3 scripts/perfiles/export-explorer-json.py
 """
-import sqlite3, json, collections
+import sqlite3, json, collections, os
 PERF = "data/_index/perfiles.sqlite3"
 PART = "data/_index/partes.sqlite3"
+ENR  = "data/_index/jueces_enriched.sqlite3"
 OUT  = "legalchile/frontend/public/data"
 
 # Conectores que van en minúscula dentro de un nombre propio (no al inicio).
@@ -43,6 +44,19 @@ pc = sqlite3.connect(PERF, timeout=60)
 jr = []
 for r in pc.execute("SELECT juez_key,juez,n_causas,competencias,tribunal_principal,lab_n,lab_tasa_acogida,pen_n,pen_tasa_condena,pen_dias_pena_prom,materias_top FROM juez_perfil WHERE juez IS NOT NULL AND n_causas>=1 ORDER BY n_causas DESC"):
     jr.append({"key": r[0], "nombre": cap(r[1]), "n": r[2], "comp": r[3], "trib": cap(r[4]), "lab_n": r[5], "lab_acogida": f(r[6]), "pen_n": r[7], "pen_condena": f(r[8]), "pen_dias": f(r[9], 1), "materias": [[k.replace('_', ' '), int(v)] for k, v in (x.rsplit(':', 1) for x in (r[10] or '').split(',') if ':' in x)][:8]})
+
+# ---- capa enriquecida PÚBLICA: SOLO la reseña IA (derivada de sentencias públicas). ----
+# La ficha civil de Mallas (RUT/avalúo/familia) NO va al sitio público: incluye datos
+# personales de terceros (familiares). El patrimonio público del juez se traerá de la
+# Declaración de Patrimonio e Intereses (Ley 20.880 / InfoProbidad), fuente oficial pública.
+if os.path.exists(ENR):
+    ec = sqlite3.connect(f"file:{ENR}?mode=ro", uri=True)
+    bios = {e[0]: e[1] for e in ec.execute(
+        "SELECT juez_key,biografia FROM juez_enriched WHERE biografia IS NOT NULL AND biografia<>''")}
+    ec.close()
+    for j in jr:
+        if j["key"] in bios:
+            j["bio"] = bios[j["key"]]
 json.dump(jr, open(f"{OUT}/jueces.json", "w"), ensure_ascii=False)
 
 tr = []
