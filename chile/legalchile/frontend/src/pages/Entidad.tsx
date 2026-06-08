@@ -88,24 +88,33 @@ function JuezPerfil({ r }: { r: Row }) {
           )
         })()}
         {p.hist && p.hist.length > 1 && (() => {
-          const pts = p.hist.map((h) => ({ ...h, total: (h.av_inm || 0) + (h.av_veh || 0) }))
-          const mx = Math.max(...pts.map((x) => x.total), 1)
+          const pts = p.hist.map((h) => ({ fecha: h.fecha, total: (h.av_inm || 0) + (h.av_veh || 0) }))
+          const W = 320, Hh = 46
+          const vals = pts.map((q) => q.total)
+          const lo = Math.min(...vals), hi = Math.max(...vals, 1)
+          const range = hi - lo || 1
+          const xx = (i: number) => (pts.length === 1 ? W / 2 : (i / (pts.length - 1)) * W)
+          const yy = (v: number) => Hh - 4 - ((v - lo) / range) * (Hh - 8)
+          const path = pts.map((q, i) => `${i === 0 ? 'M' : 'L'} ${xx(i).toFixed(1)} ${yy(q.total).toFixed(1)}`).join(' ')
           return (
-            <>
-              <div className="section-tag uline" style={{ marginTop: 20, display: 'block' }}>Evolución del patrimonio declarado · {pts.length} declaraciones</div>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 3, marginTop: 8 }}>
-                {pts.map((h, i) => (
-                  <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                    <span className="mono" style={{ fontSize: 10, color: 'var(--muted)', width: 66, flexShrink: 0 }}>{h.fecha}</span>
-                    <div style={{ flex: 1, background: 'var(--line)', borderRadius: 4, height: 13 }}>
-                      <div style={{ width: `${Math.max(2, (100 * h.total) / mx)}%`, background: 'var(--primary)', height: '100%', borderRadius: 4 }} />
-                    </div>
-                    <span className="mono" style={{ fontSize: 10, color: 'var(--ink)', width: 96, flexShrink: 0, textAlign: 'right' }}>{clp(h.total)}</span>
-                    <span className="mono" style={{ fontSize: 9.5, color: 'var(--muted)', width: 78, flexShrink: 0 }}>{h.inm} b.raíces · {h.veh} veh</span>
-                  </div>
-                ))}
+            <div style={{ marginTop: 16 }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: 8 }}>
+                <span className="section-tag" style={{ margin: 0 }}>Evolución del patrimonio declarado</span>
+                <span className="mono" style={{ fontSize: 10, color: 'var(--muted)' }}>{pts.length} declaraciones · {pts[0].fecha.slice(0, 4)}–{pts[pts.length - 1].fecha.slice(0, 4)}</span>
               </div>
-            </>
+              <svg viewBox={`0 0 ${W} ${Hh}`} preserveAspectRatio="none" style={{ width: '100%', height: 44, marginTop: 6, overflow: 'visible' }}>
+                <path d={path} fill="none" stroke="var(--primary)" strokeWidth={1.5} vectorEffect="non-scaling-stroke" />
+                {pts.map((q, i) => (
+                  <circle key={i} cx={xx(i)} cy={yy(q.total)} r={1.6} fill="var(--primary)">
+                    <title>{q.fecha}: {clp(q.total)}</title>
+                  </circle>
+                ))}
+              </svg>
+              <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: 2 }}>
+                <span className="mono" style={{ fontSize: 9.5, color: 'var(--muted)' }}>{clp(pts[0].total)}</span>
+                <span className="mono" style={{ fontSize: 9.5, color: 'var(--ink)' }}>hoy {clp(pts[pts.length - 1].total)}</span>
+              </div>
+            </div>
           )
         })()}
       </>}
