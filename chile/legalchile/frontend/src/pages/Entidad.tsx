@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import '../styles/decide.css'
 import { Footer } from './Sobre'
+import ArbolDecision, { ArbolNode } from '../components/ArbolDecision'
 
 type Mat = [string, number, (number | null)?, (string | null)?]
 type Row = {
@@ -131,7 +132,9 @@ function JuezPerfil({ r }: { r: Row }) {
   )
 }
 
-function Ficha({ tipo, r }: { tipo: string; r: Row }) {
+function Ficha({ tipo, r, arbolNode }: { tipo: string; r: Row; arbolNode?: ArbolNode }) {
+  const [tab, setTab] = useState<'ficha' | 'arbol'>('ficha')
+  const hasArbol = tipo === 'jueces' && !!arbolNode
   let kpis: { label: string; value: string; sub?: string }[]
   if (tipo === 'empresas') kpis = [
     { label: 'Juicios', value: r.n.toLocaleString('es-CL') },
@@ -181,6 +184,15 @@ function Ficha({ tipo, r }: { tipo: string; r: Row }) {
       <div className="section-tag">{CFG[tipo].tag} · ficha</div>
       <h2 style={{ fontSize: 22, fontWeight: 600, margin: '4px 0 4px' }}>{r.nombre}</h2>
       {(r.trib || r.comp) && <div className="mono" style={{ fontSize: 11, color: 'var(--muted)', marginBottom: 16 }}>{(r.trib || r.comp || '').replace(/_/g, ' ')}</div>}
+      {hasArbol && (
+        <div style={{ display: 'flex', gap: 6, margin: '0 0 18px' }}>
+          {(([['ficha', 'Ficha'], ['arbol', 'Árbol de decisión']]) as ['ficha' | 'arbol', string][]).map(([t, lbl]) => (
+            <button key={t} onClick={() => setTab(t)} className="card" style={{ cursor: 'pointer', padding: '6px 14px', fontWeight: 600, fontSize: 12.5, border: tab === t ? '1px solid var(--primary)' : '1px solid var(--line)', background: tab === t ? 'var(--primary)' : '#fff', color: tab === t ? '#fff' : 'var(--muted)' }}>{lbl}</button>
+          ))}
+        </div>
+      )}
+      {hasArbol && tab === 'arbol' && <ArbolDecision node={arbolNode as ArbolNode} mode="juez" />}
+      {(!hasArbol || tab === 'ficha') && (<>
       {tipo === 'jueces' && r.bio && (
         <p style={{ fontSize: 13.5, color: 'var(--ink)', fontWeight: 300, lineHeight: 1.55, margin: '0 0 18px', maxWidth: 820 }}>
           {r.bio}
@@ -234,6 +246,7 @@ function Ficha({ tipo, r }: { tipo: string; r: Row }) {
           </div>
         </div>
       )}
+      </>)}
     </div>
   )
 }
@@ -262,6 +275,7 @@ function Header({ tipo }: { tipo: string }) {
           <a href="/abogados" style={on('abogados')}>Abogados</a>
           <a href="/fiscales" style={on('fiscales')}>Fiscales</a>
           <a href="/tribunales" style={on('tribunales')}>Tribunales</a>
+          <a href="/decisiones">Decisiones</a>
           <details className="more">
             <summary>Más <span className="caret">▾</span></summary>
             <div className="more-menu">
@@ -285,11 +299,17 @@ export default function Entidad({ tipo }: { tipo: string }) {
   const [q, setQ] = useState('')
   const [sel, setSel] = useState<Row | null>(null)
   const [loading, setLoading] = useState(true)
+  const [arbol, setArbol] = useState<Record<string, ArbolNode>>({})
 
   useEffect(() => {
     setLoading(true); setSel(null); setQ('')
     fetch(cfg.file).then((r) => r.json()).then((d: Row[]) => { setData(d); setSel(d[0] ?? null); setLoading(false) }).catch(() => setLoading(false))
   }, [cfg.file])
+
+  useEffect(() => {
+    if (tipo !== 'jueces') { setArbol({}); return }
+    fetch('/data/arbol.json').then((r) => r.json()).then((d) => setArbol(d.jueces || {})).catch(() => setArbol({}))
+  }, [tipo])
 
   const filtered = useMemo(() => {
     const s = q.trim().toLowerCase()
@@ -319,7 +339,7 @@ export default function Entidad({ tipo }: { tipo: string }) {
             <p className="mono" style={{ color: 'var(--muted)', fontSize: 12 }}>Cargando fichas…</p>
           ) : (
             <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 24 }}>
-              {sel && <div><Ficha tipo={tipo} r={sel} /></div>}
+              {sel && <div><Ficha tipo={tipo} r={sel} arbolNode={tipo === 'jueces' ? arbol[sel.key] : undefined} /></div>}
               <div>
                 <div className="section-tag uline">{q ? `${filtered.length} resultados` : `Top ${filtered.length} por volumen de causas`}</div>
                 <div className="exp-list" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 6, maxHeight: 560, overflowY: 'auto' }}>

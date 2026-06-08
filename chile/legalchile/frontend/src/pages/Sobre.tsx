@@ -13,6 +13,7 @@ export default function Sobre() {
             <a href="/abogados">Abogados</a>
             <a href="/fiscales">Fiscales</a>
             <a href="/tribunales">Tribunales</a>
+            <a href="/decisiones">Decisiones</a>
             <details className="more">
               <summary>Más <span className="caret">▾</span></summary>
               <div className="more-menu">

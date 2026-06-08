@@ -5,6 +5,7 @@ import Buscar from '@/pages/Buscar'
 import Entidad from '@/pages/Entidad'
 import Sobre from '@/pages/Sobre'
 import Login from '@/pages/Login'
+import Decisiones from '@/pages/Decisiones'
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
       <Route path="/buscar" element={<Buscar />} />
       <Route path="/analisis" element={<Analisis />} />
       <Route path="/sobre" element={<Sobre />} />
+      <Route path="/decisiones" element={<Decisiones />} />
       <Route path="/jueces" element={<Entidad tipo="jueces" />} />
       <Route path="/abogados" element={<Entidad tipo="abogados" />} />
       <Route path="/fiscales" element={<Entidad tipo="fiscales" />} />
