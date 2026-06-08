@@ -195,7 +195,12 @@ function rowStat(tipo: string, r: Row) {
   if (tipo === 'fiscales') return `${r.n.toLocaleString('es-CL')} causas${r.condena != null ? ` · ${pct(r.condena)} condena` : ''}`
   if (tipo === 'abogados') return `${r.n.toLocaleString('es-CL')} causas${r.comp ? ` · ${r.comp.replace(/_/g, ' ')}` : ''}`
   if (tipo === 'empresas') return `${r.n.toLocaleString('es-CL')} causas${r.condena != null ? ` · ${pct(r.condena)} condena` : ''}`
-  return `${r.n.toLocaleString('es-CL')} causas${r.pen_condena != null ? ` · ${pct(r.pen_condena)} condena` : ''}${r.lab_acogida != null ? ` · ${pct(r.lab_acogida)} acogida` : ''}`
+  // jueces: una sola métrica, la del tipo dominante → formato uniforme en la lista
+  const penal = (r.pen_n || 0) >= (r.lab_n || 0)
+  const m = penal
+    ? (r.pen_condena != null ? `${pct(r.pen_condena)} condena` : '')
+    : (r.lab_acogida != null ? `${pct(r.lab_acogida)} acogida` : '')
+  return `${r.n.toLocaleString('es-CL')} causas${m ? ` · ${m}` : ''}`
 }
 
 function Header({ tipo }: { tipo: string }) {
