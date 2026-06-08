@@ -164,7 +164,15 @@ function Ficha({ tipo, r }: { tipo: string; r: Row }) {
   // gráficos por tipo
   const charts: { label: string; items?: Mat[]; color: string }[] = []
   if (tipo === 'fiscales') charts.push({ label: 'Delitos más perseguidos', items: r.delitos, color: 'var(--blue-dark)' })
-  else charts.push({ label: tipo === 'jueces' ? 'Cómo resuelve por materia · % condena/acogida' : 'Materias más frecuentes', items: r.materias, color: 'var(--primary)' })
+  else {
+    // rótulo sensible al tipo de juez: penal → condena, laboral → acogida, mixto → ambos
+    const matLabel = tipo !== 'jueces' ? 'Materias más frecuentes'
+      : r.pen_n && r.lab_n ? 'Cómo resuelve por materia · % condena (penal) / acogida (laboral)'
+      : r.pen_n ? 'Cómo resuelve por materia · % de condena'
+      : r.lab_n ? 'Cómo resuelve por materia · % de acogida de la demanda'
+      : 'Materias más frecuentes'
+    charts.push({ label: matLabel, items: r.materias, color: 'var(--primary)' })
+  }
   if (tipo === 'empresas') charts.push({ label: 'Defensas más usadas', items: r.defensas, color: 'var(--cyan)' })
   if (tipo === 'abogados') charts.push({ label: 'Partes / empresas en sus causas', items: r.contrapartes, color: 'var(--cyan)' })
   const shown = charts.filter((c) => c.items && c.items.length)
