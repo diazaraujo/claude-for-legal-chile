@@ -198,6 +198,7 @@ function Ficha({ tipo, r }: { tipo: string; r: Row }) {
           )}
         </div>
       )}
+      {tipo === 'jueces' && <JuezPerfil r={r} />}
       <div className="kpi-grid" style={{ gridTemplateColumns: 'repeat(2,1fr)', gap: 10 }}>
         {kpis.map((k) => <Kpi key={k.label} {...k} />)}
       </div>
@@ -225,7 +226,6 @@ function Ficha({ tipo, r }: { tipo: string; r: Row }) {
           </div>
         </div>
       )}
-      {tipo === 'jueces' && <JuezPerfil r={r} />}
     </div>
   )
 }
