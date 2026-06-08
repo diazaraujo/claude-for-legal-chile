@@ -84,8 +84,20 @@ if os.path.exists(ENR):
                            "n_inmuebles": last[3], "avaluo_inmuebles": last[4],
                            "n_vehiculos": last[5], "avaluo_vehiculos": last[6], "n_pasivos": last[7]}
         if len(rows) > 1:
-            j["patrimonio"]["hist"] = [{"fecha": (r[1] or "")[:10], "inm": r[3], "av_inm": r[4],
-                                        "veh": r[5], "av_veh": r[6], "pas": r[7]} for r in rows]
+            ts = [{"fecha": (r[1] or "")[:10], "inm": r[3], "av_inm": r[4],
+                   "veh": r[5], "av_veh": r[6], "pas": r[7]} for r in rows]
+            j["patrimonio"]["hist"] = ts
+            # tendencia robusta: media de la mitad reciente vs la antigua (evita ruido de 1 declaración)
+            tot = [(t["av_inm"] or 0) + (t["av_veh"] or 0) for t in ts]
+            n = len(tot); hf = max(1, n // 2)
+            early = sum(tot[:hf]) / hf
+            late = sum(tot[hf:]) / (n - hf) if (n - hf) else tot[-1]
+            ratio = (late / early) if early > 0 else None
+            direc = ("up" if ratio >= 1.15 else "down" if ratio <= 0.87 else "flat") if ratio else "na"
+            j["patrimonio"]["tendencia"] = {
+                "dir": direc, "ratio": round(ratio, 2) if ratio else None,
+                "desde": ts[0]["fecha"][:4], "hasta": ts[-1]["fecha"][:4],
+                "peak": max(tot), "actual": tot[-1]}
 json.dump(jr, open(f"{OUT}/jueces.json", "w"), ensure_ascii=False)
 
 tr = []

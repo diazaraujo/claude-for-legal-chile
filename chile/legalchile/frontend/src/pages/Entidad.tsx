@@ -51,11 +51,12 @@ function Kpi({ label, value, sub }: { label: string; value: string; sub?: string
 
 // ---- Patrimonio declarado (Ley 20.880 · InfoProbidad) + reseña IA · público ----
 type HistPt = { fecha: string; inm: number; av_inm: number; veh: number; av_veh: number; pas: number }
+type Tendencia = { dir: 'up' | 'down' | 'flat' | 'na'; ratio?: number | null; desde: string; hasta: string; peak: number; actual: number }
 type Patrimonio = {
   fecha?: string | null; cargo?: string | null
   n_inmuebles?: number; avaluo_inmuebles?: number
   n_vehiculos?: number; avaluo_vehiculos?: number; n_pasivos?: number
-  hist?: HistPt[]
+  hist?: HistPt[]; tendencia?: Tendencia
 }
 const clp = (n?: number | null) => (!n ? '—' : '$' + Number(n).toLocaleString('es-CL'))
 
@@ -74,6 +75,18 @@ function JuezPerfil({ r }: { r: Row }) {
           <Kpi label="Vehículos" value={String(p.n_vehiculos ?? 0)} sub={p.avaluo_vehiculos ? `avalúo ${clp(p.avaluo_vehiculos)}` : undefined} />
           <Kpi label="Deudas declaradas" value={p.n_pasivos != null ? String(p.n_pasivos) : '—'} />
         </div>
+        {p.tendencia && p.tendencia.dir !== 'na' && (() => {
+          const t = p.tendencia
+          const col = t.dir === 'up' ? '#0a7d3c' : t.dir === 'down' ? '#b42318' : 'var(--muted)'
+          const lbl = t.dir === 'up' ? 'Al alza' : t.dir === 'down' ? 'A la baja' : 'Estable'
+          return (
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginTop: 14, flexWrap: 'wrap' }}>
+              <span className="section-tag" style={{ margin: 0 }}>Tendencia del patrimonio</span>
+              <span style={{ fontSize: 14, fontWeight: 600, color: col }}>{lbl}{t.ratio ? ` · ×${t.ratio}` : ''}</span>
+              <span className="mono" style={{ fontSize: 10, color: 'var(--muted)' }}>{t.desde}→{t.hasta} · máx {clp(t.peak)}</span>
+            </div>
+          )
+        })()}
         {p.hist && p.hist.length > 1 && (() => {
           const pts = p.hist.map((h) => ({ ...h, total: (h.av_inm || 0) + (h.av_veh || 0) }))
           const mx = Math.max(...pts.map((x) => x.total), 1)
