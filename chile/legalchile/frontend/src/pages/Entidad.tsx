@@ -8,8 +8,10 @@ type Row = {
   lab_n?: number; lab_acogida?: number | null; pen_n?: number; pen_condena?: number | null; pen_dias?: number | null
   nres?: number; condena?: number | null; rechazo?: number | null; concil?: number | null; pct_acept?: number | null; monto?: number
   materias?: Mat[]; defensas?: Mat[]; contrapartes?: Mat[]; delitos?: Mat[]
-  bio?: string; patrimonio?: Patrimonio
+  bio?: string; patrimonio?: Patrimonio; defensor?: Defensor; linkedin?: LinkedIn
 }
+type Defensor = { pub_n: number; pub_rate?: number | null; priv_n: number; priv_rate?: number | null }
+type LinkedIn = { url?: string; job?: string; company?: string; headline?: string; edu?: { school?: string; deg?: string | null; field?: string | null }[] }
 
 const pct = (x?: number | null) => (x == null ? '—' : `${Math.round(x * 100)}%`)
 const money = (n?: number) => (!n ? '—' : '$' + (n >= 1e9 ? (n / 1e9).toFixed(1) + ' B' : n >= 1e6 ? (n / 1e6).toFixed(0) + ' M' : n.toLocaleString('es-CL')))
@@ -177,6 +179,25 @@ function Ficha({ tipo, r }: { tipo: string; r: Row }) {
           <span className="mono" style={{ display: 'block', fontSize: 9.5, color: 'var(--muted)', marginTop: 8, letterSpacing: '0.06em' }}>Reseña generada con IA sobre las sentencias públicas del juez.</span>
         </p>
       )}
+      {tipo === 'jueces' && r.linkedin && (
+        <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12, margin: '0 0 18px', padding: '12px 14px', border: '1px solid var(--line)', borderRadius: 10, flexWrap: 'wrap' }}>
+          <div style={{ flex: 1, minWidth: 240 }}>
+            <div className="kpi-label">Trayectoria · LinkedIn</div>
+            {r.linkedin.job && <div style={{ fontSize: 13, color: 'var(--ink)', marginTop: 4 }}>{r.linkedin.job}{r.linkedin.company ? ` · ${r.linkedin.company}` : ''}</div>}
+            {r.linkedin.edu && r.linkedin.edu.length > 0 && (
+              <div className="mono" style={{ fontSize: 11, color: 'var(--muted)', marginTop: 4 }}>
+                {r.linkedin.edu.map((e) => [e.school, e.deg, e.field].filter(Boolean).join(' · ')).filter(Boolean).join('  /  ')}
+              </div>
+            )}
+            <div className="mono" style={{ fontSize: 9, color: 'var(--muted)', marginTop: 5, letterSpacing: '0.06em' }}>Según LinkedIn · sin verificar</div>
+          </div>
+          {r.linkedin.url && (
+            <a href={r.linkedin.url.startsWith('http') ? r.linkedin.url : `https://${r.linkedin.url}`} target="_blank" rel="noopener noreferrer" title="Ver perfil de LinkedIn" style={{ flexShrink: 0, color: 'var(--primary)', display: 'inline-flex' }}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-label="LinkedIn"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.21 0 22.23 0z"/></svg>
+            </a>
+          )}
+        </div>
+      )}
       <div className="kpi-grid" style={{ gridTemplateColumns: 'repeat(2,1fr)', gap: 10 }}>
         {kpis.map((k) => <Kpi key={k.label} {...k} />)}
       </div>
@@ -188,6 +209,20 @@ function Ficha({ tipo, r }: { tipo: string; r: Row }) {
               <Bars items={c.items as Mat[]} color={c.color} />
             </div>
           ))}
+        </div>
+      )}
+      {tipo === 'jueces' && r.defensor && (r.defensor.pub_rate != null || r.defensor.priv_rate != null) && (
+        <div style={{ marginTop: 22 }}>
+          <div className="kpi-label">Tasa de condena según la defensa del imputado</div>
+          <div style={{ display: 'flex', gap: 10, marginTop: 8, flexWrap: 'wrap' }}>
+            {([['Defensoría Penal Pública', r.defensor.pub_rate, r.defensor.pub_n], ['Defensa particular', r.defensor.priv_rate, r.defensor.priv_n]] as [string, number | null | undefined, number][]).map(([lbl, rate, n]) => rate == null ? null : (
+              <div key={lbl} style={{ flex: '1 1 200px', border: '1px solid var(--line)', borderRadius: 8, padding: '12px 14px' }}>
+                <div className="mono" style={{ fontSize: 9.5, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>{lbl}</div>
+                <div style={{ fontSize: 22, fontWeight: 600, color: 'var(--ink)', marginTop: 2 }}>{Math.round(rate * 100)}%</div>
+                <div className="mono" style={{ fontSize: 10, color: 'var(--muted)' }}>condena · {n.toLocaleString('es-CL')} causas</div>
+              </div>
+            ))}
+          </div>
         </div>
       )}
       {tipo === 'jueces' && <JuezPerfil r={r} />}

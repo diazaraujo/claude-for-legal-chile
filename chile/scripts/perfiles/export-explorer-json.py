@@ -50,8 +50,12 @@ def mat_juez(r10, r11):
         except Exception:
             pass
     return [[k.replace('_', ' '), int(v), None, None] for k, v in (x.rsplit(':', 1) for x in (r10 or '').split(',') if ':' in x)][:8]
-for r in pc.execute("SELECT juez_key,juez,n_causas,competencias,tribunal_principal,lab_n,lab_tasa_acogida,pen_n,pen_tasa_condena,pen_dias_pena_prom,materias_top,materias_outcome FROM juez_perfil WHERE juez IS NOT NULL AND n_causas>=1 ORDER BY n_causas DESC"):
-    jr.append({"key": r[0], "nombre": cap(r[1]), "n": r[2], "comp": r[3], "trib": cap(r[4]), "lab_n": r[5], "lab_acogida": f(r[6]), "pen_n": r[7], "pen_condena": f(r[8]), "pen_dias": f(r[9], 1), "materias": mat_juez(r[10], r[11])})
+for r in pc.execute("SELECT juez_key,juez,n_causas,competencias,tribunal_principal,lab_n,lab_tasa_acogida,pen_n,pen_tasa_condena,pen_dias_pena_prom,materias_top,materias_outcome,def_pub_n,def_pub_rate,def_priv_n,def_priv_rate FROM juez_perfil WHERE juez IS NOT NULL AND n_causas>=1 ORDER BY n_causas DESC"):
+    row = {"key": r[0], "nombre": cap(r[1]), "n": r[2], "comp": r[3], "trib": cap(r[4]), "lab_n": r[5], "lab_acogida": f(r[6]), "pen_n": r[7], "pen_condena": f(r[8]), "pen_dias": f(r[9], 1), "materias": mat_juez(r[10], r[11])}
+    # defensor público vs privado (solo si hay muestra mínima en al menos un lado)
+    if (r[12] or 0) >= 15 or (r[14] or 0) >= 15:
+        row["defensor"] = {"pub_n": r[12] or 0, "pub_rate": f(r[13]), "priv_n": r[14] or 0, "priv_rate": f(r[15])}
+    jr.append(row)
 
 # ---- capa enriquecida PÚBLICA: SOLO la reseña IA (derivada de sentencias públicas). ----
 # La ficha civil de Mallas (RUT/avalúo/familia) NO va al sitio público: incluye datos
@@ -106,6 +110,22 @@ if os.path.exists(ENR):
                 "dir": direc, "ratio": round(ratio, 2) if ratio else None,
                 "desde": ts[0]["fecha"][:4], "hasta": ts[-1]["fecha"][:4],
                 "peak": max(tot), "actual": tot[-1]}
+    # LinkedIn (trayectoria + educación, filtrado a coherencia judicial; método icare).
+    ec3 = sqlite3.connect(f"file:{ENR}?mode=ro", uri=True)
+    lkd = {}
+    try:
+        for jk, url, job, comp, head, edu in ec3.execute("SELECT juez_key,url,job_title,company,headline,educacion FROM juez_linkedin"):
+            try:
+                educ = [e for e in json.loads(edu or "[]") if e.get("school")]
+            except Exception:
+                educ = []
+            lkd[jk] = {"url": url, "job": job, "company": comp, "headline": head, "edu": educ[:2]}
+    except Exception:
+        pass
+    ec3.close()
+    for j in jr:
+        if j["key"] in lkd:
+            j["linkedin"] = lkd[j["key"]]
 json.dump(jr, open(f"{OUT}/jueces.json", "w"), ensure_ascii=False)
 
 tr = []

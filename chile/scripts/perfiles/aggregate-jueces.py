@@ -18,6 +18,9 @@ from glob import glob
 
 PERFIL="data/_index/perfiles.sqlite3"
 SKIP=re.compile(r"sin informaci|^s/i$|no registra|^\s*$",re.I)
+# Defensor: público (Defensoría Penal Pública) vs privado (particular/de confianza), del texto de la sentencia.
+DEF_PUB=re.compile(r"defensor[ a]*penal[ ]*p[uú]blic|defensor[ií]a penal p[uú]blic|\bD\.?P\.?P\.?\b",re.I)
+DEF_PRIV=re.compile(r"defensor[ a]*(particular|privad|de confianza)|defensa particular|abogad[oa] defensor particular",re.I)
 
 def norm(s):
     s=unicodedata.normalize("NFD",s); s="".join(c for c in s if unicodedata.category(c)!="Mn")
@@ -57,7 +60,8 @@ def main():
     J=collections.defaultdict(lambda:{"disp":collections.Counter(),"trib":collections.Counter(),
         "comp":collections.Counter(),"mat":collections.Counter(),"mat_out":{},"n":0,
         "lab_n":0,"lab_acog":0,"lab_rech":0,"pcts":[],
-        "pen_n":0,"pen_cond":0,"pen_abs":0,"dias":[]})
+        "pen_n":0,"pen_cond":0,"pen_abs":0,"dias":[],
+        "pub_n":0,"pub_cond":0,"priv_n":0,"priv_cond":0})
     T=collections.defaultdict(lambda:{"disp":collections.Counter(),"comp":collections.Counter(),"n":0,
         "lab_n":0,"lab_acog":0,"pen_n":0,"pen_cond":0,"pen_abs":0,"dias":[]})
 
@@ -70,6 +74,11 @@ def main():
                 trib=field_list(r.get("gls_juz_s")) or field_list(r.get("gls_corte_s"))
                 tname=trib[0] if trib else None
                 rr=res.get(sid)
+                deftipo=None
+                if comp=="Penales" and rr and rr[0] in("condena","absolucion"):
+                    t=r.get("texto_sentencia") or ""
+                    pp=bool(DEF_PUB.search(t)); qq=bool(DEF_PRIV.search(t))
+                    deftipo="pub" if (pp and not qq) else "priv" if (qq and not pp) else None
                 for j in jueces:
                     k=norm(j); d=J[k]; d["disp"][j]+=1; d["n"]+=1; d["comp"][comp]+=1
                     if tname: d["trib"][tname]+=1
@@ -95,6 +104,9 @@ def main():
                         if dias: d["dias"].append(dias)
                         win = decision=="condena"
                         merits = decision in("condena","absolucion")  # excluye no_aplica/sobreseimiento/mixta
+                        if deftipo:
+                            d[deftipo+"_n"]+=1
+                            if win: d[deftipo+"_cond"]+=1
                         for m in (delitos or "").split(","):
                             mm=m.strip()
                             if mm:
@@ -119,7 +131,8 @@ def main():
     out.execute("""CREATE TABLE juez_perfil(
         juez_key TEXT PRIMARY KEY, juez TEXT, n_causas INTEGER, competencias TEXT, tribunal_principal TEXT,
         lab_n INTEGER, lab_tasa_acogida REAL, lab_pct_aceptado REAL,
-        pen_n INTEGER, pen_tasa_condena REAL, pen_dias_pena_prom INTEGER, materias_top TEXT, materias_outcome TEXT)""")
+        pen_n INTEGER, pen_tasa_condena REAL, pen_dias_pena_prom INTEGER, materias_top TEXT, materias_outcome TEXT,
+        def_pub_n INTEGER, def_pub_rate REAL, def_priv_n INTEGER, def_priv_rate REAL)""")
     out.execute("""CREATE TABLE IF NOT EXISTS tribunal_perfil(
         tribunal_key TEXT PRIMARY KEY, tribunal TEXT, n_causas INTEGER, competencias TEXT,
         lab_n INTEGER, lab_tasa_acogida REAL, pen_n INTEGER, pen_tasa_condena REAL, pen_dias_pena_prom INTEGER)""")
@@ -128,7 +141,7 @@ def main():
     for k,d in J.items():
         if d["n"]<a.min_causas: continue
         labden=d["lab_acog"]+d["lab_rech"]
-        out.execute("INSERT INTO juez_perfil VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)",(
+        out.execute("INSERT INTO juez_perfil VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",(
             k, d["disp"].most_common(1)[0][0], d["n"],
             ",".join(f"{c}:{n}" for c,n in d["comp"].most_common()),
             d["trib"].most_common(1)[0][0] if d["trib"] else None,
@@ -138,7 +151,9 @@ def main():
             int(sum(d["dias"])/len(d["dias"])) if d["dias"] else None,
             ",".join(f"{x}:{c}" for x,c in d["mat"].most_common(6)),
             json.dumps([[x, c, (round(100*d["mat_out"][x][1]/d["mat_out"][x][0]) if d["mat_out"].get(x,[0,0])[0] else None),
-                         d["mat_out"].get(x,[0,0,""])[2]] for x,c in d["mat"].most_common(6)], ensure_ascii=False))); nj+=1
+                         d["mat_out"].get(x,[0,0,""])[2]] for x,c in d["mat"].most_common(6)], ensure_ascii=False),
+            d["pub_n"], round(d["pub_cond"]/d["pub_n"],3) if d["pub_n"] else None,
+            d["priv_n"], round(d["priv_cond"]/d["priv_n"],3) if d["priv_n"] else None)); nj+=1
     nt=0
     for k,d in T.items():
         if d["n"]<a.min_causas: continue
