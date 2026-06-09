@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import '../styles/decide.css'
 import { Footer } from './Sobre'
 import ArbolDecision, { ArbolNode } from '../components/ArbolDecision'
+import TramitacionJuez, { Apelaciones } from '../components/TramitacionJuez'
 
 type Mat = [string, number, (number | null)?, (string | null)?]
 type Row = {
@@ -147,14 +148,16 @@ function JuezPerfil({ r }: { r: Row }) {
   )
 }
 
-function Ficha({ tipo, r, arbolNode }: { tipo: string; r: Row; arbolNode?: ArbolNode }) {
-  const [tab, setTab] = useState<'ficha' | 'arbol' | 'patrimonio'>('ficha')
+function Ficha({ tipo, r, arbolNode, apelaciones }: { tipo: string; r: Row; arbolNode?: ArbolNode; apelaciones?: Apelaciones }) {
+  type TabKey = 'ficha' | 'arbol' | 'tramitacion' | 'patrimonio'
+  const [tab, setTab] = useState<TabKey>('ficha')
   const hasArbol = tipo === 'jueces' && !!arbolNode
+  const hasTram = tipo === 'jueces' && !!arbolNode && (arbolNode.dur_total || 0) > 0
   const hasPat = tipo === 'jueces' && !!r.patrimonio
-  const hasTabs = hasArbol || hasPat
+  const hasTabs = hasArbol || hasTram || hasPat
   // tab efectivo: si el activo no aplica a este juez, caer en ficha
-  const tab2: 'ficha' | 'arbol' | 'patrimonio' = (tab === 'arbol' && !hasArbol) || (tab === 'patrimonio' && !hasPat) ? 'ficha' : tab
-  const tabDefs: ['ficha' | 'arbol' | 'patrimonio', string][] = [['ficha', 'Ficha'], ...(hasArbol ? [['arbol', 'Árbol de decisión'] as ['arbol', string]] : []), ...(hasPat ? [['patrimonio', 'Patrimonio'] as ['patrimonio', string]] : [])]
+  const tab2: TabKey = (tab === 'arbol' && !hasArbol) || (tab === 'tramitacion' && !hasTram) || (tab === 'patrimonio' && !hasPat) ? 'ficha' : tab
+  const tabDefs: [TabKey, string][] = [['ficha', 'Ficha'], ...(hasArbol ? [['arbol', 'Árbol de decisión'] as [TabKey, string]] : []), ...(hasTram ? [['tramitacion', 'Tramitación'] as [TabKey, string]] : []), ...(hasPat ? [['patrimonio', 'Patrimonio'] as [TabKey, string]] : [])]
   let kpis: { label: string; value: string; sub?: string }[]
   if (tipo === 'empresas') kpis = [
     { label: 'Juicios', value: r.n.toLocaleString('es-CL') },
@@ -212,6 +215,7 @@ function Ficha({ tipo, r, arbolNode }: { tipo: string; r: Row; arbolNode?: Arbol
         </div>
       )}
       {hasArbol && tab2 === 'arbol' && <ArbolDecision node={arbolNode as ArbolNode} mode="juez" />}
+      {hasTram && tab2 === 'tramitacion' && <TramitacionJuez node={arbolNode as ArbolNode} apelaciones={apelaciones} />}
       {hasPat && tab2 === 'patrimonio' && <JuezPerfil r={r} />}
       {(!hasTabs || tab2 === 'ficha') && (<>
       {tipo === 'jueces' && r.bio && (
@@ -320,6 +324,7 @@ export default function Entidad({ tipo }: { tipo: string }) {
   const [sel, setSel] = useState<Row | null>(null)
   const [loading, setLoading] = useState(true)
   const [arbol, setArbol] = useState<Record<string, ArbolNode>>({})
+  const [apelaciones, setApelaciones] = useState<Apelaciones | undefined>(undefined)
 
   useEffect(() => {
     setLoading(true); setSel(null); setQ('')
@@ -327,8 +332,8 @@ export default function Entidad({ tipo }: { tipo: string }) {
   }, [cfg.file])
 
   useEffect(() => {
-    if (tipo !== 'jueces') { setArbol({}); return }
-    fetch('/data/arbol.json').then((r) => r.json()).then((d) => setArbol(d.jueces || {})).catch(() => setArbol({}))
+    if (tipo !== 'jueces') { setArbol({}); setApelaciones(undefined); return }
+    fetch('/data/arbol.json').then((r) => r.json()).then((d) => { setArbol(d.jueces || {}); setApelaciones(d.apelaciones) }).catch(() => { setArbol({}); setApelaciones(undefined) })
   }, [tipo])
 
   const filtered = useMemo(() => {
@@ -359,7 +364,7 @@ export default function Entidad({ tipo }: { tipo: string }) {
             <p className="mono" style={{ color: 'var(--muted)', fontSize: 12 }}>Cargando fichas…</p>
           ) : (
             <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 24 }}>
-              {sel && <div><Ficha tipo={tipo} r={sel} arbolNode={tipo === 'jueces' ? arbol[sel.key] : undefined} /></div>}
+              {sel && <div><Ficha tipo={tipo} r={sel} arbolNode={tipo === 'jueces' ? arbol[sel.key] : undefined} apelaciones={apelaciones} /></div>}
               <div>
                 <div className="section-tag uline">{q ? `${filtered.length} resultados` : `Top ${filtered.length} por volumen de causas`}</div>
                 <div className="exp-list" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 6, maxHeight: 560, overflowY: 'auto' }}>

@@ -12,6 +12,9 @@ export type ArbolNode = {
   efectiva?: number
   sustituida?: number
   cob?: number | null
+  dur?: Record<string, number>
+  dur_total?: number
+  anios?: Record<string, number>
 }
 
 const GORDER = ['multa', 'prision_min', 'prision_medio', 'prision_max', 'menor_min', 'menor_medio', 'menor_max', 'mayor_min', 'mayor_medio', 'mayor_max']
