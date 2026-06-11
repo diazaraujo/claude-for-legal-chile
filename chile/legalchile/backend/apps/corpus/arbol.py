@@ -46,22 +46,32 @@ def _key(id_norma, articulo) -> str:
     return re.sub(r"[^0-9A-Za-z]+", "-", f"{id_norma}_{articulo}")
 
 
-def _llm_labels() -> dict:
-    """labels-llm.jsonl crece durante el etiquetado overnight → recarga por mtime."""
-    f = _d() / "tesis" / "labels-llm.jsonl"
-    if not f.exists():
+def _load_jsonl_labels(cache: dict, path) -> dict:
+    """labels-llm.jsonl crece durante el etiquetado → recarga por mtime."""
+    if not path.exists():
         return {}
-    mt = f.stat().st_mtime
-    if mt != _labels["mtime"]:
+    mt = path.stat().st_mtime
+    if mt != cache["mtime"]:
         data = {}
-        for line in f.read_text().splitlines():
+        for line in path.read_text().splitlines():
             try:
                 r = json.loads(line)
                 data[r["key"]] = r["clusters"]
             except Exception:
                 continue
-        _labels.update(mtime=mt, data=data)
-    return _labels["data"]
+        cache.update(mtime=mt, data=data)
+    return cache["data"]
+
+
+def _llm_labels() -> dict:
+    return _load_jsonl_labels(_labels, _d() / "tesis" / "labels-llm.jsonl")
+
+
+_labels_v2 = {"mtime": 0, "data": {}}
+
+
+def _llm_labels_v2() -> dict:
+    return _load_jsonl_labels(_labels_v2, _d() / "tesis-v2" / "labels-llm.jsonl")
 
 
 def _tfidf_labels() -> dict:
@@ -129,6 +139,36 @@ def articulo_detalle(id_norma: int, articulo: str, muestras: int = 3) -> dict:
         pass  # DB sin capa admin aún
 
     tesis = []
+    # v2 (quirúrgico: clustering sobre la ventana de cita) tiene prioridad por artículo
+    # apenas su etiquetado exista; fallback a v1 (considerando completo).
+    llm_v2 = _llm_labels_v2().get(key)
+    npz_v2 = _d() / "tesis-v2" / f"{key}.npz"
+    if llm_v2 and npz_v2.exists():
+        d = np.load(npz_v2)
+        wrids, A = d["rowids"], d["assign"]
+        for c in sorted(set(A.tolist()), key=lambda c: -(A == c).sum()):
+            sel = wrids[A == c]
+            lab = llm_v2.get(str(int(c))) or {}
+            ej = []
+            qq = ",".join(str(int(r)) for r in sel[:muestras])
+            for chunk_rowid, win in con.execute(
+                    f"SELECT chunk_rowid, substr(window, 1, 240) FROM citas_windows "
+                    f"WHERE rowid IN ({qq})"):
+                doc = con.execute("SELECT doc_path FROM citas WHERE chunk_rowid=? LIMIT 1",
+                                  (chunk_rowid,)).fetchone()
+                doc = doc[0] if doc else None
+                fe = con.execute("SELECT fecha, rol, caratulado, tribunal FROM doc_fechas "
+                                 "WHERE doc_path=?", (doc,)).fetchone() if doc else None
+                ej.append({"doc_path": doc, "extracto": win,
+                           "fecha": fe[0] if fe else None, "rol": fe[1] if fe else None,
+                           "caratulado": fe[2] if fe else None, "tribunal": fe[3] if fe else None})
+            tesis.append({"cluster": int(c), "n": int(len(sel)),
+                          "nombre": lab.get("nombre"), "descripcion": lab.get("descripcion"),
+                          "terminos": [], "ejemplos": ej, "v": 2})
+        con.close()
+        return {"id_norma": id_norma, "articulo": articulo, "anios": anios,
+                "tesis": tesis, "administrativa": admin}
+
     llm = _llm_labels().get(key) or {}
     tf = (_tfidf_labels().get(key) or {}).get("clusters", {})
     npz = _d() / "tesis" / f"{key}.npz"
