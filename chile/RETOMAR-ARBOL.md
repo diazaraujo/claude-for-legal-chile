@@ -1,3 +1,12 @@
+# ✅ COMPLETADO 11-jun — Árbol normativo EN PRODUCCIÓN
+
+**Aplicado el 11-jun con autorización de Antonio** ("saca a prod"): backend live, frontend con
+VITE_API_KEY horneada (blocker /buscar resuelto), smoke E2E PASS (12 tesis art.162, búsqueda
+OK, semáforo verde ≤0,34s). ⚠️ Lección: `vite build` borra `dist/.vercel/project.json` —
+SIEMPRE recopiarlo antes de `vercel deploy` o el deploy crea un proyecto basura.
+
+--- (instrucciones originales, ya ejecutadas) ---
+
 # RETOMAR — Árbol normativo: activación del backend + frontend (2026-06-10 noche)
 
 Todo construido y testeado en modo autónomo; **falta solo aplicar a producción** (bloqueado
