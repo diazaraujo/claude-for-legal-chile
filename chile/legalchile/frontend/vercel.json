@@ -1,6 +1,6 @@
 {
   "rewrites": [
-    { "source": "/api/:path*", "destination": "https://husband-leisure-yacht-debug.trycloudflare.com/api/:path*" },
+    { "source": "/api/:path*", "destination": "https://appreciation-operations-plaza-contests.trycloudflare.com/api/:path*" },
     { "source": "/(.*)", "destination": "/index.html" }
   ],
   "headers": [

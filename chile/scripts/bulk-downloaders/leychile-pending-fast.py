@@ -44,15 +44,18 @@ def worker(row):
             with lock: S["stub"]+=1
             return
         # body vacío (b"") → este geo confirma norma vacía; sigue probando otros geos
-    if got_response:                        # algún geo respondió VACÍO → norma MUERTA → terminal (sale del pool)
+    if got_response and S["ok"] > 0:        # VACÍO con WAF demostradamente abierto (hubo oks en la pasada) → norma MUERTA
         mark(nid,0,"ban")
         with lock: S["ban"]+=1
-    else:                                   # TODOS hicieron timeout (WAF/red) → NO terminal, queda pending p/ retry
-        with lock: S["ban"]+=1              # (el monitor detecta WAF probando una norma conocida-ok y pausa leychile)
+    else:                                   # vacío sin ningún ok = WAF empty-wall (10-jun: 50 falsos bans) o todos
+        with lock: S["ban"]+=1              # timeout → NO terminal, queda pending p/ retry
 c = sqlite3.connect(DB); pend=[(r[0],r[1]) for r in c.execute("SELECT id_norma,tipo FROM normas WHERE downloaded=0 AND status IS NULL ORDER BY id_norma DESC")]; c.close()
 print(f"pending: {len(pend)} · {time.strftime('%H:%M:%S')}", flush=True); t0=time.time()
 with ThreadPoolExecutor(max_workers=4) as ex:
     for i,_ in enumerate(ex.map(worker, pend),1):
         if i % 50 == 0:
             el=time.time()-t0; print(f"  {i}/{len(pend)} ok={S['ok']} stub={S['stub']} ban={S['ban']} · {i/el:.2f}/s · {time.strftime('%H:%M:%S')}", flush=True)
+        if i >= 100 and S["ok"] == 0:
+            print(f"ABORT: {i} normas sin un solo ok → WAF empty-wall, pasada estéril · {time.strftime('%H:%M:%S')}", flush=True)
+            os._exit(3)
 print(f"FIN {S} · {time.strftime('%H:%M:%S')}", flush=True)

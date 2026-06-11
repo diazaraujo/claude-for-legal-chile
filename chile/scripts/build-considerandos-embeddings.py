@@ -50,16 +50,26 @@ def pack_vec(vec: list[float]) -> bytes:
     return struct.pack(f"<{len(vec)}f", *vec)
 
 
+TEI_URL = None  # set en main() con --endpoint tei (mismo bge-m3, coseno 0.999997 vs Ollama)
+
+
 def embed_batch(texts: list[str], timeout: int = 180) -> list[list[float]] | None:
     inputs = [t[:MAX_CHARS] for t in texts]
-    payload = json.dumps({"model": MODEL, "input": inputs}).encode()
+    if TEI_URL:
+        payload = json.dumps({"inputs": inputs}).encode()
+        url = TEI_URL
+    else:
+        payload = json.dumps({"model": MODEL, "input": inputs}).encode()
+        url = OLLAMA_URL
     req = urllib.request.Request(
-        OLLAMA_URL, data=payload,
+        url, data=payload,
         headers={"Content-Type": "application/json"},
     )
     try:
         with urllib.request.urlopen(req, timeout=timeout) as r:
             data = json.loads(r.read())
+        if TEI_URL:
+            return data if isinstance(data, list) else None
         return data.get("embeddings") or None
     except Exception:
         return None
@@ -100,25 +110,33 @@ def main() -> int:
     parser.add_argument("--workers", type=int, default=3)
     parser.add_argument("--batch", type=int, default=32)
     parser.add_argument("--max", type=int, default=0)
+    parser.add_argument("--endpoint", choices=["ollama", "tei"], default="ollama")
+    parser.add_argument("--tei-url", default="http://localhost:18002/embed")
+    parser.add_argument("--desc", action="store_true",
+                        help="recorre ids DESC (para 2º stream sin pisar al ASC)")
     args = parser.parse_args()
+    if args.endpoint == "tei":
+        global TEI_URL
+        TEI_URL = args.tei_url
 
     init_table(Path(args.db))
 
     conn = sqlite3.connect(args.db, timeout=60)
-    rows = conn.execute(
+    sql = (
         "SELECT m.id, c.content, m.mtime "
         "FROM considerandos_meta m "
         "JOIN considerandos_chunks c ON c.rowid = m.id "
         "WHERE m.id NOT IN ("
         "  SELECT considerandos_meta_id FROM considerandos_embeddings WHERE model = ?"
         ") "
-        "ORDER BY m.id",
-        (MODEL,),
-    ).fetchall()
-    conn.close()
-
+        "ORDER BY m.id"
+    )
+    if args.desc:
+        sql += " DESC"
     if args.max > 0:
-        rows = rows[:args.max]
+        sql += f" LIMIT {int(args.max)}"
+    rows = conn.execute(sql, (MODEL,)).fetchall()
+    conn.close()
     print(f"Considerandos pendientes: {len(rows)} | workers={args.workers} batch={args.batch}", flush=True)
     if not rows:
         return 0
