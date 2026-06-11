@@ -15,6 +15,15 @@ caiga y gatillan el rebuild faiss al llegar a 0 — no estorban la descarga desd
 
 Manifest: `data/leychile/manifest.sqlite3` (tabla `normas`). XMLs en `data/leychile/<tipo>/<id>.xml`.
 
+## Archivos en el repo para bajar desde otra máquina
+
+- `data/leychile/manifest.sqlite3` — snapshot del manifest al pausar (25MB).
+- `data/leychile/pendientes-bcn.csv` — los 21.065 pendientes como `id_norma,tipo` (DESC).
+
+Si bajas en otra máquina: guarda cada XML como `<tipo>/<id_norma>.xml` y al volver
+reconciliamos contra el manifest maestro **por presencia+tamaño de archivo** (no copies
+el manifest de vuelta encima del maestro — el maestro vive en el SSD ADA del Mac).
+
 ## Qué falta por hacer
 
 1. **Bajar las 21.065 pendientes** (`SELECT id_norma, tipo FROM normas WHERE downloaded=0 AND status IS NULL`).
