@@ -7,7 +7,18 @@ type Norma = { id_norma: number; tipo: string; numero: string; titulo: string; d
 type Articulo = { articulo: string; n_sentencias: number; n_citas: number }
 type Ejemplo = { doc_path: string; extracto: string; fecha?: string; rol?: string; caratulado?: string; tribunal?: string }
 type Tesis = { cluster: number; n: number; nombre?: string; descripcion?: string; terminos: string[]; ejemplos: Ejemplo[] }
-type Detalle = { anios: { anio: string; n_sentencias: number }[]; tesis: Tesis[] }
+type Admin = { source: string; n_docs: number; n_citas: number }
+type Detalle = { anios: { anio: string; n_sentencias: number }[]; tesis: Tesis[]; administrativa?: Admin[] }
+
+const ORGANISMOS: Record<string, string> = {
+  'cgr-dictamenes': 'Contraloría (dictámenes)', dt: 'Dirección del Trabajo', suseso: 'SUSESO',
+  'sii-oficios': 'SII (oficios)', 'sii-normativa': 'SII (normativa)', sii: 'SII',
+  superdesalud: 'Superintendencia de Salud', spensiones: 'Superintendencia de Pensiones',
+  'recursos-administrativos': 'Recursos administrativos', siss: 'SISS', sec: 'SEC',
+  cmf: 'CMF', cplt: 'CPLT', fne: 'FNE', sernac: 'SERNAC', servel: 'SERVEL', dga: 'DGA',
+  aduanas: 'Aduanas', subtel: 'SUBTEL', subtrans: 'SUBTRANS', supereduc: 'Supereduc',
+  'sag-normativa': 'SAG',
+}
 
 const nf = new Intl.NumberFormat('es-CL')
 
@@ -137,6 +148,19 @@ export default function Arbol() {
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 11, opacity: 0.6 }}>
                   <span>{detalle.anios[0]?.anio}</span><span>{detalle.anios[detalle.anios.length - 1]?.anio}</span>
+                </div>
+              </div>
+            )}
+
+            {detalle.administrativa && detalle.administrativa.length > 0 && (
+              <div style={{ marginBottom: 22 }}>
+                <div style={{ fontSize: 13, opacity: 0.7, marginBottom: 8 }}>Interpretación administrativa — organismos que citan este artículo</div>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+                  {detalle.administrativa.map((a) => (
+                    <span key={a.source} style={{ fontSize: 13, padding: '6px 12px', border: '1px solid var(--line)', borderRadius: 999, background: '#fff' }}>
+                      {ORGANISMOS[a.source] || a.source} <span style={{ opacity: 0.6 }}>· {nf.format(a.n_docs)} docs</span>
+                    </span>
+                  ))}
                 </div>
               </div>
             )}

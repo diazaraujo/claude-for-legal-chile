@@ -22,11 +22,15 @@ def norm(s):
 
 
 def main():
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--table", default="citas")
+    T = ap.parse_args().table
     conn = sqlite3.connect(str(DB), timeout=120)
     conn.execute("PRAGMA journal_mode=WAL")
-    cols = [r[1] for r in conn.execute("PRAGMA table_info(citas)")]
+    cols = [r[1] for r in conn.execute("PRAGMA table_info(%s)" % T)]
     if "id_norma" not in cols:
-        conn.execute("ALTER TABLE citas ADD COLUMN id_norma INTEGER")
+        conn.execute(f"ALTER TABLE {T} ADD COLUMN id_norma INTEGER")
 
     titulos = list(conn.execute(
         "SELECT id_norma, tipo, numero, titulo, derogado FROM normas_titulos"))
@@ -60,12 +64,14 @@ def main():
     for name in ambiguos:
         print(f"  AMBIGUO (queda el de menor id, revisar): {name} → {sorted(ambiguos[name])}")
 
-    cpr = [(i, d) for i, t, n, ti, d in
-           [(r[0], r[1], r[2], r[3], r[4]) for r in titulos]
-           if "CONSTITUCION POLITICA" in norm(ti)]
-    cpr_vig = [i for i, d in cpr if d == "no derogado"]
-    cpr_id = min(cpr_vig) if cpr_vig else (min(i for i, _ in cpr) if cpr else None)
-    print(f"CPR resuelta a id_norma={cpr_id} (candidatas: {len(cpr)})")
+    # CPR canónica = texto refundido vigente (DTO-100/2005, id 242302, verificado contra
+    # BCN el 10-jun). El min(id) anterior caía en un Auto Acordado (id 34).
+    cpr_ref = [i for i, t, n, ti, d in titulos
+               if "CONSTITUCION POLITICA" in norm(ti) and "TEXTO REFUNDIDO" in norm(ti)
+               and d == "no derogado"]
+    cpr_any = [i for i, t, n, ti, d in titulos if "CONSTITUCION POLITICA" in norm(ti)]
+    cpr_id = (max(cpr_ref) if cpr_ref else (min(cpr_any) if cpr_any else None))
+    print(f"CPR resuelta a id_norma={cpr_id} (refundidos vigentes: {len(cpr_ref)}, candidatas: {len(cpr_any)})")
 
     def resolve(tipo_cita, cuerpo):
         c = norm(cuerpo)
@@ -90,21 +96,23 @@ def main():
             return hit[0] if hit else None
         return None
 
-    pares = list(conn.execute("SELECT DISTINCT tipo_cita, cuerpo FROM citas"))
+    pares = list(conn.execute(f"SELECT DISTINCT tipo_cita, cuerpo FROM {T}"))
     print(f"pares distintos (tipo,cuerpo): {len(pares)}")
     n_res = 0
     for tipo_cita, cuerpo in pares:
         idn = resolve(tipo_cita, cuerpo)
         if idn:
-            conn.execute("UPDATE citas SET id_norma=? WHERE tipo_cita=? AND cuerpo=?",
+            conn.execute(f"UPDATE {T} SET id_norma=? WHERE tipo_cita=? AND cuerpo=?",
                          (idn, tipo_cita, cuerpo))
             n_res += 1
     conn.commit()
 
     tot, res = conn.execute(
-        "SELECT count(*), count(id_norma) FROM citas").fetchone()
+        f"SELECT count(*), count(id_norma) FROM {T}").fetchone()
     print(f"citas: {tot} · resueltas a id_norma: {res} ({res/tot*100:.1f}%) · pares resueltos: {n_res}/{len(pares)}")
 
+    if T != "citas":
+        conn.commit(); print("[DONE] tabla", T, "resuelta (vista arbol solo para citas)"); return
     conn.execute("DROP VIEW IF EXISTS arbol_normativo")
     conn.execute(
         "CREATE VIEW arbol_normativo AS "
@@ -113,8 +121,8 @@ def main():
         "FROM citas c JOIN normas_titulos t USING(id_norma) "
         "WHERE c.id_norma IS NOT NULL "
         "GROUP BY c.id_norma, c.articulo")
-    conn.execute("CREATE INDEX IF NOT EXISTS idx_citas_norma ON citas(id_norma, articulo)")
-    conn.execute("CREATE INDEX IF NOT EXISTS idx_citas_doc ON citas(doc_path)")
+    conn.execute("CREATE INDEX IF NOT EXISTS idx_{0}_norma ON {0}(id_norma, articulo)".format(T))
+    conn.execute("CREATE INDEX IF NOT EXISTS idx_{0}_doc ON {0}(doc_path)".format(T))
     conn.commit()
     print("[DONE] vista arbol_normativo + índices listos")
 

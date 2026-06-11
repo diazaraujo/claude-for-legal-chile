@@ -119,6 +119,15 @@ def articulo_detalle(id_norma: int, articulo: str, muestras: int = 3) -> dict:
         "SELECT anio, n_sentencias FROM arbol_temporal_mat "
         "WHERE id_norma=? AND articulo=? ORDER BY anio", (id_norma, articulo))]
 
+    # capa administrativa: dictámenes/oficios que citan el mismo artículo
+    admin = []
+    try:
+        admin = [dict(zip(("source", "n_docs", "n_citas"), r)) for r in con.execute(
+            "SELECT source, n_docs, n_citas FROM arbol_admin_mat "
+            "WHERE id_norma=? AND articulo=? ORDER BY n_docs DESC", (id_norma, articulo))]
+    except sqlite3.OperationalError:
+        pass  # DB sin capa admin aún
+
     tesis = []
     llm = _llm_labels().get(key) or {}
     tf = (_tfidf_labels().get(key) or {}).get("clusters", {})
@@ -147,7 +156,8 @@ def articulo_detalle(id_norma: int, articulo: str, muestras: int = 3) -> dict:
                           "ejemplos": ej})
         cor.close()
     con.close()
-    return {"id_norma": id_norma, "articulo": articulo, "anios": anios, "tesis": tesis}
+    return {"id_norma": id_norma, "articulo": articulo, "anios": anios,
+            "tesis": tesis, "administrativa": admin}
 
 
 def _load_considerandos_index():
