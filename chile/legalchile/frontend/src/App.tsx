@@ -6,6 +6,7 @@ import Entidad from '@/pages/Entidad'
 import Sobre from '@/pages/Sobre'
 import Login from '@/pages/Login'
 import Decisiones from '@/pages/Decisiones'
+import Arbol from '@/pages/Arbol'
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       <Route path="/analisis" element={<Analisis />} />
       <Route path="/sobre" element={<Sobre />} />
       <Route path="/decisiones" element={<Decisiones />} />
+      <Route path="/arbol" element={<Arbol />} />
       <Route path="/jueces" element={<Entidad tipo="jueces" />} />
       <Route path="/abogados" element={<Entidad tipo="abogados" />} />
       <Route path="/fiscales" element={<Entidad tipo="fiscales" />} />

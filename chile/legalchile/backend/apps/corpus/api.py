@@ -3,7 +3,7 @@ import os
 from ninja import Router
 from ninja.security import APIKeyHeader
 
-from . import semantic, service
+from . import arbol, semantic, service
 
 
 class CorpusApiKey(APIKeyHeader):
@@ -38,4 +38,31 @@ def semantic_search(request, q: str, limit: int = 20):
 @router.get("/stats")
 def stats(request):
     """Conteo de documentos por índice del corpus + disponibilidad de búsqueda semántica."""
-    return {**service.stats(), "semantic": semantic.available()}
+    return {**service.stats(), "semantic": semantic.available(), "arbol": arbol.available()}
+
+
+@router.get("/arbol/normas")
+def arbol_normas(request, q: str = "", limit: int = 50):
+    """Normas del árbol normativo de interpretaciones, ordenadas por nº de sentencias
+    que las citan. q filtra por título o número."""
+    return {"normas": arbol.normas(q, limit)}
+
+
+@router.get("/arbol/norma/{id_norma}")
+def arbol_articulos(request, id_norma: int):
+    """Artículos de una norma con conteo de sentencias que los interpretan."""
+    return arbol.articulos(id_norma)
+
+
+@router.get("/arbol/norma/{id_norma}/articulo")
+def arbol_articulo(request, id_norma: int, art: str, muestras: int = 3):
+    """Detalle de un artículo: serie temporal (sentencias/año) + tesis interpretativas
+    (clusters etiquetados) con sentencias de ejemplo."""
+    return arbol.articulo_detalle(id_norma, art, muestras)
+
+
+@router.get("/considerandos/semantic")
+def considerandos_semantic(request, q: str, limit: int = 20):
+    """Búsqueda semántica granular sobre 5,16M considerandos individuales (bge-m3 +
+    faiss). Devuelve el considerando, su sentencia, fecha, rol y carátula."""
+    return {"query": q, "results": arbol.considerandos_semantic(q, limit)}
