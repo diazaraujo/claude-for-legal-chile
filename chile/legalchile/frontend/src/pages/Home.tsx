@@ -44,6 +44,7 @@ export default function Home() {
             <a href="/fiscales">Fiscales</a>
             <a href="/tribunales">Tribunales</a>
             <a href="/decisiones">Decisiones</a>
+            <a href="/arbol">Árbol normativo</a>
             <details className="more">
               <summary>Más <span className="caret">▾</span></summary>
               <div className="more-menu">
@@ -84,6 +85,7 @@ export default function Home() {
             <a className="pill" href="/fiscales">Fiscales</a>
             <a className="pill" href="/tribunales">Tribunales</a>
             <a className="pill" href="/decisiones">Decisiones</a>
+            <a className="pill" href="/arbol">Árbol normativo</a>
             <a className="pill" href="/sobre">Sobre el corpus</a>
           </div>
         </div>
@@ -106,6 +108,7 @@ export default function Home() {
             <a className="kpi-card hov" href="/fiscales"><div className="kpi-label">Fiscales</div><div className="kpi-value">8.643</div></a>
             <a className="kpi-card hov" href="/tribunales"><div className="kpi-label">Tribunales</div><div className="kpi-value">437</div></a>
             <a className="kpi-card hov" href="/decisiones"><div className="kpi-label">Árbol de decisión</div><div className="kpi-value">penal</div></a>
+            <a className="kpi-card hov" href="/arbol"><div className="kpi-label">Árbol normativo</div><div className="kpi-value">4,4 M citas</div></a>
           </div>
         </div>
       </section>
