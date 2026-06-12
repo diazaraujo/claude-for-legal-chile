@@ -51,11 +51,18 @@ def worker(row):
         with lock: S["ban"]+=1              # timeout → NO terminal, queda pending p/ retry
 c = sqlite3.connect(DB); pend=[(r[0],r[1]) for r in c.execute("SELECT id_norma,tipo FROM normas WHERE downloaded=0 AND status IS NULL ORDER BY id_norma DESC")]; c.close()
 print(f"pending: {len(pend)} · {time.strftime('%H:%M:%S')}", flush=True); t0=time.time()
+last_ok = 0; stale = 0
 with ThreadPoolExecutor(max_workers=4) as ex:
     for i,_ in enumerate(ex.map(worker, pend),1):
         if i % 50 == 0:
             el=time.time()-t0; print(f"  {i}/{len(pend)} ok={S['ok']} stub={S['stub']} ban={S['ban']} · {i/el:.2f}/s · {time.strftime('%H:%M:%S')}", flush=True)
-        if i >= 100 and S["ok"] == 0:
-            print(f"ABORT: {i} normas sin un solo ok → WAF empty-wall, pasada estéril · {time.strftime('%H:%M:%S')}", flush=True)
+        # ventana deslizante: 100 seguidas sin ok = WAF empty-wall (también a MITAD de
+        # pasada, donde el guard global no aplicaba y se marcaban falsos bans · 12-jun)
+        if S["ok"] > last_ok:
+            last_ok = S["ok"]; stale = 0
+        else:
+            stale += 1
+        if stale >= 100:
+            print(f"ABORT: 100 consecutivas sin ok (i={i}, ok={S['ok']}) → WAF empty-wall · {time.strftime('%H:%M:%S')}", flush=True)
             os._exit(3)
 print(f"FIN {S} · {time.strftime('%H:%M:%S')}", flush=True)
