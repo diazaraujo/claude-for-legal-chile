@@ -9,12 +9,18 @@ Datos en CORPUS_INDEX_DIR (/index, ro):
   - corpus.fts.sqlite3: texto de considerandos_chunks.
   - considerandos.ivf.faiss + .ids.npy: búsqueda semántica granular (mmap).
 """
+import html
 import json
 import os
 import re
 import sqlite3
 import urllib.request
 from pathlib import Path
+
+
+def _u(s):
+    """Desescapa entidades XML residuales (&#243; → ó) en campos de texto servidos."""
+    return html.unescape(s) if isinstance(s, str) else s
 
 import faiss
 import numpy as np
@@ -116,6 +122,8 @@ def normas(q: str = "", limit: int = 50) -> list[dict]:
     args.append(min(limit, 200))
     out = [dict(zip(("id_norma", "tipo", "numero", "titulo", "derogado", "n_articulos", "n_sentencias"), r))
            for r in con.execute(sql, args)]
+    for o in out:
+        o["tipo"], o["titulo"] = _u(o["tipo"]), _u(o["titulo"])
     con.close()
     return out
 
@@ -130,7 +138,7 @@ def articulos(id_norma: int) -> dict:
     con.close()
     if not t:
         return {}
-    return {"id_norma": id_norma, "tipo": t[0], "numero": t[1], "titulo": t[2],
+    return {"id_norma": id_norma, "tipo": _u(t[0]), "numero": t[1], "titulo": _u(t[2]),
             "derogado": t[3], "articulos": arts}
 
 
