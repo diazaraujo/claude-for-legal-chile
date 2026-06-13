@@ -8,7 +8,7 @@ type Articulo = { articulo: string; n_sentencias: number; n_citas: number }
 type Ejemplo = { doc_path: string; chunk_id: number; extracto: string; fecha?: string; rol?: string; caratulado?: string; tribunal?: string }
 type Tesis = { cluster: number; n: number; nombre?: string; descripcion?: string; util?: boolean; terminos: string[]; ejemplos: Ejemplo[] }
 type Admin = { source: string; n_docs: number; n_citas: number }
-type Detalle = { derogado?: string; fuente_url?: string; anios: { anio: string; n_sentencias: number }[]; tesis: Tesis[]; tesis_utiles?: number; administrativa?: Admin[] }
+type Detalle = { derogado?: string; fuente_url?: string; jerarquia?: { suprema: number; instancia: number } | null; anios: { anio: string; n_sentencias: number }[]; tesis: Tesis[]; tesis_utiles?: number; administrativa?: Admin[] }
 type Fuente = { texto: string; num_label?: string; fecha?: string; rol?: string; era?: string; sala?: string; caratulado?: string; tribunal?: string }
 
 const ORGANISMOS: Record<string, string> = {
@@ -152,6 +152,18 @@ export default function Arbol() {
         {norma && art && detalle && (
           <>
             <h2 style={{ margin: '6px 0 14px' }}>Artículo {art}</h2>
+
+            {detalle.jerarquia && (detalle.jerarquia.suprema + detalle.jerarquia.instancia) > 0 && (
+              <div style={{ marginBottom: 18, fontSize: 13 }}>
+                <span style={{ opacity: 0.7 }}>Respaldo jurisprudencial: </span>
+                <span style={{ fontWeight: 600 }}>{nf.format(detalle.jerarquia.suprema)}</span> fallos de Corte Suprema
+                <span style={{ opacity: 0.5 }}> · </span>
+                <span style={{ fontWeight: 600 }}>{nf.format(detalle.jerarquia.instancia)}</span> de tribunales de instancia
+                {detalle.jerarquia.suprema === 0 && (
+                  <span style={{ marginLeft: 8, fontSize: 11.5, color: '#9a6b00', background: '#fdf3e0', border: '1px solid #f0d9a8', borderRadius: 6, padding: '1px 7px' }}>sin pronunciamiento de la Suprema</span>
+                )}
+              </div>
+            )}
 
             {detalle.anios.length > 1 && (
               <div style={{ marginBottom: 26 }}>

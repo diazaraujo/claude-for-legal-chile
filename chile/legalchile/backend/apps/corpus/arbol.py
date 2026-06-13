@@ -147,6 +147,16 @@ def articulo_detalle(id_norma: int, articulo: str, muestras: int = 3) -> dict:
         "SELECT anio, n_sentencias FROM arbol_temporal_mat "
         "WHERE id_norma=? AND articulo=? ORDER BY anio", (id_norma, articulo))]
 
+    # jerarquía: respaldo por nivel de tribunal (Corte Suprema fija doctrina)
+    jerarquia = None
+    try:
+        jr = con.execute("SELECT n_suprema, n_instancia FROM arbol_jerarquia_mat "
+                         "WHERE id_norma=? AND articulo=?", (id_norma, articulo)).fetchone()
+        if jr:
+            jerarquia = {"suprema": jr[0], "instancia": jr[1]}
+    except sqlite3.OperationalError:
+        pass
+
     # capa administrativa: dictámenes/oficios que citan el mismo artículo
     admin = []
     try:
@@ -186,7 +196,7 @@ def articulo_detalle(id_norma: int, articulo: str, muestras: int = 3) -> dict:
                           "terminos": [], "ejemplos": ej, "v": 2})
         con.close()
         return {"id_norma": id_norma, "articulo": articulo, "derogado": derogado,
-                "fuente_url": _bcn_url(id_norma), "anios": anios,
+                "fuente_url": _bcn_url(id_norma), "anios": anios, "jerarquia": jerarquia,
                 "tesis": tesis, "tesis_utiles": sum(1 for t in tesis if t["util"]),
                 "administrativa": admin}
 
@@ -221,7 +231,7 @@ def articulo_detalle(id_norma: int, articulo: str, muestras: int = 3) -> dict:
         cor.close()
     con.close()
     return {"id_norma": id_norma, "articulo": articulo, "derogado": derogado,
-            "fuente_url": _bcn_url(id_norma), "anios": anios,
+            "fuente_url": _bcn_url(id_norma), "anios": anios, "jerarquia": jerarquia,
             "tesis": tesis, "tesis_utiles": sum(1 for t in tesis if t.get("util")),
             "administrativa": admin}
 
