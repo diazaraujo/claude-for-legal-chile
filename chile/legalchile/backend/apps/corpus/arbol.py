@@ -91,6 +91,18 @@ def available() -> bool:
         return False
 
 
+_RX_GENERICO = re.compile(
+    r"^(interpretaci[oó]n( (literal|restrictiva|legal|del art[íi]culo|sistem|amplia|"
+    r"jur[íi]dica|normativa))?|aplicaci[oó]n|an[aá]lisis|regulaci[oó]n)\b", re.I)
+
+
+def _es_generico(nombre: str | None) -> bool:
+    """Tesis sin señal real (nombre genérico o muy corto) → no se muestra como tesis,
+    se cae al empty state honesto (ir directo a las sentencias)."""
+    n = (nombre or "").strip()
+    return len(n) < 6 or bool(_RX_GENERICO.match(n))
+
+
 def normas(q: str = "", limit: int = 50) -> list[dict]:
     con = _citas()
     sql = ("SELECT m.id_norma, t.tipo, t.numero, t.titulo, t.derogado, "
@@ -122,9 +134,15 @@ def articulos(id_norma: int) -> dict:
             "derogado": t[3], "articulos": arts}
 
 
+def _bcn_url(id_norma: int) -> str:
+    return f"https://www.bcn.cl/leychile/navegar?idNorma={id_norma}"
+
+
 def articulo_detalle(id_norma: int, articulo: str, muestras: int = 3) -> dict:
     key = _key(id_norma, articulo)
     con = _citas()
+    nt = con.execute("SELECT derogado FROM normas_titulos WHERE id_norma=?", (id_norma,)).fetchone()
+    derogado = nt[0] if nt else None
     anios = [dict(zip(("anio", "n_sentencias"), r)) for r in con.execute(
         "SELECT anio, n_sentencias FROM arbol_temporal_mat "
         "WHERE id_norma=? AND articulo=? ORDER BY anio", (id_norma, articulo))]
@@ -159,15 +177,18 @@ def articulo_detalle(id_norma: int, articulo: str, muestras: int = 3) -> dict:
                 doc = doc[0] if doc else None
                 fe = con.execute("SELECT fecha, rol, caratulado, tribunal FROM doc_fechas "
                                  "WHERE doc_path=?", (doc,)).fetchone() if doc else None
-                ej.append({"doc_path": doc, "extracto": win,
+                ej.append({"doc_path": doc, "chunk_id": int(chunk_rowid), "extracto": win,
                            "fecha": fe[0] if fe else None, "rol": fe[1] if fe else None,
                            "caratulado": fe[2] if fe else None, "tribunal": fe[3] if fe else None})
             tesis.append({"cluster": int(c), "n": int(len(sel)),
                           "nombre": lab.get("nombre"), "descripcion": lab.get("descripcion"),
+                          "util": not _es_generico(lab.get("nombre")),
                           "terminos": [], "ejemplos": ej, "v": 2})
         con.close()
-        return {"id_norma": id_norma, "articulo": articulo, "anios": anios,
-                "tesis": tesis, "administrativa": admin}
+        return {"id_norma": id_norma, "articulo": articulo, "derogado": derogado,
+                "fuente_url": _bcn_url(id_norma), "anios": anios,
+                "tesis": tesis, "tesis_utiles": sum(1 for t in tesis if t["util"]),
+                "administrativa": admin}
 
     llm = _llm_labels().get(key) or {}
     tf = (_tfidf_labels().get(key) or {}).get("clusters", {})
@@ -181,23 +202,50 @@ def articulo_detalle(id_norma: int, articulo: str, muestras: int = 3) -> dict:
             lab = llm.get(str(int(c))) or {}
             ej = []
             qq = ",".join(map(str, sel[:muestras].tolist()))
-            for doc, txt in cor.execute(
-                    f"SELECT doc_path, substr(replace(content, char(10), ' '), 1, 220) "
+            for rid, doc, txt in cor.execute(
+                    f"SELECT rowid, doc_path, substr(replace(content, char(10), ' '), 1, 220) "
                     f"FROM considerandos_chunks WHERE rowid IN ({qq})"):
                 fe = con.execute("SELECT fecha, rol, caratulado, tribunal FROM doc_fechas "
                                  "WHERE doc_path=?", (doc,)).fetchone()
-                ej.append({"doc_path": doc, "extracto": txt,
+                ej.append({"doc_path": doc, "chunk_id": int(rid), "extracto": txt,
                            "fecha": fe[0] if fe else None, "rol": fe[1] if fe else None,
                            "caratulado": fe[2] if fe else None, "tribunal": fe[3] if fe else None})
+            nombre = lab.get("nombre")
+            terms = (tf.get(str(int(c))) or {}).get("terms", [])
             tesis.append({"cluster": int(c), "n": int(len(sel)),
-                          "nombre": lab.get("nombre"),
+                          "nombre": nombre,
                           "descripcion": lab.get("descripcion"),
-                          "terminos": (tf.get(str(int(c))) or {}).get("terms", []),
+                          "util": not _es_generico(nombre) or bool(terms),
+                          "terminos": terms,
                           "ejemplos": ej})
         cor.close()
     con.close()
-    return {"id_norma": id_norma, "articulo": articulo, "anios": anios,
-            "tesis": tesis, "administrativa": admin}
+    return {"id_norma": id_norma, "articulo": articulo, "derogado": derogado,
+            "fuente_url": _bcn_url(id_norma), "anios": anios,
+            "tesis": tesis, "tesis_utiles": sum(1 for t in tesis if t.get("util")),
+            "administrativa": admin}
+
+
+def considerando_fuente(chunk_id: int) -> dict:
+    """Texto COMPLETO del considerando (la fuente de la que sale la tesis) + identificador
+    canónico de la sentencia. Verificabilidad: el usuario lee el texto fuente real, no un
+    extracto. PJUD no tiene deep-link GET, pero rol+tribunal+fecha+carátula la localizan."""
+    con = _citas()
+    cor = _corpus()
+    row = cor.execute(
+        "SELECT doc_path, num_label, content FROM considerandos_chunks WHERE rowid=?",
+        (chunk_id,)).fetchone()
+    if not row:
+        con.close(); cor.close()
+        return {}
+    doc, num_label, content = row
+    fe = con.execute("SELECT fecha, rol, era, sala, caratulado, tribunal FROM doc_fechas "
+                     "WHERE doc_path=?", (doc,)).fetchone()
+    cor.close(); con.close()
+    return {"chunk_id": chunk_id, "doc_path": doc, "num_label": num_label, "texto": content,
+            "fecha": fe[0] if fe else None, "rol": fe[1] if fe else None,
+            "era": fe[2] if fe else None, "sala": fe[3] if fe else None,
+            "caratulado": fe[4] if fe else None, "tribunal": fe[5] if fe else None}
 
 
 def _load_considerandos_index():

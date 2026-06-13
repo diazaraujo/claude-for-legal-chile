@@ -5,10 +5,11 @@ import '../styles/decide.css'
 
 type Norma = { id_norma: number; tipo: string; numero: string; titulo: string; derogado: string; n_articulos: number; n_sentencias: number }
 type Articulo = { articulo: string; n_sentencias: number; n_citas: number }
-type Ejemplo = { doc_path: string; extracto: string; fecha?: string; rol?: string; caratulado?: string; tribunal?: string }
-type Tesis = { cluster: number; n: number; nombre?: string; descripcion?: string; terminos: string[]; ejemplos: Ejemplo[] }
+type Ejemplo = { doc_path: string; chunk_id: number; extracto: string; fecha?: string; rol?: string; caratulado?: string; tribunal?: string }
+type Tesis = { cluster: number; n: number; nombre?: string; descripcion?: string; util?: boolean; terminos: string[]; ejemplos: Ejemplo[] }
 type Admin = { source: string; n_docs: number; n_citas: number }
-type Detalle = { anios: { anio: string; n_sentencias: number }[]; tesis: Tesis[]; administrativa?: Admin[] }
+type Detalle = { derogado?: string; fuente_url?: string; anios: { anio: string; n_sentencias: number }[]; tesis: Tesis[]; tesis_utiles?: number; administrativa?: Admin[] }
+type Fuente = { texto: string; num_label?: string; fecha?: string; rol?: string; era?: string; sala?: string; caratulado?: string; tribunal?: string }
 
 const ORGANISMOS: Record<string, string> = {
   'cgr-dictamenes': 'Contraloría (dictámenes)', dt: 'Dirección del Trabajo', suseso: 'SUSESO',
@@ -31,6 +32,15 @@ export default function Arbol() {
   const [detalle, setDetalle] = useState<Detalle | null>(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
+  const [fuente, setFuente] = useState<Record<number, Fuente>>({})
+
+  async function verFuente(chunkId: number) {
+    if (fuente[chunkId]) { setFuente((f) => { const n = { ...f }; delete n[chunkId]; return n }); return }
+    try {
+      const { data } = await api.get(`/corpus/considerando/${chunkId}`)
+      setFuente((f) => ({ ...f, [chunkId]: data }))
+    } catch { /* noop */ }
+  }
 
   async function buscarNormas(e?: React.FormEvent) {
     e?.preventDefault()
@@ -98,10 +108,13 @@ export default function Arbol() {
               <button key={n.id_norma} onClick={() => abrirNorma(n)}
                 style={{ textAlign: 'left', padding: '14px 18px', border: '1px solid var(--line)', borderRadius: 12, background: '#fff', cursor: 'pointer', fontFamily: 'inherit' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap' }}>
-                  <strong>{n.tipo} {n.numero}</strong>
+                  <strong>{n.tipo} {n.numero}
+                    {n.derogado !== 'no derogado' && (
+                      <span style={{ marginLeft: 8, fontSize: 11, fontWeight: 700, color: '#b00', border: '1px solid #f0c0c0', background: '#fdeaea', borderRadius: 6, padding: '1px 7px' }}>DEROGADA</span>
+                    )}
+                  </strong>
                   <span style={{ fontSize: 13, opacity: 0.7 }}>
                     {nf.format(n.n_sentencias)} sentencias · {nf.format(n.n_articulos)} artículos
-                    {n.derogado !== 'no derogado' && ' · DEROGADA'}
                   </span>
                 </div>
                 <div style={{ fontSize: 13.5, opacity: 0.85, marginTop: 4 }}>{n.titulo}</div>
@@ -115,7 +128,12 @@ export default function Arbol() {
             <p style={{ marginBottom: 14 }}>
               <a style={{ cursor: 'pointer', textDecoration: 'underline' }} onClick={() => { setNorma(null); setArt(null); setDetalle(null) }}>&larr; normas</a>
               <strong style={{ marginLeft: 10 }}>{norma.tipo} {norma.numero}</strong>
+              {norma.derogado !== 'no derogado' && (
+                <span style={{ marginLeft: 8, fontSize: 11, fontWeight: 700, color: '#b00', border: '1px solid #f0c0c0', background: '#fdeaea', borderRadius: 6, padding: '1px 7px' }}>DEROGADA</span>
+              )}
               <span style={{ marginLeft: 8, fontSize: 13, opacity: 0.7 }}>{norma.titulo}</span>
+              <a href={`https://www.bcn.cl/leychile/navegar?idNorma=${norma.id_norma}`} target="_blank" rel="noreferrer"
+                style={{ marginLeft: 8, fontSize: 12.5, color: 'var(--accent, #1a6f5b)' }}>texto en BCN ↗</a>
             </p>
             {!art && (
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
@@ -166,31 +184,42 @@ export default function Arbol() {
             )}
 
             <div style={{ display: 'grid', gap: 14 }}>
-              {detalle.tesis.map((t) => (
+              {detalle.tesis.filter((t) => t.util !== false).map((t) => (
                 <div key={t.cluster} style={{ border: '1px solid var(--line)', borderRadius: 12, background: '#fff', padding: '16px 18px' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', gap: 10, flexWrap: 'wrap' }}>
                     <strong>{t.nombre || (t.terminos.length ? t.terminos.slice(0, 3).join(' · ') : `Línea ${t.cluster + 1}`)}</strong>
                     <span style={{ fontSize: 13, opacity: 0.7 }}>{nf.format(t.n)} considerandos</span>
                   </div>
                   {t.descripcion && <p style={{ fontSize: 13.5, margin: '6px 0 0', opacity: 0.85 }}>{t.descripcion}</p>}
-                  {!t.nombre && t.terminos.length > 0 && (
-                    <p style={{ fontSize: 12.5, margin: '6px 0 0', opacity: 0.6 }}>términos distintivos: {t.terminos.join(', ')}</p>
-                  )}
                   {t.ejemplos.length > 0 && (
                     <div style={{ marginTop: 10, display: 'grid', gap: 8 }}>
                       {t.ejemplos.map((e, i) => (
                         <div key={i} style={{ fontSize: 13, borderLeft: '3px solid var(--line)', paddingLeft: 10 }}>
-                          <span style={{ opacity: 0.65 }}>{e.fecha || 's/f'}{e.tribunal ? ` · ${e.tribunal}` : ''}{e.rol ? ` · rol ${e.rol}` : ''}</span>
-                          <div style={{ marginTop: 2 }}>«{e.extracto}…»</div>
+                          <span style={{ opacity: 0.65 }}>{e.fecha || 's/f'}{e.tribunal ? ` · ${e.tribunal}` : ''}{e.rol ? ` · rol ${e.rol}` : ''}{e.caratulado ? ` · ${e.caratulado}` : ''}</span>
+                          <div style={{ marginTop: 2 }}>«{e.extracto}…»
+                            <a style={{ marginLeft: 6, cursor: 'pointer', color: 'var(--accent, #1a6f5b)', fontSize: 12 }} onClick={() => verFuente(e.chunk_id)}>
+                              {fuente[e.chunk_id] ? 'ocultar fuente' : 'ver fuente'}
+                            </a>
+                          </div>
+                          {fuente[e.chunk_id] && (
+                            <div style={{ marginTop: 6, padding: '8px 10px', background: 'var(--canvas, #fafbfc)', border: '1px solid var(--line)', borderRadius: 8, fontSize: 12.5, whiteSpace: 'pre-wrap', maxHeight: 280, overflow: 'auto' }}>
+                              <div style={{ opacity: 0.6, marginBottom: 4 }}>
+                                {fuente[e.chunk_id].num_label ? `Considerando ${fuente[e.chunk_id].num_label} · ` : ''}
+                                {fuente[e.chunk_id].tribunal}{fuente[e.chunk_id].sala ? ` (${fuente[e.chunk_id].sala})` : ''} · rol {fuente[e.chunk_id].rol} · {fuente[e.chunk_id].fecha}
+                              </div>
+                              {fuente[e.chunk_id].texto}
+                            </div>
+                          )}
                         </div>
                       ))}
                     </div>
                   )}
                 </div>
               ))}
-              {detalle.tesis.length === 0 && (
+              {(detalle.tesis_utiles ?? detalle.tesis.filter((t) => t.util !== false).length) === 0 && (
                 <p style={{ opacity: 0.7, fontSize: 14 }}>
-                  Este artículo tiene pocas citas para distinguir líneas interpretativas — revisa las sentencias directamente en Búsqueda.
+                  Este artículo no tiene líneas interpretativas suficientemente distinguibles como para nombrarlas con rigor.
+                  Revísalo directamente en <Link to="/buscar" style={{ color: 'var(--accent, #1a6f5b)' }}>Búsqueda</Link> o en su <a href={`https://www.bcn.cl/leychile/navegar?idNorma=${norma.id_norma}`} target="_blank" rel="noreferrer" style={{ color: 'var(--accent, #1a6f5b)' }}>texto en BCN ↗</a>.
                 </p>
               )}
             </div>

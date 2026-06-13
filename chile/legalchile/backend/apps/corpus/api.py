@@ -61,6 +61,13 @@ def arbol_articulo(request, id_norma: int, art: str, muestras: int = 3):
     return arbol.articulo_detalle(id_norma, art, muestras)
 
 
+@router.get("/considerando/{chunk_id}")
+def considerando_fuente(request, chunk_id: int):
+    """Texto completo del considerando (fuente verificable de la tesis) + identificador
+    canónico de la sentencia (rol, tribunal, fecha, carátula)."""
+    return arbol.considerando_fuente(chunk_id)
+
+
 @router.get("/considerandos/semantic")
 def considerandos_semantic(request, q: str, limit: int = 20):
     """Búsqueda semántica granular sobre 5,16M considerandos individuales (bge-m3 +
