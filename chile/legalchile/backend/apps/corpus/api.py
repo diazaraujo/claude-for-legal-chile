@@ -61,6 +61,13 @@ def arbol_articulo(request, id_norma: int, art: str, muestras: int = 3):
     return arbol.articulo_detalle(id_norma, art, muestras)
 
 
+@router.get("/arbol/concepto")
+def arbol_concepto(request, q: str, limit: int = 15):
+    """Entrada semántica: pregunta en lenguaje natural → artículos más relevantes
+    (del problema jurídico al articulado que lo gobierna, vía índice semántico)."""
+    return {"query": q, "articulos": arbol.concepto_a_articulos(q, limit)}
+
+
 @router.get("/considerando/{chunk_id}")
 def considerando_fuente(request, chunk_id: int):
     """Texto completo del considerando (fuente verificable de la tesis) + identificador

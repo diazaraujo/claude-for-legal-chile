@@ -10,6 +10,7 @@ type Tesis = { cluster: number; n: number; nombre?: string; descripcion?: string
 type Admin = { source: string; n_docs: number; n_citas: number }
 type Detalle = { derogado?: string; fuente_url?: string; jerarquia?: { suprema: number; instancia: number } | null; anios: { anio: string; n_sentencias: number }[]; tesis: Tesis[]; tesis_utiles?: number; administrativa?: Admin[] }
 type Fuente = { texto: string; num_label?: string; fecha?: string; rol?: string; era?: string; sala?: string; caratulado?: string; tribunal?: string }
+type Concepto = { id_norma: number; articulo: string; tipo?: string; numero?: string; titulo?: string; derogado?: string; score: number; n_considerandos_match: number; n_sentencias: number }
 
 const ORGANISMOS: Record<string, string> = {
   'cgr-dictamenes': 'Contraloría (dictámenes)', dt: 'Dirección del Trabajo', suseso: 'SUSESO',
@@ -33,6 +34,30 @@ export default function Arbol() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [fuente, setFuente] = useState<Record<number, Fuente>>({})
+  const [modo, setModo] = useState<'norma' | 'concepto'>('norma')
+  const [conceptos, setConceptos] = useState<Concepto[] | null>(null)
+
+  async function buscarConcepto(e?: React.FormEvent) {
+    e?.preventDefault()
+    if (!q.trim()) return
+    setLoading(true); setError(''); setNorma(null); setArt(null); setDetalle(null); setConceptos(null)
+    try {
+      const { data } = await api.get('/corpus/arbol/concepto', { params: { q, limit: 15 } })
+      setConceptos(data.articulos || [])
+    } catch {
+      setError('No se pudo resolver el concepto.')
+    } finally { setLoading(false) }
+  }
+
+  async function abrirDesdeConcepto(c: Concepto) {
+    const n: Norma = { id_norma: c.id_norma, tipo: c.tipo || '', numero: c.numero || '', titulo: c.titulo || '', derogado: c.derogado || 'no derogado', n_articulos: 0, n_sentencias: c.n_sentencias }
+    setConceptos(null); setNorma(n); setLoading(true)
+    try {
+      const { data } = await api.get(`/corpus/arbol/norma/${c.id_norma}`)
+      setArticulos(data.articulos || [])
+      await abrirArticulo(c.articulo)
+    } catch { setError('Error abriendo el artículo.') } finally { setLoading(false) }
+  }
 
   async function verFuente(chunkId: number) {
     if (fuente[chunkId]) { setFuente((f) => { const n = { ...f }; delete n[chunkId]; return n }); return }
@@ -89,20 +114,44 @@ export default function Arbol() {
             4,4 millones de citas normativas extraídas de los considerandos: norma → artículo →
             evolución temporal → líneas interpretativas, con sentencias de respaldo.
           </p>
-          <form onSubmit={buscarNormas} style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', gap: 6, marginBottom: 10 }}>
+            <button onClick={() => setModo('concepto')} style={{ padding: '6px 14px', fontSize: 13, borderRadius: 8, border: '1px solid var(--line)', cursor: 'pointer', fontFamily: 'inherit', background: modo === 'concepto' ? 'var(--accent, #1a6f5b)' : '#fff', color: modo === 'concepto' ? '#fff' : 'var(--ink)' }}>Por problema jurídico</button>
+            <button onClick={() => setModo('norma')} style={{ padding: '6px 14px', fontSize: 13, borderRadius: 8, border: '1px solid var(--line)', cursor: 'pointer', fontFamily: 'inherit', background: modo === 'norma' ? 'var(--accent, #1a6f5b)' : '#fff', color: modo === 'norma' ? '#fff' : 'var(--ink)' }}>Por norma</button>
+          </div>
+          <form onSubmit={modo === 'concepto' ? buscarConcepto : buscarNormas} style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             <input value={q} onChange={(e) => setQ(e.target.value)}
-              placeholder="Ej.: código del trabajo, 19.496, consumidores, constitución…"
+              placeholder={modo === 'concepto' ? 'Ej.: cómo se prueba el despido injustificado, nulidad por falta de cotizaciones…' : 'Ej.: código del trabajo, 19.496, consumidores, constitución…'}
               style={{ flex: '1 1 420px', minWidth: 0, padding: '12px 16px', fontSize: 15, border: '1px solid var(--line)', borderRadius: 10, fontFamily: 'inherit', background: '#fff', color: 'var(--ink)' }} />
             <button className="btn btn-primary" type="submit" disabled={loading}>
-              {loading ? 'Buscando…' : 'Buscar norma'}
+              {loading ? 'Buscando…' : modo === 'concepto' ? 'Buscar artículos' : 'Buscar norma'}
             </button>
           </form>
+          {modo === 'concepto' && <p style={{ fontSize: 12.5, opacity: 0.6, marginTop: 8 }}>Describe el problema en tus palabras — el motor semántico encuentra los artículos que los tribunales aplican a casos parecidos.</p>}
           {error && <p style={{ color: '#b00', marginTop: 12 }}>{error}</p>}
         </div>
       </section>
 
       <section style={{ padding: '8px 0 60px' }}><div className="wrap">
-        {!norma && normas.length > 0 && (
+        {!norma && conceptos !== null && (
+          <div style={{ display: 'grid', gap: 10 }}>
+            {conceptos.length === 0 && <p style={{ opacity: 0.7 }}>Sin artículos relevantes para esa descripción. Prueba con otros términos.</p>}
+            {conceptos.map((c) => (
+              <button key={`${c.id_norma}-${c.articulo}`} onClick={() => abrirDesdeConcepto(c)}
+                style={{ textAlign: 'left', padding: '14px 18px', border: '1px solid var(--line)', borderRadius: 12, background: '#fff', cursor: 'pointer', fontFamily: 'inherit' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap' }}>
+                  <strong>{c.tipo} {c.numero} — art. {c.articulo}
+                    {c.derogado && c.derogado !== 'no derogado' && (
+                      <span style={{ marginLeft: 8, fontSize: 11, fontWeight: 700, color: '#b00', border: '1px solid #f0c0c0', background: '#fdeaea', borderRadius: 6, padding: '1px 7px' }}>DEROGADA</span>
+                    )}
+                  </strong>
+                  <span style={{ fontSize: 13, opacity: 0.7 }}>{nf.format(c.n_sentencias)} sentencias · {c.n_considerandos_match} considerandos afines</span>
+                </div>
+                <div style={{ fontSize: 13, opacity: 0.85, marginTop: 4 }}>{c.titulo}</div>
+              </button>
+            ))}
+          </div>
+        )}
+        {!norma && conceptos === null && normas.length > 0 && (
           <div style={{ display: 'grid', gap: 10 }}>
             {normas.map((n) => (
               <button key={n.id_norma} onClick={() => abrirNorma(n)}

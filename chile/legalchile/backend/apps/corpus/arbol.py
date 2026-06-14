@@ -275,6 +275,67 @@ def _load_considerandos_index():
     return _cidx, _cids
 
 
+def _embed_query(q: str) -> np.ndarray:
+    body = json.dumps({"model": _MODEL, "input": [q]}).encode()
+    req = urllib.request.Request(_OLLAMA, data=body, headers={"Content-Type": "application/json"})
+    v = np.asarray(json.loads(urllib.request.urlopen(req, timeout=30).read())["embeddings"][0],
+                   dtype="float32")[None, :]
+    faiss.normalize_L2(v)
+    return v
+
+
+def concepto_a_articulos(q: str, limit: int = 15) -> list[dict]:
+    """Entrada semántica universal: una pregunta en lenguaje natural → artículos más
+    relevantes. Embebe la query, busca los considerandos semánticamente cercanos y agrega
+    su señal por (norma, artículo) — del problema jurídico al articulado que lo gobierna."""
+    if not q or not q.strip():
+        return []
+    index, ids = _load_considerandos_index()
+    D, I = index.search(_embed_query(q), 300)
+    chunk_score = {int(ids[i]): float(s) for s, i in zip(D[0], I[0]) if i >= 0}
+    if not chunk_score:
+        return []
+    # el considerando afín discute el concepto; la cita normativa suele estar en un
+    # considerando vecino de la MISMA sentencia → agregamos a nivel sentencia (doc_path).
+    cor = _corpus()
+    qc = ",".join(map(str, chunk_score))
+    doc_score: dict = {}
+    for rid, doc in cor.execute(
+            f"SELECT rowid, doc_path FROM considerandos_chunks WHERE rowid IN ({qc})"):
+        s = chunk_score.get(rid, 0)
+        if doc and s > doc_score.get(doc, 0):
+            doc_score[doc] = s  # mejor afinidad de la sentencia con el concepto
+    cor.close()
+    if not doc_score:
+        return []
+    con = _citas()
+    agg: dict = {}  # (id_norma, articulo) -> [score_acum, n_sentencias]
+    docs = list(doc_score)
+    for i in range(0, len(docs), 400):
+        batch = docs[i:i + 400]
+        ph = ",".join("?" * len(batch))
+        for doc, idn, art in con.execute(
+                f"SELECT DISTINCT doc_path, id_norma, articulo FROM citas "
+                f"WHERE doc_path IN ({ph}) AND id_norma IS NOT NULL AND articulo != ''", batch):
+            k = (idn, art)
+            a = agg.setdefault(k, [0.0, 0])
+            a[0] += doc_score.get(doc, 0); a[1] += 1
+    top = sorted(agg.items(), key=lambda x: -x[1][0])[:limit]
+    out = []
+    for (idn, art), (sc, ncon) in top:
+        t = con.execute("SELECT tipo, numero, titulo, derogado FROM normas_titulos WHERE id_norma=?",
+                        (idn,)).fetchone()
+        ns = con.execute("SELECT n_sentencias FROM arbol_mat WHERE id_norma=? AND articulo=?",
+                         (idn, art)).fetchone()
+        out.append({"id_norma": idn, "articulo": art,
+                    "tipo": _u(t[0]) if t else None, "numero": t[1] if t else None,
+                    "titulo": _u(t[2]) if t else None, "derogado": t[3] if t else None,
+                    "score": round(sc, 3), "n_considerandos_match": ncon,
+                    "n_sentencias": ns[0] if ns else 0})
+    con.close()
+    return out
+
+
 def considerandos_semantic(q: str, limit: int = 20) -> list[dict]:
     if not q or not q.strip():
         return []
