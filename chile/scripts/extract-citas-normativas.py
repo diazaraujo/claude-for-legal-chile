@@ -28,7 +28,18 @@ NUM = r"\d{1,4}(?:\s*(?:bis|ter|qu[áa]ter|quinquies))?(?:\s*[°º])?(?:\s+(?:tr
 NUMLIST = rf"{NUM}(?:\s*(?:,|y|e)\s*{NUM})*"
 LEY = r"[Ll]ey(?:\s*N\s*[°º\.]*)?\s*([\d][\d\.]{2,8})"
 CPR = r"Constituci[óo]n\s+Pol[íi]tica(?:\s+de\s+la\s+Rep[úu]blica)?(?:\s+de\s+Chile)?"
-CODIGO = r"C[óo]digo\s+(?:de\s+|del\s+|de\s+la\s+)?[A-ZÁÉÍÓÚ][A-Za-zÁÉÍÓÚáéíóúñ]+(?:\s+(?:de|del|de\s+la|y)\s+[A-Za-zÁÉÍÓÚáéíóúñ]+){0,3}"
+# Alternation de nombres CANÓNICOS de código (orden largo→corto para ganar la coincidencia
+# más específica) + fallback genérico acotado. Corrige el truncamiento de raíz: el regex
+# previo cortaba en palabras sin conector ("...Procedimiento Civil"→"...Procedimiento").
+_COD_NOMBRES = [
+    r"de\s+Procedimiento\s+Civil", r"de\s+Procedimiento\s+Penal",
+    r"de\s+Justicia\s+Militar", r"Org[áa]nico\s+de\s+Tribunales",
+    r"de\s+Derecho\s+Internacional\s+Privado", r"Procesal\s+Penal", r"Procesal\s+Civil",
+    r"de\s+Aguas", r"de\s+Miner[íi]a", r"de\s+Minas", r"de\s+Comercio",
+    r"de\s+Bustamante", r"del\s+Trabajo", r"Tributario", r"Sanitario",
+    r"Aeron[áa]utico", r"Aduanero", r"Penal", r"Civil",
+]
+CODIGO = r"C[óo]digo\s+(?:" + "|".join(_COD_NOMBRES) + r")"
 DLDFL = r"(?:[Dd]ecreto\s+[Ll]ey|D\.?L\.?)(?:\s*N\s*[°º\.]*)?\s*([\d][\d\.]{0,6})"
 DFL = r"(?:[Dd]ecreto\s+con\s+[Ff]uerza\s+de\s+[Ll]ey|D\.?F\.?L\.?)(?:\s*N\s*[°º\.]*)?\s*([\d][\d\.]{0,6})"
 

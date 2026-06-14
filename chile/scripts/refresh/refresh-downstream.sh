@@ -30,4 +30,6 @@ python3 scripts/generate-coverage-map.py || true
 python3 scripts/audit-embeddings.py | tail -20 || true
 echo "=== (5b) FRESCURA por fuente ==="
 python3 scripts/refresh/check-frescura.py || true
+echo "=== (6) ÁRBOL NORMATIVO incremental (citas→tesis→sync) ==="
+bash scripts/refresh/refresh-arbol.sh || true
 echo "=== DOWNSTREAM completo · $(date '+%H:%M:%S') ==="
