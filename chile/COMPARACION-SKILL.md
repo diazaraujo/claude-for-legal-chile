@@ -61,3 +61,23 @@ como "daño" o "hijos" arrastran al Código del Trabajo. Hallazgo accionable, no
 La skill convierte una respuesta *plausible* (riesgo de alucinación, no citable) en una
 respuesta *anclada y verificable* — exactamente lo que un litigante necesita y lo que el
 portal PJUD no ofrece. Brecha abierta: balancear el corpus para civil/familia.
+
+## Análisis competitivo (fuentes verificadas vía Zyte, 2026-06-13)
+
+- **Portal PJUD** (oficial): confirmado búsqueda por **filtros — "tema, línea y Sala"** +
+  compendios temáticos curados (Salud: alza plan, GES). NO es semántico ni lenguaje natural.
+- **basejurisprudencial.cl** (competidor directo, confirmado): **ya ofrece "Búsqueda Semántica
+  · lenguaje natural", IA que "comprende la intención", comparar fallos, extraer criterios
+  predominantes — y GRATIS** (Corte Suprema / Apelaciones / Familia ✓ gratuita).
+
+⚠️ **Implicación honesta**: la *entrada semántica de jurisprudencia* NO es diferenciador único
+— ya existe gratis. El diferenciador defendible de legalchile es lo que el competidor NO tiene:
+1. **Árbol normativo estructurado**: norma → artículo → tesis interpretativas → evolución
+   temporal → jerarquía Suprema/instancia. (basejuris busca *fallos*; nosotros mapeamos el
+   *articulado* a cómo se interpreta.)
+2. **Cobertura más allá de jurisprudencia**: 169k normas BCN + capa administrativa de 24
+   organismos (CGR, DT, SII…) citando los mismos artículos.
+3. **Verificabilidad total** + integración en el flujo Claude Code (no un portal aparte).
+
+Recomendación: posicionar legalchile como *"el árbol de interpretaciones del articulado
+chileno"*, no como *"otro buscador semántico de fallos"*.
