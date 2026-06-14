@@ -30,6 +30,26 @@ Comparación ejecutada 2026-06-13 contra la API en producción.
 está dominado por jurisprudencia laboral (pjud-laborales = la fuente más grande), y términos
 como "daño" o "hijos" arrastran al Código del Trabajo. Hallazgo accionable, no se esconde.
 
+## Segunda tanda — preguntas VERIFICADAS por el deep-research (2-0 y fuentes primarias)
+
+| Pregunta (real, de SciELO/UDP/Diario Constitucional) | CON skill | ¿Correcto? |
+|---|---|---|
+| Interrupción de prescripción: ¿presentación o notificación? | **CC art. 2503/2518/2523** | ✅ exacto (civil) |
+| Nulidad del despido del mandante por cotizaciones (subcontratación) | **art. 162 CdT** | ✅ exacto |
+| Semana corrida con remuneración mixta | **art. 45 CdT** | ✅ exacto |
+| Tutela laboral de derechos fundamentales | **art. 485/493 CdT** | ✅ exacto |
+| Custodia compartida / cuidado personal de los hijos | art. 63/173/7 CdT | ❌ miss (familia → CC 225) |
+| Demanda de alimentos contra los abuelos | art. 63/173 CdT | ❌ miss (familia → Ley Alimentos) |
+
+**Total acumulado: 8/12 exactos.** Diagnóstico afinado: el punto ciego **no es "civil"
+genérico** (prescripción civil acertó) sino **familia**, y la causa es léxica: términos de alto
+uso laboral ("daño", "hijos", "alimentos", "cuidado") arrastran al Código del Trabajo porque
+pjud-laborales domina el corpus. Cuando la pregunta tiene términos jurídicos distintivos que
+no colisionan con el léxico laboral (prescripción, semana corrida, tutela, protección), acierta.
+
+**Fix accionable**: re-ranking que normalice por volumen de la fuente (penalizar el sesgo
+laboral) o ampliar el corpus de familia. Es ajuste de ranking, no de arquitectura.
+
 ## El diferenciador (mismo caso, art. 162 CdT)
 
 **CON skill** entrega, sobre la pregunta de cotizaciones:

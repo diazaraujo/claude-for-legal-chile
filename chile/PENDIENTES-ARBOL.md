@@ -19,5 +19,12 @@ Estado: árbol en producción, consistente (npz=jsonl=arbol_mat=18.117), con tes
 - [ ] **Validación con abogado real.** Todo el diseño del árbol es hipótesis nuestra. Una sesión
   de 1h con un litigante usando /arbol revelaría más que semanas de features.
 
+- [ ] **Sesgo léxico laboral en la entrada semántica.** Familia (custodia, alimentos) y términos
+  genéricos ('daño') resuelven a Código del Trabajo porque pjud-laborales domina el corpus.
+  Fix: re-ranking normalizado por volumen de fuente, o ampliar corpus de familia. (Hallazgo
+  comparación A/B 13-jun, COMPARACION-SKILL.md)
+- [ ] **Competidor: basejurisprudencial.cl** ofrece búsqueda semántica de fallos gratis.
+  Diferenciar legalchile por el árbol normativo estructurado, no por la búsqueda semántica.
+
 ## Descartado por Antonio
 - Dimensión temporal de la norma (qué redacción del artículo regía al dictarse cada fallo).
