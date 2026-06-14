@@ -36,6 +36,16 @@ export default function Arbol() {
   const [fuente, setFuente] = useState<Record<number, Fuente>>({})
   const [modo, setModo] = useState<'norma' | 'concepto'>('norma')
   const [conceptos, setConceptos] = useState<Concepto[] | null>(null)
+  const [adminEj, setAdminEj] = useState<Record<string, { doc_path: string; encabezado: string; extracto: string }[]>>({})
+
+  async function verAdmin(source: string) {
+    if (adminEj[source]) { setAdminEj((a) => { const n = { ...a }; delete n[source]; return n }); return }
+    if (!norma || !art) return
+    try {
+      const { data } = await api.get('/corpus/arbol/admin', { params: { id_norma: norma.id_norma, art, source, n: 3 } })
+      setAdminEj((a) => ({ ...a, [source]: data.ejemplos || [] }))
+    } catch { /* noop */ }
+  }
 
   async function buscarConcepto(e?: React.FormEvent) {
     e?.preventDefault()
@@ -90,7 +100,7 @@ export default function Arbol() {
 
   async function abrirArticulo(a: string) {
     if (!norma) return
-    setArt(a); setLoading(true); setDetalle(null)
+    setArt(a); setLoading(true); setDetalle(null); setAdminEj({}); setFuente({})
     try {
       const { data } = await api.get(`/corpus/arbol/norma/${norma.id_norma}/articulo`, { params: { art: a, muestras: 3 } })
       setDetalle(data)
@@ -233,14 +243,26 @@ export default function Arbol() {
 
             {detalle.administrativa && detalle.administrativa.length > 0 && (
               <div style={{ marginBottom: 22 }}>
-                <div style={{ fontSize: 13, opacity: 0.7, marginBottom: 8 }}>Interpretación administrativa — organismos que citan este artículo</div>
+                <div style={{ fontSize: 13, opacity: 0.7, marginBottom: 8 }}>Interpretación administrativa — organismos que citan este artículo (clic para ver ejemplos)</div>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
                   {detalle.administrativa.map((a) => (
-                    <span key={a.source} style={{ fontSize: 13, padding: '6px 12px', border: '1px solid var(--line)', borderRadius: 999, background: '#fff' }}>
+                    <button key={a.source} onClick={() => verAdmin(a.source)}
+                      style={{ fontSize: 13, padding: '6px 12px', border: '1px solid var(--line)', borderRadius: 999, background: adminEj[a.source] ? 'var(--canvas, #fafbfc)' : '#fff', cursor: 'pointer', fontFamily: 'inherit' }}>
                       {ORGANISMOS[a.source] || a.source} <span style={{ opacity: 0.6 }}>· {nf.format(a.n_docs)} docs</span>
-                    </span>
+                    </button>
                   ))}
                 </div>
+                {Object.entries(adminEj).map(([src, ejs]) => (
+                  <div key={src} style={{ marginTop: 10, display: 'grid', gap: 6 }}>
+                    {ejs.length === 0 && <div style={{ fontSize: 12.5, opacity: 0.6 }}>{ORGANISMOS[src] || src}: sin ejemplos recuperables.</div>}
+                    {ejs.map((e, i) => (
+                      <div key={i} style={{ fontSize: 12.5, borderLeft: '3px solid var(--line)', paddingLeft: 10 }}>
+                        <span style={{ opacity: 0.7, fontWeight: 600 }}>{ORGANISMOS[src] || src}{e.encabezado ? ` · ${e.encabezado}` : ''}</span>
+                        <div style={{ marginTop: 2, opacity: 0.85 }}>«…{e.extracto}…»</div>
+                      </div>
+                    ))}
+                  </div>
+                ))}
               </div>
             )}
 

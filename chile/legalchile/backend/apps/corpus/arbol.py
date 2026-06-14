@@ -266,6 +266,40 @@ def considerando_fuente(chunk_id: int) -> dict:
             "caratulado": fe[4] if fe else None, "tribunal": fe[5] if fe else None}
 
 
+def _newsources():
+    return sqlite3.connect(f"file:{_d()/'new-sources.fts.sqlite3'}?immutable=1", uri=True, timeout=30)
+
+
+# nº de dictamen/oficio del encabezado (ej. "Dictamen CGR 010011N11 (16-02-2011)")
+_RX_DICTNUM = re.compile(r"(Dictamen|Oficio|Ord(?:inario)?\.?|Resoluci[óo]n)\s+[\wº°/.\- ]{2,40}", re.I)
+
+
+def admin_ejemplos(id_norma: int, articulo: str, source: str, n: int = 3) -> list[dict]:
+    """Contenido de la capa administrativa: dictámenes/oficios de ejemplo que citan el
+    artículo, con extracto verificable (el fragmento citante + encabezado del documento)."""
+    con = _citas()
+    rows = con.execute(
+        "SELECT DISTINCT doc_path, raw FROM citas_admin "
+        "WHERE id_norma=? AND articulo=? AND source=? LIMIT ?",
+        (id_norma, articulo, source, n)).fetchall()
+    con.close()
+    if not rows:
+        return []
+    ns = _newsources()
+    out = []
+    for doc_path, raw in rows:
+        txt = ns.execute("SELECT substr(content,1,400) FROM docs WHERE path LIKE ? LIMIT 1",
+                         ("%" + doc_path,)).fetchone()
+        head = ""
+        if txt and txt[0]:
+            m = _RX_DICTNUM.search(txt[0])
+            head = (m.group(0).strip() if m else txt[0].split("\n")[0].lstrip("# ").strip())[:90]
+        out.append({"doc_path": doc_path, "encabezado": head,
+                    "extracto": re.sub(r"\s+", " ", raw or "")[:200]})
+    ns.close()
+    return out
+
+
 def _load_considerandos_index():
     global _cidx, _cids
     if _cidx is None:

@@ -68,6 +68,12 @@ def arbol_concepto(request, q: str, limit: int = 15):
     return {"query": q, "articulos": arbol.concepto_a_articulos(q, limit)}
 
 
+@router.get("/arbol/admin")
+def arbol_admin_ejemplos(request, id_norma: int, art: str, source: str, n: int = 3):
+    """Dictámenes/oficios de ejemplo de un organismo que citan el artículo, con extracto."""
+    return {"ejemplos": arbol.admin_ejemplos(id_norma, art, source, n)}
+
+
 @router.get("/considerando/{chunk_id}")
 def considerando_fuente(request, chunk_id: int):
     """Texto completo del considerando (fuente verificable de la tesis) + identificador
